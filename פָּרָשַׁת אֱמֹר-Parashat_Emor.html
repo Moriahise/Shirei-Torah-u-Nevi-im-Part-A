@@ -1,0 +1,613 @@
+<!DOCTYPE html>
+<html lang="he-IL"><head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>פָּרָשַׁת אֱמֹר · וַיִּקְרָא כ״א:א׳–כ״ד:כ״ג · מַלְכוּת · מַקָּאם חִיגָ׳אז · Sephardische Tora-Vertonung</title>
+  <link href="https://fonts.googleapis.com/css2?family=Frank+Ruhl+Libre:wght@300;400;700;900&amp;family=EB+Garamond:ital,wght@0,400;0,600;1,400;1,600&amp;family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&amp;display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg:#060808; --deep:#0A0E0E; --layer:#101414; --card:#0C1010;
+      --parchment:#f2e8d0; --parch-dim:#c8b898;
+      --ivory:#f0e8d8; --ivory-dim:#a89878;
+      --silver:#c8d4e0; --silver-dim:#7a8290;
+      --text:#a0a89c;
+      /* SEFER VAYIKRA — Königlich-Gold */
+      --sefer:#C8A030; --sefer-lt:#F0CC60; --sefer-dim:#8B7020;
+      --sefer-bg:rgba(200,160,48,.08); --sefer-bdr:rgba(200,160,48,.36); --sefer-glow:rgba(240,204,96,.20);
+      /* EMOR · MALCHUT · HIJAZ — Royal Hijaz-Burgund */
+      --emr:#A85040; --emr-lt:#D87868; --emr-dim:#6C2820;
+      --emr-bg:rgba(168,80,64,.08); --emr-bdr:rgba(168,80,64,.36); --emr-glow:rgba(216,120,104,.22);
+      /* MAQAM-FARBEN */
+      --maqam-saba:#B0904A; --maqam-hijaz:#C85050; --maqam-bayat:#A07850;
+      --maqam-rast:#C8A860; --maqam-ajam:#7A9050; --maqam-nahawand:#6080A0;
+    }
+    *,*::before,*::after { margin:0; padding:0; box-sizing:border-box; }
+    html { scroll-behavior:smooth; }
+    body { background:var(--bg); color:var(--silver); font-family:'EB Garamond',serif; overflow-x:hidden; line-height:1.85; padding:40px 20px 80px; }
+    body::before { content:''; position:fixed; inset:0; pointer-events:none; z-index:0;
+      background: radial-gradient(ellipse at 18% 12%, rgba(200,160,48,.12) 0%, transparent 48%),
+                  radial-gradient(ellipse at 82% 28%, rgba(168,80,64,.12) 0%, transparent 45%),
+                  radial-gradient(ellipse at 12% 68%, rgba(200,160,48,.08) 0%, transparent 45%),
+                  radial-gradient(ellipse at 88% 82%, rgba(216,120,104,.10) 0%, transparent 42%),
+                  radial-gradient(ellipse at 50% 50%, rgba(20,16,8,.82) 0%, transparent 70%); }
+    body::after { content:''; position:fixed; inset:0; pointer-events:none; z-index:0;
+      background-image:
+        radial-gradient(1px 1px at 8% 10%, rgba(240,204,96,.36) 0%, transparent 100%),
+        radial-gradient(1px 1px at 48% 5%, rgba(216,120,104,.30) 0%, transparent 100%),
+        radial-gradient(1px 1px at 82% 16%, rgba(224,188,80,.32) 0%, transparent 100%),
+        radial-gradient(1px 1px at 25% 42%, rgba(216,176,72,.28) 0%, transparent 100%),
+        radial-gradient(1px 1px at 68% 58%, rgba(216,120,104,.28) 0%, transparent 100%),
+        radial-gradient(1.5px 1.5px at 12% 75%, rgba(208,172,64,.34) 0%, transparent 100%),
+        radial-gradient(1px 1px at 90% 78%, rgba(216,120,104,.30) 0%, transparent 100%),
+        radial-gradient(1px 1px at 35% 88%, rgba(224,188,80,.26) 0%, transparent 100%); }
+    .wrap { max-width:1080px; margin:0 auto; position:relative; z-index:1; }
+
+    /* PAGE HEADER */
+    .page-header { text-align:center; margin-bottom:80px; padding-bottom:40px; border-bottom:1px solid var(--sefer-bdr); position:relative; }
+    .page-header::after { content:'✦ ✡ ✦'; position:absolute; bottom:-14px; left:50%; transform:translateX(-50%); background:var(--bg); padding:0 20px; color:var(--sefer); font-size:.62em; letter-spacing:.55em; }
+    .eyebrow { font-family:'Cormorant Garamond',serif; font-style:italic; font-size:.78em; color:var(--sefer-lt); letter-spacing:.28em; text-transform:uppercase; margin-bottom:18px; opacity:.85; }
+    .sefer-letter { font-family:'Frank Ruhl Libre',serif; font-size:1.40em; color:var(--sefer); font-weight:900; display:inline-block; margin-bottom:6px; text-shadow:0 0 30px var(--sefer-glow); letter-spacing:.04em; }
+    .page-title-he { font-family:'Frank Ruhl Libre',serif; font-size:3.2em; font-weight:900; color:var(--ivory); direction:rtl; letter-spacing:.05em; text-shadow:0 0 80px var(--sefer-glow), 0 0 140px var(--emr-glow); margin-bottom:8px; line-height:1.15; }
+    .page-subtitle-he { font-family:'Frank Ruhl Libre',serif; font-size:1.16em; color:var(--sefer-lt); direction:rtl; margin-bottom:10px; letter-spacing:.06em; }
+    .page-title-de { font-family:'Cormorant Garamond',serif; font-style:italic; font-size:1.14em; color:var(--silver-dim); margin-bottom:22px; }
+    .page-desc { font-size:1.0em; color:var(--text); max-width:780px; margin:0 auto; line-height:1.95; }
+    .page-desc strong { color:var(--ivory-dim); }
+    .page-desc em { color:var(--emr-lt); font-style:italic; }
+
+    /* SONG SECTION */
+    .song-section { margin-bottom:90px; padding-bottom:70px; border-bottom:1px dashed var(--sefer-bdr); }
+    .song-header { display:flex; flex-wrap:wrap; align-items:flex-start; gap:20px; margin-bottom:40px; padding:24px 26px; background:var(--layer); border:1px solid var(--emr-bdr); border-radius:10px; }
+    .song-num { font-family:'Frank Ruhl Libre',serif; font-size:2.6em; font-weight:900; direction:rtl; padding-right:14px; color:var(--emr-lt); }
+    .song-meta { flex:1; display:flex; flex-direction:column; gap:8px; }
+    .korban-badge { font-family:'Cormorant Garamond',serif; font-style:italic; font-size:.82em; letter-spacing:.08em; color:var(--emr-lt); }
+    .maqam-badge { font-family:'Cormorant Garamond',serif; font-style:italic; font-size:.78em; letter-spacing:.08em; display:inline-block; padding:3px 10px; border-radius:4px; color:#f0e8d8; font-weight:600; background:var(--maqam-hijaz); }
+    .song-title-he { font-family:'Frank Ruhl Libre',serif; font-size:1.7em; font-weight:700; color:var(--ivory); direction:rtl; letter-spacing:.04em; }
+    .song-title-de { font-family:'Cormorant Garamond',serif; font-style:italic; font-size:1.02em; color:var(--silver); }
+    .source-badge { font-family:'Cormorant Garamond',serif; font-style:italic; font-size:.74em; color:#A07060; line-height:1.6; }
+
+    /* ALIYAH BLOCK */
+    .aliyah-block { margin-bottom:42px; }
+    .aliyah-label { font-family:'Frank Ruhl Libre',serif; font-size:.94em; font-weight:700; direction:rtl; margin-bottom:9px; color:var(--emr); letter-spacing:.06em; padding-bottom:6px; border-bottom:1px solid var(--emr-bdr); }
+    .aliyah-label-de { font-family:'Cormorant Garamond',serif; font-style:italic; font-size:.78em; color:var(--silver-dim); display:inline-block; margin-right:14px; opacity:.85; }
+    .instrument-note { font-family:'Cormorant Garamond',serif; font-style:italic; font-size:.84em; color:var(--text); margin-bottom:14px; padding:10px 14px; background:rgba(168,80,64,.05); border-left:2px solid var(--emr-dim); }
+    .lyrics-block { display:flex; gap:44px; flex-wrap:wrap; }
+    .lyrics-he, .lyrics-de { flex:1; min-width:280px; display:flex; flex-direction:column; gap:6px; }
+    .lyrics-he span.line { font-family:'Frank Ruhl Libre',serif; font-size:1.06em; color:var(--ivory); direction:rtl; line-height:1.95; }
+    .lyrics-de span.line { font-family:'Cormorant Garamond',serif; font-size:1.0em; color:var(--silver); line-height:1.88; }
+
+    /* TIKKUN BOX */
+    .tikkun-box { background:rgba(168,80,64,.07); border:1px solid rgba(168,80,64,.32); padding:30px; margin-top:40px; border-radius:6px; }
+    .tikkun-header { display:flex; flex-direction:column; gap:6px; margin-bottom:20px; }
+    .tikkun-title-he { font-family:'Frank Ruhl Libre',serif; font-size:1.25em; color:var(--ivory); direction:rtl; font-weight:700; letter-spacing:.04em; }
+    .tikkun-title-de { font-family:'Cormorant Garamond',serif; font-size:1.0em; font-style:italic; color:var(--silver); }
+    .tikkun-src { font-family:'Cormorant Garamond',serif; font-size:.74em; color:#A07060; line-height:1.7; }
+    .tikkun-body { font-family:'Cormorant Garamond',serif; font-size:.96em; color:var(--text); line-height:1.92; }
+    .tikkun-body strong { color:var(--ivory); }
+    .tikkun-body em { color:var(--emr-lt); font-style:italic; }
+    .tikkun-tags { margin-top:18px; display:flex; gap:9px; flex-wrap:wrap; }
+    .tikkun-tag { background:rgba(168,80,64,.16); color:var(--emr-lt); padding:4px 10px; border-radius:4px; font-size:.74em; font-family:'Frank Ruhl Libre',serif; direction:rtl; }
+
+    /* SCHI / KLIMAX-MOMENT */
+    .climax-box { background:linear-gradient(135deg,rgba(168,80,64,.18),rgba(200,160,48,.10),rgba(6,8,8,.88)); border:2px solid var(--emr-bdr); padding:32px; margin-top:40px; margin-bottom:30px; border-radius:8px; }
+    .climax-label { font-family:'Cormorant Garamond',serif; font-style:italic; font-size:.82em; color:var(--emr-lt); letter-spacing:.18em; text-transform:uppercase; margin-bottom:14px; text-align:center; }
+    .climax-verse-he { font-family:'Frank Ruhl Libre',serif; font-size:1.55em; font-weight:700; color:var(--ivory); direction:rtl; text-align:center; line-height:1.85; letter-spacing:.04em; text-shadow:0 0 30px var(--emr-glow); }
+    .climax-verse-de { font-family:'Cormorant Garamond',serif; font-style:italic; font-size:1.05em; color:var(--silver); text-align:center; margin-top:14px; line-height:1.7; }
+    .climax-src { font-family:'Cormorant Garamond',serif; font-style:italic; font-size:.80em; color:var(--emr-lt); text-align:center; margin-top:12px; opacity:.8; }
+
+    /* KODA */
+    .coda-box { background:rgba(6,8,8,.78); border:1px solid var(--emr-bdr); padding:36px; text-align:center; margin-top:30px; margin-bottom:30px; border-radius:6px; }
+    .coda-label { font-family:'Cormorant Garamond',serif; font-style:italic; font-size:.80em; color:var(--emr-lt); letter-spacing:.18em; text-transform:uppercase; margin-bottom:18px; }
+    .coda-whisper { font-family:'Frank Ruhl Libre',serif; font-size:1.20em; direction:rtl; line-height:2.3; opacity:.85; color:var(--emr-lt); }
+    .coda-whisper strong { font-weight:900; opacity:1; color:var(--ivory); }
+
+    /* SCENARIOS */
+    .scenarios-section { margin-top:54px; margin-bottom:40px; }
+    .scenarios-title { font-family:'Frank Ruhl Libre',serif; font-size:1.35em; font-weight:700; text-align:center; margin-bottom:34px; direction:rtl; color:var(--sefer-lt); letter-spacing:.06em; }
+    .scenarios-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(290px,1fr)); gap:26px; }
+    .scenario-card { background:linear-gradient(135deg,rgba(32,12,8,.78),rgba(6,8,8,.92)); border:1px solid var(--emr-bdr); padding:24px; transition:transform .2s, box-shadow .2s; border-radius:6px; }
+    .scenario-card:hover { transform:translateY(-4px); box-shadow:0 10px 36px var(--emr-glow); }
+    .sc-num { font-family:'Cormorant Garamond',serif; font-style:italic; font-size:.74em; letter-spacing:.14em; text-transform:uppercase; margin-bottom:7px; color:var(--emr); }
+    .sc-title-he { font-family:'Frank Ruhl Libre',serif; font-size:1.10em; font-weight:700; color:var(--ivory); direction:rtl; margin-bottom:4px; letter-spacing:.04em; }
+    .sc-sub { font-family:'Cormorant Garamond',serif; font-style:italic; font-size:.84em; color:#A07060; margin-bottom:14px; }
+    .sc-body { font-size:.92em; color:var(--text); line-height:1.80; margin-bottom:14px; }
+    .sc-body strong { color:var(--emr-lt); }
+    .key-moment { font-size:.86em; color:var(--emr-lt); font-style:italic; margin-bottom:9px; padding-left:13px; border-left:2px solid var(--emr-lt); }
+    .reaction { font-size:.86em; color:var(--text); font-style:italic; padding-left:13px; border-left:2px solid var(--sefer-dim); line-height:1.78; }
+
+    /* FOOTER */
+    .footer { margin-top:80px; padding-top:50px; border-top:1px solid var(--sefer-bdr); text-align:center; }
+    .footer-he { font-family:'Frank Ruhl Libre',serif; font-size:1.40em; font-weight:700; color:var(--sefer-lt); direction:rtl; margin-bottom:18px; text-shadow:0 0 30px var(--sefer-glow); letter-spacing:.06em; }
+    .footer-chain { font-family:'Frank Ruhl Libre',serif; font-size:1.0em; color:var(--silver); direction:rtl; margin-bottom:22px; letter-spacing:.09em; }
+    .footer-de { font-family:'Cormorant Garamond',serif; font-style:italic; font-size:.92em; color:var(--text); line-height:2.0; max-width:780px; margin:0 auto 24px; }
+    .footer-de strong { color:var(--ivory-dim); font-style:normal; }
+    .footer-amen { font-family:'Frank Ruhl Libre',serif; font-size:1.30em; color:var(--sefer-lt); direction:rtl; margin-top:24px; letter-spacing:.14em; text-shadow:0 0 30px var(--sefer-glow); }
+
+    @media (max-width:720px) {
+      .page-title-he { font-size:2.3em; }
+      .song-num { font-size:2.2em; }
+      .lyrics-block { flex-direction:column; gap:24px; }
+      .scenarios-grid { grid-template-columns:1fr; }
+      .climax-verse-he { font-size:1.20em; }
+      .footer-he { font-size:1.10em; }
+    }
+  </style>
+</head>
+<body>
+<div class="wrap">
+
+  <header class="page-header">
+    <div class="eyebrow">Sephardische Tora-Vertonung · Sefer HaParashot bemo Maqam</div>
+    <div class="sefer-letter">ג</div>
+    <div class="page-title-he">פָּרָשַׁת אֱמֹר</div>
+    <div class="page-subtitle-he">סֵפֶר וַיִּקְרָא · כ״א:א׳–כ״ד:כ״ג · מַלְכוּת · מַקָּאם חִיגָ׳אז · מוֹעֲדֵי אֲדֹנָי</div>
+    <div class="page-title-de">Emor — Die königliche Ordnung der heiligen Zeit · Achte Parashah des Sefer Vayikra · Malchut im Maqam Hijaz</div>
+    <div class="page-desc">
+      Emor entfaltet das Sefer Vayikra zu seiner königlichen Spitze: zunächst die <em>Kedushah der
+      Kohanim</em> — Reinheits-, Trauer- und Heirats-Gesetze für die Priester, mit besonderer Strenge
+      für den Hohepriester (Kap. 21); dann die Wachsamkeit der Kohanim gegenüber den Heiligkeiten
+      und der Korbanot, mit der zentralen Mahnung <em>„וְלֹא תְחַלְּלוּ אֶת־שֵׁם קׇדְשִׁי
+      וְנִקְדַּשְׁתִּי בְּתוֹךְ בְּנֵי יִשְׂרָאֵל"</em> (Vayikra 22:32) — die Wurzel der Mitzwah des
+      <em>Kiddusch HaSchem</em> nach Rambam Hilchot Yesodei HaTorah Perek 5. Es folgt das große
+      Mo'adim-Kapitel (Kap. 23): Schabbat, Pessach, Omer, Schavuot, Yom Teruah, Yom Kippur, Sukkot —
+      die königliche Ordnung der heiligen Zeit, festgesetzt nicht durch Naturlauf, sondern durch
+      <em>„מוֹעֲדֵי אֲדֹנָי אֲשֶׁר־תִּקְרְאוּ אֹתָם"</em> (23:2). Kapitel 24 bringt Menorah und
+      Lechem HaPanim als ständige Zeichen vor Adonai, und schließt mit der Megaddef-Episode und dem
+      Talion-Prinzip. Sefirot-Anker: <strong>Malchut</strong> — Königtum, die manifestierte Herrschaft
+      Adonais in Zeit, Raum, Volk und Sprache. Maqam: <strong>Hijaz</strong> — königlich-sehnend,
+      festlich-mahnend, fortissimo-fähig in der Mo'adim-Verkündung und in der Konsequenz des
+      Megaddef. Tora-Text 1:1 nach sephardischer Tradition, Tetragrammaton durchgängig als
+      אֲדֹנָי, Maschiach ben David.
+    </div>
+  </header>
+
+  <!-- ══ SONG SECTION — PARASHAT EMOR ══ -->
+  <section class="song-section" id="emor">
+
+    <div class="song-header">
+      <div class="song-num">ח</div>
+      <div class="song-meta">
+        <div class="korban-badge">Malchut — מַלְכוּת · Königliche Ordnung von Heiligkeit und Zeit</div>
+        <div class="song-title-he">פָּרָשַׁת אֱמֹר</div>
+        <div class="song-title-de">Emor — „Sprich zu den Kohanim, den Söhnen Aharons" · Vayikra 21:1–24:23</div>
+        <div class="maqam-badge">מַקָּאם חִיגָ׳אז · Hijaz · ~64 BPM rubato</div>
+        <div class="source-badge">וַיִּקְרָא כ״א:א׳–כ״ד:כ״ג · רמב״ם הלכות יְסוֹדֵי הַתּוֹרָה פֶּרֶק ה׳ (קִידּוּשׁ הַשֵּׁם) · רמב״ם הלכות כְּלֵי הַמִּקְדָּשׁ וְעוֹבְדִים בּוֹ · רמב״ם הלכות בִּיאַת הַמִּקְדָּשׁ פֶּרֶק ו׳–ח׳ (מוּמִין) · רמב״ם הלכות תְּמִידִין וּמוּסָפִין פֶּרֶק ה׳ (לֶחֶם הַפָּנִים · שְׁנֵי עֶשְׂרֹנִים) · רמב״ם הלכות שְׁבִיתַת יוֹם טוֹב · רמב״ם הלכות סוּכָּה · אור החיים על וַיִּקְרָא כ״ב:ל״ב וְכ״ג:ב׳ · ספר העיקרים מאמר שלישי (מוֹעֲדִים) · בן איש חי שנה ראשונה ושנה שנייה פרשת אמור · רש״ש נְהַר שָׁלוֹם דְּרוּשִׁים עַל הַמּוֹעֲדִים · רמח״ל דֶּרֶךְ אֲדֹנָי חֵלֶק ד׳ (זְמַנֵּי הַשָּׁנָה) · רמח״ל מְסִלַּת יְשָׁרִים פֶּרֶק י״ט (קְדֻשָּׁה) · שד״ל פֵּרוּשׁ עַל הַתּוֹרָה (וַיִּקְרָא כ״א · כ״ג) · כַּף הַחַיִּים אוֹרַח חַיִּים · יָבִיעַ אוֹמֶר · חֲזוֹן עוֹבַדְיָה.</div>
+      </div>
+    </div>
+
+
+    <!-- ── ALIYAH 1 · ראשון · Vayikra 21:1-15 — Kohanim-Reinheit, Hohepriester ── -->
+    <div class="aliyah-block">
+      <div class="aliyah-label">עֲלִיָּה רִאשׁוֹנָה — אֱמֹר אֶל־הַכֹּהֲנִים<span class="aliyah-label-de">Erste Aliyah · Vayikra 21:1–15 · Reinheits-, Trauer- und Heirats-Gesetze der Kohanim · Sondergesetze des Hohepriesters</span></div>
+      <div class="instrument-note">[no percussion] [no drums] [no choir] [solo acoustic guitar — Hijaz opening with sustained royal-priestly low tones, the call to Aharon's sons as a hand laid on the breast-plate, the augmented-second drop on „lo yitamma", rubato around 64 BPM, no percussion, no drums, no beat] Gitarre: Hijaz öffnet mit königlich-priesterlichen Tiefen — der Ruf an Aharons Söhne wie eine Hand auf dem Choschen, der charakteristische Hijaz-Halbton-Eineinhalbton-Sturz beim „lo yitamma".</div>
+      <div class="lyrics-block">
+        <div class="lyrics-he" dir="rtl">
+          <span class="line">וַיֹּאמֶר אֲדֹנָי אֶל־מֹשֶׁה אֱמֹר אֶל־הַכֹּהֲנִים בְּנֵי אַהֲרֹן וְאָמַרְתָּ אֲלֵהֶם לְנֶפֶשׁ לֹא־יִטַּמָּא בְּעַמָּיו׃</span>
+          <span class="line">כִּי אִם־לִשְׁאֵרוֹ הַקָּרֹב אֵלָיו לְאִמּוֹ וּלְאָבִיו וְלִבְנוֹ וּלְבִתּוֹ וּלְאָחִיו׃</span>
+          <span class="line">וְלַאֲחֹתוֹ הַבְּתוּלָה הַקְּרוֹבָה אֵלָיו אֲשֶׁר לֹא־הָיְתָה לְאִישׁ לָהּ יִטַּמָּא׃</span>
+          <span class="line">לֹא יִטַּמָּא בַּעַל בְּעַמָּיו לְהֵחַלּוֹ׃</span>
+          <span class="line">לֹא־יִקְרְחוּ קׇרְחָה בְּרֹאשָׁם וּפְאַת זְקָנָם לֹא יְגַלֵּחוּ וּבִבְשָׂרָם לֹא יִשְׂרְטוּ שָׂרָטֶת׃</span>
+          <span class="line">קְדֹשִׁים יִהְיוּ לֵאלֹהֵיהֶם וְלֹא יְחַלְּלוּ שֵׁם אֱלֹהֵיהֶם כִּי אֶת־אִשֵּׁי אֲדֹנָי לֶחֶם אֱלֹהֵיהֶם הֵם מַקְרִיבִם וְהָיוּ קֹדֶשׁ׃</span>
+          <span class="line">אִשָּׁה זֹנָה וַחֲלָלָה לֹא יִקָּחוּ וְאִשָּׁה גְּרוּשָׁה מֵאִישָׁהּ לֹא יִקָּחוּ כִּי־קָדֹשׁ הוּא לֵאלֹהָיו׃</span>
+          <span class="line">וְקִדַּשְׁתּוֹ כִּי־אֶת־לֶחֶם אֱלֹהֶיךָ הוּא מַקְרִיב קָדֹשׁ יִהְיֶה־לָּךְ כִּי קָדוֹשׁ אֲנִי אֲדֹנָי מְקַדִּשְׁכֶם׃</span>
+          <span class="line">וּבַת אִישׁ כֹּהֵן כִּי תֵחֵל לִזְנוֹת אֶת־אָבִיהָ הִיא מְחַלֶּלֶת בָּאֵשׁ תִּשָּׂרֵף׃</span>
+          <span class="line">וְהַכֹּהֵן הַגָּדוֹל מֵאֶחָיו אֲשֶׁר־יוּצַק עַל־רֹאשׁוֹ שֶׁמֶן הַמִּשְׁחָה וּמִלֵּא אֶת־יָדוֹ לִלְבֹּשׁ אֶת־הַבְּגָדִים אֶת־רֹאשׁוֹ לֹא יִפְרָע וּבְגָדָיו לֹא יִפְרֹם׃</span>
+          <span class="line">וְעַל כׇּל־נַפְשֹׁת מֵת לֹא יָבֹא לְאָבִיו וּלְאִמּוֹ לֹא יִטַּמָּא׃</span>
+          <span class="line">וּמִן־הַמִּקְדָּשׁ לֹא יֵצֵא וְלֹא יְחַלֵּל אֵת מִקְדַּשׁ אֱלֹהָיו כִּי נֵזֶר שֶׁמֶן מִשְׁחַת אֱלֹהָיו עָלָיו אֲנִי אֲדֹנָי׃</span>
+          <span class="line">וְהוּא אִשָּׁה בִבְתוּלֶיהָ יִקָּח׃</span>
+          <span class="line">אַלְמָנָה וּגְרוּשָׁה וַחֲלָלָה זֹנָה אֶת־אֵלֶּה לֹא יִקָּח כִּי אִם־בְּתוּלָה מֵעַמָּיו יִקַּח אִשָּׁה׃</span>
+          <span class="line">וְלֹא־יְחַלֵּל זַרְעוֹ בְּעַמָּיו כִּי אֲנִי אֲדֹנָי מְקַדְּשׁוֹ׃</span>
+        </div>
+        <div class="lyrics-de">
+          <span class="line">(21:1) Und Adonai sprach zu Mosche: Sprich zu den Kohanim, den Söhnen Aharons, und sage zu ihnen: An keiner Seele soll sich einer unter seinen Volksgenossen verunreinigen —</span>
+          <span class="line">(2) ausgenommen für seinen leiblichen Verwandten, der ihm nahesteht: für seine Mutter, seinen Vater, seinen Sohn, seine Tochter und seinen Bruder;</span>
+          <span class="line">(3) und für seine jungfräuliche Schwester, die ihm nahesteht und die noch keinem Mann angehört hat — für sie darf er sich verunreinigen.</span>
+          <span class="line">(4) Als Gatte soll er sich unter seinen Volksgenossen nicht verunreinigen, um sich zu entweihen.</span>
+          <span class="line">(5) Sie sollen keine Glatze auf ihrem Haupt scheren, die Ecke ihres Bartes nicht abrasieren, und in ihrem Fleisch sollen sie keinen Einschnitt einritzen.</span>
+          <span class="line">(6) Heilig sollen sie ihrem Gott sein und den Namen ihres Gottes nicht entweihen — denn die Feueropfer Adonais, das Brot ihres Gottes, bringen sie dar; und sie sollen heilig sein.</span>
+          <span class="line">(7) Eine Hure und Entweihte sollen sie nicht zur Frau nehmen, und eine von ihrem Mann geschiedene Frau sollen sie nicht nehmen — denn heilig ist er seinem Gott.</span>
+          <span class="line">(8) Du sollst ihn heiligen, denn das Brot deines Gottes bringt er dar; heilig soll er dir sein — denn heilig bin ich, Adonai, der euch heiligt.</span>
+          <span class="line">(9) Und wenn die Tochter eines Kohen sich durch Unzucht entweiht, so entweiht sie ihren Vater — im Feuer soll sie verbrannt werden.</span>
+          <span class="line">(10) Und der Hohepriester unter seinen Brüdern, auf dessen Haupt das Salböl gegossen wurde und der eingeweiht wurde, die Gewänder anzulegen — er soll sein Haupt nicht lösen und seine Kleider nicht zerreißen.</span>
+          <span class="line">(11) Zu allen Seelen Verstorbener soll er nicht kommen; auch an seinem Vater und an seiner Mutter soll er sich nicht verunreinigen.</span>
+          <span class="line">(12) Und aus dem Heiligtum soll er nicht hinaustreten und das Heiligtum seines Gottes nicht entweihen — denn die Weihe des Salböls seines Gottes ist auf ihm. Ich bin Adonai.</span>
+          <span class="line">(13) Und er soll eine Frau in ihrer Jungfräulichkeit nehmen.</span>
+          <span class="line">(14) Eine Witwe, eine Geschiedene, eine Entweihte oder eine Hure — diese soll er nicht nehmen; nur eine Jungfrau aus seinem Volk soll er zur Frau nehmen.</span>
+          <span class="line">(15) Und er soll seinen Samen unter seinem Volk nicht entweihen — denn ich, Adonai, heilige ihn.</span>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- ── ALIYAH 2 · שני · Vayikra 21:16-22:16 — Mum-Verbote, Kodaschim-Reinheit ── -->
+    <div class="aliyah-block">
+      <div class="aliyah-label">עֲלִיָּה שְׁנִיָּה — אִישׁ אֲשֶׁר־בּוֹ מוּם · וְיִנָּזְרוּ מִקׇּדְשֵׁי בְנֵי־יִשְׂרָאֵל<span class="aliyah-label-de">Zweite Aliyah · Vayikra 21:16–22:16 · Kohanim mit Mum dürfen nicht darbringen · Reinheits-Disziplin beim Essen der Heiligkeiten</span></div>
+      <div class="instrument-note">[no percussion] [no drums] [no choir] [acoustic guitar — Hijaz fingerpicking deepening, the catalog of mumin as a slow processional, then the warning over the kodaschim, intimate dry strings, no percussion] Gitarre: Hijaz vertieft im Fingerpicking — der Katalog der Defekte als langsame Prozession, dann die Wachsamkeit über den Heiligkeiten, trocken-nah am Korpus.</div>
+      <div class="lyrics-block">
+        <div class="lyrics-he" dir="rtl">
+          <span class="line">וַיְדַבֵּר אֲדֹנָי אֶל־מֹשֶׁה לֵּאמֹר׃</span>
+          <span class="line">דַּבֵּר אֶל־אַהֲרֹן לֵאמֹר אִישׁ מִזַּרְעֲךָ לְדֹרֹתָם אֲשֶׁר יִהְיֶה בוֹ מוּם לֹא יִקְרַב לְהַקְרִיב לֶחֶם אֱלֹהָיו׃</span>
+          <span class="line">כִּי כׇל־אִישׁ אֲשֶׁר־בּוֹ מוּם לֹא יִקְרָב אִישׁ עִוֵּר אוֹ פִסֵּחַ אוֹ חָרֻם אוֹ שָׂרוּעַ׃</span>
+          <span class="line">אוֹ אִישׁ אֲשֶׁר־יִהְיֶה בוֹ שֶׁבֶר רָגֶל אוֹ שֶׁבֶר יָד׃</span>
+          <span class="line">אוֹ־גִבֵּן אוֹ־דַק אוֹ תְּבַלֻּל בְּעֵינוֹ אוֹ גָרָב אוֹ יַלֶּפֶת אוֹ מְרוֹחַ אָשֶׁךְ׃</span>
+          <span class="line">כׇּל־אִישׁ אֲשֶׁר־בּוֹ מוּם מִזֶּרַע אַהֲרֹן הַכֹּהֵן לֹא יִגַּשׁ לְהַקְרִיב אֶת־אִשֵּׁי אֲדֹנָי מוּם בּוֹ אֵת לֶחֶם אֱלֹהָיו לֹא יִגַּשׁ לְהַקְרִיב׃</span>
+          <span class="line">לֶחֶם אֱלֹהָיו מִקׇּדְשֵׁי הַקֳּדָשִׁים וּמִן־הַקֳּדָשִׁים יֹאכֵל׃</span>
+          <span class="line">אַךְ אֶל־הַפָּרֹכֶת לֹא יָבֹא וְאֶל־הַמִּזְבֵּחַ לֹא יִגַּשׁ כִּי־מוּם בּוֹ וְלֹא יְחַלֵּל אֶת־מִקְדָּשַׁי כִּי אֲנִי אֲדֹנָי מְקַדְּשָׁם׃</span>
+          <span class="line">וַיְדַבֵּר מֹשֶׁה אֶל־אַהֲרֹן וְאֶל־בָּנָיו וְאֶל־כׇּל־בְּנֵי יִשְׂרָאֵל׃</span>
+          <span class="line">וַיְדַבֵּר אֲדֹנָי אֶל־מֹשֶׁה לֵּאמֹר׃</span>
+          <span class="line">דַּבֵּר אֶל־אַהֲרֹן וְאֶל־בָּנָיו וְיִנָּזְרוּ מִקׇּדְשֵׁי בְנֵי־יִשְׂרָאֵל וְלֹא יְחַלְּלוּ אֶת־שֵׁם קׇדְשִׁי אֲשֶׁר הֵם מַקְדִּשִׁים לִי אֲנִי אֲדֹנָי׃</span>
+          <span class="line">אֱמֹר אֲלֵהֶם לְדֹרֹתֵיכֶם כׇּל־אִישׁ אֲשֶׁר־יִקְרַב מִכׇּל־זַרְעֲכֶם אֶל־הַקֳּדָשִׁים אֲשֶׁר יַקְדִּישׁוּ בְנֵי־יִשְׂרָאֵל לַאדֹנָי וְטֻמְאָתוֹ עָלָיו וְנִכְרְתָה הַנֶּפֶשׁ הַהִוא מִלְּפָנַי אֲנִי אֲדֹנָי׃</span>
+          <span class="line">אִישׁ אִישׁ מִזֶּרַע אַהֲרֹן וְהוּא צָרוּעַ אוֹ זָב בַּקֳּדָשִׁים לֹא יֹאכַל עַד אֲשֶׁר יִטְהָר וְהַנֹּגֵעַ בְּכׇל־טְמֵא־נֶפֶשׁ אוֹ אִישׁ אֲשֶׁר־תֵּצֵא מִמֶּנּוּ שִׁכְבַת־זָרַע׃</span>
+          <span class="line">אוֹ־אִישׁ אֲשֶׁר יִגַּע בְּכׇל־שֶׁרֶץ אֲשֶׁר יִטְמָא־לוֹ אוֹ בְאָדָם אֲשֶׁר יִטְמָא־לוֹ לְכֹל טֻמְאָתוֹ׃</span>
+          <span class="line">נֶפֶשׁ אֲשֶׁר תִּגַּע־בּוֹ וְטָמְאָה עַד־הָעָרֶב וְלֹא יֹאכַל מִן־הַקֳּדָשִׁים כִּי אִם־רָחַץ בְּשָׂרוֹ בַּמָּיִם׃</span>
+          <span class="line">וּבָא הַשֶּׁמֶשׁ וְטָהֵר וְאַחַר יֹאכַל מִן־הַקֳּדָשִׁים כִּי לַחְמוֹ הוּא׃</span>
+          <span class="line">נְבֵלָה וּטְרֵפָה לֹא יֹאכַל לְטׇמְאָה־בָהּ אֲנִי אֲדֹנָי׃</span>
+          <span class="line">וְשָׁמְרוּ אֶת־מִשְׁמַרְתִּי וְלֹא־יִשְׂאוּ עָלָיו חֵטְא וּמֵתוּ בוֹ כִּי יְחַלְּלֻהוּ אֲנִי אֲדֹנָי מְקַדְּשָׁם׃</span>
+          <span class="line">וְכׇל־זָר לֹא־יֹאכַל קֹדֶשׁ תּוֹשַׁב כֹּהֵן וְשָׂכִיר לֹא־יֹאכַל קֹדֶשׁ׃</span>
+          <span class="line">וְכֹהֵן כִּי־יִקְנֶה נֶפֶשׁ קִנְיַן כַּסְפּוֹ הוּא יֹאכַל בּוֹ וִילִיד בֵּיתוֹ הֵם יֹאכְלוּ בְלַחְמוֹ׃</span>
+          <span class="line">וּבַת־כֹּהֵן כִּי תִהְיֶה לְאִישׁ זָר הִוא בִּתְרוּמַת הַקֳּדָשִׁים לֹא תֹאכֵל׃</span>
+          <span class="line">וּבַת־כֹּהֵן כִּי תִהְיֶה אַלְמָנָה וּגְרוּשָׁה וְזֶרַע אֵין לָהּ וְשָׁבָה אֶל־בֵּית אָבִיהָ כִּנְעוּרֶיהָ מִלֶּחֶם אָבִיהָ תֹּאכֵל וְכׇל־זָר לֹא־יֹאכַל בּוֹ׃</span>
+          <span class="line">וְאִישׁ כִּי־יֹאכַל קֹדֶשׁ בִּשְׁגָגָה וְיָסַף חֲמִשִׁיתוֹ עָלָיו וְנָתַן לַכֹּהֵן אֶת־הַקֹּדֶשׁ׃</span>
+          <span class="line">וְלֹא יְחַלְּלוּ אֶת־קׇדְשֵׁי בְּנֵי יִשְׂרָאֵל אֵת אֲשֶׁר־יָרִימוּ לַאדֹנָי׃</span>
+          <span class="line">וְהִשִּׂיאוּ אוֹתָם עֲוֺן אַשְׁמָה בְּאׇכְלָם אֶת־קׇדְשֵׁיהֶם כִּי אֲנִי אֲדֹנָי מְקַדְּשָׁם׃</span>
+        </div>
+        <div class="lyrics-de">
+          <span class="line">(21:16) Und Adonai redete zu Mosche und sprach:</span>
+          <span class="line">(17) Rede zu Aharon und sage: Niemand von deinem Samen in ihren Geschlechtern, an dem ein Gebrechen ist, soll herannahen, um das Brot seines Gottes darzubringen.</span>
+          <span class="line">(18) Denn niemand, an dem ein Gebrechen ist, soll herantreten: ein Blinder, ein Lahmer, ein Plattnasiger oder einer mit unförmigem Glied;</span>
+          <span class="line">(19) oder ein Mann, der einen gebrochenen Fuß oder eine gebrochene Hand hat;</span>
+          <span class="line">(20) oder ein Buckliger oder Zwergwüchsiger, oder einer mit einem Fleck im Auge, oder einer mit Krätze, Flechte oder gequetschtem Hoden.</span>
+          <span class="line">(21) Niemand vom Samen Aharons, des Kohen, an dem ein Gebrechen ist, soll herantreten, die Feueropfer Adonais darzubringen — ein Gebrechen ist an ihm, das Brot seines Gottes soll er nicht herantragen, um es darzubringen.</span>
+          <span class="line">(22) Das Brot seines Gottes von den Hochheiligen und von den Heiligkeiten darf er essen;</span>
+          <span class="line">(23) doch zum Vorhang soll er nicht kommen und zum Altar soll er nicht herannahen, denn ein Gebrechen ist an ihm — und er soll meine Heiligtümer nicht entweihen, denn ich, Adonai, heilige sie.</span>
+          <span class="line">(24) Und Mosche redete zu Aharon und seinen Söhnen und allen Söhnen Israels.</span>
+          <span class="line">(22:1) Und Adonai redete zu Mosche und sprach:</span>
+          <span class="line">(2) Rede zu Aharon und seinen Söhnen, dass sie sich von den Heiligkeiten der Söhne Israels zurückhalten und meinen heiligen Namen nicht entweihen in dem, was sie mir heiligen — ich bin Adonai.</span>
+          <span class="line">(3) Sage zu ihnen für eure Geschlechter: Jeder von all eurem Samen, der zu den Heiligkeiten herantritt, die die Söhne Israels Adonai heiligen, mit seiner Unreinheit an sich — diese Seele wird ausgerottet von meinem Angesicht hinweg. Ich bin Adonai.</span>
+          <span class="line">(4) Niemand vom Samen Aharons, der aussätzig oder flussbehaftet ist, darf von den Heiligkeiten essen, bis er rein wird; und wer irgendetwas berührt, das durch eine Leiche unrein ist, oder einen Mann, von dem Samen ausfließt;</span>
+          <span class="line">(5) oder wer irgendein Kriechtier berührt, durch das er unrein wird, oder einen Menschen, durch den er unrein wird, mit aller seiner Unreinheit —</span>
+          <span class="line">(6) eine Seele, die ihn berührt, ist unrein bis zum Abend, und er soll nicht von den Heiligkeiten essen, es sei denn, er habe sein Fleisch im Wasser gewaschen.</span>
+          <span class="line">(7) Und wenn die Sonne untergeht und er rein ist, darf er danach von den Heiligkeiten essen, denn es ist sein Brot.</span>
+          <span class="line">(8) Gefallenes und Zerrissenes soll er nicht essen, um sich daran unrein zu machen. Ich bin Adonai.</span>
+          <span class="line">(9) Sie sollen meine Wache hüten und keine Schuld auf sich laden und nicht durch sie sterben, indem sie sie entweihen — ich, Adonai, heilige sie.</span>
+          <span class="line">(10) Kein Fremder darf Heiliges essen; der Beisasse eines Kohen und der Tagelöhner sollen kein Heiliges essen.</span>
+          <span class="line">(11) Doch wenn ein Kohen eine Seele für sein Geld erwirbt, darf sie davon essen; und seine Hausgeborenen — sie dürfen von seinem Brot essen.</span>
+          <span class="line">(12) Und wenn die Tochter eines Kohen einem fremden Mann zur Frau wird — sie darf nicht von der Hebe der Heiligkeiten essen.</span>
+          <span class="line">(13) Und wenn die Tochter eines Kohen Witwe oder geschieden ist und keinen Samen hat und in das Haus ihres Vaters zurückkehrt wie in ihrer Jugend — vom Brot ihres Vaters darf sie essen; aber kein Fremder darf davon essen.</span>
+          <span class="line">(14) Und wenn ein Mann unvorsätzlich Heiliges isst, soll er ein Fünftel darauf legen und dem Kohen das Heilige zurückgeben.</span>
+          <span class="line">(15) Sie sollen die Heiligkeiten der Söhne Israels nicht entweihen — das, was sie für Adonai erheben —</span>
+          <span class="line">(16) und ihnen so Schuld der Verschuldung aufladen durch das Essen ihrer Heiligkeiten; denn ich, Adonai, heilige sie.</span>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- ── ALIYAH 3 · שלישי · Vayikra 22:17-33 — Korban-Reinheit, Kiddusch HaSchem ── -->
+    <div class="aliyah-block">
+      <div class="aliyah-label">עֲלִיָּה שְׁלִישִׁית — תָּמִים זָכָר · וְנִקְדַּשְׁתִּי בְּתוֹךְ בְּנֵי יִשְׂרָאֵל<span class="aliyah-label-de">Dritte Aliyah · Vayikra 22:17–33 · Tamim-Anforderung an die Korbanot · Mum macht ungeeignet · Achter Lebenstag · die Wurzel des Kiddusch HaSchem</span></div>
+      <div class="instrument-note">[no percussion] [no drums] [no choir] [acoustic guitar — Hijaz rising warmly, the integrity of the offering, then climbing to the kiddush-hashem peak at 22:32, royal commanding low tones, no percussion] Gitarre: Hijaz steigt warm — die Tamim-Anforderung der Korbanot, dann der Aufstieg in den Kiddusch-HaSchem-Höhepunkt von 22:32, königlich-gebietend.</div>
+      <div class="lyrics-block">
+        <div class="lyrics-he" dir="rtl">
+          <span class="line">וַיְדַבֵּר אֲדֹנָי אֶל־מֹשֶׁה לֵּאמֹר׃</span>
+          <span class="line">דַּבֵּר אֶל־אַהֲרֹן וְאֶל־בָּנָיו וְאֶל כׇּל־בְּנֵי יִשְׂרָאֵל וְאָמַרְתָּ אֲלֵהֶם אִישׁ אִישׁ מִבֵּית יִשְׂרָאֵל וּמִן־הַגֵּר בְּיִשְׂרָאֵל אֲשֶׁר יַקְרִיב קׇרְבָּנוֹ לְכׇל־נִדְרֵיהֶם וּלְכׇל־נִדְבוֹתָם אֲשֶׁר־יַקְרִיבוּ לַאדֹנָי לְעֹלָה׃</span>
+          <span class="line">לִרְצֹנְכֶם תָּמִים זָכָר בַּבָּקָר בַּכְּשָׂבִים וּבָעִזִּים׃</span>
+          <span class="line">כֹּל אֲשֶׁר־בּוֹ מוּם לֹא תַקְרִיבוּ כִּי־לֹא לְרָצוֹן יִהְיֶה לָכֶם׃</span>
+          <span class="line">וְאִישׁ כִּי־יַקְרִיב זֶבַח־שְׁלָמִים לַאדֹנָי לְפַלֵּא־נֶדֶר אוֹ לִנְדָבָה בַּבָּקָר אוֹ בַצֹּאן תָּמִים יִהְיֶה לְרָצוֹן כׇּל־מוּם לֹא יִהְיֶה־בּוֹ׃</span>
+          <span class="line">עַוֶּרֶת אוֹ שָׁבוּר אוֹ־חָרוּץ אוֹ־יַבֶּלֶת אוֹ גָרָב אוֹ יַלֶּפֶת לֹא־תַקְרִיבוּ אֵלֶּה לַאדֹנָי וְאִשֶּׁה לֹא־תִתְּנוּ מֵהֶם עַל־הַמִּזְבֵּחַ לַאדֹנָי׃</span>
+          <span class="line">וְשׁוֹר וָשֶׂה שָׂרוּעַ וְקָלוּט נְדָבָה תַּעֲשֶׂה אֹתוֹ וּלְנֵדֶר לֹא יֵרָצֶה׃</span>
+          <span class="line">וּמָעוּךְ וְכָתוּת וְנָתוּק וְכָרוּת לֹא תַקְרִיבוּ לַאדֹנָי וּבְאַרְצְכֶם לֹא תַעֲשׂוּ׃</span>
+          <span class="line">וּמִיַּד בֶּן־נֵכָר לֹא תַקְרִיבוּ אֶת־לֶחֶם אֱלֹהֵיכֶם מִכׇּל־אֵלֶּה כִּי מׇשְׁחָתָם בָּהֶם מוּם בָּם לֹא יֵרָצוּ לָכֶם׃</span>
+          <span class="line">וַיְדַבֵּר אֲדֹנָי אֶל־מֹשֶׁה לֵּאמֹר׃</span>
+          <span class="line">שׁוֹר אוֹ־כֶשֶׂב אוֹ־עֵז כִּי יִוָּלֵד וְהָיָה שִׁבְעַת יָמִים תַּחַת אִמּוֹ וּמִיּוֹם הַשְּׁמִינִי וָהָלְאָה יֵרָצֶה לְקׇרְבַּן אִשֶּׁה לַאדֹנָי׃</span>
+          <span class="line">וְשׁוֹר אוֹ־שֶׂה אֹתוֹ וְאֶת־בְּנוֹ לֹא תִשְׁחֲטוּ בְּיוֹם אֶחָד׃</span>
+          <span class="line">וְכִי־תִזְבְּחוּ זֶבַח־תּוֹדָה לַאדֹנָי לִרְצֹנְכֶם תִּזְבָּחוּ׃</span>
+          <span class="line">בַּיּוֹם הַהוּא יֵאָכֵל לֹא־תוֹתִירוּ מִמֶּנּוּ עַד־בֹּקֶר אֲנִי אֲדֹנָי׃</span>
+          <span class="line">וּשְׁמַרְתֶּם מִצְוֺתַי וַעֲשִׂיתֶם אֹתָם אֲנִי אֲדֹנָי׃</span>
+          <span class="line">וְלֹא תְחַלְּלוּ אֶת־שֵׁם קׇדְשִׁי וְנִקְדַּשְׁתִּי בְּתוֹךְ בְּנֵי יִשְׂרָאֵל אֲנִי אֲדֹנָי מְקַדִּשְׁכֶם׃</span>
+          <span class="line">הַמּוֹצִיא אֶתְכֶם מֵאֶרֶץ מִצְרַיִם לִהְיוֹת לָכֶם לֵאלֹהִים אֲנִי אֲדֹנָי׃</span>
+        </div>
+        <div class="lyrics-de">
+          <span class="line">(22:17) Und Adonai redete zu Mosche und sprach:</span>
+          <span class="line">(18) Rede zu Aharon und zu seinen Söhnen und zu allen Söhnen Israels und sage zu ihnen: Jeder Mann aus dem Haus Israel und vom Fremdling in Israel, der seine Opfergabe darbringt — für alle ihre Gelübde und für alle ihre freiwilligen Gaben, die sie Adonai als Olah darbringen —</span>
+          <span class="line">(19) zu eurem Wohlgefallen: makellos, männlich, vom Rind, von den Schafen oder von den Ziegen.</span>
+          <span class="line">(20) Alles, an dem ein Gebrechen ist, sollt ihr nicht darbringen — denn es wird euch nicht zum Wohlgefallen sein.</span>
+          <span class="line">(21) Und wenn ein Mann Adonai ein Schelamim-Opfer darbringt, um ein Gelübde einzulösen oder als freiwillige Gabe — vom Rind oder vom Kleinvieh — makellos soll es sein zum Wohlgefallen; kein Gebrechen soll an ihm sein.</span>
+          <span class="line">(22) Ein blindes oder gebrochenes oder verstümmeltes oder schwärendes oder krätziges oder flechtenbehaftetes — diese sollt ihr Adonai nicht darbringen, und ein Feueropfer von ihnen sollt ihr nicht auf den Altar Adonais geben.</span>
+          <span class="line">(23) Und ein Rind oder Schaf mit überlangem oder verstümmeltem Glied — als freiwillige Gabe darfst du es machen, doch als Gelübde wird es nicht wohlgefällig sein.</span>
+          <span class="line">(24) Und ein gequetschtes, zerstoßenes, zerrissenes oder abgeschnittenes (im Hoden) sollt ihr Adonai nicht darbringen, und in eurem Land sollt ihr es nicht tun.</span>
+          <span class="line">(25) Und aus der Hand eines Sohnes der Fremde sollt ihr von all diesen das Brot eures Gottes nicht darbringen — denn ihr Verderben ist an ihnen, ein Gebrechen ist an ihnen; sie werden für euch nicht wohlgefällig sein.</span>
+          <span class="line">(26) Und Adonai redete zu Mosche und sprach:</span>
+          <span class="line">(27) Ein Rind oder Schaf oder Ziege, wenn es geboren wird — sieben Tage soll es unter seiner Mutter sein, und vom achten Tag an und weiter wird es wohlgefällig sein als Feueropfer für Adonai.</span>
+          <span class="line">(28) Und ein Rind oder ein Schaf — es und sein Junges sollt ihr nicht an einem Tag schlachten.</span>
+          <span class="line">(29) Und wenn ihr ein Todah-Schlachtopfer für Adonai schlachtet — zu eurem Wohlgefallen schlachtet es.</span>
+          <span class="line">(30) An jenem Tag soll es gegessen werden; ihr sollt nichts davon bis zum Morgen übrig lassen. Ich bin Adonai.</span>
+          <span class="line">(31) Und ihr sollt meine Gebote hüten und sie tun. Ich bin Adonai.</span>
+          <span class="line">(32) Und ihr sollt meinen heiligen Namen nicht entweihen — und ich werde geheiligt werden inmitten der Söhne Israels. Ich, Adonai, der euch heiligt,</span>
+          <span class="line">(33) der euch herausgeführt hat aus dem Land Ägypten, um euch zum Gott zu sein. Ich bin Adonai.</span>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- ── ALIYAH 4 · רביעי · Vayikra 23:1-22 — Schabbat, Pessach, Omer, Schavuot ── -->
+    <div class="aliyah-block">
+      <div class="aliyah-label">עֲלִיָּה רְבִיעִית — מוֹעֲדֵי אֲדֹנָי · שַׁבָּת · פֶּסַח · עֹמֶר · שָׁבוּעוֹת<span class="aliyah-label-de">Vierte Aliyah · Vayikra 23:1–22 · Die Mo'adim Adonais · Schabbat · Pessach · Sefirat HaOmer · Schavuot · Leket-Pe'ah-Gebot</span></div>
+      <div class="instrument-note">[no percussion] [no drums] [no choir] [acoustic guitar — Hijaz festive royal proclamation, the calendar of sacred time opening like a royal court calendar, the Omer count rising, no percussion] Gitarre: Hijaz festlich-königliche Verkündung — der Kalender der heiligen Zeit öffnet sich wie ein königliches Hof-Diarium, die Omer-Zählung steigt.</div>
+      <div class="lyrics-block">
+        <div class="lyrics-he" dir="rtl">
+          <span class="line">וַיְדַבֵּר אֲדֹנָי אֶל־מֹשֶׁה לֵּאמֹר׃</span>
+          <span class="line">דַּבֵּר אֶל־בְּנֵי יִשְׂרָאֵל וְאָמַרְתָּ אֲלֵהֶם מוֹעֲדֵי אֲדֹנָי אֲשֶׁר־תִּקְרְאוּ אֹתָם מִקְרָאֵי קֹדֶשׁ אֵלֶּה הֵם מוֹעֲדָי׃</span>
+          <span class="line">שֵׁשֶׁת יָמִים תֵּעָשֶׂה מְלָאכָה וּבַיּוֹם הַשְּׁבִיעִי שַׁבַּת שַׁבָּתוֹן מִקְרָא־קֹדֶשׁ כׇּל־מְלָאכָה לֹא תַעֲשׂוּ שַׁבָּת הִוא לַאדֹנָי בְּכֹל מוֹשְׁבֹתֵיכֶם׃</span>
+          <span class="line">אֵלֶּה מוֹעֲדֵי אֲדֹנָי מִקְרָאֵי קֹדֶשׁ אֲשֶׁר־תִּקְרְאוּ אֹתָם בְּמוֹעֲדָם׃</span>
+          <span class="line">בַּחֹדֶשׁ הָרִאשׁוֹן בְּאַרְבָּעָה עָשָׂר לַחֹדֶשׁ בֵּין הָעַרְבָּיִם פֶּסַח לַאדֹנָי׃</span>
+          <span class="line">וּבַחֲמִשָּׁה עָשָׂר יוֹם לַחֹדֶשׁ הַזֶּה חַג הַמַּצּוֹת לַאדֹנָי שִׁבְעַת יָמִים מַצּוֹת תֹּאכֵלוּ׃</span>
+          <span class="line">בַּיּוֹם הָרִאשׁוֹן מִקְרָא־קֹדֶשׁ יִהְיֶה לָכֶם כׇּל־מְלֶאכֶת עֲבֹדָה לֹא תַעֲשׂוּ׃</span>
+          <span class="line">וְהִקְרַבְתֶּם אִשֶּׁה לַאדֹנָי שִׁבְעַת יָמִים בַּיּוֹם הַשְּׁבִיעִי מִקְרָא־קֹדֶשׁ כׇּל־מְלֶאכֶת עֲבֹדָה לֹא תַעֲשׂוּ׃</span>
+          <span class="line">וַיְדַבֵּר אֲדֹנָי אֶל־מֹשֶׁה לֵּאמֹר׃</span>
+          <span class="line">דַּבֵּר אֶל־בְּנֵי יִשְׂרָאֵל וְאָמַרְתָּ אֲלֵהֶם כִּי־תָבֹאוּ אֶל־הָאָרֶץ אֲשֶׁר אֲנִי נֹתֵן לָכֶם וּקְצַרְתֶּם אֶת־קְצִירָהּ וַהֲבֵאתֶם אֶת־עֹמֶר רֵאשִׁית קְצִירְכֶם אֶל־הַכֹּהֵן׃</span>
+          <span class="line">וְהֵנִיף אֶת־הָעֹמֶר לִפְנֵי אֲדֹנָי לִרְצֹנְכֶם מִמׇּחֳרַת הַשַּׁבָּת יְנִיפֶנּוּ הַכֹּהֵן׃</span>
+          <span class="line">וַעֲשִׂיתֶם בְּיוֹם הֲנִיפְכֶם אֶת־הָעֹמֶר כֶּבֶשׂ תָּמִים בֶּן־שְׁנָתוֹ לְעֹלָה לַאדֹנָי׃</span>
+          <span class="line">וּמִנְחָתוֹ שְׁנֵי עֶשְׂרֹנִים סֹלֶת בְּלוּלָה בַשֶּׁמֶן אִשֶּׁה לַאדֹנָי רֵיחַ נִיחֹחַ וְנִסְכֹּה יַיִן רְבִיעִת הַהִין׃</span>
+          <span class="line">וְלֶחֶם וְקָלִי וְכַרְמֶל לֹא תֹאכְלוּ עַד־עֶצֶם הַיּוֹם הַזֶּה עַד הֲבִיאֲכֶם אֶת־קׇרְבַּן אֱלֹהֵיכֶם חֻקַּת עוֹלָם לְדֹרֹתֵיכֶם בְּכֹל מֹשְׁבֹתֵיכֶם׃</span>
+          <span class="line">וּסְפַרְתֶּם לָכֶם מִמׇּחֳרַת הַשַּׁבָּת מִיּוֹם הֲבִיאֲכֶם אֶת־עֹמֶר הַתְּנוּפָה שֶׁבַע שַׁבָּתוֹת תְּמִימֹת תִּהְיֶינָה׃</span>
+          <span class="line">עַד מִמׇּחֳרַת הַשַּׁבָּת הַשְּׁבִיעִת תִּסְפְּרוּ חֲמִשִּׁים יוֹם וְהִקְרַבְתֶּם מִנְחָה חֲדָשָׁה לַאדֹנָי׃</span>
+          <span class="line">מִמּוֹשְׁבֹתֵיכֶם תָּבִיאּוּ לֶחֶם תְּנוּפָה שְׁתַּיִם שְׁנֵי עֶשְׂרֹנִים סֹלֶת תִּהְיֶינָה חָמֵץ תֵּאָפֶינָה בִּכּוּרִים לַאדֹנָי׃</span>
+          <span class="line">וְהִקְרַבְתֶּם עַל־הַלֶּחֶם שִׁבְעַת כְּבָשִׂים תְּמִימִם בְּנֵי שָׁנָה וּפַר בֶּן־בָּקָר אֶחָד וְאֵילִם שְׁנָיִם יִהְיוּ עֹלָה לַאדֹנָי וּמִנְחָתָם וְנִסְכֵּיהֶם אִשֵּׁה רֵיחַ־נִיחֹחַ לַאדֹנָי׃</span>
+          <span class="line">וַעֲשִׂיתֶם שְׂעִיר־עִזִּים אֶחָד לְחַטָּאת וּשְׁנֵי כְבָשִׂים בְּנֵי שָׁנָה לְזֶבַח שְׁלָמִים׃</span>
+          <span class="line">וְהֵנִיף הַכֹּהֵן אֹתָם עַל לֶחֶם הַבִּכֻּרִים תְּנוּפָה לִפְנֵי אֲדֹנָי עַל־שְׁנֵי כְּבָשִׂים קֹדֶשׁ יִהְיוּ לַאדֹנָי לַכֹּהֵן׃</span>
+          <span class="line">וּקְרָאתֶם בְּעֶצֶם הַיּוֹם הַזֶּה מִקְרָא־קֹדֶשׁ יִהְיֶה לָכֶם כׇּל־מְלֶאכֶת עֲבֹדָה לֹא תַעֲשׂוּ חֻקַּת עוֹלָם בְּכׇל־מוֹשְׁבֹתֵיכֶם לְדֹרֹתֵיכֶם׃</span>
+          <span class="line">וּבְקֻצְרְכֶם אֶת־קְצִיר אַרְצְכֶם לֹא־תְכַלֶּה פְּאַת שָׂדְךָ בְּקֻצְרֶךָ וְלֶקֶט קְצִירְךָ לֹא תְלַקֵּט לֶעָנִי וְלַגֵּר תַּעֲזֹב אֹתָם אֲנִי אֲדֹנָי אֱלֹהֵיכֶם׃</span>
+        </div>
+        <div class="lyrics-de">
+          <span class="line">(23:1) Und Adonai redete zu Mosche und sprach:</span>
+          <span class="line">(2) Rede zu den Söhnen Israels und sage zu ihnen: Die Mo'adim Adonais, die ihr ausrufen sollt als heilige Versammlungen — diese sind meine Mo'adim.</span>
+          <span class="line">(3) Sechs Tage soll Arbeit getan werden, und am siebten Tag ist Schabbat Schabbaton, eine heilige Versammlung; keinerlei Arbeit sollt ihr tun. Schabbat ist es für Adonai in allen euren Wohnsitzen.</span>
+          <span class="line">(4) Dies sind die Mo'adim Adonais, heilige Versammlungen, die ihr in ihrer Zeit ausrufen sollt.</span>
+          <span class="line">(5) Im ersten Monat, am vierzehnten des Monats, gegen Abend, ist Pessach für Adonai.</span>
+          <span class="line">(6) Und am fünfzehnten Tag dieses Monats ist das Fest der Matzot für Adonai — sieben Tage sollt ihr Matzot essen.</span>
+          <span class="line">(7) Am ersten Tag soll euch eine heilige Versammlung sein; keinerlei Werk-Arbeit sollt ihr tun.</span>
+          <span class="line">(8) Und ihr sollt sieben Tage lang ein Feueropfer für Adonai darbringen; am siebten Tag ist heilige Versammlung, keinerlei Werk-Arbeit sollt ihr tun.</span>
+          <span class="line">(9) Und Adonai redete zu Mosche und sprach:</span>
+          <span class="line">(10) Rede zu den Söhnen Israels und sage zu ihnen: Wenn ihr in das Land kommt, das ich euch gebe, und ihr seine Ernte erntet, sollt ihr die Garbe der Erstlinge eurer Ernte zu dem Kohen bringen.</span>
+          <span class="line">(11) Und er soll die Garbe vor Adonai schwingen zu eurem Wohlgefallen; am Tag nach dem Schabbat soll der Kohen sie schwingen.</span>
+          <span class="line">(12) Und ihr sollt am Tag, an dem ihr die Garbe schwingt, ein einjähriges, makelloses Schaf als Olah für Adonai darbringen;</span>
+          <span class="line">(13) und seine Minchah: zwei Zehntel feines Mehl, mit Öl vermengt, ein Feueropfer für Adonai zum lieblichen Geruch; und sein Trankopfer: ein Viertel-Hin Wein.</span>
+          <span class="line">(14) Und Brot, Geröstetes und Frischmehl sollt ihr nicht essen bis zum eben diesem Tag — bis ihr die Opfergabe eures Gottes herangebracht habt. Ewige Satzung für eure Geschlechter in allen euren Wohnsitzen.</span>
+          <span class="line">(15) Und ihr sollt euch zählen vom Tag nach dem Schabbat — vom Tag, da ihr die Schwung-Garbe herangebracht habt: sieben volle Schabbatot sollen es sein.</span>
+          <span class="line">(16) Bis zum Tag nach dem siebten Schabbat sollt ihr fünfzig Tage zählen, und dann sollt ihr eine neue Minchah für Adonai darbringen.</span>
+          <span class="line">(17) Aus euren Wohnsitzen sollt ihr Schwung-Brot bringen: zwei Brote aus zwei Zehnteln feines Mehl; gesäuert sollen sie gebacken sein — Erstlinge für Adonai.</span>
+          <span class="line">(18) Und ihr sollt mit dem Brot sieben makellose, einjährige Schafe, einen jungen Stier und zwei Widder darbringen — sie sollen Olah für Adonai sein, mit ihrer Minchah und ihren Trankopfern: ein Feueropfer zum lieblichen Geruch für Adonai.</span>
+          <span class="line">(19) Und ihr sollt einen Ziegenbock als Chatat opfern und zwei einjährige Schafe als Schelamim-Opfer.</span>
+          <span class="line">(20) Und der Kohen soll sie zusammen mit dem Erstlings-Brot als Schwung-Opfer vor Adonai schwingen — mit den zwei Schafen: heilig sollen sie Adonai sein, für den Kohen.</span>
+          <span class="line">(21) Und ihr sollt eben diesen Tag ausrufen; eine heilige Versammlung soll es euch sein; keinerlei Werk-Arbeit sollt ihr tun. Ewige Satzung in allen euren Wohnsitzen für eure Geschlechter.</span>
+          <span class="line">(22) Und wenn ihr die Ernte eures Landes erntet, sollst du die Ecke deines Feldes beim Ernten nicht vollends abernten, und das Aufgelesene deiner Ernte sollst du nicht auflesen — dem Armen und dem Fremdling sollst du sie lassen. Ich bin Adonai, euer Gott.</span>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- ── ALIYAH 5 · חמישי · Vayikra 23:23-32 — Rosch HaSchana, Yom Kippur ── -->
+    <div class="aliyah-block">
+      <div class="aliyah-label">עֲלִיָּה חֲמִישִׁית — זִכְרוֹן תְּרוּעָה · יוֹם הַכִּפֻּרִים<span class="aliyah-label-de">Fünfte Aliyah · Vayikra 23:23–32 · Rosch HaSchana („Zikkaron Teruah") · Yom Kippur · der erzwungene Aufstieg in das innere Tribunal</span></div>
+      <div class="instrument-note">[no percussion] [no drums] [no choir] [acoustic guitar — Hijaz turning towards Saba-undertone, the shofar-call as inner trembling, then the Yom-Kippur austerity, low and contained, no percussion] Gitarre: Hijaz wendet sich in den Saba-Unterton — der Schofar-Ruf als inneres Zittern, dann die Yom-Kippur-Ernste, tief und verhalten.</div>
+      <div class="lyrics-block">
+        <div class="lyrics-he" dir="rtl">
+          <span class="line">וַיְדַבֵּר אֲדֹנָי אֶל־מֹשֶׁה לֵּאמֹר׃</span>
+          <span class="line">דַּבֵּר אֶל־בְּנֵי יִשְׂרָאֵל לֵאמֹר בַּחֹדֶשׁ הַשְּׁבִיעִי בְּאֶחָד לַחֹדֶשׁ יִהְיֶה לָכֶם שַׁבָּתוֹן זִכְרוֹן תְּרוּעָה מִקְרָא־קֹדֶשׁ׃</span>
+          <span class="line">כׇּל־מְלֶאכֶת עֲבֹדָה לֹא תַעֲשׂוּ וְהִקְרַבְתֶּם אִשֶּׁה לַאדֹנָי׃</span>
+          <span class="line">וַיְדַבֵּר אֲדֹנָי אֶל־מֹשֶׁה לֵּאמֹר׃</span>
+          <span class="line">אַךְ בֶּעָשׂוֹר לַחֹדֶשׁ הַשְּׁבִיעִי הַזֶּה יוֹם הַכִּפֻּרִים הוּא מִקְרָא־קֹדֶשׁ יִהְיֶה לָכֶם וְעִנִּיתֶם אֶת־נַפְשֹׁתֵיכֶם וְהִקְרַבְתֶּם אִשֶּׁה לַאדֹנָי׃</span>
+          <span class="line">וְכׇל־מְלָאכָה לֹא תַעֲשׂוּ בְּעֶצֶם הַיּוֹם הַזֶּה כִּי יוֹם כִּפֻּרִים הוּא לְכַפֵּר עֲלֵיכֶם לִפְנֵי אֲדֹנָי אֱלֹהֵיכֶם׃</span>
+          <span class="line">כִּי כׇל־הַנֶּפֶשׁ אֲשֶׁר לֹא־תְעֻנֶּה בְּעֶצֶם הַיּוֹם הַזֶּה וְנִכְרְתָה מֵעַמֶּיהָ׃</span>
+          <span class="line">וְכׇל־הַנֶּפֶשׁ אֲשֶׁר תַּעֲשֶׂה כׇּל־מְלָאכָה בְּעֶצֶם הַיּוֹם הַזֶּה וְהַאֲבַדְתִּי אֶת־הַנֶּפֶשׁ הַהִוא מִקֶּרֶב עַמָּהּ׃</span>
+          <span class="line">כׇּל־מְלָאכָה לֹא תַעֲשׂוּ חֻקַּת עוֹלָם לְדֹרֹתֵיכֶם בְּכֹל מֹשְׁבֹתֵיכֶם׃</span>
+          <span class="line">שַׁבַּת שַׁבָּתוֹן הוּא לָכֶם וְעִנִּיתֶם אֶת־נַפְשֹׁתֵיכֶם בְּתִשְׁעָה לַחֹדֶשׁ בָּעֶרֶב מֵעֶרֶב עַד־עֶרֶב תִּשְׁבְּתוּ שַׁבַּתְּכֶם׃</span>
+        </div>
+        <div class="lyrics-de">
+          <span class="line">(23:23) Und Adonai redete zu Mosche und sprach:</span>
+          <span class="line">(24) Rede zu den Söhnen Israels und sage: Im siebten Monat, am ersten des Monats, soll euch Schabbaton sein, ein Gedenken durch Teruah, eine heilige Versammlung.</span>
+          <span class="line">(25) Keinerlei Werk-Arbeit sollt ihr tun, und ihr sollt Adonai ein Feueropfer darbringen.</span>
+          <span class="line">(26) Und Adonai redete zu Mosche und sprach:</span>
+          <span class="line">(27) Doch am Zehnten dieses siebten Monats ist Yom HaKippurim — eine heilige Versammlung soll euch sein, und ihr sollt eure Seelen kasteien, und ihr sollt Adonai ein Feueropfer darbringen.</span>
+          <span class="line">(28) Und keinerlei Arbeit sollt ihr an ebendiesem Tag tun — denn es ist Yom Kippurim, euch zu sühnen vor Adonai, eurem Gott.</span>
+          <span class="line">(29) Denn jede Seele, die nicht an ebendiesem Tag gekasteit wird, soll von ihrem Volk abgeschnitten werden.</span>
+          <span class="line">(30) Und jede Seele, die irgendeine Arbeit an ebendiesem Tag tut — diese Seele werde ich aus der Mitte ihres Volkes vernichten.</span>
+          <span class="line">(31) Keinerlei Arbeit sollt ihr tun — ewige Satzung für eure Geschlechter in allen euren Wohnsitzen.</span>
+          <span class="line">(32) Schabbat Schabbaton soll er euch sein, und ihr sollt eure Seelen kasteien; am Neunten des Monats am Abend, von Abend zu Abend, sollt ihr euren Schabbat halten.</span>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- ── ALIYAH 6 · שישי · Vayikra 23:33-44 — Sukkot ── -->
+    <div class="aliyah-block">
+      <div class="aliyah-label">עֲלִיָּה שִׁשִּׁית — חַג הַסֻּכּוֹת · שִׁבְעַת יָמִים<span class="aliyah-label-de">Sechste Aliyah · Vayikra 23:33–44 · Das Fest der Sukkot, sieben Tage · Vier Arten · „Damit eure Geschlechter wissen"</span></div>
+      <div class="instrument-note">[no percussion] [no drums] [no choir] [acoustic guitar — Hijaz opening into Sukkot warmth, the four species as a sweep of green and citron, the desert-shelter remembered, no percussion] Gitarre: Hijaz öffnet in Sukkot-Wärme — die vier Arten als grün-zitroniges Sweep, das Wüsten-Obdach erinnert.</div>
+      <div class="lyrics-block">
+        <div class="lyrics-he" dir="rtl">
+          <span class="line">וַיְדַבֵּר אֲדֹנָי אֶל־מֹשֶׁה לֵּאמֹר׃</span>
+          <span class="line">דַּבֵּר אֶל־בְּנֵי יִשְׂרָאֵל לֵאמֹר בַּחֲמִשָּׁה עָשָׂר יוֹם לַחֹדֶשׁ הַשְּׁבִיעִי הַזֶּה חַג הַסֻּכּוֹת שִׁבְעַת יָמִים לַאדֹנָי׃</span>
+          <span class="line">בַּיּוֹם הָרִאשׁוֹן מִקְרָא־קֹדֶשׁ כׇּל־מְלֶאכֶת עֲבֹדָה לֹא תַעֲשׂוּ׃</span>
+          <span class="line">שִׁבְעַת יָמִים תַּקְרִיבוּ אִשֶּׁה לַאדֹנָי בַּיּוֹם הַשְּׁמִינִי מִקְרָא־קֹדֶשׁ יִהְיֶה לָכֶם וְהִקְרַבְתֶּם אִשֶּׁה לַאדֹנָי עֲצֶרֶת הִוא כׇּל־מְלֶאכֶת עֲבֹדָה לֹא תַעֲשׂוּ׃</span>
+          <span class="line">אֵלֶּה מוֹעֲדֵי אֲדֹנָי אֲשֶׁר־תִּקְרְאוּ אֹתָם מִקְרָאֵי קֹדֶשׁ לְהַקְרִיב אִשֶּׁה לַאדֹנָי עֹלָה וּמִנְחָה זֶבַח וּנְסָכִים דְּבַר־יוֹם בְּיוֹמוֹ׃</span>
+          <span class="line">מִלְּבַד שַׁבְּתֹת אֲדֹנָי וּמִלְּבַד מַתְּנוֹתֵיכֶם וּמִלְּבַד כׇּל־נִדְרֵיכֶם וּמִלְּבַד כׇּל־נִדְבֹתֵיכֶם אֲשֶׁר תִּתְּנוּ לַאדֹנָי׃</span>
+          <span class="line">אַךְ בַּחֲמִשָּׁה עָשָׂר יוֹם לַחֹדֶשׁ הַשְּׁבִיעִי בְּאׇסְפְּכֶם אֶת־תְּבוּאַת הָאָרֶץ תָּחֹגּוּ אֶת־חַג־אֲדֹנָי שִׁבְעַת יָמִים בַּיּוֹם הָרִאשׁוֹן שַׁבָּתוֹן וּבַיּוֹם הַשְּׁמִינִי שַׁבָּתוֹן׃</span>
+          <span class="line">וּלְקַחְתֶּם לָכֶם בַּיּוֹם הָרִאשׁוֹן פְּרִי עֵץ הָדָר כַּפֹּת תְּמָרִים וַעֲנַף עֵץ־עָבֹת וְעַרְבֵי־נָחַל וּשְׂמַחְתֶּם לִפְנֵי אֲדֹנָי אֱלֹהֵיכֶם שִׁבְעַת יָמִים׃</span>
+          <span class="line">וְחַגֹּתֶם אֹתוֹ חַג לַאדֹנָי שִׁבְעַת יָמִים בַּשָּׁנָה חֻקַּת עוֹלָם לְדֹרֹתֵיכֶם בַּחֹדֶשׁ הַשְּׁבִיעִי תָּחֹגּוּ אֹתוֹ׃</span>
+          <span class="line">בַּסֻּכֹּת תֵּשְׁבוּ שִׁבְעַת יָמִים כׇּל־הָאֶזְרָח בְּיִשְׂרָאֵל יֵשְׁבוּ בַּסֻּכֹּת׃</span>
+          <span class="line">לְמַעַן יֵדְעוּ דֹרֹתֵיכֶם כִּי בַסֻּכּוֹת הוֹשַׁבְתִּי אֶת־בְּנֵי יִשְׂרָאֵל בְּהוֹצִיאִי אוֹתָם מֵאֶרֶץ מִצְרָיִם אֲנִי אֲדֹנָי אֱלֹהֵיכֶם׃</span>
+          <span class="line">וַיְדַבֵּר מֹשֶׁה אֶת־מֹעֲדֵי אֲדֹנָי אֶל־בְּנֵי יִשְׂרָאֵל׃</span>
+        </div>
+        <div class="lyrics-de">
+          <span class="line">(23:33) Und Adonai redete zu Mosche und sprach:</span>
+          <span class="line">(34) Rede zu den Söhnen Israels und sage: Am fünfzehnten Tag dieses siebten Monats ist das Sukkot-Fest, sieben Tage für Adonai.</span>
+          <span class="line">(35) Am ersten Tag ist heilige Versammlung; keinerlei Werk-Arbeit sollt ihr tun.</span>
+          <span class="line">(36) Sieben Tage sollt ihr Adonai ein Feueropfer darbringen; am achten Tag soll euch heilige Versammlung sein, und ihr sollt Adonai ein Feueropfer darbringen — Atzeret ist es; keinerlei Werk-Arbeit sollt ihr tun.</span>
+          <span class="line">(37) Dies sind die Mo'adim Adonais, die ihr als heilige Versammlungen ausrufen sollt, um Adonai ein Feueropfer darzubringen — Olah und Minchah, Schlachtopfer und Trankopfer, Tag für Tag, was ihm gebührt;</span>
+          <span class="line">(38) außer den Schabbatot Adonais, außer euren Gaben und außer allen euren Gelübden und allen euren freiwilligen Gaben, die ihr Adonai gebt.</span>
+          <span class="line">(39) Doch am fünfzehnten Tag des siebten Monats, wenn ihr den Ertrag des Landes einsammelt, sollt ihr das Fest Adonais sieben Tage feiern — am ersten Tag Schabbaton und am achten Tag Schabbaton.</span>
+          <span class="line">(40) Und ihr sollt euch am ersten Tag die Frucht des Hadar-Baumes nehmen, Palmenwedel, Zweige eines belaubten Baumes und Bachweiden — und ihr sollt euch freuen vor Adonai, eurem Gott, sieben Tage.</span>
+          <span class="line">(41) Und ihr sollt es als Fest für Adonai sieben Tage im Jahr feiern; ewige Satzung für eure Geschlechter, im siebten Monat sollt ihr es feiern.</span>
+          <span class="line">(42) In Sukkot sollt ihr sieben Tage wohnen — jeder Eingeborene in Israel soll in Sukkot wohnen,</span>
+          <span class="line">(43) damit eure Geschlechter wissen, dass ich in Sukkot die Söhne Israels wohnen ließ, als ich sie aus dem Land Ägypten herausführte — ich bin Adonai, euer Gott.</span>
+          <span class="line">(44) Und Mosche sprach die Mo'adim Adonais zu den Söhnen Israels.</span>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- ── ALIYAH 7 · שביעי · Vayikra 24:1-23 — Menorah, Lechem HaPanim, Megaddef, Talion ── -->
+    <div class="aliyah-block">
+      <div class="aliyah-label">עֲלִיָּה שְׁבִיעִית — שֶׁמֶן לַמָּאוֹר · לֶחֶם הַפָּנִים · הַמְּקַלֵּל · מִשְׁפַּט אֶחָד<span class="aliyah-label-de">Siebte Aliyah · Vayikra 24:1–23 · Reines Olivenöl für die Menorah · Zwölf Brote des Schau-Tisches · Der Lästerer · Das eine Recht für Eingeborenen und Fremdling</span></div>
+      <div class="instrument-note">[no percussion] [no drums] [no choir] [acoustic guitar — Hijaz sustained royal stillness for the menorah and the lechem hapanim, then a sudden hardness for the megaddef episode, then back to clear regal closure, no percussion] Gitarre: Hijaz hält königliche Stille für Menorah und Lechem HaPanim — dann jähe Härte für die Megaddef-Episode — dann zurück zum klaren königlichen Schluss.</div>
+      <div class="lyrics-block">
+        <div class="lyrics-he" dir="rtl">
+          <span class="line">וַיְדַבֵּר אֲדֹנָי אֶל־מֹשֶׁה לֵּאמֹר׃</span>
+          <span class="line">צַו אֶת־בְּנֵי יִשְׂרָאֵל וְיִקְחוּ אֵלֶיךָ שֶׁמֶן זַיִת זָךְ כָּתִית לַמָּאוֹר לְהַעֲלֹת נֵר תָּמִיד׃</span>
+          <span class="line">מִחוּץ לְפָרֹכֶת הָעֵדֻת בְּאֹהֶל מוֹעֵד יַעֲרֹךְ אֹתוֹ אַהֲרֹן מֵעֶרֶב עַד־בֹּקֶר לִפְנֵי אֲדֹנָי תָּמִיד חֻקַּת עוֹלָם לְדֹרֹתֵיכֶם׃</span>
+          <span class="line">עַל הַמְּנֹרָה הַטְּהֹרָה יַעֲרֹךְ אֶת־הַנֵּרוֹת לִפְנֵי אֲדֹנָי תָּמִיד׃</span>
+          <span class="line">וְלָקַחְתָּ סֹלֶת וְאָפִיתָ אֹתָהּ שְׁתֵּים עֶשְׂרֵה חַלּוֹת שְׁנֵי עֶשְׂרֹנִים יִהְיֶה הַחַלָּה הָאֶחָת׃</span>
+          <span class="line">וְשַׂמְתָּ אוֹתָם שְׁתַּיִם מַעֲרָכוֹת שֵׁשׁ הַמַּעֲרָכֶת עַל הַשֻּׁלְחָן הַטָּהֹר לִפְנֵי אֲדֹנָי׃</span>
+          <span class="line">וְנָתַתָּ עַל־הַמַּעֲרֶכֶת לְבֹנָה זַכָּה וְהָיְתָה לַלֶּחֶם לְאַזְכָּרָה אִשֶּׁה לַאדֹנָי׃</span>
+          <span class="line">בְּיוֹם הַשַּׁבָּת בְּיוֹם הַשַּׁבָּת יַעַרְכֶנּוּ לִפְנֵי אֲדֹנָי תָּמִיד מֵאֵת בְּנֵי־יִשְׂרָאֵל בְּרִית עוֹלָם׃</span>
+          <span class="line">וְהָיְתָה לְאַהֲרֹן וּלְבָנָיו וַאֲכָלֻהוּ בְּמָקוֹם קָדֹשׁ כִּי קֹדֶשׁ קׇדָשִׁים הוּא לוֹ מֵאִשֵּׁי אֲדֹנָי חׇק־עוֹלָם׃</span>
+          <span class="line">וַיֵּצֵא בֶּן־אִשָּׁה יִשְׂרְאֵלִית וְהוּא בֶּן־אִישׁ מִצְרִי בְּתוֹךְ בְּנֵי יִשְׂרָאֵל וַיִּנָּצוּ בַּמַּחֲנֶה בֶּן הַיִּשְׂרְאֵלִית וְאִישׁ הַיִּשְׂרְאֵלִי׃</span>
+          <span class="line">וַיִּקֹּב בֶּן־הָאִשָּׁה הַיִּשְׂרְאֵלִית אֶת־הַשֵּׁם וַיְקַלֵּל וַיָּבִיאוּ אֹתוֹ אֶל־מֹשֶׁה וְשֵׁם אִמּוֹ שְׁלֹמִית בַּת־דִּבְרִי לְמַטֵּה־דָן׃</span>
+          <span class="line">וַיַּנִּיחֻהוּ בַּמִּשְׁמָר לִפְרֹשׁ לָהֶם עַל־פִּי אֲדֹנָי׃</span>
+          <span class="line">וַיְדַבֵּר אֲדֹנָי אֶל־מֹשֶׁה לֵּאמֹר׃</span>
+          <span class="line">הוֹצֵא אֶת־הַמְקַלֵּל אֶל־מִחוּץ לַמַּחֲנֶה וְסָמְכוּ כׇל־הַשֹּׁמְעִים אֶת־יְדֵיהֶם עַל־רֹאשׁוֹ וְרָגְמוּ אֹתוֹ כׇּל־הָעֵדָה׃</span>
+          <span class="line">וְאֶל־בְּנֵי יִשְׂרָאֵל תְּדַבֵּר לֵאמֹר אִישׁ אִישׁ כִּי־יְקַלֵּל אֱלֹהָיו וְנָשָׂא חֶטְאוֹ׃</span>
+          <span class="line">וְנֹקֵב שֵׁם־אֲדֹנָי מוֹת יוּמָת רָגוֹם יִרְגְּמוּ־בוֹ כׇּל־הָעֵדָה כַּגֵּר כָּאֶזְרָח בְּנׇקְבוֹ־שֵׁם יוּמָת׃</span>
+          <span class="line">וְאִישׁ כִּי יַכֶּה כׇּל־נֶפֶשׁ אָדָם מוֹת יוּמָת׃</span>
+          <span class="line">וּמַכֵּה נֶפֶשׁ־בְּהֵמָה יְשַׁלְּמֶנָּה נֶפֶשׁ תַּחַת נָפֶשׁ׃</span>
+          <span class="line">וְאִישׁ כִּי־יִתֵּן מוּם בַּעֲמִיתוֹ כַּאֲשֶׁר עָשָׂה כֵּן יֵעָשֶׂה לּוֹ׃</span>
+          <span class="line">שֶׁבֶר תַּחַת שֶׁבֶר עַיִן תַּחַת עַיִן שֵׁן תַּחַת שֵׁן כַּאֲשֶׁר יִתֵּן מוּם בָּאָדָם כֵּן יִנָּתֶן בּוֹ׃</span>
+          <span class="line">וּמַכֵּה בְהֵמָה יְשַׁלְּמֶנָּה וּמַכֵּה אָדָם יוּמָת׃</span>
+          <span class="line">מִשְׁפַּט אֶחָד יִהְיֶה לָכֶם כַּגֵּר כָּאֶזְרָח יִהְיֶה כִּי אֲנִי אֲדֹנָי אֱלֹהֵיכֶם׃</span>
+          <span class="line">וַיְדַבֵּר מֹשֶׁה אֶל־בְּנֵי יִשְׂרָאֵל וַיּוֹצִיאוּ אֶת־הַמְקַלֵּל אֶל־מִחוּץ לַמַּחֲנֶה וַיִּרְגְּמוּ אֹתוֹ אָבֶן וּבְנֵי־יִשְׂרָאֵל עָשׂוּ כַּאֲשֶׁר צִוָּה אֲדֹנָי אֶת־מֹשֶׁה׃</span>
+        </div>
+        <div class="lyrics-de">
+          <span class="line">(24:1) Und Adonai redete zu Mosche und sprach:</span>
+          <span class="line">(2) Befiehl den Söhnen Israels, dass sie dir reines, gestoßenes Olivenöl bringen für die Leuchte, eine beständige Lampe aufzustellen.</span>
+          <span class="line">(3) Außerhalb des Vorhangs der Bezeugung, im Zelt der Begegnung, soll Aharon sie ordnen von Abend bis Morgen vor Adonai, beständig — ewige Satzung für eure Geschlechter.</span>
+          <span class="line">(4) Auf der reinen Menorah soll er die Lampen vor Adonai beständig ordnen.</span>
+          <span class="line">(5) Und du sollst feines Mehl nehmen und daraus zwölf Brote backen — zwei Zehntel sollen für ein einzelnes Brot sein.</span>
+          <span class="line">(6) Und du sollst sie in zwei Reihen aufschichten, sechs in jeder Reihe, auf dem reinen Tisch vor Adonai.</span>
+          <span class="line">(7) Und du sollst auf jede Reihe reinen Weihrauch geben — und er soll dem Brot zur Erinnerungsgabe sein, ein Feueropfer für Adonai.</span>
+          <span class="line">(8) Tag des Schabbats für Tag des Schabbats soll er sie beständig vor Adonai ordnen — von den Söhnen Israels, ein ewiger Bund.</span>
+          <span class="line">(9) Und es soll Aharon und seinen Söhnen gehören; sie sollen es an heiligem Ort essen, denn Hochheiliges ist es ihm von den Feueropfern Adonais — eine ewige Satzung.</span>
+          <span class="line">(10) Und es trat hinaus der Sohn einer israelitischen Frau — und er war der Sohn eines ägyptischen Mannes — in die Mitte der Söhne Israels, und sie stritten im Lager, der Sohn der Israelitin und ein israelitischer Mann.</span>
+          <span class="line">(11) Und der Sohn der israelitischen Frau lästerte den Namen und fluchte; und sie brachten ihn zu Mosche. Der Name seiner Mutter war Schlomit, Tochter Divris, vom Stamm Dan.</span>
+          <span class="line">(12) Und sie legten ihn in Gewahrsam, damit ihnen nach dem Mund Adonais entschieden würde.</span>
+          <span class="line">(13) Und Adonai redete zu Mosche und sprach:</span>
+          <span class="line">(14) Führe den Lästerer hinaus vor das Lager, und alle, die es gehört haben, sollen ihre Hände auf sein Haupt legen, und die ganze Gemeinde soll ihn steinigen.</span>
+          <span class="line">(15) Und zu den Söhnen Israels sollst du sprechen: Jeder Mann, der seinen Gott lästert, soll seine Sünde tragen.</span>
+          <span class="line">(16) Und wer den Namen Adonais durchbohrt, soll mit dem Tod sterben — die ganze Gemeinde soll ihn steinigen; sei es Fremdling oder Eingeborener — wenn er den Namen lästert, soll er sterben.</span>
+          <span class="line">(17) Und ein Mann, der irgendeine Menschen-Seele schlägt, soll mit dem Tod sterben.</span>
+          <span class="line">(18) Und wer eine Vieh-Seele schlägt, soll sie ersetzen — Seele um Seele.</span>
+          <span class="line">(19) Und wenn ein Mann seinem Nächsten ein Gebrechen zufügt — wie er getan hat, so soll ihm getan werden:</span>
+          <span class="line">(20) Bruch um Bruch, Auge um Auge, Zahn um Zahn — wie er einem Menschen ein Gebrechen zugefügt hat, so soll ihm zugefügt werden.</span>
+          <span class="line">(21) Und wer Vieh schlägt, soll es ersetzen, und wer einen Menschen schlägt, soll sterben.</span>
+          <span class="line">(22) Ein Recht soll für euch gelten — wie für den Fremdling, so für den Eingeborenen — denn ich bin Adonai, euer Gott.</span>
+          <span class="line">(23) Und Mosche sprach zu den Söhnen Israels, und sie führten den Lästerer vor das Lager hinaus und steinigten ihn mit Steinen — und die Söhne Israels taten, wie Adonai dem Mosche befohlen hatte.</span>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- ══ TIKKUN-BOX — DAS HERZ DER PARASHAH ══ -->
+    <div class="tikkun-box">
+      <div class="tikkun-header">
+        <div class="tikkun-title-he">מַעֲשֵׂה הַתִּיקּוּן — קִידּוּשׁ הַשֵּׁם בְּכָל יוֹם · הֲכָנַת הַמּוֹעֲדִים שְׁלוֹשָׁה יָמִים מִקֹּדֶם · סְפִירַת הָעֹמֶר · יְשִׁיבָה בַּסֻּכָּה · נֵר תָּמִיד בַּבַּיִת</div>
+        <div class="tikkun-title-de">Tikkun – Kiddusch HaSchem als sephardische Tagespraxis, die dreitägige Mo'adim-Vorbereitung, Sefirat HaOmer in der königlichen Ordnung der Zeit, das Sukkah-Wohnen und die häusliche Korrespondenz von Menorah und Lechem HaPanim</div>
+        <div class="tikkun-src">וַיִּקְרָא כ״ב:ל״ב („וְלֹא תְחַלְּלוּ אֶת־שֵׁם קׇדְשִׁי וְנִקְדַּשְׁתִּי בְּתוֹךְ בְּנֵי יִשְׂרָאֵל") · וַיִּקְרָא כ״ג:ב׳ („מוֹעֲדֵי אֲדֹנָי אֲשֶׁר־תִּקְרְאוּ אֹתָם מִקְרָאֵי קֹדֶשׁ") · וַיִּקְרָא כ״ג:ט״ו („וּסְפַרְתֶּם לָכֶם") · וַיִּקְרָא כ״ג:מ״ב („בַּסֻּכֹּת תֵּשְׁבוּ") · וַיִּקְרָא כ״ד:ב׳–ה׳ (נֵר תָּמִיד · לֶחֶם הַפָּנִים) · רמב״ם הלכות יְסוֹדֵי הַתּוֹרָה פֶּרֶק ה׳ (קִידּוּשׁ הַשֵּׁם · גְּדָרָיו) · רמב״ם הלכות שְׁבִיתַת יוֹם טוֹב · רמב״ם הלכות תְּמִידִין וּמוּסָפִין פֶּרֶק ה׳ (לֶחֶם הַפָּנִים · שְׁנֵי עֶשְׂרֹנִים לַחַלָּה) · רמב״ם הלכות סוּכָּה · רמב״ם הלכות תְּפִילָּה וּבִרְכַּת כֹּהֲנִים · אור החיים על וַיִּקְרָא כ״ב:ל״ב וְכ״ג:ב׳ · ספר העיקרים מאמר שלישי · רש״ש נְהַר שָׁלוֹם · רמח״ל דֶּרֶךְ אֲדֹנָי חֵלֶק ד׳ פֶּרֶק ז׳ (הַזְּמַנִּים) · רמח״ל מְסִלַּת יְשָׁרִים פֶּרֶק י״ט (קְדֻשָּׁה) · שד״ל פֵּרוּשׁ עַל הַתּוֹרָה (כ״א:ז׳ עַל „גְּרוּשָׁה מֵאִישָׁהּ" · כ״ג:י״א עַל „מִמָּחֳרַת הַשַּׁבָּת" כְּתַרְגּוּם הָאֻמָּה כְּנֶגֶד הַקָּרָאִים) · בן איש חי שנה ראשונה ושנה שנייה פרשת אמור · שׁוּלְחָן עָרוּךְ אוֹרַח חַיִּים תפ״ט (סְפִירַת הָעֹמֶר) · שׁוּלְחָן עָרוּךְ אוֹרַח חַיִּים תרכ״ה–תרל״ז (סוּכָּה) · כַּף הַחַיִּים אוֹרַח חַיִּים · יָבִיעַ אוֹמֶר · חֲזוֹן עוֹבַדְיָה (מוֹעֲדִים) · נֻסַּח אֲרָם צוֹבָה · מָרוֹקוֹ · יָמֶן · יְרוּשָׁלַיִם</div>
+      </div>
+      <div class="tikkun-body">
+        <strong>Sephardische Praxis:</strong> Emor ist die <em>Malchut</em>-Parashah des Sefer Vayikra — der Punkt, an dem die innere Heiligkeits-Architektur (Kohanim, Korbanot) sich nach außen wendet und zur sichtbaren Ordnung Adonais in der manifesten Welt wird: zur <em>Ordnung der Zeit</em> (die Mo'adim), zur <em>Ordnung des Raumes</em> (Menorah und Lechem HaPanim als ständige Zeichen im Heiligtum), zur <em>Ordnung des Volkes</em> (ein Recht für Eingeborenen und Fremdling) und zur <em>Ordnung der Sprache</em> (Kiddusch HaSchem gegen den Megaddef, der den Namen durchbohrt). Malchut ist nach <strong>Rashash</strong> (<em>Nahar Schalom</em>, sephardisch-yerushalmische Tradition) die unterste Sefirah, durch die alle höheren in die Welt eintreten — sie hat „nichts von ihrem Eigenen", aber alles, was die Welt sieht, sieht sie nur durch sie. Genau das tut Emor: jedes der höheren Themen des Sefer Vayikra (Olah · Mincha · Schelamim · Chatat · Tahara · Kedoschim) erscheint hier <em>in seiner manifesten, datierten, lokalisierten, sprachlich geordneten Form</em>. <strong>Or HaChaim</strong> (auf Vayikra 23:2) liest die berühmten Worte <em>„אֲשֶׁר־תִּקְרְאוּ אֹתָם"</em> mit dem talmudischen Doppelsinn (Rosch HaSchana 25a): nicht nur „die ihr ausrufen sollt", sondern auch — durch die Vokalisierung — <em>„אַתֶּם, אַתֶּם, אַתֶּם"</em>, drei Mal „ihr" — die Mo'adim werden durch das Beit-Din Israels gesetzt, durch das Heiligen des Neumondes. Damit ist die Mo'adim-Festsetzung selbst eine Malchut-Handlung: Adonai stiftet die Zeit, aber die Mo'adim treten erst in die Wirklichkeit, wenn das Sanhedrin sie ausruft. <strong>Ramchal</strong> (<em>Derech Adonai</em>, Teil 4, Kap. 7 zu den Zmanim) erläutert die innere Mechanik der Mo'adim: jeder Mo'ed ist nicht bloß ein Gedenk-Datum, sondern ein <em>wiedergeöffnetes Schöpfungs-Zeitfenster</em> — am Pessach kehrt jährlich der Strom der Cherut (Freiheit) zurück, an Schavuot der Strom der Tora-Annahme, am Sukkot der Strom der Anan-Anane-Schutz-Wolken; nicht als Erinnerung, sondern als <em>tatsächliche</em> jährliche Wieder-Verfügbarkeit der Geulah-Energie. Wer den Mo'ed begeht, schöpft aus diesem Strom; wer ihn versäumt, geht an einem geöffneten Tor vorbei.
+        <br><br>
+        <strong>Das Herz der Parashah ist Vayikra 22:32:</strong> <em>„וְלֹא תְחַלְּלוּ אֶת־שֵׁם קׇדְשִׁי וְנִקְדַּשְׁתִּי בְּתוֹךְ בְּנֵי יִשְׂרָאֵל אֲנִי אֲדֹנָי מְקַדִּשְׁכֶם"</em>. <strong>Rambam</strong> verankert in <em>Hilchot Yesodei HaTorah</em> Perek 5 die ganze Mitzwah des Kiddusch HaSchem an diesem Vers: jeder Israelit ist verpflichtet, seinen Schöpfer zu heiligen — durch Standhaftigkeit in den drei Kardinal-Übertretungen (Götzendienst, Mord, sexuelle Verbote) auch um den Preis des Lebens, und in jeder anderen Sache durch ein Leben, das den Namen verherrlicht. Das spiegelt sich am Ende der Parashah, im <em>Megaddef</em> (Vayikra 24:10–23): wer den Namen <em>nokev</em> — durchbohrt, verflucht — bringt die Spiegelhandlung des Kiddusch HaSchem in ihr Gegenteil. Die Tora setzt beides nebeneinander, weil beides zusammengehört: Heiligung und Entweihung des Namens sind die zwei Pole, zwischen denen der Mensch täglich lebt. Sephardisch (Aleppo, Marokko, Yemen, Yerushalayim) gilt: jeder Tag bietet zehn unauffällige Gelegenheiten zum Kiddusch HaSchem — Geduld in der Schlange, Höflichkeit zum Fremden, Ehrlichkeit in der kleinsten Geld-Sache, Zurückhaltung bei Streit, freundliches Wort zum nicht-jüdischen Nachbarn. Das ist <strong>Or HaChaim's</strong> Auslegung zu 22:32 (er liest <em>„betoch b'nei Yisrael"</em> als „dort, wo das Volk sich versammelt, vor den Augen aller"): die Heiligung geschieht im Öffentlichen, in der gewöhnlichen Stunde, nicht im Verborgenen. <strong>Ben Ish Chai</strong> (Schanah Rischona, Parashat Emor) führt aus, was für die sephardische Erziehung Standard ist: ein Vater lehrt den Sohn — durch sein eigenes Handeln auf dem Markt, in der Synagoge, in der Begegnung mit Behörden — dass Kiddusch HaSchem nicht Heldentum großer Stunden ist, sondern die <em>kontinuierliche</em> Sorge, dass der eigene Lebensstil dem Namen Adonais Ehre macht.
+        <br><br>
+        <strong>Die Mo'adim-Sektion (Kap. 23)</strong> entfaltet die Architektur des sephardischen Jahres. <strong>Sefer HaIkkarim</strong> (Albo, Maamar Schlischi) zählt die Mo'adim unter die Wurzeln des Glaubens: ohne Festsetzung der heiligen Zeit gäbe es keine geteilte religiöse Erfahrung, kein gemeinschaftliches Volk-Werden. <strong>Schadal</strong> (<em>Pirusch al haTora</em> zu Vayikra 23:11) gibt zur klassischen Auseinandersetzung mit den Karäern eine philologisch präzise Pointe: er zitiert den <em>Kuzari</em> (3:41) zur Möglichkeit, <em>„מִמָּחֳרַת הַשַּׁבָּת"</em> zunächst rein wörtlich zu lesen — und zeigt, dass die normative Tradition trotzdem die Autorität des Sanhedrin behauptet, das die Omer-Schwingung auf den 16. Nisan (zweiter Tag Pessach) festsetzt. Damit ist die Sefirat-HaOmer-Halacha ein Modell-Fall: die Tora gibt das Datum, das Sanhedrin (und durch die Tradition: die rabbinische Halacha) gibt die verbindliche Lesart. Sephardisch (Schulchan Aruch OC 489, Kaf HaChaim, Chazon Ovadia <em>Sefirat HaOmer</em>) wird vom 16. Nisan bis Schavuot Abend für Abend gezählt, mit Brachah, mit der ausführlichen Kawanah-Formel <em>„hareni mukhan u'mzuman"</em>, und mit der nächtlichen <em>L'schem yichud</em>-Einleitung der Rashash-Tradition. <strong>Ramchal</strong> in <em>Mesillat Yescharim</em> Perek 19 zur <em>Kedushah</em> beschreibt diese 49 Tage als die innere Reinigungs-Strecke des Schritts von Cherut (Pessach) zu Tora-Empfang (Schavuot): jede Mittag-Mussar-Schritt nach Pinchas ben Yair (Avoda Zarah 20b) wird hier in <em>einer</em> Woche der Omer-Zählung gespiegelt, und in <em>einem</em> Tag der Woche eine der inneren Mittag-Stufen — eine sephardische Lern-Architektur, die Ramchal selbst in <em>Mesillat Yescharim</em> vom Anfang her einsetzt. <strong>Sukkot</strong> (23:33–44) bringt die andere Hälfte: nach der inneren Reinigung der Omer-Strecke folgt am Ende des Jahres die äußere Sichtbar-Machung — sieben Tage <em>außerhalb</em> des festen Hauses, unter Tem-Dächern, mit den vier Arten in der Hand, vor Adonai. <em>„לְמַעַן יֵדְעוּ דֹרֹתֵיכֶם"</em> (23:43) — damit eure Geschlechter wissen. Das Wissen ist nicht abstrakt, sondern <em>verkörpert</em>: durch sieben Tage in der Sukkah weiß man, was Wüsten-Wohnen heißt; durch sieben Tage Lulav-Halten weiß man, was es heißt, sich vor Adonai zu schwingen.
+        <br><br>
+        <strong>Kapitel 24 (Menorah und Lechem HaPanim)</strong> bringt die häusliche und liturgische Schluss-Architektur. <strong>Rambam</strong> (<em>Hilchot Temidin uMussafin</em> Perek 5:4) regelt die Lechem-HaPanim-Bereitung präzise: <em>zwei Zehntel feines Mehl für jedes Brot</em>, zwölf Brote, zwei Reihen zu sechs, reiner Weihrauch obendrauf, Schabbat für Schabbat. Die Vorgabe der zwei Zehntel ist nicht beiläufig — sie kommt explizit aus Vayikra 24:5. Die Menorah ihrerseits brennt <em>tamid</em>, ohne Unterbrechung, mit reinem Olivenöl. Sephardisch (Aleppo-Yerushalayim-Brauch) wird diese Architektur in der Wohnung gespiegelt: am Schabbat-Tisch zwei Brote (Lechem Mischneh — Erinnerung an Lechem HaPanim) und das Schabbat-Licht (Erinnerung an die Menorah). <strong>Or HaChaim</strong> (auf 24:2) und <strong>Ben Ish Chai</strong> (Schanah Rischona Parashat Behaalotcha, der dort die Menorah-Verbindung mit Emor zieht) lehren, dass die Schabbat-Lichter <em>tamid</em> in der Heimstatt brennen sollen — Frauensache nach sephardischem Standard, mit der Kawanah, das ganze Haus auf das ständige Licht Adonais auszurichten. <strong>Die Megaddef-Episode</strong> (24:10–23) schließt die Parashah ab mit einer dramatischen Übung: das eine Recht für Eingeborenen und Fremdling (24:22) ist die direkte Anwendung des Malchut-Themas — die königliche Ordnung Adonais kennt keine zwei Maßstäbe; sie gilt für alle, die sich unter sie stellen. Sephardisch — in einer Diaspora-Geschichte, in der das Volk oft als Fremdling zwischen Völkern lebt — ist dieser Vers besonders kostbar: er begründet, warum die jüdische Gerichtsbarkeit den Ger (Konvertit) wie den Eingeborenen behandelt. <strong>Yabia Omer</strong> und <strong>Chazon Ovadia</strong> (Rav Ovadia Yosef, mehrere Bände zu Giyur und Personenstand) führen diese Tradition in die moderne sephardische Halacha fort — ohne harten Differenzialismus gegenüber Konvertiten, mit warmem Aufnehmen.
+        <br><br>
+        <strong>Praktische Handlung:</strong> (1) <em>Tägliches Kiddusch HaSchem — drei konkrete Übungen</em>: Beginne jeden Tag mit der Vornahme, in drei konkreten Situationen den Namen zu heiligen — (a) im Geld-Verkehr eine Höflichkeit, die nicht erwartet wird (das Wechselgeld korrekt zurückgeben, dem Kassierer einen freundlichen Gruß); (b) im Familien-Verhalten eine Geduld, die der Stunde nicht entspricht; (c) im Umgang mit einem Nicht-Juden eine Aufmerksamkeit, die zeigt, dass Adonai-Treue und Mitmenschen-Würde zusammengehören. Quelle: Rambam Hilchot Yesodei HaTorah 5:11 — <em>„יֵשׁ דְּבָרִים אֲחֵרִים שֶׁהֵן בִּכְלַל חִלּוּל הַשֵּׁם"</em>: Rambam zählt dort kleine, unauffällige Handlungen auf, die als Chillul HaSchem gelten — der Tikkun-Punkt ist die Umkehrung: dieselben kleinen Handlungen, bewusst entgegengesetzt geführt, werden zum täglichen Kiddusch HaSchem. (2) <em>Dreitägige Mo'adim-Vorbereitung</em>: Sephardischer Aleppo-Marokko-Yerushalayim-Brauch: vor jedem Mo'ed mindestens drei Tage lernen — die einschlägigen Halachot des Mo'eds (Schulchan Aruch OC für Pessach: 429ff.; Schavuot: 494; Rosch HaSchana: 581ff.; Yom Kippur: 604ff.; Sukkot: 625ff.). Konkret: drei Tage vor Pessach eine halbe Stunde Hilchot Pessach aus Chazon Ovadia oder Ben Ish Chai; drei Tage vor Schavuot eine halbe Stunde Tikkun Lel Schavuot vorbereiten (sephardisch: Inhalt des Tikkun nach Aleppo-Brauch); drei Tage vor Sukkot die Vier-Arten-Halachot und die Sukkah-Bau-Halachot. Ben Ish Chai gibt in den jeweiligen Mo'adim-Halachot die ausführliche sephardische Praxis. (3) <em>Sefirat HaOmer mit voller Brachah und Rashash-Einleitung</em>: Vom 16. Nisan an Abend für Abend nach Maariv (oder nach Tzet HaKochavim, wenn allein) — sephardischer Brauch (Kaf HaChaim 489 · Chazon Ovadia Sefirat HaOmer): erst die <em>L'schem yichud</em>-Einleitung (Rashash-Nussach), dann die Brachah <em>„Asher kidschanu... al sefirat haOmer"</em>, dann die Zählung in voller Form (Tag und Woche), dann ein kurzer Tehillim 67 oder das <em>Ana B'Koach</em>. Wer einen Tag versäumt hat, zählt weiter ohne Brachah (Schulchan Aruch OC 489:8 — sephardischer Standard). (4) <em>Sukkah-Wohnen — kewi'ut achilah, schenah, limmud</em>: Sephardisch (Ben Ish Chai Schanah Rischona Sukkot · Chazon Ovadia Sukkot): in den sieben Tagen Sukkot werden die drei Haupt-Lebens-Vollzüge in die Sukkah verlegt — Essen (alle Mahlzeiten mit Brot · Mezonot ab Ke'beitzah), Schlafen (Aleppo/Marokko-Brauch: auch der Mittagsschlaf in der Sukkah), Lernen (mindestens 30 Minuten täglich Tora in der Sukkah). Die Kawanah folgt 23:43 — <em>„damit eure Geschlechter wissen"</em>: das Wohnen ist Wissen. (5) <em>Schabbat-Tisch als Lechem-HaPanim-Spiegel</em>: Sephardisch (Ben Ish Chai · Aleppo-Brauch): am Schabbat-Tisch zwei vollständige Brote (Lechem Mischneh), aufeinander gelegt oder nebeneinander, mit Tuch bedeckt, vor dem HaMotzi. Kawanah: die zwei Brote spiegeln die zwei Lechem-HaPanim-Reihen aus Vayikra 24:6; der Tisch des Hauses ist der Spiegel des Schulchan im Heiligtum. <em>Or HaChaim</em> auf 24:5–6 lehrt, dass <em>jeder</em> Schabbat-Tisch des sephardisch-jüdischen Hauses durch dieses Bild geheiligt ist. (6) <em>Schabbat-Lichter als Menorah-tamid-Spiegel</em>: Sephardisch (Aleppo-Yerushalayim-Brauch): die Schabbat-Lichter werden 18 Minuten vor Sonnenuntergang angezündet (Eretz Yisrael: ortsspezifisch); Kawanah nach Vayikra 24:2–4: <em>„nēr tāmid lifnei Adonai"</em> — der Sefardi sieht in den Schabbat-Lichtern den manifesten Spiegel der Menorah, die <em>tamid</em> vor Adonai brennt. Wer entzündet, spricht innerlich: <em>„möge das Licht in unserem Haus dem Licht vor dem Vorhang der Bezeugung entsprechen, möge unser Haus ein Spiegel des Mikdasch sein."</em> (7) <em>Yom-Kippur-Inuy als sephardische Komplett-Praxis</em>: Nach Vayikra 23:27–32 sind die fünf Inuyim halachisch (Schulchan Aruch OC 611–614 · Chazon Ovadia Yamim Noraim): kein Essen/Trinken, keine Körperpflege, keine Salbung, kein Lederschuh, keine ehelichen Beziehungen — sephardisch genau gehalten. Kawanah während Mussaf: bei der Avodah-Sektion des Hohepriesters innerlich mitvollziehen (der sephardische Brauch in Aleppo und Marokko, die Avodah-Erzählung mit Knien an drei Stellen zu begleiten — bei den drei Worten <em>„HaKohanim ve'haAm ha'omdim ba'azarah"</em>). (8) <em>Vor jedem Streit — Megaddef-Erinnerung</em>: Wenn ein Streit aufkommt und das Schreien beginnt — innerlich zurücktreten, an Vayikra 24:11 denken (<em>„vayikov... et haSchem vay'kallel"</em>: aus dem Streit zwischen zwei Menschen entstand die schlimmste Lästerung). Sephardisch (Ben Ish Chai · Aleppo-Mussar-Tradition): wer im Zorn das Schimpfen sich angewöhnt, kommt langsam zu Sprache, die den Namen entweiht; wer sich umgekehrt im Zorn die Hand auf den Mund legt, hat eine kleine Übung des Kiddusch HaSchem getan. Das ist <em>Mussar</em> der praktischen Art — auf den konkreten Wort-Augenblick gerichtet. (9) <em>Das eine Recht — Ger und Eingeborener</em>: Vayikra 24:22 (<em>„מִשְׁפַּט אֶחָד יִהְיֶה לָכֶם"</em>) als sephardische Mussar-Übung: wenn ein Konvertit (Ger Zedek) in der Gemeinde, am Tisch, im Geschäft begegnet — sephardisch (Yabia Omer und Chazon Ovadia in mehreren Bänden zu Giyur · Aleppo-Marokko-Yerushalayim-Praxis) wird der Ger mit voller Achtung empfangen, ohne ihn weiter als Konvertiten zu kennzeichnen; Rambam (Hilchot De'ot 6:4 und Hilchot Issurei Bi'ah 13:14ff., mit Igeret zu R' Ovadia HaGer) ist explizit: einen Ger zu kennzeichnen oder kleiner zu behandeln, ist verboten. Die praktische Übung: im Gespräch nicht <em>„der Ger"</em>, sondern den Namen — wie bei jedem anderen. (10) <em>Or HaChaim auf 22:32 am Schabbat-Mittag</em>: Sephardischer Brauch (Aleppo, Marokko): am Schabbat-Mittag nach dem Hauptgang ein kurzes Lernen — Or HaChaim auf den Kiddusch-HaSchem-Vers (22:32), gefolgt von Rambam Hilchot Yesodei HaTorah 5:1–4. Die Übung dauert 10–15 Minuten. Sie verankert die Woche im Bewusstsein, dass jedes kleine Tun den Namen heiligt oder entweiht — und schließt mit dem Vorsatz für die kommende Woche, eine konkrete Kiddusch-HaSchem-Übung zu wählen. (11) <em>Maschiach ben David in Emor — die volle Erfüllung des „v'nikdaschti"</em>: Die sephardische Tradition (Rambam Hilchot Mlachim, Sefer HaIkkarim) erkennt die Yemot-HaMaschiach-Erfüllung in Vayikra 22:32 (<em>v'nikdaschti betoch b'nei Yisrael</em>) und in 23:2 (<em>moadei Adonai... mikra'ei kodesch</em>): die endgültige Heiligung des Namens <em>inmitten</em> Israels — sichtbar — geschieht in den Tagen des Maschiach ben David, wenn die Mo'adim wieder mit dem vollen Korban-Dienst gefeiert werden. Wer in der Amidah am Mussaf eines jeden Mo'eds <em>„uvenei beitkha kebatchilah"</em> spricht (sephardischer Standard-Nussach Yerushalayim), kann eine Kawanah einlegen: <em>„möge das Versprechen Emors sich vollenden, möge der Maschiach ben David kommen, möge die königliche Ordnung der heiligen Zeit in ihrer ganzen Fülle wieder aufgerichtet werden."</em>
+      </div>
+      <div class="tikkun-tags">
+        <span class="tikkun-tag">קִידּוּשׁ הַשֵּׁם</span>
+        <span class="tikkun-tag">מוֹעֲדֵי אֲדֹנָי</span>
+        <span class="tikkun-tag">סְפִירַת הָעֹמֶר</span>
+        <span class="tikkun-tag">בַּסֻּכֹּת תֵּשְׁבוּ</span>
+        <span class="tikkun-tag">נֵר תָּמִיד</span>
+      </div>
+    </div>
+
+    <!-- ══ SCHI · KLIMAX-MOMENT — VAYIKRA 22:32 ══ -->
+    <div class="climax-box">
+      <div class="climax-label">שִׂיא · ff · Klimax-Vers der Parashah · die Wurzel des Kiddusch HaSchem</div>
+      <div class="instrument-note">[no percussion] [no drums] [no choir] [acoustic guitar — full Hijaz chord forte to fortissimo, the sanctification-of-the-name verse, the augmented second resounding like a coronation horn, no percussion, no drums] Gitarre: Voller Hijaz-Akkord, forte zu fortissimo — der Kiddusch-HaSchem-Vers, die übermäßige Sekunde wie ein Krönungs-Horn.</div>
+      <div class="climax-verse-he">וְלֹא תְחַלְּלוּ אֶת־שֵׁם קׇדְשִׁי · וְנִקְדַּשְׁתִּי בְּתוֹךְ בְּנֵי יִשְׂרָאֵל · אֲנִי אֲדֹנָי מְקַדִּשְׁכֶם</div>
+      <div class="climax-verse-de">„Und ihr sollt meinen heiligen Namen nicht entweihen — und ich werde geheiligt werden inmitten der Söhne Israels. Ich, Adonai, der euch heiligt."</div>
+      <div class="climax-src">וַיִּקְרָא כ״ב:ל״ב — Wurzel-Vers der Mitzwah Kiddusch HaSchem nach Rambam Hilchot Yesodei HaTorah Perek 5</div>
+    </div>
+
+    <!-- ══ KODA · BASUKKOT-WHISPER — VAYIKRA 23:43 ══ -->
+    <div class="coda-box">
+      <div class="coda-label">קוֹדָה · pp · Sukkah-Gedächtnis im Hauch</div>
+      <div class="instrument-note">[no percussion] [no drums] [no choir] [acoustic guitar — Hijaz dissolving into a single sustained note, the Sukkah-memory whispered, the desert-shelter barely audible, no percussion] Gitarre: Hijaz löst sich in einen einzigen getragenen Ton — das Sukkah-Gedächtnis geflüstert, das Wüsten-Obdach kaum hörbar.</div>
+      <div class="coda-whisper">
+        לְמַעַן יֵדְעוּ <strong>דֹרֹתֵיכֶם</strong> — כִּי <strong>בַסֻּכּוֹת</strong> הוֹשַׁבְתִּי אֶת־בְּנֵי יִשְׂרָאֵל — <strong>אֲנִי אֲדֹנָי</strong> אֱלֹהֵיכֶם</div></div>
+
+  </section>
+
+  <!-- ══ FOOTER ══ -->
+  <div class="footer">
+    <p class="footer-he">פָּרָשַׁת אֱמֹר · מַלְכוּת · מַקָּאם חִיגָ׳אז · קִידּוּשׁ הַשֵּׁם · מוֹעֲדֵי אֲדֹנָי · בַּסֻּכֹּת תֵּשְׁבוּ</p>
+    <p class="footer-chain">
+      וַיִּקְרָא כ״א:א׳–כ״ד:כ״ג · נוּסַּח צָדוֹק (רשש) · עֵדוֹת הַמִּזְרָח · אַרְבָעָה רְגָלִים · יָמִים נוֹרָאִים
+    </p>
+    <p class="footer-de">
+      Quellen: <strong>Tanach</strong> (Vayikra 21:1–24:23 — Tora-Text 1:1, mit Tetragrammaton-Konvertierung
+      durchgängig als אֲדֹנָי) · <strong>Rambam · Mishneh Torah</strong> (Hilchot Yesodei HaTorah Perek 5
+      — Kiddusch HaSchem und seine Stufen · Hilchot Klei HaMikdasch ve'ovdim bo · Hilchot Bi'at HaMikdasch
+      Perakim 6–8 — Kohanim mit Mum · Hilchot Temidin uMussafin Perek 5:4 — Lechem HaPanim mit zwei
+      Zehnteln pro Brot · Hilchot Schevitat Yom Tov · Hilchot Sukkah · Hilchot Lulav · Hilchot Mlachim
+      zur Maschiach-ben-David-Tradition) · <strong>Or HaChaim</strong> (auf Vayikra 22:32 — Heiligung
+      im Öffentlichen; auf Vayikra 23:2 — die Mo'adim als „atem, atem, atem"; auf Vayikra 24:2 — das
+      tamid-Licht als häuslicher Spiegel) · <strong>Sefer HaIkkarim</strong> (Yosef Albo, Maamar
+      Schlischi — die Mo'adim als Glaubens-Anker) · <strong>Rashash · Nahar Schalom</strong>
+      (Drushim al haMo'adim · Malchut als unterste, manifestierende Sefirah) · <strong>Ramchal ·
+      Derech Adonai</strong> (Teil 4, Perek 7 — die Zmanim als wiedergeöffnete Schöpfungs-Zeitfenster) ·
+      <strong>Ramchal · Mesillat Yescharim</strong> (Perek 19 zur Kedushah; die 49 Omer-Tage als
+      innere Reinigungs-Strecke nach der Baraita de Rabbi Pinchas ben Yair) · <strong>Schadal ·
+      Pirusch al haTora</strong> (Vayikra 21:7 — philologische Glosse zu „gerushah me'ischah";
+      Vayikra 21:20 — tevallul und meroach aschech als medizinische Erläuterungen; Vayikra 23:11 —
+      mimochorat haschabbat in Verteidigung der rabbinischen Tradition gegen die karäische Lesart,
+      mit Zitat des Kuzari 3:41; Vayikra 23:16 — sefirat haOmer; und die Einleitungs-Glosse zu
+      Vayikra 19:1, die den Übergang von der allgemeinen Heiligkeits-Gesetzgebung zur Kohanim-Kedushah
+      in Emor beleuchtet) ·
+      <strong>Ben Ish Chai</strong> Schanah Rischona und Schanah Schniah (Parashat Emor · Mo'adim-Halachot
+      über beide Bände verteilt · Hilchot Kiddusch HaSchem und Hilchot Aleppo-Marokko-Yerushalayim-Mussar) ·
+      <strong>Schulchan Aruch</strong> (Orach Chaim 489 — Sefirat HaOmer · 494 — Schavuot · 581ff. —
+      Selichot und Rosch HaSchana · 604ff. — Yom Kippur · 625–644 — Sukkah · 645–656 — Vier Arten) ·
+      <strong>Kaf HaChaim</strong> (Rabbi Yaakov Chaim Sofer · sephardische Praxis aller Eidot HaMizrach:
+      Aleppo, Marokko, Yemen, Yerushalayim · besonders zu Sefirat HaOmer und zu den Mo'adim-Halachot) ·
+      <strong>Yabia Omer · Chazon Ovadia</strong> (Rabbi Ovadia Yosef Z'L — sephardische moderne
+      Halacha · Mo'adim-Bände zu Pessach, Schavuot, Yamim Noraim, Sukkot · zu Giyur · zu Sefirat
+      HaOmer) · <strong>Talmud Bavli · Rosch HaSchana 25a</strong> (zu „atem, atem, atem" in
+      Vayikra 23:2 — die Beit-Din-Autorität bei der Mo'adim-Festsetzung) · <strong>Sephardische Mo'adim-Pijutim</strong>
+      Eidot HaMizrach (Bakkaschot zu Schalosch Regalim · Selichot zu Yamim Noraim · Hoschanot zu Sukkot · in
+      Maqam-Hijaz-Tradition Aleppo-Yerushalayim) · <strong>Krias Schma She'al haMittah</strong>
+      (Aleppo-Tradition).
+      <br><br>
+      <strong>Tradition:</strong> Sephardisch · Nussach Zadoq (Rashash) · Maqam-Tradition aus Aleppo,
+      Yerushalayim, Marokko, Yemen · Tetragrammaton durchgängig als אֲדֹנָי · Maschiach ben David ·
+      Doppelt geprüfte Quellen · Tora-Text 1:1 unverändert · Erstellt Mai 2026 · Sefer HaParashot
+      bemo Maqam · 8. Lied Sefer Vayikra · Malchut · Maqam Hijaz · מוֹעֲדֵי אֲדֹנָי.
+    </p>
+    <div class="footer-amen">אָמֵן · יִבָּנֶה הַמִּקְדָּשׁ בִּמְהֵרָה בְיָמֵינוּ · יָבוֹא מָשִׁיחַ בֶּן דָּוִד · אָמֵן</div>
+  </div>
+
+</div>
+
+
+</body></html>

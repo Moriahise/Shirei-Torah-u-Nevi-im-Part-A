@@ -1,0 +1,762 @@
+<!DOCTYPE html>
+<html lang="he-IL"><head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>פָּרָשַׁת קְדֹשִׁים · וַיִּקְרָא י״ט:א׳–כ׳:כ״ז · חֶסֶד · מַקָּאם עַ׳ג׳ָ׳ם · Sephardische Tora-Vertonung</title>
+  <link href="https://fonts.googleapis.com/css2?family=Frank+Ruhl+Libre:wght@300;400;700;900&amp;family=EB+Garamond:ital,wght@0,400;0,600;1,400;1,600&amp;family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&amp;display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg:#060808; --deep:#0A0E0E; --layer:#101414; --card:#0C1010;
+      --parchment:#f2e8d0; --parch-dim:#c8b898;
+      --ivory:#f0e8d8; --ivory-dim:#a89878;
+      --silver:#c8d4e0; --silver-dim:#7a8290;
+      --text:#a0a89c;
+      /* SEFER VAYIKRA — Königlich-Gold */
+      --sefer:#C8A030; --sefer-lt:#F0CC60; --sefer-dim:#8B7020;
+      --sefer-bg:rgba(200,160,48,.08); --sefer-bdr:rgba(200,160,48,.36); --sefer-glow:rgba(240,204,96,.20);
+      /* KEDOSHIM · CHESED · AJAM — Olive-Gold-Warm (mitmenschliche Wärme) */
+      --kds:#A8843C; --kds-lt:#D8B466; --kds-dim:#7A5C20;
+      --kds-bg:rgba(168,132,60,.08); --kds-bdr:rgba(168,132,60,.36); --kds-glow:rgba(216,180,102,.22);
+      /* MAQAM-FARBEN */
+      --maqam-saba:#B0904A; --maqam-hijaz:#C85050; --maqam-bayat:#A07850;
+      --maqam-rast:#C8A860; --maqam-ajam:#7A9050; --maqam-nahawand:#6080A0;
+    }
+    *,*::before,*::after { margin:0; padding:0; box-sizing:border-box; }
+    html { scroll-behavior:smooth; }
+    body { background:var(--bg); color:var(--silver); font-family:'EB Garamond',serif; overflow-x:hidden; line-height:1.85; padding:40px 20px 80px; }
+    body::before { content:''; position:fixed; inset:0; pointer-events:none; z-index:0;
+      background: radial-gradient(ellipse at 18% 12%, rgba(200,160,48,.10) 0%, transparent 48%),
+                  radial-gradient(ellipse at 82% 28%, rgba(168,132,60,.12) 0%, transparent 45%),
+                  radial-gradient(ellipse at 12% 68%, rgba(122,144,80,.08) 0%, transparent 45%),
+                  radial-gradient(ellipse at 88% 82%, rgba(216,180,102,.10) 0%, transparent 42%),
+                  radial-gradient(ellipse at 50% 50%, rgba(20,16,8,.82) 0%, transparent 70%); }
+    body::after { content:''; position:fixed; inset:0; pointer-events:none; z-index:0;
+      background-image:
+        radial-gradient(1px 1px at 8% 10%, rgba(240,204,96,.34) 0%, transparent 100%),
+        radial-gradient(1px 1px at 48% 5%, rgba(216,180,102,.30) 0%, transparent 100%),
+        radial-gradient(1px 1px at 82% 16%, rgba(224,188,80,.30) 0%, transparent 100%),
+        radial-gradient(1px 1px at 25% 42%, rgba(168,132,60,.28) 0%, transparent 100%),
+        radial-gradient(1px 1px at 68% 58%, rgba(122,144,80,.26) 0%, transparent 100%),
+        radial-gradient(1.5px 1.5px at 12% 75%, rgba(208,172,64,.32) 0%, transparent 100%),
+        radial-gradient(1px 1px at 90% 78%, rgba(216,180,102,.30) 0%, transparent 100%),
+        radial-gradient(1px 1px at 35% 88%, rgba(224,188,80,.26) 0%, transparent 100%); }
+    .wrap { max-width:1080px; margin:0 auto; position:relative; z-index:1; }
+
+    /* PAGE HEADER */
+    .page-header { text-align:center; margin-bottom:80px; padding-bottom:40px; border-bottom:1px solid var(--sefer-bdr); position:relative; }
+    .page-header::after { content:'✦ ✡ ✦'; position:absolute; bottom:-14px; left:50%; transform:translateX(-50%); background:var(--bg); padding:0 20px; color:var(--sefer); font-size:.62em; letter-spacing:.55em; }
+    .eyebrow { font-family:'Cormorant Garamond',serif; font-style:italic; font-size:.78em; color:var(--sefer-lt); letter-spacing:.28em; text-transform:uppercase; margin-bottom:18px; opacity:.85; }
+    .sefer-letter { font-family:'Frank Ruhl Libre',serif; font-size:1.40em; color:var(--sefer); font-weight:900; display:inline-block; margin-bottom:6px; text-shadow:0 0 30px var(--sefer-glow); letter-spacing:.04em; }
+    .page-title-he { font-family:'Frank Ruhl Libre',serif; font-size:3.2em; font-weight:900; color:var(--ivory); direction:rtl; letter-spacing:.05em; text-shadow:0 0 80px var(--sefer-glow), 0 0 140px var(--kds-glow); margin-bottom:8px; line-height:1.15; }
+    .page-subtitle-he { font-family:'Frank Ruhl Libre',serif; font-size:1.16em; color:var(--sefer-lt); direction:rtl; margin-bottom:10px; letter-spacing:.06em; }
+    .page-title-de { font-family:'Cormorant Garamond',serif; font-style:italic; font-size:1.14em; color:var(--silver-dim); margin-bottom:22px; }
+    .page-desc { font-size:1.0em; color:var(--text); max-width:780px; margin:0 auto; line-height:1.95; }
+    .page-desc strong { color:var(--ivory-dim); }
+    .page-desc em { color:var(--kds-lt); font-style:italic; }
+
+    /* SONG SECTION */
+    .song-section { margin-bottom:90px; padding-bottom:70px; border-bottom:1px dashed var(--sefer-bdr); }
+    .song-header { display:flex; flex-wrap:wrap; align-items:flex-start; gap:20px; margin-bottom:40px; padding:24px 26px; background:var(--layer); border:1px solid var(--kds-bdr); border-radius:10px; }
+    .song-num { font-family:'Frank Ruhl Libre',serif; font-size:2.6em; font-weight:900; direction:rtl; padding-right:14px; color:var(--kds-lt); }
+    .song-meta { flex:1; display:flex; flex-direction:column; gap:8px; }
+    .korban-badge { font-family:'Cormorant Garamond',serif; font-style:italic; font-size:.82em; letter-spacing:.08em; color:var(--kds-lt); }
+    .maqam-badge { font-family:'Cormorant Garamond',serif; font-style:italic; font-size:.78em; letter-spacing:.08em; display:inline-block; padding:3px 10px; border-radius:4px; color:#f0e8d8; font-weight:600; background:var(--maqam-ajam); }
+    .song-title-he { font-family:'Frank Ruhl Libre',serif; font-size:1.7em; font-weight:700; color:var(--ivory); direction:rtl; letter-spacing:.04em; }
+    .song-title-de { font-family:'Cormorant Garamond',serif; font-style:italic; font-size:1.02em; color:var(--silver); }
+    .source-badge { font-family:'Cormorant Garamond',serif; font-style:italic; font-size:.74em; color:#A07060; line-height:1.6; }
+
+    /* ALIYAH BLOCK */
+    .aliyah-block { margin-bottom:42px; }
+    .aliyah-label { font-family:'Frank Ruhl Libre',serif; font-size:.94em; font-weight:700; direction:rtl; margin-bottom:9px; color:var(--kds); letter-spacing:.06em; padding-bottom:6px; border-bottom:1px solid var(--kds-bdr); }
+    .aliyah-label-de { font-family:'Cormorant Garamond',serif; font-style:italic; font-size:.78em; color:var(--silver-dim); display:inline-block; margin-right:14px; opacity:.85; }
+    .instrument-note { font-family:'Cormorant Garamond',serif; font-style:italic; font-size:.84em; color:var(--text); margin-bottom:14px; padding:10px 14px; background:rgba(168,132,60,.05); border-left:2px solid var(--kds-dim); }
+    .lyrics-block { display:flex; gap:44px; flex-wrap:wrap; }
+    .lyrics-he, .lyrics-de { flex:1; min-width:280px; display:flex; flex-direction:column; gap:6px; }
+    .lyrics-he span.line { font-family:'Frank Ruhl Libre',serif; font-size:1.06em; color:var(--ivory); direction:rtl; line-height:1.95; }
+    .lyrics-de span.line { font-family:'Cormorant Garamond',serif; font-size:1.0em; color:var(--silver); line-height:1.88; }
+
+    /* TIKKUN BOX */
+    .tikkun-box { background:rgba(168,132,60,.07); border:1px solid rgba(168,132,60,.32); padding:30px; margin-top:40px; border-radius:6px; }
+    .tikkun-header { display:flex; flex-direction:column; gap:6px; margin-bottom:20px; }
+    .tikkun-title-he { font-family:'Frank Ruhl Libre',serif; font-size:1.25em; color:var(--ivory); direction:rtl; font-weight:700; letter-spacing:.04em; }
+    .tikkun-title-de { font-family:'Cormorant Garamond',serif; font-size:1.0em; font-style:italic; color:var(--silver); }
+    .tikkun-src { font-family:'Cormorant Garamond',serif; font-size:.74em; color:#A07060; line-height:1.7; }
+    .tikkun-body { font-family:'Cormorant Garamond',serif; font-size:.96em; color:var(--text); line-height:1.92; }
+    .tikkun-body strong { color:var(--ivory); }
+    .tikkun-body em { color:var(--kds-lt); font-style:italic; }
+    .tikkun-tags { margin-top:18px; display:flex; gap:9px; flex-wrap:wrap; }
+    .tikkun-tag { background:rgba(168,132,60,.16); color:var(--kds-lt); padding:4px 10px; border-radius:4px; font-size:.74em; font-family:'Frank Ruhl Libre',serif; direction:rtl; }
+
+    /* SCHI / KLIMAX-MOMENT */
+    .climax-box { background:linear-gradient(135deg,rgba(168,132,60,.18),rgba(200,160,48,.10),rgba(6,8,8,.88)); border:2px solid var(--kds-bdr); padding:32px; margin-top:40px; margin-bottom:30px; border-radius:8px; }
+    .climax-label { font-family:'Cormorant Garamond',serif; font-style:italic; font-size:.82em; color:var(--kds-lt); letter-spacing:.18em; text-transform:uppercase; margin-bottom:14px; text-align:center; }
+    .climax-verse-he { font-family:'Frank Ruhl Libre',serif; font-size:1.55em; font-weight:700; color:var(--ivory); direction:rtl; text-align:center; line-height:1.85; letter-spacing:.04em; text-shadow:0 0 30px var(--kds-glow); }
+    .climax-verse-de { font-family:'Cormorant Garamond',serif; font-style:italic; font-size:1.05em; color:var(--silver); text-align:center; margin-top:14px; line-height:1.7; }
+    .climax-src { font-family:'Cormorant Garamond',serif; font-style:italic; font-size:.80em; color:var(--kds-lt); text-align:center; margin-top:12px; opacity:.8; }
+
+    /* KODA */
+    .coda-box { background:rgba(6,8,8,.78); border:1px solid var(--kds-bdr); padding:36px; text-align:center; margin-top:30px; margin-bottom:30px; border-radius:6px; }
+    .coda-label { font-family:'Cormorant Garamond',serif; font-style:italic; font-size:.80em; color:var(--kds-lt); letter-spacing:.18em; text-transform:uppercase; margin-bottom:18px; }
+    .coda-whisper { font-family:'Frank Ruhl Libre',serif; font-size:1.20em; direction:rtl; line-height:2.3; opacity:.85; color:var(--kds-lt); }
+    .coda-whisper strong { font-weight:900; opacity:1; color:var(--ivory); }
+
+    /* SCENARIOS */
+    .scenarios-section { margin-top:54px; margin-bottom:40px; }
+    .scenarios-title { font-family:'Frank Ruhl Libre',serif; font-size:1.35em; font-weight:700; text-align:center; margin-bottom:34px; direction:rtl; color:var(--sefer-lt); letter-spacing:.06em; }
+    .scenarios-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(290px,1fr)); gap:26px; }
+    .scenario-card { background:linear-gradient(135deg,rgba(32,24,8,.78),rgba(6,8,8,.92)); border:1px solid var(--kds-bdr); padding:24px; transition:transform .2s, box-shadow .2s; border-radius:6px; }
+    .scenario-card:hover { transform:translateY(-4px); box-shadow:0 10px 36px var(--kds-glow); }
+    .sc-num { font-family:'Cormorant Garamond',serif; font-style:italic; font-size:.74em; letter-spacing:.14em; text-transform:uppercase; margin-bottom:7px; color:var(--kds); }
+    .sc-title-he { font-family:'Frank Ruhl Libre',serif; font-size:1.10em; font-weight:700; color:var(--ivory); direction:rtl; margin-bottom:4px; letter-spacing:.04em; }
+    .sc-sub { font-family:'Cormorant Garamond',serif; font-style:italic; font-size:.84em; color:#A07060; margin-bottom:14px; }
+    .sc-body { font-size:.92em; color:var(--text); line-height:1.80; margin-bottom:14px; }
+    .sc-body strong { color:var(--kds-lt); }
+    .key-moment { font-size:.86em; color:var(--kds-lt); font-style:italic; margin-bottom:9px; padding-left:13px; border-left:2px solid var(--kds-lt); }
+    .reaction { font-size:.86em; color:var(--text); font-style:italic; padding-left:13px; border-left:2px solid var(--sefer-dim); line-height:1.78; }
+
+    /* FOOTER */
+    .footer { margin-top:80px; padding-top:50px; border-top:1px solid var(--sefer-bdr); text-align:center; }
+    .footer-he { font-family:'Frank Ruhl Libre',serif; font-size:1.40em; font-weight:700; color:var(--sefer-lt); direction:rtl; margin-bottom:18px; text-shadow:0 0 30px var(--sefer-glow); letter-spacing:.06em; }
+    .footer-chain { font-family:'Frank Ruhl Libre',serif; font-size:1.0em; color:var(--silver); direction:rtl; margin-bottom:22px; letter-spacing:.09em; }
+    .footer-de { font-family:'Cormorant Garamond',serif; font-style:italic; font-size:.92em; color:var(--text); line-height:2.0; max-width:780px; margin:0 auto 24px; }
+    .footer-de strong { color:var(--ivory-dim); font-style:normal; }
+    .footer-amen { font-family:'Frank Ruhl Libre',serif; font-size:1.30em; color:var(--sefer-lt); direction:rtl; margin-top:24px; letter-spacing:.14em; text-shadow:0 0 30px var(--sefer-glow); }
+
+    @media (max-width:720px) {
+      .page-title-he { font-size:2.3em; }
+      .song-num { font-size:2.2em; }
+      .lyrics-block { flex-direction:column; gap:24px; }
+      .scenarios-grid { grid-template-columns:1fr; }
+      .climax-verse-he { font-size:1.20em; }
+      .footer-he { font-size:1.10em; }
+    }
+  </style>
+</head>
+<body>
+<div class="wrap">
+
+  <header class="page-header">
+    <div class="eyebrow">Sephardische Tora-Vertonung · Sefer HaParashot bemo Maqam</div>
+    <div class="sefer-letter">ג</div>
+    <div class="page-title-he">פָּרָשַׁת קְדֹשִׁים</div>
+    <div class="page-subtitle-he">סֵפֶר וַיִּקְרָא · י״ט:א׳–כ׳:כ״ז · חֶסֶד · מַקָּאם עַ׳ג׳ָ׳ם · וְאָהַבְתָּ לְרֵעֲךָ כָּמוֹךָ</div>
+    <div class="page-title-de">Kedoschim — „Heilig sollt ihr sein" · Das große Heiligkeits-Gesetz · Chesed im Maqam Ajam</div>
+    <div class="page-desc">
+      Kedoschim wird vor <em>kol adat b'nei Yisrael</em> — vor der <em>ganzen versammelten Gemeinde</em>
+      gesprochen, der einzige solche Vers in der ganzen Tora (Vayikra 19:2). <strong>Schadal</strong>
+      in seiner Einleitung zu diesem Block (Pirusch al haTora, Vayikra 17) bemerkt: nach der Errichtung
+      des Mishkan begann Adonai, das Volk in Angelegenheiten der Heiligkeit zu unterweisen — sie sollen
+      heilig sein, weil der unter ihnen wohnende Gott heilig ist; darum die Warnungen vor verbotenen
+      Speisen, Unreinheiten, Arajot, und ebenso <em>vor allen Angelegenheiten zwischen Mensch und seinem
+      Nächsten, denn er ist der, der Recht und Chesed zwischen Menschen liebt</em>. Genau dies ist die
+      Architektur unserer Parashah. Sie öffnet <em>„קְדֹשִׁים תִּהְיוּ כִּי קָדוֹשׁ אֲנִי אֲדֹנָי
+      אֱלֹהֵיכֶם"</em> (19:2) und entfaltet in über fünfzig Mitzwot eine vollständige Heiligkeits-Praxis:
+      Eltern-Ehre, Schabbat, Götzen-Verbot, Korbanot-Reinheit, <em>Pe'ah · Leket · Olelot · Peret</em>
+      für Arme und Ger, Diebstahl- und Schwur-Verbot, Lohn-Auszahlung am gleichen Tag, das Verbot des
+      <em>„Stein vor den Blinden"</em>, gerechtes Gericht, Verbot von <em>Rachilut</em> und
+      <em>Sin'ah</em>, die Pflicht der wahren Tochechah, und im Zentrum: <em>„וְאָהַבְתָּ לְרֵעֲךָ
+      כָּמוֹךָ"</em> (19:18) — von Rabbi Akiva als <em>klal gadol baTora</em> bezeichnet. Es folgen die
+      Ger-Liebe (19:34, Schadal: <em>„behandle ihn, wie du wünschen würdest, dass andere mit dir umgehen,
+      wärst du ein Ger"</em>), gerechte Maße, dann in Kapitel 20 die Strafgesetze gegen Molekh und Arajot
+      und das Schluss-Versprechen <em>„וִהְיִיתֶם לִי קְדֹשִׁים כִּי קָדוֹשׁ אֲנִי אֲדֹנָי"</em> (20:26).
+      Sefirot-Anker: <strong>Chesed</strong> — die warme, mitmenschliche Heiligkeit, die nicht in der
+      Abkehr von der Welt geschieht, sondern <em>im Tun an anderen</em>. Maqam: <strong>Ajam</strong>
+      — warm, offen, einladend, festlich-froh, in der Aleppo-Tradition besonders bei Schabbat-Liedern
+      und Birkat-HaMazon-Erweiterungen verwendet. Tora-Text 1:1, Tetragrammaton durchgängig als
+      אֲדֹנָי, Maschiach ben David.
+    </div>
+  </header>
+
+  <!-- ══ SONG SECTION — PARASHAT KEDOSHIM ══ -->
+  <section class="song-section" id="kedoshim">
+
+    <div class="song-header">
+      <div class="song-num">ז</div>
+      <div class="song-meta">
+        <div class="korban-badge">Chesed — חֶסֶד · Heiligkeit, die im Tun an anderen geschieht</div>
+        <div class="song-title-he">פָּרָשַׁת קְדֹשִׁים</div>
+        <div class="song-title-de">Kedoschim — „Heilig sollt ihr sein" · Vayikra 19:1–20:27</div>
+        <div class="maqam-badge">מַקָּאם עַ׳ג׳ָ׳ם · Ajam · ~64 BPM rubato</div>
+        <div class="source-badge">וַיִּקְרָא י״ט:א׳–כ׳:כ״ז · רמב״ם הלכות דֵּעוֹת · רמב״ם הלכות מַתְּנוֹת עֲנִיִּים · רמב״ם הלכות גְּזֵלָה וַאֲבֵדָה · רמב״ם הלכות שְׁכִירוּת · רמב״ם הלכות סַנְהֶדְרִין · רמב״ם הלכות אִסּוּרֵי בִיאָה · יְבָמוֹת י״ד. · שַׁבָּת ל״א. · יוֹמָא ל״ט. · רש״ש (נְהַר שָׁלוֹם) · רמח״ל מְסִלַּת יְשָׁרִים פֶּרֶק כ״ו (קְדֻשָּׁה) · רמח״ל מְסִלַּת יְשָׁרִים פֶּרֶק י״א (נְקִיּוּת) · רמח״ל מְסִלַּת יְשָׁרִים פֶּרֶק כ׳ · אור החיים על וַיִּקְרָא י״ט:ב׳ · בן איש חי שנה ראשונה (אחרי-קדושים — הלכות נטילת ידיים) · בן איש חי שנה שנייה (קדושים — המשך הלכות מליחה) · שד״ל פֵּרוּשׁ עַל וַיִּקְרָא י״ז · י״ט:י״ח · י״ט:ל״ד.</div>
+      </div>
+    </div>
+
+
+    <!-- ── ALIYAH 1 · ראשון · Vayikra 19:1-14 ── -->
+    <div class="aliyah-block">
+      <div class="aliyah-label">עֲלִיָּה רִאשׁוֹנָה — קְדֹשִׁים תִּהְיוּ<span class="aliyah-label-de">Erste Aliyah · Vayikra 19:1–14 · Der Aufruf an die ganze Gemeinde · Eltern-Ehre · Schabbat · Götzen-Verbot · Schelamim · Pe'ah und Leket · Diebstahl- und Schwur-Verbot · Lohn vor der Nacht · Blinde und Taube</span></div>
+      <div class="instrument-note">[no percussion] [no drums] [no choir] [solo acoustic guitar — Ajam opening warm and welcoming, the address to the whole assembly, mitzvot of holiness woven through the everyday, rubato around 64 BPM, no percussion, no drums, no beat] Gitarre: Ajam öffnet warm und einladend — der Anruf an die ganze versammelte Gemeinde, Mitzwot der Heiligkeit, die sich durch den Alltag ziehen.</div>
+      <div class="lyrics-block">
+        <div class="lyrics-he" dir="rtl">
+          <span class="line">וַיְדַבֵּר אֲדֹנָי אֶל־מֹשֶׁה לֵּאמֹר׃</span>
+          <span class="line">דַּבֵּר אֶל־כׇּל־עֲדַת בְּנֵי־יִשְׂרָאֵל וְאָמַרְתָּ אֲלֵהֶם קְדֹשִׁים תִּהְיוּ כִּי קָדוֹשׁ אֲנִי אֲדֹנָי אֱלֹהֵיכֶם׃</span>
+          <span class="line">אִישׁ אִמּוֹ וְאָבִיו תִּירָאוּ וְאֶת־שַׁבְּתֹתַי תִּשְׁמֹרוּ אֲנִי אֲדֹנָי אֱלֹהֵיכֶם׃</span>
+          <span class="line">אַל־תִּפְנוּ אֶל־הָאֱלִילִם וֵאלֹהֵי מַסֵּכָה לֹא תַעֲשׂוּ לָכֶם אֲנִי אֲדֹנָי אֱלֹהֵיכֶם׃</span>
+          <span class="line">וְכִי תִזְבְּחוּ זֶבַח שְׁלָמִים לַאדֹנָי לִרְצֹנְכֶם תִּזְבָּחֻהוּ׃</span>
+          <span class="line">בְּיוֹם זִבְחֲכֶם יֵאָכֵל וּמִמׇּחֳרָת וְהַנּוֹתָר עַד־יוֹם הַשְּׁלִישִׁי בָּאֵשׁ יִשָּׂרֵף׃</span>
+          <span class="line">וְאִם הֵאָכֹל יֵאָכֵל בַּיּוֹם הַשְּׁלִישִׁי פִּגּוּל הוּא לֹא יֵרָצֶה׃</span>
+          <span class="line">וְאֹכְלָיו עֲוֺנוֹ יִשָּׂא כִּי־אֶת־קֹדֶשׁ אֲדֹנָי חִלֵּל וְנִכְרְתָה הַנֶּפֶשׁ הַהִוא מֵעַמֶּיהָ׃</span>
+          <span class="line">וּבְקֻצְרְכֶם אֶת־קְצִיר אַרְצְכֶם לֹא תְכַלֶּה פְּאַת שָׂדְךָ לִקְצֹר וְלֶקֶט קְצִירְךָ לֹא תְלַקֵּט׃</span>
+          <span class="line">וְכַרְמְךָ לֹא תְעוֹלֵל וּפֶרֶט כַּרְמְךָ לֹא תְלַקֵּט לֶעָנִי וְלַגֵּר תַּעֲזֹב אֹתָם אֲנִי אֲדֹנָי אֱלֹהֵיכֶם׃</span>
+          <span class="line">לֹא תִּגְנֹבוּ וְלֹא־תְכַחֲשׁוּ וְלֹא־תְשַׁקְּרוּ אִישׁ בַּעֲמִיתוֹ׃</span>
+          <span class="line">וְלֹא־תִשָּׁבְעוּ בִשְׁמִי לַשָּׁקֶר וְחִלַּלְתָּ אֶת־שֵׁם אֱלֹהֶיךָ אֲנִי אֲדֹנָי׃</span>
+          <span class="line">לֹא־תַעֲשֹׁק אֶת־רֵעֲךָ וְלֹא תִגְזֹל לֹא־תָלִין פְּעֻלַּת שָׂכִיר אִתְּךָ עַד־בֹּקֶר׃</span>
+          <span class="line">לֹא־תְקַלֵּל חֵרֵשׁ וְלִפְנֵי עִוֵּר לֹא תִתֵּן מִכְשֹׁל וְיָרֵאתָ מֵּאֱלֹהֶיךָ אֲנִי אֲדֹנָי׃</span>
+        </div>
+        <div class="lyrics-de">
+          <span class="line">(1) Und Adonai sprach zu Mosche, sprechend:</span>
+          <span class="line">(2) Sprich zur ganzen Gemeinde der Söhne Israels und sage zu ihnen: Heilig sollt ihr sein, denn heilig bin Ich, Adonai, euer Gott.</span>
+          <span class="line">(3) Ein jeder soll seine Mutter und seinen Vater fürchten, und meine Schabbatot sollt ihr bewahren — Ich bin Adonai, euer Gott.</span>
+          <span class="line">(4) Wendet euch nicht zu den Götzen und gegossene Götter sollt ihr euch nicht machen — Ich bin Adonai, euer Gott.</span>
+          <span class="line">(5) Und wenn ihr ein Schelamim-Opfer für Adonai schlachtet, so schlachtet es zu eurem Wohlgefallen.</span>
+          <span class="line">(6) Am Tag eures Schlachtens werde es gegessen und am folgenden Tag; was bis zum dritten Tag übrig bleibt, soll im Feuer verbrannt werden.</span>
+          <span class="line">(7) Und wenn es am dritten Tag doch gegessen wird, so ist es Pigul — es wird nicht angenommen werden.</span>
+          <span class="line">(8) Und wer es isst, soll seine Schuld tragen, denn er hat das Heilige Adonais entweiht; und diese Seele soll aus ihrem Volk ausgerottet werden.</span>
+          <span class="line">(9) Und wenn ihr die Ernte eures Landes erntet, sollst du den Rand deines Feldes nicht vollständig abernten, und die Nachlese deiner Ernte sollst du nicht auflesen.</span>
+          <span class="line">(10) Und deinen Weinberg sollst du nicht nachlesen, und das herabgefallene Fruchtwerk deines Weinbergs sollst du nicht auflesen — dem Armen und dem Ger sollst du sie lassen. Ich bin Adonai, euer Gott.</span>
+          <span class="line">(11) Ihr sollt nicht stehlen, und nicht leugnen, und nicht einer den anderen täuschen.</span>
+          <span class="line">(12) Und ihr sollt nicht falsch bei meinem Namen schwören — du würdest den Namen deines Gottes entweihen. Ich bin Adonai.</span>
+          <span class="line">(13) Du sollst deinen Nächsten nicht bedrücken und nicht berauben; der Lohn des Tagelöhners soll nicht bei dir bleiben bis zum Morgen.</span>
+          <span class="line">(14) Du sollst keinen Tauben verfluchen und vor einem Blinden kein Hindernis legen — du sollst dich vor deinem Gott fürchten. Ich bin Adonai.</span>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- ── ALIYAH 2 · שני · Vayikra 19:15-22 ── -->
+    <div class="aliyah-block">
+      <div class="aliyah-label">עֲלִיָּה שְׁנִיָּה — וְאָהַבְתָּ לְרֵעֲךָ כָּמוֹךָ<span class="aliyah-label-de">Zweite Aliyah · Vayikra 19:15–22 · Gerechtes Gericht · Verbot von Rachilut · „Stehe nicht auf dem Blut deines Nächsten" · die Pflicht der Tochechah · der Klal Gadol „liebe deinen Nächsten wie dich selbst"</span></div>
+      <div class="instrument-note">[no percussion] [no drums] [no choir] [acoustic guitar — Ajam ascending toward the great klal of „v'ahavta lere'akha kamokha", the heart of the parashah, no percussion] Gitarre: Ajam steigt zum großen Klal — die Mitte der Parashah, in der Rabbi Akiva das große Prinzip der ganzen Tora erkannte.</div>
+      <div class="lyrics-block">
+        <div class="lyrics-he" dir="rtl">
+          <span class="line">לֹא־תַעֲשׂוּ עָוֶל בַּמִּשְׁפָּט לֹא־תִשָּׂא פְנֵי־דָל וְלֹא תֶהְדַּר פְּנֵי גָדוֹל בְּצֶדֶק תִּשְׁפֹּט עֲמִיתֶךָ׃</span>
+          <span class="line">לֹא־תֵלֵךְ רָכִיל בְּעַמֶּיךָ לֹא תַעֲמֹד עַל־דַּם רֵעֶךָ אֲנִי אֲדֹנָי׃</span>
+          <span class="line">לֹא־תִשְׂנָא אֶת־אָחִיךָ בִּלְבָבֶךָ הוֹכֵחַ תּוֹכִיחַ אֶת־עֲמִיתֶךָ וְלֹא־תִשָּׂא עָלָיו חֵטְא׃</span>
+          <span class="line">לֹא־תִקֹּם וְלֹא־תִטֹּר אֶת־בְּנֵי עַמֶּךָ וְאָהַבְתָּ לְרֵעֲךָ כָּמוֹךָ אֲנִי אֲדֹנָי׃</span>
+          <span class="line">אֶת־חֻקֹּתַי תִּשְׁמֹרוּ בְּהֶמְתְּךָ לֹא־תַרְבִּיעַ כִּלְאַיִם שָׂדְךָ לֹא־תִזְרַע כִּלְאָיִם וּבֶגֶד כִּלְאַיִם שַׁעַטְנֵז לֹא יַעֲלֶה עָלֶיךָ׃</span>
+          <span class="line">וְאִישׁ כִּי־יִשְׁכַּב אֶת־אִשָּׁה שִׁכְבַת־זֶרַע וְהִוא שִׁפְחָה נֶחֱרֶפֶת לְאִישׁ וְהׇפְדֵּה לֹא נִפְדָּתָה אוֹ חֻפְשָׁה לֹא נִתַּן־לָהּ בִּקֹּרֶת תִּהְיֶה לֹא יוּמְתוּ כִּי־לֹא חֻפָּשָׁה׃</span>
+          <span class="line">וְהֵבִיא אֶת־אֲשָׁמוֹ לַאדֹנָי אֶל־פֶּתַח אֹהֶל מוֹעֵד אֵיל אָשָׁם׃</span>
+          <span class="line">וְכִפֶּר עָלָיו הַכֹּהֵן בְּאֵיל הָאָשָׁם לִפְנֵי אֲדֹנָי עַל־חַטָּאתוֹ אֲשֶׁר חָטָא וְנִסְלַח לוֹ מֵחַטָּאתוֹ אֲשֶׁר חָטָא׃</span>
+        </div>
+        <div class="lyrics-de">
+          <span class="line">(15) Ihr sollt kein Unrecht im Gericht tun; du sollst das Angesicht des Geringen nicht bevorzugen und das Angesicht des Großen nicht ehren — in Gerechtigkeit sollst du deinen Nächsten richten.</span>
+          <span class="line">(16) Du sollst nicht als Verleumder unter deinem Volk umhergehen, du sollst nicht beim Blut deines Nächsten stehen. Ich bin Adonai.</span>
+          <span class="line">(17) Du sollst deinen Bruder nicht hassen in deinem Herzen; offen sollst du deinen Nächsten zurechtweisen und nicht Schuld seinetwegen tragen.</span>
+          <span class="line">(18) Du sollst nicht Rache nehmen und nicht nachtragen den Söhnen deines Volkes — und du sollst deinen Nächsten lieben wie dich selbst. Ich bin Adonai.</span>
+          <span class="line">(19) Meine Satzungen sollt ihr bewahren: dein Vieh sollst du nicht zweierlei kreuzen, dein Feld sollst du nicht mit zweierlei besäen, und ein Kleid aus zweierlei — Scha'atnez — soll nicht auf dich kommen.</span>
+          <span class="line">(20) Und wenn ein Mann bei einer Frau liegt, die eine einem Manne bestimmte Magd ist, die nicht ausgelöst und nicht freigelassen wurde — so soll eine gerichtliche Untersuchung erfolgen; sie sollen nicht getötet werden, denn sie wurde nicht freigelassen.</span>
+          <span class="line">(21) Und er soll sein Schuldopfer für Adonai an den Eingang des Ohel Mo'ed bringen — einen Schuld-Widder.</span>
+          <span class="line">(22) Und der Kohen wird mit dem Schuld-Widder über ihn Sühne vollziehen vor Adonai für seine Sünde, die er beging; und es wird ihm vergeben werden von seiner Sünde, die er beging.</span>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- ── ALIYAH 3 · שלישי · Vayikra 19:23-32 ── -->
+    <div class="aliyah-block">
+      <div class="aliyah-label">עֲלִיָּה שְׁלִישִׁית — וְהָדַרְתָּ פְּנֵי זָקֵן<span class="aliyah-label-de">Dritte Aliyah · Vayikra 19:23–32 · Orlah · Lo tochlu al hadam · Verbot von Tätowierungen · Schabbat und Heiligtum · Verbot der Totenbefragung · Aufstehen vor dem Greis</span></div>
+      <div class="instrument-note">[no percussion] [no drums] [no choir] [acoustic guitar — Ajam continuing in warm-steady mode, the laws of the orchard, the body as bearer of holiness, the dignity of the elder, no percussion] Gitarre: Ajam fließt warm-stetig — die Pflanzgesetze, der Körper als Träger der Heiligkeit, die Würde des Greises.</div>
+      <div class="lyrics-block">
+        <div class="lyrics-he" dir="rtl">
+          <span class="line">וְכִי־תָבֹאוּ אֶל־הָאָרֶץ וּנְטַעְתֶּם כׇּל־עֵץ מַאֲכָל וַעֲרַלְתֶּם עׇרְלָתוֹ אֶת־פִּרְיוֹ שָׁלֹשׁ שָׁנִים יִהְיֶה לָכֶם עֲרֵלִים לֹא יֵאָכֵל׃</span>
+          <span class="line">וּבַשָּׁנָה הָרְבִיעִת יִהְיֶה כׇּל־פִּרְיוֹ קֹדֶשׁ הִלּוּלִים לַאדֹנָי׃</span>
+          <span class="line">וּבַשָּׁנָה הַחֲמִישִׁת תֹּאכְלוּ אֶת־פִּרְיוֹ לְהוֹסִיף לָכֶם תְּבוּאָתוֹ אֲנִי אֲדֹנָי אֱלֹהֵיכֶם׃</span>
+          <span class="line">לֹא תֹאכְלוּ עַל־הַדָּם לֹא תְנַחֲשׁוּ וְלֹא תְעוֹנֵנוּ׃</span>
+          <span class="line">לֹא תַקִּפוּ פְּאַת רֹאשְׁכֶם וְלֹא תַשְׁחִית אֵת פְּאַת זְקָנֶךָ׃</span>
+          <span class="line">וְשֶׂרֶט לָנֶפֶשׁ לֹא תִתְּנוּ בִּבְשַׂרְכֶם וּכְתֹבֶת קַעֲקַע לֹא תִתְּנוּ בָּכֶם אֲנִי אֲדֹנָי׃</span>
+          <span class="line">אַל־תְּחַלֵּל אֶת־בִּתְּךָ לְהַזְנוֹתָהּ וְלֹא־תִזְנֶה הָאָרֶץ וּמָלְאָה הָאָרֶץ זִמָּה׃</span>
+          <span class="line">אֶת־שַׁבְּתֹתַי תִּשְׁמֹרוּ וּמִקְדָּשִׁי תִּירָאוּ אֲנִי אֲדֹנָי׃</span>
+          <span class="line">אַל־תִּפְנוּ אֶל־הָאֹבֹת וְאֶל־הַיִּדְּעֹנִים אַל־תְּבַקְשׁוּ לְטׇמְאָה בָהֶם אֲנִי אֲדֹנָי אֱלֹהֵיכֶם׃</span>
+          <span class="line">מִפְּנֵי שֵׂיבָה תָּקוּם וְהָדַרְתָּ פְּנֵי זָקֵן וְיָרֵאתָ מֵּאֱלֹהֶיךָ אֲנִי אֲדֹנָי׃</span>
+        </div>
+        <div class="lyrics-de">
+          <span class="line">(23) Und wenn ihr in das Land kommt und allerlei Frucht-Bäume pflanzt, so sollt ihr ihre Vorhaut — ihre Frucht — als Vorhaut behandeln: drei Jahre lang seien sie euch wie eine Vorhaut, sie sollen nicht gegessen werden.</span>
+          <span class="line">(24) Und im vierten Jahr sei alle ihre Frucht heilig — Lobgesänge für Adonai.</span>
+          <span class="line">(25) Und im fünften Jahr sollt ihr ihre Frucht essen, damit ihr Ertrag euch vermehrt werde. Ich bin Adonai, euer Gott.</span>
+          <span class="line">(26) Ihr sollt nicht über dem Blut essen; ihr sollt nicht zaubern und nicht wahrsagen.</span>
+          <span class="line">(27) Ihr sollt den Rand eures Hauptes nicht ringsum scheren und den Rand deines Bartes nicht zerstören.</span>
+          <span class="line">(28) Und einen Schnitt für eine Seele sollt ihr in eurem Fleisch nicht machen, und eine eingeritzte Schrift sollt ihr nicht in euch geben. Ich bin Adonai.</span>
+          <span class="line">(29) Entweihe deine Tochter nicht, indem du sie zur Unzucht hingibst, damit das Land nicht zur Unzucht abirrt und das Land sich mit Schamlosigkeit fülle.</span>
+          <span class="line">(30) Meine Schabbatot sollt ihr bewahren und mein Heiligtum fürchten. Ich bin Adonai.</span>
+          <span class="line">(31) Wendet euch nicht zu den Ovot und Yiddonim — sucht sie nicht auf, dass ihr nicht durch sie unrein werdet. Ich bin Adonai, euer Gott.</span>
+          <span class="line">(32) Vor dem grauen Haupt sollst du aufstehen, und du sollst das Angesicht des Greises ehren — du sollst dich vor deinem Gott fürchten. Ich bin Adonai.</span>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- ── ALIYAH 4 · רביעי · Vayikra 19:33-37 ── -->
+    <div class="aliyah-block">
+      <div class="aliyah-label">עֲלִיָּה רְבִיעִית — וְאָהַבְתָּ לוֹ כָּמוֹךָ<span class="aliyah-label-de">Vierte Aliyah · Vayikra 19:33–37 · Die Ger-Liebe (das zweite klal kamokha der Parashah) · gerechte Maße als Tikkun von Mitzrayim · Schluss-Vers des Heiligkeits-Kapitels</span></div>
+      <div class="instrument-note">[no percussion] [no drums] [no choir] [acoustic guitar — Ajam softening, the second „like yourself" verse, the memory of Mitzrayim opening the heart, no percussion] Gitarre: Ajam wird weich — der zweite „wie dich selbst"-Vers, die Erinnerung an Mitzrayim öffnet das Herz, gerechte Maße als Tikkun.</div>
+      <div class="lyrics-block">
+        <div class="lyrics-he" dir="rtl">
+          <span class="line">וְכִי־יָגוּר אִתְּךָ גֵּר בְּאַרְצְכֶם לֹא תוֹנוּ אֹתוֹ׃</span>
+          <span class="line">כְּאֶזְרָח מִכֶּם יִהְיֶה לָכֶם הַגֵּר הַגָּר אִתְּכֶם וְאָהַבְתָּ לוֹ כָּמוֹךָ כִּי־גֵרִים הֱיִיתֶם בְּאֶרֶץ מִצְרָיִם אֲנִי אֲדֹנָי אֱלֹהֵיכֶם׃</span>
+          <span class="line">לֹא־תַעֲשׂוּ עָוֶל בַּמִּשְׁפָּט בַּמִּדָּה בַּמִּשְׁקָל וּבַמְּשׂוּרָה׃</span>
+          <span class="line">מֹאזְנֵי צֶדֶק אַבְנֵי־צֶדֶק אֵיפַת צֶדֶק וְהִין צֶדֶק יִהְיֶה לָכֶם אֲנִי אֲדֹנָי אֱלֹהֵיכֶם אֲשֶׁר־הוֹצֵאתִי אֶתְכֶם מֵאֶרֶץ מִצְרָיִם׃</span>
+          <span class="line">וּשְׁמַרְתֶּם אֶת־כׇּל־חֻקֹּתַי וְאֶת־כׇּל־מִשְׁפָּטַי וַעֲשִׂיתֶם אֹתָם אֲנִי אֲדֹנָי׃</span>
+        </div>
+        <div class="lyrics-de">
+          <span class="line">(33) Und wenn ein Ger bei dir in eurem Land lebt, sollt ihr ihn nicht bedrücken.</span>
+          <span class="line">(34) Wie ein Einheimischer von euch soll euch der Ger sein, der bei euch lebt — du sollst ihn lieben wie dich selbst, denn Gerim wart ihr im Land Ägypten. Ich bin Adonai, euer Gott.</span>
+          <span class="line">(35) Ihr sollt kein Unrecht tun im Gericht, im Maß, im Gewicht und im Hohlmaß.</span>
+          <span class="line">(36) Gerechte Waagen, gerechte Gewichte, ein gerechtes Eifa und ein gerechtes Hin sollt ihr haben. Ich bin Adonai, euer Gott, der ich euch aus dem Land Ägypten herausgeführt habe.</span>
+          <span class="line">(37) Und ihr sollt alle meine Satzungen und alle meine Rechtsbestimmungen bewahren und sie tun. Ich bin Adonai.</span>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- ── ALIYAH 5 · חמישי · Vayikra 20:1-7 ── -->
+    <div class="aliyah-block">
+      <div class="aliyah-label">עֲלִיָּה חֲמִישִׁית — וְהִתְקַדִּשְׁתֶּם וִהְיִיתֶם קְדֹשִׁים<span class="aliyah-label-de">Fünfte Aliyah · Vayikra 20:1–7 · Das Strafgesetz gegen Molekh · Verbot der Ovot/Yiddonim mit Karet · „heiligt euch und seid heilig"</span></div>
+      <div class="instrument-note">[no percussion] [no drums] [no choir] [acoustic guitar — Ajam shifting to a graver tone, the prohibitions guarding the holiness, fortified by penalty, then returning to the call „v'hitkadishtem", no percussion] Gitarre: Ajam wird ernster — die Verbote, die die Heiligkeit schützen, mit Strafgewalt befestigt, dann zurück zum Ruf „heiligt euch".</div>
+      <div class="lyrics-block">
+        <div class="lyrics-he" dir="rtl">
+          <span class="line">וַיְדַבֵּר אֲדֹנָי אֶל־מֹשֶׁה לֵּאמֹר׃</span>
+          <span class="line">וְאֶל־בְּנֵי יִשְׂרָאֵל תֹּאמַר אִישׁ אִישׁ מִבְּנֵי יִשְׂרָאֵל וּמִן־הַגֵּר הַגָּר בְּיִשְׂרָאֵל אֲשֶׁר יִתֵּן מִזַּרְעוֹ לַמֹּלֶךְ מוֹת יוּמָת עַם הָאָרֶץ יִרְגְּמֻהוּ בָאָבֶן׃</span>
+          <span class="line">וַאֲנִי אֶתֵּן אֶת־פָּנַי בָּאִישׁ הַהוּא וְהִכְרַתִּי אֹתוֹ מִקֶּרֶב עַמּוֹ כִּי מִזַּרְעוֹ נָתַן לַמֹּלֶךְ לְמַעַן טַמֵּא אֶת־מִקְדָּשִׁי וּלְחַלֵּל אֶת־שֵׁם קׇדְשִׁי׃</span>
+          <span class="line">וְאִם הַעְלֵם יַעְלִימוּ עַם הָאָרֶץ אֶת־עֵינֵיהֶם מִן־הָאִישׁ הַהוּא בְּתִתּוֹ מִזַּרְעוֹ לַמֹּלֶךְ לְבִלְתִּי הָמִית אֹתוֹ׃</span>
+          <span class="line">וְשַׂמְתִּי אֲנִי אֶת־פָּנַי בָּאִישׁ הַהוּא וּבְמִשְׁפַּחְתּוֹ וְהִכְרַתִּי אֹתוֹ וְאֵת כׇּל־הַזֹּנִים אַחֲרָיו לִזְנוֹת אַחֲרֵי הַמֹּלֶךְ מִקֶּרֶב עַמָּם׃</span>
+          <span class="line">וְהַנֶּפֶשׁ אֲשֶׁר תִּפְנֶה אֶל־הָאֹבֹת וְאֶל־הַיִּדְּעֹנִים לִזְנֹת אַחֲרֵיהֶם וְנָתַתִּי אֶת־פָּנַי בַּנֶּפֶשׁ הַהִוא וְהִכְרַתִּי אֹתוֹ מִקֶּרֶב עַמּוֹ׃</span>
+          <span class="line">וְהִתְקַדִּשְׁתֶּם וִהְיִיתֶם קְדֹשִׁים כִּי אֲנִי אֲדֹנָי אֱלֹהֵיכֶם׃</span>
+        </div>
+        <div class="lyrics-de">
+          <span class="line">(1) Und Adonai sprach zu Mosche, sprechend:</span>
+          <span class="line">(2) Und zu den Söhnen Israels sollst du sagen: Ein jeder Mann von den Söhnen Israels und von dem Ger, der in Israel lebt, der von seinem Samen dem Molekh gibt — Tod soll er sterben; das Volk des Landes soll ihn mit Steinen steinigen.</span>
+          <span class="line">(3) Und Ich werde mein Angesicht gegen jenen Mann richten und ihn aus der Mitte seines Volkes ausrotten, denn er hat von seinem Samen dem Molekh gegeben, um mein Heiligtum unrein zu machen und meinen heiligen Namen zu entweihen.</span>
+          <span class="line">(4) Und wenn das Volk des Landes seine Augen vor jenem Mann verbergen will, wenn er von seinem Samen dem Molekh gibt, um ihn nicht zu töten —</span>
+          <span class="line">(5) so werde Ich mein Angesicht gegen jenen Mann und gegen seine Familie richten und ihn ausrotten samt allen, die ihm nachhuren, dem Molekh nachzuhuren, aus der Mitte ihres Volkes.</span>
+          <span class="line">(6) Und die Seele, die sich zu den Ovot und Yiddonim wendet, ihnen nachzuhuren — Ich werde mein Angesicht gegen jene Seele richten und sie aus der Mitte ihres Volkes ausrotten.</span>
+          <span class="line">(7) Und ihr sollt euch heiligen und heilig sein, denn Ich bin Adonai, euer Gott.</span>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- ── ALIYAH 6 · שישי · Vayikra 20:8-22 ── -->
+    <div class="aliyah-block">
+      <div class="aliyah-label">עֲלִיָּה שִׁשִּׁית — אֲנִי אֲדֹנָי מְקַדִּשְׁכֶם<span class="aliyah-label-de">Sechste Aliyah · Vayikra 20:8–22 · „Ich bin Adonai, der euch heiligt" · die schweren Strafgesetze gegen Eltern-Lästerung · Ehebruch · die Arajot-Sequenz · die Tora als Bedingung der Land-Bewohnung</span></div>
+      <div class="instrument-note">[no percussion] [no drums] [no choir] [acoustic guitar — Ajam descending into the lachash-tone for the arayot list, sephardic minhag of hushed reading for severe penalties, no percussion] Gitarre: Ajam senkt sich in den Lachash-Unterton für die Arajot-Liste — sephardischer Brauch der gedämpften Lesung der schweren Strafgesetze, in Demut vor dem heiligen Maß.</div>
+      <div class="lyrics-block">
+        <div class="lyrics-he" dir="rtl">
+          <span class="line">וּשְׁמַרְתֶּם אֶת־חֻקֹּתַי וַעֲשִׂיתֶם אֹתָם אֲנִי אֲדֹנָי מְקַדִּשְׁכֶם׃</span>
+          <span class="line">כִּי־אִישׁ אִישׁ אֲשֶׁר יְקַלֵּל אֶת־אָבִיו וְאֶת־אִמּוֹ מוֹת יוּמָת אָבִיו וְאִמּוֹ קִלֵּל דָּמָיו בּוֹ׃</span>
+          <span class="line">וְאִישׁ אֲשֶׁר יִנְאַף אֶת־אֵשֶׁת אִישׁ אֲשֶׁר יִנְאַף אֶת־אֵשֶׁת רֵעֵהוּ מוֹת־יוּמַת הַנֹּאֵף וְהַנֹּאָפֶת׃</span>
+          <span class="line">וְאִישׁ אֲשֶׁר יִשְׁכַּב אֶת־אֵשֶׁת אָבִיו עֶרְוַת אָבִיו גִּלָּה מוֹת־יוּמְתוּ שְׁנֵיהֶם דְּמֵיהֶם בָּם׃</span>
+          <span class="line">וְאִישׁ אֲשֶׁר יִשְׁכַּב אֶת־כַּלָּתוֹ מוֹת יוּמְתוּ שְׁנֵיהֶם תֶּבֶל עָשׂוּ דְּמֵיהֶם בָּם׃</span>
+          <span class="line">וְאִישׁ אֲשֶׁר יִשְׁכַּב אֶת־זָכָר מִשְׁכְּבֵי אִשָּׁה תּוֹעֵבָה עָשׂוּ שְׁנֵיהֶם מוֹת יוּמָתוּ דְּמֵיהֶם בָּם׃</span>
+          <span class="line">וְאִישׁ אֲשֶׁר יִקַּח אֶת־אִשָּׁה וְאֶת־אִמָּהּ זִמָּה הִוא בָּאֵשׁ יִשְׂרְפוּ אֹתוֹ וְאֶתְהֶן וְלֹא־תִהְיֶה זִמָּה בְּתוֹכְכֶם׃</span>
+          <span class="line">וְאִישׁ אֲשֶׁר יִתֵּן שְׁכׇבְתּוֹ בִּבְהֵמָה מוֹת יוּמָת וְאֶת־הַבְּהֵמָה תַּהֲרֹגוּ׃</span>
+          <span class="line">וְאִשָּׁה אֲשֶׁר תִּקְרַב אֶל־כׇּל־בְּהֵמָה לְרִבְעָה אֹתָהּ וְהָרַגְתָּ אֶת־הָאִשָּׁה וְאֶת־הַבְּהֵמָה מוֹת יוּמָתוּ דְּמֵיהֶם בָּם׃</span>
+          <span class="line">וְאִישׁ אֲשֶׁר־יִקַּח אֶת־אֲחֹתוֹ בַּת־אָבִיו אוֹ בַת־אִמּוֹ וְרָאָה אֶת־עֶרְוָתָהּ וְהִיא־תִרְאֶה אֶת־עֶרְוָתוֹ חֶסֶד הוּא וְנִכְרְתוּ לְעֵינֵי בְּנֵי עַמָּם עֶרְוַת אֲחֹתוֹ גִּלָּה עֲוֺנוֹ יִשָּׂא׃</span>
+          <span class="line">וְאִישׁ אֲשֶׁר־יִשְׁכַּב אֶת־אִשָּׁה דָּוָה וְגִלָּה אֶת־עֶרְוָתָהּ אֶת־מְקֹרָהּ הֶעֱרָה וְהִוא גִּלְּתָה אֶת־מְקוֹר דָּמֶיהָ וְנִכְרְתוּ שְׁנֵיהֶם מִקֶּרֶב עַמָּם׃</span>
+          <span class="line">וְעֶרְוַת אֲחוֹת אִמְּךָ וַאֲחוֹת אָבִיךָ לֹא תְגַלֵּה כִּי אֶת־שְׁאֵרוֹ הֶעֱרָה עֲוֺנָם יִשָּׂאוּ׃</span>
+          <span class="line">וְאִישׁ אֲשֶׁר יִשְׁכַּב אֶת־דֹּדָתוֹ עֶרְוַת דֹּדוֹ גִּלָּה חֶטְאָם יִשָּׂאוּ עֲרִירִים יָמֻתוּ׃</span>
+          <span class="line">וְאִישׁ אֲשֶׁר יִקַּח אֶת־אֵשֶׁת אָחִיו נִדָּה הִוא עֶרְוַת אָחִיו גִּלָּה עֲרִירִים יִהְיוּ׃</span>
+          <span class="line">וּשְׁמַרְתֶּם אֶת־כׇּל־חֻקֹּתַי וְאֶת־כׇּל־מִשְׁפָּטַי וַעֲשִׂיתֶם אֹתָם וְלֹא־תָקִיא אֶתְכֶם הָאָרֶץ אֲשֶׁר אֲנִי מֵבִיא אֶתְכֶם שָׁמָּה לָשֶׁבֶת בָּהּ׃</span>
+        </div>
+        <div class="lyrics-de">
+          <span class="line">(8) Und ihr sollt meine Satzungen bewahren und sie tun. Ich bin Adonai, der euch heiligt.</span>
+          <span class="line">(9) Denn ein jeder Mann, der seinen Vater oder seine Mutter verflucht — Tod soll er sterben; seinen Vater und seine Mutter hat er verflucht, sein Blut ist an ihm.</span>
+          <span class="line">(10) Und ein Mann, der mit der Frau eines anderen Mannes Ehebruch begeht — der mit der Frau seines Nächsten Ehebruch begeht — Tod sollen sterben der Ehebrecher und die Ehebrecherin.</span>
+          <span class="line">(11) Und ein Mann, der bei der Frau seines Vaters liegt — die Blöße seines Vaters hat er entblößt; Tod sollen die beiden sterben, ihr Blut ist an ihnen.</span>
+          <span class="line">(12) Und ein Mann, der bei seiner Schwiegertochter liegt — Tod sollen sie beide sterben; ein Greuel haben sie getan, ihr Blut ist an ihnen.</span>
+          <span class="line">(13) Und ein Mann, der bei einem Mann liegt wie bei einer Frau — einen Greuel haben sie beide getan; Tod sollen sie sterben, ihr Blut ist an ihnen.</span>
+          <span class="line">(14) Und ein Mann, der eine Frau und ihre Mutter nimmt — Schamlosigkeit ist es; im Feuer sollen sie ihn und sie verbrennen, dass keine Schamlosigkeit in eurer Mitte sei.</span>
+          <span class="line">(15) Und ein Mann, der seine Beilage in ein Tier gibt — Tod soll er sterben, und das Tier sollt ihr töten.</span>
+          <span class="line">(16) Und eine Frau, die irgendeinem Tier naht, dass es sich auf sie lege — du sollst die Frau und das Tier töten; Tod sollen sie sterben, ihr Blut ist an ihnen.</span>
+          <span class="line">(17) Und ein Mann, der seine Schwester nimmt — die Tochter seines Vaters oder die Tochter seiner Mutter — und sieht ihre Blöße, und sie sieht seine Blöße: Schande ist es, sie sollen vor den Augen der Söhne ihres Volkes ausgerottet werden; die Blöße seiner Schwester hat er entblößt — seine Schuld wird er tragen.</span>
+          <span class="line">(18) Und ein Mann, der bei einer Frau in ihrer Unreinheit liegt und ihre Blöße entblößt — ihre Quelle hat er aufgedeckt, und sie hat die Quelle ihres Blutes aufgedeckt: beide sollen aus der Mitte ihres Volkes ausgerottet werden.</span>
+          <span class="line">(19) Und die Blöße der Schwester deiner Mutter und der Schwester deines Vaters sollst du nicht aufdecken, denn er hat seinen Blutsverwandten entblößt — ihre Schuld werden sie tragen.</span>
+          <span class="line">(20) Und ein Mann, der bei seiner Tante liegt — die Blöße seines Onkels hat er entblößt; ihre Sünde werden sie tragen, kinderlos sollen sie sterben.</span>
+          <span class="line">(21) Und ein Mann, der die Frau seines Bruders nimmt — Niddah ist es; die Blöße seines Bruders hat er entblößt, kinderlos sollen sie sein.</span>
+          <span class="line">(22) Und ihr sollt alle meine Satzungen und alle meine Rechtsbestimmungen bewahren und sie tun, damit euch das Land nicht ausspeie, in das Ich euch bringe, um darin zu wohnen.</span>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- ── ALIYAH 7 · שביעי · Vayikra 20:23-27 ── -->
+    <div class="aliyah-block">
+      <div class="aliyah-label">עֲלִיָּה שְׁבִיעִית — וִהְיִיתֶם לִי קְדֹשִׁים<span class="aliyah-label-de">Siebte Aliyah · Vayikra 20:23–27 · Die Absonderung von den Völkern · die Tahara der Tiere als Spiegel der Tahara des Volks · „und ihr sollt mir heilig sein" · Schluss-Vers gegen Ovot/Yiddonim</span></div>
+      <div class="instrument-note">[no percussion] [no drums] [no choir] [acoustic guitar — Ajam returning to warmth for the closing call „v'hyitem li kedoshim", the chosen-for-holiness vocation of Israel, no percussion] Gitarre: Ajam kehrt in die Wärme zurück für den Schluss-Ruf „und ihr sollt mir heilig sein" — Israels Berufung in die Heiligkeit als Schluss des Heiligkeits-Kapitels.</div>
+      <div class="lyrics-block">
+        <div class="lyrics-he" dir="rtl">
+          <span class="line">וְלֹא תֵלְכוּ בְּחֻקֹּת הַגּוֹי אֲשֶׁר־אֲנִי מְשַׁלֵּחַ מִפְּנֵיכֶם כִּי אֶת־כׇּל־אֵלֶּה עָשׂוּ וָאָקֻץ בָּם׃</span>
+          <span class="line">וָאֹמַר לָכֶם אַתֶּם תִּירְשׁוּ אֶת־אַדְמָתָם וַאֲנִי אֶתְּנֶנָּה לָכֶם לָרֶשֶׁת אֹתָהּ אֶרֶץ זָבַת חָלָב וּדְבָשׁ אֲנִי אֲדֹנָי אֱלֹהֵיכֶם אֲשֶׁר־הִבְדַּלְתִּי אֶתְכֶם מִן־הָעַמִּים׃</span>
+          <span class="line">וְהִבְדַּלְתֶּם בֵּין־הַבְּהֵמָה הַטְּהֹרָה לַטְּמֵאָה וּבֵין־הָעוֹף הַטָּמֵא לַטָּהֹר וְלֹא־תְשַׁקְּצוּ אֶת־נַפְשֹׁתֵיכֶם בַּבְּהֵמָה וּבָעוֹף וּבְכֹל אֲשֶׁר תִּרְמֹשׂ הָאֲדָמָה אֲשֶׁר־הִבְדַּלְתִּי לָכֶם לְטַמֵּא׃</span>
+          <span class="line">וִהְיִיתֶם לִי קְדֹשִׁים כִּי קָדוֹשׁ אֲנִי אֲדֹנָי וָאַבְדִּל אֶתְכֶם מִן־הָעַמִּים לִהְיוֹת לִי׃</span>
+          <span class="line">וְאִישׁ אוֹ־אִשָּׁה כִּי־יִהְיֶה בָהֶם אוֹב אוֹ יִדְּעֹנִי מוֹת יוּמָתוּ בָּאֶבֶן יִרְגְּמוּ אֹתָם דְּמֵיהֶם בָּם׃</span>
+        </div>
+        <div class="lyrics-de">
+          <span class="line">(23) Und ihr sollt nicht in den Satzungen der Völker wandeln, die Ich vor euch vertreibe — denn sie haben all diese Dinge getan, und Ich habe Abscheu vor ihnen empfunden.</span>
+          <span class="line">(24) Und ich sprach zu euch: Ihr sollt ihr Land in Besitz nehmen, und Ich gebe es euch, dass ihr es besitzt — ein Land, das von Milch und Honig fließt. Ich bin Adonai, euer Gott, der ich euch von den Völkern abgesondert habe.</span>
+          <span class="line">(25) Und ihr sollt unterscheiden zwischen dem reinen Vieh und dem unreinen, und zwischen dem unreinen Vogel und dem reinen, und ihr sollt eure Seelen nicht zu einem Greuel machen durch Vieh und Vogel und durch alles, was die Erde wimmelt — was Ich euch als unrein abgesondert habe.</span>
+          <span class="line">(26) Und ihr sollt mir heilig sein, denn heilig bin Ich, Adonai, und Ich habe euch von den Völkern abgesondert, dass ihr mir gehört.</span>
+          <span class="line">(27) Und ein Mann oder eine Frau, in dem ein Ov oder Yiddoni ist — Tod sollen sie sterben, mit Steinen sollen sie sie steinigen, ihr Blut ist an ihnen.</span>
+        </div>
+      </div>
+    </div>
+
+
+
+    <!-- ══ TIKKUN-BOX — DAS HERZ DER PARASHAH ══ -->
+    <div class="tikkun-box">
+      <div class="tikkun-header">
+        <div class="tikkun-title-he">מַעֲשֵׂה הַתִּיקּוּן — תִּקּוּן הַדִּבּוּר וְאַהֲבַת הָרֵעַ · קְדֻשָּׁה כְּפוּלָה · פֵּאָה וְלֶקֶט · שָׁכִיר בְּיוֹמוֹ · הוֹכֵחַ תּוֹכִיחַ · אַהֲבַת הַגֵּר · מוֹרָא אָב וָאֵם</div>
+        <div class="tikkun-title-de">Tikkun – Die mitmenschliche Heiligkeit: Wachsamkeit der Zunge und Liebe zum Nächsten · die doppelte Kedushah von Ramchal · Pe'ah und Leket als tägliche Tzedakah · Lohn vor der Nacht · die Pflicht und Vorsicht der Tochechah · Ger-Liebe als zweites Klal · Eltern-Ehre als Wurzel</div>
+        <div class="tikkun-src">וַיִּקְרָא י״ט:ב׳ („קְדֹשִׁים תִּהְיוּ") · וַיִּקְרָא י״ט:ג׳ („אִישׁ אִמּוֹ וְאָבִיו תִּירָאוּ") · וַיִּקְרָא י״ט:י׳ („לֶעָנִי וְלַגֵּר תַּעֲזֹב אֹתָם") · וַיִּקְרָא י״ט:י״ג („לֹא־תָלִין פְּעֻלַּת שָׂכִיר") · וַיִּקְרָא י״ט:י״ד („וְלִפְנֵי עִוֵּר לֹא תִתֵּן מִכְשֹׁל") · וַיִּקְרָא י״ט:ט״ז („לֹא־תֵלֵךְ רָכִיל") · וַיִּקְרָא י״ט:י״ז („הוֹכֵחַ תּוֹכִיחַ אֶת־עֲמִיתֶךָ") · וַיִּקְרָא י״ט:י״ח („וְאָהַבְתָּ לְרֵעֲךָ כָּמוֹךָ") · וַיִּקְרָא י״ט:ל״ד („וְאָהַבְתָּ לוֹ כָּמוֹךָ") · רמב״ם הלכות דֵּעוֹת (פֶּרֶק ו׳–ז׳ · אַהֲבַת הָרֵעַ · תּוֹכֵחָה · לָשׁוֹן הָרָע) · רמב״ם הלכות מַתְּנוֹת עֲנִיִּים (פֵּאָה · לֶקֶט · עוֹלֵלוֹת · פֶּרֶט · מַעֲשֵׂר עָנִי) · רמב״ם הלכות שְׂכִירוּת (י״א:א׳–ב׳ · בַּל תָּלִין) · רמב״ם הלכות סַנְהֶדְרִין (כ״א · מִשְׁפַּט צֶדֶק) · רמב״ם הלכות גְּזֵלָה וַאֲבֵדָה · מַסֶּכֶת יְבָמוֹת י״ד. · מַסֶּכֶת שַׁבָּת ל״א. (הִלֵּל וְהַגֵּר) · מַסֶּכֶת יוֹמָא ל״ט. (אָדָם מְקַדֵּשׁ עַצְמוֹ מְעַט מְקַדְּשִׁים אוֹתוֹ הַרְבֵּה) · רש״ש נְהַר שָׁלוֹם (לֹא־תִשְׂנָא · ואהבת לרעך כמוך · שִׂנְאַת חִנָּם · לְשׁוֹן הָרָע שֶׁהֶחְרִיבָה בֵּית הַמִּקְדָּשׁ) · רמח״ל מְסִלַּת יְשָׁרִים פֶּרֶק כ״ו (קְדֻשָּׁה כְּפוּלָה · עֲבוֹדָה וּגְמוּל · הִשְׁתַּדְּלוּת וּמַתָּנָה) · רמח״ל מְסִלַּת יְשָׁרִים פֶּרֶק י״א (נְקִיּוּת מֵחֶטְאֵי הַפֶּה · לָשׁוֹן הָרָע · רְכִילוּת · הוֹנָאַת דְּבָרִים · הַלְבָּנַת פָּנִים) · רמח״ל מְסִלַּת יְשָׁרִים פֶּרֶק כ׳ (מִשְׁקַל הַחֲסִידוּת · תּוֹכֵחָה הַנִּשְׁמַעַת לְעֻמַּת זוֹ שֶׁאֵינָהּ נִשְׁמַעַת) · רמח״ל מְסִלַּת יְשָׁרִים פֶּתִיחָה (בְּרַיְיתָא דְּרַבִּי פִּנְחָס בֶּן יָאִיר — תּוֹרָה → זְהִירוּת → זְרִיזוּת → נְקִיּוּת → פְּרִישׁוּת → טָהֳרָה → חֲסִידוּת → עֲנָוָה → יִרְאַת חֵטְא → קְדֻשָּׁה) · אור החיים על וַיִּקְרָא י״ט:ב׳ („בְּכׇל־עֲדַת בְּנֵי־יִשְׂרָאֵל" — נֶאֱמַר בְּהַקְהֵל) · בן איש חי שנה ראשונה (פָּרָשַׁת אַחֲרֵי-קְדֹשִׁים — הִלְכוֹת נְטִילַת יָדַיִם · פְּתִיחָה „חֲבִיבִין יִשְׂרָאֵל שֶׁנִּיתַּן לָהֶם כְּלִי חֶמְדָּה") · בן איש חי שנה שנייה (פָּרָשַׁת קְדֹשִׁים — הֶמְשֵׁךְ הִלְכוֹת מְלִיחָה · פְּתִיחָה „אִם אֵין חָכְמָה אֵין יִרְאָה — אֲבוֹת ג׳ כ״א") · שד״ל פֵּרוּשׁ עַל וַיִּקְרָא י״ז (פְּתִיחָה לְעִנְיְנֵי קְדֻשָּׁה: „הָאֵל הָאוֹהֵב הַצֶּדֶק וְהַחֶסֶד בֵּין בְּנֵי אָדָם") · שד״ל י״ט:י״ח (וְאָהַבְתָּ לְרֵעֲךָ — נֶגֶד הַנְּקָמָה הַנִּרְאֵית כְּמִשְׁפַּט צֶדֶק) · שד״ל י״ט:ל״ד (וְאָהַבְתָּ לוֹ כָּמוֹךָ — נֶגֶד הוֹנָאַת הַגֵּר) · נֻסַּח אֲרָם צוֹבָה · מָרוֹקוֹ · יָמֶן · יְרוּשָׁלַיִם · בַּגְדָּד.</div>
+      </div>
+      <div class="tikkun-body">
+        <strong>Sephardische Praxis:</strong> Kedoschim ist die zentrale Heiligkeits-Parashah der Tora —
+        und die einzige Parashah, die nach Or HaChaim und der Tradition <em>b'hakhel</em>, vor der
+        <em>ganzen versammelten Gemeinde</em>, gesprochen wurde (Vayikra 19:2). <strong>Schadal</strong>
+        eröffnet seinen Pirusch auf diesen Block (Vayikra 17, Pirusch al haTora) mit einer programmatischen
+        Aussage: nachdem der Mishkan errichtet war, begann Adonai, das Volk in Angelegenheiten der
+        Heiligkeit zu unterweisen — sie sollen heilig sein, denn der unter ihnen wohnende Gott ist
+        heilig; darum die Warnung vor verbotenen Speisen, Unreinheiten und Arajot, <em>und ebenso vor
+        allen Angelegenheiten zwischen Mensch und seinem Nächsten — denn Er ist der, der Recht und
+        Chesed zwischen Menschen liebt</em>. Genau dies ist die Architektur unserer Parashah: das
+        Heiligkeits-Kapitel öffnet nicht mit kultischer Absonderung, sondern mit über fünfzig
+        Mitzwot, die das gesamte Leben des Menschen mit seinem Nächsten regeln — Eltern-Ehre, Schabbat,
+        Götzen-Verbot, Korbanot-Reinheit, Pe'ah und Leket für Arme und Ger, Diebstahl- und Schwur-Verbot,
+        Lohn vor der Nacht, das Verbot des Stein-vor-dem-Blinden, gerechtes Gericht, Rachilut-Verbot,
+        <em>„nicht beim Blut deines Nächsten stehen"</em>, das Sin'ah-im-Herzen-Verbot, die Pflicht der
+        Tochechah, der große Klal <em>„וְאָהַבְתָּ לְרֵעֲךָ כָּמוֹךָ"</em> (19:18), Kil'ajim, Orlah, das
+        Verbot des Bart-Scherens und der Tätowierung, das Aufstehen vor dem Greis, die Ger-Liebe (19:34),
+        gerechte Maße. Das ist die Pointe der Sefirah <strong>Chesed</strong>: Heiligkeit geschieht
+        in dieser Parashah <em>nicht</em> in der Abkehr von der Welt, sondern <em>im Tun an anderen</em>.
+        Adonai ist heilig — und Israel wird heilig, indem es zwischen Menschen Gerechtigkeit und Chesed
+        verwirklicht. Darum der Maqam <strong>Ajam</strong>: warm, einladend, mitmenschlich-festlich,
+        sephardisch besonders in Aleppo bei Schabbat-Liedern und Birkat-HaMazon-Erweiterungen verwendet.
+        Wo Bechukotai im Hijaz die königliche Strenge des Bundes singt und Tazria im Bayat die mütterliche
+        Heimkehr, singt Kedoschim im Ajam die <em>fröhliche Würde des gegenseitigen Anstands</em>.
+        <br><br>
+        <strong>Im Herzen der Parashah, bei Vayikra 19:18 — וְאָהַבְתָּ לְרֵעֲךָ כָּמוֹךָ אֲנִי אֲדֹנָי</strong>
+        — bündelt sich alles. <strong>Talmud Bavli Schabbat 31a</strong> berichtet die berühmte Hillel-Geschichte:
+        der Konvertit, der die ganze Tora auf einem Bein lernen wollte, hörte von Hillel: <em>„דַּעֲלָךְ
+        סְנֵי לְחַבְרָךְ לָא תַעֲבֵיד — זוֹ הִיא כָּל הַתּוֹרָה כֻּלָּהּ, וְאִידָךְ פֵּרוּשָׁהּ הוּא, זִיל
+        גְּמוֹר"</em> (was dir verhasst ist, tu deinem Nächsten nicht — das ist die ganze Tora; alles
+        andere ist Auslegung; geh und lerne). <strong>Talmud Bavli Yevamot 14a</strong> und der
+        <em>Jeruschalmi Nedarim 9:4</em> zitieren Rabbi Akiva: <em>„וְאָהַבְתָּ לְרֵעֲךָ כָּמוֹךָ — זֶה
+        כְּלָל גָּדוֹל בַּתּוֹרָה"</em>. <strong>Rambam</strong> entfaltet in <em>Hilchot De'ot 6:3</em>
+        die positive Pflicht: <em>„מִצְוָה עַל כָּל אָדָם לֶאֱהֹב אֶת כָּל אֶחָד וְאֶחָד מִיִּשְׂרָאֵל
+        כְּגוּפוֹ"</em> — es ist eine Pflicht für jeden, jeden einzelnen Israeliten zu lieben wie sich
+        selbst; und in 6:4–7:8 die negative Seite: das Verbot des Hasses im Herzen, der Rache, der
+        Nachträgerei, der Rachilut und Lashon HaRa. <strong>Schadal in seinem Pirusch zu Vayikra 19:18</strong>
+        liefert einen pschat-präzisen Hinweis, der genau gegen eine fromme Verklärung dieses Verses
+        gerichtet ist: alle anderen Mitzwot zwischen Mensch und Nächstem sind <em>aus sich selbst heraus</em>
+        verabscheuungswürdig (Diebstahl, Mord, falscher Schwur). Die <em>Nekamah</em> — die Rache — ist die
+        einzige Übertretung, die in den Augen des Rächenden wie ein <em>Akt der Gerechtigkeit</em> erscheinen
+        kann. Darum, sagt Schadal, ist <em>gerade hier</em>, beim Rache- und Nachträgerei-Verbot, der Vers
+        platziert: liebe deinen Nächsten wie dich selbst — so wie du nicht wünschst, dass andere Rache an dir
+        nehmen, nimm auch keine Rache an deinem Nächsten, <em>auch wenn deine Rache rechtlich verdient wäre</em>.
+        Das ist die genaue pschat-Logik der Aliyah-Sequenz <em>„לֹא־תִקֹּם וְלֹא־תִטֹּר ... וְאָהַבְתָּ
+        לְרֵעֲךָ כָּמוֹךָ"</em> (19:18). Schadal warnt zugleich gegen die Idealisierung Mendelssohns, die
+        Liebe als ein-bloßes Wohlwollen ohne praktische Konsequenz versteht (das wäre, sagt Schadal mit
+        Pirkei Avot 5:10, <em>middat Sedom</em> — „meines ist meines, deines ist deines"); echte Re'a-Liebe
+        kostet etwas, sie kostet eine Prutah aus der eigenen Tasche, kostet Zeit, kostet das Aufgeben des
+        verdienten Rachegrolls. <strong>Schadal zu Vayikra 19:34</strong> (וְאָהַבְתָּ לוֹ כָּמוֹךָ — der
+        Ger) ergänzt: <em>„behandle ihn, wie du wünschen würdest, dass andere mit dir umgehen, wärst du ein
+        Ger"</em>; das ist <em>strukturell dieselbe Maxime</em>, jetzt ausgedehnt auf den, der außerhalb der
+        ethnischen Solidarität steht. Die Tora errichtet damit ein zweifaches kamokha: einmal innerhalb des
+        Volkes (19:18), einmal über das Volk hinaus (19:34) — und beide Male mit der Empathie-Logik der
+        Selbst-Versetzung. <strong>Rashash (Rabbi Schalom Scharabi) im Nahar Schalom</strong> nennt in
+        einem direkten Vidui-Vor-Schlaf-Passus die Mitzwot dieser Parashah als <em>die Mitzwot, die im
+        Herzen liegen</em> (<em>הַתְּלוּיִם בַּלֵּב</em>): das Hass-Verbot, das Rache- und Nachträgerei-Verbot,
+        das Verbot von Engherzigkeit und Kargheit. Und Rashash schreibt — und das ist eine der wenigen
+        Stellen, an denen die yerushalmische Kabbalah-Schule explizit Halacha und Geschichte verbindet:
+        <em>„וְאָהַבְתָּ לְרֵעֲךָ כָּמוֹךָ — שֶׁהוּא כְּלָל גָּדוֹל בַּתּוֹרָה, וְהִיא הִיא שֶׁהֶחְרִיבָה אֶת
+        בָּתֵּינוּ, וַעֲדַיִן לֹא נִטְהַרְנוּ מִנֶּגַע צָרַעַת עֲוֹן שִׂנְאַת חִנָּם וּלְשׁוֹן הָרָע
+        הַקָּשָׁה מֵעֲבוֹדָה זָרָה גִּלּוּי עֲרָיוֹת וּשְׁפִיכוּת דָּמִים"</em> — die Übertretung dieses
+        einen Verses, sagt Rashash, hat unsere Häuser zerstört (Anspielung auf Yoma 9b: das zweite Beit
+        HaMikdash wurde wegen sinat chinam zerstört); und wir sind bis heute nicht von der Tzaraat-Wunde des
+        grundlosen Hasses und der Lashon HaRa, die schwerer ist als Götzendienst, Arajot und Blutvergießen
+        zusammen, gereinigt. Das ist die sephardisch-yerushalmische Innen-Lesung von Vayikra 19:17–18: der
+        Tikkun, der die Geulah möglich macht, ist nicht ein neuer Korban, sondern eine alte Mitzwah, die wir
+        seit fast zweitausend Jahren nicht recht halten.
+        <br><br>
+        <strong>Ramchal in Mesillat Yescharim Perek 26</strong> — dem Schluss-Perek, der dem Sefer seinen
+        Namen gibt und die höchste Sprosse der Mussar-Leiter beschreibt — entfaltet die Pointe der
+        Kedushah genau aus unserer Parashah. Sein erstes Wort: <em>„עִנְיַן הַקְּדֻשָּׁה כָּפוּל הוּא,
+        דְּהַיְנוּ: תְּחִלָּתוֹ עֲבוֹדָה וְסוֹפוֹ גְּמוּל, תְּחִלָּתוֹ הִשְׁתַּדְּלוּת וְסוֹפוֹ מַתָּנָה.
+        וְהַיְנוּ: שֶׁתְּחִלָּתוֹ הוּא מָה שֶׁהָאָדָם מְקַדֵּשׁ עַצְמוֹ, וְסוֹפוֹ מָה שֶׁמְּקַדְּשִׁים
+        אוֹתוֹ"</em> — die Sache der Kedushah ist doppelt: ihr Anfang ist Mühe und ihr Ende ist Gabe; ihr
+        Anfang ist Bemühen und ihr Ende ist Geschenk. Sie beginnt damit, dass der Mensch sich selbst
+        heiligt, und sie endet damit, dass er <em>geheiligt wird</em>. Ramchal zitiert dafür <strong>Yoma
+        39a</strong>: <em>„אָדָם מְקַדֵּשׁ עַצְמוֹ מְעַט — מְקַדְּשִׁים אוֹתוֹ הַרְבֵּה; מִלְּמַטָּה —
+        מְקַדְּשִׁים אוֹתוֹ מִלְּמַעְלָה"</em>. Genau diese Doppel-Struktur ist die Architektur unserer
+        Parashah: Vayikra 19:2 — der Aufruf <em>„heilig sollt ihr sein"</em> als Mühe (תְּחִלָּתוֹ
+        עֲבוֹדָה); Vayikra 20:8 — <em>„אֲנִי אֲדֹנָי מְקַדִּשְׁכֶם"</em>, Ich, Adonai, der euch heiligt,
+        als Gabe (סוֹפוֹ מַתָּנָה); und in der Mitte alle Mitzwot, durch die der Mensch sich heiligt. Ramchal
+        fügt — und das ist der höchste Punkt seiner ganzen Mussar-Schrift — hinzu: <em>„וְהָאִישׁ
+        הַמִּתְקַדֵּשׁ בִּקְדֻשַּׁת בּוֹרְאוֹ אֲפִלּוּ מַעֲשָׂיו הַגַּשְׁמִיִּים חוֹזְרִים לִהְיוֹת
+        עִנְיָנֵי קְדֻשָּׁה מַמָּשׁ"</em> — der Mensch, der sich in der Heiligkeit seines Schöpfers heiligt,
+        dessen physische Handlungen selbst zu Angelegenheiten der Heiligkeit werden. Genau das ist die
+        Pointe von Kedoschim: die fünfzig Mitzwot sind nicht zusätzliche Pflichten <em>neben</em> dem
+        Leben, sie sind die Form, in der das Leben selbst kedushah wird — der Lohn an den Tagelöhner vor
+        Sonnenuntergang, das Stehenlassen der Pe'ah, die nicht ausgesprochene Rache, das Aufstehen vor dem
+        Greis. Ramchal in der <em>Petichah</em> der Mesillat Yescharim hat dies architektonisch verankert:
+        die Baraita des Rabbi Pinchas ben Yair (Avoda Zarah 20b) — <em>Torah → Zehirut → Zerizut → Nekiut →
+        Perishut → Tahara → Chasidut → Anavah → Yirat Chet → <strong>Kedushah</strong> → Ruach HaKodesh →
+        Techiyat HaMetim</em>. Kedushah ist die zehnte Sprosse, die unmittelbar Ruach HaKodesh und Techiyat
+        HaMetim trägt; sie ist der Eingang in die Erlösung. <strong>Ramchal in Mesillat Yescharim Perek
+        11</strong> — der berühmten Detail-Behandlung der Nekiut — entfaltet ausführlich genau die Sünden,
+        die Kedoschim ausdrücklich verbietet: <em>Honaat Devarim</em> (verbale Kränkung, schlimmer noch als
+        Honaat Mamon, sagt der Talmud), <em>Halbanat Panim</em> (öffentliche Beschämung — wer den Nächsten
+        in der Öffentlichkeit bleicht, hat keinen Anteil an der kommenden Welt, Pirkei Avot 3),
+        <em>Rechilut</em> und <em>Lashon HaRa</em> — jede dieser Sünden ist eine Übertretung eines Verses
+        aus Vayikra 19. Und <strong>Ramchal in Perek 20</strong> (Mishkal HaChasidut — das Wägen der
+        Frömmigkeit) liefert eine entscheidende sephardische Schutz-Klausel zur Tochechah-Mitzwah (19:17):
+        nicht jede Tochechah ist erlaubt. Es ist eine Mitzwah, sagt Ramchal mit <em>Yevamot 65b</em>,
+        <em>etwas zu sagen, was gehört wird; aber ebenso eine Mitzwah, etwas nicht zu sagen, was nicht
+        gehört wird</em>. Wer einen Sünder zur Unzeit oder am unrechten Ort tadelt und damit zur weiteren
+        Übertretung treibt, hat die Tochechah-Mitzwah <em>verfehlt</em>. Sephardisch ist das die zarte
+        Pointe der Mitzwah: hochi'ach tochi'ach et amitecha — du sollst deinen Nächsten zurechtweisen,
+        aber so, dass er es als Liebe hört, nicht als Anklage.
+        <br><br>
+        <strong>Or HaChaim</strong> auf Vayikra 19:2 unterstreicht die singuläre Form der Eröffnung — <em>„דַּבֵּר
+        אֶל־כׇּל־עֲדַת בְּנֵי־יִשְׂרָאֵל"</em>: nicht die übliche Formel <em>„דַּבֵּר אֶל־בְּנֵי יִשְׂרָאֵל"</em>,
+        sondern die ungewöhnliche <em>„zur ganzen Gemeinde"</em>. Die klassische Tradition (Rashi nach Sifra,
+        ebenso übernommen in den sephardischen Drasch-Sammlungen) zieht daraus den halachischen Schluss:
+        Vayikra 19 wurde <em>b'hakhel</em> gesprochen — vor der versammelten Gemeinde, mit ausdrücklichem
+        Aufruf, weil <em>kelal hadibrot teluyot bo</em> (die meisten Tora-Lehren ruhen auf diesen Versen).
+        Or HaChaim sieht in dieser b'hakhel-Anordnung den kabbalistischen Anker für die Maschiach-ben-David-
+        Erfüllung: am Ende der Tage werden alle Mitzwot von Kedoschim sichtbar gehalten, und das ist der
+        Zustand, in dem <em>v'hithalachti betochechem</em> (Vayikra 26:12) wirklich wird. Maschiach ben David
+        ist nicht primär ein politischer Erlöser, sondern derjenige, in dem die Gesellschaft sichtbar wird,
+        die Kedoschim beschreibt — eine Gesellschaft, in der der Tagelöhner am gleichen Tag bezahlt wird, der
+        Ger geliebt wird, die Maße gerecht sind, und niemand seinen Bruder im Herzen hasst.
+        <br><br>
+        <strong>Ben Ish Chai</strong> bringt in seinem zweijährigen Halacha-Zyklus eine bemerkenswerte
+        sephardische Schwerpunkt-Wahl. <em>In Schanah Rischona</em> behandelt er Acharei-Kedoschim zusammen,
+        und macht die <em>Hilchot Netilat Yadayim</em> — die Gesetze des Hände-Waschens vor dem Brot — zum
+        Halacha-Schwerpunkt. Seine Petichah eröffnet mit <em>Pirkei Avot 3:14</em>: <em>„חֲבִיבִין יִשְׂרָאֵל
+        שֶׁנִּיתַּן לָהֶם כְּלִי חֶמְדָּה"</em> — geliebt sind Israel, denen ein begehrtes Werkzeug gegeben
+        wurde — und entwickelt die Lehre: die Tora wird mit Wasser verglichen, denn das Wasser nimmt jede
+        Färbung an; und wie die <em>Mei Chatat</em> und das <em>Mei Kiyor</em> durch <em>Schinui Mar'eh</em>
+        (Farb-Veränderung) untauglich werden, so wird Tora untauglich, wenn jemand <em>megaleh panim
+        baTora schelo kaHalachah</em> (Pirkei Avot 3:11) — wenn er die Tora gegen ihre Halachah auslegt.
+        Die sephardische Netilat Yadayim, nach Rashash mit drei Aufgüssen, drei Reibungen, mit Kawanot der
+        zehn Sefirot in den zehn Fingern und Erhebung der Hände bis zur Kopfhöhe, wird damit zum
+        konkreten Tikkun-Ritus, mit dem die Heiligkeits-Sequenz Acharei-Kedoschim in den Alltag eintritt.
+        <em>In Schanah Schniah</em> behandelt der Ben Ish Chai unter Kedoschim die <em>Hilchot Melichah</em>
+        — die Gesetze des Salzens des Fleisches zur Blut-Entfernung. Seine Petichah eröffnet mit <em>Pirkei
+        Avot 3:21</em>: <em>„אִם אֵין חָכְמָה — אֵין יִרְאָה; אִם אֵין יִרְאָה — אֵין חָכְמָה"</em>. Der Ben
+        Ish Chai entfaltet die zwei Arten der Yirah — die <em>äußere Furcht vor Strafe</em> und die
+        <em>innere Furcht aus Erkenntnis</em>; die erste muss als Anfang da sein, die zweite ist Frucht
+        der Tora-Beschäftigung. Genau so liest er die Kedoschim-Architektur: das Strafgesetz in Vayikra 20
+        ist die äußere Yirah, die das Volk schützt; die positiven Mitzwot in Vayikra 19 sind die innere
+        Yirah, die das Volk verwandelt. Beide gehören zusammen — wie die <em>Melichah</em>, die das Blut
+        aus dem Fleisch zieht, gehört zur Mahlzeit der Heiligkeit, die das Volk an seinem Tisch isst.
+        <strong>Kaf HaChaim</strong> (Rabbi Yaakov Chaim Sofer) bestätigt für alle Eidot HaMizrach —
+        Aleppo, Marokko, Yemen, Yerushalayim, Bagdad — die sephardische Halacha-Schicht: Netilat
+        Yadajim wie Melichah sind nicht periphere Riten, sondern die konkreten Wachsamkeits-Strukturen,
+        durch die die Kedoschim-Mitzwot Woche um Woche in den Alltag eingeschrieben werden.
+        <br><br>
+        <strong>Praktische Handlung:</strong>
+        (1) <em>Tägliches Tikkun HaDibur — drei Filter vor jedem Wort</em>: Sephardischer Brauch in der
+        Linie von Rashash, Ben Ish Chai und Ramchal Mesillat Yescharim Perek 11. Vor jedem Satz, der einen
+        anderen Menschen beschreibt — sei es im persönlichen Gespräch, im Telefonat, in der Nachricht oder
+        im sozialen Medium — frage dich innerlich drei Dinge: (a) <em>ist es wahr?</em> (b) <em>ist es
+        nötig?</em> (c) <em>ist es freundlich?</em> Die drei Fragen sind nicht eine ashkenazisch-amerikanische
+        Erfindung, sondern eine genaue Verdichtung der drei Pesukim Vayikra 19:11 (<em>lo tigneivu, lo
+        techachashu, lo teshakru</em>), 19:16 (<em>lo telech rachil</em>) und 19:17 (<em>lo tisna et achicha
+        bilvavecha</em>). Wo eine der drei Antworten Nein ist, schweige. Wer diesen Filter eine Woche lang
+        praktiziert, spürt die Veränderung in seinem Tag — Mesillat Yescharim Perek 11 hat genau das vor
+        Augen.
+        <br><br>
+        (2) <em>„v'ahavta lere'akha kamokha" als Bett-Zugabe zum Krias Schma She'al haMittah</em>: Eine
+        weit verbreitete sephardische (Aleppo · Yerushalayim) Praxis, in der Linie der Rashash-Tradition:
+        bevor du das Krias Schma She'al haMittah sprichst, sage langsam und in deinen Worten — sei es
+        Hebräisch, sei es Deutsch — den Satz: <em>„Hineni mekabel alai mitzvat asseh shel v'ahavta
+        lere'akha kamokha — ich nehme die Mitzwah, meinen Nächsten zu lieben wie mich selbst, auf mich"</em>,
+        und denke an einen oder zwei Menschen, mit denen du heute Schwierigkeit hattest. Sprich für sie
+        innerlich um Schalom, vergib ihnen, was zu vergeben ist. Sephardisch ist das die <em>tägliche
+        Mochilah</em> — das tägliche Verzeihen — das vor dem Schlafgehen alle Hass-Restbestände, die das
+        Herz im Lauf des Tages angesammelt hat, vor Adonai bringt. Das ist die Mitzwah des <em>lo tisna
+        et achicha bilvavecha</em> in ihrer kürzesten täglichen Form.
+        <br><br>
+        (3) <em>„Lo talin pe'ulat schachir" — Lohn vor der Nacht</em>: Direkt aus Vayikra 19:13.
+        <em>Rambam Hilchot Schechirut 11:1–2</em> und der <em>Schulchan Aruch Choschen Mischpat 339</em>
+        (sephardisch durch Chazon Ovadia bestätigt) machen daraus eine konkrete Halacha: wer einen
+        Tagelöhner — Bauarbeiter, Putzfrau, Lieferanten, Babysitter, Freelancer — beschäftigt, soll
+        ihn am gleichen Tag bezahlen, vor Sonnenuntergang (oder bei Nacht-Arbeit vor dem nächsten Morgen).
+        Konkrete moderne Praxis: wenn jemand für dich arbeitet und du am gleichen Tag bezahlen kannst —
+        bezahle. Sage nicht <em>„nächste Woche"</em>, wenn du heute könntest. Die Mitzwah gilt heute genauso
+        wie zur Zeit der Tora; sie schützt den Schwächeren, der vom Tageslohn lebt. Sephardisch (Chazon
+        Ovadia) ist das eine Mitzwah <em>de'oraita</em> — Tora-Recht — die nicht durch <em>„ist halt nicht
+        üblich"</em> abgekauft wird.
+        <br><br>
+        (4) <em>Pe'ah und Leket in der modernen Form — wöchentliche Tzedakah-Linie</em>: Vayikra 19:9–10
+        verlangt, dass die Ecke des Feldes und die Nachlese der Ernte dem Armen und dem Ger gelassen werden.
+        In der Diaspora und in den meisten heutigen Lebensformen gibt es kein Feld zu ernten — aber die
+        Mitzwah ist nicht aufgehoben, sondern <em>transformiert</em> (Rambam Hilchot Mat'not Aniyim 1:4 ff.
+        zur Ma'aser-Kesafim-Linie). Sephardischer Brauch (Chazon Ovadia, Yabia Omer mehrere Bände):
+        <em>Ma'aser Kesafim</em> — ein Zehntel des Netto-Einkommens — wird als laufende Tzedakah-Linie
+        verstanden, die die Pe'ah-Mitzwah heute trägt. Konkret: lege eine bestimmte Linie deines monatlichen
+        Einkommens fest (mindestens 5%, idealerweise 10%), lege das Geld separat (eigenes Konto, eigene
+        Box), und gib es im Lauf des Monats an mindestens zwei verschiedene Empfänger: <em>einen Armen</em>
+        (Familie in Not, Tzedakah-Organisation für Bedürftige) und <em>einen Ger</em> (jemand, der außerhalb
+        deiner ethnischen oder religiösen Kern-Gemeinschaft steht — Flüchtlinge, Konvertiten, Außenseiter).
+        Sephardisch ist die doppelte Adresse <em>„לֶעָנִי וְלַגֵּר"</em> ausdrücklich.
+        <br><br>
+        (5) <em>„Mipnei seivah takum" — Aufstehen vor dem Greis</em>: Vayikra 19:32, in <em>Rambam Hilchot
+        Talmud Torah 6:9</em> und <em>Hilchot De'ot 5:7</em> als konkrete körperliche Mitzwah kodifiziert.
+        Sephardischer Standard-Brauch (Aleppo, Marokko, Yemen, Yerushalayim): wenn ein Mensch über 70
+        Jahre alt in den Raum tritt — auch wenn du ihn nicht kennst, auch wenn er kein Talmid Chacham ist,
+        nur aufgrund seines Alters — erhebe dich kurz von deinem Platz. In modernen Lebensformen — Bus, Bahn,
+        Wartezimmer, Schul-Bima, Familien-Tisch — gilt das gleiche: stehe auf, biete den Platz an, höre
+        zuerst. Die Mitzwah ist nicht symbolisch; sie ist die <em>tägliche Übung der Demut vor der gelebten
+        Erfahrung</em>, gegen die instinktive Modernität, das Alte verdrängen zu wollen. Sephardisch wird
+        diese Mitzwah als der körperliche Anker des <em>v'yareita me'Elohecha</em> (Vayikra 19:32) verstanden:
+        wer vor dem Greis aufsteht, übt die Gottesfurcht in einer einfachen, sichtbaren Geste.
+        <br><br>
+        (6) <em>Ger-Liebe (Vayikra 19:34) — eine konkrete Begegnung pro Monat</em>: Schadal zu 19:34 hat
+        diesen Vers als <em>strukturelle Ausweitung von 19:18</em> verstanden: behandle den Ger so, wie du
+        wünschen würdest, dass andere mit dir umgehen, wärst du ein Fremder im Land. Konkrete moderne
+        Anwendung: identifiziere in deinem nahen Umfeld einen Menschen, der <em>außerhalb deiner
+        Kerngemeinschaft</em> steht — Konvertit zur sephardischen Tradition, neuer Einwanderer, jemand mit
+        anderer Herkunft, jemand mit anderem Glauben aber in deiner Umgebung — und nimm einmal im Monat
+        eine konkrete Geste auf: ein Anruf, eine Einladung zum Schabbat-Tisch (für Konvertiten und
+        sephardische Einwanderer), ein praktisches Helfen (Behörden, Übersetzung, Orientierung), eine
+        Brücken-Geste. Sephardisch (Chazon Ovadia in seiner ausführlichen Halacha-Diskussion des
+        Ger-Status) ist die Mitzwah von Vayikra 19:34 nicht ein abstrakter Wohlwollens-Akt; sie ist
+        konkrete Praxis der Konvertiten- und Einwanderer-Aufnahme, die in den sephardischen Gemeinden
+        Aleppos, Marokkos und Yerushalayims über Jahrhunderte als gelebte Wirklichkeit kultiviert wurde.
+        <br><br>
+        (7) <em>Tochechah nach Ramchal — der Spiegel-Test vor dem Tadel</em>: Vor jeder Tochechah, jeder
+        Zurechtweisung, jeder kritischen Rückmeldung — frage dich nach Ramchal Mesillat Yescharim Perek 20:
+        <em>„Wird mein Wort gehört werden? Wird es zu Tikkun führen oder zur Verhärtung? Spreche ich aus
+        Liebe oder aus angestautem Ärger?"</em> Wenn die Antwort nicht klar zugunsten des Tikkun ausfällt,
+        warte. Sephardisch (Ramchal Pertek 20 wörtlich): die Mitzwah von Vayikra 19:17 <em>„hochi'ach
+        tochi'ach"</em> ist nicht eine Lizenz zur Anklage; sie ist eine Pflicht zur <em>nachhaltigen
+        Beziehung</em>. Das Verb <em>tochi'ach</em> in der Verdoppelung trägt eine spezifische sephardische
+        Auslegung: tadle, indem du den anderen siehst, nicht indem du dich selbst hörst. Wer Tochechah aus
+        Liebe spricht, hat die Mitzwah erfüllt; wer aus Ärger oder Selbstgerechtigkeit spricht, hat sie
+        oft zerstört.
+        <br><br>
+        (8) <em>Bli neder bei Schwüren — Vayikra 19:12 als tägliche Praxis</em>: <em>„לֹא־תִשָּׁבְעוּ
+        בִשְׁמִי לַשָּׁקֶר וְחִלַּלְתָּ אֶת־שֵׁם אֱלֹהֶיךָ"</em> ist nicht nur ein Verbot des Meineids vor
+        Gericht; es ist die Wurzel der täglichen sephardischen <em>bli-neder</em>-Praxis (Ben Ish Chai
+        Schanah Schniah, mehrere Stellen). Vor jeder Zusage — <em>„ich komme morgen", „ich gebe dir das",
+        „ich werde dort sein"</em> — füge innerlich oder leise <em>„בְּלִי נֶדֶר"</em> hinzu. Das schützt
+        vor unbeabsichtigter Bindung und vor dem Bruch, wenn das Leben anders kommt. Sephardischer
+        Standard-Brauch, der die Eltern-Ehre (19:3 — <em>„אִישׁ אִמּוֹ וְאָבִיו תִּירָאוּ"</em>) und das
+        Schwur-Verbot (19:12) gemeinsam in Kraft hält: wer seinen Eltern, seinem Ehepartner, seinen Kindern,
+        seinen Freunden zusagt — sage <em>„bli neder"</em>, und du hältst sowohl die Mitzwah von 19:12 als
+        auch das Vertrauen der Anderen.
+        <br><br>
+        (9) <em>Vayikra 19 als Schabbat-Mussar-Tisch — eine Mitzwah pro Woche</em>: Sephardischer
+        Yerushalayim-Brauch in der Linie von Mesillat Yescharim Perek 26 (das jährliche Lernen der
+        Kedushah-Perek im Monat Iyar): wähle dir eine Mitzwah aus Vayikra 19 für die kommende Woche — eine
+        — und führe sie an deinem Schabbat-Tisch in einer kurzen Drasch ein, mit konkreter Anwendung für
+        die Familie. Eine Woche: <em>v'ahavta lere'akha kamokha</em> — wir üben das diese Woche, indem...
+        Eine Woche: <em>lifne iver lo titen mikhshol</em> — wir üben das diese Woche, indem... Eine Woche:
+        <em>mipnei seivah takum</em> — wir üben das diese Woche, indem... Über ein Jahr trägt man die ganze
+        Parashah ein in den Alltag der Familie. Das ist Ramchals doppelte Kedushah in der Praxis:
+        <em>תְּחִלָּתוֹ הִשְׁתַּדְּלוּת</em> — wir mühen uns, eine konkrete Mitzwah Woche um Woche zu üben;
+        <em>וְסוֹפוֹ מַתָּנָה</em> — der Schluss wird Adonais Geschenk sein, die Kedushah, die nicht aus
+        eigener Kraft kommt.
+        <br><br>
+        (10) <em>Maschiach ben David in Kedoschim — die Vision der heiligen Gesellschaft</em>: Die
+        sephardische Tradition (Rambam Hilchot Mlachim 11–12, Or HaChaim auf Vayikra 19:2) erkennt die
+        Yemot-HaMaschiach-Erfüllung nicht in einer abstrakten Wunder-Geschichte, sondern in der
+        sichtbaren Verwirklichung der Mitzwot von Vayikra 19–20: eine Gesellschaft, in der der Tagelöhner
+        am gleichen Tag bezahlt wird, der Ger geliebt wird, die Maße gerecht sind, die Eltern geehrt
+        werden, die Tochechah aus Liebe gesprochen wird, niemand seinen Bruder im Herzen hasst.
+        Maschiach ben David, sagt Rambam, ist der König, in dem diese Gesellschaft öffentlich wird —
+        nicht ein himmlischer Bote, der die Mitzwot überflüssig macht, sondern derjenige, in dessen
+        Tagen die Mitzwot endlich in voller Wirklichkeit gehalten werden. Wer am Schluss der zehnten
+        Brachah der Amidah <em>„מְקַבֵּץ נִדְחֵי עַמּוֹ יִשְׂרָאֵל"</em> spricht — der Sammler der
+        Verstoßenen Israels — kann eine Kawanah einlegen: <em>„Möge die heilige Gesellschaft von Vayikra
+        19 sichtbar werden, möge Maschiach ben David kommen, möge das Land in Gerechtigkeit und Chesed
+        wieder aufgerichtet werden."</em>
+      </div>
+      <div class="tikkun-tags">
+        <span class="tikkun-tag">וְאָהַבְתָּ לְרֵעֲךָ כָּמוֹךָ</span>
+        <span class="tikkun-tag">תִּקּוּן הַדִּבּוּר</span>
+        <span class="tikkun-tag">לֹא־תָלִין פְּעֻלַּת שָׂכִיר</span>
+        <span class="tikkun-tag">פֵּאָה וְלֶקֶט</span>
+        <span class="tikkun-tag">מִפְּנֵי שֵׂיבָה תָּקוּם</span>
+      </div>
+    </div>
+
+    <!-- ══ SCHI · KLIMAX-MOMENT — VAYIKRA 19:18 ══ -->
+    <div class="climax-box">
+      <div class="climax-label">שִׂיא · ff · Klimax-Vers der Parashah · der große Klal</div>
+      <div class="instrument-note">[no percussion] [no drums] [no choir] [acoustic guitar — full Ajam chord forte to fortissimo, the great klal of the Torah, Rabbi Akiva's verse, the heart of mensch-toward-mensch holiness, no percussion, no drums] Gitarre: Voller Ajam-Akkord, forte zu fortissimo — der große Klal der Tora, der Vers Rabbi Akivas, das Herz der mitmenschlichen Heiligkeit.</div>
+      <div class="climax-verse-he">לֹא־תִקֹּם וְלֹא־תִטֹּר אֶת־בְּנֵי עַמֶּךָ · וְאָהַבְתָּ לְרֵעֲךָ כָּמוֹךָ · אֲנִי אֲדֹנָי</div>
+      <div class="climax-verse-de">„Du sollst nicht Rache nehmen und nicht nachtragen den Söhnen deines Volkes — und du sollst deinen Nächsten lieben wie dich selbst. Ich bin Adonai."</div>
+      <div class="climax-src">וַיִּקְרָא י״ט:י״ח · רַבִּי עֲקִיבָא · יְבָמוֹת י״ד. · שַׁבָּת ל״א.</div>
+    </div>
+
+    <!-- ══ KODA · KEDOSCHIM-TIHIYU-WHISPER — VAYIKRA 19:2 ══ -->
+    <div class="coda-box">
+      <div class="coda-label">קוֹדָה · pp · Kedoschim-Tihiyu im Hauch</div>
+      <div class="instrument-note">[no percussion] [no drums] [no choir] [acoustic guitar — Ajam dissolving into a single sustained note, the opening call returning as the closing whisper, the holiness as gift barely audible, no percussion] Gitarre: Ajam löst sich in einen einzigen getragenen Ton — der Eröffnungs-Ruf kehrt als Schluss-Flüstern zurück, die Heiligkeit als Gabe, kaum hörbar.</div>
+      <div class="coda-whisper">
+        <strong>קְדֹשִׁים תִּהְיוּ</strong> · כִּי <strong>קָדוֹשׁ</strong> אֲנִי · אֲדֹנָי אֱלֹהֵיכֶם</div></div>
+
+  </section>
+
+  <!-- ══ FOOTER ══ -->
+  <div class="footer">
+    <p class="footer-he">פָּרָשַׁת קְדֹשִׁים · חֶסֶד · מַקָּאם עַ׳ג׳ָ׳ם · וְאָהַבְתָּ לְרֵעֲךָ כָּמוֹךָ · קְדֻשָּׁה כְּפוּלָה</p>
+    <p class="footer-chain">
+      וַיִּקְרָא י״ט:א׳–כ׳:כ״ז · נוּסַּח צָדוֹק (רשש) · עֵדוֹת הַמִּזְרָח · קְדֻשַּׁת הָאַחֲרָיוּת לָרֵעַ
+    </p>
+    <p class="footer-de">
+      Quellen: <strong>Tanach</strong> (Vayikra 19:1–20:27 — Tora-Text 1:1, mit Tetragrammaton-Konvertierung
+      durchgängig als אֲדֹנָי) · <strong>Rambam · Mishneh Torah</strong> (Hilchot De'ot 6:3 — die positive
+      Pflicht, jeden Israeliten zu lieben wie sich selbst · Hilchot De'ot 6:4–7:8 — Verbot des Herzens-
+      hasses, der Rache, der Nachträgerei, der Rachilut und Lashon HaRa · Hilchot Mat'not Aniyim — Pe'ah,
+      Leket, Olelot, Peret, Ma'aser Ani · Hilchot Schechirut 11:1–2 — bal talin · Hilchot Sanhedrin 21 —
+      mishpat tzedek · Hilchot Gezelah va'Avedah · Hilchot Issurei Bi'ah) · <strong>Or HaChaim</strong> auf
+      Vayikra 19:2 (b'hakhel — vor der ganzen versammelten Gemeinde · Maschiach-ben-David-Erfüllung als
+      sichtbare Verwirklichung der Kedoschim-Mitzwot) · <strong>Rashash · Nahar Schalom</strong> (Rabbi
+      Schalom Scharabi, Yerushalmische Kabbalah-Schule — Vayikra 19:17–18 als <em>klal gadol baTora</em>,
+      dessen Übertretung das zweite Beit HaMikdasch zerstört hat und bis heute nicht repariert ist) ·
+      <strong>Ramchal · Mesillat Yescharim Perek 26</strong> (Kedushah — Schluss-Perek des Sefer · <em>inyan
+      haKedushah kaful hu</em>: Anfang ist Mühe, Ende ist Gabe · Yoma 39a — <em>adam mekadesch atzmo me'at,
+      mekadschim oto harbe</em> · die physischen Handlungen des Geheiligten werden selbst Kedushah) ·
+      <strong>Ramchal · Mesillat Yescharim Perek 11</strong> (Nekiut · Honaat Devarim, Halbanat Panim,
+      Rechilut, Lashon HaRa — Detail-Behandlung der Sünden des Mundes, die Kedoschim explizit verbietet) ·
+      <strong>Ramchal · Mesillat Yescharim Perek 20</strong> (Mishkal HaChasidut · Tochechah, die gehört
+      wird, gegenüber Tochechah, die nicht gehört wird — Yevamot 65b) · <strong>Ramchal · Mesillat
+      Yescharim Petichah</strong> (Baraita d'Rabbi Pinchas ben Yair, Avoda Zarah 20b — Tora → Zehirut →
+      Zerizut → Nekiut → Perishut → Tahara → Chasidut → Anavah → Yirat Chet → <em>Kedushah</em> → Ruach
+      HaKodesh → Techiyat HaMetim) · <strong>Schadal · Pirusch al haTora</strong> (Rabbi Schmuel David
+      Luzzatto — pschat-präzise Glossen: Einleitung zu Vayikra 17 — <em>„der Gott, der Recht und Chesed
+      zwischen Menschen liebt"</em> · Vayikra 19:18 — die Nekamah als die einzige Übertretung, die wie
+      Gerechtigkeit aussieht · Vayikra 19:34 — die strukturelle Ausweitung des kamokha auf den Ger) ·
+      <strong>Talmud Bavli · Schabbat 31a</strong> (Hillel und der Konvertit: <em>„was dir verhasst ist, tu
+      deinem Nächsten nicht — das ist die ganze Tora"</em>) · <strong>Talmud Bavli · Yevamot 14a</strong>
+      (Rabbi Akiva: <em>„v'ahavta lere'akha kamokha — zeh klal gadol baTora"</em>) · <strong>Talmud Bavli
+      · Yoma 39a</strong> (die Mose-Halacha der menschlichen Heiligungs-Initiative) · <strong>Ben Ish
+      Chai</strong> Schanah Rischona (Acharei-Kedoschim — Hilchot Netilat Yadayim · Petichah <em>„chavivin
+      Yisrael shenitan lahem keli chemdah"</em> · Pirkei Avot 3:14 als Tora-Wasser-Vergleich) und Schanah
+      Schniah (Kedoschim — Hemschech Hilchot Melichah · Petichah <em>„im ein chochmah ein yirah — Avot
+      3:21"</em> · die zwei Arten der Yirah als Tora-Architektur) · <strong>Kaf HaChaim</strong> auf Orach
+      Chaim (Rabbi Yaakov Chaim Sofer — sephardische Praxis aller Eidot HaMizrach: Aleppo, Marokko,
+      Yemen, Yerushalayim, Bagdad — Netilat Yadayim, Melichah, Hatarat Nedarim) · <strong>Yabia Omer ·
+      Chazon Ovadia</strong> (Rabbi Ovadia Yosef Z'L — sephardische moderne Halacha: bal talin als
+      de'oraita, Ma'aser Kesafim als Pe'ah-Erfüllung, Ger-Status und seine Halachot) · <strong>Krias
+      Schma She'al haMittah</strong> (Aleppo-Yerushalayim-Tradition mit täglicher mochilah als Erfüllung
+      von 19:17 — <em>lo tisna et achicha bilvavecha</em>).
+      <br><br>
+      <strong>Tradition:</strong> Sephardisch · Nussach Zadoq (Rashash) · Maqam-Tradition aus Aleppo,
+      Yerushalayim, Marokko, Yemen · Tetragrammaton durchgängig als אֲדֹנָי · Maschiach ben David ·
+      Doppelt geprüfte Quellen · Tora-Text 1:1 unverändert · Erstellt Mai 2026 · Sefer HaParashot
+      bemo Maqam · 7. Lied Sefer Vayikra · Chesed · Maqam Ajam · ~64 BPM rubato · וְאָהַבְתָּ לְרֵעֲךָ
+      כָּמוֹךָ.
+    </p>
+    <div class="footer-amen">אָמֵן · יִבָּנֶה הַמִּקְדָּשׁ בִּמְהֵרָה בְיָמֵינוּ · יָבוֹא מָשִׁיחַ בֶּן דָּוִד · אָמֵן</div>
+  </div>
+
+</div>
+
+
+</body></html>

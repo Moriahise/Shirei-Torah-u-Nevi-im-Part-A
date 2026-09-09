@@ -1,0 +1,624 @@
+<!DOCTYPE html>
+<html lang="he-IL"><head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>פָּרָשַׁת וַיַּקְהֵל · שְׁמוֹת ל״ה:א׳–ל״ח:כ׳ · נֵצַח · מַקָּאם נַהַוַונְד · Sephardische Tora-Vertonung</title>
+  <link href="https://fonts.googleapis.com/css2?family=Frank+Ruhl+Libre:wght@300;400;700;900&amp;family=EB+Garamond:ital,wght@0,400;0,600;1,400;1,600&amp;family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&amp;display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg:#060808; --deep:#0A0E0E; --layer:#101414; --card:#0C1010;
+      --parchment:#f2e8d0; --parch-dim:#c8b898;
+      --ivory:#f0e8d8; --ivory-dim:#a89878;
+      --silver:#c8d4e0; --silver-dim:#7a8290;
+      --text:#a0a89c;
+      /* SEFER SCHEMOT — Tief-Rot · Befreiung und Bau */
+      --sefer:#B04030; --sefer-lt:#D86858; --sefer-dim:#7C2820;
+      --sefer-bg:rgba(176,64,48,.08); --sefer-bdr:rgba(176,64,48,.36); --sefer-glow:rgba(216,104,88,.20);
+      /* VAYAKHEL · NETZACH · NAHAWAND — Beständiges Indigo-Bronze */
+      --vyk:#5D7AAA; --vyk-lt:#8AA8D0; --vyk-dim:#3E5680;
+      --vyk-bg:rgba(93,122,170,.08); --vyk-bdr:rgba(93,122,170,.36); --vyk-glow:rgba(138,168,208,.22);
+      /* MAQAM-FARBEN */
+      --maqam-saba:#B0904A; --maqam-hijaz:#C85050; --maqam-bayat:#A07850;
+      --maqam-rast:#C8A860; --maqam-ajam:#7A9050; --maqam-nahawand:#6080A0;
+    }
+    *,*::before,*::after { margin:0; padding:0; box-sizing:border-box; }
+    html { scroll-behavior:smooth; }
+    body { background:var(--bg); color:var(--silver); font-family:'EB Garamond',serif; overflow-x:hidden; line-height:1.85; padding:40px 20px 80px; }
+    body::before { content:''; position:fixed; inset:0; pointer-events:none; z-index:0;
+      background: radial-gradient(ellipse at 18% 12%, rgba(176,64,48,.12) 0%, transparent 48%),
+                  radial-gradient(ellipse at 82% 28%, rgba(93,122,170,.14) 0%, transparent 45%),
+                  radial-gradient(ellipse at 12% 68%, rgba(176,64,48,.08) 0%, transparent 45%),
+                  radial-gradient(ellipse at 88% 82%, rgba(138,168,208,.10) 0%, transparent 42%),
+                  radial-gradient(ellipse at 50% 50%, rgba(20,16,8,.82) 0%, transparent 70%); }
+    body::after { content:''; position:fixed; inset:0; pointer-events:none; z-index:0;
+      background-image:
+        radial-gradient(1px 1px at 8% 10%, rgba(216,104,88,.36) 0%, transparent 100%),
+        radial-gradient(1px 1px at 48% 5%, rgba(138,168,208,.30) 0%, transparent 100%),
+        radial-gradient(1px 1px at 82% 16%, rgba(216,104,88,.32) 0%, transparent 100%),
+        radial-gradient(1px 1px at 25% 42%, rgba(138,168,208,.28) 0%, transparent 100%),
+        radial-gradient(1px 1px at 68% 58%, rgba(216,104,88,.28) 0%, transparent 100%),
+        radial-gradient(1.5px 1.5px at 12% 75%, rgba(138,168,208,.34) 0%, transparent 100%),
+        radial-gradient(1px 1px at 90% 78%, rgba(216,104,88,.30) 0%, transparent 100%),
+        radial-gradient(1px 1px at 35% 88%, rgba(138,168,208,.26) 0%, transparent 100%); }
+    .wrap { max-width:1080px; margin:0 auto; position:relative; z-index:1; }
+
+    /* PAGE HEADER */
+    .page-header { text-align:center; margin-bottom:80px; padding-bottom:40px; border-bottom:1px solid var(--sefer-bdr); position:relative; }
+    .page-header::after { content:'✦ ✡ ✦'; position:absolute; bottom:-14px; left:50%; transform:translateX(-50%); background:var(--bg); padding:0 20px; color:var(--sefer); font-size:.62em; letter-spacing:.55em; }
+    .eyebrow { font-family:'Cormorant Garamond',serif; font-style:italic; font-size:.78em; color:var(--sefer-lt); letter-spacing:.28em; text-transform:uppercase; margin-bottom:18px; opacity:.85; }
+    .sefer-letter { font-family:'Frank Ruhl Libre',serif; font-size:1.40em; color:var(--sefer); font-weight:900; display:inline-block; margin-bottom:6px; text-shadow:0 0 30px var(--sefer-glow); letter-spacing:.04em; }
+    .page-title-he { font-family:'Frank Ruhl Libre',serif; font-size:3.2em; font-weight:900; color:var(--ivory); direction:rtl; letter-spacing:.05em; text-shadow:0 0 80px var(--sefer-glow), 0 0 140px var(--vyk-glow); margin-bottom:8px; line-height:1.15; }
+    .page-subtitle-he { font-family:'Frank Ruhl Libre',serif; font-size:1.16em; color:var(--sefer-lt); direction:rtl; margin-bottom:10px; letter-spacing:.06em; }
+    .page-title-de { font-family:'Cormorant Garamond',serif; font-style:italic; font-size:1.14em; color:var(--silver-dim); margin-bottom:22px; }
+    .page-desc { font-size:1.0em; color:var(--text); max-width:780px; margin:0 auto; line-height:1.95; }
+    .page-desc strong { color:var(--ivory-dim); }
+    .page-desc em { color:var(--vyk-lt); font-style:italic; }
+
+    /* SONG SECTION */
+    .song-section { margin-bottom:90px; padding-bottom:70px; border-bottom:1px dashed var(--sefer-bdr); }
+    .song-header { display:flex; flex-wrap:wrap; align-items:flex-start; gap:20px; margin-bottom:40px; padding:24px 26px; background:var(--layer); border:1px solid var(--vyk-bdr); border-radius:10px; }
+    .song-num { font-family:'Frank Ruhl Libre',serif; font-size:2.6em; font-weight:900; direction:rtl; padding-right:14px; color:var(--vyk-lt); }
+    .song-meta { flex:1; display:flex; flex-direction:column; gap:8px; }
+    .korban-badge { font-family:'Cormorant Garamond',serif; font-style:italic; font-size:.82em; letter-spacing:.08em; color:var(--vyk-lt); }
+    .maqam-badge { font-family:'Cormorant Garamond',serif; font-style:italic; font-size:.78em; letter-spacing:.08em; display:inline-block; padding:3px 10px; border-radius:4px; color:#f0e8d8; font-weight:600; background:var(--maqam-nahawand); }
+    .song-title-he { font-family:'Frank Ruhl Libre',serif; font-size:1.7em; font-weight:700; color:var(--ivory); direction:rtl; letter-spacing:.04em; }
+    .song-title-de { font-family:'Cormorant Garamond',serif; font-style:italic; font-size:1.02em; color:var(--silver); }
+    .source-badge { font-family:'Cormorant Garamond',serif; font-style:italic; font-size:.74em; color:#7090B0; line-height:1.6; }
+
+    /* ALIYAH BLOCK */
+    .aliyah-block { margin-bottom:42px; }
+    .aliyah-label { font-family:'Frank Ruhl Libre',serif; font-size:.94em; font-weight:700; direction:rtl; margin-bottom:9px; color:var(--vyk); letter-spacing:.06em; padding-bottom:6px; border-bottom:1px solid var(--vyk-bdr); }
+    .aliyah-label-de { font-family:'Cormorant Garamond',serif; font-style:italic; font-size:.78em; color:var(--silver-dim); display:inline-block; margin-right:14px; opacity:.85; }
+    .instrument-note { font-family:'Cormorant Garamond',serif; font-style:italic; font-size:.84em; color:var(--text); margin-bottom:14px; padding:10px 14px; background:rgba(93,122,170,.05); border-left:2px solid var(--vyk-dim); }
+    .lyrics-block { display:flex; gap:44px; flex-wrap:wrap; }
+    .lyrics-he, .lyrics-de { flex:1; min-width:280px; display:flex; flex-direction:column; gap:6px; }
+    .lyrics-he span.line { font-family:'Frank Ruhl Libre',serif; font-size:1.06em; color:var(--ivory); direction:rtl; line-height:1.95; }
+    .lyrics-de span.line { font-family:'Cormorant Garamond',serif; font-size:1.0em; color:var(--silver); line-height:1.88; }
+
+    /* TIKKUN BOX */
+    .tikkun-box { background:rgba(93,122,170,.07); border:1px solid rgba(93,122,170,.32); padding:30px; margin-top:40px; border-radius:6px; }
+    .tikkun-header { display:flex; flex-direction:column; gap:6px; margin-bottom:20px; }
+    .tikkun-title-he { font-family:'Frank Ruhl Libre',serif; font-size:1.25em; color:var(--ivory); direction:rtl; font-weight:700; letter-spacing:.04em; }
+    .tikkun-title-de { font-family:'Cormorant Garamond',serif; font-size:1.0em; font-style:italic; color:var(--silver); }
+    .tikkun-src { font-family:'Cormorant Garamond',serif; font-size:.74em; color:#7090B0; line-height:1.7; }
+    .tikkun-body { font-family:'Cormorant Garamond',serif; font-size:.96em; color:var(--text); line-height:1.92; }
+    .tikkun-body strong { color:var(--ivory); }
+    .tikkun-body em { color:var(--vyk-lt); font-style:italic; }
+    .tikkun-tags { margin-top:18px; display:flex; gap:9px; flex-wrap:wrap; }
+    .tikkun-tag { background:rgba(93,122,170,.16); color:var(--vyk-lt); padding:4px 10px; border-radius:4px; font-size:.74em; font-family:'Frank Ruhl Libre',serif; direction:rtl; }
+
+    /* SCHI / KLIMAX-MOMENT */
+    .climax-box { background:linear-gradient(135deg,rgba(93,122,170,.18),rgba(176,64,48,.10),rgba(6,8,8,.88)); border:2px solid var(--vyk-bdr); padding:32px; margin-top:40px; margin-bottom:30px; border-radius:8px; }
+    .climax-label { font-family:'Cormorant Garamond',serif; font-style:italic; font-size:.82em; color:var(--vyk-lt); letter-spacing:.18em; text-transform:uppercase; margin-bottom:14px; text-align:center; }
+    .climax-verse-he { font-family:'Frank Ruhl Libre',serif; font-size:1.55em; font-weight:700; color:var(--ivory); direction:rtl; text-align:center; line-height:1.85; letter-spacing:.04em; text-shadow:0 0 30px var(--vyk-glow); }
+    .climax-verse-de { font-family:'Cormorant Garamond',serif; font-style:italic; font-size:1.05em; color:var(--silver); text-align:center; margin-top:14px; line-height:1.7; }
+    .climax-src { font-family:'Cormorant Garamond',serif; font-style:italic; font-size:.80em; color:var(--vyk-lt); text-align:center; margin-top:12px; opacity:.8; }
+
+    /* KODA */
+    .coda-box { background:rgba(6,8,8,.78); border:1px solid var(--vyk-bdr); padding:36px; text-align:center; margin-top:30px; margin-bottom:30px; border-radius:6px; }
+    .coda-label { font-family:'Cormorant Garamond',serif; font-style:italic; font-size:.80em; color:var(--vyk-lt); letter-spacing:.18em; text-transform:uppercase; margin-bottom:18px; }
+    .coda-whisper { font-family:'Frank Ruhl Libre',serif; font-size:1.20em; direction:rtl; line-height:2.3; opacity:.85; color:var(--vyk-lt); }
+    .coda-whisper strong { font-weight:900; opacity:1; color:var(--ivory); }
+
+    /* SCENARIOS */
+    .scenarios-section { margin-top:54px; margin-bottom:40px; }
+    .scenarios-title { font-family:'Frank Ruhl Libre',serif; font-size:1.35em; font-weight:700; text-align:center; margin-bottom:34px; direction:rtl; color:var(--sefer-lt); letter-spacing:.06em; }
+    .scenarios-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(290px,1fr)); gap:26px; }
+    .scenario-card { background:linear-gradient(135deg,rgba(16,22,40,.78),rgba(6,8,8,.92)); border:1px solid var(--vyk-bdr); padding:24px; transition:transform .2s, box-shadow .2s; border-radius:6px; }
+    .scenario-card:hover { transform:translateY(-4px); box-shadow:0 10px 36px var(--vyk-glow); }
+    .sc-num { font-family:'Cormorant Garamond',serif; font-style:italic; font-size:.74em; letter-spacing:.14em; text-transform:uppercase; margin-bottom:7px; color:var(--vyk); }
+    .sc-title-he { font-family:'Frank Ruhl Libre',serif; font-size:1.10em; font-weight:700; color:var(--ivory); direction:rtl; margin-bottom:4px; letter-spacing:.04em; }
+    .sc-sub { font-family:'Cormorant Garamond',serif; font-style:italic; font-size:.84em; color:#7090B0; margin-bottom:14px; }
+    .sc-body { font-size:.92em; color:var(--text); line-height:1.80; margin-bottom:14px; }
+    .sc-body strong { color:var(--vyk-lt); }
+    .key-moment { font-size:.86em; color:var(--vyk-lt); font-style:italic; margin-bottom:9px; padding-left:13px; border-left:2px solid var(--vyk-lt); }
+    .reaction { font-size:.86em; color:var(--text); font-style:italic; padding-left:13px; border-left:2px solid var(--sefer-dim); line-height:1.78; }
+
+    /* FOOTER */
+    .footer { margin-top:80px; padding-top:50px; border-top:1px solid var(--sefer-bdr); text-align:center; }
+    .footer-he { font-family:'Frank Ruhl Libre',serif; font-size:1.40em; font-weight:700; color:var(--sefer-lt); direction:rtl; margin-bottom:18px; text-shadow:0 0 30px var(--sefer-glow); letter-spacing:.06em; }
+    .footer-chain { font-family:'Frank Ruhl Libre',serif; font-size:1.0em; color:var(--silver); direction:rtl; margin-bottom:22px; letter-spacing:.09em; }
+    .footer-de { font-family:'Cormorant Garamond',serif; font-style:italic; font-size:.92em; color:var(--text); line-height:2.0; max-width:780px; margin:0 auto 24px; }
+    .footer-de strong { color:var(--ivory-dim); font-style:normal; }
+    .footer-amen { font-family:'Frank Ruhl Libre',serif; font-size:1.30em; color:var(--sefer-lt); direction:rtl; margin-top:24px; letter-spacing:.14em; text-shadow:0 0 30px var(--sefer-glow); }
+
+    @media (max-width:720px) {
+      .page-title-he { font-size:2.3em; }
+      .song-num { font-size:2.2em; }
+      .lyrics-block { flex-direction:column; gap:24px; }
+      .scenarios-grid { grid-template-columns:1fr; }
+      .climax-verse-he { font-size:1.20em; }
+      .footer-he { font-size:1.10em; }
+    }
+  </style>
+</head>
+<body>
+<div class="wrap">
+
+  <header class="page-header">
+    <div class="eyebrow">Sephardische Tora-Vertonung · Sefer HaParashot bemo Maqam</div>
+    <div class="sefer-letter">ב</div>
+    <div class="page-title-he">פָּרָשַׁת וַיַּקְהֵל</div>
+    <div class="page-subtitle-he">סֵפֶר שְׁמוֹת · ל״ה:א׳–ל״ח:כ׳ · נֵצַח · מַקָּאם נַהַוַונְד · קְהִלָּה וְתִיקּוּן · מְלֶאכֶת הַמִּשְׁכָּן</div>
+    <div class="page-title-de">Vayakhel — „Und Mosche versammelte die ganze Gemeinde der Söhne Israels" · Zehnte Parashah des Sefer Schemot · Netzach im Maqam Nahawand</div>
+    <div class="page-desc">
+      Vayakhel ist die <em>Tikkun-Parashah</em> nach dem Sturz des Goldenen Kalbs: was bei Ki-Tisa
+      auseinander geflossen war, wird hier in einer neuen, beständigen Form wieder vereint. Mosche
+      versammelt — <em>VaYakhel</em> — das ganze Volk und gibt ihm zwei Dinge in dieser Reihenfolge:
+      zuerst die <strong>Schabbat-Wiederholung</strong> (35:1–3), mit dem besonderen Verbot des
+      Feuer-Anzündens am Schabbat-Tag in allen Wohnungen; dann den <strong>Aufruf zur
+      Mishkan-Spende</strong> (35:4–19). Die Reihenfolge ist nach <em>Ben Ish Chai</em> kein Zufall:
+      Schabbat hat Vorrang vor allem Bauen, auch vor heiligem Bauen — der <em>Talmud Schabbat 73a–76a</em>
+      leitet aus dieser Konstellation die 39 Melachot ab, denn alles, was am Mishkan-Bau getan wurde,
+      ist am Schabbat verboten. Das Volk antwortet mit einer Großzügigkeit, die in der ganzen Tora
+      einzigartig ist: <em>„וַיָּבֹאוּ כָּל־אִישׁ אֲשֶׁר־נְשָׂאוֹ לִבּוֹ"</em> (35:21) — und am
+      Ende muss Mosche das Volk vom Bringen <em>abhalten</em> (36:6–7), weil <em>„וְהַמְּלָאכָה
+      הָיְתָה דַיָּם לְכׇל־הַמְּלָאכָה ... וְהוֹתֵר"</em>. Bezalel ben Uri und Oholiav ben Achisamach
+      werden mit dem <em>ruach Elohim, chochmah, tevunah, daat</em> erfüllt und leiten den Bau:
+      Vorhänge, Bretter, Riegel, Vorhang, Arche mit Kapporet und Keruvim, Tisch, Menorah,
+      Räucheraltar, Salböl, Brandopferaltar, Becken, Hof. Sefirot-Anker: <strong>Netzach</strong> —
+      die Sefirah der dauerhaften Errichtung, der ausgehaltenen Treue, der Beständigkeit im Werk.
+      Maqam: <strong>Nahawand</strong> — innig, sehnsuchtsvoll-geborgen, leise-bewegend; der Klang
+      der ruhigen Pracht der gemeinsamen Errichtung nach dem Sturm. Tora-Text 1:1 nach sephardischer
+      Tradition, Tetragrammaton durchgängig als אֲדֹנָי, Maschiach ben David.
+    </div>
+  </header>
+
+  <!-- ══ SONG SECTION — PARASHAT VAYAKHEL ══ -->
+  <section class="song-section" id="vayakhel">
+
+    <div class="song-header">
+      <div class="song-num">י</div>
+      <div class="song-meta">
+        <div class="korban-badge">Netzach — נֵצַח · Beständige Errichtung · Gemeinschafts-Tikkun nach dem Sturz</div>
+        <div class="song-title-he">פָּרָשַׁת וַיַּקְהֵל</div>
+        <div class="song-title-de">Vayakhel — „Und er versammelte" · Schemot 35:1–38:20</div>
+        <div class="maqam-badge">מַקָּאם נַהַוַונְד · Nahawand · ~58 BPM rubato</div>
+        <div class="source-badge">שְׁמוֹת ל״ה:א׳–ל״ח:כ׳ · רמב״ם הלכות שַׁבָּת פֶּרֶק א׳ (ל״ט אֲבוֹת מְלָאכוֹת) · רמב״ם הלכות שַׁבָּת פֶּרֶק י״ב (הַבְעָרָה) · רמב״ם הלכות בֵּית הַבְּחִירָה · רמב״ם הלכות מַתְּנוֹת עֲנִיִּים (נְדִיבוּת הַלֵּב) · מִשְׁנָה שַׁבָּת ז׳:ב׳ · תַּלְמוּד בַּבְלִי שַׁבָּת ע״ג.–ע״ו. (מְלָאכוֹת הַמִּשְׁכָּן) · אור החיים על שְׁמוֹת ל״ה:א׳ (תִּיקּוּן אַחֲרֵי הָעֵגֶל) · רש״ש נְהַר שָׁלוֹם דְּרוּשִׁים עַל נֵצַח · רמח״ל מִשְׁכְּנֵי עֶלְיוֹן (אַרְכִיטֶקְטוּרַת הַמִּקְדָּשׁ) · רמח״ל דֶּרֶךְ אֲדֹנָי חֵלֶק ג׳ · בן איש חי שנה ראשונה פרשת ויקהל · בן איש חי שנה שנייה פרשת ויקהל הלכות בִּנְיָן וּסְתִירָה · שׁוּלְחָן עָרוּךְ אוֹרַח חַיִּים רמ״ב–רנ״ב (הֲכָנַת שַׁבָּת) · כַּף הַחַיִּים אוֹרַח חַיִּים רמ״ב–רנ״ב · שד״ל פֵּרוּשׁ עַל שְׁמוֹת ל״ה:ג׳ · שְׁמוֹת ל״ה:כ״ב · שְׁמוֹת ל״ו:א׳ · יָבִיעַ אוֹמֶר · חֲזוֹן עוֹבַדְיָה שַׁבָּת.</div>
+      </div>
+    </div>
+
+
+    <!-- ── ALIYAH 1 · ראשון · Schemot 35:1-20 — Schabbat-Vorrang, Spenden-Aufruf, Mishkan-Komponenten ── -->
+    <div class="aliyah-block">
+      <div class="aliyah-label">עֲלִיָּה רִאשׁוֹנָה — וַיַּקְהֵל מֹשֶׁה · שַׁבָּת קֹדֶם לַמִּשְׁכָּן · קְחוּ מֵאִתְּכֶם תְּרוּמָה<span class="aliyah-label-de">Erste Aliyah · Schemot 35:1–20 · Versammlung des Volkes · Schabbat-Wiederholung mit Feuer-Verbot · Aufruf zur Mishkan-Spende · Liste aller Mishkan-Komponenten</span></div>
+      <div class="instrument-note">[no percussion] [no drums] [no choir] [solo acoustic guitar — Nahawand opening with low sustained warmth, the gathering of the scattered after the fall, then a soft pause for the Schabbat-commandment, then a wider opening for the trumah-call, rubato around 58 BPM, no percussion, no drums, no beat] Gitarre: Nahawand öffnet mit tiefer, getragener Wärme — das Versammeln der Zerstreuten nach dem Sturz, dann eine sanfte Pause für das Schabbat-Gebot, dann ein breiteres Öffnen für den Trumah-Aufruf.</div>
+      <div class="lyrics-block">
+        <div class="lyrics-he" dir="rtl">
+          <span class="line">וַיַּקְהֵל מֹשֶׁה אֶת־כׇּל־עֲדַת בְּנֵי יִשְׂרָאֵל וַיֹּאמֶר אֲלֵהֶם אֵלֶּה הַדְּבָרִים אֲשֶׁר־צִוָּה אֲדֹנָי לַעֲשֹׂת אֹתָם׃</span>
+          <span class="line">שֵׁשֶׁת יָמִים תֵּעָשֶׂה מְלָאכָה וּבַיּוֹם הַשְּׁבִיעִי יִהְיֶה לָכֶם קֹדֶשׁ שַׁבַּת שַׁבָּתוֹן לַאדֹנָי כׇּל־הָעֹשֶׂה בוֹ מְלָאכָה יוּמָת׃</span>
+          <span class="line">לֹא־תְבַעֲרוּ אֵשׁ בְּכֹל מֹשְׁבֹתֵיכֶם בְּיוֹם הַשַּׁבָּת׃</span>
+          <span class="line">וַיֹּאמֶר מֹשֶׁה אֶל־כׇּל־עֲדַת בְּנֵי־יִשְׂרָאֵל לֵאמֹר זֶה הַדָּבָר אֲשֶׁר־צִוָּה אֲדֹנָי לֵאמֹר׃</span>
+          <span class="line">קְחוּ מֵאִתְּכֶם תְּרוּמָה לַאדֹנָי כֹּל נְדִיב לִבּוֹ יְבִיאֶהָ אֵת תְּרוּמַת אֲדֹנָי זָהָב וָכֶסֶף וּנְחֹשֶׁת׃</span>
+          <span class="line">וּתְכֵלֶת וְאַרְגָּמָן וְתוֹלַעַת שָׁנִי וְשֵׁשׁ וְעִזִּים׃</span>
+          <span class="line">וְעֹרֹת אֵילִם מְאׇדָּמִים וְעֹרֹת תְּחָשִׁים וַעֲצֵי שִׁטִּים׃</span>
+          <span class="line">וְשֶׁמֶן לַמָּאוֹר וּבְשָׂמִים לְשֶׁמֶן הַמִּשְׁחָה וְלִקְטֹרֶת הַסַּמִּים׃</span>
+          <span class="line">וְאַבְנֵי־שֹׁהַם וְאַבְנֵי מִלֻּאִים לָאֵפוֹד וְלַחֹשֶׁן׃</span>
+          <span class="line">וְכׇל־חֲכַם־לֵב בָּכֶם יָבֹאוּ וְיַעֲשׂוּ אֵת כׇּל־אֲשֶׁר צִוָּה אֲדֹנָי׃</span>
+          <span class="line">אֶת־הַמִּשְׁכָּן אֶת־אׇהֳלוֹ וְאֶת־מִכְסֵהוּ אֶת־קְרָסָיו וְאֶת־קְרָשָׁיו אֶת־בְּרִיחָו אֶת־עַמֻּדָיו וְאֶת־אֲדָנָיו׃</span>
+          <span class="line">אֶת־הָאָרֹן וְאֶת־בַּדָּיו אֶת־הַכַּפֹּרֶת וְאֵת פָּרֹכֶת הַמָּסָךְ׃</span>
+          <span class="line">אֶת־הַשֻּׁלְחָן וְאֶת־בַּדָּיו וְאֶת־כׇּל־כֵּלָיו וְאֵת לֶחֶם הַפָּנִים׃</span>
+          <span class="line">וְאֶת־מְנֹרַת הַמָּאוֹר וְאֶת־כֵּלֶיהָ וְאֶת־נֵרֹתֶיהָ וְאֵת שֶׁמֶן הַמָּאוֹר׃</span>
+          <span class="line">וְאֶת־מִזְבַּח הַקְּטֹרֶת וְאֶת־בַּדָּיו וְאֵת שֶׁמֶן הַמִּשְׁחָה וְאֵת קְטֹרֶת הַסַּמִּים וְאֶת־מָסַךְ הַפֶּתַח לְפֶתַח הַמִּשְׁכָּן׃</span>
+          <span class="line">אֵת מִזְבַּח הָעֹלָה וְאֶת־מִכְבַּר הַנְּחֹשֶׁת אֲשֶׁר־לוֹ אֶת־בַּדָּיו וְאֶת־כׇּל־כֵּלָיו אֶת־הַכִּיֹּר וְאֶת־כַּנּוֹ׃</span>
+          <span class="line">אֵת קַלְעֵי הֶחָצֵר אֶת־עַמֻּדָיו וְאֶת־אֲדָנֶיהָ וְאֵת מָסַךְ שַׁעַר הֶחָצֵר׃</span>
+          <span class="line">אֶת־יִתְדֹת הַמִּשְׁכָּן וְאֶת־יִתְדֹת הֶחָצֵר וְאֶת־מֵיתְרֵיהֶם׃</span>
+          <span class="line">אֶת־בִּגְדֵי הַשְּׂרָד לְשָׁרֵת בַּקֹּדֶשׁ אֶת־בִּגְדֵי הַקֹּדֶשׁ לְאַהֲרֹן הַכֹּהֵן וְאֶת־בִּגְדֵי בָנָיו לְכַהֵן׃</span>
+          <span class="line">וַיֵּצְאוּ כׇּל־עֲדַת בְּנֵי־יִשְׂרָאֵל מִלִּפְנֵי מֹשֶׁה׃</span>
+        </div>
+        <div class="lyrics-de">
+          <span class="line">(35:1) Und Mosche versammelte die ganze Gemeinde der Söhne Israels und sprach zu ihnen: Dies sind die Worte, die Adonai zu tun geboten hat:</span>
+          <span class="line">(2) Sechs Tage soll Arbeit getan werden, und am siebten Tag soll euch Heiliges sein, Schabbat-Schabbaton für Adonai — jeder, der an ihm Arbeit tut, soll getötet werden.</span>
+          <span class="line">(3) Ihr sollt am Tag des Schabbats in keiner eurer Wohnungen Feuer anzünden.</span>
+          <span class="line">(4) Und Mosche sprach zu der ganzen Gemeinde der Söhne Israels und sagte: Dies ist das Wort, das Adonai geboten hat:</span>
+          <span class="line">(5) Nehmt von euch eine Hebe für Adonai — jeder, dessen Herz willig ist, bringe sie, die Hebe Adonais: Gold und Silber und Kupfer,</span>
+          <span class="line">(6) und Purpurblau und Purpurrot und Karmesinrot und Byssus und Ziegenhaar,</span>
+          <span class="line">(7) und gerötete Widderfelle und Tachasch-Felle und Schittim-Hölzer,</span>
+          <span class="line">(8) und Öl für die Leuchte und Spezereien für das Salböl und für das wohlriechende Räucherwerk,</span>
+          <span class="line">(9) und Schoham-Steine und Steine zum Einsetzen für das Efod und für das Choschen.</span>
+          <span class="line">(10) Und alle, die weisen Herzens sind unter euch, sollen kommen und machen alles, was Adonai geboten hat:</span>
+          <span class="line">(11) den Mishkan, sein Zelt und seine Decke, seine Haken und seine Bretter, seine Riegel, seine Säulen und seine Sockel;</span>
+          <span class="line">(12) die Arche und ihre Stangen, die Kapporet und den Vorhang der Decke;</span>
+          <span class="line">(13) den Tisch und seine Stangen und alle seine Geräte und die Schaubrote;</span>
+          <span class="line">(14) und die Menorah zur Beleuchtung und ihre Geräte und ihre Lampen und das Öl für die Leuchte;</span>
+          <span class="line">(15) und den Räucheraltar und seine Stangen und das Salböl und das wohlriechende Räucherwerk und den Vorhang am Eingang des Mishkan;</span>
+          <span class="line">(16) den Brandopferaltar und das kupferne Gitterwerk an ihm, seine Stangen und alle seine Geräte, das Becken und sein Gestell;</span>
+          <span class="line">(17) die Vorhänge des Vorhofs, seine Säulen und seine Sockel und den Vorhang des Tores des Vorhofs;</span>
+          <span class="line">(18) die Pflöcke des Mishkan und die Pflöcke des Vorhofs und ihre Stricke;</span>
+          <span class="line">(19) die Dienstgewänder für den Dienst im Heiligtum, die heiligen Gewänder für Aharon, den Kohen, und die Gewänder seiner Söhne zum Dienst.</span>
+          <span class="line">(20) Und die ganze Gemeinde der Söhne Israels ging von Mosche hinweg.</span>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- ── ALIYAH 2 · שני · Schemot 35:21-29 — Das Bringen der Spenden, Männer und Frauen ── -->
+    <div class="aliyah-block">
+      <div class="aliyah-label">עֲלִיָּה שְׁנִיָּה — וַיָּבֹאוּ כׇּל־אִישׁ אֲשֶׁר־נְשָׂאוֹ לִבּוֹ · נְדִיב לֵב · חַכְמַת־לֵב<span class="aliyah-label-de">Zweite Aliyah · Schemot 35:21–29 · Das Volk bringt mit willigem Herzen · Männer und Frauen · Edelmetalle, Textilien, Steine und Spezereien · Die weisen-herzigen Frauen spinnen</span></div>
+      <div class="instrument-note">[no percussion] [no drums] [no choir] [acoustic guitar — Nahawand rises warmly, the procession of givers approaching, the male and female voices interweaving, the giving as a slow tender wave, no percussion] Gitarre: Nahawand steigt warm — die Prozession der Gebenden naht, männliche und weibliche Stimmen verweben sich, das Geben wird zu einer langsamen, zarten Welle.</div>
+      <div class="lyrics-block">
+        <div class="lyrics-he" dir="rtl">
+          <span class="line">וַיָּבֹאוּ כׇּל־אִישׁ אֲשֶׁר־נְשָׂאוֹ לִבּוֹ וְכֹל אֲשֶׁר נָדְבָה רוּחוֹ אֹתוֹ הֵבִיאוּ אֶת־תְּרוּמַת אֲדֹנָי לִמְלֶאכֶת אֹהֶל מוֹעֵד וּלְכׇל־עֲבֹדָתוֹ וּלְבִגְדֵי הַקֹּדֶשׁ׃</span>
+          <span class="line">וַיָּבֹאוּ הָאֲנָשִׁים עַל־הַנָּשִׁים כֹּל נְדִיב לֵב הֵבִיאוּ חָח וָנֶזֶם וְטַבַּעַת וְכוּמָז כׇּל־כְּלִי זָהָב וְכׇל־אִישׁ אֲשֶׁר הֵנִיף תְּנוּפַת זָהָב לַאדֹנָי׃</span>
+          <span class="line">וְכׇל־אִישׁ אֲשֶׁר־נִמְצָא אִתּוֹ תְּכֵלֶת וְאַרְגָּמָן וְתוֹלַעַת שָׁנִי וְשֵׁשׁ וְעִזִּים וְעֹרֹת אֵילִם מְאׇדָּמִים וְעֹרֹת תְּחָשִׁים הֵבִיאוּ׃</span>
+          <span class="line">כׇּל־מֵרִים תְּרוּמַת כֶּסֶף וּנְחֹשֶׁת הֵבִיאוּ אֵת תְּרוּמַת אֲדֹנָי וְכֹל אֲשֶׁר נִמְצָא אִתּוֹ עֲצֵי שִׁטִּים לְכׇל־מְלֶאכֶת הָעֲבֹדָה הֵבִיאוּ׃</span>
+          <span class="line">וְכׇל־אִשָּׁה חַכְמַת־לֵב בְּיָדֶיהָ טָווּ וַיָּבִיאוּ מַטְוֶה אֶת־הַתְּכֵלֶת וְאֶת־הָאַרְגָּמָן אֶת־תּוֹלַעַת הַשָּׁנִי וְאֶת־הַשֵּׁשׁ׃</span>
+          <span class="line">וְכׇל־הַנָּשִׁים אֲשֶׁר נָשָׂא לִבָּן אֹתָנָה בְּחׇכְמָה טָווּ אֶת־הָעִזִּים׃</span>
+          <span class="line">וְהַנְּשִׂאִם הֵבִיאוּ אֵת אַבְנֵי הַשֹּׁהַם וְאֵת אַבְנֵי הַמִּלֻּאִים לָאֵפוֹד וְלַחֹשֶׁן׃</span>
+          <span class="line">וְאֶת־הַבֹּשֶׂם וְאֶת־הַשָּׁמֶן לְמָאוֹר וּלְשֶׁמֶן הַמִּשְׁחָה וְלִקְטֹרֶת הַסַּמִּים׃</span>
+          <span class="line">כׇּל־אִישׁ וְאִשָּׁה אֲשֶׁר נָדַב לִבָּם אֹתָם לְהָבִיא לְכׇל־הַמְּלָאכָה אֲשֶׁר צִוָּה אֲדֹנָי לַעֲשׂוֹת בְּיַד־מֹשֶׁה הֵבִיאוּ בְנֵי־יִשְׂרָאֵל נְדָבָה לַאדֹנָי׃</span>
+        </div>
+        <div class="lyrics-de">
+          <span class="line">(35:21) Und es kamen alle, die ihr Herz erhoben hatte, und alle, deren Geist sie antrieb, brachten die Hebe Adonais für das Werk des Begegnungs-Zeltes und für all seinen Dienst und für die heiligen Gewänder.</span>
+          <span class="line">(22) Und es kamen die Männer mit den Frauen — jeder, der willigen Herzens war, brachte Nasenring und Ohrring und Fingerring und Brustschmuck, alle Gerät aus Gold; und jeder Mann, der eine Schwingung von Gold vor Adonai schwang.</span>
+          <span class="line">(23) Und jeder, bei dem sich Purpurblau und Purpurrot und Karmesinrot und Byssus und Ziegenhaar und gerötete Widderfelle und Tachasch-Felle fand — sie brachten es.</span>
+          <span class="line">(24) Alle, die eine Hebe von Silber und Kupfer erhoben, brachten die Hebe Adonais; und jeder, bei dem sich Schittim-Holz fand, für jedes Werk des Dienstes, brachte es.</span>
+          <span class="line">(25) Und jede weisen Herzens Frau spann mit ihren Händen, und sie brachten das Gesponnene: das Purpurblau und das Purpurrot, das Karmesinrot und den Byssus.</span>
+          <span class="line">(26) Und alle Frauen, deren Herz sie mit Weisheit ergriff, spannen die Ziegenhaare.</span>
+          <span class="line">(27) Und die Fürsten brachten die Schoham-Steine und die Steine zum Einsetzen für das Efod und für das Choschen,</span>
+          <span class="line">(28) und das Spezereien-Werk und das Öl — für die Leuchte und für das Salböl und für das wohlriechende Räucherwerk.</span>
+          <span class="line">(29) Jeder Mann und jede Frau, deren Herz sie antrieb, etwas zu bringen für all das Werk, das Adonai durch Mosches Hand zu tun befohlen hatte — die Söhne Israels brachten freiwillige Gabe für Adonai.</span>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- ── ALIYAH 3 · שלישי · Schemot 35:30–36:7 — Bezalel & Oholiav · Volk bringt zu viel ── -->
+    <div class="aliyah-block">
+      <div class="aliyah-label">עֲלִיָּה שְׁלִישִׁית — בְּצַלְאֵל בֶּן־אוּרִי · אׇהֳלִיאָב בֶּן־אֲחִיסָמָךְ · רוּחַ אֱלֹהִים · וַיִּכָּלֵא הָעָם מֵהָבִיא<span class="aliyah-label-de">Dritte Aliyah · Schemot 35:30–36:7 · Berufung Bezalels durch den Namen · Oholiav als Mitleiter · Geist Gottes mit Weisheit, Einsicht, Erkenntnis · Das Volk bringt mehr als nötig — der einzige Stopp-Befehl Mosches in der Tora</span></div>
+      <div class="instrument-note">[no percussion] [no drums] [no choir] [acoustic guitar — Nahawand modulates with calm dignity, the naming of Bezalel as a quiet royal proclamation, then a gentle wave-after-wave figure for the morning-after-morning bringing, then a sudden warm stop for the „vayikale ha'am mehavi", no percussion] Gitarre: Nahawand moduliert mit ruhiger Würde — die Nennung Bezalels wie eine leise königliche Verkündung, dann eine sanfte Welle-nach-Welle-Figur für das morgen-für-morgen-Bringen, dann ein warmes Innehalten beim „vayikale ha'am mehavi".</div>
+      <div class="lyrics-block">
+        <div class="lyrics-he" dir="rtl">
+          <span class="line">וַיֹּאמֶר מֹשֶׁה אֶל־בְּנֵי יִשְׂרָאֵל רְאוּ קָרָא אֲדֹנָי בְּשֵׁם בְּצַלְאֵל בֶּן־אוּרִי בֶן־חוּר לְמַטֵּה יְהוּדָה׃</span>
+          <span class="line">וַיְמַלֵּא אֹתוֹ רוּחַ אֱלֹהִים בְּחׇכְמָה בִּתְבוּנָה וּבְדַעַת וּבְכׇל־מְלָאכָה׃</span>
+          <span class="line">וְלַחְשֹׁב מַחֲשָׁבֹת לַעֲשֹׂת בַּזָּהָב וּבַכֶּסֶף וּבַנְּחֹשֶׁת׃</span>
+          <span class="line">וּבַחֲרֹשֶׁת אֶבֶן לְמַלֹּאת וּבַחֲרֹשֶׁת עֵץ לַעֲשׂוֹת בְּכׇל־מְלֶאכֶת מַחֲשָׁבֶת׃</span>
+          <span class="line">וּלְהוֹרֹת נָתַן בְּלִבּוֹ הוּא וְאׇהֳלִיאָב בֶּן־אֲחִיסָמָךְ לְמַטֵּה־דָן׃</span>
+          <span class="line">מִלֵּא אֹתָם חׇכְמַת־לֵב לַעֲשׂוֹת כׇּל־מְלֶאכֶת חָרָשׁ וְחֹשֵׁב וְרֹקֵם בַּתְּכֵלֶת וּבָאַרְגָּמָן בְּתוֹלַעַת הַשָּׁנִי וּבַשֵּׁשׁ וְאֹרֵג עֹשֵׂי כׇּל־מְלָאכָה וְחֹשְׁבֵי מַחֲשָׁבֹת׃</span>
+          <span class="line">וְעָשָׂה בְצַלְאֵל וְאׇהֳלִיאָב וְכֹל אִישׁ חֲכַם־לֵב אֲשֶׁר נָתַן אֲדֹנָי חׇכְמָה וּתְבוּנָה בָּהֵמָּה לָדַעַת לַעֲשֹׂת אֶת־כׇּל־מְלֶאכֶת עֲבֹדַת הַקֹּדֶשׁ לְכֹל אֲשֶׁר־צִוָּה אֲדֹנָי׃</span>
+          <span class="line">וַיִּקְרָא מֹשֶׁה אֶל־בְּצַלְאֵל וְאֶל־אׇהֳלִיאָב וְאֶל כׇּל־אִישׁ חֲכַם־לֵב אֲשֶׁר נָתַן אֲדֹנָי חׇכְמָה בְּלִבּוֹ כֹּל אֲשֶׁר נְשָׂאוֹ לִבּוֹ לְקׇרְבָה אֶל־הַמְּלָאכָה לַעֲשֹׂת אֹתָהּ׃</span>
+          <span class="line">וַיִּקְחוּ מִלִּפְנֵי מֹשֶׁה אֵת כׇּל־הַתְּרוּמָה אֲשֶׁר הֵבִיאוּ בְּנֵי יִשְׂרָאֵל לִמְלֶאכֶת עֲבֹדַת הַקֹּדֶשׁ לַעֲשֹׂת אֹתָהּ וְהֵם הֵבִיאוּ אֵלָיו עוֹד נְדָבָה בַּבֹּקֶר בַּבֹּקֶר׃</span>
+          <span class="line">וַיָּבֹאוּ כׇּל־הַחֲכָמִים הָעֹשִׂים אֵת כׇּל־מְלֶאכֶת הַקֹּדֶשׁ אִישׁ־אִישׁ מִמְּלַאכְתּוֹ אֲשֶׁר־הֵמָּה עֹשִׂים׃</span>
+          <span class="line">וַיֹּאמְרוּ אֶל־מֹשֶׁה לֵּאמֹר מַרְבִּים הָעָם לְהָבִיא מִדֵּי הָעֲבֹדָה לַמְּלָאכָה אֲשֶׁר־צִוָּה אֲדֹנָי לַעֲשֹׂת אֹתָהּ׃</span>
+          <span class="line">וַיְצַו מֹשֶׁה וַיַּעֲבִירוּ קוֹל בַּמַּחֲנֶה לֵאמֹר אִישׁ וְאִשָּׁה אַל־יַעֲשׂוּ־עוֹד מְלָאכָה לִתְרוּמַת הַקֹּדֶשׁ וַיִּכָּלֵא הָעָם מֵהָבִיא׃</span>
+          <span class="line">וְהַמְּלָאכָה הָיְתָה דַיָּם לְכׇל־הַמְּלָאכָה לַעֲשׂוֹת אֹתָהּ וְהוֹתֵר׃</span>
+        </div>
+        <div class="lyrics-de">
+          <span class="line">(35:30) Und Mosche sprach zu den Söhnen Israels: Seht — Adonai hat beim Namen gerufen Bezalel, den Sohn Uris, des Sohnes Churs, vom Stamm Yehuda;</span>
+          <span class="line">(31) und er erfüllte ihn mit dem Geist Gottes — mit Weisheit, mit Einsicht, mit Erkenntnis und mit jedem Werk;</span>
+          <span class="line">(32) und Pläne zu ersinnen, um in Gold und Silber und Kupfer zu arbeiten,</span>
+          <span class="line">(33) und in Stein-Schnitzkunst zum Einsetzen und in Holz-Schnitzkunst, um in jedem Werk des Ersinnens zu arbeiten.</span>
+          <span class="line">(34) Und zu lehren hat er in sein Herz gegeben — ihm und Oholiav, dem Sohn Achisamachs, vom Stamm Dan.</span>
+          <span class="line">(35) Er erfüllte sie mit Weisheit des Herzens, jedes Werk eines Handwerkers, Ersinners und Stickers zu tun — in Purpurblau und in Purpurrot, in Karmesinrot und in Byssus, und auch Wirker — Macher jedes Werks und Ersinner von Plänen.</span>
+          <span class="line">(36:1) Und Bezalel und Oholiav sollten arbeiten — und jeder weisen Herzens Mann, dem Adonai Weisheit und Einsicht in sie hineingegeben hatte, um zu wissen, jedes Werk des heiligen Dienstes zu tun, gemäß allem, was Adonai geboten hat.</span>
+          <span class="line">(2) Und Mosche rief Bezalel und Oholiav und jeden weisen Herzens Mann, in dessen Herz Adonai Weisheit gelegt hatte — jeden, dessen Herz ihn erhoben hatte, sich der Arbeit zu nahen, sie zu tun.</span>
+          <span class="line">(3) Und sie empfingen vor Mosche die ganze Hebe, die die Söhne Israels für das Werk des heiligen Dienstes gebracht hatten, um es zu tun. Und sie brachten ihm noch freiwillige Gabe — Morgen für Morgen.</span>
+          <span class="line">(4) Und alle weisen Männer kamen, die das ganze Werk des Heiligtums machten — jeder von seinem Werk, das sie taten;</span>
+          <span class="line">(5) und sie sprachen zu Mosche und sagten: Das Volk bringt zu viel — mehr als nötig für das Werk, das Adonai zu tun geboten hat.</span>
+          <span class="line">(6) Und Mosche befahl, und sie ließen Stimme ausrufen im Lager und sagten: Mann und Frau sollen nichts weiter machen für die heilige Hebe! Und das Volk wurde zurückgehalten vom Bringen.</span>
+          <span class="line">(7) Und das Werk reichte ihnen für jedes Werk, es zu tun — und es war noch übrig.</span>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- ── ALIYAH 4 · רביעי · Schemot 36:8-19 — Vorhänge des Mishkan ── -->
+    <div class="aliyah-block">
+      <div class="aliyah-label">עֲלִיָּה רְבִיעִית — עֶשֶׂר יְרִיעֹת · מַעֲשֵׂה חֹשֵׁב · כְּרֻבִים · קַרְסֵי זָהָב · יְרִיעֹת עִזִּים<span class="aliyah-label-de">Vierte Aliyah · Schemot 36:8–19 · Die zehn unteren Vorhänge aus Byssus mit Keruvim · Goldene Haken · Die elf oberen Vorhänge aus Ziegenhaar · Kupferne Haken · Die Decke aus Widderfellen und Tachasch-Fellen</span></div>
+      <div class="instrument-note">[no percussion] [no drums] [no choir] [acoustic guitar — Nahawand fingerpicking in soft repeating cells, mirroring the woven curtains, the loops and the clasps, the layered roofing of the Mishkan, no percussion] Gitarre: Nahawand-Fingerpicking in sanft wiederholten Zellen — spiegelt die gewebten Vorhänge, die Schlaufen und die Haken, die geschichtete Bedachung des Mishkan.</div>
+      <div class="lyrics-block">
+        <div class="lyrics-he" dir="rtl">
+          <span class="line">וַיַּעֲשׂוּ כׇל־חֲכַם־לֵב בְּעֹשֵׂי הַמְּלָאכָה אֶת־הַמִּשְׁכָּן עֶשֶׂר יְרִיעֹת שֵׁשׁ מׇשְׁזָר וּתְכֵלֶת וְאַרְגָּמָן וְתוֹלַעַת שָׁנִי כְּרֻבִים מַעֲשֵׂה חֹשֵׁב עָשָׂה אֹתָם׃</span>
+          <span class="line">אֹרֶךְ הַיְרִיעָה הָאַחַת שְׁמֹנֶה וְעֶשְׂרִים בָּאַמָּה וְרֹחַב אַרְבַּע בָּאַמָּה הַיְרִיעָה הָאֶחָת מִדָּה אַחַת לְכׇל־הַיְרִיעֹת׃</span>
+          <span class="line">וַיְחַבֵּר אֶת־חֲמֵשׁ הַיְרִיעֹת אַחַת אֶל־אֶחָת וְחָמֵשׁ יְרִיעֹת חִבַּר אַחַת אֶל־אֶחָת׃</span>
+          <span class="line">וַיַּעַשׂ לֻלְאֹת תְּכֵלֶת עַל שְׂפַת הַיְרִיעָה הָאֶחָת מִקָּצָה בַּמַּחְבָּרֶת כֵּן עָשָׂה בִּשְׂפַת הַיְרִיעָה הַקִּיצוֹנָה בַּמַּחְבֶּרֶת הַשֵּׁנִית׃</span>
+          <span class="line">חֲמִשִּׁים לֻלָאֹת עָשָׂה בַּיְרִיעָה הָאֶחָת וַחֲמִשִּׁים לֻלָאֹת עָשָׂה בִּקְצֵה הַיְרִיעָה אֲשֶׁר בַּמַּחְבֶּרֶת הַשֵּׁנִית מַקְבִּילֹת הַלֻּלָאֹת אַחַת אֶל־אֶחָת׃</span>
+          <span class="line">וַיַּעַשׂ חֲמִשִּׁים קַרְסֵי זָהָב וַיְחַבֵּר אֶת־הַיְרִיעֹת אַחַת אֶל־אַחַת בַּקְּרָסִים וַיְהִי הַמִּשְׁכָּן אֶחָד׃</span>
+          <span class="line">וַיַּעַשׂ יְרִיעֹת עִזִּים לְאֹהֶל עַל־הַמִּשְׁכָּן עַשְׁתֵּי־עֶשְׂרֵה יְרִיעֹת עָשָׂה אֹתָם׃</span>
+          <span class="line">אֹרֶךְ הַיְרִיעָה הָאַחַת שְׁלֹשִׁים בָּאַמָּה וְאַרְבַּע אַמּוֹת רֹחַב הַיְרִיעָה הָאֶחָת מִדָּה אַחַת לְעַשְׁתֵּי עֶשְׂרֵה יְרִיעֹת׃</span>
+          <span class="line">וַיְחַבֵּר אֶת־חֲמֵשׁ הַיְרִיעֹת לְבָד וְאֶת־שֵׁשׁ הַיְרִיעֹת לְבָד׃</span>
+          <span class="line">וַיַּעַשׂ לֻלָאֹת חֲמִשִּׁים עַל שְׂפַת הַיְרִיעָה הַקִּיצֹנָה בַּמַּחְבָּרֶת וַחֲמִשִּׁים לֻלָאֹת עָשָׂה עַל־שְׂפַת הַיְרִיעָה הַחֹבֶרֶת הַשֵּׁנִית׃</span>
+          <span class="line">וַיַּעַשׂ קַרְסֵי נְחֹשֶׁת חֲמִשִּׁים לְחַבֵּר אֶת־הָאֹהֶל לִהְיֹת אֶחָד׃</span>
+          <span class="line">וַיַּעַשׂ מִכְסֶה לָאֹהֶל עֹרֹת אֵילִם מְאׇדָּמִים וּמִכְסֵה עֹרֹת תְּחָשִׁים מִלְמָעְלָה׃</span>
+        </div>
+        <div class="lyrics-de">
+          <span class="line">(36:8) Und alle weisen Herzens unter denen, die das Werk machten, machten den Mishkan — zehn Vorhänge aus gezwirntem Byssus und Purpurblau und Purpurrot und Karmesinrot, mit Keruvim, Werk des Ersinners machte er sie.</span>
+          <span class="line">(9) Länge eines Vorhangs achtundzwanzig Ellen, Breite vier Ellen — ein Maß für alle Vorhänge.</span>
+          <span class="line">(10) Und er verband fünf Vorhänge miteinander, und fünf Vorhänge verband er miteinander.</span>
+          <span class="line">(11) Und er machte Schleifen aus Purpurblau am Saum des einen Vorhangs am Rand der Verbindung; ebenso machte er am Saum des äußersten Vorhangs in der zweiten Verbindung.</span>
+          <span class="line">(12) Fünfzig Schleifen machte er am einen Vorhang und fünfzig Schleifen am Rand des Vorhangs in der zweiten Verbindung — gegenüberstehend, die Schleifen einander entsprechend.</span>
+          <span class="line">(13) Und er machte fünfzig goldene Haken und verband die Vorhänge miteinander mit den Haken — und der Mishkan ward eins.</span>
+          <span class="line">(14) Und er machte Ziegenhaar-Vorhänge zum Zelt über dem Mishkan — elf Vorhänge machte er.</span>
+          <span class="line">(15) Länge eines Vorhangs dreißig Ellen, vier Ellen Breite — ein Maß für die elf Vorhänge.</span>
+          <span class="line">(16) Und er verband fünf Vorhänge für sich und sechs Vorhänge für sich.</span>
+          <span class="line">(17) Und er machte fünfzig Schleifen am Saum des äußersten Vorhangs in der Verbindung, und fünfzig Schleifen machte er am Saum des Vorhangs, der die zweite Verbindung bildete.</span>
+          <span class="line">(18) Und er machte fünfzig kupferne Haken, um das Zelt zu verbinden, damit es eins werde.</span>
+          <span class="line">(19) Und er machte eine Decke für das Zelt aus geröteten Widderfellen, und eine Decke aus Tachasch-Fellen darüber.</span>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- ── ALIYAH 5 · חמישי · Schemot 36:20–37:16 — Bretter, Riegel, Vorhang, Arche, Tisch ── -->
+    <div class="aliyah-block">
+      <div class="aliyah-label">עֲלִיָּה חֲמִישִׁית — קְרָשִׁים · בְּרִיחִים · פָּרֹכֶת · הָאָרֹן · הַכַּפֹּרֶת · כְּרֻבִים · הַשֻּׁלְחָן<span class="aliyah-label-de">Fünfte Aliyah · Schemot 36:20–37:16 · Die stehenden Schittim-Holz-Bretter · Silberne Sockel · Riegel · Pārochet vor dem Allerheiligsten · Bezalel macht die Arche · Kapporet mit den zwei Keruvim · Der Schau-Tisch und seine Geräte</span></div>
+      <div class="instrument-note">[no percussion] [no drums] [no choir] [acoustic guitar — Nahawand deepens, the standing acacia-wood frames rising one after another, a hushed reverence as Bezalel makes the Aron — the holiest object — with two-and-a-half cubits of intimate care, no percussion] Gitarre: Nahawand vertieft sich — die stehenden Akazienholz-Bretter erheben sich eines nach dem anderen, dann gedämpfte Ehrfurcht, als Bezalel die Arche macht — den heiligsten Gegenstand — mit zweieinhalb Ellen intimer Sorgfalt.</div>
+      <div class="lyrics-block">
+        <div class="lyrics-he" dir="rtl">
+          <span class="line">וַיַּעַשׂ אֶת־הַקְּרָשִׁים לַמִּשְׁכָּן עֲצֵי שִׁטִּים עֹמְדִים׃</span>
+          <span class="line">עֶשֶׂר אַמֹּת אֹרֶךְ הַקָּרֶשׁ וְאַמָּה וַחֲצִי הָאַמָּה רֹחַב הַקֶּרֶשׁ הָאֶחָד׃</span>
+          <span class="line">שְׁתֵּי יָדֹת לַקֶּרֶשׁ הָאֶחָד מְשֻׁלָּבֹת אַחַת אֶל־אֶחָת כֵּן עָשָׂה לְכֹל קַרְשֵׁי הַמִּשְׁכָּן׃</span>
+          <span class="line">וַיַּעַשׂ אֶת־הַקְּרָשִׁים לַמִּשְׁכָּן עֶשְׂרִים קְרָשִׁים לִפְאַת נֶגֶב תֵּימָנָה׃</span>
+          <span class="line">וְאַרְבָּעִים אַדְנֵי־כֶסֶף עָשָׂה תַּחַת עֶשְׂרִים הַקְּרָשִׁים שְׁנֵי אֲדָנִים תַּחַת־הַקֶּרֶשׁ הָאֶחָד לִשְׁתֵּי יְדֹתָיו וּשְׁנֵי אֲדָנִים תַּחַת־הַקֶּרֶשׁ הָאֶחָד לִשְׁתֵּי יְדֹתָיו׃</span>
+          <span class="line">וּלְצֶלַע הַמִּשְׁכָּן הַשֵּׁנִית לִפְאַת צָפוֹן עָשָׂה עֶשְׂרִים קְרָשִׁים׃</span>
+          <span class="line">וְאַרְבָּעִים אַדְנֵיהֶם כָּסֶף שְׁנֵי אֲדָנִים תַּחַת הַקֶּרֶשׁ הָאֶחָד וּשְׁנֵי אֲדָנִים תַּחַת הַקֶּרֶשׁ הָאֶחָד׃</span>
+          <span class="line">וּלְיַרְכְּתֵי הַמִּשְׁכָּן יָמָּה עָשָׂה שִׁשָּׁה קְרָשִׁים׃</span>
+          <span class="line">וּשְׁנֵי קְרָשִׁים עָשָׂה לִמְקֻצְעֹת הַמִּשְׁכָּן בַּיַּרְכָתָיִם׃</span>
+          <span class="line">וְהָיוּ תוֹאֲמִם מִלְּמַטָּה וְיַחְדָּו יִהְיוּ תַמִּים אֶל־רֹאשׁוֹ אֶל־הַטַּבַּעַת הָאֶחָת כֵּן עָשָׂה לִשְׁנֵיהֶם לִשְׁנֵי הַמִּקְצֹעֹת׃</span>
+          <span class="line">וְהָיוּ שְׁמֹנָה קְרָשִׁים וְאַדְנֵיהֶם כֶּסֶף שִׁשָּׁה עָשָׂר אֲדָנִים שְׁנֵי אֲדָנִים שְׁנֵי אֲדָנִים תַּחַת הַקֶּרֶשׁ הָאֶחָד׃</span>
+          <span class="line">וַיַּעַשׂ בְּרִיחֵי עֲצֵי שִׁטִּים חֲמִשָּׁה לְקַרְשֵׁי צֶלַע־הַמִּשְׁכָּן הָאֶחָת׃</span>
+          <span class="line">וַחֲמִשָּׁה בְרִיחִם לְקַרְשֵׁי צֶלַע־הַמִּשְׁכָּן הַשֵּׁנִית וַחֲמִשָּׁה בְרִיחִם לְקַרְשֵׁי הַמִּשְׁכָּן לַיַּרְכָתַיִם יָמָּה׃</span>
+          <span class="line">וַיַּעַשׂ אֶת־הַבְּרִיחַ הַתִּיכֹן לִבְרֹחַ בְּתוֹךְ הַקְּרָשִׁים מִן־הַקָּצֶה אֶל־הַקָּצֶה׃</span>
+          <span class="line">וְאֶת־הַקְּרָשִׁים צִפָּה זָהָב וְאֶת־טַבְּעֹתָם עָשָׂה זָהָב בָּתִּים לַבְּרִיחִם וַיְצַף אֶת־הַבְּרִיחִם זָהָב׃</span>
+          <span class="line">וַיַּעַשׂ אֶת־הַפָּרֹכֶת תְּכֵלֶת וְאַרְגָּמָן וְתוֹלַעַת שָׁנִי וְשֵׁשׁ מׇשְׁזָר מַעֲשֵׂה חֹשֵׁב עָשָׂה אֹתָהּ כְּרֻבִים׃</span>
+          <span class="line">וַיַּעַשׂ לָהּ אַרְבָּעָה עַמּוּדֵי שִׁטִּים וַיְצַפֵּם זָהָב וָוֵיהֶם זָהָב וַיִּצֹק לָהֶם אַרְבָּעָה אַדְנֵי־כָסֶף׃</span>
+          <span class="line">וַיַּעַשׂ מָסָךְ לְפֶתַח הָאֹהֶל תְּכֵלֶת וְאַרְגָּמָן וְתוֹלַעַת שָׁנִי וְשֵׁשׁ מׇשְׁזָר מַעֲשֵׂה רֹקֵם׃</span>
+          <span class="line">וְאֶת־עַמּוּדָיו חֲמִשָּׁה וְאֶת־וָוֵיהֶם וְצִפָּה רָאשֵׁיהֶם וַחֲשֻׁקֵיהֶם זָהָב וְאַדְנֵיהֶם חֲמִשָּׁה נְחֹשֶׁת׃</span>
+          <span class="line">וַיַּעַשׂ בְּצַלְאֵל אֶת־הָאָרֹן עֲצֵי שִׁטִּים אַמָּתַיִם וָחֵצִי אׇרְכּוֹ וְאַמָּה וָחֵצִי רׇחְבּוֹ וְאַמָּה וָחֵצִי קֹמָתוֹ׃</span>
+          <span class="line">וַיְצַפֵּהוּ זָהָב טָהוֹר מִבַּיִת וּמִחוּץ וַיַּעַשׂ לוֹ זֵר זָהָב סָבִיב׃</span>
+          <span class="line">וַיִּצֹק לוֹ אַרְבַּע טַבְּעֹת זָהָב עַל אַרְבַּע פַּעֲמֹתָיו וּשְׁתֵּי טַבָּעֹת עַל־צַלְעוֹ הָאֶחָת וּשְׁתֵּי טַבָּעֹת עַל־צַלְעוֹ הַשֵּׁנִית׃</span>
+          <span class="line">וַיַּעַשׂ בַּדֵּי עֲצֵי שִׁטִּים וַיְצַף אֹתָם זָהָב׃</span>
+          <span class="line">וַיָּבֵא אֶת־הַבַּדִּים בַּטַּבָּעֹת עַל צַלְעֹת הָאָרֹן לָשֵׂאת אֶת־הָאָרֹן׃</span>
+          <span class="line">וַיַּעַשׂ כַּפֹּרֶת זָהָב טָהוֹר אַמָּתַיִם וָחֵצִי אׇרְכָּהּ וְאַמָּה וָחֵצִי רׇחְבָּהּ׃</span>
+          <span class="line">וַיַּעַשׂ שְׁנֵי כְרֻבִים זָהָב מִקְשָׁה עָשָׂה אֹתָם מִשְּׁנֵי קְצוֹת הַכַּפֹּרֶת׃</span>
+          <span class="line">כְּרוּב־אֶחָד מִקָּצָה מִזֶּה וּכְרוּב־אֶחָד מִקָּצָה מִזֶּה מִן־הַכַּפֹּרֶת עָשָׂה אֶת־הַכְּרֻבִים מִשְּׁנֵי קְצוֹתָיו׃</span>
+          <span class="line">וַיִּהְיוּ הַכְּרֻבִים פֹּרְשֵׂי כְנָפַיִם לְמַעְלָה סֹכְכִים בְּכַנְפֵיהֶם עַל־הַכַּפֹּרֶת וּפְנֵיהֶם אִישׁ אֶל־אָחִיו אֶל־הַכַּפֹּרֶת הָיוּ פְּנֵי הַכְּרֻבִים׃</span>
+          <span class="line">וַיַּעַשׂ אֶת־הַשֻּׁלְחָן עֲצֵי שִׁטִּים אַמָּתַיִם אׇרְכּוֹ וְאַמָּה רׇחְבּוֹ וְאַמָּה וָחֵצִי קֹמָתוֹ׃</span>
+          <span class="line">וַיְצַף אֹתוֹ זָהָב טָהוֹר וַיַּעַשׂ לוֹ זֵר זָהָב סָבִיב׃</span>
+          <span class="line">וַיַּעַשׂ לוֹ מִסְגֶּרֶת טֹפַח סָבִיב וַיַּעַשׂ זֵר־זָהָב לְמִסְגַּרְתּוֹ סָבִיב׃</span>
+          <span class="line">וַיִּצֹק לוֹ אַרְבַּע טַבְּעֹת זָהָב וַיִּתֵּן אֶת־הַטַּבָּעֹת עַל אַרְבַּע הַפֵּאֹת אֲשֶׁר לְאַרְבַּע רַגְלָיו׃</span>
+          <span class="line">לְעֻמַּת הַמִּסְגֶּרֶת הָיוּ הַטַּבָּעֹת בָּתִּים לַבַּדִּים לָשֵׂאת אֶת־הַשֻּׁלְחָן׃</span>
+          <span class="line">וַיַּעַשׂ אֶת־הַבַּדִּים עֲצֵי שִׁטִּים וַיְצַף אֹתָם זָהָב לָשֵׂאת אֶת־הַשֻּׁלְחָן׃</span>
+          <span class="line">וַיַּעַשׂ אֶת־הַכֵּלִים אֲשֶׁר עַל־הַשֻּׁלְחָן אֶת־קְעָרֹתָיו וְאֶת־כַּפֹּתָיו וְאֵת מְנַקִּיֹּתָיו וְאֶת־הַקְּשָׂוֺת אֲשֶׁר יֻסַּךְ בָּהֵן זָהָב טָהוֹר׃</span>
+        </div>
+        <div class="lyrics-de">
+          <span class="line">(36:20) Und er machte die Bretter für den Mishkan aus Schittim-Holz — stehend.</span>
+          <span class="line">(21) Zehn Ellen Länge eines Bretts, und eineinhalb Ellen Breite eines einzelnen Bretts.</span>
+          <span class="line">(22) Zwei Zapfen für ein einzelnes Brett, ineinander gefügt — so machte er es für alle Bretter des Mishkan.</span>
+          <span class="line">(23) Und er machte die Bretter für den Mishkan: zwanzig Bretter für die Südseite, gegen den Negev.</span>
+          <span class="line">(24) Und vierzig silberne Sockel machte er unter die zwanzig Bretter — zwei Sockel unter ein einzelnes Brett für seine zwei Zapfen, und zwei Sockel unter ein einzelnes Brett für seine zwei Zapfen.</span>
+          <span class="line">(25) Und für die zweite Seite des Mishkan, die Nordseite, machte er zwanzig Bretter,</span>
+          <span class="line">(26) und ihre vierzig silbernen Sockel — zwei Sockel unter ein einzelnes Brett und zwei Sockel unter ein einzelnes Brett.</span>
+          <span class="line">(27) Und für die Hinterseite des Mishkan, gegen das Meer hin, machte er sechs Bretter.</span>
+          <span class="line">(28) Und zwei Bretter machte er für die Ecken des Mishkan an den hinteren Seiten.</span>
+          <span class="line">(29) Und sie waren paarweise verbunden von unten und zugleich vollständig bis zu ihrem Kopf, bis zum einen Ring — so machte er beide, für beide Ecken.</span>
+          <span class="line">(30) Und es waren acht Bretter und ihre silbernen Sockel, sechzehn Sockel — zwei Sockel, zwei Sockel unter jedes einzelne Brett.</span>
+          <span class="line">(31) Und er machte Riegel aus Schittim-Holz — fünf für die Bretter der einen Seite des Mishkan,</span>
+          <span class="line">(32) und fünf Riegel für die Bretter der zweiten Seite des Mishkan, und fünf Riegel für die Bretter des Mishkan an der Hinterseite gegen das Meer hin.</span>
+          <span class="line">(33) Und er machte den mittleren Riegel, der mitten durch die Bretter laufen sollte — von Ende zu Ende.</span>
+          <span class="line">(34) Und die Bretter überzog er mit Gold, und ihre Ringe machte er aus Gold — Häuser für die Riegel — und die Riegel überzog er mit Gold.</span>
+          <span class="line">(35) Und er machte den Pārochet aus Purpurblau und Purpurrot und Karmesinrot und gezwirntem Byssus — Werk des Ersinners machte er ihn, mit Keruvim.</span>
+          <span class="line">(36) Und er machte für ihn vier Säulen aus Schittim-Holz und überzog sie mit Gold — ihre Haken aus Gold; und er goss für sie vier silberne Sockel.</span>
+          <span class="line">(37) Und er machte einen Vorhang für den Eingang des Zeltes aus Purpurblau und Purpurrot und Karmesinrot und gezwirntem Byssus — Werk des Stickers.</span>
+          <span class="line">(38) Und seine fünf Säulen und ihre Haken — er überzog ihre Häupter und ihre Ringe mit Gold; und ihre fünf Sockel waren aus Kupfer.</span>
+          <span class="line">(37:1) Und Bezalel machte die Arche aus Schittim-Holz — zweieinhalb Ellen ihre Länge, eineinhalb Ellen ihre Breite, eineinhalb Ellen ihre Höhe.</span>
+          <span class="line">(2) Und er überzog sie mit reinem Gold, von innen und von außen, und machte für sie einen goldenen Kranz ringsum.</span>
+          <span class="line">(3) Und er goss für sie vier goldene Ringe an ihre vier Füße — zwei Ringe an ihrer einen Seite und zwei Ringe an ihrer zweiten Seite.</span>
+          <span class="line">(4) Und er machte Stangen aus Schittim-Holz und überzog sie mit Gold,</span>
+          <span class="line">(5) und brachte die Stangen in die Ringe an den Seiten der Arche, um die Arche zu tragen.</span>
+          <span class="line">(6) Und er machte die Kapporet aus reinem Gold — zweieinhalb Ellen ihre Länge und eineinhalb Ellen ihre Breite.</span>
+          <span class="line">(7) Und er machte zwei Keruvim aus Gold — in getriebener Arbeit machte er sie aus den zwei Enden der Kapporet:</span>
+          <span class="line">(8) einen Kerub aus dem einen Ende und einen Kerub aus dem anderen Ende — aus der Kapporet selbst machte er die Keruvim, aus ihren beiden Enden.</span>
+          <span class="line">(9) Und die Keruvim breiteten ihre Flügel nach oben, sie deckten mit ihren Flügeln über die Kapporet — und ihre Gesichter waren einer zum anderen; zur Kapporet hin waren die Gesichter der Keruvim.</span>
+          <span class="line">(10) Und er machte den Tisch aus Schittim-Holz — zwei Ellen seine Länge und eine Elle seine Breite und eineinhalb Ellen seine Höhe.</span>
+          <span class="line">(11) Und er überzog ihn mit reinem Gold und machte für ihn einen goldenen Kranz ringsum.</span>
+          <span class="line">(12) Und er machte für ihn eine Leiste von einer Handbreite ringsum, und machte einen goldenen Kranz für seine Leiste ringsum.</span>
+          <span class="line">(13) Und er goss für ihn vier goldene Ringe und setzte die Ringe an die vier Ecken, die an seinen vier Füßen waren.</span>
+          <span class="line">(14) Gegenüber der Leiste waren die Ringe — Häuser für die Stangen, um den Tisch zu tragen.</span>
+          <span class="line">(15) Und er machte die Stangen aus Schittim-Holz und überzog sie mit Gold, um den Tisch zu tragen.</span>
+          <span class="line">(16) Und er machte die Geräte, die auf dem Tisch waren — seine Schüsseln und seine Schalen und seine Kannen und die Krüge, mit denen man Trankopfer ausgießt — aus reinem Gold.</span>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- ── ALIYAH 6 · שישי · Schemot 37:17-29 — Menorah, Räucheraltar, Salböl, Räucherwerk ── -->
+    <div class="aliyah-block">
+      <div class="aliyah-label">עֲלִיָּה שִׁשִּׁית — הַמְּנֹרָה זָהָב טָהוֹר · מִקְשָׁה · גְּבִעִים מְשֻׁקָּדִים · מִזְבַּח הַקְּטֹרֶת · שֶׁמֶן הַמִּשְׁחָה · קְטֹרֶת הַסַּמִּים<span class="aliyah-label-de">Sechste Aliyah · Schemot 37:17–29 · Die Menorah aus reinem Gold in getriebener Arbeit · Sechs Arme mit mandelblütigen Kelchen · Der Räucheraltar · Das Salböl als Heiliges · Das wohlriechende Räucherwerk in apothekerlicher Kunst</span></div>
+      <div class="instrument-note">[no percussion] [no drums] [no choir] [acoustic guitar — Nahawand opens into a delicate fingerpicked figure for the menorah's branches and almond-blossom cups, then a deeper sustained tone for the incense altar, almost a whisper for the holy oil and the apothecary work of the incense, no percussion] Gitarre: Nahawand öffnet sich in eine zarte Fingerpicking-Figur für die Menorah-Arme und die Mandelblüten-Kelche — dann ein tieferer getragener Ton für den Räucheraltar — fast geflüstert für das heilige Öl und die apothekerliche Kunst des Räucherwerks.</div>
+      <div class="lyrics-block">
+        <div class="lyrics-he" dir="rtl">
+          <span class="line">וַיַּעַשׂ אֶת־הַמְּנֹרָה זָהָב טָהוֹר מִקְשָׁה עָשָׂה אֶת־הַמְּנֹרָה יְרֵכָהּ וְקָנָהּ גְּבִיעֶיהָ כַּפְתֹּרֶיהָ וּפְרָחֶיהָ מִמֶּנָּה הָיוּ׃</span>
+          <span class="line">וְשִׁשָּׁה קָנִים יֹצְאִים מִצִּדֶּיהָ שְׁלֹשָׁה קְנֵי מְנֹרָה מִצִּדָּהּ הָאֶחָד וּשְׁלֹשָׁה קְנֵי מְנֹרָה מִצִּדָּהּ הַשֵּׁנִי׃</span>
+          <span class="line">שְׁלֹשָׁה גְבִעִים מְשֻׁקָּדִים בַּקָּנֶה הָאֶחָד כַּפְתֹּר וָפֶרַח וּשְׁלֹשָׁה גְבִעִים מְשֻׁקָּדִים בְּקָנֶה אֶחָד כַּפְתֹּר וָפָרַח כֵּן לְשֵׁשֶׁת הַקָּנִים הַיֹּצְאִים מִן־הַמְּנֹרָה׃</span>
+          <span class="line">וּבַמְּנֹרָה אַרְבָּעָה גְבִעִים מְשֻׁקָּדִים כַּפְתֹּרֶיהָ וּפְרָחֶיהָ׃</span>
+          <span class="line">וְכַפְתֹּר תַּחַת שְׁנֵי הַקָּנִים מִמֶּנָּה וְכַפְתֹּר תַּחַת שְׁנֵי הַקָּנִים מִמֶּנָּה וְכַפְתֹּר תַּחַת־שְׁנֵי הַקָּנִים מִמֶּנָּה לְשֵׁשֶׁת הַקָּנִים הַיֹּצְאִים מִמֶּנָּה׃</span>
+          <span class="line">כַּפְתֹּרֵיהֶם וּקְנֹתָם מִמֶּנָּה הָיוּ כֻּלָּהּ מִקְשָׁה אַחַת זָהָב טָהוֹר׃</span>
+          <span class="line">וַיַּעַשׂ אֶת־נֵרֹתֶיהָ שִׁבְעָה וּמַלְקָחֶיהָ וּמַחְתֹּתֶיהָ זָהָב טָהוֹר׃</span>
+          <span class="line">כִּכָּר זָהָב טָהוֹר עָשָׂה אֹתָהּ וְאֵת כׇּל־כֵּלֶיהָ׃</span>
+          <span class="line">וַיַּעַשׂ אֶת־מִזְבַּח הַקְּטֹרֶת עֲצֵי שִׁטִּים אַמָּה אׇרְכּוֹ וְאַמָּה רׇחְבּוֹ רָבוּעַ וְאַמָּתַיִם קֹמָתוֹ מִמֶּנּוּ הָיוּ קַרְנֹתָיו׃</span>
+          <span class="line">וַיְצַף אֹתוֹ זָהָב טָהוֹר אֶת־גַּגּוֹ וְאֶת־קִירֹתָיו סָבִיב וְאֶת־קַרְנֹתָיו וַיַּעַשׂ לוֹ זֵר זָהָב סָבִיב׃</span>
+          <span class="line">וּשְׁתֵּי טַבְּעֹת זָהָב עָשָׂה־לוֹ מִתַּחַת לְזֵרוֹ עַל שְׁתֵּי צַלְעֹתָיו עַל שְׁנֵי צִדָּיו לְבָתִּים לְבַדִּים לָשֵׂאת אֹתוֹ בָּהֶם׃</span>
+          <span class="line">וַיַּעַשׂ אֶת־הַבַּדִּים עֲצֵי שִׁטִּים וַיְצַף אֹתָם זָהָב׃</span>
+          <span class="line">וַיַּעַשׂ אֶת־שֶׁמֶן הַמִּשְׁחָה קֹדֶשׁ וְאֶת־קְטֹרֶת הַסַּמִּים טָהוֹר מַעֲשֵׂה רֹקֵחַ׃</span>
+        </div>
+        <div class="lyrics-de">
+          <span class="line">(37:17) Und er machte die Menorah aus reinem Gold — in getriebener Arbeit machte er die Menorah; ihr Fuß und ihr Schaft, ihre Kelche, ihre Knäufe und ihre Blüten waren aus ihr selbst.</span>
+          <span class="line">(18) Und sechs Arme gingen aus ihren Seiten heraus — drei Arme der Menorah aus ihrer einen Seite und drei Arme der Menorah aus ihrer zweiten Seite.</span>
+          <span class="line">(19) Drei mandelblütige Kelche an dem einen Arm, Knauf und Blüte; und drei mandelblütige Kelche an einem anderen Arm, Knauf und Blüte — so für die sechs Arme, die aus der Menorah hervorgingen.</span>
+          <span class="line">(20) Und an der Menorah selbst vier mandelblütige Kelche — ihre Knäufe und ihre Blüten.</span>
+          <span class="line">(21) Und ein Knauf unter den zwei Armen aus ihr, und ein Knauf unter den zwei Armen aus ihr, und ein Knauf unter den zwei Armen aus ihr — für die sechs Arme, die aus ihr hervorgingen.</span>
+          <span class="line">(22) Ihre Knäufe und ihre Arme waren aus ihr selbst — sie war ganz eine getriebene Arbeit aus reinem Gold.</span>
+          <span class="line">(23) Und er machte ihre sieben Lampen und ihre Lichtputzer und ihre Pfännchen aus reinem Gold.</span>
+          <span class="line">(24) Ein Talent reinen Goldes machte er sie und alle ihre Geräte.</span>
+          <span class="line">(25) Und er machte den Räucheraltar aus Schittim-Holz — eine Elle seine Länge und eine Elle seine Breite, viereckig, und zwei Ellen seine Höhe; aus ihm selbst waren seine Hörner.</span>
+          <span class="line">(26) Und er überzog ihn mit reinem Gold — sein Dach und seine Wände ringsum und seine Hörner; und er machte für ihn einen goldenen Kranz ringsum.</span>
+          <span class="line">(27) Und zwei goldene Ringe machte er für ihn unter seinem Kranz, an seinen zwei Seiten, an seinen beiden Seiten — als Häuser für Stangen, um ihn damit zu tragen.</span>
+          <span class="line">(28) Und er machte die Stangen aus Schittim-Holz und überzog sie mit Gold.</span>
+          <span class="line">(29) Und er machte das Salböl heilig, und das wohlriechende Räucherwerk rein — Werk des Apothekers.</span>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- ── ALIYAH 7 · שביעי · Schemot 38:1-20 — Brandopferaltar, Becken, Hof ── -->
+    <div class="aliyah-block">
+      <div class="aliyah-label">עֲלִיָּה שְׁבִיעִית — מִזְבַּח הָעֹלָה · הַכִּיּוֹר וְכַנּוֹ · בְּמַרְאֹת הַצֹּבְאֹת · הֶחָצֵר · מָסַךְ שַׁעַר הֶחָצֵר<span class="aliyah-label-de">Siebte Aliyah · Schemot 38:1–20 · Der kupferne Brandopferaltar · Das Becken aus den Spiegeln der versammelten Frauen · Der Vorhof mit seinen Vorhängen, Säulen und Sockeln · Der Vorhang am Tor des Vorhofs</span></div>
+      <div class="instrument-note">[no percussion] [no drums] [no choir] [acoustic guitar — Nahawand widens to a stately processional cadence as the courtyard is enclosed, the women's mirrors melted into the laver, the parashah closing with the perimeter complete, no percussion] Gitarre: Nahawand weitet sich zu einer würdevollen Prozessions-Kadenz — der Hof wird umschlossen, die Spiegel der Frauen werden zum Becken eingeschmolzen, die Parashah schließt mit dem vollendeten Perimeter.</div>
+      <div class="lyrics-block">
+        <div class="lyrics-he" dir="rtl">
+          <span class="line">וַיַּעַשׂ אֶת־מִזְבַּח הָעֹלָה עֲצֵי שִׁטִּים חָמֵשׁ אַמּוֹת אׇרְכּוֹ וְחָמֵשׁ־אַמּוֹת רׇחְבּוֹ רָבוּעַ וְשָׁלֹשׁ אַמּוֹת קֹמָתוֹ׃</span>
+          <span class="line">וַיַּעַשׂ קַרְנֹתָיו עַל אַרְבַּע פִּנֹּתָיו מִמֶּנּוּ הָיוּ קַרְנֹתָיו וַיְצַף אֹתוֹ נְחֹשֶׁת׃</span>
+          <span class="line">וַיַּעַשׂ אֶת־כׇּל־כְּלֵי הַמִּזְבֵּחַ אֶת־הַסִּירֹת וְאֶת־הַיָּעִים וְאֶת־הַמִּזְרָקֹת אֶת־הַמִּזְלָגֹת וְאֶת־הַמַּחְתֹּת כׇּל־כֵּלָיו עָשָׂה נְחֹשֶׁת׃</span>
+          <span class="line">וַיַּעַשׂ לַמִּזְבֵּחַ מִכְבָּר מַעֲשֵׂה רֶשֶׁת נְחֹשֶׁת תַּחַת כַּרְכֻּבּוֹ מִלְּמַטָּה עַד־חֶצְיוֹ׃</span>
+          <span class="line">וַיִּצֹק אַרְבַּע טַבָּעֹת בְּאַרְבַּע הַקְּצָוֺת לְמִכְבַּר הַנְּחֹשֶׁת בָּתִּים לַבַּדִּים׃</span>
+          <span class="line">וַיַּעַשׂ אֶת־הַבַּדִּים עֲצֵי שִׁטִּים וַיְצַף אֹתָם נְחֹשֶׁת׃</span>
+          <span class="line">וַיָּבֵא אֶת־הַבַּדִּים בַּטַּבָּעֹת עַל צַלְעֹת הַמִּזְבֵּחַ לָשֵׂאת אֹתוֹ בָּהֶם נְבוּב לֻחֹת עָשָׂה אֹתוֹ׃</span>
+          <span class="line">וַיַּעַשׂ אֵת הַכִּיּוֹר נְחֹשֶׁת וְאֵת כַּנּוֹ נְחֹשֶׁת בְּמַרְאֹת הַצֹּבְאֹת אֲשֶׁר צָבְאוּ פֶּתַח אֹהֶל מוֹעֵד׃</span>
+          <span class="line">וַיַּעַשׂ אֶת־הֶחָצֵר לִפְאַת נֶגֶב תֵּימָנָה קַלְעֵי הֶחָצֵר שֵׁשׁ מׇשְׁזָר מֵאָה בָּאַמָּה׃</span>
+          <span class="line">עַמּוּדֵיהֶם עֶשְׂרִים וְאַדְנֵיהֶם עֶשְׂרִים נְחֹשֶׁת וָוֵי הָעַמּוּדִים וַחֲשֻׁקֵיהֶם כָּסֶף׃</span>
+          <span class="line">וְלִפְאַת צָפוֹן מֵאָה בָאַמָּה עַמּוּדֵיהֶם עֶשְׂרִים וְאַדְנֵיהֶם עֶשְׂרִים נְחֹשֶׁת וָוֵי הָעַמּוּדִים וַחֲשֻׁקֵיהֶם כָּסֶף׃</span>
+          <span class="line">וְלִפְאַת־יָם קְלָעִים חֲמִשִּׁים בָּאַמָּה עַמּוּדֵיהֶם עֲשָׂרָה וְאַדְנֵיהֶם עֲשָׂרָה וָוֵי הָעַמֻּדִים וַחֲשׁוּקֵיהֶם כָּסֶף׃</span>
+          <span class="line">וְלִפְאַת קֵדְמָה מִזְרָחָה חֲמִשִּׁים אַמָּה׃</span>
+          <span class="line">קְלָעִים חֲמֵשׁ־עֶשְׂרֵה אַמָּה אֶל־הַכָּתֵף עַמּוּדֵיהֶם שְׁלֹשָׁה וְאַדְנֵיהֶם שְׁלֹשָׁה׃</span>
+          <span class="line">וְלַכָּתֵף הַשֵּׁנִית מִזֶּה וּמִזֶּה לְשַׁעַר הֶחָצֵר קְלָעִים חֲמֵשׁ עֶשְׂרֵה אַמָּה עַמֻּדֵיהֶם שְׁלֹשָׁה וְאַדְנֵיהֶם שְׁלֹשָׁה׃</span>
+          <span class="line">כׇּל־קַלְעֵי הֶחָצֵר סָבִיב שֵׁשׁ מׇשְׁזָר׃</span>
+          <span class="line">וְהָאֲדָנִים לָעַמֻּדִים נְחֹשֶׁת וָוֵי הָעַמּוּדִים וַחֲשׁוּקֵיהֶם כֶּסֶף וְצִפּוּי רָאשֵׁיהֶם כָּסֶף וְהֵם מְחֻשָּׁקִים כֶּסֶף כֹּל עַמֻּדֵי הֶחָצֵר׃</span>
+          <span class="line">וּמָסַךְ שַׁעַר הֶחָצֵר מַעֲשֵׂה רֹקֵם תְּכֵלֶת וְאַרְגָּמָן וְתוֹלַעַת שָׁנִי וְשֵׁשׁ מׇשְׁזָר וְעֶשְׂרִים אַמָּה אֹרֶךְ וְקוֹמָה בְרֹחַב חָמֵשׁ אַמּוֹת לְעֻמַּת קַלְעֵי הֶחָצֵר׃</span>
+          <span class="line">וְעַמֻּדֵיהֶם אַרְבָּעָה וְאַדְנֵיהֶם אַרְבָּעָה נְחֹשֶׁת וָוֵיהֶם כֶּסֶף וְצִפּוּי רָאשֵׁיהֶם וַחֲשֻׁקֵיהֶם כָּסֶף׃</span>
+          <span class="line">וְכׇל־הַיְתֵדֹת לַמִּשְׁכָּן וְלֶחָצֵר סָבִיב נְחֹשֶׁת׃</span>
+        </div>
+        <div class="lyrics-de">
+          <span class="line">(38:1) Und er machte den Brandopferaltar aus Schittim-Holz — fünf Ellen seine Länge und fünf Ellen seine Breite, viereckig, und drei Ellen seine Höhe.</span>
+          <span class="line">(2) Und er machte seine Hörner an seinen vier Ecken — aus ihm selbst waren seine Hörner; und er überzog ihn mit Kupfer.</span>
+          <span class="line">(3) Und er machte alle Geräte des Altars: die Töpfe und die Schaufeln und die Sprengbecken, die Gabeln und die Kohlepfannen — alle seine Geräte machte er aus Kupfer.</span>
+          <span class="line">(4) Und er machte für den Altar ein Gitterwerk — Werk eines Netzes aus Kupfer — unter seinem Rand von unten bis zu seiner Mitte.</span>
+          <span class="line">(5) Und er goss vier Ringe an die vier Enden des kupfernen Gitterwerks — Häuser für die Stangen.</span>
+          <span class="line">(6) Und er machte die Stangen aus Schittim-Holz und überzog sie mit Kupfer.</span>
+          <span class="line">(7) Und er brachte die Stangen in die Ringe an den Seiten des Altars, um ihn damit zu tragen — hohl, aus Brettern machte er ihn.</span>
+          <span class="line">(8) Und er machte das Becken aus Kupfer und sein Gestell aus Kupfer — aus den Spiegeln der versammelten Frauen, die sich am Eingang des Begegnungs-Zeltes versammelten.</span>
+          <span class="line">(9) Und er machte den Vorhof: an der Südseite, gegen den Negev hin — die Vorhänge des Vorhofs aus gezwirntem Byssus, hundert Ellen lang;</span>
+          <span class="line">(10) ihre Säulen zwanzig und ihre Sockel zwanzig aus Kupfer; die Haken der Säulen und ihre Ringe aus Silber.</span>
+          <span class="line">(11) Und an der Nordseite hundert Ellen — ihre Säulen zwanzig und ihre Sockel zwanzig aus Kupfer; die Haken der Säulen und ihre Ringe aus Silber.</span>
+          <span class="line">(12) Und an der Westseite Vorhänge von fünfzig Ellen — ihre Säulen zehn und ihre Sockel zehn; die Haken der Säulen und ihre Ringe aus Silber.</span>
+          <span class="line">(13) Und an der Ostseite, gegen Osten, fünfzig Ellen.</span>
+          <span class="line">(14) Vorhänge von fünfzehn Ellen zu der einen Schulter — ihre Säulen drei und ihre Sockel drei;</span>
+          <span class="line">(15) und zu der zweiten Schulter, hier und dort, am Tor des Vorhofs Vorhänge von fünfzehn Ellen — ihre Säulen drei und ihre Sockel drei.</span>
+          <span class="line">(16) Alle Vorhänge des Vorhofs ringsum aus gezwirntem Byssus.</span>
+          <span class="line">(17) Und die Sockel der Säulen aus Kupfer, die Haken der Säulen und ihre Ringe aus Silber, und der Überzug ihrer Häupter aus Silber — und sie waren mit Silber beschlagen, alle Säulen des Vorhofs.</span>
+          <span class="line">(18) Und der Vorhang des Tores des Vorhofs — Werk des Stickers — aus Purpurblau und Purpurrot und Karmesinrot und gezwirntem Byssus, und zwanzig Ellen lang und in der Höhe der Breite fünf Ellen, der Höhe der Vorhof-Vorhänge entsprechend.</span>
+          <span class="line">(19) Und ihre Säulen vier und ihre Sockel vier aus Kupfer; ihre Haken aus Silber, und der Überzug ihrer Häupter und ihre Ringe aus Silber.</span>
+          <span class="line">(20) Und alle Pflöcke des Mishkan und des Vorhofs ringsum aus Kupfer.</span>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- ══ TIKKUN-BOX — DAS HERZ DER PARASHAH ══ -->
+    <div class="tikkun-box">
+      <div class="tikkun-header">
+        <div class="tikkun-title-he">מַעֲשֵׂה הַתִּיקּוּן — שַׁבָּת קֹדֶם לַמִּשְׁכָּן · נְדִיבוּת הַלֵּב · חׇכְמַת־לֵב לַעֲבוֹדַת הַקֹּדֶשׁ · בִּנְיָן בַּקְּהִלָּה · הֲכָנַת שַׁבָּת בְּעֵדוֹת הַמִּזְרָח</div>
+        <div class="tikkun-title-de">Tikkun – Schabbat-Vorrang vor allem Bauen, das großzügige Herz als Wiedergutmachung nach dem Goldenen Kalb, die Weisheit des Herzens als sephardische Berufungs-Theologie, das gemeinschaftliche Werk und die sephardische Schabbat-Vorbereitungs-Praxis nach Ben Ish Chai und Kaf HaChaim</div>
+        <div class="tikkun-src">שְׁמוֹת ל״ה:א׳–ג׳ (וַיַּקְהֵל · שֵׁשֶׁת יָמִים · לֹא־תְבַעֲרוּ אֵשׁ) · שְׁמוֹת ל״ה:ה׳ (כֹּל נְדִיב לִבּוֹ) · שְׁמוֹת ל״ה:כ״א (אֲשֶׁר־נְשָׂאוֹ לִבּוֹ) · שְׁמוֹת ל״ה:כ״ה–כ״ו (חַכְמַת־לֵב · נָשִׁים טוֹווֹת) · שְׁמוֹת ל״ה:ל׳–ל״ג (בְּצַלְאֵל · רוּחַ אֱלֹהִים) · שְׁמוֹת ל״ו:ה׳–ז׳ (וַיִּכָּלֵא הָעָם מֵהָבִיא) · שְׁמוֹת ל״ח:ח׳ (בְּמַרְאֹת הַצֹּבְאֹת) · רמב״ם הלכות שַׁבָּת פֶּרֶק א׳:א׳–ה׳ (כְּלָלֵי הַמְּלָאכוֹת · ל״ט אֲבוֹת מְלָאכָה) · רמב״ם הלכות שַׁבָּת פֶּרֶק י״ב (הַבְעָרָה וְכִיבּוּי) · רמב״ם הלכות בֵּית הַבְּחִירָה פֶּרֶק א׳ · רמב״ם הלכות מַתְּנוֹת עֲנִיִּים פֶּרֶק י׳ (שְׁמוֹנֶה מַעֲלוֹת הַצְּדָקָה) · רמב״ם הלכות דֵּעוֹת פֶּרֶק ב׳ · מִשְׁנָה שַׁבָּת ז׳:ב׳ · תַּלְמוּד בַּבְלִי שַׁבָּת ע״ג.–ע״ו. · אור החיים על שְׁמוֹת ל״ה:א׳ (וַיַּקְהֵל אַחַר חֵטְא הָעֵגֶל) · רש״ש נְהַר שָׁלוֹם דְּרוּשִׁים עַל סְפִירַת נֵצַח · רמח״ל מִשְׁכְּנֵי עֶלְיוֹן (אַרְכִיטֶקְטוּרַת הַמִּשְׁכָּן וְהַמִּקְדָּשׁ) · רמח״ל דֶּרֶךְ אֲדֹנָי חֵלֶק ג׳ · רמח״ל מְסִלַּת יְשָׁרִים פֶּרֶק י״א (נְקִיּוּת בְּמָמוֹן) · בן איש חי שנה ראשונה פרשת ויקהל הלכות תְּפִלַּת מִנְחָה · בן איש חי שנה שנייה פרשת ויקהל הלכות בִּנְיָן וּסְתִירָה · שׁוּלְחָן עָרוּךְ אוֹרַח חַיִּים רמ״ב–רנ״ב (הֲכָנַת שַׁבָּת · קְבִיעוּת סְעֻדּוֹת · קַבָּלַת שַׁבָּת) · שׁוּלְחָן עָרוּךְ אוֹרַח חַיִּים רס״ג–ש״ז (אִסּוּרֵי שַׁבָּת) · כַּף הַחַיִּים אוֹרַח חַיִּים רמ״ב–רנ״ב (נֻסַּח אֲרָם צוֹבָה · מָרוֹקוֹ · יָמֶן · יְרוּשָׁלַיִם) · שד״ל פֵּרוּשׁ עַל שְׁמוֹת ל״ה:ג׳ (לֹא־תְבַעֲרוּ אֵשׁ · לְפִי הָרַאבַּ״ע) · שד״ל עַל ל״ה:כ״ב (חָח · כּוּמָז) · שד״ל עַל ל״ו:א׳ (וְעָשָׂה בְצַלְאֵל · עָתִיד אִינְדִיקַטִיב) · יָבִיעַ אוֹמֶר וְחֲזוֹן עוֹבַדְיָה שַׁבָּת · נֻסַּח אֲרָם צוֹבָה · מָרוֹקוֹ · יָמֶן · יְרוּשָׁלַיִם</div>
+      </div>
+      <div class="tikkun-body">
+        <strong>Sephardische Praxis:</strong> Vayakhel ist die <em>Netzach</em>-Parashah des Sefer Schemot — der Punkt, an dem das in Ki-Tisa zerbrochene Volk in einer neuen, beständigen Form wieder aufgerichtet wird. <strong>Or HaChaim</strong> (auf Schemot 35:1) liest das eröffnende <em>VaYakhel</em> als bewusste Tikkun-Geste: das Verb <em>vayakhel</em> ist das Gegen-Wort zum <em>vayikahel ha'am al Aharon</em> (Schemot 32:1) beim Goldenen Kalb — dort versammelte sich das Volk <em>gegen</em> Aharon in Furcht und Verzweiflung, hier versammelt Mosche das Volk <em>für</em> Adonai in Sammlung und Wiederaufbau. Genau diese Inversion macht Vayakhel zur Netzach-Parashah: Netzach ist nach <strong>Rashash</strong> (<em>Nahar Schalom</em>, sephardisch-yerushalmische Drushim) die Sefirah der <em>dauerhaften Errichtung</em>, der ausgehaltenen Treue, der unverzagten Wiederholung — die Eigenschaft, die ein Volk braucht, um nach einem Sturz <em>nicht stehen zu bleiben</em>, sondern in heiliger Arbeit von Neuem zu beginnen. <strong>Ramchal</strong> (<em>Mishkney Elyon</em>, das ganze Werk widmet sich der Architektur des Mishkan und des dritten Beit HaMikdasch) lehrt, dass kein Heiligtum ohne Gemeinschaft heilig wird: der Mishkan empfängt seine Heiligkeit gerade dadurch, dass <em>alle</em> beitragen — jeder nach seinem Vermögen und seiner Begabung, mit dem <em>nediv lev</em>, dem willigen Herzen. Das ist der gemeinschaftliche Aspekt von Netzach: dauerhaft ist nur, was viele tragen.
+        <br><br>
+        <strong>Die Reihenfolge ist nicht zufällig.</strong> Mosche beginnt mit der Schabbat-Wiederholung (35:1–3) <em>vor</em> dem Trumah-Aufruf — und das nicht nur als Halacha-Erinnerung, sondern als pädagogisches Wurzel-Prinzip. <strong>Ben Ish Chai</strong> (Schanah Rischona, Parashat Vayakhel — die Hilchot Tefilat Mincha, die Ben Ish Chai dort einordnet, stehen unter dem Vorzeichen des Schabbat-Vorrangs vor allem heiligen Werk) lehrt: <em>auch heiliges Bauen darf den Schabbat nicht aufheben</em>. Daraus leitet die Mishnah (<em>Schabbat 7:2</em>) und der Talmud (<em>Bavli Schabbat 73a–76a</em>) die 39 Av-Melachot her: alles, was die Hände am Mishkan-Bau taten — säen und schneiden und mahlen und kneten und backen, scheren und waschen und weben, schreiben und löschen, bauen und niederreißen, anzünden und löschen — alles das ist am Schabbat <em>melachah</em> und verboten. <strong>Rambam</strong> (<em>Hilchot Schabbat</em> Perek 1) systematisiert dies in den Grundbegriffen der 39 Av-Melachot und ihrer Toldot. Das Verbot <em>„לֹא־תְבַעֲרוּ אֵשׁ"</em> (35:3) wird von <strong>Schadal</strong> (<em>Pirusch al haTora</em> zu Schemot 35:3) in präziser Querverbindung mit Schemot 12:16 gelesen — wie Ibn Ezra: am Yom Tov ist Feuer für die Speise erlaubt, am Schabbat nicht. <strong>Rambam</strong> (<em>Hilchot Schabbat</em> Perek 12) verankert die Halacha praktisch: das Anzünden eines Feuers am Schabbat — auch eines kleinen — ist Vater einer Av-Melachah, und das Schabbat-Lichter-Anzünden vor Sonnenuntergang (sephardisch: Frauen-Pflicht mit Brachah) ist ihr positives Gegen-Stück: einmal anzünden vor Schabbat, dann brennen lassen.
+        <br><br>
+        <strong>Das Herz der Parashah ist das nediv-lev-Phänomen.</strong> Sechsmal (35:5, 35:21, 35:22, 35:26, 35:29, 36:2) wiederholt die Tora die Wendung vom <em>Herzen, das ihn antrieb</em>, vom <em>Geist, der sie willig machte</em>, vom <em>weisen Herzen</em>. Es ist eines der dichtesten Cluster solcher Wendungen in der ganzen Tora. <strong>Or HaChaim</strong> (auf 35:21) liest die ungewöhnliche Wendung <em>„asher nesa'o libo"</em> — „dessen Herz ihn erhoben hat" — als eine Aussage über innere Bewegung: das Herz selbst hebt den Menschen über sein gewohntes Maß hinaus; das ist nicht erzwungener Akt, sondern <em>aufgehobenes</em> Tun, getragenes Geben. Diese Bewegung ist nach der sephardischen Tradition (<em>Rambam Hilchot Matnot Aniyim</em> Perek 10 — die acht Stufen der Tzedakah, von denen die höchsten ohne äußeren Anlass und ohne Bekannt-Sein des Gebers geschehen) die Wurzel der wahren <em>Nedavah</em>. <strong>Ramchal</strong> (<em>Mesillat Yescharim</em> Perek 11 zur <em>Nekijut beMamon</em> und zum freien Geben) lehrt, dass die innere Reinheit im Geld-Verkehr und das freudige Geben zusammengehören: wer im täglichen Geld-Verkehr in <em>Reinheit</em> lebt, hat am Tag der Trumah keine Hemmung — und wer im Trumah-Geben gelernt hat, mehr zu geben als nötig, lebt auch im Alltag großzügiger. Dieselbe Lehre — auf die Vayakhel-Gemeinschafts-Spende angewandt — gibt <strong>Ben Ish Chai</strong> in den Tzedakah-Halachot der Schanah Rischona und Schanah Schniah (in den Parashot, die strukturell Tzedakah-Halachot tragen): Tzedakah ist nicht ein Steuer-Verhältnis zu Adonai, sondern eine <em>Erweiterung</em> des eigenen Herzens — wer sie geübt hat, dem ist das Geben Lust geworden.
+        <br><br>
+        <strong>Vayikale ha'am mehavi</strong> (36:6–7) ist der einzige Ort in der Tora, wo Mosche das Volk vom Geben <em>abhalten</em> muss. Sephardisch (Aleppo-Marokko-Yerushalmi-Tradition) wird dieser Vers als das schönste Maß für ein heiliges Werk gelesen: das Volk gibt <em>so viel, dass mehr da ist als gebraucht wird</em>. <strong>Or HaChaim</strong> und <strong>Ramchal</strong> (<em>Mishkney Elyon</em>) deuten dies als Vorbild für jedes spätere kollektive heilige Werk Israels: ob beim Bau des ersten Tempels durch Schlomo (Melachim Aleph 5–8), ob beim Wiederaufbau in den Tagen Ezras und Nechemjas, ob in der Errichtung heutiger sephardischer Synagogen in Aleppo und Yerushalayim und Marokko — das Maß heiligen Bauens ist <em>nicht</em> Knappheit, sondern <em>überfließende Großzügigkeit</em>, die freudig zurückgehalten werden muss. Das ist die Tikkun-Bewegung gegenüber dem Goldenen Kalb: dort gab das Volk in <em>Furcht</em> sein Gold; hier gibt es in <em>Liebe</em>. <strong>Bezalel</strong> (sein Name <em>„im Schatten Adonais"</em> — be'tzel-El — wird in der sephardischen Auslegungstradition zum Programm) und <strong>Oholiav</strong> aus dem Stamm Dan leiten die Arbeit gemeinsam: Yehudah und Dan, der erste und der letzte der Stämme im Wüsten-Lager, vereinigen sich in der heiligen Werkstatt. <strong>Schadal</strong> (auf Schemot 36:1) gibt zur grammatikalischen Form <em>„ve'asa Bezalel"</em> die feine philologische Erläuterung: es ist Futur-Indikativ (gegen die Auslegung Rashis auf Makkot 12a als Imperativ) — Mosche teilt mit, was geschehen <em>wird</em>: Bezalel <em>wird</em> machen. Das ist eine prophetische Sicherheit, dass das Werk gelingen wird.
+        <br><br>
+        <strong>Chochmat-Lev als sephardische Berufungs-Theologie:</strong> Die wiederholte Wendung <em>„chacham lev"</em> (35:10, 35:25, 36:1, 36:2 und mehrmals) und vor allem die Erfüllung Bezalels mit <em>ruach Elohim be'chochmah u'bitvunah u'beda'at</em> (35:31) gibt der sephardischen Tradition eine ganze Lehre über die Heiligung der Begabung. <strong>Rambam</strong> (<em>Hilchot De'ot</em> Perek 2 — die Mitte als Tugend; und in <em>Moreh Nevuchim</em> III:54 zur Hierarchie der Vollkommenheiten) lehrt, dass die <em>chochmah</em> immer auf ihr Ziel hin geheiligt werden muss: jede Begabung — handwerklich, künstlerisch, intellektuell, organisatorisch — ist eine Form von Ruach Adonai im Menschen, die ihre höchste Erfüllung in heiligem Werk findet. Die sephardische Tradition (Aleppo-Marokko-Yerushalmi) hat eine besondere Praxis entwickelt: vor jeder größeren handwerklichen oder beruflichen Aufgabe spricht der Mensch innerlich <em>„hineni mu'chan u'me'zumman la'asot bi'shem Adonai"</em> — „ich bin bereit und vorbereitet zu tun im Namen Adonais". Diese <em>l'schem yichud</em>-Einleitung (Rashash-Nussach, sephardisch standardisiert) wandelt jedes Werk in eine Form des Mishkan-Bauens. <strong>Schadal</strong> (auf Schemot 35:22) gibt zu den seltenen Schmuck-Wörtern <em>chach</em> (verglichen mit Jeschajahu 37:29 — der Haken in der Nase) und <em>kumaz</em> (eine Form runden Schmucks, philologisch ans Arabische angelehnt) präzise philologische Glossen — die Tora-Quelle besteht nicht auf Vagheit, sondern auf Genauigkeit auch dort, wo es um Material und Form geht.
+        <br><br>
+        <strong>Das Becken aus den Spiegeln der Frauen</strong> (38:8 — <em>„bemar'ot hatzov'ot"</em>) ist eine der bewegendsten Stellen der Parashah. Sephardisch wird diese Sektion mit besonderer Andacht gelesen: die Frauen Israels gaben ihre Schminkspiegel — die Spiegel, mit denen sie sich in Ägypten geschmückt hatten, um ihre Männer trotz der Sklaverei zu lieben — und aus diesen Spiegeln wurde das Becken, an dem die Kohanim sich vor dem Dienst die Hände und Füße wuschen (Midrasch Tanchuma Pekudei 9, sephardisch weitergegeben in <em>Or HaChaim</em> auf 38:8). Was als reine Eros-Form für menschliche Liebe gedient hatte, wurde im Heiligtum zur reinen Form des heiligen Dienstes — Eros wurde nicht verworfen, sondern <em>hinaufgenommen</em>. Sephardisch ist dies ein Grundsatz des Schalom Bayit: die häusliche Liebe ist nicht der Gegensatz zur Heiligkeit, sondern ihre Vorform. <strong>Ben Ish Chai</strong> (zahlreich in den Schalom-Bayit-Halachot der Schanah Rischona) verankert diese Lehre in der täglichen Ehe-Praxis.
+        <br><br>
+        <strong>Praktische Handlung:</strong> (1) <em>Sephardische Schabbat-Vorbereitung — mehrtägig nach Aleppo-Marokko-Yerushalmi-Brauch</em>: Vom Mittwoch an wird Schabbat innerlich vorbereitet. Donnerstag-Abend Markt-Einkauf, Freitag-Vormittag Kochen und Backen, Freitag-Mittag Putzen, Freitag-Nachmittag Mikwah (für Männer in den meisten sephardischen Gemeinden), persönliches Anziehen. Quelle: <em>Schulchan Aruch Orach Chaim 250 — Hilchot Hachanat Schabbat</em>; <em>Kaf HaChaim Orach Chaim 242–252</em> — sephardische Praxis aller Eidot HaMizrach (Aleppo, Marokko, Yemen, Yerushalayim) mit den jeweiligen Variationen. Kawanah nach Schemot 35:2–3: <em>„sechs Tage soll Arbeit getan werden — und am siebten Tag soll euch Heiliges sein"</em>; das ganze Werk der Woche ist auf den Schabbat hingeordnet. (2) <em>Schabbat-Lichter-Anzünden ohne Verzögerung</em>: Schemot 35:3 verbietet das Feuer-Anzünden am Schabbat selbst — daher ist das Frauen-Mitzvah der Schabbat-Lichter strikt vor Sonnenuntergang (sephardisch: meist ca. 18 Minuten vor Sonnenuntergang in Yerushalayim, ortsabhängig sonst). Quelle: <em>Rambam Hilchot Schabbat</em> Perek 5; <em>Schulchan Aruch OC 263</em>; <em>Kaf HaChaim OC 263</em>. Kawanah: bei den zwei Brachot innerlich Schemot 35:3 vor Augen — <em>„kein Feuer in unseren Wohnungen am Schabbat-Tag"</em> — und das jetzt angezündete Licht als Auftakt für die kommende Schabbat-Stille. (3) <em>Tzedakah-Großzügigkeit-Übung nach Rambam</em>: Einmal in der Woche (sephardisch: meist am Freitag vor Schabbat in das Pushkah, oder beim Erev-Schabbat-Sammelgang in der Synagoge) wird eine <em>überfließende</em> Tzedakah gegeben — nicht das gewohnte Maß, sondern ein zusätzlicher Betrag, der das Maß sprengt; nach Schemot 36:6–7 als Vorbild. Quelle: <em>Rambam Hilchot Matnot Aniyim</em> Perek 10 (die acht Stufen — der Punkt ist, in der Woche an einer höheren Stufe als gewöhnlich zu geben); <em>Schulchan Aruch Yoreh Deah 247–259</em>; sephardischer Aleppo-Marokko-Yerushalmi-Standard. (4) <em>Hineni-mu'chan-Erklärung vor heiligem Werk</em>: Vor jeder größeren Mitzvah, vor jedem heiligen Lern-Akt, vor jeder beruflichen Aufgabe, die sich als ein <em>Mishkan-Bau im Kleinen</em> verstehen lässt — innerlich (oder leise) sprechen: <em>„l'schem yichud kudscha brich hu uschechinteh — hineni mu'chan u'me'zumman la'asot bi'shem Adonai be'chochmah be'tvunah be'da'at"</em>. Quelle: <em>Rashash Nussach</em> (sephardisch standardisiert, Yerushalmi-Tradition); <em>Ben Ish Chai</em> in den Vorbereitungs-Halachot der Schanah Rischona zu Schma und zur Tefillah; <em>Kaf HaChaim Orach Chaim 5</em>. Schemot 35:31 ist der innere Anker: <em>ruach Elohim be'chochmah be'tvunah be'da'at</em> — die Begabung ist göttlicher Geist, der heilig auszurichten ist. (5) <em>Schalom Bayit als Becken-aus-Spiegeln-Praxis</em>: Sephardisch (Ben Ish Chai zahlreich in den Schalom-Bayit-Halachot · Aleppo-Marokko-Yerushalmi-Brauch): die eheliche Liebe wird wöchentlich in einer bewussten Schalom-Bayit-Handlung erneuert — Erev-Schabbat-Vorbereitung gemeinsam, beim Kabbalat-Schabbat eine Berachah des Mannes für die Frau (Eschet Chayil, sephardischer Standard), gemeinsame Pessach-Seder-Vorbereitung, gemeinsame Tzedakah-Entscheidungen. Schemot 38:8 ist der Anker: was im Privaten der Liebe dient, wird im Mishkan zur reinen Form des heiligen Dienstes. Quelle: <em>Rambam Hilchot Ischut</em> Perakim 14–15 (sephardische Standard-Auslegung); <em>Ben Ish Chai</em> in Schanah Rischona und zahlreichen Schalom-Bayit-Halachot. (6) <em>Wöchentliches gemeinschaftliches Werk in der Synagoge</em>: Sephardisch (Aleppo-Marokko-Yerushalmi-Brauch) wird wöchentlich an einem heiligen Werk der eigenen Gemeinde mitgebaut — sei es ein konkreter Beitrag zur Synagoge (Bücher, Olivenöl-Spende, Reinigung, Aufnahme-Dienst, Vorbeter-Übernahme), sei es eine wöchentliche Schiur-Teilnahme, sei es Chevrah-Kaddischa-Beitrag. Schemot 35:5 als Anker: <em>„kol nediv libo"</em> — jeder, der willigen Herzens ist. Es ist nicht „die anderen sollen es tun", sondern: <em>„ich bin einer der nedivei lev"</em>. Quelle: sephardisches kollektives Selbstverständnis aller Eidot HaMizrach; <em>Schulchan Aruch Yoreh Deah</em>. (7) <em>Chochmat-Lev-Würdigung der Begabungen — auch bei den Kindern</em>: Sephardisch (Ben Ish Chai · Aleppo-Marokko-Yerushalmi-Kindererziehung): die handwerklichen, künstlerischen, intellektuellen, sozialen Begabungen der Kinder werden ausdrücklich als <em>chochmat lev</em> benannt und gewürdigt — nicht nur die Tora-Begabung. Schemot 35:35 zeigt, dass Adonai das Sticken, das Weben, die Gold-Schmiedekunst gleichermaßen als <em>chochmah</em> ehrt. Wer ein Kind hat, das musikalisch oder zeichnerisch oder rechnerisch oder organisatorisch begabt ist, sagt ihm: <em>„das ist deine chochmat lev, mit der du Adonai dienst"</em>. Quelle: <em>Rambam Hilchot De'ot</em> Perek 2 (die Mitte und die Berufung); <em>Ben Ish Chai</em> in den Erziehungs-Halachot. (8) <em>Anti-Goldenes-Kalb-Übung — bewusstes Geben in Liebe, nicht in Furcht</em>: Wann immer die innere Stimme <em>„ich muss"</em> sagt (aus Schuld, aus Angst, aus Druck), innehalten und prüfen: <em>„kann ich es aus Liebe tun, nicht aus Furcht?"</em>. Wenn nicht, lieber warten und das Geben verschieben, bis die innere Bewegung eine Vayakhel-Bewegung (nediv lev) wird, nicht eine Egel-Bewegung (Furcht-Hektik). Quelle: <em>Or HaChaim</em> auf Schemot 35:1 — die Inversion vayikahel/vayakhel als pädagogische Grundbewegung; <em>Ramchal Mesillat Yescharim</em> Perek 11 (Reinheit im Geld-Verkehr als Voraussetzung des freien Gebens). (9) <em>Tora-Lernen zu Mishkan und Mikdasch</em>: Wer die Vayakhel-Pekudei-Linie ernst nimmt, übt einmal jährlich (sephardisch: in der Zeit zwischen Rosch Chodesch Av und Tisha be'Av) ein konzentriertes Lernen über den dritten Beit HaMikdasch — mit <em>Rambam Hilchot Beit HaBechirah</em> und <em>Hilchot Klei HaMikdasch</em>, ergänzt durch <em>Ramchal Mishkney Elyon</em> und durch <em>Rashash Nahar Schalom</em> (Drushim zum Mikdasch). Die Kawanah folgt der Erwartung der vollen Geulah durch Maschiach ben David, in dessen Tagen der Mishkan-Beitrag von Vayakhel sein sichtbares Echo finden wird. Quelle: <em>Rambam Hilchot Mlachim</em> Perek 11–12 (Maschiach ben David als Wiedererbauer des Mikdasch — die sephardische Standard-Tradition); <em>Sefer HaIkkarim</em> Maamar Rischon.
+      </div>
+      <div class="tikkun-tags">
+        <span class="tikkun-tag">שַׁבָּת קֹדֶם לַמִּשְׁכָּן</span>
+        <span class="tikkun-tag">נְדִיב לֵב</span>
+        <span class="tikkun-tag">חׇכְמַת־לֵב</span>
+        <span class="tikkun-tag">בִּנְיָן בַּקְּהִלָּה</span>
+        <span class="tikkun-tag">בְּצֵל אֵל</span>
+      </div>
+    </div>
+
+    <!-- ══ SCHI · KLIMAX-MOMENT — SCHEMOT 36:6-7 ══ -->
+    <div class="climax-box">
+      <div class="climax-label">שִׂיא · ff · Klimax-Vers · der einzige Stopp-Befehl Mosches in der Tora</div>
+      <div class="instrument-note">[no percussion] [no drums] [no choir] [acoustic guitar — Nahawand rising to its widest open chord forte to fortissimo, the assembly-stopped moment as a quiet royal triumph, the people held back from giving because the work has been more than enough, no percussion, no drums] Gitarre: Voller Nahawand-Akkord, forte zu fortissimo — der Moment des Versammlungs-Stopps als leiser königlicher Triumph: das Volk wird vom Geben zurückgehalten, weil das Werk mehr als genug empfangen hat.</div>
+      <div class="climax-verse-he">וַיְצַו מֹשֶׁה וַיַּעֲבִירוּ קוֹל בַּמַּחֲנֶה לֵאמֹר אִישׁ וְאִשָּׁה אַל־יַעֲשׂוּ־עוֹד מְלָאכָה לִתְרוּמַת הַקֹּדֶשׁ · וַיִּכָּלֵא הָעָם מֵהָבִיא · וְהַמְּלָאכָה הָיְתָה דַיָּם לְכׇל־הַמְּלָאכָה לַעֲשׂוֹת אֹתָהּ וְהוֹתֵר</div>
+      <div class="climax-verse-de">„Und Mosche befahl, und sie ließen Stimme ausrufen im Lager und sagten: Mann und Frau sollen nichts weiter machen für die heilige Hebe! — Und das Volk wurde zurückgehalten vom Bringen. Und das Werk reichte ihnen für jedes Werk, es zu tun — und es war noch übrig."</div>
+      <div class="climax-src">שְׁמוֹת ל״ו:ו׳–ז׳ — der einzige Ort in der Tora, wo Mosche das Volk vom Geben abhalten muss · Vorbild aller späteren heiligen kollektiven Bau-Werke Israels nach Or HaChaim und Ramchal Mishkney Elyon</div>
+    </div>
+
+    <!-- ══ KODA · NEDIV-LEV-WHISPER — SCHEMOT 35:21 ══ -->
+    <div class="coda-box">
+      <div class="coda-label">קוֹדָה · pp · Das willige Herz im Hauch</div>
+      <div class="instrument-note">[no percussion] [no drums] [no choir] [acoustic guitar — Nahawand dissolving into a single warm sustained note, the heart-that-was-lifted whispered, the wave of the willing barely audible, no percussion] Gitarre: Nahawand löst sich in einen einzigen warmen, getragenen Ton — das erhobene Herz geflüstert, die Welle der Willigen kaum hörbar.</div>
+      <div class="coda-whisper">
+        וַיָּבֹאוּ <strong>כׇּל־אִישׁ</strong> אֲשֶׁר־נְשָׂאוֹ <strong>לִבּוֹ</strong> — וְכֹל אֲשֶׁר <strong>נָדְבָה רוּחוֹ</strong> אֹתוֹ — הֵבִיאוּ אֶת־תְּרוּמַת <strong>אֲדֹנָי</strong> לִמְלֶאכֶת אֹהֶל מוֹעֵד</div></div>
+
+  </section>
+
+  <!-- ══ FOOTER ══ -->
+  <div class="footer">
+    <p class="footer-he">פָּרָשַׁת וַיַּקְהֵל · נֵצַח · מַקָּאם נַהַוַונְד · שַׁבָּת קֹדֶם לַמִּשְׁכָּן · נְדִיב לֵב · בְּצַלְאֵל וְאׇהֳלִיאָב · וַיִּכָּלֵא הָעָם מֵהָבִיא</p>
+    <p class="footer-chain">
+      שְׁמוֹת ל״ה:א׳–ל״ח:כ׳ · נוּסַּח צָדוֹק (רשש) · עֵדוֹת הַמִּזְרָח · אֲרָם צוֹבָה · מָרוֹקוֹ · יָמֶן · יְרוּשָׁלַיִם
+    </p>
+    <p class="footer-de">
+      Quellen: <strong>Tanach</strong> (Schemot 35:1–38:20 — Tora-Text 1:1, mit Tetragrammaton-Konvertierung
+      durchgängig als אֲדֹנָי) · <strong>Rambam · Mishneh Torah</strong> (Hilchot Schabbat Perek 1 — die
+      Grundbegriffe der 39 Av-Melachot und ihrer Toldot, aus dem Mishkan-Bau abgeleitet · Hilchot Schabbat
+      Perek 5 — Schabbat-Lichter-Anzünden · Hilchot Schabbat Perek 12 — Hav'arah/Anzünden als Av-Melachah ·
+      Hilchot Beit HaBechirah Perek 1 — die Architektur des Heiligtums · Hilchot Klei HaMikdasch — Geräte
+      und Dienst · Hilchot Matnot Aniyim Perek 10 — die acht Stufen der Tzedakah · Hilchot De'ot Perek 2 —
+      die mittlere Eigenschaft und die Berufung · Hilchot Ischut Perakim 14–15 zur Ehe-Verpflichtung ·
+      Hilchot Mlachim Perek 11–12 zur Maschiach-ben-David-Tradition als Wiedererbauer des Mikdasch) ·
+      <strong>Or HaChaim</strong> (Rabbi Chaim ben Atar, auf Schemot 35:1 — die Inversion vayikahel/vayakhel
+      als Tikkun nach dem Goldenen Kalb; auf 35:21 — „asher nesa'o libo" als von der Schechinah selbst
+      bewegte innere Erhebung; auf 35:30 — Bezalel be'tzel-El; auf 38:8 — die Spiegel der Frauen als
+      hinaufgehobener Eros) · <strong>Sefer HaIkkarim</strong> (Yosef Albo, Maamar Rischon — die
+      Glaubens-Grundlagen, die im Mishkan-Bau ihre architektonische Form finden) · <strong>Rashash ·
+      Nahar Schalom</strong> (Rabbi Shalom Sharabi, sephardisch-yerushalmische Drushim zur Sefirah
+      Netzach als dauerhafte Errichtung; und zur Architektur der Sefirot in der Mishkan-Form) ·
+      <strong>Ramchal · Mishkney Elyon</strong> (Rabbi Mosche Chaim Luzzato — das ganze Werk ist eine
+      ausführliche Architektur-Theologie des Mishkan, des ersten und des dritten Beit HaMikdasch, mit der
+      Lehre vom Mishkan als Gemeinschafts-Werk) · <strong>Ramchal · Derech Adonai</strong> (Teil 3 — die
+      Mitwirkung des Volkes als Bedingung der Schechinah-Einwohnung) · <strong>Ramchal · Mesillat
+      Yescharim</strong> (Perek 11 zur Nekijut beMamon — Reinheit im Geld-Verkehr als Voraussetzung
+      freien Gebens) · <strong>Schadal · Pirusch al haTora</strong> (Padua-Edition 1871 — auf Schemot 35:3
+      die philologische Glosse zum Feuer-Verbot im Anschluss an Ibn Ezra und in Querverbindung mit Schemot
+      12:16; auf 35:22 die seltenen Schmuck-Wörter chach und kumaz; auf 36:1 die grammatikalische
+      Erläuterung zu „ve'asa Bezalel" als Futur-Indikativ statt Imperativ, mit Bezug auf Rashis Auslegung
+      in Makkot 12a) · <strong>Ben Ish Chai</strong> (Rabbi Yosef Chaim aus Bagdad — Schanah Rischona
+      Parashat Vayakhel: Hilchot Tefilat Mincha unter dem Vorzeichen des Schabbat-Vorrangs; Schanah Schniah
+      Parashat Vayakhel: Hilchot Binyan u'Stira — Bauen und Abbrechen am Schabbat; Aleppo-Bagdad-Yerushalmi-
+      Tradition) · <strong>Schulchan Aruch</strong> (Orach Chaim 242–252 — Schabbat-Vorbereitung und
+      Kabbalat Schabbat · 263 — Schabbat-Lichter-Anzünden · 263ff. bis 307 — die Schabbat-Verbote im
+      einzelnen · Yoreh Deah 247–259 — Hilchot Tzedakah) · <strong>Kaf HaChaim</strong> (Rabbi Yaakov Chaim
+      Sofer · sephardische Praxis aller Eidot HaMizrach: Aleppo, Marokko, Yemen, Yerushalayim, Bagdad ·
+      besonders zu Hachanat Schabbat OC 242–252) · <strong>Yabia Omer · Chazon Ovadia</strong> (Rabbi
+      Ovadia Yosef Z'L — sephardische moderne Halacha · Schabbat-Bände mit umfangreicher Praxis-Anweisung) ·
+      <strong>Mishnah Schabbat 7:2 und Talmud Bavli Schabbat 73a–76a</strong> (die Ableitung der 39 Av-
+      Melachot aus dem Mishkan-Bau — die Schabbat-Mishkan-Korrespondenz, die Vayakhel selbst stiftet) ·
+      <strong>Tanchuma Pekudei 9</strong> (zur Aggadah von den Spiegeln der Frauen, sephardisch
+      weitergegeben durch Or HaChaim auf 38:8) · <strong>Sephardische Schabbat-Pijutim Eidot HaMizrach</strong>
+      (Bakkaschot zu Erev Schabbat · Schalom-Alechem-Variante Aleppo · Eschet-Chayil-Brachah des Mannes
+      für die Frau · in Maqam-Nahawand-Tradition Aleppo-Yerushalayim).
+      <br><br>
+      <strong>Tradition:</strong> Sephardisch · Nussach Zadoq (Rashash) · Maqam-Tradition aus Aleppo,
+      Yerushalayim, Marokko, Yemen · Tetragrammaton durchgängig als אֲדֹנָי · Maschiach ben David ·
+      Doppelt geprüfte Quellen · Tora-Text 1:1 unverändert · Erstellt Mai 2026 · Sefer HaParashot
+      bemo Maqam · 10. Lied Sefer Schemot · Netzach · Maqam Nahawand · שַׁבָּת קֹדֶם לַמִּשְׁכָּן · נְדִיב לֵב.
+    </p>
+    <div class="footer-amen">אָמֵן · יִבָּנֶה הַמִּקְדָּשׁ בִּמְהֵרָה בְיָמֵינוּ · יָבוֹא מָשִׁיחַ בֶּן דָּוִד · אָמֵן</div>
+  </div>
+
+</div>
+
+
+</body></html>

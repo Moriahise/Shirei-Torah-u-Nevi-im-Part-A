@@ -1,0 +1,576 @@
+<!DOCTYPE html>
+<html lang="he-IL"><head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>פָּרָשַׁת פְּקוּדֵי · שְׁמוֹת ל״ח:כ״א–מ׳:ל״ח · מַלְכוּת · מַקָּאם חִיגָ׳אז · Sephardische Tora-Vertonung</title>
+  <link href="https://fonts.googleapis.com/css2?family=Frank+Ruhl+Libre:wght@300;400;700;900&amp;family=EB+Garamond:ital,wght@0,400;0,600;1,400;1,600&amp;family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&amp;display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg:#060808; --deep:#0A0E0E; --layer:#101414; --card:#0C1010;
+      --parchment:#f2e8d0; --parch-dim:#c8b898;
+      --ivory:#f0e8d8; --ivory-dim:#a89878;
+      --silver:#c8d4e0; --silver-dim:#7a8290;
+      --text:#a0a89c;
+      /* SEFER SCHEMOT — Tief-Rot (Befreiung · Blut der Pessach · Esch HaSinai) */
+      --sefer:#B04030; --sefer-lt:#E07060; --sefer-dim:#7A2818;
+      --sefer-bg:rgba(176,64,48,.08); --sefer-bdr:rgba(176,64,48,.36); --sefer-glow:rgba(224,112,96,.20);
+      /* PEKUDEI · MALCHUT · HIJAZ — Royal Hijaz-Burgund (Schluss-Bogen des Sefers) */
+      --pkd:#A04848; --pkd-lt:#D07878; --pkd-dim:#6C2820;
+      --pkd-bg:rgba(160,72,72,.08); --pkd-bdr:rgba(160,72,72,.36); --pkd-glow:rgba(208,120,120,.22);
+      /* MAQAM-FARBEN */
+      --maqam-saba:#B0904A; --maqam-hijaz:#C85050; --maqam-bayat:#A07850;
+      --maqam-rast:#C8A860; --maqam-ajam:#7A9050; --maqam-nahawand:#6080A0;
+    }
+    *,*::before,*::after { margin:0; padding:0; box-sizing:border-box; }
+    html { scroll-behavior:smooth; }
+    body { background:var(--bg); color:var(--silver); font-family:'EB Garamond',serif; overflow-x:hidden; line-height:1.85; padding:40px 20px 80px; }
+    body::before { content:''; position:fixed; inset:0; pointer-events:none; z-index:0;
+      background: radial-gradient(ellipse at 18% 12%, rgba(176,64,48,.12) 0%, transparent 48%),
+                  radial-gradient(ellipse at 82% 28%, rgba(160,72,72,.12) 0%, transparent 45%),
+                  radial-gradient(ellipse at 12% 68%, rgba(176,64,48,.08) 0%, transparent 45%),
+                  radial-gradient(ellipse at 88% 82%, rgba(208,120,120,.10) 0%, transparent 42%),
+                  radial-gradient(ellipse at 50% 50%, rgba(20,12,8,.82) 0%, transparent 70%); }
+    body::after { content:''; position:fixed; inset:0; pointer-events:none; z-index:0;
+      background-image:
+        radial-gradient(1px 1px at 8% 10%, rgba(224,112,96,.36) 0%, transparent 100%),
+        radial-gradient(1px 1px at 48% 5%, rgba(208,120,120,.30) 0%, transparent 100%),
+        radial-gradient(1px 1px at 82% 16%, rgba(224,144,128,.32) 0%, transparent 100%),
+        radial-gradient(1px 1px at 25% 42%, rgba(200,104,80,.28) 0%, transparent 100%),
+        radial-gradient(1px 1px at 68% 58%, rgba(208,120,120,.28) 0%, transparent 100%),
+        radial-gradient(1.5px 1.5px at 12% 75%, rgba(192,96,72,.34) 0%, transparent 100%),
+        radial-gradient(1px 1px at 90% 78%, rgba(216,128,112,.30) 0%, transparent 100%),
+        radial-gradient(1px 1px at 35% 88%, rgba(208,120,120,.26) 0%, transparent 100%); }
+    .wrap { max-width:1080px; margin:0 auto; position:relative; z-index:1; }
+
+    /* PAGE HEADER */
+    .page-header { text-align:center; margin-bottom:80px; padding-bottom:40px; border-bottom:1px solid var(--sefer-bdr); position:relative; }
+    .page-header::after { content:'✦ ✡ ✦'; position:absolute; bottom:-14px; left:50%; transform:translateX(-50%); background:var(--bg); padding:0 20px; color:var(--sefer); font-size:.62em; letter-spacing:.55em; }
+    .eyebrow { font-family:'Cormorant Garamond',serif; font-style:italic; font-size:.78em; color:var(--sefer-lt); letter-spacing:.28em; text-transform:uppercase; margin-bottom:18px; opacity:.85; }
+    .sefer-letter { font-family:'Frank Ruhl Libre',serif; font-size:1.40em; color:var(--sefer); font-weight:900; display:inline-block; margin-bottom:6px; text-shadow:0 0 30px var(--sefer-glow); letter-spacing:.04em; }
+    .page-title-he { font-family:'Frank Ruhl Libre',serif; font-size:3.2em; font-weight:900; color:var(--ivory); direction:rtl; letter-spacing:.05em; text-shadow:0 0 80px var(--sefer-glow), 0 0 140px var(--pkd-glow); margin-bottom:8px; line-height:1.15; }
+    .page-subtitle-he { font-family:'Frank Ruhl Libre',serif; font-size:1.16em; color:var(--sefer-lt); direction:rtl; margin-bottom:10px; letter-spacing:.06em; }
+    .page-title-de { font-family:'Cormorant Garamond',serif; font-style:italic; font-size:1.14em; color:var(--silver-dim); margin-bottom:22px; }
+    .page-desc { font-size:1.0em; color:var(--text); max-width:780px; margin:0 auto; line-height:1.95; }
+    .page-desc strong { color:var(--ivory-dim); }
+    .page-desc em { color:var(--pkd-lt); font-style:italic; }
+
+    /* SONG SECTION */
+    .song-section { margin-bottom:90px; padding-bottom:70px; border-bottom:1px dashed var(--sefer-bdr); }
+    .song-header { display:flex; flex-wrap:wrap; align-items:flex-start; gap:20px; margin-bottom:40px; padding:24px 26px; background:var(--layer); border:1px solid var(--pkd-bdr); border-radius:10px; }
+    .song-num { font-family:'Frank Ruhl Libre',serif; font-size:2.6em; font-weight:900; direction:rtl; padding-right:14px; color:var(--pkd-lt); }
+    .song-meta { flex:1; display:flex; flex-direction:column; gap:8px; }
+    .korban-badge { font-family:'Cormorant Garamond',serif; font-style:italic; font-size:.82em; letter-spacing:.08em; color:var(--pkd-lt); }
+    .maqam-badge { font-family:'Cormorant Garamond',serif; font-style:italic; font-size:.78em; letter-spacing:.08em; display:inline-block; padding:3px 10px; border-radius:4px; color:#f0e8d8; font-weight:600; background:var(--maqam-hijaz); }
+    .song-title-he { font-family:'Frank Ruhl Libre',serif; font-size:1.7em; font-weight:700; color:var(--ivory); direction:rtl; letter-spacing:.04em; }
+    .song-title-de { font-family:'Cormorant Garamond',serif; font-style:italic; font-size:1.02em; color:var(--silver); }
+    .source-badge { font-family:'Cormorant Garamond',serif; font-style:italic; font-size:.74em; color:#A07060; line-height:1.6; }
+
+    /* ALIYAH BLOCK */
+    .aliyah-block { margin-bottom:42px; }
+    .aliyah-label { font-family:'Frank Ruhl Libre',serif; font-size:.94em; font-weight:700; direction:rtl; margin-bottom:9px; color:var(--pkd); letter-spacing:.06em; padding-bottom:6px; border-bottom:1px solid var(--pkd-bdr); }
+    .aliyah-label-de { font-family:'Cormorant Garamond',serif; font-style:italic; font-size:.78em; color:var(--silver-dim); display:inline-block; margin-right:14px; opacity:.85; }
+    .instrument-note { font-family:'Cormorant Garamond',serif; font-style:italic; font-size:.84em; color:var(--text); margin-bottom:14px; padding:10px 14px; background:rgba(160,72,72,.05); border-left:2px solid var(--pkd-dim); }
+    .lyrics-block { display:flex; gap:44px; flex-wrap:wrap; }
+    .lyrics-he, .lyrics-de { flex:1; min-width:280px; display:flex; flex-direction:column; gap:6px; }
+    .lyrics-he span.line { font-family:'Frank Ruhl Libre',serif; font-size:1.06em; color:var(--ivory); direction:rtl; line-height:1.95; }
+    .lyrics-de span.line { font-family:'Cormorant Garamond',serif; font-size:1.0em; color:var(--silver); line-height:1.88; }
+
+    /* TIKKUN BOX */
+    .tikkun-box { background:rgba(160,72,72,.07); border:1px solid rgba(160,72,72,.32); padding:30px; margin-top:40px; border-radius:6px; }
+    .tikkun-header { display:flex; flex-direction:column; gap:6px; margin-bottom:20px; }
+    .tikkun-title-he { font-family:'Frank Ruhl Libre',serif; font-size:1.25em; color:var(--ivory); direction:rtl; font-weight:700; letter-spacing:.04em; }
+    .tikkun-title-de { font-family:'Cormorant Garamond',serif; font-size:1.0em; font-style:italic; color:var(--silver); }
+    .tikkun-src { font-family:'Cormorant Garamond',serif; font-size:.74em; color:#A07060; line-height:1.7; }
+    .tikkun-body { font-family:'Cormorant Garamond',serif; font-size:.96em; color:var(--text); line-height:1.92; }
+    .tikkun-body strong { color:var(--ivory); }
+    .tikkun-body em { color:var(--pkd-lt); font-style:italic; }
+    .tikkun-tags { margin-top:18px; display:flex; gap:9px; flex-wrap:wrap; }
+    .tikkun-tag { background:rgba(160,72,72,.16); color:var(--pkd-lt); padding:4px 10px; border-radius:4px; font-size:.74em; font-family:'Frank Ruhl Libre',serif; direction:rtl; }
+
+    /* SCHI / KLIMAX-MOMENT */
+    .climax-box { background:linear-gradient(135deg,rgba(160,72,72,.18),rgba(176,64,48,.10),rgba(6,8,8,.88)); border:2px solid var(--pkd-bdr); padding:32px; margin-top:40px; margin-bottom:30px; border-radius:8px; }
+    .climax-label { font-family:'Cormorant Garamond',serif; font-style:italic; font-size:.82em; color:var(--pkd-lt); letter-spacing:.18em; text-transform:uppercase; margin-bottom:14px; text-align:center; }
+    .climax-verse-he { font-family:'Frank Ruhl Libre',serif; font-size:1.55em; font-weight:700; color:var(--ivory); direction:rtl; text-align:center; line-height:1.85; letter-spacing:.04em; text-shadow:0 0 30px var(--pkd-glow); }
+    .climax-verse-de { font-family:'Cormorant Garamond',serif; font-style:italic; font-size:1.05em; color:var(--silver); text-align:center; margin-top:14px; line-height:1.7; }
+    .climax-src { font-family:'Cormorant Garamond',serif; font-style:italic; font-size:.80em; color:var(--pkd-lt); text-align:center; margin-top:12px; opacity:.8; }
+
+    /* KODA */
+    .coda-box { background:rgba(6,8,8,.78); border:1px solid var(--pkd-bdr); padding:36px; text-align:center; margin-top:30px; margin-bottom:30px; border-radius:6px; }
+    .coda-label { font-family:'Cormorant Garamond',serif; font-style:italic; font-size:.80em; color:var(--pkd-lt); letter-spacing:.18em; text-transform:uppercase; margin-bottom:18px; }
+    .coda-whisper { font-family:'Frank Ruhl Libre',serif; font-size:1.20em; direction:rtl; line-height:2.3; opacity:.85; color:var(--pkd-lt); }
+    .coda-whisper strong { font-weight:900; opacity:1; color:var(--ivory); }
+
+    /* OR-CHOZER-BOX (Schluss zum Sefer) */
+    .or-chozer-box { background:linear-gradient(135deg,rgba(176,144,74,.10),rgba(176,64,48,.08),rgba(6,8,8,.92)); border:1px solid var(--maqam-saba); padding:28px; margin-top:30px; margin-bottom:30px; border-radius:6px; text-align:center; }
+    .or-chozer-label { font-family:'Cormorant Garamond',serif; font-style:italic; font-size:.80em; color:var(--maqam-saba); letter-spacing:.16em; text-transform:uppercase; margin-bottom:14px; }
+    .or-chozer-he { font-family:'Frank Ruhl Libre',serif; font-size:1.10em; color:var(--ivory-dim); direction:rtl; line-height:2.0; margin-bottom:10px; }
+    .or-chozer-de { font-family:'Cormorant Garamond',serif; font-style:italic; font-size:.92em; color:var(--silver-dim); line-height:1.7; }
+
+    /* SCENARIOS */
+    .scenarios-section { margin-top:54px; margin-bottom:40px; }
+    .scenarios-title { font-family:'Frank Ruhl Libre',serif; font-size:1.35em; font-weight:700; text-align:center; margin-bottom:34px; direction:rtl; color:var(--sefer-lt); letter-spacing:.06em; }
+    .scenarios-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(290px,1fr)); gap:26px; }
+    .scenario-card { background:linear-gradient(135deg,rgba(32,12,8,.78),rgba(6,8,8,.92)); border:1px solid var(--pkd-bdr); padding:24px; transition:transform .2s, box-shadow .2s; border-radius:6px; }
+    .scenario-card:hover { transform:translateY(-4px); box-shadow:0 10px 36px var(--pkd-glow); }
+    .sc-num { font-family:'Cormorant Garamond',serif; font-style:italic; font-size:.74em; letter-spacing:.14em; text-transform:uppercase; margin-bottom:7px; color:var(--pkd); }
+    .sc-title-he { font-family:'Frank Ruhl Libre',serif; font-size:1.10em; font-weight:700; color:var(--ivory); direction:rtl; margin-bottom:4px; letter-spacing:.04em; }
+    .sc-sub { font-family:'Cormorant Garamond',serif; font-style:italic; font-size:.84em; color:#A07060; margin-bottom:14px; }
+    .sc-body { font-size:.92em; color:var(--text); line-height:1.80; margin-bottom:14px; }
+    .sc-body strong { color:var(--pkd-lt); }
+    .key-moment { font-size:.86em; color:var(--pkd-lt); font-style:italic; margin-bottom:9px; padding-left:13px; border-left:2px solid var(--pkd-lt); }
+    .reaction { font-size:.86em; color:var(--text); font-style:italic; padding-left:13px; border-left:2px solid var(--sefer-dim); line-height:1.78; }
+
+    /* FOOTER */
+    .footer { margin-top:80px; padding-top:50px; border-top:1px solid var(--sefer-bdr); text-align:center; }
+    .footer-he { font-family:'Frank Ruhl Libre',serif; font-size:1.40em; font-weight:700; color:var(--sefer-lt); direction:rtl; margin-bottom:18px; text-shadow:0 0 30px var(--sefer-glow); letter-spacing:.06em; }
+    .footer-chain { font-family:'Frank Ruhl Libre',serif; font-size:1.0em; color:var(--silver); direction:rtl; margin-bottom:22px; letter-spacing:.09em; }
+    .footer-de { font-family:'Cormorant Garamond',serif; font-style:italic; font-size:.92em; color:var(--text); line-height:2.0; max-width:780px; margin:0 auto 24px; }
+    .footer-de strong { color:var(--ivory-dim); font-style:normal; }
+    .footer-amen { font-family:'Frank Ruhl Libre',serif; font-size:1.30em; color:var(--sefer-lt); direction:rtl; margin-top:24px; letter-spacing:.14em; text-shadow:0 0 30px var(--sefer-glow); }
+
+    @media (max-width:720px) {
+      .page-title-he { font-size:2.3em; }
+      .song-num { font-size:2.2em; }
+      .lyrics-block { flex-direction:column; gap:24px; }
+      .scenarios-grid { grid-template-columns:1fr; }
+      .climax-verse-he { font-size:1.20em; }
+      .footer-he { font-size:1.10em; }
+    }
+  </style>
+</head>
+<body>
+<div class="wrap">
+
+  <header class="page-header">
+    <div class="eyebrow">Sephardische Tora-Vertonung · Sefer HaParashot bemo Maqam</div>
+    <div class="sefer-letter">ב</div>
+    <div class="page-title-he">פָּרָשַׁת פְּקוּדֵי</div>
+    <div class="page-subtitle-he">סֵפֶר שְׁמוֹת · ל״ח:כ״א–מ׳:ל״ח · מַלְכוּת · מַקָּאם חִיגָ׳אז · חֲתִימַת סֵפֶר שְׁמוֹת</div>
+    <div class="page-title-de">Pekudei — Die königliche Vollendung des Mischkan und die Herabkunft der Schechina · Elfte und letzte Parashah des Sefer Schemot · Malchut im Maqam Hijaz</div>
+    <div class="page-desc">
+      Pekudei schließt das zweite Tora-Buch in seiner königlichen Vollendung. Mosche legt
+      öffentlich Rechenschaft ab über jedes Stück <em>Zahav · Kesef · Nechoschet</em>, das in das
+      Mischkan-Werk eingeflossen ist (Schemot 38:21–31) — die <em>Pekudim</em>, die Abrechnungen,
+      sind nicht administrative Trockenheit, sondern <em>Mussar</em> in Reinform: ein Mosche, der
+      die Heiligkeit nicht trennt von der Transparenz, ein Anführer, der dem Volk Rechenschaft gibt
+      vor allen anderen Rechenschaften. Es folgen die <em>Bigdei Kehunah</em> — Ephod, Choschen,
+      Me'il, Mizneft, Ketonet, Avnet, Tziz Nezer HaKodesch (Kap. 39) — mit dem zwölffachen Refrain
+      <em>„כַּאֲשֶׁר צִוָּה אֲדֹנָי אֶת־מֹשֶׁה"</em>, der wie ein Schritt-für-Schritt-Bundes-Echo durch
+      den ganzen Werk-Abschluss läuft. Vayaviu et haMischkan el Moshe (39:33): das Volk bringt das
+      Werk zu Mosche, der prüft, segnet (39:43 — <em>„וַיְבָרֶךְ אֹתָם מֹשֶׁה"</em>) und am ersten Nissan
+      des zweiten Jahres aufrichtet. Die letzten Verse (40:34–38) bringen das eine, alles bekrönende
+      Wunder: <em>„וַיְכַס הֶעָנָן אֶת־אֹהֶל מוֹעֵד וּכְבוֹד אֲדֹנָי מָלֵא אֶת־הַמִּשְׁכָּן"</em> — die
+      Schechina nimmt Wohnung. Sefirot-Anker: <strong>Malchut</strong> — die unterste Sefirah,
+      durch die alle höheren in die Welt eintreten, die manifestierte königliche Wohnung Adonais
+      unter Israel. Maqam: <strong>Hijaz</strong> — königlich-festlich, sehnsucht-erfüllt, mit
+      finalem <em>Or-Chozer-Saba-Echo</em>, das den Schluss des Sefers zurück mit dem Anfang
+      <em>Schemot 1:1</em> verbindet. Tora-Text 1:1 nach sephardischer Tradition, Tetragrammaton
+      durchgängig als אֲדֹנָי, Maschiach ben David.
+    </div>
+  </header>
+
+  <!-- ══ SONG SECTION — PARASHAT PEKUDEI ══ -->
+  <section class="song-section" id="pekudei">
+
+    <div class="song-header">
+      <div class="song-num">י״א</div>
+      <div class="song-meta">
+        <div class="korban-badge">Malchut — מַלְכוּת · Königliche Vollendung und Schechina-Wohnung</div>
+        <div class="song-title-he">פָּרָשַׁת פְּקוּדֵי</div>
+        <div class="song-title-de">Pekudei — „Dies sind die Abrechnungen des Mischkan" · Schemot 38:21–40:38</div>
+        <div class="maqam-badge">מַקָּאם חִיגָ׳אז · Hijaz · ~60 BPM rubato</div>
+        <div class="source-badge">שְׁמוֹת ל״ח:כ״א–מ׳:ל״ח · רמב״ם הלכות בֵּית הַבְּחִירָה · רמב״ם הלכות כְּלֵי הַמִּקְדָּשׁ וְעוֹבְדִים בּוֹ · רמב״ם הלכות שְׁקָלִים · רמב״ם הלכות מְלָכִים (לְמָשִׁיחַ בֶּן דָּוִד) · בְּרָכוֹת נ״ה. · רש״ש נְהַר שָׁלוֹם דְּרוּשׁ הִשְׁתַּכְּנוּת הַשְּׁכִינָה · רמח״ל מִשְׁכְּנֵי עֶלְיוֹן פֶּרֶק י״ח · רמח״ל דֶּרֶךְ אֲדֹנָי חֵלֶק א׳ פֶּרֶק ד׳ (הַשְׁגָּחָה) · רמח״ל מְסִלַּת יְשָׁרִים פֶּרֶק י״ט (קְדֻשָּׁה) · אור החיים על שְׁמוֹת ל״ח:כ״א וְל״ט:מ״ג וְמ׳:ל״ד · ספר הָעִקָּרִים מַאֲמָר רִאשׁוֹן · בן איש חי שָׁנָה רִאשׁוֹנָה פְּקוּדֵי · שד״ל פֵּרוּשׁ עַל הַתּוֹרָה (שְׁמוֹת ל״ח:כ״א משכן העדות · ל״ח:כ״ד הככר) · כַּף הַחַיִּים אוֹרַח חַיִּים · יָבִיעַ אוֹמֶר · חֲזוֹן עוֹבַדְיָה.</div>
+      </div>
+    </div>
+
+
+    <!-- ── ALIYAH 1 · ראשון · Schemot 38:21–39:1 — Pekudei-Eröffnung, Bezalel/Oholiav, Abrechnungen, Bigdei-Serad ── -->
+    <div class="aliyah-block">
+      <div class="aliyah-label">עֲלִיָּה רִאשׁוֹנָה — אֵלֶּה פְקוּדֵי הַמִּשְׁכָּן · מִשְׁכַּן הָעֵדֻת<span class="aliyah-label-de">Erste Aliyah · Schemot 38:21–39:1 · Die Abrechnungen des Mischkan · Bezalel und Oholiav · Gold, Silber, Kupfer · Bigdei-Serad</span></div>
+      <div class="instrument-note">[no percussion] [no drums] [no choir] [solo acoustic guitar — Hijaz opening with measured royal counting tones, the kikar-counting as a slow processional, the augmented-second drop on „mischkan ha'edut", rubato around 60 BPM, no percussion, no drums, no beat] Gitarre: Hijaz öffnet mit gemessenem königlich-zählendem Ton — die Kikar-Abrechnung als langsame Prozession, der charakteristische Hijaz-Halbton-Eineinhalbton-Sturz beim „Mischkan HaEdut".</div>
+      <div class="lyrics-block">
+        <div class="lyrics-he" dir="rtl">
+          <span class="line">אֵלֶּה פְקוּדֵי הַמִּשְׁכָּן מִשְׁכַּן הָעֵדֻת אֲשֶׁר פֻּקַּד עַל־פִּי מֹשֶׁה עֲבֹדַת הַלְוִיִּם בְּיַד אִיתָמָר בֶּן־אַהֲרֹן הַכֹּהֵן׃</span>
+          <span class="line">וּבְצַלְאֵל בֶּן־אוּרִי בֶן־חוּר לְמַטֵּה יְהוּדָה עָשָׂה אֵת כׇּל־אֲשֶׁר־צִוָּה אֲדֹנָי אֶת־מֹשֶׁה׃</span>
+          <span class="line">וְאִתּוֹ אׇהֳלִיאָב בֶּן־אֲחִיסָמָךְ לְמַטֵּה־דָן חָרָשׁ וְחֹשֵׁב וְרֹקֵם בַּתְּכֵלֶת וּבָאַרְגָּמָן וּבְתוֹלַעַת הַשָּׁנִי וּבַשֵּׁשׁ׃</span>
+          <span class="line">כׇּל־הַזָּהָב הֶעָשׂוּי לַמְּלָאכָה בְּכֹל מְלֶאכֶת הַקֹּדֶשׁ וַיְהִי זְהַב הַתְּנוּפָה תֵּשַׁע וְעֶשְׂרִים כִּכָּר וּשְׁבַע מֵאוֹת וּשְׁלֹשִׁים שֶׁקֶל בְּשֶׁקֶל הַקֹּדֶשׁ׃</span>
+          <span class="line">וְכֶסֶף פְּקוּדֵי הָעֵדָה מְאַת כִּכָּר וְאֶלֶף וּשְׁבַע מֵאוֹת וַחֲמִשָּׁה וְשִׁבְעִים שֶׁקֶל בְּשֶׁקֶל הַקֹּדֶשׁ׃</span>
+          <span class="line">בֶּקַע לַגֻּלְגֹּלֶת מַחֲצִית הַשֶּׁקֶל בְּשֶׁקֶל הַקֹּדֶשׁ לְכֹל הָעֹבֵר עַל־הַפְּקֻדִים מִבֶּן עֶשְׂרִים שָׁנָה וָמַעְלָה לְשֵׁשׁ־מֵאוֹת אֶלֶף וּשְׁלֹשֶׁת אֲלָפִים וַחֲמֵשׁ מֵאוֹת וַחֲמִשִּׁים׃</span>
+          <span class="line">וַיְהִי מְאַת כִּכַּר הַכֶּסֶף לָצֶקֶת אֵת אַדְנֵי הַקֹּדֶשׁ וְאֵת אַדְנֵי הַפָּרֹכֶת מְאַת אֲדָנִים לִמְאַת הַכִּכָּר כִּכָּר לָאָדֶן׃</span>
+          <span class="line">וְאֶת־הָאֶלֶף וּשְׁבַע הַמֵּאוֹת וַחֲמִשָּׁה וְשִׁבְעִים עָשָׂה וָוִים לָעַמּוּדִים וְצִפָּה רָאשֵׁיהֶם וְחִשַּׁק אֹתָם׃</span>
+          <span class="line">וּנְחֹשֶׁת הַתְּנוּפָה שִׁבְעִים כִּכָּר וְאַלְפַּיִם וְאַרְבַּע־מֵאוֹת שָׁקֶל׃</span>
+          <span class="line">וַיַּעַשׂ בָּהּ אֶת־אַדְנֵי פֶּתַח אֹהֶל מוֹעֵד וְאֵת מִזְבַּח הַנְּחֹשֶׁת וְאֶת־מִכְבַּר הַנְּחֹשֶׁת אֲשֶׁר־לוֹ וְאֵת כׇּל־כְּלֵי הַמִּזְבֵּחַ׃</span>
+          <span class="line">וְאֶת־אַדְנֵי הֶחָצֵר סָבִיב וְאֶת־אַדְנֵי שַׁעַר הֶחָצֵר וְאֵת כׇּל־יִתְדֹת הַמִּשְׁכָּן וְאֶת־כׇּל־יִתְדֹת הֶחָצֵר סָבִיב׃</span>
+          <span class="line">וּמִן־הַתְּכֵלֶת וְהָאַרְגָּמָן וְתוֹלַעַת הַשָּׁנִי עָשׂוּ בִגְדֵי־שְׂרָד לְשָׁרֵת בַּקֹּדֶשׁ וַיַּעֲשׂוּ אֶת־בִּגְדֵי הַקֹּדֶשׁ אֲשֶׁר לְאַהֲרֹן כַּאֲשֶׁר צִוָּה אֲדֹנָי אֶת־מֹשֶׁה׃</span>
+        </div>
+        <div class="lyrics-de">
+          <span class="line">(38:21) Dies sind die Abrechnungen des Mischkan, des Mischkan der Bezeugung, die auf den Befehl Moschens hin abgerechnet wurden — der Dienst der Levitim unter der Hand Itamars, des Sohnes Aharons, des Kohen.</span>
+          <span class="line">(22) Und Bezalel, der Sohn Uris, des Sohnes Churs, vom Stamm Yehuda, machte alles, was Adonai Mosche befohlen hatte.</span>
+          <span class="line">(23) Und mit ihm Oholiav, der Sohn Achisamachs, vom Stamm Dan — Schmied, Künstler und Sticker im Techelet, im Argaman, im Tola'at Schani und im Schesch.</span>
+          <span class="line">(24) Alles Gold, das für das Werk verarbeitet wurde, in jeder Arbeit des Heiligtums — und es war das Gold der Hebe: neunundzwanzig Kikar und siebenhundertdreißig Schekel nach dem Schekel des Heiligtums.</span>
+          <span class="line">(25) Und das Silber der Gemusterten der Gemeinde: hundert Kikar und tausendsiebenhundertfünfundsiebzig Schekel nach dem Schekel des Heiligtums.</span>
+          <span class="line">(26) Ein Beka pro Kopf, ein halber Schekel nach dem Schekel des Heiligtums — für jeden, der hinüberging zu den Gemusterten, vom zwanzigsten Jahr an aufwärts — für sechshundertdreitausendfünfhundertfünfzig.</span>
+          <span class="line">(27) Und es waren hundert Kikar des Silbers, um die Sockel des Heiligtums zu gießen und die Sockel des Vorhangs — hundert Sockel zu den hundert Kikar, ein Kikar pro Sockel.</span>
+          <span class="line">(28) Und aus den tausendsiebenhundertfünfundsiebzig machte er die Haken für die Säulen, überzog ihre Köpfe und versah sie mit Querverbindungen.</span>
+          <span class="line">(29) Und das Kupfer der Hebe: siebzig Kikar und zweitausendvierhundert Schekel.</span>
+          <span class="line">(30) Und damit machte er die Sockel des Eingangs des Zelts der Begegnung, den Kupferaltar, das Kupfer-Gitter, das zu ihm gehört, und alle Geräte des Altars.</span>
+          <span class="line">(31) Und die Sockel des Vorhofs ringsumher, die Sockel des Vorhof-Tors, alle Pflöcke des Mischkan und alle Pflöcke des Vorhofs ringsumher.</span>
+          <span class="line">(39:1) Und aus dem Techelet, dem Argaman und dem Tola'at Schani machten sie die Dienstgewänder, um im Heiligtum zu dienen, und sie machten die heiligen Gewänder, die für Aharon waren — wie Adonai dem Mosche befohlen hatte.</span>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- ── ALIYAH 2 · שני · Schemot 39:2–21 — Ephod und Choschen ── -->
+    <div class="aliyah-block">
+      <div class="aliyah-label">עֲלִיָּה שְׁנִיָּה — וַיַּעַשׂ אֶת־הָאֵפֹד · וַיַּעַשׂ אֶת־הַחֹשֶׁן<span class="aliyah-label-de">Zweite Aliyah · Schemot 39:2–21 · Ephod aus Gold-Techelet-Argaman · Choschen mit zwölf Edelsteinen · Verbindung Choschen-Ephod durch Techelet-Schnur</span></div>
+      <div class="instrument-note">[no percussion] [no drums] [no choir] [acoustic guitar — Hijaz fingerpicking deepening, the twelve-stones procession as a slow gemstone catalog, augmented-second ornaments on every tribe-name, rubato 60 BPM, no percussion] Gitarre: Hijaz vertieft im Fingerpicking — die Zwölf-Steine-Prozession als langsamer Edelstein-Katalog, Hijaz-Ornamente auf jedem Stammesnamen.</div>
+      <div class="lyrics-block">
+        <div class="lyrics-he" dir="rtl">
+          <span class="line">וַיַּעַשׂ אֶת־הָאֵפֹד זָהָב תְּכֵלֶת וְאַרְגָּמָן וְתוֹלַעַת שָׁנִי וְשֵׁשׁ מׇשְׁזָר׃</span>
+          <span class="line">וַיְרַקְּעוּ אֶת־פַּחֵי הַזָּהָב וְקִצֵּץ פְּתִילִם לַעֲשׂוֹת בְּתוֹךְ הַתְּכֵלֶת וּבְתוֹךְ הָאַרְגָּמָן וּבְתוֹךְ תּוֹלַעַת הַשָּׁנִי וּבְתוֹךְ הַשֵּׁשׁ מַעֲשֵׂה חֹשֵׁב׃</span>
+          <span class="line">כְּתֵפֹת עָשׂוּ־לוֹ חֹבְרֹת עַל־שְׁנֵי קְצוֹתָיו חֻבָּר׃</span>
+          <span class="line">וְחֵשֶׁב אֲפֻדָּתוֹ אֲשֶׁר עָלָיו מִמֶּנּוּ הוּא כְּמַעֲשֵׂהוּ זָהָב תְּכֵלֶת וְאַרְגָּמָן וְתוֹלַעַת שָׁנִי וְשֵׁשׁ מׇשְׁזָר כַּאֲשֶׁר צִוָּה אֲדֹנָי אֶת־מֹשֶׁה׃</span>
+          <span class="line">וַיַּעֲשׂוּ אֶת־אַבְנֵי הַשֹּׁהַם מֻסַבֹּת מִשְׁבְּצֹת זָהָב מְפֻתָּחֹת פִּתּוּחֵי חוֹתָם עַל־שְׁמוֹת בְּנֵי יִשְׂרָאֵל׃</span>
+          <span class="line">וַיָּשֶׂם אֹתָם עַל כִּתְפֹת הָאֵפֹד אַבְנֵי זִכָּרוֹן לִבְנֵי יִשְׂרָאֵל כַּאֲשֶׁר צִוָּה אֲדֹנָי אֶת־מֹשֶׁה׃</span>
+          <span class="line">וַיַּעַשׂ אֶת־הַחֹשֶׁן מַעֲשֵׂה חֹשֵׁב כְּמַעֲשֵׂה אֵפֹד זָהָב תְּכֵלֶת וְאַרְגָּמָן וְתוֹלַעַת שָׁנִי וְשֵׁשׁ מׇשְׁזָר׃</span>
+          <span class="line">רָבוּעַ הָיָה כָּפוּל עָשׂוּ אֶת־הַחֹשֶׁן זֶרֶת אׇרְכּוֹ וְזֶרֶת רׇחְבּוֹ כָּפוּל׃</span>
+          <span class="line">וַיְמַלְאוּ־בוֹ אַרְבָּעָה טוּרֵי אָבֶן טוּר אֹדֶם פִּטְדָה וּבָרֶקֶת הַטּוּר הָאֶחָד׃</span>
+          <span class="line">וְהַטּוּר הַשֵּׁנִי נֹפֶךְ סַפִּיר וְיָהֲלֹם׃</span>
+          <span class="line">וְהַטּוּר הַשְּׁלִישִׁי לֶשֶׁם שְׁבוֹ וְאַחְלָמָה׃</span>
+          <span class="line">וְהַטּוּר הָרְבִיעִי תַּרְשִׁישׁ שֹׁהַם וְיָשְׁפֵה מוּסַבֹּת מִשְׁבְּצֹת זָהָב בְּמִלֻּאֹתָם׃</span>
+          <span class="line">וְהָאֲבָנִים עַל־שְׁמֹת בְּנֵי־יִשְׂרָאֵל הֵנָּה שְׁתֵּים עֶשְׂרֵה עַל־שְׁמֹתָם פִּתּוּחֵי חֹתָם אִישׁ עַל־שְׁמוֹ לִשְׁנֵים עָשָׂר שָׁבֶט׃</span>
+          <span class="line">וַיַּעֲשׂוּ עַל־הַחֹשֶׁן שַׁרְשְׁרֹת גַּבְלֻת מַעֲשֵׂה עֲבֹת זָהָב טָהוֹר׃</span>
+          <span class="line">וַיַּעֲשׂוּ שְׁתֵּי מִשְׁבְּצֹת זָהָב וּשְׁתֵּי טַבְּעֹת זָהָב וַיִּתְּנוּ אֶת־שְׁתֵּי הַטַּבָּעֹת עַל־שְׁנֵי קְצוֹת הַחֹשֶׁן׃</span>
+          <span class="line">וַיִּתְּנוּ שְׁתֵּי הָעֲבֹתֹת הַזָּהָב עַל־שְׁתֵּי הַטַּבָּעֹת עַל־קְצוֹת הַחֹשֶׁן׃</span>
+          <span class="line">וְאֵת שְׁתֵּי קְצוֹת שְׁתֵּי הָעֲבֹתֹת נָתְנוּ עַל־שְׁתֵּי הַמִּשְׁבְּצֹת וַיִּתְּנֻם עַל־כִּתְפֹת הָאֵפֹד אֶל־מוּל פָּנָיו׃</span>
+          <span class="line">וַיַּעֲשׂוּ שְׁתֵּי טַבְּעֹת זָהָב וַיָּשִׂימוּ עַל־שְׁנֵי קְצוֹת הַחֹשֶׁן עַל־שְׂפָתוֹ אֲשֶׁר אֶל־עֵבֶר הָאֵפֹד בָּיְתָה׃</span>
+          <span class="line">וַיַּעֲשׂוּ שְׁתֵּי טַבְּעֹת זָהָב וַיִּתְּנֻם עַל־שְׁתֵּי כִתְפֹת הָאֵפֹד מִלְּמַטָּה מִמּוּל פָּנָיו לְעֻמַּת מַחְבַּרְתּוֹ מִמַּעַל לְחֵשֶׁב הָאֵפֹד׃</span>
+          <span class="line">וַיִּרְכְּסוּ אֶת־הַחֹשֶׁן מִטַּבְּעֹתָיו אֶל־טַבְּעֹת הָאֵפֹד בִּפְתִיל תְּכֵלֶת לִהְיֹת עַל־חֵשֶׁב הָאֵפֹד וְלֹא־יִזַּח הַחֹשֶׁן מֵעַל הָאֵפֹד כַּאֲשֶׁר צִוָּה אֲדֹנָי אֶת־מֹשֶׁה׃</span>
+        </div>
+        <div class="lyrics-de">
+          <span class="line">(39:2) Und er machte das Ephod aus Gold, Techelet, Argaman, Tola'at Schani und Schesch Moschsar.</span>
+          <span class="line">(3) Und sie hämmerten die Gold-Bleche aus und schnitten Fäden, um sie in das Techelet, das Argaman, den Tola'at Schani und den Schesch einzuflechten — Werk des Künstlers.</span>
+          <span class="line">(4) Schulterstücke machten sie ihm, miteinander verbunden — an seinen beiden Enden wurde es verbunden.</span>
+          <span class="line">(5) Und der Gürtel seines Ephod, der auf ihm war, kam aus ihm hervor wie sein Werk: Gold, Techelet, Argaman, Tola'at Schani und Schesch Moschsar — wie Adonai dem Mosche befohlen hatte.</span>
+          <span class="line">(6) Und sie bereiteten die Schoham-Steine, eingefasst in Gold-Geflechte, graviert in Siegel-Gravur, mit den Namen der Söhne Israels.</span>
+          <span class="line">(7) Und er setzte sie auf die Schulterstücke des Ephod als Erinnerungssteine für die Söhne Israels — wie Adonai dem Mosche befohlen hatte.</span>
+          <span class="line">(8) Und er machte den Choschen, Werk des Künstlers, wie das Werk des Ephod: Gold, Techelet, Argaman, Tola'at Schani und Schesch Moschsar.</span>
+          <span class="line">(9) Viereckig sollte er sein, doppelt machten sie den Choschen — eine Spanne seine Länge, eine Spanne seine Breite, doppelt.</span>
+          <span class="line">(10) Und sie füllten ihn mit vier Reihen Steinen: eine Reihe Odem, Pitda und Bareket — die erste Reihe.</span>
+          <span class="line">(11) Die zweite Reihe: Nofech, Sappir und Yahalom.</span>
+          <span class="line">(12) Die dritte Reihe: Leschem, Schevo und Achlama.</span>
+          <span class="line">(13) Die vierte Reihe: Tarschisch, Schoham und Yaschpe — eingefasst in Gold-Geflechte in ihren Fassungen.</span>
+          <span class="line">(14) Und die Steine waren auf die Namen der Söhne Israels — zwölf nach ihren Namen, Siegel-Gravur, jeder auf seinen Namen, für die zwölf Stämme.</span>
+          <span class="line">(15) Und sie machten auf den Choschen geflochtene Ketten, Werk aus geflochtenen Schnüren, aus reinem Gold.</span>
+          <span class="line">(16) Und sie machten zwei Gold-Geflechte und zwei Gold-Ringe und setzten die zwei Ringe an die beiden Enden des Choschen.</span>
+          <span class="line">(17) Und sie legten die zwei goldenen Schnüre auf die zwei Ringe an den Enden des Choschen.</span>
+          <span class="line">(18) Und die zwei Enden der zwei Schnüre legten sie auf die zwei Geflechte und befestigten sie an den Schulterstücken des Ephod, an dessen Vorderseite.</span>
+          <span class="line">(19) Und sie machten zwei Gold-Ringe und legten sie an die zwei Enden des Choschen, an seinen Rand, der zur Innenseite des Ephod hin lag.</span>
+          <span class="line">(20) Und sie machten zwei Gold-Ringe und legten sie an die zwei Schulterstücke des Ephod, unten an seiner Vorderseite, dicht bei seiner Naht, oberhalb des Ephod-Gürtels.</span>
+          <span class="line">(21) Und sie banden den Choschen von seinen Ringen an die Ringe des Ephod mit einer Techelet-Schnur, damit er auf dem Gürtel des Ephod bleibe und der Choschen sich nicht vom Ephod entferne — wie Adonai dem Mosche befohlen hatte.</span>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- ── ALIYAH 3 · שלישי · Schemot 39:22–32 — Me'il, Pa'amonim, Bigdei Aharon, Tziz, Vatekel ── -->
+    <div class="aliyah-block">
+      <div class="aliyah-label">עֲלִיָּה שְׁלִישִׁית — וַיַּעַשׂ אֶת־מְעִיל הָאֵפֹד · צִיץ נֵזֶר־הַקֹּדֶשׁ · וַתֵּכֶל<span class="aliyah-label-de">Dritte Aliyah · Schemot 39:22–32 · Me'il mit Granatäpfeln und Glöckchen · Ketonet, Mizneft, Mignaba, Avnet · Tziz Nezer HaKodesch „Kodesch laAdonai" · Vatekel — und das Werk wurde vollendet</span></div>
+      <div class="instrument-note">[no percussion] [no drums] [no choir] [acoustic guitar — Hijaz with delicate ornamentation, the pa'amon-bell sounds suggested by single sustained notes, then the Tziz „Kodesch laAdonai" as a forte-mf rise, the Vatekel as a triumphant closing tone, no percussion] Gitarre: Hijaz mit feinen Ornamenten — die Pa'amon-Glöckchen als angedeutete Einzeltöne, dann der Tziz <em>„Kodesch laAdonai"</em> als forte-mf-Aufstieg, das Vatekel als triumphaler Schluss-Ton.</div>
+      <div class="lyrics-block">
+        <div class="lyrics-he" dir="rtl">
+          <span class="line">וַיַּעַשׂ אֶת־מְעִיל הָאֵפֹד מַעֲשֵׂה אֹרֵג כְּלִיל תְּכֵלֶת׃</span>
+          <span class="line">וּפִי־הַמְּעִיל בְּתוֹכוֹ כְּפִי תַחְרָא שָׂפָה לְפִיו סָבִיב לֹא יִקָּרֵעַ׃</span>
+          <span class="line">וַיַּעֲשׂוּ עַל־שׁוּלֵי הַמְּעִיל רִמּוֹנֵי תְּכֵלֶת וְאַרְגָּמָן וְתוֹלַעַת שָׁנִי מׇשְׁזָר׃</span>
+          <span class="line">וַיַּעֲשׂוּ פַעֲמֹנֵי זָהָב טָהוֹר וַיִּתְּנוּ אֶת־הַפַּעֲמֹנִים בְּתוֹךְ הָרִמֹּנִים עַל־שׁוּלֵי הַמְּעִיל סָבִיב בְּתוֹךְ הָרִמֹּנִים׃</span>
+          <span class="line">פַּעֲמֹן וְרִמֹּן פַּעֲמֹן וְרִמֹּן עַל־שׁוּלֵי הַמְּעִיל סָבִיב לְשָׁרֵת כַּאֲשֶׁר צִוָּה אֲדֹנָי אֶת־מֹשֶׁה׃</span>
+          <span class="line">וַיַּעֲשׂוּ אֶת־הַכׇּתְנֹת שֵׁשׁ מַעֲשֵׂה אֹרֵג לְאַהֲרֹן וּלְבָנָיו׃</span>
+          <span class="line">וְאֵת הַמִּצְנֶפֶת שֵׁשׁ וְאֶת־פַּאֲרֵי הַמִּגְבָּעֹת שֵׁשׁ וְאֶת־מִכְנְסֵי הַבָּד שֵׁשׁ מׇשְׁזָר׃</span>
+          <span class="line">וְאֶת־הָאַבְנֵט שֵׁשׁ מׇשְׁזָר וּתְכֵלֶת וְאַרְגָּמָן וְתוֹלַעַת שָׁנִי מַעֲשֵׂה רֹקֵם כַּאֲשֶׁר צִוָּה אֲדֹנָי אֶת־מֹשֶׁה׃</span>
+          <span class="line">וַיַּעֲשׂוּ אֶת־צִיץ נֵזֶר־הַקֹּדֶשׁ זָהָב טָהוֹר וַיִּכְתְּבוּ עָלָיו מִכְתַּב פִּתּוּחֵי חוֹתָם קֹדֶשׁ לַאדֹנָי׃</span>
+          <span class="line">וַיִּתְּנוּ עָלָיו פְּתִיל תְּכֵלֶת לָתֵת עַל־הַמִּצְנֶפֶת מִלְמָעְלָה כַּאֲשֶׁר צִוָּה אֲדֹנָי אֶת־מֹשֶׁה׃</span>
+          <span class="line">וַתֵּכֶל כׇּל־עֲבֹדַת מִשְׁכַּן אֹהֶל מוֹעֵד וַיַּעֲשׂוּ בְּנֵי יִשְׂרָאֵל כְּכֹל אֲשֶׁר צִוָּה אֲדֹנָי אֶת־מֹשֶׁה כֵּן עָשׂוּ׃</span>
+        </div>
+        <div class="lyrics-de">
+          <span class="line">(39:22) Und er machte den Me'il des Ephod, Werk des Webers, ganz aus Techelet.</span>
+          <span class="line">(23) Und der Halsausschnitt des Me'il in der Mitte war wie ein Panzer-Halsausschnitt, mit einer Borte rings um den Ausschnitt, damit er nicht reiße.</span>
+          <span class="line">(24) Und sie machten an den Säumen des Me'il Granatäpfel aus Techelet, Argaman und Tola'at Schani moschsar.</span>
+          <span class="line">(25) Und sie machten Glöckchen aus reinem Gold und setzten die Glöckchen zwischen die Granatäpfel an den Säumen des Me'il ringsumher zwischen die Granatäpfel.</span>
+          <span class="line">(26) Glöckchen und Granatapfel, Glöckchen und Granatapfel — an den Säumen des Me'il ringsumher, zum Dienen, wie Adonai dem Mosche befohlen hatte.</span>
+          <span class="line">(27) Und sie machten die Leibröcke aus Schesch, Werk des Webers, für Aharon und seine Söhne.</span>
+          <span class="line">(28) Und die Mizneft aus Schesch und die Kopfbund-Zierden aus Schesch und die Leinen-Beinkleider aus Schesch moschsar.</span>
+          <span class="line">(29) Und den Gürtel aus Schesch moschsar, Techelet, Argaman und Tola'at Schani — Werk des Stickers — wie Adonai dem Mosche befohlen hatte.</span>
+          <span class="line">(30) Und sie machten den Tziz, das heilige Diadem, aus reinem Gold und schrieben darauf in Siegel-Gravur die Schrift: <em>„Kodesch laAdonai"</em>.</span>
+          <span class="line">(31) Und sie setzten daran eine Techelet-Schnur, um ihn oben an der Mizneft anzubringen — wie Adonai dem Mosche befohlen hatte.</span>
+          <span class="line">(32) Und es wurde das ganze Werk des Mischkan Ohel Mo'ed vollendet. Und die Söhne Israels machten alles — ganz wie Adonai dem Mosche befohlen hatte, so machten sie.</span>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- ── ALIYAH 4 · רביעי · Schemot 39:33–43 — Vayaviu el Mosche · Vayar Mosche · Vaybarech otam Moshe ── -->
+    <div class="aliyah-block">
+      <div class="aliyah-label">עֲלִיָּה רְבִיעִית — וַיָּבִיאוּ אֶת־הַמִּשְׁכָּן אֶל־מֹשֶׁה · וַיְבָרֶךְ אֹתָם מֹשֶׁה<span class="aliyah-label-de">Vierte Aliyah · Schemot 39:33–43 · Das fertige Werk wird zu Mosche gebracht · Inventar aller Mischkan-Teile · Mosche prüft und segnet das Volk</span></div>
+      <div class="instrument-note">[no percussion] [no drums] [no choir] [acoustic guitar — Hijaz building toward solemn approval, the inventory-procession of every component, then the climactic „vayar Mosche et kol ha'melachah ... vaybarech otam Moshe" as a tender mf-blessing, no percussion] Gitarre: Hijaz steigt zur feierlichen Annahme — die Inventar-Prozession jeder Komponente, dann das gipfelnde <em>„Vayar Mosche... Vaybarech otam Moshe"</em> als zarter mf-Segen.</div>
+      <div class="lyrics-block">
+        <div class="lyrics-he" dir="rtl">
+          <span class="line">וַיָּבִיאוּ אֶת־הַמִּשְׁכָּן אֶל־מֹשֶׁה אֶת־הָאֹהֶל וְאֶת־כׇּל־כֵּלָיו קְרָסָיו קְרָשָׁיו בְּרִיחָו וְעַמֻּדָיו וַאֲדָנָיו׃</span>
+          <span class="line">וְאֶת־מִכְסֵה עוֹרֹת הָאֵילִם הַמְאׇדָּמִים וְאֶת־מִכְסֵה עֹרֹת הַתְּחָשִׁים וְאֵת פָּרֹכֶת הַמָּסָךְ׃</span>
+          <span class="line">אֶת־אֲרוֹן הָעֵדֻת וְאֶת־בַּדָּיו וְאֵת הַכַּפֹּרֶת׃</span>
+          <span class="line">אֶת־הַשֻּׁלְחָן אֶת־כׇּל־כֵּלָיו וְאֵת לֶחֶם הַפָּנִים׃</span>
+          <span class="line">אֶת־הַמְּנֹרָה הַטְּהֹרָה אֶת־נֵרֹתֶיהָ נֵרֹת הַמַּעֲרָכָה וְאֶת־כׇּל־כֵּלֶיהָ וְאֵת שֶׁמֶן הַמָּאוֹר׃</span>
+          <span class="line">וְאֵת מִזְבַּח הַזָּהָב וְאֵת שֶׁמֶן הַמִּשְׁחָה וְאֵת קְטֹרֶת הַסַּמִּים וְאֵת מָסַךְ פֶּתַח הָאֹהֶל׃</span>
+          <span class="line">אֵת מִזְבַּח הַנְּחֹשֶׁת וְאֶת־מִכְבַּר הַנְּחֹשֶׁת אֲשֶׁר־לוֹ אֶת־בַּדָּיו וְאֶת־כׇּל־כֵּלָיו אֶת־הַכִּיֹּר וְאֶת־כַּנּוֹ׃</span>
+          <span class="line">אֵת קַלְעֵי הֶחָצֵר אֶת־עַמֻּדֶיהָ וְאֶת־אֲדָנֶיהָ וְאֶת־הַמָּסָךְ לְשַׁעַר הֶחָצֵר אֶת־מֵיתָרָיו וִיתֵדֹתֶיהָ וְאֵת כׇּל־כְּלֵי עֲבֹדַת הַמִּשְׁכָּן לְאֹהֶל מוֹעֵד׃</span>
+          <span class="line">אֶת־בִּגְדֵי הַשְּׂרָד לְשָׁרֵת בַּקֹּדֶשׁ אֶת־בִּגְדֵי הַקֹּדֶשׁ לְאַהֲרֹן הַכֹּהֵן וְאֶת־בִּגְדֵי בָנָיו לְכַהֵן׃</span>
+          <span class="line">כְּכֹל אֲשֶׁר־צִוָּה אֲדֹנָי אֶת־מֹשֶׁה כֵּן עָשׂוּ בְּנֵי יִשְׂרָאֵל אֵת כׇּל־הָעֲבֹדָה׃</span>
+          <span class="line">וַיַּרְא מֹשֶׁה אֶת־כׇּל־הַמְּלָאכָה וְהִנֵּה עָשׂוּ אֹתָהּ כַּאֲשֶׁר צִוָּה אֲדֹנָי כֵּן עָשׂוּ וַיְבָרֶךְ אֹתָם מֹשֶׁה׃</span>
+        </div>
+        <div class="lyrics-de">
+          <span class="line">(39:33) Und sie brachten den Mischkan zu Mosche — das Zelt und alle seine Geräte: seine Haken, seine Bretter, seine Riegel, seine Säulen und seine Sockel —</span>
+          <span class="line">(34) und die Decke aus rotgefärbten Widderhäuten, die Decke aus Tachasch-Häuten und den Vorhang der Verhüllung —</span>
+          <span class="line">(35) den Aron HaEdut, seine Tragestangen und die Kapporet —</span>
+          <span class="line">(36) den Schulchan und alle seine Geräte und das Lechem HaPanim —</span>
+          <span class="line">(37) die reine Menorah, ihre Lampen — die Lampen der Reihe — und alle ihre Geräte und das Öl für die Beleuchtung —</span>
+          <span class="line">(38) und den goldenen Altar, das Salböl, das wohlriechende Ketoret und den Vorhang des Zelt-Eingangs —</span>
+          <span class="line">(39) den Kupferaltar, das Kupfer-Gitter, das zu ihm gehört, seine Tragestangen und alle seine Geräte, den Kiyor und sein Gestell —</span>
+          <span class="line">(40) die Behänge des Vorhofs, seine Säulen und seine Sockel, den Vorhang des Vorhof-Tors, seine Spannseile und seine Pflöcke — und alle Geräte des Mischkan-Dienstes für das Ohel Mo'ed —</span>
+          <span class="line">(41) die Dienstgewänder, um im Heiligtum zu dienen, die heiligen Gewänder für Aharon, den Kohen, und die Gewänder seiner Söhne, um zu dienen.</span>
+          <span class="line">(42) Ganz wie Adonai dem Mosche befohlen hatte, so taten die Söhne Israels die ganze Arbeit.</span>
+          <span class="line">(43) Und Mosche sah das ganze Werk — und siehe, sie hatten es gemacht, wie Adonai befohlen hatte, so hatten sie es gemacht — und Mosche segnete sie.</span>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- ── ALIYAH 5 · חמישי · Schemot 40:1–16 — Adonai's Befehl zur Aufrichtung am ersten Nissan ── -->
+    <div class="aliyah-block">
+      <div class="aliyah-label">עֲלִיָּה חֲמִישִׁית — בְּיוֹם־הַחֹדֶשׁ הָרִאשׁוֹן בְּאֶחָד לַחֹדֶשׁ תָּקִים<span class="aliyah-label-de">Fünfte Aliyah · Schemot 40:1–16 · Adonai befiehlt die Aufrichtung am ersten Nissan · Salbung des Mischkan und der Kelim · Einweihung Aharons und seiner Söhne</span></div>
+      <div class="instrument-note">[no percussion] [no drums] [no choir] [acoustic guitar — Hijaz with command-like clarity, the divine command-section as a slow royal recitation, the eight „v'natata" / „v'samta" imperatives as steady-paced anchors, no percussion] Gitarre: Hijaz mit Befehls-Klarheit — die göttliche Anweisung als langsame königliche Rezitation, die acht <em>„v'natata"</em>- und <em>„v'samta"</em>-Imperative als ruhige Anker.</div>
+      <div class="lyrics-block">
+        <div class="lyrics-he" dir="rtl">
+          <span class="line">וַיְדַבֵּר אֲדֹנָי אֶל־מֹשֶׁה לֵּאמֹר׃</span>
+          <span class="line">בְּיוֹם־הַחֹדֶשׁ הָרִאשׁוֹן בְּאֶחָד לַחֹדֶשׁ תָּקִים אֶת־מִשְׁכַּן אֹהֶל מוֹעֵד׃</span>
+          <span class="line">וְשַׂמְתָּ שָׁם אֵת אֲרוֹן הָעֵדוּת וְסַכֹּתָ עַל־הָאָרֹן אֶת־הַפָּרֹכֶת׃</span>
+          <span class="line">וְהֵבֵאתָ אֶת־הַשֻּׁלְחָן וְעָרַכְתָּ אֶת־עֶרְכּוֹ וְהֵבֵאתָ אֶת־הַמְּנֹרָה וְהַעֲלֵיתָ אֶת־נֵרֹתֶיהָ׃</span>
+          <span class="line">וְנָתַתָּה אֶת־מִזְבַּח הַזָּהָב לִקְטֹרֶת לִפְנֵי אֲרוֹן הָעֵדֻת וְשַׂמְתָּ אֶת־מָסַךְ הַפֶּתַח לַמִּשְׁכָּן׃</span>
+          <span class="line">וְנָתַתָּה אֵת מִזְבַּח הָעֹלָה לִפְנֵי פֶּתַח מִשְׁכַּן אֹהֶל־מוֹעֵד׃</span>
+          <span class="line">וְנָתַתָּ אֶת־הַכִּיֹּר בֵּין־אֹהֶל מוֹעֵד וּבֵין הַמִּזְבֵּחַ וְנָתַתָּ שָׁם מָיִם׃</span>
+          <span class="line">וְשַׂמְתָּ אֶת־הֶחָצֵר סָבִיב וְנָתַתָּ אֶת־מָסַךְ שַׁעַר הֶחָצֵר׃</span>
+          <span class="line">וְלָקַחְתָּ אֶת־שֶׁמֶן הַמִּשְׁחָה וּמָשַׁחְתָּ אֶת־הַמִּשְׁכָּן וְאֶת־כׇּל־אֲשֶׁר־בּוֹ וְקִדַּשְׁתָּ אֹתוֹ וְאֶת־כׇּל־כֵּלָיו וְהָיָה קֹדֶשׁ׃</span>
+          <span class="line">וּמָשַׁחְתָּ אֶת־מִזְבַּח הָעֹלָה וְאֶת־כׇּל־כֵּלָיו וְקִדַּשְׁתָּ אֶת־הַמִּזְבֵּחַ וְהָיָה הַמִּזְבֵּחַ קֹדֶשׁ קׇדָשִׁים׃</span>
+          <span class="line">וּמָשַׁחְתָּ אֶת־הַכִּיֹּר וְאֶת־כַּנּוֹ וְקִדַּשְׁתָּ אֹתוֹ׃</span>
+          <span class="line">וְהִקְרַבְתָּ אֶת־אַהֲרֹן וְאֶת־בָּנָיו אֶל־פֶּתַח אֹהֶל מוֹעֵד וְרָחַצְתָּ אֹתָם בַּמָּיִם׃</span>
+          <span class="line">וְהִלְבַּשְׁתָּ אֶת־אַהֲרֹן אֵת בִּגְדֵי הַקֹּדֶשׁ וּמָשַׁחְתָּ אֹתוֹ וְקִדַּשְׁתָּ אֹתוֹ וְכִהֵן לִי׃</span>
+          <span class="line">וְאֶת־בָּנָיו תַּקְרִיב וְהִלְבַּשְׁתָּ אֹתָם כֻּתֳּנֹת׃</span>
+          <span class="line">וּמָשַׁחְתָּ אֹתָם כַּאֲשֶׁר מָשַׁחְתָּ אֶת־אֲבִיהֶם וְכִהֲנוּ לִי וְהָיְתָה לִהְיֹת לָהֶם מׇשְׁחָתָם לִכְהֻנַּת עוֹלָם לְדֹרֹתָם׃</span>
+          <span class="line">וַיַּעַשׂ מֹשֶׁה כְּכֹל אֲשֶׁר צִוָּה אֲדֹנָי אֹתוֹ כֵּן עָשָׂה׃</span>
+        </div>
+        <div class="lyrics-de">
+          <span class="line">(40:1) Und Adonai sprach zu Mosche und sagte:</span>
+          <span class="line">(2) Am Tag des ersten Monats, am ersten des Monats, sollst du den Mischkan, das Zelt der Begegnung, aufrichten.</span>
+          <span class="line">(3) Und du sollst dort den Aron HaEdut hinstellen und die Parochet über den Aron decken.</span>
+          <span class="line">(4) Und du sollst den Schulchan hereinbringen und seine Ordnung ordnen, und du sollst die Menorah hereinbringen und ihre Lampen aufsetzen.</span>
+          <span class="line">(5) Und du sollst den goldenen Altar für das Ketoret vor den Aron HaEdut stellen und den Vorhang des Eingangs zum Mischkan setzen.</span>
+          <span class="line">(6) Und du sollst den Olah-Altar vor den Eingang des Mischkan Ohel Mo'ed stellen.</span>
+          <span class="line">(7) Und du sollst den Kiyor zwischen das Ohel Mo'ed und den Altar stellen und Wasser hineingeben.</span>
+          <span class="line">(8) Und du sollst den Vorhof ringsumher errichten und den Vorhang des Vorhof-Tors aufhängen.</span>
+          <span class="line">(9) Und du sollst das Salböl nehmen und den Mischkan und alles, was in ihm ist, salben und ihn und alle seine Geräte heiligen — und er wird heilig sein.</span>
+          <span class="line">(10) Und du sollst den Olah-Altar und alle seine Geräte salben und den Altar heiligen — und der Altar wird Hochheiliges sein.</span>
+          <span class="line">(11) Und du sollst den Kiyor und sein Gestell salben und ihn heiligen.</span>
+          <span class="line">(12) Und du sollst Aharon und seine Söhne zum Eingang des Ohel Mo'ed bringen und sie mit Wasser waschen.</span>
+          <span class="line">(13) Und du sollst Aharon die heiligen Gewänder anziehen, ihn salben und ihn heiligen — und er soll mir als Kohen dienen.</span>
+          <span class="line">(14) Und seine Söhne sollst du herbeibringen und ihnen Leibröcke anziehen.</span>
+          <span class="line">(15) Und du sollst sie salben, wie du ihren Vater gesalbt hast — und sie sollen mir als Kohanim dienen. Und ihre Salbung soll ihnen zur ewigen Priesterschaft sein für ihre Geschlechter.</span>
+          <span class="line">(16) Und Mosche tat alles, wie Adonai ihm befohlen hatte — so tat er.</span>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- ── ALIYAH 6 · שישי · Schemot 40:17–27 — Hukam HaMischkan · Aron · Schulchan · Menorah · Mizbeach Zahav ── -->
+    <div class="aliyah-block">
+      <div class="aliyah-label">עֲלִיָּה שִׁשִּׁית — וַיְהִי בַּחֹדֶשׁ הָרִאשׁוֹן בַּשָּׁנָה הַשֵּׁנִית · הוּקַם הַמִּשְׁכָּן<span class="aliyah-label-de">Sechste Aliyah · Schemot 40:17–27 · Aufrichtung am 1. Nissan des 2. Jahres · Aron, Schulchan, Menorah, goldener Altar werden hineingestellt</span></div>
+      <div class="instrument-note">[no percussion] [no drums] [no choir] [acoustic guitar — Hijaz in slow ceremonial walk, the seven-fold „ka'asher tzivvah Adonai et Moshe" anchoring like a sacred bell-tone repeating, ascending intensity, no percussion] Gitarre: Hijaz im langsamen zeremoniellen Schritt — das siebenfache <em>„ka'asher tzivvah Adonai et Moshe"</em> wie ein heiliger Glocken-Ton, der sich verankert; aufsteigende Intensität.</div>
+      <div class="lyrics-block">
+        <div class="lyrics-he" dir="rtl">
+          <span class="line">וַיְהִי בַּחֹדֶשׁ הָרִאשׁוֹן בַּשָּׁנָה הַשֵּׁנִית בְּאֶחָד לַחֹדֶשׁ הוּקַם הַמִּשְׁכָּן׃</span>
+          <span class="line">וַיָּקֶם מֹשֶׁה אֶת־הַמִּשְׁכָּן וַיִּתֵּן אֶת־אֲדָנָיו וַיָּשֶׂם אֶת־קְרָשָׁיו וַיִּתֵּן אֶת־בְּרִיחָיו וַיָּקֶם אֶת־עַמּוּדָיו׃</span>
+          <span class="line">וַיִּפְרֹשׂ אֶת־הָאֹהֶל עַל־הַמִּשְׁכָּן וַיָּשֶׂם אֶת־מִכְסֵה הָאֹהֶל עָלָיו מִלְמָעְלָה כַּאֲשֶׁר צִוָּה אֲדֹנָי אֶת־מֹשֶׁה׃</span>
+          <span class="line">וַיִּקַּח וַיִּתֵּן אֶת־הָעֵדֻת אֶל־הָאָרֹן וַיָּשֶׂם אֶת־הַבַּדִּים עַל־הָאָרֹן וַיִּתֵּן אֶת־הַכַּפֹּרֶת עַל־הָאָרֹן מִלְמָעְלָה׃</span>
+          <span class="line">וַיָּבֵא אֶת־הָאָרֹן אֶל־הַמִּשְׁכָּן וַיָּשֶׂם אֵת פָּרֹכֶת הַמָּסָךְ וַיָּסֶךְ עַל אֲרוֹן הָעֵדוּת כַּאֲשֶׁר צִוָּה אֲדֹנָי אֶת־מֹשֶׁה׃</span>
+          <span class="line">וַיִּתֵּן אֶת־הַשֻּׁלְחָן בְּאֹהֶל מוֹעֵד עַל יֶרֶךְ הַמִּשְׁכָּן צָפֹנָה מִחוּץ לַפָּרֹכֶת׃</span>
+          <span class="line">וַיַּעֲרֹךְ עָלָיו עֵרֶךְ לֶחֶם לִפְנֵי אֲדֹנָי כַּאֲשֶׁר צִוָּה אֲדֹנָי אֶת־מֹשֶׁה׃</span>
+          <span class="line">וַיָּשֶׂם אֶת־הַמְּנֹרָה בְּאֹהֶל מוֹעֵד נֹכַח הַשֻּׁלְחָן עַל יֶרֶךְ הַמִּשְׁכָּן נֶגְבָּה׃</span>
+          <span class="line">וַיַּעַל הַנֵּרֹת לִפְנֵי אֲדֹנָי כַּאֲשֶׁר צִוָּה אֲדֹנָי אֶת־מֹשֶׁה׃</span>
+          <span class="line">וַיָּשֶׂם אֶת־מִזְבַּח הַזָּהָב בְּאֹהֶל מוֹעֵד לִפְנֵי הַפָּרֹכֶת׃</span>
+          <span class="line">וַיַּקְטֵר עָלָיו קְטֹרֶת סַמִּים כַּאֲשֶׁר צִוָּה אֲדֹנָי אֶת־מֹשֶׁה׃</span>
+        </div>
+        <div class="lyrics-de">
+          <span class="line">(40:17) Und es geschah im ersten Monat des zweiten Jahres, am ersten des Monats: Da wurde der Mischkan aufgerichtet.</span>
+          <span class="line">(18) Und Mosche richtete den Mischkan auf, setzte seine Sockel, stellte seine Bretter hinein, legte seine Riegel ein und richtete seine Säulen auf.</span>
+          <span class="line">(19) Und er breitete das Zelt über den Mischkan und legte die Decke des Zelts darüber von oben — wie Adonai dem Mosche befohlen hatte.</span>
+          <span class="line">(20) Und er nahm die Edut und legte sie in den Aron, setzte die Tragestangen an den Aron und legte die Kapporet von oben auf den Aron.</span>
+          <span class="line">(21) Und er brachte den Aron in den Mischkan und setzte die Parochet der Verhüllung und verhüllte den Aron HaEdut — wie Adonai dem Mosche befohlen hatte.</span>
+          <span class="line">(22) Und er stellte den Schulchan im Ohel Mo'ed an die Nordseite des Mischkan, außerhalb der Parochet.</span>
+          <span class="line">(23) Und er ordnete darauf die Ordnung der Brote vor Adonai — wie Adonai dem Mosche befohlen hatte.</span>
+          <span class="line">(24) Und er stellte die Menorah im Ohel Mo'ed gegenüber dem Schulchan an die Südseite des Mischkan.</span>
+          <span class="line">(25) Und er zündete die Lampen vor Adonai an — wie Adonai dem Mosche befohlen hatte.</span>
+          <span class="line">(26) Und er stellte den goldenen Altar im Ohel Mo'ed vor die Parochet.</span>
+          <span class="line">(27) Und er räucherte darauf wohlriechendes Ketoret — wie Adonai dem Mosche befohlen hatte.</span>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- ── ALIYAH 7 · שביעי · Schemot 40:28–38 — Schluss-Aufrichtung · Schechina-Anan · Kavod Adonai ── -->
+    <div class="aliyah-block">
+      <div class="aliyah-label">עֲלִיָּה שְׁבִיעִית — וַיְכַל מֹשֶׁה אֶת־הַמְּלָאכָה · וַיְכַס הֶעָנָן · וּכְבוֹד אֲדֹנָי מָלֵא אֶת־הַמִּשְׁכָּן<span class="aliyah-label-de">Siebte Aliyah · Schemot 40:28–38 · Vollendung des Werks durch Mosche · Schechina-Wolke und Kavod Adonai erfüllen den Mischkan · Wolken-und-Feuer-Führung in allen Wanderungen</span></div>
+      <div class="instrument-note">[no percussion] [no drums] [no choir] [acoustic guitar — Hijaz rising to its full registral climax at 40:34, the Anan-cloud and Kavod-Adonai verse as a fortissimo king's-coronation tone, then a tender mf resolution on „yomam ve'esh tihyeh laylah" with a single Saba echo-tone returning to Schemot 1:1, no percussion] Gitarre: Hijaz steigt zum vollen Höhepunkt-Register bei 40:34 — der Anan-Wolken- und Kavod-Adonai-Vers als fortissimo Königs-Krönungs-Ton, dann zarte mf-Auflösung bei <em>„yomam ve'esh tihyeh laylah"</em> mit einem einzelnen Saba-Echo-Ton, der zu Schemot 1:1 zurückkehrt.</div>
+      <div class="lyrics-block">
+        <div class="lyrics-he" dir="rtl">
+          <span class="line">וַיָּשֶׂם אֶת־מָסַךְ הַפֶּתַח לַמִּשְׁכָּן׃</span>
+          <span class="line">וְאֵת מִזְבַּח הָעֹלָה שָׂם פֶּתַח מִשְׁכַּן אֹהֶל־מוֹעֵד וַיַּעַל עָלָיו אֶת־הָעֹלָה וְאֶת־הַמִּנְחָה כַּאֲשֶׁר צִוָּה אֲדֹנָי אֶת־מֹשֶׁה׃</span>
+          <span class="line">וַיָּשֶׂם אֶת־הַכִּיֹּר בֵּין־אֹהֶל מוֹעֵד וּבֵין הַמִּזְבֵּחַ וַיִּתֵּן שָׁמָּה מַיִם לְרׇחְצָה׃</span>
+          <span class="line">וְרָחֲצוּ מִמֶּנּוּ מֹשֶׁה וְאַהֲרֹן וּבָנָיו אֶת־יְדֵיהֶם וְאֶת־רַגְלֵיהֶם׃</span>
+          <span class="line">בְּבֹאָם אֶל־אֹהֶל מוֹעֵד וּבְקׇרְבָתָם אֶל־הַמִּזְבֵּחַ יִרְחָצוּ כַּאֲשֶׁר צִוָּה אֲדֹנָי אֶת־מֹשֶׁה׃</span>
+          <span class="line">וַיָּקֶם אֶת־הֶחָצֵר סָבִיב לַמִּשְׁכָּן וְלַמִּזְבֵּחַ וַיִּתֵּן אֶת־מָסַךְ שַׁעַר הֶחָצֵר וַיְכַל מֹשֶׁה אֶת־הַמְּלָאכָה׃</span>
+          <span class="line">וַיְכַס הֶעָנָן אֶת־אֹהֶל מוֹעֵד וּכְבוֹד אֲדֹנָי מָלֵא אֶת־הַמִּשְׁכָּן׃</span>
+          <span class="line">וְלֹא־יָכֹל מֹשֶׁה לָבוֹא אֶל־אֹהֶל מוֹעֵד כִּי־שָׁכַן עָלָיו הֶעָנָן וּכְבוֹד אֲדֹנָי מָלֵא אֶת־הַמִּשְׁכָּן׃</span>
+          <span class="line">וּבְהֵעָלוֹת הֶעָנָן מֵעַל הַמִּשְׁכָּן יִסְעוּ בְּנֵי יִשְׂרָאֵל בְּכֹל מַסְעֵיהֶם׃</span>
+          <span class="line">וְאִם־לֹא יֵעָלֶה הֶעָנָן וְלֹא יִסְעוּ עַד־יוֹם הֵעָלֹתוֹ׃</span>
+          <span class="line">כִּי עֲנַן אֲדֹנָי עַל־הַמִּשְׁכָּן יוֹמָם וְאֵשׁ תִּהְיֶה לַיְלָה בּוֹ לְעֵינֵי כׇל־בֵּית־יִשְׂרָאֵל בְּכׇל־מַסְעֵיהֶם׃</span>
+        </div>
+        <div class="lyrics-de">
+          <span class="line">(40:28) Und er hängte den Vorhang des Eingangs des Mischkan auf.</span>
+          <span class="line">(29) Und den Olah-Altar stellte er an den Eingang des Mischkan Ohel Mo'ed und brachte darauf das Olah-Opfer und das Mincha-Opfer dar — wie Adonai dem Mosche befohlen hatte.</span>
+          <span class="line">(30) Und er stellte den Kiyor zwischen das Ohel Mo'ed und den Altar und tat Wasser zum Waschen hinein.</span>
+          <span class="line">(31) Und Mosche, Aharon und seine Söhne wuschen daraus ihre Hände und ihre Füße.</span>
+          <span class="line">(32) Wenn sie in das Ohel Mo'ed eintraten und wenn sie zum Altar herantraten, wuschen sie sich — wie Adonai dem Mosche befohlen hatte.</span>
+          <span class="line">(33) Und er richtete den Vorhof ringsumher den Mischkan und den Altar auf und hängte den Vorhang des Vorhof-Tors auf. <strong>Und Mosche vollendete das Werk.</strong></span>
+          <span class="line">(34) <strong>Und die Wolke bedeckte das Ohel Mo'ed, und die Herrlichkeit Adonais erfüllte den Mischkan.</strong></span>
+          <span class="line">(35) Und Mosche konnte nicht in das Ohel Mo'ed eintreten, denn die Wolke ruhte darauf, und die Herrlichkeit Adonais erfüllte den Mischkan.</span>
+          <span class="line">(36) Und wenn die Wolke sich vom Mischkan erhob, brachen die Söhne Israels auf in allen ihren Aufbrüchen.</span>
+          <span class="line">(37) Und wenn die Wolke sich nicht erhob, brachen sie nicht auf — bis zu dem Tag, an dem sie sich erhob.</span>
+          <span class="line">(38) Denn die Wolke Adonais war am Tag über dem Mischkan, und Feuer war in ihr bei Nacht — vor den Augen des ganzen Hauses Israel auf allen ihren Aufbrüchen.</span>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- ══ TIKKUN-BOX — DAS HERZ DER PARASHAH ══ -->
+    <div class="tikkun-box">
+      <div class="tikkun-header">
+        <div class="tikkun-title-he">מַעֲשֵׂה הַתִּיקּוּן — הִשְׁתַּכְּנוּת הַשְּׁכִינָה בַּבַּיִת · מַחֲצִית הַשֶּׁקֶל וְהַתֶּגֶף הָאִישִׁי · קְרִיאַת חֲזַק חֲזַק וְנִתְחַזֵּק · סִיּוּם בְּכָבוֹד · הֲכָנַת הַבַּיִת לְשַׁבָּת כְּמִשְׁכָּן מְעַט</div>
+        <div class="tikkun-title-de">Tikkun – Einwohnung der Schechina im Haus, Halb-Schekel und persönliche Rechenschaft, der Ruf <em>Chazak Chazak veNitchazek</em>, das Beenden eines Werks in Würde, und die Vorbereitung des Hauses für den Schabbat als „Mischkan Me'at"</div>
+        <div class="tikkun-src">שְׁמוֹת ל״ח:כ״א („אֵלֶּה פְקוּדֵי הַמִּשְׁכָּן · מִשְׁכַּן הָעֵדֻת") · ל״ח:כ״ו (מַחֲצִית הַשֶּׁקֶל בְּשֶׁקֶל הַקֹּדֶשׁ) · ל״ט:מ״ג („וַיַּרְא מֹשֶׁה אֶת־כׇּל־הַמְּלָאכָה · וַיְבָרֶךְ אֹתָם מֹשֶׁה") · מ׳:ל״ד („וַיְכַס הֶעָנָן אֶת־אֹהֶל מוֹעֵד וּכְבוֹד אֲדֹנָי מָלֵא אֶת־הַמִּשְׁכָּן") · מ׳:ל״ח (עֲנַן יוֹמָם וְאֵשׁ לַיְלָה) · רמב״ם הלכות בֵּית הַבְּחִירָה · רמב״ם הלכות כְּלֵי הַמִּקְדָּשׁ · רמב״ם הלכות שְׁקָלִים · רמב״ם הלכות מְלָכִים (לְמָשִׁיחַ בֶּן דָּוִד) · בְּרָכוֹת נ״ה. · רש״ש נְהַר שָׁלוֹם דְּרוּשׁ הִשְׁתַּכְּנוּת הַשְּׁכִינָה · רמח״ל מִשְׁכְּנֵי עֶלְיוֹן פֶּרֶק י״ח · רמח״ל דֶּרֶךְ אֲדֹנָי חֵלֶק א׳ פֶּרֶק ד׳ · רמח״ל מְסִלַּת יְשָׁרִים פֶּרֶק י״ט (קְדֻשָּׁה) · אור החיים על שְׁמוֹת ל״ט:מ״ג וְמ׳:ל״ד · ספר הָעִקָּרִים מַאֲמָר רִאשׁוֹן · בן איש חי שָׁנָה רִאשׁוֹנָה פְּקוּדֵי (קְרִיאַת חֲזַק וְנִתְחַזֵּק) · שד״ל פֵּרוּשׁ עַל הַתּוֹרָה (שְׁמוֹת ל״ח:כ״א משכן העדות · ל״ח:כ״ד הככר) · שׁוּלְחָן עָרוּךְ אוֹרַח חַיִּים קל״ט · כַּף הַחַיִּים · יָבִיעַ אוֹמֶר · חֲזוֹן עוֹבַדְיָה · נֻסַּח אֲרָם צוֹבָה · מָרוֹקוֹ · יָמֶן · יְרוּשָׁלַיִם</div>
+      </div>
+      <div class="tikkun-body">
+        <strong>Sephardische Praxis:</strong> Pekudei ist die <em>Malchut</em>-Parashah des Sefer Schemot — und zugleich die <em>letzte</em> Parashah des Buchs. Das ist kein Zufall: Malchut ist nach <strong>Rashash</strong> (<em>Nahar Schalom</em>, Drush <em>Hischtachenut HaSchechina</em>) jene Sefirah, die <em>von ihrem Eigenen nichts hat</em> (<em>mid'gar'mah klum</em>) und doch durch sie hindurch alle höheren Sefirot in die manifeste Welt eintreten. Genau das vollzieht Pekudei: nichts an Pekudei ist neu — alle Mischkan-Komponenten wurden in Terumah, Tetzaveh und Vayakhel bereits geboten und gebaut; Pekudei bringt sie nur in die <em>manifeste, gezählte, transparente, schließlich aufgerichtete</em> Form, in der die Schechina-Wolke Wohnung nehmen kann. <strong>Or HaChaim</strong> auf 39:43 (zum Schluss-Vers <em>„וַיְבָרֶךְ אֹתָם מֹשֶׁה"</em>) lehrt: Mosche segnete das Volk mit jenem Segen, der seit dann jeder Werk-Vollendung in der jüdischen Tradition zugrunde liegt — Tehillim 90:17 <em>„וִיהִי נֹעַם אֲדֹנָי אֱלֹהֵינוּ עָלֵינוּ וּמַעֲשֵׂה יָדֵינוּ כּוֹנְנָה עָלֵינוּ"</em>: <em>möge das Werk unserer Hände auf uns ruhen</em>. Aus diesem Mosche-Brauch ist der sephardische Sium-Brauch geboren: jedes vollendete Werk (Tora-Lern-Cycle, Massechta-Studium, Buch-Lektüre, Lebens-Werk) wird mit einer Brachah und mit <em>vihi noam</em> gekrönt, weil das Vollenden selbst eine Hischtachnut-Pforte ist, durch die etwas vom Schechina-Licht in die Welt tritt. <strong>Ramchal</strong> in <em>Mishkney Elyon</em> (Schluss-Kapitel 18) liest die Pekudei-Vollendung als Vorgriff: der Mischkan im Wüste ist die Probe, das endgültige Beit HaMikdasch durch <em>Maschiach ben David</em> ist das Ziel — derselbe Bogen des Hischtachnut HaSchechina, nur in vollendeter Form.
+        <br><br>
+        <strong>Die Eröffnung der Parashah</strong> mit dem doppelten Mischkan-Namen — <em>„אֵלֶּה פְקוּדֵי הַמִּשְׁכָּן מִשְׁכַּן הָעֵדֻת"</em> (38:21) — ist sephardisch hochbeladen. <strong>Shadal</strong> in seinem <em>Pirusch zu Schemot 38:21</em> erklärt präzise: <em>„משכן העדות"</em> kommt vom Begriff <em>aron ha'edut</em> und <em>luchot ha'edut</em> — der ganze Mischkan trägt seinen Namen vom Edut-Akzent, denn die Bundes-Tafeln sind das innerste Stück der Heiligkeit, und so wird der ganze Wohnsitz nach dem benannt, was in seiner Mitte ruht. Damit liest Shadal Pekudei als die Parashah, in der die Heiligkeit nicht abstrakt bleibt, sondern <em>um eine Mitte zentriert</em> ist: in der Mitte des Mischkan der Aron, im Aron die Luchot, in den Luchot die Edut. Sephardisch (Aleppo, Marokko, Yerushalayim) ist diese Lesung Standard — jedes jüdische Heim ist nur dann <em>Mischkan Me'at</em>, wenn es um eine Mitte zentriert ist: um die Tora, um den Schabbat-Tisch, um das Aleinu am Schluss jedes Gebets. <strong>Or HaChaim</strong> auf 40:34 liest das Verb <em>„וַיְכַס"</em> (er bedeckte) gemeinsam mit <em>„מָלֵא"</em> (er füllte): die Schechina kommt zugleich als <em>Verhüllung</em> (denn Mosche kann nicht eintreten) und als <em>Erfüllung</em> (denn der Mischkan ist voll von ihr) — eine Doppel-Bewegung, die in der sephardischen Yom-Kippur-Liturgie wiederkehrt, wenn die Eidot HaMizrach den Ne'ila-Gesang in Hijaz anstimmen: das Allerheiligste ist <em>verhüllt und voll</em> zugleich.
+        <br><br>
+        <strong>Die Halb-Schekel-Berechnung</strong> (38:24–26) gehört zum Herzstück der Tikkun-Architektur. <strong>Rambam</strong> in <em>Hilchot Schekalim</em> regelt: der halbe Schekel ist Pflicht jedes männlichen Israeliten ab 20 Jahren, jeder ist gleich, kein Reicher gibt mehr, kein Armer weniger — die Schekel-Zählung ist die einzige Stelle in der Tora, an der die jüdische Gemeinschaft jeden zählt <em>durch eine Gabe</em>, nicht durch einen Namen. <strong>Shadal</strong> auf 38:24 hält die präzise Maß-Halacha fest: <em>„הככר הוא ג׳ אלפים שקל"</em> — ein Kikar sind 3000 Schekel. Das ist nicht Trockenheit, sondern Mussar: <em>Rechenschaft hat eine Maß-Einheit</em>; <em>Heiligkeit ist nicht jenseits der Zahlen, sondern in den Zahlen genau</em>. Sephardisch (Ben Ish Chai Shanah Rischona Pekudei, Schulchan Aruch Orach Chaim 694 zu Machatzit HaSchekel vor Purim) wird der Halb-Schekel-Brauch jährlich vor Purim praktiziert — Erinnerung an die Pekudei-Zählung und Vorbereitung auf die jährliche Schekel-Hebung, die in messianischer Zeit wieder volle Tempel-Schekel wird. <strong>Sefer HaIkkarim</strong> (Yosef Albo, Maamar Rischon zu den Glaubens-Grundlagen) verbindet die Existenz Adonais (erster Ikkar) mit der Tora-vom-Himmel (zweiter Ikkar) und mit Schar-veOnesch (dritter Ikkar) — und genau diese drei Ikkarim manifestieren sich im Mischkan: die Wolke bezeugt Adonai, die Edut bezeugt die Tora, und die genaue Schekel-Zählung bezeugt das gerechte Zumessen jedes Tuns.
+        <br><br>
+        <strong>Der Chazak-veNitchazek-Ruf am Schluss des Sefer Schemot</strong> ist die zentrale liturgische Krone der Parashah. <strong>Ben Ish Chai</strong> (Shanah Rischona, Hilchot Schabbat) lehrt den sephardischen Brauch: am Pekudei-Schabbat — und damit am Schluss-Schabbat des Sefer Schemot — ruft die Gemeinde dreimal stehend <em>„חֲזַק חֲזַק וְנִתְחַזֵּק"</em>. Der Aufgerufene, der Ba'al Koreh und die ganze Gemeinde verbinden sich in diesem Ruf zu einer einzigen königlich-festlichen Stimme. Schulchan Aruch Orach Chaim 139:11 (mit sephardischen Glossen in Kaf HaChaim) gibt die Halacha: der Ruf ist nicht Brachah, aber feste Gewohnheit aller Eidot HaMizrach (Aleppo, Marokko, Yemen, Bagdad, Yerushalayim). Der Sinn ist nach <strong>Rashash</strong> dreifach: <em>Chazak</em> für den Aufgerufenen, der das Sefer beendet hat — <em>Chazak</em> für den Ba'al Koreh, der die Verantwortung des Lesens getragen hat — und <em>veNitchazek</em> als gemeinsames Bekenntnis: <em>möge das ganze Volk durch dieses Sefer gestärkt werden</em>. Sephardisch wird der Ruf häufig im Hijaz-Modus angestimmt, mit königlich-festlicher Stimm-Höhe, und manchmal mit einem letzten Saba-Echo-Ton, der das Sefer wieder zum Anfang (Schemot 1:1, <em>„וְאֵלֶּה שְׁמוֹת"</em>) zurückbiegt — das ist die <em>Or-Chozer</em>-Architektur, von der die sephardischen Mekubalim sprechen: das Ende verweist immer auf den Anfang, das Schluss-Wort eines Sefers ist immer ein verborgenes Echo seines Eröffnungs-Worts.
+        <br><br>
+        <strong>Die Wolken-und-Feuer-Führung</strong> (40:36–38) bringt die Parashah und das Sefer zu ihrem messianischen Vorgriff. Die <em>Wolke am Tag, das Feuer bei Nacht</em> sind nicht nur historische Wüsten-Führung, sondern — nach <strong>Ramchal</strong> in <em>Derech Adonai</em> Teil 1 Perek 4 (zu Hashgachah) — die archetypische Form der göttlichen Begleitung jeder jüdischen Generation, in der jeder Mo'ed eine neue Wolke ist, jeder Schabbat ein neues Abend-Feuer, jede Tefillah ein neues <em>„uvhe'aloto"</em>. Die sephardische Hischtachnut-Tradition (Rashash, Sha'ar HaKawanot durch die Yerushalmi-Tradition) lehrt die Kawanah: wer Schabbat-Lichter anzündet, entzündet das nächtliche Feuer Adonais im eigenen Mischkan-Me'at; wer am Schabbat-Tisch sitzt, sitzt unter der Tages-Wolke; wer am Schabbat-Ende Hawdalah spricht, fasst die Wolke und das Feuer in eine einzige Brachah zusammen. <strong>Or HaChaim</strong> auf 40:38 sieht in <em>„lefnei kol beit Yisrael bekhol mas'eihem"</em> die ungebrochene Adonai-Sichtbarkeit für jede Wanderungs-Etappe — die Wolke ist nicht nur über dem Wüsten-Mischkan, sondern über jedem jüdischen Haus, in dem Pekudei-Disziplin (Rechenschaft, Transparenz, Werk-Vollendung in Würde) gehalten wird. Der ultimative Vorgriff ist nach <strong>Ramchal Mishkney Elyon</strong> die Ankunft des <em>Maschiach ben David</em> und der endgültige Aufbau des Beit HaMikdasch — wenn die Wolke nicht mehr wandert, sondern an einem festen Ort steht, sichtbar für alle Völker.
+        <br><br>
+        <strong>Praktische Handlung:</strong> (1) <em>Erev-Schabbat-Sium-Praxis als wöchentlicher Pekudei-Spiegel</em>: Sephardischer Aleppo-Marokko-Brauch (Ben Ish Chai Shanah Rischona Schabbat) — am Erev Schabbat, vor dem Lichter-Anzünden, eine Minute zum Werk-Abschluss der Woche: <em>„ich vollende diese Werk-Woche; was ich getan habe, lege ich vor Adonai ab; was ich nicht getan habe, übergebe ich Adonai für die kommende Woche."</em> Wer die Praxis vertieft, spricht in dieser Minute leise Tehillim 90:17 <em>„וִיהִי נֹעַם אֲדֹנָי אֱלֹהֵינוּ עָלֵינוּ וּמַעֲשֵׂה יָדֵינוּ כּוֹנְנָה עָלֵינוּ"</em> — derselbe Vers, mit dem Mosche das Volk in Pekudei segnete. (2) <em>Halb-Schekel-Praxis vor Purim — Erinnerung an die Pekudei-Zählung</em>: Sephardisch (Schulchan Aruch Orach Chaim 694, Kaf HaChaim, Chazon Ovadia Mo'adim Purim) wird vor Purim der <em>Machatzit HaSchekel</em> gegeben — der Gegenwert eines halben Schekels (Eretz Yisrael: drei aktuelle halbe Schekel-Münzen, da der historische Halb-Schekel umgerechnet wird; Diaspora: nach lokaler sephardischer Posek-Festlegung). Die Kawanah: <em>ich zähle mich zu jenen sechshundertdreitausendfünfhundertfünfzig, die die Sockel des Heiligtums gegossen haben — ich bin nicht eine Zahl außerhalb, sondern eine innerhalb des Volkes</em>. Wer die Übung tut, bewahrt sich vor dem Vereinzelungs-Gefühl, das die jüdische Diaspora-Existenz oft mit sich bringt. (3) <em>Schalom-Bayit-Praxis am Pekudei-Schabbat — Tisch als Mischkan Me'at</em>: Sephardischer Aleppo-Yerushalayim-Brauch — am Pekudei-Schabbat (oder allen Schabbatot, aber mit besonderer Kawanah an Pekudei) den Schabbat-Tisch ausdrücklich als <em>Mischkan Me'at</em> einrichten: zwei Brote (Lechem Mischneh — Erinnerung an Lechem HaPanim), zwei Lichter (Erinnerung an die Menorah), eine schöne Tisch-Decke (Erinnerung an die Bigdei Kehunah), Wein im schönsten Becher der Familie (Erinnerung an den Kiddusch HaSchem im Heiligtum). Das ist <em>Or HaChaim</em> auf 39:43 in häuslicher Form: jeder Mosche-Segen kann nur dort wirksam werden, wo das Werk in Würde aufgerichtet ist. (4) <em>Chazak-veNitchazek-Ruf in voller Stimme am Schluss-Schabbat des Sefer Schemot</em>: Sephardischer Eidot-HaMizrach-Brauch (Aleppo, Marokko, Yemen, Bagdad, Yerushalayim) — am Pekudei-Schabbat (bzw. Vayakhel-Pekudei in Doppel-Jahren) den Ruf <em>„חֲזַק חֲזַק וְנִתְחַזֵּק"</em> dreimal stehend, mit voller Stimme, im Hijaz-Modus rufen. Wer zu Hause die Parashah liest, soll den Ruf nicht still bei sich denken, sondern <em>laut</em> aussprechen — die sephardische Tradition kennt diese Ausnahme von der allgemeinen Privat-Praxis, denn der Chazak-Ruf ist konstitutiv für die Gemeinschafts-Stärkung. Ben Ish Chai Shanah Rischona ist hier eindeutig. (5) <em>Jährlicher Sium-Brauch — Mosche-Modell der Werk-Vollendung</em>: Sephardisch (Aleppo, Marokko, Yerushalayim) — wer ein Lebens-Werk vollendet (Massechta, Sefer-Studium, Schreib-Projekt, Berufs-Etappe), markiert die Vollendung mit einem kleinen Sium-Brauch: Birkat HaTora, Tehillim 90:17, kurze Selbst-Prüfung (<em>„habe ich es so getan, wie Adonai befohlen hat? — wie das siebenfache <em>„ka'asher tzivvah Adonai et Moshe"</em> in Schemot 40"</em>), dann eine Brachah über ein Stück Brot oder Wein, dann das Werk mit Kawanah übergeben. Or HaChaim auf 39:43 ist der klassische Quell. (6) <em>Maschiach ben David in Pekudei — Mishkney Elyon als jährliche Schluss-Lektüre des Sefer Schemot</em>: Sephardisch (Aleppo-Yerushalmi-Tradition, die Mishkney Elyon zwischen Pekudei-Schabbat und Vayikra-Schabbat liest) — Ramchals <em>Mishkney Elyon</em> Schluss-Kapitel 18 als jährliche Lektüre. Die Kawanah: <em>der Mischkan, den Mosche aufrichtete, war Probe; der Mischkan, den Maschiach ben David aufrichten wird, ist Ziel; und ich, der ich heute lebe, bin Brücken-Glied zwischen Probe und Ziel</em>. Wer die Übung jährlich tut, hält den messianischen Vorgriff lebendig — ohne Spekulation über Zeiten, aber mit Anker in der jüdischen Geschichte. (7) <em>Tägliche Bett-Schma-Erweiterung — die Schechina-Anan über dem Haus</em>: Sephardisch (Kaf HaChaim, Aleppo-Yerushalayim) — bei der Krias Schma Sche'al haMittah, am Schluss, vor dem Einschlafen, leise sprechen oder denken: <em>„כִּי עֲנַן אֲדֹנָי עַל־הַמִּשְׁכָּן יוֹמָם וְאֵשׁ תִּהְיֶה לַיְלָה בּוֹ"</em> (Schemot 40:38). Die Kawanah: <em>auch über meinem Bett, über meinem Haus, in dieser Nacht, ist die Schechina-Wolke; das Feuer Adonais brennt unsichtbar über mir; ich schlafe nicht allein</em>. (8) <em>Im Angesicht großer Werks-Aufgaben — Bezalel-Oholiav-Kawanah</em>: Vor jedem größeren Werk-Beginn (berufliches Großprojekt, Hochzeit-Vorbereitung, Hausbau, Tora-Lern-Projekt) — die sephardische Kawanah nach Schemot 38:22–23: <em>Bezalel und Oholiav waren nicht groß durch eigene Kunst, sondern weil sie taten, wie Adonai durch Mosche befahl</em>. Die Übung: vor dem Beginn ein Vers aus Bezalel-Oholiav-Pasuk leise lesen, dann beginnen mit der inneren Gabe: <em>„nicht ich mache das — Adonai macht durch meine Hand"</em>. Or HaChaim auf 38:22 ist der klassische Anker. (9) <em>Or-Chozer-Schluss-Kawanah bei Simchat Tora</em>: Sephardisch (Aleppo-Yerushalayim) — bei Simchat Tora, wenn am selben Tag das Sefer beendet (V'zot HaBerachah) und wieder begonnen (Bereschit) wird, die Kawanah: <em>so wie das Sefer Schemot endet mit der Schechina im Mischkan und mit der Wolke über jedem Haus Israels, so beginnt jedes Sefer neu mit derselben Verheißung — das jüdische Volk hat keine Geschichte ohne Schechina-Begleitung</em>. Dies ist die Pekudei-Hischtachnut in jährlicher Wiederholung. (10) <em>Maschiach ben David in der Amidah-Brachah „uvenei beitkha"</em>: Beim Mussaf jedes Mo'eds (Pessach, Schavuot, Sukkot) und an Schabbat-Mussaf — in der sephardischen Nussach Yerushalayim die Brachah <em>„retzeh"</em> und die Bitte um den Wieder-Aufbau des Tempels mit der ausdrücklichen Kawanah: <em>möge die Hischtachnut HaSchechina, die in Pekudei begann, durch Maschiach ben David in den vollendeten Beit HaMikdasch zurückkehren — und wir, die wir heute in der Diaspora oder in Eretz Yisrael leben, mögen das Wunder sehen.</em> Rambam Hilchot Mlachim und Ramchal Mishkney Elyon 18 sind hier die klassischen sephardischen Quellen.
+      </div>
+      <div class="tikkun-tags">
+        <span class="tikkun-tag">פְּקוּדֵי</span>
+        <span class="tikkun-tag">הִשְׁתַּכְּנוּת הַשְּׁכִינָה</span>
+        <span class="tikkun-tag">חֲזַק וְנִתְחַזֵּק</span>
+        <span class="tikkun-tag">מַחֲצִית הַשֶּׁקֶל</span>
+        <span class="tikkun-tag">מִשְׁכָּן מְעַט</span>
+      </div>
+    </div>
+
+
+    <!-- ══ SCHI · KLIMAX-MOMENT — SCHEMOT 40:34 ══ -->
+    <div class="climax-box">
+      <div class="climax-label">שִׂיא · ff · Klimax-Vers der Parashah · die Schechina-Wolke und Kavod Adonai erfüllen den Mischkan</div>
+      <div class="instrument-note">[no percussion] [no drums] [no choir] [acoustic guitar — full Hijaz chord fortissimo, the Schechina-cloud verse, the augmented second resounding like a king's coronation horn, sustained on „kevod Adonai", no percussion, no drums] Gitarre: Voller Hijaz-Akkord, fortissimo — der Schechina-Wolken-Vers, die übermäßige Sekunde wie ein Königs-Krönungs-Horn, getragen auf <em>„kevod Adonai"</em>.</div>
+      <div class="climax-verse-he">וַיְכַס הֶעָנָן אֶת־אֹהֶל מוֹעֵד · וּכְבוֹד אֲדֹנָי מָלֵא אֶת־הַמִּשְׁכָּן</div>
+      <div class="climax-verse-de">„Und die Wolke bedeckte das Zelt der Begegnung — und die Herrlichkeit Adonais erfüllte den Mischkan."</div>
+      <div class="climax-src">שְׁמוֹת מ׳:ל״ד — Schluss-Krönung des Sefer Schemot · Hischtachnut HaSchechina nach Rashash Nahar Schalom · Vorgriff auf den vollendeten Beit HaMikdasch durch Maschiach ben David nach Ramchal Mishkney Elyon 18</div>
+    </div>
+
+
+    <!-- ══ KODA · BEKHOL-MAS'EIHEM-WHISPER — SCHEMOT 40:38 ══ -->
+    <div class="coda-box">
+      <div class="coda-label">קוֹדָה · pp · Wolken-Feuer-Wandern im Hauch</div>
+      <div class="instrument-note">[no percussion] [no drums] [no choir] [acoustic guitar — Hijaz dissolving into a single sustained low note, the cloud-and-fire promise whispered, the wandering-house barely audible, no percussion] Gitarre: Hijaz löst sich in einen einzigen tiefen getragenen Ton — die Wolken-und-Feuer-Verheißung geflüstert, das wandernde Haus kaum hörbar.</div>
+      <div class="coda-whisper">
+        כִּי <strong>עֲנַן אֲדֹנָי</strong> עַל־הַמִּשְׁכָּן יוֹמָם — <strong>וְאֵשׁ</strong> תִּהְיֶה לַיְלָה בּוֹ — לְעֵינֵי <strong>כׇל־בֵּית־יִשְׂרָאֵל</strong> בְּכׇל־מַסְעֵיהֶם
+      </div>
+    </div>
+
+
+    <!-- ══ OR-CHOZER-BOX — SCHLUSS DES SEFER SCHEMOT, ECHO ZURÜCK ZU 1:1 ══ -->
+    <div class="or-chozer-box">
+      <div class="or-chozer-label">אוֹר חוֹזֵר · Saba-Echo · Schluss des Sefer Schemot zurück zum Anfang</div>
+      <div class="or-chozer-he">חֲזַק · חֲזַק · וְנִתְחַזֵּק</div>
+      <div class="or-chozer-de">
+        Der Schluss des Sefer Schemot in Hijaz-Königlichkeit verbindet sich durch einen einzelnen
+        Saba-Echo-Ton zurück mit dem Anfang — <em>וְאֵלֶּה שְׁמוֹת בְּנֵי יִשְׂרָאֵל</em> (Schemot 1:1):
+        wo das Sefer mit den <em>Namen</em> Israels in der ägyptischen Galut begann, dort endet es
+        mit dem <em>ganzen Haus Israel</em> unter der Schechina-Wolke. Aleppo-Marokko-Yerushalmi-
+        Brauch: <em>Chazak Chazak veNitchazek</em> dreimal stehend, mit voller Stimme im Hijaz-Modus.</div></div>
+
+  </section>
+
+  <!-- ══ FOOTER ══ -->
+  <div class="footer">
+    <p class="footer-he">פָּרָשַׁת פְּקוּדֵי · מַלְכוּת · מַקָּאם חִיגָ׳אז · הִשְׁתַּכְּנוּת הַשְּׁכִינָה · חֲתִימַת סֵפֶר שְׁמוֹת · חֲזַק חֲזַק וְנִתְחַזֵּק</p>
+    <p class="footer-chain">
+      שְׁמוֹת ל״ח:כ״א–מ׳:ל״ח · נוּסַּח צָדוֹק (רשש) · עֵדוֹת הַמִּזְרָח · אֲרָם צוֹבָה · מָרוֹקוֹ · יָמֶן · יְרוּשָׁלַיִם
+    </p>
+    <p class="footer-de">
+      Quellen: <strong>Tanach</strong> (Schemot 38:21–40:38 — Tora-Text 1:1, mit Tetragrammaton-
+      Konvertierung durchgängig als אֲדֹנָי) · <strong>Rambam · Mishneh Torah</strong> (Hilchot
+      Beit HaBechirah — Aufrichtung und Architektur des Heiligtums · Hilchot Klei HaMikdasch
+      ve'ovdim bo — Geräte und priesterliche Gewänder · Hilchot Schekalim — Halb-Schekel-Halacha
+      und Kikar-Rechnung · Hilchot Mlachim Perek 11–12 zur Maschiach-ben-David-Tradition) ·
+      <strong>Or HaChaim</strong> (auf Schemot 38:21 zur Bedeutung von <em>Mischkan HaEdut</em>;
+      auf Schemot 39:43 zum Mosche-Segen und zum jährlichen Sium-Brauch; auf Schemot 40:34 zum
+      Doppel-Wesen Verbergung/Erfüllung der Schechina-Wolke; auf 40:38 zur ungebrochenen Adonai-
+      Sichtbarkeit über jedem Haus Israels) · <strong>Sefer HaIkkarim</strong> (Yosef Albo,
+      Maamar Rischon — die drei Glaubens-Grundlagen Adonai-Existenz, Tora-vom-Himmel,
+      Schar-veOnesch, die im Mischkan-Wunder zusammentreffen) · <strong>Rashash · Nahar
+      Schalom</strong> (Drush <em>Hischtachenut HaSchechina</em> · Malchut als unterste,
+      manifestierende Sefirah) · <strong>Ramchal · Mishkney Elyon</strong> (Schluss-Kapitel 18 —
+      der Mischkan im Wüste als Probe, der vollendete Beit HaMikdasch durch Maschiach ben David
+      als Ziel) · <strong>Ramchal · Derech Adonai</strong> (Teil 1, Perek 4 zur Hashgachah und
+      zur archetypischen Form göttlicher Begleitung) · <strong>Ramchal · Mesillat Yescharim</strong>
+      (Perek 19 zur Kedushah als sephardisches Anker-Kapitel) · <strong>Schadal · Pirusch al
+      haTora</strong> (Schemot 38:21 zur Bezeichnung <em>Mischkan HaEdut</em> als Erweiterung
+      des <em>Aron HaEdut</em>-Begriffs auf den ganzen Mischkan; Schemot 38:24 zur präzisen
+      Maß-Halacha <em>הככר הוא ג׳ אלפים שקל</em>; Schemot 38:8 zu den צובאות-Frauen und ihrer
+      Rolle in der Pekudei-Bau-Geschichte) · <strong>Ben Ish Chai</strong> Shanah Rischona
+      (Parashat Pekudei · Chazak-veNitchazek-Brauch · Hilchot Schabbat zum Sium-Modell des
+      Erev-Schabbat-Werk-Abschlusses) · <strong>Schulchan Aruch</strong> (Orach Chaim 139:11 zum
+      Chazak-veNitchazek-Ruf · 694 zum Halb-Schekel-Brauch vor Purim) · <strong>Kaf HaChaim</strong>
+      (Rabbi Yaakov Chaim Sofer · sephardische Praxis aller Eidot HaMizrach — Aleppo, Marokko,
+      Yemen, Yerushalayim, Bagdad — zum Pekudei-Schabbat-Brauch und zum Machatzit-HaSchekel) ·
+      <strong>Yabia Omer · Chazon Ovadia</strong> (Rabbi Ovadia Yosef Z'L — sephardische moderne
+      Halacha zu Machatzit HaSchekel und zu den Mo'adim-Schluss-Riten der Sefer-Lesungen) ·
+      <strong>Talmud Bavli · Berachot 55a</strong> (zur Mischkan-Vollendung als Modell aller
+      späteren Errichtungs-Akte) · <strong>Krias Schma She'al haMittah</strong> (Aleppo-Tradition
+      mit Schemot 40:38 als nächtlicher Wolken-Feuer-Anker).
+      <br><br>
+      <strong>Tradition:</strong> Sephardisch · Nussach Zadoq (Rashash) · Maqam-Tradition aus
+      Aleppo, Yerushalayim, Marokko, Yemen · Tetragrammaton durchgängig als אֲדֹנָי · Maschiach
+      ben David · Doppelt geprüfte Quellen · Tora-Text 1:1 unverändert · Erstellt Mai 2026 ·
+      Sefer HaParashot bemo Maqam · 11. und letztes Lied Sefer Schemot · Malchut · Maqam Hijaz
+      mit Or-Chozer-Saba-Echo zum Sefer-Eröffnungs-Vers Schemot 1:1 · חֲתִימַת סֵפֶר שְׁמוֹת.
+    </p>
+    <div class="footer-amen">אָמֵן · יִבָּנֶה הַמִּקְדָּשׁ בִּמְהֵרָה בְיָמֵינוּ · יָבוֹא מָשִׁיחַ בֶּן דָּוִד · אָמֵן</div>
+  </div>
+
+</div>
+
+
+</body></html>

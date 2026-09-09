@@ -1,0 +1,588 @@
+<!DOCTYPE html>
+<html lang="he-IL"><head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>פָּרָשַׁת שְׁמוֹת · שְׁמוֹת א׳:א׳–ו׳:א׳ · הוֹד · מַקָּאם בַּיָּאת · Sephardische Tora-Vertonung</title>
+  <link href="https://fonts.googleapis.com/css2?family=Frank+Ruhl+Libre:wght@300;400;700;900&amp;family=EB+Garamond:ital,wght@0,400;0,600;1,400;1,600&amp;family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&amp;display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg:#060808; --deep:#0A0E0E; --layer:#101414; --card:#0C1010;
+      --parchment:#f2e8d0; --parch-dim:#c8b898;
+      --ivory:#f0e8d8; --ivory-dim:#a89878;
+      --silver:#c8d4e0; --silver-dim:#7a8290;
+      --text:#a0a89c;
+      --sefer:#B04030; --sefer-lt:#E07060; --sefer-dim:#7A2818;
+      --sefer-bg:rgba(176,64,48,.08); --sefer-bdr:rgba(176,64,48,.36); --sefer-glow:rgba(224,112,96,.20);
+      --shm:#A85838; --shm-lt:#D8806C; --shm-dim:#6F2C18;
+      --shm-bg:rgba(168,88,56,.08); --shm-bdr:rgba(168,88,56,.36); --shm-glow:rgba(216,128,108,.22);
+      --maqam-saba:#B0904A; --maqam-hijaz:#C85050; --maqam-bayat:#A07850;
+      --maqam-rast:#C8A860; --maqam-ajam:#7A9050; --maqam-nahawand:#6080A0;
+    }
+    *,*::before,*::after { margin:0; padding:0; box-sizing:border-box; }
+    html { scroll-behavior:smooth; }
+    body { background:var(--bg); color:var(--silver); font-family:'EB Garamond',serif; overflow-x:hidden; line-height:1.85; padding:40px 20px 80px; }
+    body::before { content:''; position:fixed; inset:0; pointer-events:none; z-index:0;
+      background: radial-gradient(ellipse at 18% 12%, rgba(168,88,56,.10) 0%, transparent 48%),
+                  radial-gradient(ellipse at 82% 28%, rgba(216,128,108,.10) 0%, transparent 45%),
+                  radial-gradient(ellipse at 12% 68%, rgba(160,120,80,.08) 0%, transparent 45%),
+                  radial-gradient(ellipse at 88% 82%, rgba(168,88,56,.08) 0%, transparent 42%),
+                  radial-gradient(ellipse at 50% 50%, rgba(16,10,8,.82) 0%, transparent 70%); }
+    body::after { content:''; position:fixed; inset:0; pointer-events:none; z-index:0;
+      background-image:
+        radial-gradient(1px 1px at 8% 10%, rgba(216,128,108,.30) 0%, transparent 100%),
+        radial-gradient(1px 1px at 48% 5%, rgba(224,112,96,.28) 0%, transparent 100%),
+        radial-gradient(1px 1px at 82% 16%, rgba(208,120,120,.28) 0%, transparent 100%),
+        radial-gradient(1px 1px at 25% 42%, rgba(192,104,76,.26) 0%, transparent 100%),
+        radial-gradient(1px 1px at 68% 58%, rgba(224,112,96,.24) 0%, transparent 100%),
+        radial-gradient(1.5px 1.5px at 12% 75%, rgba(200,140,100,.30) 0%, transparent 100%),
+        radial-gradient(1px 1px at 90% 78%, rgba(216,128,108,.26) 0%, transparent 100%),
+        radial-gradient(1px 1px at 35% 88%, rgba(208,120,120,.22) 0%, transparent 100%); }
+    .wrap { max-width:1080px; margin:0 auto; position:relative; z-index:1; }
+    .page-header { text-align:center; margin-bottom:80px; padding-bottom:40px; border-bottom:1px solid var(--sefer-bdr); position:relative; }
+    .page-header::after { content:'✦ ✡ ✦'; position:absolute; bottom:-14px; left:50%; transform:translateX(-50%); background:var(--bg); padding:0 20px; color:var(--sefer); font-size:.62em; letter-spacing:.55em; }
+    .eyebrow { font-family:'Cormorant Garamond',serif; font-style:italic; font-size:.78em; color:var(--sefer-lt); letter-spacing:.28em; text-transform:uppercase; margin-bottom:18px; opacity:.85; }
+    .sefer-letter { font-family:'Frank Ruhl Libre',serif; font-size:1.40em; color:var(--sefer); font-weight:900; display:inline-block; margin-bottom:6px; text-shadow:0 0 30px var(--sefer-glow); letter-spacing:.04em; }
+    .page-title-he { font-family:'Frank Ruhl Libre',serif; font-size:3.2em; font-weight:900; color:var(--ivory); direction:rtl; letter-spacing:.05em; text-shadow:0 0 80px var(--sefer-glow), 0 0 140px var(--shm-glow); margin-bottom:8px; line-height:1.15; }
+    .page-subtitle-he { font-family:'Frank Ruhl Libre',serif; font-size:1.16em; color:var(--sefer-lt); direction:rtl; margin-bottom:10px; letter-spacing:.06em; }
+    .page-title-de { font-family:'Cormorant Garamond',serif; font-style:italic; font-size:1.14em; color:var(--silver-dim); margin-bottom:22px; }
+    .page-desc { font-size:1.0em; color:var(--text); max-width:780px; margin:0 auto; line-height:1.95; }
+    .page-desc strong { color:var(--ivory-dim); }
+    .page-desc em { color:var(--shm-lt); font-style:italic; }
+    .song-section { margin-bottom:90px; padding-bottom:70px; border-bottom:1px dashed var(--sefer-bdr); }
+    .song-header { display:flex; flex-wrap:wrap; align-items:flex-start; gap:20px; margin-bottom:40px; padding:24px 26px; background:var(--layer); border:1px solid var(--shm-bdr); border-radius:10px; }
+    .song-num { font-family:'Frank Ruhl Libre',serif; font-size:2.6em; font-weight:900; direction:rtl; padding-right:14px; color:var(--shm-lt); }
+    .song-meta { flex:1; display:flex; flex-direction:column; gap:8px; }
+    .korban-badge { font-family:'Cormorant Garamond',serif; font-style:italic; font-size:.82em; letter-spacing:.08em; color:var(--shm-lt); }
+    .maqam-badge { font-family:'Cormorant Garamond',serif; font-style:italic; font-size:.78em; letter-spacing:.08em; display:inline-block; padding:3px 10px; border-radius:4px; color:#f0e8d8; font-weight:600; background:var(--maqam-bayat); }
+    .song-title-he { font-family:'Frank Ruhl Libre',serif; font-size:1.7em; font-weight:700; color:var(--ivory); direction:rtl; letter-spacing:.04em; }
+    .song-title-de { font-family:'Cormorant Garamond',serif; font-style:italic; font-size:1.02em; color:var(--silver); }
+    .source-badge { font-family:'Cormorant Garamond',serif; font-style:italic; font-size:.74em; color:#A07060; line-height:1.6; }
+    .aliyah-block { margin-bottom:42px; }
+    .aliyah-label { font-family:'Frank Ruhl Libre',serif; font-size:.94em; font-weight:700; direction:rtl; margin-bottom:9px; color:var(--shm); letter-spacing:.06em; padding-bottom:6px; border-bottom:1px solid var(--shm-bdr); }
+    .aliyah-label-de { font-family:'Cormorant Garamond',serif; font-style:italic; font-size:.78em; color:var(--silver-dim); display:inline-block; margin-right:14px; opacity:.85; }
+    .instrument-note { font-family:'Cormorant Garamond',serif; font-style:italic; font-size:.84em; color:var(--text); margin-bottom:14px; padding:10px 14px; background:rgba(168,88,56,.05); border-left:2px solid var(--shm-dim); }
+    .lyrics-block { display:flex; gap:44px; flex-wrap:wrap; }
+    .lyrics-he, .lyrics-de { flex:1; min-width:280px; display:flex; flex-direction:column; gap:6px; }
+    .lyrics-he span.line { font-family:'Frank Ruhl Libre',serif; font-size:1.06em; color:var(--ivory); direction:rtl; line-height:1.95; }
+    .lyrics-de span.line { font-family:'Cormorant Garamond',serif; font-size:1.0em; color:var(--silver); line-height:1.88; }
+    .modal-marker { font-family:'Cormorant Garamond',serif; font-style:italic; font-size:.80em; color:var(--maqam-saba); padding:6px 12px; background:rgba(176,144,74,.08); border:1px dashed rgba(176,144,74,.36); margin:14px 0; text-align:center; letter-spacing:.10em; }
+    .tikkun-box { background:rgba(168,88,56,.07); border:1px solid rgba(168,88,56,.32); padding:30px; margin-top:40px; border-radius:6px; }
+    .tikkun-header { display:flex; flex-direction:column; gap:6px; margin-bottom:20px; }
+    .tikkun-title-he { font-family:'Frank Ruhl Libre',serif; font-size:1.25em; color:var(--ivory); direction:rtl; font-weight:700; letter-spacing:.04em; }
+    .tikkun-title-de { font-family:'Cormorant Garamond',serif; font-size:1.0em; font-style:italic; color:var(--silver); }
+    .tikkun-src { font-family:'Cormorant Garamond',serif; font-size:.74em; color:#A07060; line-height:1.7; }
+    .tikkun-body { font-family:'Cormorant Garamond',serif; font-size:.96em; color:var(--text); line-height:1.92; }
+    .tikkun-body strong { color:var(--ivory); }
+    .tikkun-body em { color:var(--shm-lt); font-style:italic; }
+    .tikkun-actions { margin-top:24px; padding-top:18px; border-top:1px dashed var(--shm-bdr); }
+    .tikkun-actions-title { font-family:'Frank Ruhl Libre',serif; font-size:1.05em; color:var(--ivory); direction:rtl; font-weight:700; letter-spacing:.04em; margin-bottom:14px; }
+    .tikkun-actions ol { padding-right:22px; padding-left:18px; }
+    .tikkun-actions li { font-family:'Cormorant Garamond',serif; font-size:.94em; color:var(--text); line-height:1.85; margin-bottom:10px; }
+    .tikkun-actions li strong { color:var(--ivory-dim); }
+    .tikkun-actions li em { color:var(--shm-lt); font-style:italic; }
+    .tikkun-tags { margin-top:18px; display:flex; gap:9px; flex-wrap:wrap; }
+    .tikkun-tag { background:rgba(168,88,56,.16); color:var(--shm-lt); padding:4px 10px; border-radius:4px; font-size:.78em; font-family:'Frank Ruhl Libre',serif; direction:rtl; }
+    .climax-box { background:linear-gradient(135deg,rgba(176,144,74,.18),rgba(168,88,56,.12),rgba(6,8,8,.88)); border:2px solid rgba(176,144,74,.40); padding:32px; margin-top:40px; margin-bottom:30px; border-radius:8px; }
+    .climax-label { font-family:'Cormorant Garamond',serif; font-style:italic; font-size:.82em; color:var(--maqam-saba); letter-spacing:.18em; text-transform:uppercase; margin-bottom:14px; text-align:center; }
+    .climax-verse-he { font-family:'Frank Ruhl Libre',serif; font-size:1.55em; font-weight:700; color:var(--ivory); direction:rtl; text-align:center; line-height:1.85; letter-spacing:.04em; text-shadow:0 0 30px var(--shm-glow); }
+    .climax-verse-de { font-family:'Cormorant Garamond',serif; font-style:italic; font-size:1.05em; color:var(--silver); text-align:center; margin-top:14px; line-height:1.7; }
+    .climax-src { font-family:'Cormorant Garamond',serif; font-style:italic; font-size:.80em; color:var(--shm-lt); text-align:center; margin-top:12px; opacity:.8; }
+    .coda-box { background:rgba(6,8,8,.78); border:1px solid var(--shm-bdr); padding:36px; text-align:center; margin-top:30px; margin-bottom:30px; border-radius:6px; }
+    .coda-label { font-family:'Cormorant Garamond',serif; font-style:italic; font-size:.80em; color:var(--shm-lt); letter-spacing:.18em; text-transform:uppercase; margin-bottom:18px; }
+    .coda-whisper { font-family:'Frank Ruhl Libre',serif; font-size:1.20em; direction:rtl; line-height:2.3; opacity:.85; color:var(--shm-lt); }
+    .coda-whisper strong { font-weight:900; opacity:1; color:var(--ivory); }
+    .coda-de { font-family:'Cormorant Garamond',serif; font-style:italic; font-size:.92em; color:var(--silver-dim); margin-top:14px; line-height:1.7; }
+    .scenarios-section { margin-top:54px; margin-bottom:40px; }
+    .scenarios-title { font-family:'Frank Ruhl Libre',serif; font-size:1.35em; font-weight:700; text-align:center; margin-bottom:34px; direction:rtl; color:var(--sefer-lt); letter-spacing:.06em; }
+    .scenarios-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(290px,1fr)); gap:26px; }
+    .scenario-card { background:linear-gradient(135deg,rgba(32,12,8,.78),rgba(6,8,8,.92)); border:1px solid var(--shm-bdr); padding:24px; transition:transform .2s, box-shadow .2s; border-radius:6px; }
+    .scenario-card:hover { transform:translateY(-4px); box-shadow:0 10px 36px var(--shm-glow); }
+    .sc-num { font-family:'Cormorant Garamond',serif; font-style:italic; font-size:.74em; letter-spacing:.14em; text-transform:uppercase; margin-bottom:7px; color:var(--shm); }
+    .sc-title-he { font-family:'Frank Ruhl Libre',serif; font-size:1.10em; font-weight:700; color:var(--ivory); direction:rtl; margin-bottom:4px; letter-spacing:.04em; }
+    .sc-sub { font-family:'Cormorant Garamond',serif; font-style:italic; font-size:.84em; color:#A07060; margin-bottom:14px; }
+    .sc-body { font-size:.92em; color:var(--text); line-height:1.80; margin-bottom:14px; }
+    .sc-body strong { color:var(--shm-lt); }
+    .key-moment { font-size:.86em; color:var(--shm-lt); font-style:italic; margin-bottom:9px; padding-left:13px; border-left:2px solid var(--shm-lt); }
+    .reaction { font-size:.86em; color:var(--text); font-style:italic; padding-left:13px; border-left:2px solid var(--sefer-dim); line-height:1.78; }
+    .reaction em { color:var(--shm-lt); font-style:italic; }
+    .footer { margin-top:80px; padding-top:50px; border-top:1px solid var(--sefer-bdr); text-align:center; }
+    .footer-he { font-family:'Frank Ruhl Libre',serif; font-size:1.40em; font-weight:700; color:var(--sefer-lt); direction:rtl; margin-bottom:18px; text-shadow:0 0 30px var(--sefer-glow); letter-spacing:.06em; }
+    .footer-chain { font-family:'Frank Ruhl Libre',serif; font-size:1.0em; color:var(--silver); direction:rtl; margin-bottom:22px; letter-spacing:.09em; }
+    .footer-de { font-family:'Cormorant Garamond',serif; font-style:italic; font-size:.92em; color:var(--text); line-height:2.0; max-width:780px; margin:0 auto 24px; }
+    .footer-de strong { color:var(--ivory-dim); font-style:normal; }
+    .footer-amen { font-family:'Frank Ruhl Libre',serif; font-size:1.30em; color:var(--sefer-lt); direction:rtl; margin-top:24px; letter-spacing:.14em; text-shadow:0 0 30px var(--sefer-glow); }
+    @media (max-width:720px) {
+      .page-title-he { font-size:2.3em; }
+      .song-num { font-size:2.2em; }
+      .lyrics-block { flex-direction:column; gap:24px; }
+      .scenarios-grid { grid-template-columns:1fr; }
+      .climax-verse-he { font-size:1.20em; }
+      .footer-he { font-size:1.10em; }
+    }
+  </style>
+</head>
+<body>
+<div class="wrap">
+
+  <header class="page-header">
+    <div class="eyebrow">Sephardische Tora-Vertonung · Sefer HaParashot bemo Maqam</div>
+    <div class="sefer-letter">ב</div>
+    <div class="page-title-he">פָּרָשַׁת שְׁמוֹת</div>
+    <div class="page-subtitle-he">סֵפֶר שְׁמוֹת · א׳:א׳–ו׳:א׳ · הוֹד · מַקָּאם בַּיָּאת · שַׁעַר הַגָּלוּת וְהַגְּאֻלָּה</div>
+    <div class="page-title-de">Schemot — Die Namen, die Versklavung, die Geburt Mosches und der Brennende Dornbusch · Eröffnung des Sefer Schemot · Hod im Maqam Bayat</div>
+    <div class="page-desc">
+      Schemot eröffnet das zweite Tora-Buch — das Sefer der <em>Geulah</em>. Doch die Eröffnung beginnt
+      nicht in der Befreiung, sondern in der <em>verborgenen Tiefe der Galut</em>: die Aufzählung der
+      zwölf Namen der Söhne Yaakovs, der Tod der Erzväter-Generation, der neue König „der Yosef nicht
+      kannte", die Versklavung in Pithom und Ra'amses, die Hebammen Schiphra und Pu'a, die Geburt
+      Mosches im Korb, sein Aufwachsen im Palast, der Totschlag des ägyptischen Aufsehers, die Flucht
+      nach Midjan, vierzig Jahre Hirten-Stille, der <em>Brennende Dornbusch</em>, die Offenbarung
+      des Namens <em>אֶהְיֶה אֲשֶׁר אֶהְיֶה</em>, die ersten zwei Begegnungen mit Pharao — und der
+      bitter-enttäuschte Schluss <em>„וְהַצֵּל לֹא־הִצַּלְתָּ אֶת־עַמֶּךָ"</em> (5:23), gefolgt von
+      Adonais Versprechen <em>„עַתָּה תִרְאֶה"</em> (6:1). Sefirot-Anker: <strong>Hod</strong> — die
+      demütige, verborgene Reifung der Erlösung, die <em>Hodaah</em>-Bewegung, in der Israel zum ersten
+      Mal seinen Schrei zu Adonai erhebt (2:23) und Adonai antwortet mit <em>וַיֵּדַע אֱלֹהִים</em>
+      (2:25). Maqam: <strong>Bayat</strong> — der mütterlich-tiefe, generation-geduldige Galut-Maqam
+      aller sephardischen Eidot HaMizrach, mit charakteristischer Hinwendung zu <strong>Saba</strong>
+      im Moment des Brennenden Dornbusches — der ur-schwelligen Begegnung am Berg Chorev. Tora-Text 1:1,
+      Tetragrammaton durchgängig als אֲדֹנָי, Maschiach ben David.
+    </div>
+  </header>
+
+  <section class="song-section" id="schemot">
+
+    <div class="song-header">
+      <div class="song-num">א</div>
+      <div class="song-meta">
+        <div class="korban-badge">Hod — הוֹד · Die demütig-verborgene Reifung der Erlösung in der Tiefe der Mitzrayim-Galut</div>
+        <div class="song-title-he">פָּרָשַׁת שְׁמוֹת</div>
+        <div class="song-title-de">Schemot — „Und dies sind die Namen" · Schemot 1:1–6:1</div>
+        <div class="maqam-badge">מַקָּאם בַּיָּאת · Bayat · ~60 BPM rubato · mit Saba-Hinwendung am Sneh</div>
+        <div class="source-badge">שְׁמוֹת א:א׳–ו:א׳ · רמב״ם הלכות יְסוֹדֵי הַתּוֹרָה ז׳–י׳ · רשש נְהַר שָׁלוֹם דרוש גָּלוּת מִצְרַיִם · רמח״ל מסילת ישרים פתיחה ופרק א׳, פרק י״א · רמח״ל דעת תבונות (יסוד הגלות והגאולה) · אור החיים על שְׁמוֹת ב:כ״ה · בן איש חי שנה ראשונה פרשת שמות (הלכות תפילה ויוצר אור) · שד״ל בְּפֵרוּשׁ עַל שְׁמוֹת ג:י״ד · ספר העיקרים מאמר ב׳ · נוּסַּח אֲרָם צוֹבָה · יְרוּשָׁלַיִם · מָרוֹקוֹ · יָמֶן</div>
+      </div>
+    </div>
+
+    <div class="aliyah-block">
+      <div class="aliyah-label">עֲלִיָּה רִאשׁוֹנָה — וְאֵלֶּה שְׁמוֹת בְּנֵי יִשְׂרָאֵל<span class="aliyah-label-de">Erste Aliyah · Schemot 1:1–17 · Die zwölf Namen · Der neue König · Pithom und Ra'amses · Die Hebammen Schiphra und Pu'a</span></div>
+      <div class="instrument-note">[no percussion] [no drums] [no choir] [solo acoustic guitar — Bayat opening with sustained maternal-deep low tones, the naming-litany of the twelve tribes as generation-deep yearning, hushed and patient, rubato around 60 BPM, no percussion, no drums, no beat] Gitarre: Bayat öffnet mit getragenen mütterlich-tiefen Tönen — die Namens-Litanei der zwölf Stämme als generation-geduldiger Sehnsuchts-Maqam, hauchend und wartend.</div>
+      <div class="lyrics-block">
+        <div class="lyrics-he" dir="rtl">
+          <span class="line">וְאֵלֶּה שְׁמוֹת בְּנֵי יִשְׂרָאֵל הַבָּאִים מִצְרָיְמָה אֵת יַעֲקֹב אִישׁ וּבֵיתוֹ בָּאוּ׃</span>
+          <span class="line">רְאוּבֵן שִׁמְעוֹן לֵוִי וִיהוּדָה׃</span>
+          <span class="line">יִשָּׂשכָר זְבוּלֻן וּבִנְיָמִן׃</span>
+          <span class="line">דָּן וְנַפְתָּלִי גָּד וְאָשֵׁר׃</span>
+          <span class="line">וַיְהִי כׇּל־נֶפֶשׁ יֹצְאֵי יֶרֶךְ־יַעֲקֹב שִׁבְעִים נָפֶשׁ וְיוֹסֵף הָיָה בְמִצְרָיִם׃</span>
+          <span class="line">וַיָּמׇת יוֹסֵף וְכׇל־אֶחָיו וְכֹל הַדּוֹר הַהוּא׃</span>
+          <span class="line">וּבְנֵי יִשְׂרָאֵל פָּרוּ וַיִּשְׁרְצוּ וַיִּרְבּוּ וַיַּעַצְמוּ בִּמְאֹד מְאֹד וַתִּמָּלֵא הָאָרֶץ אֹתָם׃</span>
+          <span class="line">וַיָּקׇם מֶלֶךְ־חָדָשׁ עַל־מִצְרָיִם אֲשֶׁר לֹא־יָדַע אֶת־יוֹסֵף׃</span>
+          <span class="line">וַיֹּאמֶר אֶל־עַמּוֹ הִנֵּה עַם בְּנֵי יִשְׂרָאֵל רַב וְעָצוּם מִמֶּנּוּ׃</span>
+          <span class="line">הָבָה נִתְחַכְּמָה לוֹ פֶּן־יִרְבֶּה וְהָיָה כִּי־תִקְרֶאנָה מִלְחָמָה וְנוֹסַף גַּם־הוּא עַל־שֹׂנְאֵינוּ וְנִלְחַם־בָּנוּ וְעָלָה מִן־הָאָרֶץ׃</span>
+          <span class="line">וַיָּשִׂימוּ עָלָיו שָׂרֵי מִסִּים לְמַעַן עַנֹּתוֹ בְּסִבְלֹתָם וַיִּבֶן עָרֵי מִסְכְּנוֹת לְפַרְעֹה אֶת־פִּתֹם וְאֶת־רַעַמְסֵס׃</span>
+          <span class="line">וְכַאֲשֶׁר יְעַנּוּ אֹתוֹ כֵּן יִרְבֶּה וְכֵן יִפְרֹץ וַיָּקֻצוּ מִפְּנֵי בְּנֵי יִשְׂרָאֵל׃</span>
+          <span class="line">וַיַּעֲבִדוּ מִצְרַיִם אֶת־בְּנֵי יִשְׂרָאֵל בְּפָרֶךְ׃</span>
+          <span class="line">וַיְמָרְרוּ אֶת־חַיֵּיהֶם בַּעֲבֹדָה קָשָׁה בְּחֹמֶר וּבִלְבֵנִים וּבְכׇל־עֲבֹדָה בַּשָּׂדֶה אֵת כׇּל־עֲבֹדָתָם אֲשֶׁר־עָבְדוּ בָהֶם בְּפָרֶךְ׃</span>
+          <span class="line">וַיֹּאמֶר מֶלֶךְ מִצְרַיִם לַמְיַלְּדֹת הָעִבְרִיֹּת אֲשֶׁר שֵׁם הָאַחַת שִׁפְרָה וְשֵׁם הַשֵּׁנִית פּוּעָה׃</span>
+          <span class="line">וַיֹּאמֶר בְּיַלֶּדְכֶן אֶת־הָעִבְרִיּוֹת וּרְאִיתֶן עַל־הָאׇבְנָיִם אִם־בֵּן הוּא וַהֲמִתֶּן אֹתוֹ וְאִם־בַּת הִוא וָחָיָה׃</span>
+          <span class="line">וַתִּירֶאןָ הַמְיַלְּדֹת אֶת־הָאֱלֹהִים וְלֹא עָשׂוּ כַּאֲשֶׁר דִּבֶּר אֲלֵיהֶן מֶלֶךְ מִצְרָיִם וַתְּחַיֶּיןָ אֶת־הַיְלָדִים׃</span>
+        </div>
+        <div class="lyrics-de">
+          <span class="line">(1) Und dies sind die Namen der Söhne Israels, die nach Mitzrayim kamen — mit Yaakov, jeder Mann mit seinem Haus kamen sie:</span>
+          <span class="line">(2) Reuwen, Schim'on, Lewi und Yehuda;</span>
+          <span class="line">(3) Issaschar, Sewulun und Binyamin;</span>
+          <span class="line">(4) Dan und Naftali, Gad und Ascher.</span>
+          <span class="line">(5) Und es waren alle Seelen, die aus der Lende Yaakovs hervorgingen, siebzig Seelen — und Yosef war (schon) in Mitzrayim.</span>
+          <span class="line">(6) Und Yosef starb und alle seine Brüder und jenes ganze Geschlecht.</span>
+          <span class="line">(7) Und die Söhne Israels waren fruchtbar, sie wimmelten, mehrten sich und wurden überaus mächtig — und das Land füllte sich mit ihnen.</span>
+          <span class="line">(8) Und ein neuer König erstand über Mitzrayim, der Yosef nicht kannte.</span>
+          <span class="line">(9) Und er sagte zu seinem Volk: Siehe, das Volk der Söhne Israels ist zahlreich und mächtiger als wir.</span>
+          <span class="line">(10) Wohlan, lasst uns klug gegen es vorgehen, dass es sich nicht weiter mehre — und es geschehe, wenn Krieg ausbricht, dass es sich auch zu unseren Feinden gesellt und gegen uns kämpft und aus dem Land hinaufzieht.</span>
+          <span class="line">(11) Und sie setzten Frontaufseher über es, um es mit Lastarbeiten zu beugen — und es baute Vorratsstädte für Pharao: Pithom und Ra'amses.</span>
+          <span class="line">(12) Doch je mehr man es beugte, desto mehr mehrte es sich und brach es hervor — und sie ekelten sich vor den Söhnen Israels.</span>
+          <span class="line">(13) Und Mitzrayim machte die Söhne Israels mit Härte zum Sklavendienst.</span>
+          <span class="line">(14) Und sie verbitterten ihr Leben mit harter Arbeit, mit Lehm und Ziegeln und mit aller Feldarbeit — all ihre Arbeit, die sie sie verrichten ließen, war mit Härte.</span>
+          <span class="line">(15) Und der König von Mitzrayim sagte zu den hebräischen Hebammen, deren eine Schiphra hieß und deren zweite Pu'a:</span>
+          <span class="line">(16) Wenn ihr die Hebräerinnen entbindet, so seht auf den Gebärstuhl — ist es ein Sohn, so tötet ihn; ist es eine Tochter, so soll sie leben.</span>
+          <span class="line">(17) Aber die Hebammen fürchteten Gott und taten nicht, wie der König von Mitzrayim ihnen befohlen hatte, und ließen die Knaben am Leben.</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="aliyah-block">
+      <div class="aliyah-label">עֲלִיָּה שְׁנִיָּה — לֵוִי וּבַת־לֵוִי · תֵּבַת גֹּמֶא · מֹשֶׁה<span class="aliyah-label-de">Zweite Aliyah · Schemot 1:18–2:10 · Die Antwort der Hebammen · Pharaos Erlass · Geburt Mosches im Schilfkorb · Adoption durch Pharaos Tochter</span></div>
+      <div class="instrument-note">[no percussion] [no drums] [no choir] [acoustic guitar — Bayat fingerpicking softening, the hidden ripening of the redemption-child in a basket of reeds, the daughter of Pharao bending toward the cry, no percussion] Gitarre: Bayat-Fingerpicking erweicht — das verborgene Reifen des Erlösungs-Kindes im Schilfkorb, die Tochter Pharaos beugt sich zum Weinen.</div>
+      <div class="lyrics-block">
+        <div class="lyrics-he" dir="rtl">
+          <span class="line">וַיִּקְרָא מֶלֶךְ־מִצְרַיִם לַמְיַלְּדֹת וַיֹּאמֶר לָהֶן מַדּוּעַ עֲשִׂיתֶן הַדָּבָר הַזֶּה וַתְּחַיֶּיןָ אֶת־הַיְלָדִים׃</span>
+          <span class="line">וַתֹּאמַרְןָ הַמְיַלְּדֹת אֶל־פַּרְעֹה כִּי לֹא כַנָּשִׁים הַמִּצְרִיֹּת הָעִבְרִיֹּת כִּי־חָיוֹת הֵנָּה בְּטֶרֶם תָּבוֹא אֲלֵהֶן הַמְיַלֶּדֶת וְיָלָדוּ׃</span>
+          <span class="line">וַיֵּיטֶב אֱלֹהִים לַמְיַלְּדֹת וַיִּרֶב הָעָם וַיַּעַצְמוּ מְאֹד׃</span>
+          <span class="line">וַיְהִי כִּי־יָרְאוּ הַמְיַלְּדֹת אֶת־הָאֱלֹהִים וַיַּעַשׂ לָהֶם בָּתִּים׃</span>
+          <span class="line">וַיְצַו פַּרְעֹה לְכׇל־עַמּוֹ לֵאמֹר כׇּל־הַבֵּן הַיִּלּוֹד הַיְאֹרָה תַּשְׁלִיכֻהוּ וְכׇל־הַבַּת תְּחַיּוּן׃</span>
+          <span class="line">וַיֵּלֶךְ אִישׁ מִבֵּית לֵוִי וַיִּקַּח אֶת־בַּת־לֵוִי׃</span>
+          <span class="line">וַתַּהַר הָאִשָּׁה וַתֵּלֶד בֵּן וַתֵּרֶא אֹתוֹ כִּי־טוֹב הוּא וַתִּצְפְּנֵהוּ שְׁלֹשָׁה יְרָחִים׃</span>
+          <span class="line">וְלֹא־יָכְלָה עוֹד הַצְּפִינוֹ וַתִּקַּח־לוֹ תֵּבַת גֹּמֶא וַתַּחְמְרָה בַחֵמָר וּבַזָּפֶת וַתָּשֶׂם בָּהּ אֶת־הַיֶּלֶד וַתָּשֶׂם בַּסּוּף עַל־שְׂפַת הַיְאֹר׃</span>
+          <span class="line">וַתֵּתַצַּב אֲחֹתוֹ מֵרָחֹק לְדֵעָה מַה־יֵּעָשֶׂה לוֹ׃</span>
+          <span class="line">וַתֵּרֶד בַּת־פַּרְעֹה לִרְחֹץ עַל־הַיְאֹר וְנַעֲרֹתֶיהָ הֹלְכֹת עַל־יַד הַיְאֹר וַתֵּרֶא אֶת־הַתֵּבָה בְּתוֹךְ הַסּוּף וַתִּשְׁלַח אֶת־אֲמָתָהּ וַתִּקָּחֶהָ׃</span>
+          <span class="line">וַתִּפְתַּח וַתִּרְאֵהוּ אֶת־הַיֶּלֶד וְהִנֵּה־נַעַר בֹּכֶה וַתַּחְמֹל עָלָיו וַתֹּאמֶר מִיַּלְדֵי הָעִבְרִים זֶה׃</span>
+          <span class="line">וַתֹּאמֶר אֲחֹתוֹ אֶל־בַּת־פַּרְעֹה הַאֵלֵךְ וְקָרָאתִי לָךְ אִשָּׁה מֵינֶקֶת מִן הָעִבְרִיֹּת וְתֵינִק לָךְ אֶת־הַיָּלֶד׃</span>
+          <span class="line">וַתֹּאמֶר־לָהּ בַּת־פַּרְעֹה לֵכִי וַתֵּלֶךְ הָעַלְמָה וַתִּקְרָא אֶת־אֵם הַיָּלֶד׃</span>
+          <span class="line">וַתֹּאמֶר לָהּ בַּת־פַּרְעֹה הֵילִיכִי אֶת־הַיֶּלֶד הַזֶּה וְהֵינִקִהוּ לִי וַאֲנִי אֶתֵּן אֶת־שְׂכָרֵךְ וַתִּקַּח הָאִשָּׁה הַיֶּלֶד וַתְּנִיקֵהוּ׃</span>
+          <span class="line">וַיִּגְדַּל הַיֶּלֶד וַתְּבִאֵהוּ לְבַת־פַּרְעֹה וַיְהִי־לָהּ לְבֵן וַתִּקְרָא שְׁמוֹ מֹשֶׁה וַתֹּאמֶר כִּי מִן־הַמַּיִם מְשִׁיתִהוּ׃</span>
+        </div>
+        <div class="lyrics-de">
+          <span class="line">(18) Und der König von Mitzrayim rief die Hebammen und sagte zu ihnen: Warum habt ihr diese Sache getan und die Knaben am Leben gelassen?</span>
+          <span class="line">(19) Und die Hebammen sagten zu Pharao: Weil die Hebräerinnen nicht wie die ägyptischen Frauen sind — denn sie sind lebenskräftig; bevor die Hebamme zu ihnen kommt, haben sie schon geboren.</span>
+          <span class="line">(20) Und Gott tat den Hebammen Gutes — und das Volk mehrte sich und wurde sehr mächtig.</span>
+          <span class="line">(21) Und es geschah: weil die Hebammen Gott fürchteten, machte er ihnen Häuser.</span>
+          <span class="line">(22) Und Pharao gebot seinem ganzen Volk: Jeden Sohn, der geboren wird, sollt ihr in den Nil werfen, und jede Tochter sollt ihr leben lassen.</span>
+          <span class="line">(1) Und ein Mann aus dem Hause Lewi ging hin und nahm eine Tochter Lewis (zur Frau).</span>
+          <span class="line">(2) Und die Frau wurde schwanger und gebar einen Sohn — und sie sah ihn, dass er gut war, und sie verbarg ihn drei Monate.</span>
+          <span class="line">(3) Und als sie ihn nicht länger verbergen konnte, nahm sie für ihn einen Kasten aus Schilfrohr, bestrich ihn mit Erdpech und mit Pech, legte das Kind hinein und setzte ihn in das Schilf am Ufer des Nils.</span>
+          <span class="line">(4) Und seine Schwester stellte sich von ferne auf, um zu erkennen, was mit ihm geschehen würde.</span>
+          <span class="line">(5) Und die Tochter Pharaos stieg zum Baden an den Nil herab, und ihre Dienerinnen gingen an der Seite des Nils — und sie sah den Kasten mitten im Schilf und sandte ihre Magd hin und ließ ihn holen.</span>
+          <span class="line">(6) Und sie öffnete (ihn) und sah es, das Kind — und siehe, ein weinender Knabe; und sie hatte Mitleid mit ihm und sagte: Von den hebräischen Kindern ist dieses.</span>
+          <span class="line">(7) Und seine Schwester sagte zur Tochter Pharaos: Soll ich gehen und dir eine säugende Frau von den Hebräerinnen rufen, dass sie dir das Kind säuge?</span>
+          <span class="line">(8) Und die Tochter Pharaos sagte zu ihr: Geh. Und das Mädchen ging und rief die Mutter des Kindes.</span>
+          <span class="line">(9) Und die Tochter Pharaos sagte zu ihr: Nimm dieses Kind und säuge es mir — und ich werde dir deinen Lohn geben. Und die Frau nahm das Kind und säugte es.</span>
+          <span class="line">(10) Und das Kind wuchs heran, und sie brachte es zur Tochter Pharaos, und es wurde ihr zum Sohn — und sie nannte seinen Namen Mosche und sagte: Denn aus dem Wasser habe ich ihn gezogen.</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="aliyah-block">
+      <div class="aliyah-label">עֲלִיָּה שְׁלִישִׁית — וַיֵּצֵא אֶל־אֶחָיו · מִדְיָן · וַיֵּדַע אֱלֹהִים<span class="aliyah-label-de">Dritte Aliyah · Schemot 2:11–25 · Mosches Hinausgehen zu seinen Brüdern · Der Totschlag · Flucht nach Midjan · Zipporah und Gerschom · Der Schrei und das Wissen Gottes</span></div>
+      <div class="instrument-note">[no percussion] [no drums] [no choir] [acoustic guitar — Bayat darkening into the wilderness of Midjan, forty years of pastoral stillness, then the cry rising from below, the silent "vayeda Elohim" of recognition, no percussion] Gitarre: Bayat verdunkelt in die Wüste Midjans — vierzig Jahre Hirten-Stille, dann steigt der Schrei von unten auf, das stumme „Adonai wusste" der Erkenntnis.</div>
+      <div class="lyrics-block">
+        <div class="lyrics-he" dir="rtl">
+          <span class="line">וַיְהִי בַּיָּמִים הָהֵם וַיִּגְדַּל מֹשֶׁה וַיֵּצֵא אֶל־אֶחָיו וַיַּרְא בְּסִבְלֹתָם וַיַּרְא אִישׁ מִצְרִי מַכֶּה אִישׁ־עִבְרִי מֵאֶחָיו׃</span>
+          <span class="line">וַיִּפֶן כֹּה וָכֹה וַיַּרְא כִּי אֵין אִישׁ וַיַּךְ אֶת־הַמִּצְרִי וַיִּטְמְנֵהוּ בַּחוֹל׃</span>
+          <span class="line">וַיֵּצֵא בַּיּוֹם הַשֵּׁנִי וְהִנֵּה שְׁנֵי־אֲנָשִׁים עִבְרִים נִצִּים וַיֹּאמֶר לָרָשָׁע לָמָּה תַכֶּה רֵעֶךָ׃</span>
+          <span class="line">וַיֹּאמֶר מִי שָׂמְךָ לְאִישׁ שַׂר וְשֹׁפֵט עָלֵינוּ הַלְהׇרְגֵנִי אַתָּה אֹמֵר כַּאֲשֶׁר הָרַגְתָּ אֶת־הַמִּצְרִי וַיִּירָא מֹשֶׁה וַיֹּאמַר אָכֵן נוֹדַע הַדָּבָר׃</span>
+          <span class="line">וַיִּשְׁמַע פַּרְעֹה אֶת־הַדָּבָר הַזֶּה וַיְבַקֵּשׁ לַהֲרֹג אֶת־מֹשֶׁה וַיִּבְרַח מֹשֶׁה מִפְּנֵי פַרְעֹה וַיֵּשֶׁב בְּאֶרֶץ־מִדְיָן וַיֵּשֶׁב עַל־הַבְּאֵר׃</span>
+          <span class="line">וּלְכֹהֵן מִדְיָן שֶׁבַע בָּנוֹת וַתָּבֹאנָה וַתִּדְלֶנָה וַתְּמַלֶּאנָה אֶת־הָרְהָטִים לְהַשְׁקוֹת צֹאן אֲבִיהֶן׃</span>
+          <span class="line">וַיָּבֹאוּ הָרֹעִים וַיְגָרְשׁוּם וַיָּקׇם מֹשֶׁה וַיּוֹשִׁעָן וַיַּשְׁקְ אֶת־צֹאנָם׃</span>
+          <span class="line">וַתָּבֹאנָה אֶל־רְעוּאֵל אֲבִיהֶן וַיֹּאמֶר מַדּוּעַ מִהַרְתֶּן בֹּא הַיּוֹם׃</span>
+          <span class="line">וַתֹּאמַרְןָ אִישׁ מִצְרִי הִצִּילָנוּ מִיַּד הָרֹעִים וְגַם־דָּלֹה דָלָה לָנוּ וַיַּשְׁקְ אֶת־הַצֹּאן׃</span>
+          <span class="line">וַיֹּאמֶר אֶל־בְּנֹתָיו וְאַיּוֹ לָמָּה זֶּה עֲזַבְתֶּן אֶת־הָאִישׁ קִרְאֶן לוֹ וְיֹאכַל לָחֶם׃</span>
+          <span class="line">וַיּוֹאֶל מֹשֶׁה לָשֶׁבֶת אֶת־הָאִישׁ וַיִּתֵּן אֶת־צִפֹּרָה בִתּוֹ לְמֹשֶׁה׃</span>
+          <span class="line">וַתֵּלֶד בֵּן וַיִּקְרָא אֶת־שְׁמוֹ גֵּרְשֹׁם כִּי אָמַר גֵּר הָיִיתִי בְּאֶרֶץ נׇכְרִיָּה׃</span>
+          <span class="line">וַיְהִי בַיָּמִים הָרַבִּים הָהֵם וַיָּמׇת מֶלֶךְ מִצְרַיִם וַיֵּאָנְחוּ בְנֵי־יִשְׂרָאֵל מִן־הָעֲבֹדָה וַיִּזְעָקוּ וַתַּעַל שַׁוְעָתָם אֶל־הָאֱלֹהִים מִן־הָעֲבֹדָה׃</span>
+          <span class="line">וַיִּשְׁמַע אֱלֹהִים אֶת־נַאֲקָתָם וַיִּזְכֹּר אֱלֹהִים אֶת־בְּרִיתוֹ אֶת־אַבְרָהָם אֶת־יִצְחָק וְאֶת־יַעֲקֹב׃</span>
+          <span class="line">וַיַּרְא אֱלֹהִים אֶת־בְּנֵי יִשְׂרָאֵל וַיֵּדַע אֱלֹהִים׃</span>
+        </div>
+        <div class="lyrics-de">
+          <span class="line">(11) Und es geschah in jenen Tagen, als Mosche groß geworden war, dass er zu seinen Brüdern hinausging und ihre Lasten sah — und er sah einen ägyptischen Mann, der einen hebräischen Mann von seinen Brüdern schlug.</span>
+          <span class="line">(12) Und er wandte sich hierhin und dorthin, und als er sah, dass kein Mann (da war), erschlug er den Ägypter und verbarg ihn im Sand.</span>
+          <span class="line">(13) Und er ging am zweiten Tag hinaus — und siehe, zwei hebräische Männer stritten miteinander; und er sagte zum Schuldigen: Warum schlägst du deinen Nächsten?</span>
+          <span class="line">(14) Und der sagte: Wer hat dich zum Mann gemacht, zum Fürsten und Richter über uns? Willst du mich erschlagen, wie du den Ägypter erschlagen hast? Und Mosche fürchtete sich und sagte: Wahrlich, die Sache ist bekannt geworden.</span>
+          <span class="line">(15) Und Pharao hörte diese Sache und suchte Mosche zu töten — und Mosche floh vor Pharao und ließ sich nieder im Lande Midjan, und er setzte sich an den Brunnen.</span>
+          <span class="line">(16) Und der Priester von Midjan hatte sieben Töchter, und sie kamen und schöpften und füllten die Tränken, um die Schafe ihres Vaters zu tränken.</span>
+          <span class="line">(17) Und die Hirten kamen und vertrieben sie — und Mosche stand auf und half ihnen und tränkte ihre Schafe.</span>
+          <span class="line">(18) Und als sie zu Re'uel, ihrem Vater, kamen, sagte er: Warum seid ihr heute so eilig gekommen?</span>
+          <span class="line">(19) Und sie sagten: Ein ägyptischer Mann hat uns aus der Hand der Hirten gerettet, und er hat sogar reichlich für uns geschöpft und die Schafe getränkt.</span>
+          <span class="line">(20) Und er sagte zu seinen Töchtern: Und wo ist er? Warum habt ihr den Mann gelassen? Ruft ihn, dass er Brot esse.</span>
+          <span class="line">(21) Und Mosche willigte ein, bei dem Mann zu wohnen, und er gab Zipporah, seine Tochter, dem Mosche (zur Frau).</span>
+          <span class="line">(22) Und sie gebar einen Sohn, und er nannte seinen Namen Gerschom — denn er sagte: Ein Fremder bin ich in einem fremden Land geworden.</span>
+          <span class="line">(23) Und es geschah in jenen vielen Tagen, dass der König von Mitzrayim starb — und die Söhne Israels seufzten unter der Arbeit und schrien, und ihr Geschrei stieg zu Gott auf aus der Arbeit.</span>
+          <span class="line">(24) Und Gott hörte ihr Stöhnen, und Gott gedachte seines Bundes mit Avraham, mit Yitzchak und mit Yaakov.</span>
+          <span class="line">(25) Und Gott sah die Söhne Israels — und Gott wusste.</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal-marker">— מִן הַסְּנֶה הַבּוֹעֵר וְאֵילָךְ נִקְרֵאת בְּמַקָּאם סַבָּא — שַׁעַר קֹדֶשׁ —<br>Vom Brennenden Dornbusch an wird im Maqam Saba gelesen — die heilige Schwelle (Aleppo-Yerushalayim-Tradition)</div>
+
+    <div class="aliyah-block">
+      <div class="aliyah-label">עֲלִיָּה רְבִיעִית — הַסְּנֶה · הִנֵּנִי · אֶהְיֶה אֲשֶׁר אֶהְיֶה<span class="aliyah-label-de">Vierte Aliyah · Schemot 3:1–15 · Der Brennende Dornbusch · „Hineni" · Die Offenbarung des Namens אֶהְיֶה אֲשֶׁר אֶהְיֶה</span></div>
+      <div class="instrument-note">[no percussion] [no drums] [no choir] [acoustic guitar — Maqam Saba modulation, sustained ur-threshold low tones, the bush burning yet not consumed, awe-filled sacred-threshold modal, slow breath, no percussion] Gitarre: Modulation in Maqam Saba — getragene ur-schwellige Tiefen-Töne, der Dornbusch brennt und wird nicht verzehrt, ehrfurchtsvolle Heilige-Schwelle-Tonart, langsam atmend.</div>
+      <div class="lyrics-block">
+        <div class="lyrics-he" dir="rtl">
+          <span class="line">וּמֹשֶׁה הָיָה רֹעֶה אֶת־צֹאן יִתְרוֹ חֹתְנוֹ כֹּהֵן מִדְיָן וַיִּנְהַג אֶת־הַצֹּאן אַחַר הַמִּדְבָּר וַיָּבֹא אֶל־הַר הָאֱלֹהִים חֹרֵבָה׃</span>
+          <span class="line">וַיֵּרָא מַלְאַךְ אֲדֹנָי אֵלָיו בְּלַבַּת־אֵשׁ מִתּוֹךְ הַסְּנֶה וַיַּרְא וְהִנֵּה הַסְּנֶה בֹּעֵר בָּאֵשׁ וְהַסְּנֶה אֵינֶנּוּ אֻכָּל׃</span>
+          <span class="line">וַיֹּאמֶר מֹשֶׁה אָסֻרָה־נָּא וְאֶרְאֶה אֶת־הַמַּרְאֶה הַגָּדֹל הַזֶּה מַדּוּעַ לֹא־יִבְעַר הַסְּנֶה׃</span>
+          <span class="line">וַיַּרְא אֲדֹנָי כִּי סָר לִרְאוֹת וַיִּקְרָא אֵלָיו אֱלֹהִים מִתּוֹךְ הַסְּנֶה וַיֹּאמֶר מֹשֶׁה מֹשֶׁה וַיֹּאמֶר הִנֵּנִי׃</span>
+          <span class="line">וַיֹּאמֶר אַל־תִּקְרַב הֲלֹם שַׁל־נְעָלֶיךָ מֵעַל רַגְלֶיךָ כִּי הַמָּקוֹם אֲשֶׁר אַתָּה עוֹמֵד עָלָיו אַדְמַת־קֹדֶשׁ הוּא׃</span>
+          <span class="line">וַיֹּאמֶר אָנֹכִי אֱלֹהֵי אָבִיךָ אֱלֹהֵי אַבְרָהָם אֱלֹהֵי יִצְחָק וֵאלֹהֵי יַעֲקֹב וַיַּסְתֵּר מֹשֶׁה פָּנָיו כִּי יָרֵא מֵהַבִּיט אֶל־הָאֱלֹהִים׃</span>
+          <span class="line">וַיֹּאמֶר אֲדֹנָי רָאֹה רָאִיתִי אֶת־עֳנִי עַמִּי אֲשֶׁר בְּמִצְרָיִם וְאֶת־צַעֲקָתָם שָׁמַעְתִּי מִפְּנֵי נֹגְשָׂיו כִּי יָדַעְתִּי אֶת־מַכְאֹבָיו׃</span>
+          <span class="line">וָאֵרֵד לְהַצִּילוֹ מִיַּד מִצְרַיִם וּלְהַעֲלֹתוֹ מִן־הָאָרֶץ הַהִוא אֶל־אֶרֶץ טוֹבָה וּרְחָבָה אֶל־אֶרֶץ זָבַת חָלָב וּדְבָשׁ אֶל־מְקוֹם הַכְּנַעֲנִי וְהַחִתִּי וְהָאֱמֹרִי וְהַפְּרִזִּי וְהַחִוִּי וְהַיְבוּסִי׃</span>
+          <span class="line">וְעַתָּה הִנֵּה צַעֲקַת בְּנֵי־יִשְׂרָאֵל בָּאָה אֵלָי וְגַם־רָאִיתִי אֶת־הַלַּחַץ אֲשֶׁר מִצְרַיִם לֹחֲצִים אֹתָם׃</span>
+          <span class="line">וְעַתָּה לְכָה וְאֶשְׁלָחֲךָ אֶל־פַּרְעֹה וְהוֹצֵא אֶת־עַמִּי בְנֵי־יִשְׂרָאֵל מִמִּצְרָיִם׃</span>
+          <span class="line">וַיֹּאמֶר מֹשֶׁה אֶל־הָאֱלֹהִים מִי אָנֹכִי כִּי אֵלֵךְ אֶל־פַּרְעֹה וְכִי אוֹצִיא אֶת־בְּנֵי יִשְׂרָאֵל מִמִּצְרָיִם׃</span>
+          <span class="line">וַיֹּאמֶר כִּי־אֶהְיֶה עִמָּךְ וְזֶה־לְּךָ הָאוֹת כִּי אָנֹכִי שְׁלַחְתִּיךָ בְּהוֹצִיאֲךָ אֶת־הָעָם מִמִּצְרַיִם תַּעַבְדוּן אֶת־הָאֱלֹהִים עַל הָהָר הַזֶּה׃</span>
+          <span class="line">וַיֹּאמֶר מֹשֶׁה אֶל־הָאֱלֹהִים הִנֵּה אָנֹכִי בָא אֶל־בְּנֵי יִשְׂרָאֵל וְאָמַרְתִּי לָהֶם אֱלֹהֵי אֲבוֹתֵיכֶם שְׁלָחַנִי אֲלֵיכֶם וְאָמְרוּ־לִי מַה־שְּׁמוֹ מָה אֹמַר אֲלֵהֶם׃</span>
+          <span class="line">וַיֹּאמֶר אֱלֹהִים אֶל־מֹשֶׁה אֶהְיֶה אֲשֶׁר אֶהְיֶה וַיֹּאמֶר כֹּה תֹאמַר לִבְנֵי יִשְׂרָאֵל אֶהְיֶה שְׁלָחַנִי אֲלֵיכֶם׃</span>
+          <span class="line">וַיֹּאמֶר עוֹד אֱלֹהִים אֶל־מֹשֶׁה כֹּה־תֹאמַר אֶל־בְּנֵי יִשְׂרָאֵל אֲדֹנָי אֱלֹהֵי אֲבֹתֵיכֶם אֱלֹהֵי אַבְרָהָם אֱלֹהֵי יִצְחָק וֵאלֹהֵי יַעֲקֹב שְׁלָחַנִי אֲלֵיכֶם זֶה־שְּׁמִי לְעֹלָם וְזֶה זִכְרִי לְדֹר דֹּר׃</span>
+        </div>
+        <div class="lyrics-de">
+          <span class="line">(1) Und Mosche weidete die Schafe Yitros, seines Schwiegervaters, des Priesters von Midjan. Und er trieb die Schafe hinter die Wüste und kam zum Berg Gottes, nach Chorev.</span>
+          <span class="line">(2) Und ein Bote Adonais erschien ihm in einer Feuerflamme mitten aus dem Dornbusch — und er sah, und siehe, der Dornbusch brannte im Feuer, doch der Dornbusch wurde nicht verzehrt.</span>
+          <span class="line">(3) Und Mosche sagte: Lass mich doch hinzutreten und diese große Erscheinung sehen — warum verbrennt der Dornbusch nicht?</span>
+          <span class="line">(4) Und Adonai sah, dass er hinzutrat zu sehen — und Gott rief ihm zu mitten aus dem Dornbusch und sagte: Mosche, Mosche! Und er sagte: Hier bin ich.</span>
+          <span class="line">(5) Und er sagte: Tritt nicht näher heran — ziehe deine Sandalen von deinen Füßen, denn der Ort, auf dem du stehst, ist heiliger Boden.</span>
+          <span class="line">(6) Und er sagte: Ich bin der Gott deines Vaters, der Gott Avrahams, der Gott Yitzchaks und der Gott Yaakovs. Und Mosche verbarg sein Antlitz, denn er fürchtete sich, auf Gott zu blicken.</span>
+          <span class="line">(7) Und Adonai sagte: Wahrlich, ich habe das Elend meines Volkes in Mitzrayim gesehen, und ihr Geschrei vor seinen Treibern habe ich gehört — denn ich kenne seine Schmerzen.</span>
+          <span class="line">(8) Und ich bin herabgestiegen, um es aus der Hand Mitzrayims zu retten und es heraufzuführen aus jenem Land in ein gutes und weites Land — in ein Land, das von Milch und Honig fließt, an den Ort des Kena'aniters, des Chittiters, des Emoriters, des Perissiters, des Chiwwiters und des Yevussiters.</span>
+          <span class="line">(9) Und nun, siehe, das Geschrei der Söhne Israels ist zu mir gekommen, und auch habe ich die Bedrückung gesehen, mit der Mitzrayim sie bedrückt.</span>
+          <span class="line">(10) Und nun geh — und ich will dich zu Pharao senden, und führe mein Volk, die Söhne Israels, aus Mitzrayim heraus.</span>
+          <span class="line">(11) Und Mosche sagte zu Gott: Wer bin ich, dass ich zu Pharao gehen sollte und dass ich die Söhne Israels aus Mitzrayim herausführen sollte?</span>
+          <span class="line">(12) Und er sagte: Wahrlich, ich werde mit dir sein — und dies sei dir das Zeichen, dass ich dich gesandt habe: wenn du das Volk aus Mitzrayim herausgeführt hast, werdet ihr Gott auf diesem Berg dienen.</span>
+          <span class="line">(13) Und Mosche sagte zu Gott: Siehe, ich komme zu den Söhnen Israels und sage ihnen: Der Gott eurer Väter hat mich zu euch gesandt — und sie werden mir sagen: Wie ist sein Name? Was soll ich ihnen sagen?</span>
+          <span class="line">(14) Und Gott sagte zu Mosche: Ich werde sein, der ich sein werde. Und er sagte: So sollst du zu den Söhnen Israels sagen: „Eh'yeh" hat mich zu euch gesandt.</span>
+          <span class="line">(15) Und Gott sagte ferner zu Mosche: So sollst du zu den Söhnen Israels sagen: Adonai, der Gott eurer Väter, der Gott Avrahams, der Gott Yitzchaks und der Gott Yaakovs, hat mich zu euch gesandt — dies ist mein Name in Ewigkeit, und dies ist mein Gedenken von Geschlecht zu Geschlecht.</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="aliyah-block">
+      <div class="aliyah-label">עֲלִיָּה חֲמִישִׁית — פָּקֹד פָּקַדְתִּי · הָאוֹתוֹת · כְּבַד־פֶּה<span class="aliyah-label-de">Fünfte Aliyah · Schemot 3:16–4:17 · Die Botschaft an die Ältesten · Die drei Zeichen (Stab, Hand, Wasser) · Mosches Widerstand · Die Berufung Aharons</span></div>
+      <div class="instrument-note">[no percussion] [no drums] [no choir] [acoustic guitar — Saba returning toward Bayat, the threshold widens into the long mission-discourse, signs revealed in solo fingerpicking, no percussion] Gitarre: Saba kehrt zurück nach Bayat — die Schwelle weitet sich in das lange Auftrags-Gespräch, Zeichen werden im Solo-Fingerpicking sichtbar.</div>
+      <div class="lyrics-block">
+        <div class="lyrics-he" dir="rtl">
+          <span class="line">לֵךְ וְאָסַפְתָּ אֶת־זִקְנֵי יִשְׂרָאֵל וְאָמַרְתָּ אֲלֵהֶם אֲדֹנָי אֱלֹהֵי אֲבֹתֵיכֶם נִרְאָה אֵלַי אֱלֹהֵי אַבְרָהָם יִצְחָק וְיַעֲקֹב לֵאמֹר פָּקֹד פָּקַדְתִּי אֶתְכֶם וְאֶת־הֶעָשׂוּי לָכֶם בְּמִצְרָיִם׃</span>
+          <span class="line">וָאֹמַר אַעֲלֶה אֶתְכֶם מֵעֳנִי מִצְרַיִם אֶל־אֶרֶץ הַכְּנַעֲנִי וְהַחִתִּי וְהָאֱמֹרִי וְהַפְּרִזִּי וְהַחִוִּי וְהַיְבוּסִי אֶל־אֶרֶץ זָבַת חָלָב וּדְבָשׁ׃</span>
+          <span class="line">וְשָׁמְעוּ לְקֹלֶךָ וּבָאתָ אַתָּה וְזִקְנֵי יִשְׂרָאֵל אֶל־מֶלֶךְ מִצְרַיִם וַאֲמַרְתֶּם אֵלָיו אֲדֹנָי אֱלֹהֵי הָעִבְרִיִּים נִקְרָה עָלֵינוּ וְעַתָּה נֵלְכָה־נָּא דֶּרֶךְ שְׁלֹשֶׁת יָמִים בַּמִּדְבָּר וְנִזְבְּחָה לַאדֹנָי אֱלֹהֵינוּ׃</span>
+          <span class="line">וַאֲנִי יָדַעְתִּי כִּי לֹא־יִתֵּן אֶתְכֶם מֶלֶךְ מִצְרַיִם לַהֲלֹךְ וְלֹא בְּיָד חֲזָקָה׃</span>
+          <span class="line">וְשָׁלַחְתִּי אֶת־יָדִי וְהִכֵּיתִי אֶת־מִצְרַיִם בְּכֹל נִפְלְאֹתַי אֲשֶׁר אֶעֱשֶׂה בְּקִרְבּוֹ וְאַחֲרֵי־כֵן יְשַׁלַּח אֶתְכֶם׃</span>
+          <span class="line">וְנָתַתִּי אֶת־חֵן הָעָם־הַזֶּה בְּעֵינֵי מִצְרָיִם וְהָיָה כִּי תֵלֵכוּן לֹא תֵלְכוּ רֵיקָם׃</span>
+          <span class="line">וְשָׁאֲלָה אִשָּׁה מִשְּׁכֶנְתָּהּ וּמִגָּרַת בֵּיתָהּ כְּלֵי־כֶסֶף וּכְלֵי זָהָב וּשְׂמָלֹת וְשַׂמְתֶּם עַל־בְּנֵיכֶם וְעַל־בְּנֹתֵיכֶם וְנִצַּלְתֶּם אֶת־מִצְרָיִם׃</span>
+          <span class="line">וַיַּעַן מֹשֶׁה וַיֹּאמֶר וְהֵן לֹא־יַאֲמִינוּ לִי וְלֹא יִשְׁמְעוּ בְּקֹלִי כִּי יֹאמְרוּ לֹא־נִרְאָה אֵלֶיךָ אֲדֹנָי׃</span>
+          <span class="line">וַיֹּאמֶר אֵלָיו אֲדֹנָי מַה־זֶּה בְיָדֶךָ וַיֹּאמֶר מַטֶּה׃</span>
+          <span class="line">וַיֹּאמֶר הַשְׁלִיכֵהוּ אַרְצָה וַיַּשְׁלִכֵהוּ אַרְצָה וַיְהִי לְנָחָשׁ וַיָּנׇס מֹשֶׁה מִפָּנָיו׃</span>
+          <span class="line">וַיֹּאמֶר אֲדֹנָי אֶל־מֹשֶׁה שְׁלַח יָדְךָ וֶאֱחֹז בִּזְנָבוֹ וַיִּשְׁלַח יָדוֹ וַיַּחֲזֶק בּוֹ וַיְהִי לְמַטֶּה בְּכַפּוֹ׃</span>
+          <span class="line">לְמַעַן יַאֲמִינוּ כִּי־נִרְאָה אֵלֶיךָ אֲדֹנָי אֱלֹהֵי אֲבֹתָם אֱלֹהֵי אַבְרָהָם אֱלֹהֵי יִצְחָק וֵאלֹהֵי יַעֲקֹב׃</span>
+          <span class="line">וַיֹּאמֶר אֲדֹנָי לוֹ עוֹד הָבֵא־נָא יָדְךָ בְּחֵיקֶךָ וַיָּבֵא יָדוֹ בְּחֵיקוֹ וַיּוֹצִאָהּ וְהִנֵּה יָדוֹ מְצֹרַעַת כַּשָּׁלֶג׃</span>
+          <span class="line">וַיֹּאמֶר הָשֵׁב יָדְךָ אֶל־חֵיקֶךָ וַיָּשֶׁב יָדוֹ אֶל־חֵיקוֹ וַיּוֹצִאָהּ מֵחֵיקוֹ וְהִנֵּה־שָׁבָה כִּבְשָׂרוֹ׃</span>
+          <span class="line">וְהָיָה אִם־לֹא יַאֲמִינוּ לָךְ וְלֹא יִשְׁמְעוּ לְקֹל הָאֹת הָרִאשׁוֹן וְהֶאֱמִינוּ לְקֹל הָאֹת הָאַחֲרוֹן׃</span>
+          <span class="line">וְהָיָה אִם־לֹא יַאֲמִינוּ גַּם לִשְׁנֵי הָאֹתוֹת הָאֵלֶּה וְלֹא יִשְׁמְעוּן לְקֹלֶךָ וְלָקַחְתָּ מִמֵּימֵי הַיְאֹר וְשָׁפַכְתָּ הַיַּבָּשָׁה וְהָיוּ הַמַּיִם אֲשֶׁר תִּקַּח מִן־הַיְאֹר וְהָיוּ לְדָם בַּיַּבָּשֶׁת׃</span>
+          <span class="line">וַיֹּאמֶר מֹשֶׁה אֶל־אֲדֹנָי בִּי אֲדֹנָי לֹא אִישׁ דְּבָרִים אָנֹכִי גַּם מִתְּמוֹל גַּם מִשִּׁלְשֹׁם גַּם מֵאָז דַּבֶּרְךָ אֶל־עַבְדֶּךָ כִּי כְבַד־פֶּה וּכְבַד לָשׁוֹן אָנֹכִי׃</span>
+          <span class="line">וַיֹּאמֶר אֲדֹנָי אֵלָיו מִי שָׂם פֶּה לָאָדָם אוֹ מִי־יָשׂוּם אִלֵּם אוֹ חֵרֵשׁ אוֹ פִקֵּחַ אוֹ עִוֵּר הֲלֹא אָנֹכִי אֲדֹנָי׃</span>
+          <span class="line">וְעַתָּה לֵךְ וְאָנֹכִי אֶהְיֶה עִם־פִּיךָ וְהוֹרֵיתִיךָ אֲשֶׁר תְּדַבֵּר׃</span>
+          <span class="line">וַיֹּאמֶר בִּי אֲדֹנָי שְׁלַח־נָא בְּיַד־תִּשְׁלָח׃</span>
+          <span class="line">וַיִּחַר־אַף אֲדֹנָי בְּמֹשֶׁה וַיֹּאמֶר הֲלֹא אַהֲרֹן אָחִיךָ הַלֵּוִי יָדַעְתִּי כִּי־דַבֵּר יְדַבֵּר הוּא וְגַם הִנֵּה־הוּא יֹצֵא לִקְרָאתֶךָ וְרָאֲךָ וְשָׂמַח בְּלִבּוֹ׃</span>
+          <span class="line">וְדִבַּרְתָּ אֵלָיו וְשַׂמְתָּ אֶת־הַדְּבָרִים בְּפִיו וְאָנֹכִי אֶהְיֶה עִם־פִּיךָ וְעִם־פִּיהוּ וְהוֹרֵיתִי אֶתְכֶם אֵת אֲשֶׁר תַּעֲשׂוּן׃</span>
+          <span class="line">וְדִבֶּר־הוּא לְךָ אֶל־הָעָם וְהָיָה הוּא יִהְיֶה־לְּךָ לְפֶה וְאַתָּה תִּהְיֶה־לּוֹ לֵאלֹהִים׃</span>
+          <span class="line">וְאֶת־הַמַּטֶּה הַזֶּה תִּקַּח בְּיָדֶךָ אֲשֶׁר תַּעֲשֶׂה־בּוֹ אֶת־הָאֹתֹת׃</span>
+        </div>
+        <div class="lyrics-de">
+          <span class="line">(16) Geh und versammle die Ältesten Israels und sage ihnen: Adonai, der Gott eurer Väter, ist mir erschienen — der Gott Avrahams, Yitzchaks und Yaakovs — und sprach: Ich habe euch gewiss heimgesucht und (gesehen), was euch in Mitzrayim getan wurde.</span>
+          <span class="line">(17) Und ich habe gesagt: Ich will euch heraufführen aus dem Elend Mitzrayims in das Land des Kena'aniters, des Chittiters, des Emoriters, des Perissiters, des Chiwwiters und des Yevussiters — in ein Land, das von Milch und Honig fließt.</span>
+          <span class="line">(18) Und sie werden auf deine Stimme hören. Und du sollst kommen, du und die Ältesten Israels, zum König von Mitzrayim, und ihr sollt ihm sagen: Adonai, der Gott der Hebräer, ist uns begegnet — und nun lass uns doch eine Wegstrecke von drei Tagen in die Wüste gehen, dass wir Adonai, unserem Gott, opfern.</span>
+          <span class="line">(19) Und ich weiß, dass der König von Mitzrayim euch nicht ziehen lassen wird — auch nicht durch eine starke Hand.</span>
+          <span class="line">(20) Und ich will meine Hand ausstrecken und Mitzrayim schlagen mit allen meinen Wundern, die ich in seiner Mitte tun werde — und danach wird er euch entlassen.</span>
+          <span class="line">(21) Und ich will diesem Volk Gunst geben in den Augen Mitzrayims, und es soll geschehen, wenn ihr auszieht, werdet ihr nicht leer ausziehen.</span>
+          <span class="line">(22) Und jede Frau soll von ihrer Nachbarin und von der Mitbewohnerin ihres Hauses Geräte aus Silber und Geräte aus Gold und Kleider erbitten, und ihr sollt (sie) auf eure Söhne und eure Töchter legen — und ihr werdet Mitzrayim ausplündern.</span>
+          <span class="line">(1) Und Mosche antwortete und sagte: Aber siehe, sie werden mir nicht glauben und nicht auf meine Stimme hören, denn sie werden sagen: Adonai ist dir nicht erschienen.</span>
+          <span class="line">(2) Und Adonai sagte zu ihm: Was ist dies in deiner Hand? Und er sagte: Ein Stab.</span>
+          <span class="line">(3) Und er sagte: Wirf ihn auf die Erde! Und er warf ihn auf die Erde, und er wurde zur Schlange — und Mosche floh vor ihr.</span>
+          <span class="line">(4) Und Adonai sagte zu Mosche: Strecke deine Hand aus und ergreife sie am Schwanz! Und er streckte seine Hand aus und ergriff sie — und sie wurde in seiner Handfläche zum Stab.</span>
+          <span class="line">(5) Damit sie glauben, dass dir Adonai, der Gott ihrer Väter, erschienen ist, der Gott Avrahams, der Gott Yitzchaks und der Gott Yaakovs.</span>
+          <span class="line">(6) Und Adonai sagte ferner zu ihm: Bring doch deine Hand an deine Brust! Und er brachte seine Hand an seine Brust und zog sie wieder heraus — und siehe, seine Hand war aussätzig wie Schnee.</span>
+          <span class="line">(7) Und er sagte: Bring deine Hand wieder an deine Brust! Und er brachte seine Hand wieder an seine Brust und zog sie heraus aus seiner Brust — und siehe, sie war wieder wie sein (übriges) Fleisch.</span>
+          <span class="line">(8) Und es soll geschehen: wenn sie dir nicht glauben und nicht auf die Stimme des ersten Zeichens hören, so werden sie auf die Stimme des letzten Zeichens glauben.</span>
+          <span class="line">(9) Und es soll geschehen: wenn sie auch diesen beiden Zeichen nicht glauben und nicht auf deine Stimme hören, so sollst du vom Wasser des Nils nehmen und es auf das trockene Land schütten — und das Wasser, das du aus dem Nil nimmst, wird auf dem trockenen Land zu Blut werden.</span>
+          <span class="line">(10) Und Mosche sagte zu Adonai: Bitte, Adonai — ich bin kein Mann der Worte, weder von gestern noch von vorgestern, noch seit du zu deinem Diener geredet hast — denn schwer von Mund und schwer von Zunge bin ich.</span>
+          <span class="line">(11) Und Adonai sagte zu ihm: Wer hat dem Menschen einen Mund gegeben? Oder wer macht stumm oder taub oder sehend oder blind — bin nicht ich, Adonai, es?</span>
+          <span class="line">(12) Und nun geh — und ich werde mit deinem Mund sein und dich lehren, was du reden sollst.</span>
+          <span class="line">(13) Und er sagte: Bitte, Adonai — sende doch durch die Hand, die du senden willst.</span>
+          <span class="line">(14) Und der Zorn Adonais entbrannte gegen Mosche, und er sagte: Ist nicht Aharon, dein Bruder, der Lewit, da? Ich weiß, dass er reden kann — und siehe, er kommt dir auch entgegen, und wenn er dich sieht, wird er sich in seinem Herzen freuen.</span>
+          <span class="line">(15) Und du sollst zu ihm reden und die Worte in seinen Mund legen — und ich werde mit deinem Mund und mit seinem Mund sein und euch lehren, was ihr tun sollt.</span>
+          <span class="line">(16) Und er soll für dich zum Volk reden — und es soll geschehen: er wird für dich zum Mund sein, und du wirst für ihn zum Gott sein.</span>
+          <span class="line">(17) Und diesen Stab sollst du in deiner Hand nehmen, mit dem du die Zeichen tun wirst.</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="aliyah-block">
+      <div class="aliyah-label">עֲלִיָּה שִׁשִּׁית — בְּנִי בְכֹרִי יִשְׂרָאֵל · חֲתַן־דָּמִים · וַיַּאֲמֵן הָעָם<span class="aliyah-label-de">Sechste Aliyah · Schemot 4:18–31 · Rückkehr nach Mitzrayim · Der Erstgeborenen-Vers · Der nächtliche Vorfall in der Herberge · Begegnung mit Aharon · Erstes Glauben des Volkes</span></div>
+      <div class="instrument-note">[no percussion] [no drums] [no choir] [acoustic guitar — Bayat returning warm, the journey back to Egypt, the brothers' meeting at the mountain of God, the people bowing and believing for the first time, no percussion] Gitarre: Bayat kehrt warm zurück — die Reise nach Mitzrayim, das Brüder-Treffen am Berg Gottes, das Volk verbeugt sich und glaubt zum ersten Mal.</div>
+      <div class="lyrics-block">
+        <div class="lyrics-he" dir="rtl">
+          <span class="line">וַיֵּלֶךְ מֹשֶׁה וַיָּשׇׁב אֶל־יֶתֶר חֹתְנוֹ וַיֹּאמֶר לוֹ אֵלְכָה נָּא וְאָשׁוּבָה אֶל־אַחַי אֲשֶׁר־בְּמִצְרַיִם וְאֶרְאֶה הַעוֹדָם חַיִּים וַיֹּאמֶר יִתְרוֹ לְמֹשֶׁה לֵךְ לְשָׁלוֹם׃</span>
+          <span class="line">וַיֹּאמֶר אֲדֹנָי אֶל־מֹשֶׁה בְּמִדְיָן לֵךְ שֻׁב מִצְרָיִם כִּי־מֵתוּ כׇּל־הָאֲנָשִׁים הַמְבַקְשִׁים אֶת־נַפְשֶׁךָ׃</span>
+          <span class="line">וַיִּקַּח מֹשֶׁה אֶת־אִשְׁתּוֹ וְאֶת־בָּנָיו וַיַּרְכִּבֵם עַל־הַחֲמֹר וַיָּשׇׁב אַרְצָה מִצְרָיִם וַיִּקַּח מֹשֶׁה אֶת־מַטֵּה הָאֱלֹהִים בְּיָדוֹ׃</span>
+          <span class="line">וַיֹּאמֶר אֲדֹנָי אֶל־מֹשֶׁה בְּלֶכְתְּךָ לָשׁוּב מִצְרַיְמָה רְאֵה כׇּל־הַמֹּפְתִים אֲשֶׁר־שַׂמְתִּי בְיָדֶךָ וַעֲשִׂיתָם לִפְנֵי פַרְעֹה וַאֲנִי אֲחַזֵּק אֶת־לִבּוֹ וְלֹא יְשַׁלַּח אֶת־הָעָם׃</span>
+          <span class="line">וְאָמַרְתָּ אֶל־פַּרְעֹה כֹּה אָמַר אֲדֹנָי בְּנִי בְכֹרִי יִשְׂרָאֵל׃</span>
+          <span class="line">וָאֹמַר אֵלֶיךָ שַׁלַּח אֶת־בְּנִי וְיַעַבְדֵנִי וַתְּמָאֵן לְשַׁלְּחוֹ הִנֵּה אָנֹכִי הֹרֵג אֶת־בִּנְךָ בְּכֹרֶךָ׃</span>
+          <span class="line">וַיְהִי בַדֶּרֶךְ בַּמָּלוֹן וַיִּפְגְּשֵׁהוּ אֲדֹנָי וַיְבַקֵּשׁ הֲמִיתוֹ׃</span>
+          <span class="line">וַתִּקַּח צִפֹּרָה צֹר וַתִּכְרֹת אֶת־עׇרְלַת בְּנָהּ וַתַּגַּע לְרַגְלָיו וַתֹּאמֶר כִּי חֲתַן־דָּמִים אַתָּה לִי׃</span>
+          <span class="line">וַיִּרֶף מִמֶּנּוּ אָז אָמְרָה חֲתַן דָּמִים לַמּוּלֹת׃</span>
+          <span class="line">וַיֹּאמֶר אֲדֹנָי אֶל־אַהֲרֹן לֵךְ לִקְרַאת מֹשֶׁה הַמִּדְבָּרָה וַיֵּלֶךְ וַיִּפְגְּשֵׁהוּ בְּהַר הָאֱלֹהִים וַיִּשַּׁק־לוֹ׃</span>
+          <span class="line">וַיַּגֵּד מֹשֶׁה לְאַהֲרֹן אֵת כׇּל־דִּבְרֵי אֲדֹנָי אֲשֶׁר שְׁלָחוֹ וְאֵת כׇּל־הָאֹתֹת אֲשֶׁר צִוָּהוּ׃</span>
+          <span class="line">וַיֵּלֶךְ מֹשֶׁה וְאַהֲרֹן וַיַּאַסְפוּ אֶת־כׇּל־זִקְנֵי בְּנֵי יִשְׂרָאֵל׃</span>
+          <span class="line">וַיְדַבֵּר אַהֲרֹן אֵת כׇּל־הַדְּבָרִים אֲשֶׁר־דִּבֶּר אֲדֹנָי אֶל־מֹשֶׁה וַיַּעַשׂ הָאֹתֹת לְעֵינֵי הָעָם׃</span>
+          <span class="line">וַיַּאֲמֵן הָעָם וַיִּשְׁמְעוּ כִּי־פָקַד אֲדֹנָי אֶת־בְּנֵי יִשְׂרָאֵל וְכִי רָאָה אֶת־עׇנְיָם וַיִּקְּדוּ וַיִּשְׁתַּחֲווּ׃</span>
+        </div>
+        <div class="lyrics-de">
+          <span class="line">(18) Und Mosche ging und kehrte zu Yeter, seinem Schwiegervater, zurück und sagte zu ihm: Lass mich doch gehen und zu meinen Brüdern in Mitzrayim zurückkehren und sehen, ob sie noch leben. Und Yitro sagte zu Mosche: Geh in Frieden.</span>
+          <span class="line">(19) Und Adonai sagte zu Mosche in Midjan: Geh, kehre nach Mitzrayim zurück, denn alle Männer, die nach deinem Leben trachteten, sind tot.</span>
+          <span class="line">(20) Und Mosche nahm seine Frau und seine Söhne und ließ sie auf dem Esel reiten und kehrte ins Land Mitzrayim zurück — und Mosche nahm den Stab Gottes in seine Hand.</span>
+          <span class="line">(21) Und Adonai sagte zu Mosche: Wenn du nach Mitzrayim zurückgehst, siehe zu, dass du alle Wunder, die ich in deine Hand gelegt habe, vor Pharao tust — und ich werde sein Herz hart machen, dass er das Volk nicht entlässt.</span>
+          <span class="line">(22) Und du sollst zu Pharao sagen: So spricht Adonai — mein erstgeborener Sohn ist Israel.</span>
+          <span class="line">(23) Und ich sage dir: Entlasse meinen Sohn, dass er mir diene — und wenn du dich weigerst, ihn zu entlassen, siehe, so werde ich deinen erstgeborenen Sohn töten.</span>
+          <span class="line">(24) Und es geschah unterwegs in der Herberge, dass Adonai ihn antraf und ihn zu töten suchte.</span>
+          <span class="line">(25) Und Zipporah nahm einen Stein und schnitt die Vorhaut ihres Sohnes ab und ließ sie seine Füße berühren — und sie sagte: Ein Blut-Bräutigam bist du mir.</span>
+          <span class="line">(26) Und er ließ ab von ihm. Damals sagte sie „Blut-Bräutigam" in Bezug auf die Beschneidung.</span>
+          <span class="line">(27) Und Adonai sagte zu Aharon: Geh dem Mosche in die Wüste entgegen. Und er ging und traf ihn am Berg Gottes und küsste ihn.</span>
+          <span class="line">(28) Und Mosche teilte Aharon alle Worte Adonais mit, der ihn gesandt hatte, und alle Zeichen, die er ihm geboten hatte.</span>
+          <span class="line">(29) Und Mosche und Aharon gingen hin und versammelten alle Ältesten der Söhne Israels.</span>
+          <span class="line">(30) Und Aharon redete alle die Worte, die Adonai zu Mosche geredet hatte, und tat die Zeichen vor den Augen des Volkes.</span>
+          <span class="line">(31) Und das Volk glaubte, und als sie hörten, dass Adonai die Söhne Israels heimgesucht und ihr Elend gesehen hatte, neigten sie sich und warfen sich nieder.</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="aliyah-block">
+      <div class="aliyah-label">עֲלִיָּה שְׁבִיעִית — שַׁלַּח אֶת־עַמִּי · תֶּבֶן וּלְבֵנִים · עַתָּה תִרְאֶה<span class="aliyah-label-de">Siebte Aliyah · Schemot 5:1–6:1 · Erste Konfrontation mit Pharao · Die Verhärtung der Versklavung („Stroh und Ziegel") · Mosches Klage · Adonais Versprechen „Nun wirst du sehen"</span></div>
+      <div class="instrument-note">[no percussion] [no drums] [no choir] [acoustic guitar — Bayat in dry intimate strings, the bitter rebound of the first encounter, the slaves struck, the cry „v'hatzel lo hitzalta", then a single sustained note at „atta tireh", no percussion] Gitarre: Bayat in trockenen nahen Saiten — der bittere Rückschlag der ersten Begegnung, die geschlagenen Sklaven, der Schrei „und gerettet hast du nicht", dann ein einziger getragener Ton bei „nun wirst du sehen".</div>
+      <div class="lyrics-block">
+        <div class="lyrics-he" dir="rtl">
+          <span class="line">וְאַחַר בָּאוּ מֹשֶׁה וְאַהֲרֹן וַיֹּאמְרוּ אֶל־פַּרְעֹה כֹּה־אָמַר אֲדֹנָי אֱלֹהֵי יִשְׂרָאֵל שַׁלַּח אֶת־עַמִּי וְיָחֹגּוּ לִי בַּמִּדְבָּר׃</span>
+          <span class="line">וַיֹּאמֶר פַּרְעֹה מִי אֲדֹנָי אֲשֶׁר אֶשְׁמַע בְּקֹלוֹ לְשַׁלַּח אֶת־יִשְׂרָאֵל לֹא יָדַעְתִּי אֶת־אֲדֹנָי וְגַם אֶת־יִשְׂרָאֵל לֹא אֲשַׁלֵּחַ׃</span>
+          <span class="line">וַיֹּאמְרוּ אֱלֹהֵי הָעִבְרִים נִקְרָא עָלֵינוּ נֵלְכָה נָּא דֶּרֶךְ שְׁלֹשֶׁת יָמִים בַּמִּדְבָּר וְנִזְבְּחָה לַאדֹנָי אֱלֹהֵינוּ פֶּן־יִפְגָּעֵנוּ בַּדֶּבֶר אוֹ בֶחָרֶב׃</span>
+          <span class="line">וַיֹּאמֶר אֲלֵהֶם מֶלֶךְ מִצְרַיִם לָמָּה מֹשֶׁה וְאַהֲרֹן תַּפְרִיעוּ אֶת־הָעָם מִמַּעֲשָׂיו לְכוּ לְסִבְלֹתֵיכֶם׃</span>
+          <span class="line">וַיֹּאמֶר פַּרְעֹה הֵן־רַבִּים עַתָּה עַם הָאָרֶץ וְהִשְׁבַּתֶּם אֹתָם מִסִּבְלֹתָם׃</span>
+          <span class="line">וַיְצַו פַּרְעֹה בַּיּוֹם הַהוּא אֶת־הַנֹּגְשִׂים בָּעָם וְאֶת־שֹׁטְרָיו לֵאמֹר׃</span>
+          <span class="line">לֹא תֹאסִפוּן לָתֵת תֶּבֶן לָעָם לִלְבֹּן הַלְּבֵנִים כִּתְמוֹל שִׁלְשֹׁם הֵם יֵלְכוּ וְקֹשְׁשׁוּ לָהֶם תֶּבֶן׃</span>
+          <span class="line">וְאֶת־מַתְכֹּנֶת הַלְּבֵנִים אֲשֶׁר הֵם עֹשִׂים תְּמוֹל שִׁלְשֹׁם תָּשִׂימוּ עֲלֵיהֶם לֹא תִגְרְעוּ מִמֶּנּוּ כִּי־נִרְפִּים הֵם עַל־כֵּן הֵם צֹעֲקִים לֵאמֹר נֵלְכָה נִזְבְּחָה לֵאלֹהֵינוּ׃</span>
+          <span class="line">תִּכְבַּד הָעֲבֹדָה עַל־הָאֲנָשִׁים וְיַעֲשׂוּ־בָהּ וְאַל־יִשְׁעוּ בְּדִבְרֵי־שָׁקֶר׃</span>
+          <span class="line">וַיֵּצְאוּ נֹגְשֵׂי הָעָם וְשֹׁטְרָיו וַיֹּאמְרוּ אֶל־הָעָם לֵאמֹר כֹּה אָמַר פַּרְעֹה אֵינֶנִּי נֹתֵן לָכֶם תֶּבֶן׃</span>
+          <span class="line">אַתֶּם לְכוּ קְחוּ לָכֶם תֶּבֶן מֵאֲשֶׁר תִּמְצָאוּ כִּי אֵין נִגְרָע מֵעֲבֹדַתְכֶם דָּבָר׃</span>
+          <span class="line">וַיָּפֶץ הָעָם בְּכׇל־אֶרֶץ מִצְרָיִם לְקֹשֵׁשׁ קַשׁ לַתֶּבֶן׃</span>
+          <span class="line">וְהַנֹּגְשִׂים אָצִים לֵאמֹר כַּלּוּ מַעֲשֵׂיכֶם דְּבַר־יוֹם בְּיוֹמוֹ כַּאֲשֶׁר בִּהְיוֹת הַתֶּבֶן׃</span>
+          <span class="line">וַיֻּכּוּ שֹׁטְרֵי בְּנֵי יִשְׂרָאֵל אֲשֶׁר־שָׂמוּ עֲלֵהֶם נֹגְשֵׂי פַרְעֹה לֵאמֹר מַדּוּעַ לֹא כִלִּיתֶם חׇקְכֶם לִלְבֹּן כִּתְמוֹל שִׁלְשֹׁם גַּם־תְּמוֹל גַּם־הַיּוֹם׃</span>
+          <span class="line">וַיָּבֹאוּ שֹׁטְרֵי בְּנֵי יִשְׂרָאֵל וַיִּצְעֲקוּ אֶל־פַּרְעֹה לֵאמֹר לָמָּה תַעֲשֶׂה כֹה לַעֲבָדֶיךָ׃</span>
+          <span class="line">תֶּבֶן אֵין נִתָּן לַעֲבָדֶיךָ וּלְבֵנִים אֹמְרִים לָנוּ עֲשׂוּ וְהִנֵּה עֲבָדֶיךָ מֻכִּים וְחָטָאת עַמֶּךָ׃</span>
+          <span class="line">וַיֹּאמֶר נִרְפִּים אַתֶּם נִרְפִּים עַל־כֵּן אַתֶּם אֹמְרִים נֵלְכָה נִזְבְּחָה לַאדֹנָי׃</span>
+          <span class="line">וְעַתָּה לְכוּ עִבְדוּ וְתֶבֶן לֹא־יִנָּתֵן לָכֶם וְתֹכֶן לְבֵנִים תִּתֵּנוּ׃</span>
+          <span class="line">וַיִּרְאוּ שֹׁטְרֵי בְנֵי־יִשְׂרָאֵל אֹתָם בְּרָע לֵאמֹר לֹא־תִגְרְעוּ מִלִּבְנֵיכֶם דְּבַר־יוֹם בְּיוֹמוֹ׃</span>
+          <span class="line">וַיִּפְגְּעוּ אֶת־מֹשֶׁה וְאֶת־אַהֲרֹן נִצָּבִים לִקְרָאתָם בְּצֵאתָם מֵאֵת פַּרְעֹה׃</span>
+          <span class="line">וַיֹּאמְרוּ אֲלֵהֶם יֵרֶא אֲדֹנָי עֲלֵיכֶם וְיִשְׁפֹּט אֲשֶׁר הִבְאַשְׁתֶּם אֶת־רֵיחֵנוּ בְּעֵינֵי פַרְעֹה וּבְעֵינֵי עֲבָדָיו לָתֶת־חֶרֶב בְּיָדָם לְהׇרְגֵנוּ׃</span>
+          <span class="line">וַיָּשׇׁב מֹשֶׁה אֶל־אֲדֹנָי וַיֹּאמַר אֲדֹנָי לָמָה הֲרֵעֹתָה לָעָם הַזֶּה לָמָּה זֶּה שְׁלַחְתָּנִי׃</span>
+          <span class="line">וּמֵאָז בָּאתִי אֶל־פַּרְעֹה לְדַבֵּר בִּשְׁמֶךָ הֵרַע לָעָם הַזֶּה וְהַצֵּל לֹא־הִצַּלְתָּ אֶת־עַמֶּךָ׃</span>
+          <span class="line">וַיֹּאמֶר אֲדֹנָי אֶל־מֹשֶׁה עַתָּה תִרְאֶה אֲשֶׁר אֶעֱשֶׂה לְפַרְעֹה כִּי בְיָד חֲזָקָה יְשַׁלְּחֵם וּבְיָד חֲזָקָה יְגָרְשֵׁם מֵאַרְצוֹ׃</span>
+        </div>
+        <div class="lyrics-de">
+          <span class="line">(1) Und danach kamen Mosche und Aharon und sagten zu Pharao: So spricht Adonai, der Gott Israels — entlasse mein Volk, dass sie mir in der Wüste ein Fest feiern.</span>
+          <span class="line">(2) Und Pharao sagte: Wer ist Adonai, dass ich auf seine Stimme hören sollte, Israel zu entlassen? Ich kenne Adonai nicht — und auch Israel werde ich nicht entlassen.</span>
+          <span class="line">(3) Und sie sagten: Der Gott der Hebräer ist uns begegnet — lass uns doch eine Wegstrecke von drei Tagen in die Wüste gehen, dass wir Adonai, unserem Gott, opfern, damit er uns nicht mit der Pest oder dem Schwert antreffe.</span>
+          <span class="line">(4) Und der König von Mitzrayim sagte zu ihnen: Warum, Mosche und Aharon, lasst ihr das Volk von seinen Werken absehen? Geht an eure Lasten!</span>
+          <span class="line">(5) Und Pharao sagte: Siehe, das Volk des Landes ist (schon) zahlreich — und ihr wollt sie von ihren Lasten zur Ruhe bringen?</span>
+          <span class="line">(6) Und Pharao befahl an jenem Tag den Treibern des Volkes und seinen Aufsehern und sagte:</span>
+          <span class="line">(7) Ihr sollt dem Volk fortan kein Stroh mehr geben, um die Ziegel zu streichen wie gestern und vorgestern — sie sollen selbst hingehen und sich Stroh zusammenlesen.</span>
+          <span class="line">(8) Und das Soll der Ziegel, die sie gestern und vorgestern gemacht haben, sollt ihr ihnen (weiter) auferlegen — ihr sollt davon nichts mindern; denn sie sind faul, darum schreien sie und sagen: Lasst uns gehen und unserem Gott opfern.</span>
+          <span class="line">(9) Die Arbeit soll schwer werden auf den Männern, und sie sollen sich damit beschäftigen — und sie sollen nicht auf Worte der Lüge achten.</span>
+          <span class="line">(10) Und die Treiber des Volkes und seine Aufseher zogen aus und sagten zum Volk: So spricht Pharao — ich gebe euch kein Stroh.</span>
+          <span class="line">(11) Geht selbst hin, holt euch Stroh, wo ihr es findet — denn von eurem Werk soll nichts gemindert werden.</span>
+          <span class="line">(12) Und das Volk zerstreute sich im ganzen Land Mitzrayim, um Stoppeln zu Stroh zu sammeln.</span>
+          <span class="line">(13) Und die Treiber drängten und sagten: Vollendet eure Werke, die Tageslast Tag für Tag, wie damals, als (noch) Stroh da war.</span>
+          <span class="line">(14) Und die Aufseher der Söhne Israels, die Pharaos Treiber über sie eingesetzt hatten, wurden geschlagen mit den Worten: Warum habt ihr euer Soll, Ziegel zu streichen, weder gestern noch heute erfüllt wie gestern und vorgestern?</span>
+          <span class="line">(15) Und die Aufseher der Söhne Israels kamen und schrien zu Pharao und sagten: Warum tust du deinen Knechten so?</span>
+          <span class="line">(16) Stroh wird deinen Knechten nicht gegeben, und sie sagen uns: Macht Ziegel! — und siehe, deine Knechte werden geschlagen, und es ist die Sünde deines Volkes.</span>
+          <span class="line">(17) Und er sagte: Faul seid ihr, faul — darum sagt ihr: Lasst uns gehen und Adonai opfern.</span>
+          <span class="line">(18) Und nun geht und arbeitet — und Stroh wird euch nicht gegeben, aber das volle Maß der Ziegel sollt ihr abliefern.</span>
+          <span class="line">(19) Und die Aufseher der Söhne Israels sahen sich im Übel — als gesagt wurde: Ihr sollt von euren täglichen Ziegeln nichts mindern, die Tageslast Tag für Tag.</span>
+          <span class="line">(20) Und sie trafen Mosche und Aharon, die ihnen entgegen standen, als sie von Pharao herauskamen.</span>
+          <span class="line">(21) Und sie sagten zu ihnen: Adonai sehe auf euch und richte — denn ihr habt unseren Geruch übel gemacht in den Augen Pharaos und in den Augen seiner Diener, ein Schwert in ihre Hand zu geben, uns zu töten.</span>
+          <span class="line">(22) Und Mosche kehrte zu Adonai zurück und sagte: Adonai — warum hast du diesem Volk Übles getan? Warum hast du mich denn gesandt?</span>
+          <span class="line">(23) Und seit ich zu Pharao gekommen bin, in deinem Namen zu reden, hat er diesem Volk Übles getan — und gerettet hast du dein Volk nicht.</span>
+          <span class="line">(1) Und Adonai sagte zu Mosche: Nun wirst du sehen, was ich dem Pharao tun werde — denn mit starker Hand wird er sie entlassen, und mit starker Hand wird er sie aus seinem Land vertreiben.</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="climax-box">
+      <div class="climax-label">שִׂיא · f · Klimax-Vers der Parashah · die Offenbarung des Namens</div>
+      <div class="instrument-note">[no percussion] [no drums] [no choir] [acoustic guitar — Maqam Saba sustained, full ur-threshold low tones forte but not loud, the dynamic Eh'yeh asher Eh'yeh as living self-revelation, no percussion, no drums] Gitarre: Maqam Saba getragen — volle ur-schwellige Tiefen-Töne, forte aber nicht laut, das dynamische Eh'yeh asher Eh'yeh als lebendige Selbst-Offenbarung.</div>
+      <div class="climax-verse-he">אֶהְיֶה אֲשֶׁר אֶהְיֶה · אֶהְיֶה שְׁלָחַנִי אֲלֵיכֶם</div>
+      <div class="climax-verse-de">„Ich werde sein, der ich sein werde · ‚Eh'yeh' hat mich zu euch gesandt."</div>
+      <div class="climax-src">שְׁמוֹת ג:י״ד</div>
+    </div>
+
+    <div class="coda-box">
+      <div class="coda-label">קוֹדָה · pp · Die stille Erkenntnis, die alles beginnt</div>
+      <div class="instrument-note">[no percussion] [no drums] [no choir] [acoustic guitar — Bayat dissolving into a single barely-audible note, the silent knowing that opens the entire redemption, no percussion] Gitarre: Bayat löst sich in einen einzigen kaum hörbaren Ton — das stille Wissen, das die ganze Geulah eröffnet.</div>
+      <div class="coda-whisper">
+        <strong>וַיַּרְא</strong> אֱלֹהִים אֶת־בְּנֵי יִשְׂרָאֵל — <strong>וַיֵּדַע</strong> אֱלֹהִים
+      </div>
+      <div class="coda-de">„Und Gott sah die Söhne Israels — und Gott wusste." · Schemot 2:25</div>
+    </div>
+
+    <div class="tikkun-box">
+      <div class="tikkun-header">
+        <div class="tikkun-title-he">מַעֲשֵׂה הַתִּיקּוּן — הוֹדָאַת הַגָּלוּת · יוֹצֵר אוֹר וּבוֹרֵא חֹשֶׁךְ · אֶהְיֶה שֶׁל הַשַּׁעַר · בִּרְכַּת תְּקַע בְּשׁוֹפָר גָּדוֹל לְחֵרוּתֵנוּ</div>
+        <div class="tikkun-title-de">Tikkun — Die Hodaah der Galut-Erkenntnis · Die tägliche Yotzer-Or-Brachah gegen den Dualismus · Das Eh'yeh der Schwelle · Die Cheruth-Bitte in der zehnten Amidah-Brachah</div>
+        <div class="tikkun-src">שְׁמוֹת א:א׳ („וְאֵלֶּה שְׁמוֹת") · שְׁמוֹת א:י״ז (יִרְאַת הָאֱלֹהִים שֶׁל הַמְיַלְּדֹת) · שְׁמוֹת ב:כ״ה („וַיֵּדַע אֱלֹהִים") · שְׁמוֹת ג:ב׳ (הַסְּנֶה) · שְׁמוֹת ג:י״ד (אֶהְיֶה אֲשֶׁר אֶהְיֶה) · שְׁמוֹת ד:ח׳–ט׳ (הָאוֹתוֹת) · שְׁמוֹת ו:א׳ (עַתָּה תִרְאֶה) · רמב״ם הלכות יְסוֹדֵי הַתּוֹרָה ז׳–י׳ (נְבוּאַת מֹשֶׁה רַבֵּנוּ ע״ה) · רמב״ם הלכות תְּפִלָּה · רשש נְהַר שָׁלוֹם (דְּרוּשׁ גָּלוּת מִצְרַיִם) · רמח״ל מְסִלַּת יְשָׁרִים (פְּתִיחָה · פֶּרֶק א׳ · פֶּרֶק י״א) · רמח״ל דַּעַת תְּבוּנוֹת · רמח״ל דֶּרֶךְ הַשֵּׁם · אור החיים על שְׁמוֹת ב:כ״ה · שד״ל בְּפֵרוּשׁ עַל שְׁמוֹת ג:י״ד · בן איש חי שנה ראשונה פרשת שמות (פְּתִיחָה · הלכות תפילה · יוֹצֵר אוֹר וּבוֹרֵא חֹשֶׁךְ) · ספר העיקרים מאמר שני · בִּרְכַּת „תְּקַע בְּשׁוֹפָר גָּדוֹל לְחֵרוּתֵנוּ" (עֲשִׂירִית בָּעֲמִידָה) · מִנְהַג אֲרָם צוֹבָה · יְרוּשָׁלַיִם · מָרוֹקוֹ · יָמֶן</div>
+      </div>
+      <div class="tikkun-body">
+        <strong>Sephardische Praxis:</strong> Schemot eröffnet das Sefer der Geulah — aber nicht in der Befreiung, sondern <em>in der Tiefe der Galut</em>. Das erste Wort ist <em>וְאֵלֶּה — und dies sind die Namen</em>: eine Aufzählung der zwölf Söhne Yaakovs, mit denen das ganze Buch der Befreiung beginnt. <strong>Rambam</strong> (Hilchot Yesodei HaTora 7–10) lehrt, dass Mosche der höchste aller Propheten ist — sein Prophetie-Modus ist einzigartig, „Mund zu Mund". Doch im Schemot-Anfang ist Mosche noch nicht der Mosche von Sinai. Schemot zeigt uns die <em>verborgene Reifung</em> der Erlösung — wie ein Maschiach-Ansatz-Punkt vorbereitet wird, lange bevor er sichtbar wird. Das ist die Sefirah <strong>Hod</strong>: nicht die laute Pracht, sondern die <em>Hodaah</em>-Sefirah, das demütige Erkennen, das Bekennen der eigenen Lage. Hod ist die Säule, die Pracht trägt, ohne selbst zu glänzen. So bereitet sich die ganze Geulah vor: in der Stille der Schiphra und Pu'a, in der Stille des Schilfkastens, in der Stille der vierzig Midjan-Jahre, in der Stille des Brennenden Dornbusches, in der Stille des <em>וַיֵּדַע אֱלֹהִים</em>. <strong>Rashash</strong> (Rabbi Schalom Scharabi, <em>Nahar Schalom</em>, sephardisch-yerushalmische Kabbalah) lehrt — gemäß der lurianischen Tradition, die die Galut Mitzrayim als <em>Beruru</em>-Arbeit fasst — dass die Versklavung in Mitzrayim nicht primär Strafe ist, sondern eine geistliche Bewegung: Israel sammelt im Verborgenen die heiligen Funken (<em>nitzotzot</em>) aus den tiefsten Räumen. Genau dort, wo die Welt am dunkelsten ist, liegen die Funken am tiefsten. Die Aleppinische und Yerushalmische Hazzanut-Tradition liest die Eröffnung des Schemot-Buches im Maqam <em>Bayat</em> — dem mütterlich-tiefen, generation-geduldigen Galut-Maqam — mit charakteristischer Hinwendung zu <em>Saba</em>, dem ur-schwelligen, sakralen Maqam, im Moment des Brennenden Dornbusches: weil dort, im scheinbar nichtigen Dornen-Strauch, die ganze Geulah als verborgene Anwesenheit hervorbricht.
+        <br><br>
+        <strong>Die kabbalistisch-pschat-philosophische Tiefen-Lesung der Parashah</strong> entfaltet sich in mehreren Stimmen. <strong>Ramchal</strong> (Rabbi Mosche Chaim Luzzatto, <em>Mesillat Yescharim</em>, Petichah und Perek 1 — <em>Yesod HaChasidut v'Schoresch HaAvodah HaTmimah</em>) lehrt, dass die geistige Arbeit beginnt mit dem klaren Erkennen <em>was die Aufgabe des Menschen in seiner Welt ist</em>. Genau diese Erkenntnis erfolgt in der Schemot-Eröffnung kollektiv und individuell. Kollektiv: das Volk seufzt, schreit, und sein Schrei steigt auf (2:23) — der Schrei ist die erste Bewegung der Geulah, weil der Schrei voraussetzt, dass man die eigene Lage <em>erkennt</em>. Individuell: Mosche geht hinaus zu seinen Brüdern (2:11), sieht ihre Lasten (<em>וַיַּרְא בְּסִבְלֹתָם</em>) — das Hinausgehen aus der Palast-Verblendung, das Sehen der wirklichen Lage. Ramchal lehrt in <em>Mesillat Yescharim Perek 11</em> (Pirtei Middat HaNekiut), dass Reinheit beginnt mit dem klaren Sehen der eigenen Vermischtheit — und Schemot ist das nationale Korrelat: die Geulah beginnt mit dem klaren Sehen der eigenen Galut. <strong>Ramchal in <em>Da'at Tevunot</em></strong> gibt die ontologische Pointe: das Galut ist nicht Verwerfung, sondern Tikkun-Mechanismus. Adonai zieht sich scheinbar zurück (Hester Panim), damit Israel <em>aus eigener Erkenntnis</em> den Schrei erhebt. <strong>Or HaChaim</strong> (Rabbi Chaim ben Atar) liest auf <em>Schemot 2:25</em> — den vielleicht stillsten Vers der Tora: <em>וַיַּרְא אֱלֹהִים אֶת־בְּנֵי יִשְׂרָאֵל וַיֵּדַע אֱלֹהִים</em> — und betont, dass dieses scheinbar leere „und Adonai wusste" (ohne Objekt!) der Augenblick ist, in dem die ganze Geulah innerlich aktiviert wird. Sobald Israel schreit, beginnt die Befreiung im Verborgenen, lange bevor sie sichtbar wird.
+        <br><br>
+        <strong>Shadal</strong> (Rabbi Schmuel David Luzzatto, <em>Pirusch al haTora</em>, italienisch-sephardische Pschat-Tradition des Collegio Rabbinico zu Padua) liefert die berühmte philologisch-theologische Pointe auf <em>Schemot 3:14</em> — den Klimax-Vers der Parashah. Shadal liest <em>אֶהְיֶה אֲשֶׁר אֶהְיֶה</em> nicht als statisches „Ich bin der ich bin" (das wäre eine griechisch-philosophische Lesart der Septuaginta-Linie), sondern als dynamisches <em>„Ich werde sein, der ich sein werde"</em>: Adonai sagt nicht, <em>was</em> er ist (als Wesens-Definition), sondern <em>wie</em> er sein wird — präsent, verlässlich, modal angepasst an die Bedürfnisse des Bundes. Der Name ist <em>Verbal-Verpflichtung</em>, nicht abstrakte Sein-Aussage. Genau deshalb sagt Adonai in Vers 12 zuerst <em>כִּי־אֶהְיֶה עִמָּךְ</em> — denn ich werde mit dir sein — und erst dann offenbart er den Namen, der diese Verheißung trägt. Diese Lesart steht in tiefer Übereinstimmung mit der Targum-Tradition (Onkelos) und mit der sephardisch-rabbinischen Tradition, die den Tetragrammaton als <em>Bundes-Treue-Name</em> versteht. Aus dieser Lesart fließt die sephardische Tradition, das Tetragrammaton im Vortrag als <em>אֲדֹנָי</em> auszusprechen: nicht abstrakte Wesens-Definition, sondern <em>Herrschafts-Verpflichtung</em>. <strong>Ben Ish Chai</strong> (Rabbi Yosef Chaim aus Bagdad, <em>Shanah Rischona, Hilchot Tefillah</em>, Petichah-Stück zu Parashat Schemot) baut auf den Versen <em>Schemot 4:8–9</em> (die zwei Zeichen Mosches: Stab→Schlange und Hand→Tzaraat) eine umfassende Lehre über die <em>tägliche Schacharit-Brachah „Yotzer Or u'Boreh Choshech"</em>: weil das Volk in der Galut versucht ist, die Welt als zwei Mächte zu lesen (Manichäismus, Zweier-Reich, Dualismus aller Art), haben die Männer der großen Versammlung die Yotzer-Brachah als <em>tägliche monotheistische Selbst-Erinnerung</em> eingesetzt: <em>derselbe Adonai, der Licht schafft, schafft auch Finsternis</em>. Galut und Geulah sind nicht zwei Mächte; sie sind zwei Modalitäten desselben göttlichen Bundes-Wirkens. Das ist der tägliche Tikkun aus Schemot: jeden Morgen in der Yotzer-Brachah die Galut-Dualismus-Versuchung explizit niederlegen.
+        <br><br>
+        <strong>Aus dieser kabbalistisch-pschat-philosophischen Architektur</strong> fließen konkrete sephardische Praktiken, die alle Eidot HaMizrach — Aleppo, Yerushalayim, Marokko, Yemen — als tägliche oder wöchentliche Geulah-Anker pflegen. Die zentrale Praxis ist die <em>zehnte Brachah der Amidah</em> — <em>תְּקַע בְּשׁוֹפָר גָּדוֹל לְחֵרוּתֵנוּ</em> (Sound the great Schofar for our freedom). Diese Brachah ist die explizite Cheruth-Bitte des ganzen Tefillah-Tagewerks; sephardisch (Aleppo-Yerushalmi-Brauch) wird sie mit einer kurzen inneren Pause gesprochen, in der man die persönliche Galut-Erkenntnis aktiviert: <em>auch ich bin in einer Galut — sei es persönlich, familiär, ethnisch, spirituell — und ich bitte Adonai um meinen Schofar-Klang, mein Sammeln aus den Verstreuungen</em>. Dies ist keine abstrakte messianische Erwartung, sondern tägliche persönliche Hodaah. Und schließlich der Schiphra-Pu'a-Anker: die zwei Hebammen sind die <em>ersten namentlich genannten Frauen</em> der ganzen Schemot-Erzählung — vor Yocheved, vor Miriam, vor der Tochter Pharaos. Zwei einfache Frauen, die <em>fürchteten Gott</em> (1:17) und einer übermächtigen Befehls-Gewalt ein leises Nein sagten. Sephardisch ist Schiphra-Pu'a das Urbild der weiblichen Yirat-Schamayim, die in der verborgenen Tiefe des Bayit (Haus) operiert und die ganze Geulah trägt. <em>וַיַּעַשׂ לָהֶם בָּתִּים</em> (1:21) — Adonai macht ihnen Häuser: weil ihre kleine, namenlose Hodaah-Tat die Wurzel ganzer Häuser Israels wurde.
+      </div>
+
+      <div class="tikkun-actions">
+        <div class="tikkun-actions-title">מַעֲשִׂים — Sephardische Praxis-Punkte</div>
+        <ol>
+          <li><strong>Tägliche Yotzer-Or-Brachah mit erweiterter Kawanah</strong> — vor dem Sagen der Worte <em>„Yotzer Or u'Boreh Choshech"</em> im Schacharit einen Moment innehalten und Ben Ish Chai's Pointe aktivieren: derselbe Adonai, der das Licht schafft, schafft auch die Finsternis. Die Galut-Verfinsterung ist nicht außerhalb der Schöpfungsordnung — sie ist Teil davon. (Ben Ish Chai Shanah Rischona Parashat Schemot, Petichah)</li>
+          <li><strong>Zehnte Amidah-Brachah „Tekah be'Schofar Gadol leCheruteinu"</strong> — täglich beim Sagen dieser Brachah eine bewusste Drei-Sekunden-Pause für die persönliche Galut-Erkenntnis: <em>auch ich bin in einer Galut; möge Adonai meinen Schrei hören, wie er den Schrei in Mitzrayim hörte</em>. (Aleppo-Yerushalayim sephardischer Minhag der Eidot HaMizrach)</li>
+          <li><strong>Schemot 2:23–25 als wöchentliche Erev-Schabbat-Lesung mit der Familie</strong> — die drei Verse über den Schrei Israels und Adonais stilles „Wissen" mit den Kindern lesen, mit der Pointe: jeder ehrliche Schrei wird gehört, lange bevor die Antwort sichtbar wird. (Or HaChaim auf Schemot 2:25)</li>
+          <li><strong>Eh'yeh asher Eh'yeh als persönlicher Anker in schwierigen Momenten</strong> — wenn man sich in einer eigenen Galut-Erfahrung findet (Verlust, Krankheit, Verwirrung), das <em>אֶהְיֶה אֲשֶׁר אֶהְיֶה</em> leise sagen mit Shadal's Kawanah: Adonai ist <em>in der Modalität präsent, in der er gerade da sein muss</em> — nicht als abstrakte Sein-Aussage, sondern als Bundes-Verpflichtung. (Shadal Pirusch zu Schemot 3:14)</li>
+          <li><strong>Mesillat Yescharim-Studienpraxis</strong> — wöchentliches Kapitel-Lesen mit der Schemot-Erkenntnis als Anker: Heiligkeit beginnt mit der Wahrnehmung der eigenen Lage. Petichah und Perek 1 als jährliche Selbst-Diagnose, idealerweise zu Beginn der Schemot-Wochen. (Ramchal, Mesillat Yescharim Petichah und Perek 1)</li>
+          <li><strong>Schiphra-Pu'a-Reflexion bei kleinen Akten der Gerechtigkeit</strong> — wenn man sich fragt, ob ein kleiner Akt etwas ändern kann, an die zwei Hebammen denken: zwei einfache Frauen, die in der Verborgenheit Nein zu Pharao sagten und damit den ganzen Anfang der Geulah trugen. Die kleine Hand, die ein Kind rettet, ist die Hand, die das Volk rettet. (Schemot 1:15–21, sephardische Auslegungstradition)</li>
+          <li><strong>Mosche-40-Jahre-Geduld-Praxis</strong> — am Erev-Schabbat-Schemot die ganze Mosche-Werdung (1:1–6:1) mit den Kindern in Kürze nacherzählen, mit Fokus auf die vierzig verborgenen Midjan-Jahre. Sephardische Pointe: Mosche wird erst gerufen, als er bereit ist; Bereitschaft entsteht durch verborgene Reifung — Hod, nicht Pracht. (Rambam Hilchot Yesodei HaTora 7–10, sephardische Mussar-Architektur)</li>
+        </ol>
+      </div>
+
+      <div class="tikkun-tags">
+        <span class="tikkun-tag">שְׁמוֹת</span>
+        <span class="tikkun-tag">גָּלוּת</span>
+        <span class="tikkun-tag">סְנֶה</span>
+        <span class="tikkun-tag">אֶהְיֶה</span>
+        <span class="tikkun-tag">הוֹד</span></div></div>
+
+  </section>
+
+  <div class="footer">
+    <p class="footer-he">פָּרָשַׁת שְׁמוֹת · הוֹד · מַקָּאם בַּיָּאת · הוֹדָאַת הַגָּלוּת · אֶהְיֶה אֲשֶׁר אֶהְיֶה · עַתָּה תִרְאֶה</p>
+    <p class="footer-chain">
+      שְׁמוֹת א:א׳–ו:א׳ · נוּסַּח צָדוֹק (רשש) · עֵדוֹת הַמִּזְרָח · פְּתִיחַת סֵפֶר הַגְּאֻלָּה
+    </p>
+    <p class="footer-de">
+      Quellen: <strong>Tanach</strong> (Schemot 1:1–6:1 — Tora-Text 1:1, mit Tetragrammaton-Konvertierung
+      durchgängig als אֲדֹנָי) · <strong>Rambam · Mishneh Tora</strong> (Hilchot Yesodei HaTora 7–10
+      zur Einzigartigkeit der Mosche-Prophetie; Hilchot Tefillah zur Ordnung der täglichen Tefillah) ·
+      <strong>Rashash · Nahar Schalom</strong> (Rabbi Schalom Scharabi, Yerushalmische Kabbalah-Schule —
+      Drush Galut Mitzrayim als <em>Beruru</em>-Arbeit, die Sammlung der heiligen Funken aus den
+      tiefsten Räumen der Kelipah) · <strong>Ramchal · Mesillat Yescharim</strong>
+      (Petichah und Perek 1 — <em>Yesod HaChasidut</em>: die Selbst-Erkenntnis als Wurzel aller
+      geistigen Arbeit; Perek 11 — Pirtei Middat HaNekiut) · <strong>Ramchal · Da'at Tevunot</strong>
+      (Galut als Tikkun-Mechanismus, Hester Panim als Vorbereitung der Offenbarung) ·
+      <strong>Ramchal · Derech HaShem</strong> (Teil II — die göttlichen Namen als Modalitäten der
+      Hashgachah und Hanhagah) · <strong>Or HaChaim</strong> auf Schemot 2:25 — das stille
+      <em>וַיֵּדַע אֱלֹהִים</em> als innere Aktivierung der Geulah · <strong>Shadal · Pirusch al haTora</strong>
+      (Rabbi Schmuel David Luzzatto, italienisch-sephardisch — die berühmte philologische Pointe zu
+      Schemot 3:14: <em>אֶהְיֶה אֲשֶׁר אֶהְיֶה</em> als dynamische Bundes-Treue-Verpflichtung, nicht
+      als statische Sein-Definition; in tiefer Übereinstimmung mit Targum Onkelos) · <strong>Ben Ish
+      Chai</strong> (Rabbi Yosef Chaim aus Bagdad, Shanah Rischona Parashat Schemot — Petichah und
+      Hilchot Tefillah Yotzer-bis-Schmoneh-Esreh; die Schemot-4:8–9-Zeichen als Wurzel der täglichen
+      Yotzer-Or-u'Boreh-Choshech-Brachah gegen Dualismus) · <strong>Sefer HaIkkarim</strong> (Yosef Albo,
+      Maamar Scheni — die göttlichen Namen als Pfeiler des Glaubens) · <strong>Tefillat HaAmidah</strong>
+      — die zehnte Brachah <em>תְּקַע בְּשׁוֹפָר גָּדוֹל לְחֵרוּתֵנוּ</em> als tägliche Cheruth-Bitte
+      im sephardischen Aleppo-Yerushalayim-Brauch · <strong>Sephardische Hazzanut-Tradition</strong>
+      Eidot HaMizrach (Aleppo, Yerushalayim, Marokko, Yemen) — die Lesung der Schemot-Eröffnung im
+      Maqam Bayat mit Hinwendung zu Saba am Brennenden Dornbusch.
+      <br><br>
+      <strong>Tradition:</strong> Sephardisch · Nussach Zadoq (Rashash) · Maqam-Tradition aus Aleppo,
+      Yerushalayim, Marokko, Yemen · Tetragrammaton durchgängig als אֲדֹנָי · Maschiach ben David ·
+      Doppelt geprüfte Quellen · Tora-Text 1:1 unverändert · Erstellt Mai 2026 · Sefer HaParashot
+      bemo Maqam · 1. Lied (Eröffnung) Sefer Schemot · Hod · Maqam Bayat · ~60 BPM rubato.
+    </p>
+    <div class="footer-amen">אָמֵן · יִבָּנֶה הַמִּקְדָּשׁ בִּמְהֵרָה בְיָמֵינוּ · יָבוֹא מָשִׁיחַ בֶּן דָּוִד · אָמֵן</div>
+  </div>
+
+</div>
+
+
+</body></html>

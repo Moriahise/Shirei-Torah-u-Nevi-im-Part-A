@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+<html lang="he-IL"><head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>פָּרָשַׁת צַו · וַיִּקְרָא ו׳:א׳–ח׳:ל״ו · חָכְמָה · מַקָּאם רָאסְט · Sephardische Tora-Vertonung</title>
+  <link href="https://fonts.googleapis.com/css2?family=Frank+Ruhl+Libre:wght@300;400;700;900&amp;family=EB+Garamond:ital,wght@0,400;0,600;1,400;1,600&amp;family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&amp;display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg:#060808; --deep:#0A0E0E; --layer:#101414; --card:#0C1010;
+      --parchment:#f2e8d0; --parch-dim:#c8b898;
+      --ivory:#f0e8d8; --ivory-dim:#a89878;
+      --silver:#c8d4e0; --silver-dim:#7a8290;
+      --text:#a0a89c;
+      --sefer:#C8A030; --sefer-lt:#F0CC60; --sefer-dim:#8B7020;
+      --sefer-bg:rgba(200,160,48,.08); --sefer-bdr:rgba(200,160,48,.36); --sefer-glow:rgba(240,204,96,.20);
+      --tzv:#C8A860; --tzv-lt:#F0CC80; --tzv-dim:#8B7038;
+      --tzv-bg:rgba(200,168,96,.08); --tzv-bdr:rgba(200,168,96,.36); --tzv-glow:rgba(240,204,128,.22);
+      --maqam-saba:#B0904A; --maqam-hijaz:#C85050; --maqam-bayat:#A07850;
+      --maqam-rast:#C8A860; --maqam-ajam:#7A9050; --maqam-nahawand:#6080A0;
+    }
+    *,*::before,*::after { margin:0; padding:0; box-sizing:border-box; }
+    html { scroll-behavior:smooth; }
+    body { background:var(--bg); color:var(--silver); font-family:'EB Garamond',serif; overflow-x:hidden; line-height:1.85; padding:40px 20px 80px; }
+    body::before { content:''; position:fixed; inset:0; pointer-events:none; z-index:0;
+      background: radial-gradient(ellipse at 18% 12%, rgba(200,160,48,.10) 0%, transparent 48%),
+                  radial-gradient(ellipse at 82% 28%, rgba(200,168,96,.12) 0%, transparent 45%),
+                  radial-gradient(ellipse at 12% 68%, rgba(168,128,24,.08) 0%, transparent 45%),
+                  radial-gradient(ellipse at 88% 82%, rgba(240,204,128,.10) 0%, transparent 42%),
+                  radial-gradient(ellipse at 50% 50%, rgba(20,16,8,.82) 0%, transparent 70%); }
+    body::after { content:''; position:fixed; inset:0; pointer-events:none; z-index:0;
+      background-image:
+        radial-gradient(1px 1px at 8% 10%, rgba(240,204,96,.34) 0%, transparent 100%),
+        radial-gradient(1px 1px at 48% 5%, rgba(240,204,128,.30) 0%, transparent 100%),
+        radial-gradient(1px 1px at 82% 16%, rgba(224,188,80,.30) 0%, transparent 100%),
+        radial-gradient(1px 1px at 25% 42%, rgba(216,176,72,.28) 0%, transparent 100%),
+        radial-gradient(1px 1px at 68% 58%, rgba(240,204,128,.28) 0%, transparent 100%),
+        radial-gradient(1.5px 1.5px at 12% 75%, rgba(208,172,64,.32) 0%, transparent 100%),
+        radial-gradient(1px 1px at 90% 78%, rgba(240,204,128,.30) 0%, transparent 100%),
+        radial-gradient(1px 1px at 35% 88%, rgba(224,188,80,.26) 0%, transparent 100%); }
+    .wrap { max-width:1080px; margin:0 auto; position:relative; z-index:1; }
+    .page-header { text-align:center; margin-bottom:80px; padding-bottom:40px; border-bottom:1px solid var(--sefer-bdr); position:relative; }
+    .page-header::after { content:'✦ ✡ ✦'; position:absolute; bottom:-14px; left:50%; transform:translateX(-50%); background:var(--bg); padding:0 20px; color:var(--sefer); font-size:.62em; letter-spacing:.55em; }
+    .eyebrow { font-family:'Cormorant Garamond',serif; font-style:italic; font-size:.78em; color:var(--sefer-lt); letter-spacing:.28em; text-transform:uppercase; margin-bottom:18px; opacity:.85; }
+    .sefer-letter { font-family:'Frank Ruhl Libre',serif; font-size:1.40em; color:var(--sefer); font-weight:900; display:inline-block; margin-bottom:6px; text-shadow:0 0 30px var(--sefer-glow); letter-spacing:.04em; }
+    .page-title-he { font-family:'Frank Ruhl Libre',serif; font-size:3.2em; font-weight:900; color:var(--ivory); direction:rtl; letter-spacing:.05em; text-shadow:0 0 80px var(--sefer-glow), 0 0 140px var(--tzv-glow); margin-bottom:8px; line-height:1.15; }
+    .page-subtitle-he { font-family:'Frank Ruhl Libre',serif; font-size:1.16em; color:var(--sefer-lt); direction:rtl; margin-bottom:10px; letter-spacing:.06em; }
+    .page-title-de { font-family:'Cormorant Garamond',serif; font-style:italic; font-size:1.14em; color:var(--silver-dim); margin-bottom:22px; }
+    .page-desc { font-size:1.0em; color:var(--text); max-width:780px; margin:0 auto; line-height:1.95; }
+    .page-desc strong { color:var(--ivory-dim); }
+    .page-desc em { color:var(--tzv-lt); font-style:italic; }
+    .song-section { margin-bottom:90px; padding-bottom:70px; border-bottom:1px dashed var(--sefer-bdr); }
+    .song-header { display:flex; flex-wrap:wrap; align-items:flex-start; gap:20px; margin-bottom:40px; padding:24px 26px; background:var(--layer); border:1px solid var(--tzv-bdr); border-radius:10px; }
+    .song-num { font-family:'Frank Ruhl Libre',serif; font-size:2.6em; font-weight:900; direction:rtl; padding-right:14px; color:var(--tzv-lt); }
+    .song-meta { flex:1; display:flex; flex-direction:column; gap:8px; }
+    .korban-badge { font-family:'Cormorant Garamond',serif; font-style:italic; font-size:.82em; letter-spacing:.08em; color:var(--tzv-lt); }
+    .maqam-badge { font-family:'Cormorant Garamond',serif; font-style:italic; font-size:.78em; letter-spacing:.08em; display:inline-block; padding:3px 10px; border-radius:4px; color:#1a1408; font-weight:600; background:var(--maqam-rast); }
+    .song-title-he { font-family:'Frank Ruhl Libre',serif; font-size:1.7em; font-weight:700; color:var(--ivory); direction:rtl; letter-spacing:.04em; }
+    .song-title-de { font-family:'Cormorant Garamond',serif; font-style:italic; font-size:1.02em; color:var(--silver); }
+    .source-badge { font-family:'Cormorant Garamond',serif; font-style:italic; font-size:.74em; color:#A08858; line-height:1.6; }
+    .aliyah-block { margin-bottom:42px; }
+    .aliyah-label { font-family:'Frank Ruhl Libre',serif; font-size:.94em; font-weight:700; direction:rtl; margin-bottom:9px; color:var(--tzv); letter-spacing:.06em; padding-bottom:6px; border-bottom:1px solid var(--tzv-bdr); }
+    .aliyah-label-de { font-family:'Cormorant Garamond',serif; font-style:italic; font-size:.78em; color:var(--silver-dim); display:inline-block; margin-right:14px; opacity:.85; }
+    .instrument-note { font-family:'Cormorant Garamond',serif; font-style:italic; font-size:.84em; color:var(--text); margin-bottom:14px; padding:10px 14px; background:rgba(200,168,96,.05); border-left:2px solid var(--tzv-dim); }
+    .lyrics-block { display:flex; gap:44px; flex-wrap:wrap; }
+    .lyrics-he, .lyrics-de { flex:1; min-width:280px; display:flex; flex-direction:column; gap:6px; }
+    .lyrics-he span.line { font-family:'Frank Ruhl Libre',serif; font-size:1.06em; color:var(--ivory); direction:rtl; line-height:1.95; }
+    .lyrics-de span.line { font-family:'Cormorant Garamond',serif; font-size:1.0em; color:var(--silver); line-height:1.88; }
+    .tikkun-box { background:rgba(200,168,96,.07); border:1px solid rgba(200,168,96,.32); padding:30px; margin-top:40px; border-radius:6px; }
+    .tikkun-header { display:flex; flex-direction:column; gap:6px; margin-bottom:20px; }
+    .tikkun-title-he { font-family:'Frank Ruhl Libre',serif; font-size:1.25em; color:var(--ivory); direction:rtl; font-weight:700; letter-spacing:.04em; }
+    .tikkun-title-de { font-family:'Cormorant Garamond',serif; font-size:1.0em; font-style:italic; color:var(--silver); }
+    .tikkun-src { font-family:'Cormorant Garamond',serif; font-size:.74em; color:#A08858; line-height:1.7; }
+    .tikkun-body { font-family:'Cormorant Garamond',serif; font-size:.96em; color:var(--text); line-height:1.92; }
+    .tikkun-body strong { color:var(--ivory); }
+    .tikkun-body em { color:var(--tzv-lt); font-style:italic; }
+    .tikkun-tags { margin-top:18px; display:flex; gap:9px; flex-wrap:wrap; }
+    .tikkun-tag { background:rgba(200,168,96,.16); color:var(--tzv-lt); padding:4px 10px; border-radius:4px; font-size:.74em; font-family:'Frank Ruhl Libre',serif; direction:rtl; }
+    .climax-box { background:linear-gradient(135deg,rgba(200,168,96,.18),rgba(200,160,48,.10),rgba(6,8,8,.88)); border:2px solid var(--tzv-bdr); padding:32px; margin-top:40px; margin-bottom:30px; border-radius:8px; }
+    .climax-label { font-family:'Cormorant Garamond',serif; font-style:italic; font-size:.82em; color:var(--tzv-lt); letter-spacing:.18em; text-transform:uppercase; margin-bottom:14px; text-align:center; }
+    .climax-verse-he { font-family:'Frank Ruhl Libre',serif; font-size:1.55em; font-weight:700; color:var(--ivory); direction:rtl; text-align:center; line-height:1.85; letter-spacing:.04em; text-shadow:0 0 30px var(--tzv-glow); }
+    .climax-verse-de { font-family:'Cormorant Garamond',serif; font-style:italic; font-size:1.05em; color:var(--silver); text-align:center; margin-top:14px; line-height:1.7; }
+    .climax-src { font-family:'Cormorant Garamond',serif; font-style:italic; font-size:.80em; color:var(--tzv-lt); text-align:center; margin-top:12px; opacity:.8; }
+    .coda-box { background:rgba(6,8,8,.78); border:1px solid var(--tzv-bdr); padding:36px; text-align:center; margin-top:30px; margin-bottom:30px; border-radius:6px; }
+    .coda-label { font-family:'Cormorant Garamond',serif; font-style:italic; font-size:.80em; color:var(--tzv-lt); letter-spacing:.18em; text-transform:uppercase; margin-bottom:18px; }
+    .coda-whisper { font-family:'Frank Ruhl Libre',serif; font-size:1.20em; direction:rtl; line-height:2.3; opacity:.85; color:var(--tzv-lt); }
+    .coda-whisper strong { font-weight:900; opacity:1; color:var(--ivory); }
+    .scenarios-section { margin-top:54px; margin-bottom:40px; }
+    .scenarios-title { font-family:'Frank Ruhl Libre',serif; font-size:1.35em; font-weight:700; text-align:center; margin-bottom:34px; direction:rtl; color:var(--sefer-lt); letter-spacing:.06em; }
+    .scenarios-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(290px,1fr)); gap:26px; }
+    .scenario-card { background:linear-gradient(135deg,rgba(28,20,8,.78),rgba(6,8,8,.92)); border:1px solid var(--tzv-bdr); padding:24px; transition:transform .2s, box-shadow .2s; border-radius:6px; }
+    .scenario-card:hover { transform:translateY(-4px); box-shadow:0 10px 36px var(--tzv-glow); }
+    .sc-num { font-family:'Cormorant Garamond',serif; font-style:italic; font-size:.74em; letter-spacing:.14em; text-transform:uppercase; margin-bottom:7px; color:var(--tzv); }
+    .sc-title-he { font-family:'Frank Ruhl Libre',serif; font-size:1.10em; font-weight:700; color:var(--ivory); direction:rtl; margin-bottom:4px; letter-spacing:.04em; }
+    .sc-sub { font-family:'Cormorant Garamond',serif; font-style:italic; font-size:.84em; color:#A08858; margin-bottom:14px; }
+    .sc-body { font-size:.92em; color:var(--text); line-height:1.80; margin-bottom:14px; }
+    .sc-body strong { color:var(--tzv-lt); }
+    .key-moment { font-size:.86em; color:var(--tzv-lt); font-style:italic; margin-bottom:9px; padding-left:13px; border-left:2px solid var(--tzv-lt); }
+    .reaction { font-size:.86em; color:var(--text); font-style:italic; padding-left:13px; border-left:2px solid var(--sefer-dim); line-height:1.78; }
+    .footer { margin-top:80px; padding-top:50px; border-top:1px solid var(--sefer-bdr); text-align:center; }
+    .footer-he { font-family:'Frank Ruhl Libre',serif; font-size:1.40em; font-weight:700; color:var(--sefer-lt); direction:rtl; margin-bottom:18px; text-shadow:0 0 30px var(--sefer-glow); letter-spacing:.06em; }
+    .footer-chain { font-family:'Frank Ruhl Libre',serif; font-size:1.0em; color:var(--silver); direction:rtl; margin-bottom:22px; letter-spacing:.09em; }
+    .footer-de { font-family:'Cormorant Garamond',serif; font-style:italic; font-size:.92em; color:var(--text); line-height:2.0; max-width:780px; margin:0 auto 24px; }
+    .footer-de strong { color:var(--ivory-dim); font-style:normal; }
+    .footer-amen { font-family:'Frank Ruhl Libre',serif; font-size:1.30em; color:var(--sefer-lt); direction:rtl; margin-top:24px; letter-spacing:.14em; text-shadow:0 0 30px var(--sefer-glow); }
+    @media (max-width:720px) {
+      .page-title-he { font-size:2.3em; }
+      .song-num { font-size:2.2em; }
+      .lyrics-block { flex-direction:column; gap:24px; }
+      .scenarios-grid { grid-template-columns:1fr; }
+      .climax-verse-he { font-size:1.20em; }
+      .footer-he { font-size:1.10em; }
+    }
+  </style>
+</head>
+<body>
+<div class="wrap">
+
+  <header class="page-header">
+    <div class="eyebrow">Sephardische Tora-Vertonung · Sefer HaParashot bemo Maqam</div>
+    <div class="sefer-letter">ג</div>
+    <div class="page-title-he">פָּרָשַׁת צַו</div>
+    <div class="page-subtitle-he">סֵפֶר וַיִּקְרָא · ו׳:א׳–ח׳:ל״ו · חָכְמָה · מַקָּאם רָאסְט · אֵשׁ תָּמִיד תּוּקַד עַל־הַמִּזְבֵּחַ</div>
+    <div class="page-title-de">Tzav — Die Anweisung an die Kohanim · Die Ordnung der fünf Korbanot · Die sieben Tage der Miluim · Chochma im Maqam Rast</div>
+    <div class="page-desc">
+      Tzav setzt fort, was Vayikra eröffnete: nach dem Volk wendet sich die Tora an die <em>Kohanim
+      selbst</em> — die Avodah aus der Sicht derer, die sie ausführen. Die Parashah entfaltet die
+      fünf Korbanot in pädagogischer Schluss-Ordnung: <em>Olah · Mincha · Chatat · Asham · Schelamim</em>
+      (Vayikra 7:37 als Zusammenfassungs-Vers), umrahmt von dem berühmtesten Avodah-Vers der ganzen Tora:
+      <em>אֵשׁ תָּמִיד תּוּקַד עַל־הַמִּזְבֵּחַ לֹא תִכְבֶּה</em> (6:6) — ein beständiges Feuer soll auf
+      dem Altar brennen, es soll niemals verlöschen. Kapitel 8 bringt anschließend die <em>schiv'at
+      yemei haMiluim</em>, die sieben Tage der Einweihung Aharons und seiner Söhne — Schritt für Schritt:
+      Versammlung, Waschung, das Anlegen der Bigdei Kehuna, Salbung des Mishkan, der Geräte und Aharons,
+      die drei Korbanot der Miluim (Par HaChatat, Eil HaOlah, Eil HaMiluim mit dem einzigartigen
+      Blut-Anschlag an Ohrläppchen, Daumen und großem Zeh) — und die Anweisung, sieben Tage nicht aus
+      dem Mishkan-Eingang zu treten (8:33). <strong>Sefirot-Anker:</strong> Chochma — die ordnende
+      Weisheit, die jede Avodah in ihre exakte Form fasst, die wiederholte תּוֹרַת-Formel als <em>Klarheit
+      der Anweisung</em>. <strong>Maqam:</strong> Rast — klar, ausgewogen, königlich-mittelgebahnt,
+      das Maqam der Schöpfungs-Ordnung und der priesterlichen Anweisung. Sephardischer Brauch (Aleppo,
+      Marokko, Yemen, Yerushalayim): die Tefillah ersetzt heute das Korban — Schacharit dem Tamid des
+      Morgens, Mincha dem Tamid des Nachmittags (Berachot 26b · Rambam Hilchot Tefillah Perek 1). Der
+      innere Aish Tamid brennt als Tora-Mühe und beständige Gebetspraxis, während wir auf den
+      wiederaufgebauten Beit HaMikdasch und auf Maschiach ben David warten. Tora-Text 1:1, Tetragrammaton
+      durchgängig als אֲדֹנָי, Maschiach ben David.
+    </div>
+  </header>
+
+  <section class="song-section" id="tzav">
+
+    <div class="song-header">
+      <div class="song-num">ב</div>
+      <div class="song-meta">
+        <div class="korban-badge">Chochma — חָכְמָה · Klarheit der Anweisung · Ordnung der Avodah · die wiederholte תּוֹרַת-Formel</div>
+        <div class="song-title-he">פָּרָשַׁת צַו</div>
+        <div class="song-title-de">Tzav — „Befiehl Aharon und seinen Söhnen" · Vayikra 6:1–8:36</div>
+        <div class="maqam-badge">מַקָּאם רָאסְט · Rast · ~66 BPM rubato</div>
+        <div class="source-badge">וַיִּקְרָא ו׳:א׳–ח׳:ל״ו · רמב״ם הלכות מַעֲשֵׂה הַקָּרְבָּנוֹת · רמב״ם הלכות תְּמִידִין וּמוּסָפִין · רמב״ם הלכות כְּלֵי הַמִּקְדָּשׁ וְהָעוֹבְדִים בּוֹ · רמב״ם הלכות פְּסוּלֵי הַמּוּקְדָּשִׁין · רמב״ם הלכות תְּפִלָּה (פֶּרֶק א׳) · רמב״ם הלכות בְּרָכוֹת (פֶּרֶק י׳ · בִּרְכַּת הַגּוֹמֵל) · אור החיים על וַיִּקְרָא ו׳ · בן איש חי שנה ראשונה (פרשת צו) · שׁוּלְחָן עָרוּךְ אוֹרַח חַיִּים רי״ט · כַּף הַחַיִּים רי״ט · מַסֶּכֶת בְּרָכוֹת כ״ו: · נ״ד: · יוֹמָא ל״ג. · מַסֶּכֶת מְנָחוֹת ק״י.</div>
+      </div>
+    </div>
+
+    <div class="aliyah-block">
+      <div class="aliyah-label">עֲלִיָּה רִאשׁוֹנָה — צַו אֶת־אַהֲרֹן · תּוֹרַת הָעֹלָה · אֵשׁ תָּמִיד · תּוֹרַת הַמִּנְחָה<span class="aliyah-label-de">Erste Aliyah · Vayikra 6:1–11 · Die Anweisung an Aharon und seine Söhne · Die Tora der Olah · Der Aish Tamid · Die Tora der Mincha</span></div>
+      <div class="instrument-note">[no percussion] [no drums] [no choir] [solo acoustic guitar — Rast opening with clear bell-like fingerpicking, balanced regal modal, the scribal hand of instruction, sustained mid-range tones, rubato around 66 BPM, no percussion, no drums, no beat] Gitarre: Rast öffnet mit klar-glockigem Fingerpicking — königlich-ausgewogen, die ordnende Hand der Anweisung, gehaltene Mitteltöne, das Aish Tamid als zentrales Bild.</div>
+      <div class="lyrics-block">
+        <div class="lyrics-he" dir="rtl">
+          <span class="line">וַיְדַבֵּר אֲדֹנָי אֶל־מֹשֶׁה לֵּאמֹר׃</span>
+          <span class="line">צַו אֶת־אַהֲרֹן וְאֶת־בָּנָיו לֵאמֹר זֹאת תּוֹרַת הָעֹלָה הִוא הָעֹלָה עַל מוֹקְדָה עַל־הַמִּזְבֵּחַ כׇּל־הַלַּיְלָה עַד־הַבֹּקֶר וְאֵשׁ הַמִּזְבֵּחַ תּוּקַד בּוֹ׃</span>
+          <span class="line">וְלָבַשׁ הַכֹּהֵן מִדּוֹ בַד וּמִכְנְסֵי־בַד יִלְבַּשׁ עַל־בְּשָׂרוֹ וְהֵרִים אֶת־הַדֶּשֶׁן אֲשֶׁר תֹּאכַל הָאֵשׁ אֶת־הָעֹלָה עַל־הַמִּזְבֵּחַ וְשָׂמוֹ אֵצֶל הַמִּזְבֵּחַ׃</span>
+          <span class="line">וּפָשַׁט אֶת־בְּגָדָיו וְלָבַשׁ בְּגָדִים אֲחֵרִים וְהוֹצִיא אֶת־הַדֶּשֶׁן אֶל־מִחוּץ לַמַּחֲנֶה אֶל־מָקוֹם טָהוֹר׃</span>
+          <span class="line">וְהָאֵשׁ עַל־הַמִּזְבֵּחַ תּוּקַד־בּוֹ לֹא תִכְבֶּה וּבִעֵר עָלֶיהָ הַכֹּהֵן עֵצִים בַּבֹּקֶר בַּבֹּקֶר וְעָרַךְ עָלֶיהָ הָעֹלָה וְהִקְטִיר עָלֶיהָ חֶלְבֵי הַשְּׁלָמִים׃</span>
+          <span class="line">אֵשׁ תָּמִיד תּוּקַד עַל־הַמִּזְבֵּחַ לֹא תִכְבֶּה׃</span>
+          <span class="line">וְזֹאת תּוֹרַת הַמִּנְחָה הַקְרֵב אֹתָהּ בְּנֵי־אַהֲרֹן לִפְנֵי אֲדֹנָי אֶל־פְּנֵי הַמִּזְבֵּחַ׃</span>
+          <span class="line">וְהֵרִים מִמֶּנּוּ בְּקֻמְצוֹ מִסֹּלֶת הַמִּנְחָה וּמִשַּׁמְנָהּ וְאֵת כׇּל־הַלְּבֹנָה אֲשֶׁר עַל־הַמִּנְחָה וְהִקְטִיר הַמִּזְבֵּחַ רֵיחַ נִיחֹחַ אַזְכָּרָתָהּ לַאֲדֹנָי׃</span>
+          <span class="line">וְהַנּוֹתֶרֶת מִמֶּנָּה יֹאכְלוּ אַהֲרֹן וּבָנָיו מַצּוֹת תֵּאָכֵל בְּמָקוֹם קָדֹשׁ בַּחֲצַר אֹהֶל־מוֹעֵד יֹאכְלוּהָ׃</span>
+          <span class="line">לֹא תֵאָפֶה חָמֵץ חֶלְקָם נָתַתִּי אֹתָהּ מֵאִשָּׁי קֹדֶשׁ קׇדָשִׁים הִוא כַּחַטָּאת וְכָאָשָׁם׃</span>
+          <span class="line">כׇּל־זָכָר בִּבְנֵי אַהֲרֹן יֹאכְלֶנָּה חׇק־עוֹלָם לְדֹרֹתֵיכֶם מֵאִשֵּׁי אֲדֹנָי כֹּל אֲשֶׁר־יִגַּע בָּהֶם יִקְדָּשׁ׃</span>
+        </div>
+        <div class="lyrics-de">
+          <span class="line">(1) Und Adonai sprach zu Moshe, sprechend:</span>
+          <span class="line">(2) Befiehl Aharon und seinen Söhnen, sprechend: Dies ist die Tora der Olah — sie, die Olah, soll auf dem Brandstätte-Boden auf dem Altar die ganze Nacht bis zum Morgen sein, und das Feuer des Altars soll auf ihm brennen.</span>
+          <span class="line">(3) Und der Kohen lege sein leinenes Gewand an und ziehe leinene Beinkleider auf seinen Leib — und er erhebe die Asche, die das Feuer von der Olah auf dem Altar verzehrt hat, und lege sie neben den Altar.</span>
+          <span class="line">(4) Und er ziehe seine Kleider aus und lege andere Kleider an und bringe die Asche hinaus, außerhalb des Lagers, an einen reinen Ort.</span>
+          <span class="line">(5) Und das Feuer auf dem Altar soll auf ihm brennen — es soll nicht erlöschen — und der Kohen soll Hölzer auf ihm anzünden, Morgen für Morgen, und die Olah auf ihm aufschichten, und auf ihm das Fett der Schelamim aufrauchen lassen.</span>
+          <span class="line">(6) Ein beständiges Feuer soll auf dem Altar brennen — es soll nicht erlöschen.</span>
+          <span class="line">(7) Und dies ist die Tora der Mincha: die Söhne Aharons sollen sie vor Adonai darbringen, vor das Angesicht des Altars.</span>
+          <span class="line">(8) Und er hebe von ihr mit seiner Faust vom Feinmehl der Mincha und von ihrem Öl und allen Weihrauch, der auf der Mincha ist — und lasse es auf dem Altar aufrauchen als Wohlgeruch, ihre Erinnerung für Adonai.</span>
+          <span class="line">(9) Und das Übrige davon sollen Aharon und seine Söhne essen — als Mazzot soll es gegessen werden an heiligem Ort, im Vorhof des Zelts der Begegnung sollen sie es essen.</span>
+          <span class="line">(10) Es soll nicht gesäuert gebacken werden — als ihren Anteil habe ich es ihnen gegeben von meinen Feueropfern; ein Heiliges der Heiligkeiten ist es, wie das Chatat und wie das Asham.</span>
+          <span class="line">(11) Jeder Männliche unter den Söhnen Aharons soll davon essen — eine ewige Satzung für eure Geschlechter, von den Feueropfern Adonais; alles, was sie berührt, wird heilig.</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="aliyah-block">
+      <div class="aliyah-label">עֲלִיָּה שְׁנִיָּה — חֲבִתִּין שֶׁל כֹּהֵן גָּדוֹל · תּוֹרַת הַחַטָּאת · תּוֹרַת הָאָשָׁם<span class="aliyah-label-de">Zweite Aliyah · Vayikra 6:12–7:10 · Die tägliche Mincha des Kohen Gadol (Chavitin) · Die Tora des Chatat · Die Tora des Asham</span></div>
+      <div class="instrument-note">[no percussion] [no drums] [no choir] [acoustic guitar — Rast continuing in measured fingerpicking, the ten-tenth-Eifa of the Kohen Gadol's daily Mincha, the dignity of order, no percussion] Gitarre: Rast setzt im gemessenen Fingerpicking fort — die täglichen Chavitin des Kohen Gadol, die Würde der Ordnung, klar-strukturiert.</div>
+      <div class="lyrics-block">
+        <div class="lyrics-he" dir="rtl">
+          <span class="line">וַיְדַבֵּר אֲדֹנָי אֶל־מֹשֶׁה לֵּאמֹר׃</span>
+          <span class="line">זֶה קׇרְבַּן אַהֲרֹן וּבָנָיו אֲשֶׁר־יַקְרִיבוּ לַאֲדֹנָי בְּיוֹם הִמָּשַׁח אֹתוֹ עֲשִׂירִת הָאֵפָה סֹלֶת מִנְחָה תָּמִיד מַחֲצִיתָהּ בַּבֹּקֶר וּמַחֲצִיתָהּ בָּעָרֶב׃</span>
+          <span class="line">עַל־מַחֲבַת בַּשֶּׁמֶן תֵּעָשֶׂה מֻרְבֶּכֶת תְּבִיאֶנָּה תֻּפִינֵי מִנְחַת פִּתִּים תַּקְרִיב רֵיחַ־נִיחֹחַ לַאֲדֹנָי׃</span>
+          <span class="line">וְהַכֹּהֵן הַמָּשִׁיחַ תַּחְתָּיו מִבָּנָיו יַעֲשֶׂה אֹתָהּ חׇק־עוֹלָם לַאֲדֹנָי כָּלִיל תׇּקְטָר׃</span>
+          <span class="line">וְכׇל־מִנְחַת כֹּהֵן כָּלִיל תִּהְיֶה לֹא תֵאָכֵל׃</span>
+          <span class="line">וַיְדַבֵּר אֲדֹנָי אֶל־מֹשֶׁה לֵּאמֹר׃</span>
+          <span class="line">דַּבֵּר אֶל־אַהֲרֹן וְאֶל־בָּנָיו לֵאמֹר זֹאת תּוֹרַת הַחַטָּאת בִּמְקוֹם אֲשֶׁר תִּשָּׁחֵט הָעֹלָה תִּשָּׁחֵט הַחַטָּאת לִפְנֵי אֲדֹנָי קֹדֶשׁ קׇדָשִׁים הִוא׃</span>
+          <span class="line">הַכֹּהֵן הַמְחַטֵּא אֹתָהּ יֹאכְלֶנָּה בְּמָקוֹם קָדֹשׁ תֵּאָכֵל בַּחֲצַר אֹהֶל מוֹעֵד׃</span>
+          <span class="line">כֹּל אֲשֶׁר־יִגַּע בִּבְשָׂרָהּ יִקְדָּשׁ וַאֲשֶׁר יִזֶּה מִדָּמָהּ עַל־הַבֶּגֶד אֲשֶׁר יִזֶּה עָלֶיהָ תְּכַבֵּס בְּמָקוֹם קָדֹשׁ׃</span>
+          <span class="line">וּכְלִי־חֶרֶשׂ אֲשֶׁר תְּבֻשַּׁל־בּוֹ יִשָּׁבֵר וְאִם־בִּכְלִי נְחֹשֶׁת בֻּשָּׁלָה וּמֹרַק וְשֻׁטַּף בַּמָּיִם׃</span>
+          <span class="line">כׇּל־זָכָר בַּכֹּהֲנִים יֹאכַל אֹתָהּ קֹדֶשׁ קׇדָשִׁים הִוא׃</span>
+          <span class="line">וְכׇל־חַטָּאת אֲשֶׁר יוּבָא מִדָּמָהּ אֶל־אֹהֶל מוֹעֵד לְכַפֵּר בַּקֹּדֶשׁ לֹא תֵאָכֵל בָּאֵשׁ תִּשָּׂרֵף׃</span>
+          <span class="line">וְזֹאת תּוֹרַת הָאָשָׁם קֹדֶשׁ קׇדָשִׁים הוּא׃</span>
+          <span class="line">בִּמְקוֹם אֲשֶׁר יִשְׁחֲטוּ אֶת־הָעֹלָה יִשְׁחֲטוּ אֶת־הָאָשָׁם וְאֶת־דָּמוֹ יִזְרֹק עַל־הַמִּזְבֵּחַ סָבִיב׃</span>
+          <span class="line">וְאֵת כׇּל־חֶלְבּוֹ יַקְרִיב מִמֶּנּוּ אֵת הָאַלְיָה וְאֶת־הַחֵלֶב הַמְכַסֶּה אֶת־הַקֶּרֶב׃</span>
+          <span class="line">וְאֵת שְׁתֵּי הַכְּלָיֹת וְאֶת־הַחֵלֶב אֲשֶׁר עֲלֵיהֶן אֲשֶׁר עַל־הַכְּסָלִים וְאֶת־הַיֹּתֶרֶת עַל־הַכָּבֵד עַל־הַכְּלָיֹת יְסִירֶנָּה׃</span>
+          <span class="line">וְהִקְטִיר אֹתָם הַכֹּהֵן הַמִּזְבֵּחָה אִשֶּׁה לַאֲדֹנָי אָשָׁם הוּא׃</span>
+          <span class="line">כׇּל־זָכָר בַּכֹּהֲנִים יֹאכְלֶנּוּ בְּמָקוֹם קָדוֹשׁ יֵאָכֵל קֹדֶשׁ קׇדָשִׁים הוּא׃</span>
+          <span class="line">כַּחַטָּאת כָּאָשָׁם תּוֹרָה אַחַת לָהֶם הַכֹּהֵן אֲשֶׁר יְכַפֶּר־בּוֹ לוֹ יִהְיֶה׃</span>
+          <span class="line">וְהַכֹּהֵן הַמַּקְרִיב אֶת־עֹלַת אִישׁ עוֹר הָעֹלָה אֲשֶׁר הִקְרִיב לַכֹּהֵן לוֹ יִהְיֶה׃</span>
+          <span class="line">וְכׇל־מִנְחָה אֲשֶׁר תֵּאָפֶה בַּתַּנּוּר וְכׇל־נַעֲשָׂה בַמַּרְחֶשֶׁת וְעַל־מַחֲבַת לַכֹּהֵן הַמַּקְרִיב אֹתָהּ לוֹ תִהְיֶה׃</span>
+          <span class="line">וְכׇל־מִנְחָה בְלוּלָה־בַשֶּׁמֶן וַחֲרֵבָה לְכׇל־בְּנֵי אַהֲרֹן תִּהְיֶה אִישׁ כְּאָחִיו׃</span>
+        </div>
+        <div class="lyrics-de">
+          <span class="line">(12) Und Adonai sprach zu Moshe, sprechend:</span>
+          <span class="line">(13) Dies ist das Korban Aharons und seiner Söhne, das sie Adonai darbringen sollen am Tag seiner Salbung — ein Zehntel Eifa Feinmehl als beständige Mincha, die Hälfte am Morgen und die Hälfte am Abend.</span>
+          <span class="line">(14) Auf der Pfanne, mit Öl, soll sie zubereitet werden — gut durchmengt sollst du sie bringen — gebacken in Stücken sollst du sie als Mincha darbringen als Wohlgeruch für Adonai.</span>
+          <span class="line">(15) Und der gesalbte Kohen, an seiner Stelle, aus seinen Söhnen, soll sie zubereiten — ewige Satzung für Adonai — vollständig soll sie aufgeraucht werden.</span>
+          <span class="line">(16) Und jede Mincha eines Kohen soll ganz aufgeraucht werden — sie soll nicht gegessen werden.</span>
+          <span class="line">(17) Und Adonai sprach zu Moshe, sprechend:</span>
+          <span class="line">(18) Sprich zu Aharon und zu seinen Söhnen, sprechend: Dies ist die Tora des Chatat — an dem Ort, wo die Olah geschlachtet wird, soll das Chatat geschlachtet werden, vor Adonai. Heiliges der Heiligkeiten ist es.</span>
+          <span class="line">(19) Der Kohen, der es als Chatat darbringt, soll es essen — an heiligem Ort soll es gegessen werden, im Vorhof des Zelts der Begegnung.</span>
+          <span class="line">(20) Alles, was sein Fleisch berührt, wird heilig — und was von seinem Blut auf das Kleid spritzt, das, worauf es spritzt, sollst du an heiligem Ort waschen.</span>
+          <span class="line">(21) Und ein irdenes Gefäß, in dem es gekocht wurde, soll zerbrochen werden — und wenn es in einem kupfernen Gefäß gekocht wurde, soll es geschabt und mit Wasser gespült werden.</span>
+          <span class="line">(22) Jeder Männliche unter den Kohanim soll davon essen — Heiliges der Heiligkeiten ist es.</span>
+          <span class="line">(23) Und kein Chatat, von dessen Blut etwas in das Zelt der Begegnung gebracht wird, um im Heiligtum Sühne zu wirken, soll gegessen werden — im Feuer soll es verbrannt werden.</span>
+          <span class="line">(7:1) Und dies ist die Tora des Asham — Heiliges der Heiligkeiten ist es.</span>
+          <span class="line">(2) An dem Ort, wo sie die Olah schlachten, sollen sie das Asham schlachten — und sein Blut soll man auf den Altar ringsum sprengen.</span>
+          <span class="line">(3) Und alles Fett soll er von ihm darbringen — den Fettschwanz und das Fett, das die Eingeweide bedeckt,</span>
+          <span class="line">(4) und die beiden Nieren und das Fett auf ihnen, das auf den Lenden ist, und das Geflecht über der Leber — bei den Nieren soll er es entfernen.</span>
+          <span class="line">(5) Und der Kohen lasse sie aufrauchen auf dem Altar als Feueropfer für Adonai. Asham ist es.</span>
+          <span class="line">(6) Jeder Männliche unter den Kohanim soll es essen — an heiligem Ort soll es gegessen werden. Heiliges der Heiligkeiten ist es.</span>
+          <span class="line">(7) Wie das Chatat, so das Asham — eine Tora gilt für sie. Der Kohen, der damit Sühne wirkt, ihm soll es gehören.</span>
+          <span class="line">(8) Und der Kohen, der die Olah eines Mannes darbringt — die Haut der Olah, die er dargebracht hat, ihm gehört sie.</span>
+          <span class="line">(9) Und jede Mincha, die im Ofen gebacken wird, und alles, was in der Pfanne und auf dem Tiegel zubereitet wird — dem Kohen, der sie darbringt, ihm gehört sie.</span>
+          <span class="line">(10) Und jede Mincha, mit Öl vermengt oder trocken, soll allen Söhnen Aharons gehören — einem wie dem anderen.</span>
+        </div>
+      </div>
+    </div>
+    <div class="aliyah-block">
+      <div class="aliyah-label">עֲלִיָּה שְׁלִישִׁית — תּוֹרַת זֶבַח הַשְּׁלָמִים · תּוֹדָה · אִסּוּר חֵלֶב וְדָם · תְּנוּפָה וְשׁוֹק יָמִין · זֹאת הַתּוֹרָה<span class="aliyah-label-de">Dritte Aliyah · Vayikra 7:11–38 · Die Tora der Schelamim · Korban Toda · Verbot von Chelev und Dam · Tnufah und Schok HaYamin · Der Schluss-Summarvers (7:37): „Dies ist die Tora für die Olah, die Mincha, das Chatat, das Asham, die Miluim und das Schelamim-Opfer"</span></div>
+      <div class="instrument-note">[no percussion] [no drums] [no choir] [acoustic guitar — Rast warming with the Toda offering, four breads, the gratitude verse, then measured prohibitions, the dignified summary, no percussion] Gitarre: Rast erwärmt sich mit dem Toda-Korban — die vier Brote, der Dankesvers — dann gemessene Verbote, die würdevolle Schluss-Zusammenfassung der fünf Korbanot.</div>
+      <div class="lyrics-block">
+        <div class="lyrics-he" dir="rtl">
+          <span class="line">וְזֹאת תּוֹרַת זֶבַח הַשְּׁלָמִים אֲשֶׁר יַקְרִיב לַאֲדֹנָי׃</span>
+          <span class="line">אִם עַל־תּוֹדָה יַקְרִיבֶנּוּ וְהִקְרִיב עַל־זֶבַח הַתּוֹדָה חַלּוֹת מַצּוֹת בְּלוּלֹת בַּשֶּׁמֶן וּרְקִיקֵי מַצּוֹת מְשֻׁחִים בַּשָּׁמֶן וְסֹלֶת מֻרְבֶּכֶת חַלֹּת בְּלוּלֹת בַּשָּׁמֶן׃</span>
+          <span class="line">עַל־חַלֹּת לֶחֶם חָמֵץ יַקְרִיב קׇרְבָּנוֹ עַל־זֶבַח תּוֹדַת שְׁלָמָיו׃</span>
+          <span class="line">וְהִקְרִיב מִמֶּנּוּ אֶחָד מִכׇּל־קׇרְבָּן תְּרוּמָה לַאֲדֹנָי לַכֹּהֵן הַזֹּרֵק אֶת־דַּם הַשְּׁלָמִים לוֹ יִהְיֶה׃</span>
+          <span class="line">וּבְשַׂר זֶבַח תּוֹדַת שְׁלָמָיו בְּיוֹם קׇרְבָּנוֹ יֵאָכֵל לֹא־יַנִּיחַ מִמֶּנּוּ עַד־בֹּקֶר׃</span>
+          <span class="line">וְאִם־נֶדֶר אוֹ נְדָבָה זֶבַח קׇרְבָּנוֹ בְּיוֹם הַקְרִיבוֹ אֶת־זִבְחוֹ יֵאָכֵל וּמִמׇּחֳרָת וְהַנּוֹתָר מִמֶּנּוּ יֵאָכֵל׃</span>
+          <span class="line">וְהַנּוֹתָר מִבְּשַׂר הַזָּבַח בַּיּוֹם הַשְּׁלִישִׁי בָּאֵשׁ יִשָּׂרֵף׃</span>
+          <span class="line">וְאִם הֵאָכֹל יֵאָכֵל מִבְּשַׂר־זֶבַח שְׁלָמָיו בַּיּוֹם הַשְּׁלִישִׁי לֹא יֵרָצֶה הַמַּקְרִיב אֹתוֹ לֹא יֵחָשֵׁב לוֹ פִּגּוּל יִהְיֶה וְהַנֶּפֶשׁ הָאֹכֶלֶת מִמֶּנּוּ עֲוֺנָהּ תִּשָּׂא׃</span>
+          <span class="line">וְהַבָּשָׂר אֲשֶׁר־יִגַּע בְּכׇל־טָמֵא לֹא יֵאָכֵל בָּאֵשׁ יִשָּׂרֵף וְהַבָּשָׂר כׇּל־טָהוֹר יֹאכַל בָּשָׂר׃</span>
+          <span class="line">וְהַנֶּפֶשׁ אֲשֶׁר־תֹּאכַל בָּשָׂר מִזֶּבַח הַשְּׁלָמִים אֲשֶׁר לַאֲדֹנָי וְטֻמְאָתוֹ עָלָיו וְנִכְרְתָה הַנֶּפֶשׁ הַהִוא מֵעַמֶּיהָ׃</span>
+          <span class="line">וְנֶפֶשׁ כִּי־תִגַּע בְּכׇל־טָמֵא בְּטֻמְאַת אָדָם אוֹ בִּבְהֵמָה טְמֵאָה אוֹ בְּכׇל־שֶׁקֶץ טָמֵא וְאָכַל מִבְּשַׂר־זֶבַח הַשְּׁלָמִים אֲשֶׁר לַאֲדֹנָי וְנִכְרְתָה הַנֶּפֶשׁ הַהִוא מֵעַמֶּיהָ׃</span>
+          <span class="line">וַיְדַבֵּר אֲדֹנָי אֶל־מֹשֶׁה לֵּאמֹר׃</span>
+          <span class="line">דַּבֵּר אֶל־בְּנֵי יִשְׂרָאֵל לֵאמֹר כׇּל־חֵלֶב שׁוֹר וְכֶשֶׂב וָעֵז לֹא תֹאכֵלוּ׃</span>
+          <span class="line">וְחֵלֶב נְבֵלָה וְחֵלֶב טְרֵפָה יֵעָשֶׂה לְכׇל־מְלָאכָה וְאָכֹל לֹא תֹאכְלֻהוּ׃</span>
+          <span class="line">כִּי כׇּל־אֹכֵל חֵלֶב מִן־הַבְּהֵמָה אֲשֶׁר יַקְרִיב מִמֶּנָּה אִשֶּׁה לַאֲדֹנָי וְנִכְרְתָה הַנֶּפֶשׁ הָאֹכֶלֶת מֵעַמֶּיהָ׃</span>
+          <span class="line">וְכׇל־דָּם לֹא תֹאכְלוּ בְּכֹל מוֹשְׁבֹתֵיכֶם לָעוֹף וְלַבְּהֵמָה׃</span>
+          <span class="line">כׇּל־נֶפֶשׁ אֲשֶׁר־תֹּאכַל כׇּל־דָּם וְנִכְרְתָה הַנֶּפֶשׁ הַהִוא מֵעַמֶּיהָ׃</span>
+          <span class="line">וַיְדַבֵּר אֲדֹנָי אֶל־מֹשֶׁה לֵּאמֹר׃</span>
+          <span class="line">דַּבֵּר אֶל־בְּנֵי יִשְׂרָאֵל לֵאמֹר הַמַּקְרִיב אֶת־זֶבַח שְׁלָמָיו לַאֲדֹנָי יָבִיא אֶת־קׇרְבָּנוֹ לַאֲדֹנָי מִזֶּבַח שְׁלָמָיו׃</span>
+          <span class="line">יָדָיו תְּבִיאֶינָה אֵת אִשֵּׁי אֲדֹנָי אֶת־הַחֵלֶב עַל־הֶחָזֶה יְבִיאֶנּוּ אֵת הֶחָזֶה לְהָנִיף אֹתוֹ תְּנוּפָה לִפְנֵי אֲדֹנָי׃</span>
+          <span class="line">וְהִקְטִיר הַכֹּהֵן אֶת־הַחֵלֶב הַמִּזְבֵּחָה וְהָיָה הֶחָזֶה לְאַהֲרֹן וּלְבָנָיו׃</span>
+          <span class="line">וְאֵת שׁוֹק הַיָּמִין תִּתְּנוּ תְרוּמָה לַכֹּהֵן מִזִּבְחֵי שַׁלְמֵיכֶם׃</span>
+          <span class="line">הַמַּקְרִיב אֶת־דַּם הַשְּׁלָמִים וְאֶת־הַחֵלֶב מִבְּנֵי אַהֲרֹן לוֹ תִהְיֶה שׁוֹק הַיָּמִין לְמָנָה׃</span>
+          <span class="line">כִּי אֶת־חֲזֵה הַתְּנוּפָה וְאֵת שׁוֹק הַתְּרוּמָה לָקַחְתִּי מֵאֵת בְּנֵי־יִשְׂרָאֵל מִזִּבְחֵי שַׁלְמֵיהֶם וָאֶתֵּן אֹתָם לְאַהֲרֹן הַכֹּהֵן וּלְבָנָיו לְחׇק־עוֹלָם מֵאֵת בְּנֵי יִשְׂרָאֵל׃</span>
+          <span class="line">זֹאת מִשְׁחַת אַהֲרֹן וּמִשְׁחַת בָּנָיו מֵאִשֵּׁי אֲדֹנָי בְּיוֹם הִקְרִיב אֹתָם לְכַהֵן לַאֲדֹנָי׃</span>
+          <span class="line">אֲשֶׁר צִוָּה אֲדֹנָי לָתֵת לָהֶם בְּיוֹם מׇשְׁחוֹ אֹתָם מֵאֵת בְּנֵי יִשְׂרָאֵל חֻקַּת עוֹלָם לְדֹרֹתָם׃</span>
+          <span class="line">זֹאת הַתּוֹרָה לָעֹלָה לַמִּנְחָה וְלַחַטָּאת וְלָאָשָׁם וְלַמִּלּוּאִים וּלְזֶבַח הַשְּׁלָמִים׃</span>
+          <span class="line">אֲשֶׁר צִוָּה אֲדֹנָי אֶת־מֹשֶׁה בְּהַר סִינָי בְּיוֹם צַוֺּתוֹ אֶת־בְּנֵי יִשְׂרָאֵל לְהַקְרִיב אֶת־קׇרְבְּנֵיהֶם לַאֲדֹנָי בְּמִדְבַּר סִינָי׃</span>
+        </div>
+        <div class="lyrics-de">
+          <span class="line">(11) Und dies ist die Tora des Schelamim-Opfers, das man Adonai darbringt:</span>
+          <span class="line">(12) Wenn man es als Toda darbringt, soll man mit dem Toda-Opfer ungesäuerte Kuchen, mit Öl vermengt, und ungesäuerte Fladen, mit Öl bestrichen, und Feinmehl-Kuchen, mit Öl vermengt, gut durchmengt, darbringen.</span>
+          <span class="line">(13) Mit Kuchen aus gesäuertem Brot soll man sein Opfer auf dem Toda-Schelamim-Opfer darbringen.</span>
+          <span class="line">(14) Und er bringe von ihm einen aus jedem Korban als Hebe für Adonai dar — dem Kohen, der das Blut der Schelamim sprengt, ihm gehört es.</span>
+          <span class="line">(15) Und das Fleisch seines Toda-Schelamim-Opfers soll am Tag seines Darbringens gegessen werden — er lasse nichts davon bis zum Morgen übrig.</span>
+          <span class="line">(16) Und wenn das Opfer ein Gelübde oder eine freiwillige Gabe ist, soll es am Tag, an dem er sein Opfer darbringt, gegessen werden — und am folgenden Tag soll auch der Rest gegessen werden.</span>
+          <span class="line">(17) Und der Rest des Opferfleisches soll am dritten Tag im Feuer verbrannt werden.</span>
+          <span class="line">(18) Und wenn am dritten Tag vom Fleisch seines Schelamim-Opfers gegessen wird, soll es nicht angenommen werden — dem, der es darbringt, soll es nicht angerechnet werden; Pigul ist es, und die Seele, die davon isst, soll ihre Schuld tragen.</span>
+          <span class="line">(19) Und das Fleisch, das irgendetwas Unreines berührt, soll nicht gegessen werden — im Feuer soll es verbrannt werden. Aber das Fleisch — jeder Reine darf Fleisch essen.</span>
+          <span class="line">(20) Und die Seele, die Fleisch vom Schelamim-Opfer für Adonai isst, während ihre Unreinheit auf ihr ist — diese Seele soll aus ihrem Volk ausgeschnitten werden.</span>
+          <span class="line">(21) Und wenn eine Seele irgendetwas Unreines berührt — Unreinheit eines Menschen oder ein unreines Tier oder irgendein unreines Schekez — und vom Fleisch des Schelamim-Opfers für Adonai isst, soll diese Seele aus ihrem Volk ausgeschnitten werden.</span>
+          <span class="line">(22) Und Adonai sprach zu Moshe, sprechend:</span>
+          <span class="line">(23) Sprich zu den Söhnen Israels, sprechend: Alles Fett von Rind, Schaf und Ziege sollt ihr nicht essen.</span>
+          <span class="line">(24) Und das Fett eines Aases und das Fett eines Zerrissenen kann zu jeder Arbeit verwendet werden — aber essen sollt ihr es nicht.</span>
+          <span class="line">(25) Denn jeder, der Fett vom Vieh isst, von dem man ein Feueropfer für Adonai darbringt — die Seele, die isst, soll aus ihrem Volk ausgeschnitten werden.</span>
+          <span class="line">(26) Und kein Blut sollt ihr in allen euren Wohnsitzen essen, weder vom Geflügel noch vom Vieh.</span>
+          <span class="line">(27) Jede Seele, die irgendwelches Blut isst — diese Seele soll aus ihrem Volk ausgeschnitten werden.</span>
+          <span class="line">(28) Und Adonai sprach zu Moshe, sprechend:</span>
+          <span class="line">(29) Sprich zu den Söhnen Israels, sprechend: Wer sein Schelamim-Opfer Adonai darbringt, soll sein Korban Adonai darbringen aus seinem Schelamim-Opfer.</span>
+          <span class="line">(30) Seine Hände sollen die Feueropfer Adonais bringen — das Fett auf der Brust soll er bringen, die Brust, um sie als Tnufah vor Adonai zu schwingen.</span>
+          <span class="line">(31) Und der Kohen lasse das Fett auf dem Altar aufrauchen — und die Brust gehöre Aharon und seinen Söhnen.</span>
+          <span class="line">(32) Und den rechten Schenkel sollt ihr dem Kohen als Hebe von euren Schelamim-Opfern geben.</span>
+          <span class="line">(33) Wer das Blut der Schelamim und das Fett von den Söhnen Aharons darbringt — ihm soll der rechte Schenkel als Anteil zukommen.</span>
+          <span class="line">(34) Denn die Tnufah-Brust und den Hebe-Schenkel habe ich von den Söhnen Israels aus ihren Schelamim-Opfern genommen — und ich habe sie Aharon, dem Kohen, und seinen Söhnen gegeben als ewige Satzung von den Söhnen Israels.</span>
+          <span class="line">(35) Dies ist der Salbungs-Anteil Aharons und der Salbungs-Anteil seiner Söhne aus den Feueropfern Adonais am Tag, da er sie nahebrachte, Adonai im Priesteramt zu dienen.</span>
+          <span class="line">(36) Den Adonai am Tag ihrer Salbung anbefahl, ihnen zu geben, von den Söhnen Israels — als ewige Satzung für ihre Geschlechter.</span>
+          <span class="line">(37) Dies ist die Tora für die Olah, für die Mincha und für das Chatat und für das Asham und für die Miluim und für das Schelamim-Opfer —</span>
+          <span class="line">(38) Den Adonai Moshe am Berg Sinai anbefahl, am Tag, da er den Söhnen Israels gebot, ihre Korbanot Adonai darzubringen, in der Wüste Sinai.</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="aliyah-block">
+      <div class="aliyah-label">עֲלִיָּה רְבִיעִית — שִׁבְעַת יְמֵי הַמִּלּוּאִים — הַתְּחָלָה<span class="aliyah-label-de">Vierte Aliyah · Vayikra 8:1–13 · Beginn der sieben Tage der Miluim — die Versammlung der Edah · Aharon und seine Söhne werden gewaschen und in die Bigdei Kehuna gekleidet · Salbung des Mishkan und seiner Geräte · Salbung Aharons</span></div>
+      <div class="instrument-note">[no percussion] [no drums] [no choir] [acoustic guitar — Rast in solemn investiture mode, the priestly vestments rising layer by layer, sacred order, no percussion] Gitarre: Rast im feierlichen Investitur-Modus — die Bigdei Kehuna wachsen Schicht um Schicht, heilige Ordnung, klar gegliedert.</div>
+      <div class="lyrics-block">
+        <div class="lyrics-he" dir="rtl">
+          <span class="line">וַיְדַבֵּר אֲדֹנָי אֶל־מֹשֶׁה לֵּאמֹר׃</span>
+          <span class="line">קַח אֶת־אַהֲרֹן וְאֶת־בָּנָיו אִתּוֹ וְאֵת הַבְּגָדִים וְאֵת שֶׁמֶן הַמִּשְׁחָה וְאֵת פַּר הַחַטָּאת וְאֵת שְׁנֵי הָאֵילִים וְאֵת סַל הַמַּצּוֹת׃</span>
+          <span class="line">וְאֵת כׇּל־הָעֵדָה הַקְהֵל אֶל־פֶּתַח אֹהֶל מוֹעֵד׃</span>
+          <span class="line">וַיַּעַשׂ מֹשֶׁה כַּאֲשֶׁר צִוָּה אֲדֹנָי אֹתוֹ וַתִּקָּהֵל הָעֵדָה אֶל־פֶּתַח אֹהֶל מוֹעֵד׃</span>
+          <span class="line">וַיֹּאמֶר מֹשֶׁה אֶל־הָעֵדָה זֶה הַדָּבָר אֲשֶׁר־צִוָּה אֲדֹנָי לַעֲשׂוֹת׃</span>
+          <span class="line">וַיַּקְרֵב מֹשֶׁה אֶת־אַהֲרֹן וְאֶת־בָּנָיו וַיִּרְחַץ אֹתָם בַּמָּיִם׃</span>
+          <span class="line">וַיִּתֵּן עָלָיו אֶת־הַכֻּתֹּנֶת וַיַּחְגֹּר אֹתוֹ בָּאַבְנֵט וַיַּלְבֵּשׁ אֹתוֹ אֶת־הַמְּעִיל וַיִּתֵּן עָלָיו אֶת־הָאֵפֹד וַיַּחְגֹּר אֹתוֹ בְּחֵשֶׁב הָאֵפֹד וַיֶּאְפֹּד לוֹ בּוֹ׃</span>
+          <span class="line">וַיָּשֶׂם עָלָיו אֶת־הַחֹשֶׁן וַיִּתֵּן אֶל־הַחֹשֶׁן אֶת־הָאוּרִים וְאֶת־הַתֻּמִּים׃</span>
+          <span class="line">וַיָּשֶׂם אֶת־הַמִּצְנֶפֶת עַל־רֹאשׁוֹ וַיָּשֶׂם עַל־הַמִּצְנֶפֶת אֶל־מוּל פָּנָיו אֵת צִיץ הַזָּהָב נֵזֶר הַקֹּדֶשׁ כַּאֲשֶׁר צִוָּה אֲדֹנָי אֶת־מֹשֶׁה׃</span>
+          <span class="line">וַיִּקַּח מֹשֶׁה אֶת־שֶׁמֶן הַמִּשְׁחָה וַיִּמְשַׁח אֶת־הַמִּשְׁכָּן וְאֶת־כׇּל־אֲשֶׁר־בּוֹ וַיְקַדֵּשׁ אֹתָם׃</span>
+          <span class="line">וַיַּז מִמֶּנּוּ עַל־הַמִּזְבֵּחַ שֶׁבַע פְּעָמִים וַיִּמְשַׁח אֶת־הַמִּזְבֵּחַ וְאֶת־כׇּל־כֵּלָיו וְאֶת־הַכִּיֹּר וְאֶת־כַּנּוֹ לְקַדְּשָׁם׃</span>
+          <span class="line">וַיִּצֹק מִשֶּׁמֶן הַמִּשְׁחָה עַל רֹאשׁ אַהֲרֹן וַיִּמְשַׁח אֹתוֹ לְקַדְּשׁוֹ׃</span>
+          <span class="line">וַיַּקְרֵב מֹשֶׁה אֶת־בְּנֵי אַהֲרֹן וַיַּלְבִּשֵׁם כֻּתֳּנֹת וַיַּחְגֹּר אֹתָם אַבְנֵט וַיַּחֲבֹשׁ לָהֶם מִגְבָּעוֹת כַּאֲשֶׁר צִוָּה אֲדֹנָי אֶת־מֹשֶׁה׃</span>
+        </div>
+        <div class="lyrics-de">
+          <span class="line">(8:1) Und Adonai sprach zu Moshe, sprechend:</span>
+          <span class="line">(2) Nimm Aharon und seine Söhne mit ihm und die Kleider und das Salböl und den Stier des Chatat und die zwei Widder und den Korb der Mazzot —</span>
+          <span class="line">(3) und versammle die ganze Edah am Eingang des Zelts der Begegnung.</span>
+          <span class="line">(4) Und Moshe tat, wie Adonai ihm geboten hatte — und die Edah versammelte sich am Eingang des Zelts der Begegnung.</span>
+          <span class="line">(5) Und Moshe sprach zur Edah: Dies ist das Wort, das Adonai zu tun befohlen hat.</span>
+          <span class="line">(6) Und Moshe brachte Aharon und seine Söhne nahe und wusch sie mit Wasser.</span>
+          <span class="line">(7) Und er legte ihm das Untergewand an, gürtete ihn mit dem Awnet, kleidete ihn mit dem Me'il, legte ihm das Efod an, gürtete ihn mit dem Cheschew des Efod und befestigte es daran.</span>
+          <span class="line">(8) Und er legte ihm den Choschen an und tat in den Choschen die Urim und die Tummim.</span>
+          <span class="line">(9) Und er setzte den Mitznefet auf sein Haupt und befestigte vorne auf dem Mitznefet das goldene Tziz, den Nezer der Heiligkeit — wie Adonai Moshe geboten hatte.</span>
+          <span class="line">(10) Und Moshe nahm das Salböl und salbte das Mishkan und alles, was darin war, und heiligte es.</span>
+          <span class="line">(11) Und er sprengte davon siebenmal auf den Altar und salbte den Altar und alle seine Geräte und das Becken und sein Gestell, um sie zu heiligen.</span>
+          <span class="line">(12) Und er goss vom Salböl auf das Haupt Aharons und salbte ihn, um ihn zu heiligen.</span>
+          <span class="line">(13) Und Moshe brachte die Söhne Aharons nahe und kleidete sie mit Untergewändern und gürtete sie mit dem Awnet und band ihnen Migba'ot — wie Adonai Moshe geboten hatte.</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="aliyah-block">
+      <div class="aliyah-label">עֲלִיָּה חֲמִישִׁית — פַּר הַחַטָּאת · אֵיל הָעֹלָה<span class="aliyah-label-de">Fünfte Aliyah · Vayikra 8:14–21 · Der Stier des Chatat (Reinigung des Altars) · Der Widder der Olah (vollständige Hingabe)</span></div>
+      <div class="instrument-note">[no percussion] [no drums] [no choir] [acoustic guitar — Rast in measured ascending dynamic, the bull and the ram, blood at the horns of the altar, the foundation purified, no percussion] Gitarre: Rast in gemessener aufsteigender Dynamik — der Stier und der Widder, Blut an den Hörnern des Altars, das Fundament gereinigt.</div>
+      <div class="lyrics-block">
+        <div class="lyrics-he" dir="rtl">
+          <span class="line">וַיַּגֵּשׁ אֵת פַּר הַחַטָּאת וַיִּסְמֹךְ אַהֲרֹן וּבָנָיו אֶת־יְדֵיהֶם עַל־רֹאשׁ פַּר הַחַטָּאת׃</span>
+          <span class="line">וַיִּשְׁחָט וַיִּקַּח מֹשֶׁה אֶת־הַדָּם וַיִּתֵּן עַל־קַרְנוֹת הַמִּזְבֵּחַ סָבִיב בְּאֶצְבָּעוֹ וַיְחַטֵּא אֶת־הַמִּזְבֵּחַ וְאֶת־הַדָּם יָצַק אֶל־יְסוֹד הַמִּזְבֵּחַ וַיְקַדְּשֵׁהוּ לְכַפֵּר עָלָיו׃</span>
+          <span class="line">וַיִּקַּח אֶת־כׇּל־הַחֵלֶב אֲשֶׁר עַל־הַקֶּרֶב וְאֵת יֹתֶרֶת הַכָּבֵד וְאֶת־שְׁתֵּי הַכְּלָיֹת וְאֶת־חֶלְבְּהֶן וַיַּקְטֵר מֹשֶׁה הַמִּזְבֵּחָה׃</span>
+          <span class="line">וְאֶת־הַפָּר וְאֶת־עֹרוֹ וְאֶת־בְּשָׂרוֹ וְאֶת־פִּרְשׁוֹ שָׂרַף בָּאֵשׁ מִחוּץ לַמַּחֲנֶה כַּאֲשֶׁר צִוָּה אֲדֹנָי אֶת־מֹשֶׁה׃</span>
+          <span class="line">וַיַּקְרֵב אֵת אֵיל הָעֹלָה וַיִּסְמְכוּ אַהֲרֹן וּבָנָיו אֶת־יְדֵיהֶם עַל־רֹאשׁ הָאָיִל׃</span>
+          <span class="line">וַיִּשְׁחָט וַיִּזְרֹק מֹשֶׁה אֶת־הַדָּם עַל־הַמִּזְבֵּחַ סָבִיב׃</span>
+          <span class="line">וְאֶת־הָאַיִל נִתַּח לִנְתָחָיו וַיַּקְטֵר מֹשֶׁה אֶת־הָרֹאשׁ וְאֶת־הַנְּתָחִים וְאֶת־הַפָּדֶר׃</span>
+          <span class="line">וְאֶת־הַקֶּרֶב וְאֶת־הַכְּרָעַיִם רָחַץ בַּמָּיִם וַיַּקְטֵר מֹשֶׁה אֶת־כׇּל־הָאַיִל הַמִּזְבֵּחָה עֹלָה הוּא לְרֵיחַ־נִיחֹחַ אִשֶּׁה הוּא לַאֲדֹנָי כַּאֲשֶׁר צִוָּה אֲדֹנָי אֶת־מֹשֶׁה׃</span>
+        </div>
+        <div class="lyrics-de">
+          <span class="line">(14) Und er brachte den Stier des Chatat heran — und Aharon und seine Söhne stützten ihre Hände auf den Kopf des Chatat-Stiers.</span>
+          <span class="line">(15) Und er schlachtete ihn — und Moshe nahm das Blut und gab es mit seinem Finger ringsum an die Hörner des Altars und entsühnte den Altar; und das Blut goss er an den Sockel des Altars und heiligte ihn, um auf ihm Sühne zu wirken.</span>
+          <span class="line">(16) Und er nahm alles Fett, das auf den Eingeweiden war, und das Geflecht über der Leber und die beiden Nieren und ihr Fett — und Moshe ließ es auf dem Altar aufrauchen.</span>
+          <span class="line">(17) Und den Stier und seine Haut und sein Fleisch und seinen Mist verbrannte er im Feuer außerhalb des Lagers — wie Adonai Moshe geboten hatte.</span>
+          <span class="line">(18) Und er brachte den Widder der Olah heran — und Aharon und seine Söhne stützten ihre Hände auf den Kopf des Widders.</span>
+          <span class="line">(19) Und er schlachtete ihn — und Moshe sprengte das Blut ringsum auf den Altar.</span>
+          <span class="line">(20) Und den Widder zerteilte er in seine Stücke — und Moshe ließ den Kopf und die Stücke und das Fett aufrauchen.</span>
+          <span class="line">(21) Und die Eingeweide und die Schenkel wusch er mit Wasser — und Moshe ließ den ganzen Widder auf dem Altar aufrauchen. Eine Olah ist es, zum Wohlgeruch, ein Feueropfer für Adonai — wie Adonai Moshe geboten hatte.</span>
+        </div>
+      </div>
+    </div>
+    <div class="aliyah-block">
+      <div class="aliyah-label">עֲלִיָּה שִׁשִּׁית — אֵיל הַמִּלֻּאִים · תְּנוּךְ אֹזֶן · בֹּהֶן יָד · בֹּהֶן רֶגֶל<span class="aliyah-label-de">Sechste Aliyah · Vayikra 8:22–29 · Der Widder der Miluim · Der einzigartige Blut-Anschlag: rechtes Ohrläppchen, rechter Daumen, rechte große Zehe — Hören, Tun, Gehen, alle drei in der Avodah geheiligt</span></div>
+      <div class="instrument-note">[no percussion] [no drums] [no choir] [acoustic guitar — Rast at its most precise, the unique blood-rite of the Miluim, ear-thumb-toe, hearing-doing-walking sanctified, no percussion] Gitarre: Rast in seiner präzisesten Form — der einzigartige Blut-Ritus der Miluim, Ohr-Daumen-Zehe, Hören-Tun-Gehen geheiligt.</div>
+      <div class="lyrics-block">
+        <div class="lyrics-he" dir="rtl">
+          <span class="line">וַיַּקְרֵב אֶת־הָאַיִל הַשֵּׁנִי אֵיל הַמִּלֻּאִים וַיִּסְמְכוּ אַהֲרֹן וּבָנָיו אֶת־יְדֵיהֶם עַל־רֹאשׁ הָאָיִל׃</span>
+          <span class="line">וַיִּשְׁחָט וַיִּקַּח מֹשֶׁה מִדָּמוֹ וַיִּתֵּן עַל־תְּנוּךְ אֹזֶן־אַהֲרֹן הַיְמָנִית וְעַל־בֹּהֶן יָדוֹ הַיְמָנִית וְעַל־בֹּהֶן רַגְלוֹ הַיְמָנִית׃</span>
+          <span class="line">וַיַּקְרֵב אֶת־בְּנֵי אַהֲרֹן וַיִּתֵּן מֹשֶׁה מִן־הַדָּם עַל־תְּנוּךְ אׇזְנָם הַיְמָנִית וְעַל־בֹּהֶן יָדָם הַיְמָנִית וְעַל־בֹּהֶן רַגְלָם הַיְמָנִית וַיִּזְרֹק מֹשֶׁה אֶת־הַדָּם עַל־הַמִּזְבֵּחַ סָבִיב׃</span>
+          <span class="line">וַיִּקַּח אֶת־הַחֵלֶב וְאֶת־הָאַלְיָה וְאֶת־כׇּל־הַחֵלֶב אֲשֶׁר עַל־הַקֶּרֶב וְאֵת יֹתֶרֶת הַכָּבֵד וְאֶת־שְׁתֵּי הַכְּלָיֹת וְאֶת־חֶלְבְּהֶן וְאֵת שׁוֹק הַיָּמִין׃</span>
+          <span class="line">וּמִסַּל הַמַּצּוֹת אֲשֶׁר לִפְנֵי אֲדֹנָי לָקַח חַלַּת מַצָּה אַחַת וְחַלַּת לֶחֶם שֶׁמֶן אַחַת וְרָקִיק אֶחָד וַיָּשֶׂם עַל־הַחֲלָבִים וְעַל שׁוֹק הַיָּמִין׃</span>
+          <span class="line">וַיִּתֵּן אֶת־הַכֹּל עַל כַּפֵּי אַהֲרֹן וְעַל כַּפֵּי בָנָיו וַיָּנֶף אֹתָם תְּנוּפָה לִפְנֵי אֲדֹנָי׃</span>
+          <span class="line">וַיִּקַּח מֹשֶׁה אֹתָם מֵעַל כַּפֵּיהֶם וַיַּקְטֵר הַמִּזְבֵּחָה עַל־הָעֹלָה מִלֻּאִים הֵם לְרֵיחַ נִיחֹחַ אִשֶּׁה הוּא לַאֲדֹנָי׃</span>
+          <span class="line">וַיִּקַּח מֹשֶׁה אֶת־הֶחָזֶה וַיְנִיפֵהוּ תְנוּפָה לִפְנֵי אֲדֹנָי מֵאֵיל הַמִּלֻּאִים לְמֹשֶׁה הָיָה לְמָנָה כַּאֲשֶׁר צִוָּה אֲדֹנָי אֶת־מֹשֶׁה׃</span>
+        </div>
+        <div class="lyrics-de">
+          <span class="line">(22) Und er brachte den zweiten Widder heran, den Widder der Miluim — und Aharon und seine Söhne stützten ihre Hände auf den Kopf des Widders.</span>
+          <span class="line">(23) Und er schlachtete ihn — und Moshe nahm von seinem Blut und gab es auf das rechte Ohrläppchen Aharons und auf seinen rechten Daumen und auf seine rechte große Zehe.</span>
+          <span class="line">(24) Und er brachte die Söhne Aharons heran — und Moshe gab vom Blut auf ihr rechtes Ohrläppchen, auf ihren rechten Daumen und auf ihre rechte große Zehe — und Moshe sprengte das Blut ringsum auf den Altar.</span>
+          <span class="line">(25) Und er nahm das Fett und den Fettschwanz und alles Fett auf den Eingeweiden und das Geflecht über der Leber und die beiden Nieren mit ihrem Fett und den rechten Schenkel.</span>
+          <span class="line">(26) Und aus dem Korb der Mazzot, der vor Adonai stand, nahm er einen ungesäuerten Kuchen und einen Brotkuchen mit Öl und einen Fladen — und legte sie auf das Fett und auf den rechten Schenkel.</span>
+          <span class="line">(27) Und er gab alles auf die Hände Aharons und auf die Hände seiner Söhne — und schwang sie als Tnufah vor Adonai.</span>
+          <span class="line">(28) Und Moshe nahm sie von ihren Händen und ließ sie auf dem Altar über der Olah aufrauchen — Miluim sind sie, zum Wohlgeruch, ein Feueropfer für Adonai.</span>
+          <span class="line">(29) Und Moshe nahm die Brust und schwang sie als Tnufah vor Adonai — vom Widder der Miluim wurde sie Moshe als Anteil — wie Adonai Moshe geboten hatte.</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="aliyah-block">
+      <div class="aliyah-label">עֲלִיָּה שְׁבִיעִית — שֶׁמֶן וְדָם · בְּשׁוּל הַבָּשָׂר · שִׁבְעַת יָמִים · וּשְׁמַרְתֶּם אֶת־מִשְׁמֶרֶת אֲדֹנָי<span class="aliyah-label-de">Siebte Aliyah · Vayikra 8:30–36 · Salbungs-Sprengung von Öl und Blut auf Aharon und seine Söhne · Kochen des Miluim-Fleisches am Mishkan-Eingang · Die sieben Tage am Eingang · Die Mishmeret-Wache</span></div>
+      <div class="instrument-note">[no percussion] [no drums] [no choir] [acoustic guitar — Rast settling into the seven-day stay, the keeping of the Mishmeret, the dignity of obedience, no percussion] Gitarre: Rast lässt sich in den sieben-tägigen Verbleib ein — die Mishmeret-Wache, die Würde des Gehorsams, ruhig und klar.</div>
+      <div class="lyrics-block">
+        <div class="lyrics-he" dir="rtl">
+          <span class="line">וַיִּקַּח מֹשֶׁה מִשֶּׁמֶן הַמִּשְׁחָה וּמִן־הַדָּם אֲשֶׁר עַל־הַמִּזְבֵּחַ וַיַּז עַל־אַהֲרֹן עַל־בְּגָדָיו וְעַל־בָּנָיו וְעַל־בִּגְדֵי בָנָיו אִתּוֹ וַיְקַדֵּשׁ אֶת־אַהֲרֹן אֶת־בְּגָדָיו וְאֶת־בָּנָיו וְאֶת־בִּגְדֵי בָנָיו אִתּוֹ׃</span>
+          <span class="line">וַיֹּאמֶר מֹשֶׁה אֶל־אַהֲרֹן וְאֶל־בָּנָיו בַּשְּׁלוּ אֶת־הַבָּשָׂר פֶּתַח אֹהֶל מוֹעֵד וְשָׁם תֹּאכְלוּ אֹתוֹ וְאֶת־הַלֶּחֶם אֲשֶׁר בְּסַל הַמִּלֻּאִים כַּאֲשֶׁר צִוֵּיתִי לֵאמֹר אַהֲרֹן וּבָנָיו יֹאכְלֻהוּ׃</span>
+          <span class="line">וְהַנּוֹתָר בַּבָּשָׂר וּבַלֶּחֶם בָּאֵשׁ תִּשְׂרֹפוּ׃</span>
+          <span class="line">וּמִפֶּתַח אֹהֶל מוֹעֵד לֹא תֵצְאוּ שִׁבְעַת יָמִים עַד יוֹם מְלֹאת יְמֵי מִלֻּאֵיכֶם כִּי שִׁבְעַת יָמִים יְמַלֵּא אֶת־יֶדְכֶם׃</span>
+          <span class="line">כַּאֲשֶׁר עָשָׂה בַּיּוֹם הַזֶּה צִוָּה אֲדֹנָי לַעֲשֹׂת לְכַפֵּר עֲלֵיכֶם׃</span>
+          <span class="line">וּפֶתַח אֹהֶל מוֹעֵד תֵּשְׁבוּ יוֹמָם וָלַיְלָה שִׁבְעַת יָמִים וּשְׁמַרְתֶּם אֶת־מִשְׁמֶרֶת אֲדֹנָי וְלֹא תָמוּתוּ כִּי־כֵן צֻוֵּיתִי׃</span>
+          <span class="line">וַיַּעַשׂ אַהֲרֹן וּבָנָיו אֵת כׇּל־הַדְּבָרִים אֲשֶׁר־צִוָּה אֲדֹנָי בְּיַד־מֹשֶׁה׃</span>
+        </div>
+        <div class="lyrics-de">
+          <span class="line">(30) Und Moshe nahm vom Salböl und vom Blut, das auf dem Altar war, und sprengte es auf Aharon, auf seine Kleider, und auf seine Söhne und auf die Kleider seiner Söhne mit ihm — und heiligte Aharon, seine Kleider und seine Söhne und die Kleider seiner Söhne mit ihm.</span>
+          <span class="line">(31) Und Moshe sprach zu Aharon und zu seinen Söhnen: Kocht das Fleisch am Eingang des Zelts der Begegnung und esst es dort mit dem Brot, das im Korb der Miluim ist, wie ich geboten habe, sprechend: Aharon und seine Söhne sollen es essen.</span>
+          <span class="line">(32) Und das Übrige vom Fleisch und vom Brot sollt ihr im Feuer verbrennen.</span>
+          <span class="line">(33) Und vom Eingang des Zelts der Begegnung sollt ihr nicht heraustreten — sieben Tage lang, bis zum Tag, an dem die Tage eurer Miluim erfüllt sind — denn sieben Tage füllt er eure Hand.</span>
+          <span class="line">(34) Wie er an diesem Tag getan hat, so hat Adonai geboten zu tun, um auf euch Sühne zu wirken.</span>
+          <span class="line">(35) Und am Eingang des Zelts der Begegnung sollt ihr Tag und Nacht sieben Tage bleiben — und ihr sollt die Mishmeret Adonais wahren — und werdet nicht sterben — denn so wurde mir geboten.</span>
+          <span class="line">(36) Und Aharon und seine Söhne taten alle Dinge, die Adonai durch Moshe geboten hatte.</span>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="tikkun-box">
+      <div class="tikkun-header">
+        <div class="tikkun-title-he">מַעֲשֵׂה הַתִּיקּוּן — אֵשׁ תָּמִיד · תְּפִלָּה כְּקׇרְבָּן · בִּרְכַּת הַגּוֹמֵל · בְּדִיקַת חָמֵץ · שִׁבְעַת יְמֵי הַמִּלּוּאִים הַפְּנִימִיִּים</div>
+        <div class="tikkun-title-de">Tikkun – Der beständige Aish Tamid als innere Avodah · Tefillah als sephardisches Korban-Korrelat · Birkat HaGomel nach überstandener Gefahr · Bedikat Chametz mit Tzav-Kawanah · Die innere Sieben-Tage-Weihe vor jeder bedeutenden Mitzwah</div>
+        <div class="tikkun-src">וַיִּקְרָא ו׳:ב׳ („זֹאת תּוֹרַת הָעֹלָה") · וַיִּקְרָא ו׳:ו׳ („אֵשׁ תָּמִיד תּוּקַד עַל־הַמִּזְבֵּחַ לֹא תִכְבֶּה") · וַיִּקְרָא ו׳:י׳ („לֹא תֵאָפֶה חָמֵץ") · וַיִּקְרָא ז׳:י״ב („אִם עַל־תּוֹדָה יַקְרִיבֶנּוּ") · וַיִּקְרָא ז׳:ל״ז („זֹאת הַתּוֹרָה לָעֹלָה לַמִּנְחָה...") · וַיִּקְרָא ח׳:ל״ג („שִׁבְעַת יָמִים יְמַלֵּא אֶת־יֶדְכֶם") · וַיִּקְרָא ח׳:ל״ה („וּשְׁמַרְתֶּם אֶת־מִשְׁמֶרֶת אֲדֹנָי") · רמב״ם הלכות מַעֲשֵׂה הַקָּרְבָּנוֹת · רמב״ם הלכות תְּמִידִין וּמוּסָפִין · רמב״ם הלכות כְּלֵי הַמִּקְדָּשׁ וְהָעוֹבְדִים בּוֹ · רמב״ם הלכות פְּסוּלֵי הַמּוּקְדָּשִׁין · רמב״ם הלכות תְּפִלָּה פֶּרֶק א׳ („תְּפִלּוֹת כְּנֶגֶד תְּמִידִין תִּקְּנוּם") · רמב״ם הלכות בְּרָכוֹת פֶּרֶק י׳ (בִּרְכַּת הַגּוֹמֵל) · אור החיים על וַיִּקְרָא ו׳:ב׳ („זֹאת תּוֹרַת הָעֹלָה" — הַעֲלָאַת הַנֶּפֶשׁ) · רש״ש (נְהַר שָׁלוֹם · יְרוּשָׁלַיִם — כַּוָּנוֹת הָעֲבוֹדָה) · רמח״ל מְסִלַּת יְשָׁרִים (פֶּרֶק ב׳ · הַזְּהִירוּת בַּעֲבוֹדָה הַתְּמִידִית) · רמח״ל דַּעַת תְּבוּנוֹת (הַמִּשְׁכָּן כְּצֵל הָאָדָם הַפְּנִימִי) · בן איש חי שנה ראשונה (פרשת צו · הלכות בדיקת חמץ — לֹא תֵאָפֶה חָמֵץ ו׳:י׳ כְּשֹׁרֶשׁ) · שׁוּלְחָן עָרוּךְ אוֹרַח חַיִּים רי״ט (בִּרְכַּת הַגּוֹמֵל) · כַּף הַחַיִּים רי״ט · שׁוּלְחָן עָרוּךְ אוֹרַח חַיִּים תל״א-תל״ד (בְּדִיקַת חָמֵץ) · מַסֶּכֶת בְּרָכוֹת כ״ו: (תְּפִלּוֹת כְּנֶגֶד תְּמִידִין תִּקְּנוּם — ר׳ יְהוֹשֻׁעַ בֶּן לֵוִי) · מַסֶּכֶת בְּרָכוֹת נ״ד: (אַרְבָּעָה צְרִיכִים לְהוֹדוֹת) · מַסֶּכֶת יוֹמָא ל״ג. (אֵין מַעֲבִירִין עַל הַמִּצְוֹת) · מַסֶּכֶת מְנָחוֹת ק״י. · נוּסַּח צָדוֹק (רשש) · עֵדוֹת הַמִּזְרָח · נֻסַּח אֲרָם צוֹבָה · מָרוֹקוֹ · יָמֶן · יְרוּשָׁלַיִם</div>
+      </div>
+      <div class="tikkun-body">
+        <strong>Parashat Tzav ist die Parashah der Avodah-Ordnung.</strong> Wo Vayikra die Korbanot aus der Sicht des Volkes darstellte (»אָדָם כִּי־יַקְרִיב מִכֶּם«, 1:2), wendet sich Tzav an die Kohanim selbst — und entfaltet jede Korbanot-Klasse in der Form einer feierlichen <em>תּוֹרַת</em>-Anweisung: <em>תּוֹרַת הָעֹלָה</em> (6:2), <em>תּוֹרַת הַמִּנְחָה</em> (6:7), <em>תּוֹרַת הַחַטָּאת</em> (6:18), <em>תּוֹרַת הָאָשָׁם</em> (7:1), <em>תּוֹרַת זֶבַח הַשְּׁלָמִים</em> (7:11) — und schließt mit der großen Schluss-Formel <em>זֹאת הַתּוֹרָה לָעֹלָה לַמִּנְחָה וְלַחַטָּאת וְלָאָשָׁם וְלַמִּלּוּאִים וּלְזֶבַח הַשְּׁלָמִים</em> (7:37). Genau diese ordnende Klarheit — fünf Korbanot in fünf <em>תּוֹרוֹת</em>, jede mit ihrem Ort, ihrem Brennvorgang, ihrem Esser, ihrer Zeit — ist die Sefirot-Signatur der Parashah: <em>Chochma</em>, die Weisheit, die jedes Werk in seine exakte Form fasst. <strong>Rambam</strong> entfaltet diese Ordnung halachisch in den großen Sefer-HaAvodah-Hilchot: <em>Hilchot Ma'aseh HaKorbanot</em> (die generelle Schlachtungs- und Sprengungs-Halacha), <em>Hilchot Temidin uMussafin</em> (die Tagesordnung des Tamid und der Mussafim), <em>Hilchot Pesulei HaMukdaschin</em> (die Halacha des Pigul, deren Wurzel-Vers Vayikra 7:18 ist — »וְאִם הֵאָכֹל יֵאָכֵל ... בַּיּוֹם הַשְּׁלִישִׁי ... פִּגּוּל יִהְיֶה«). Und in <em>Hilchot Klei HaMikdash veHaOvdim Bo</em> beschreibt Rambam die Bigdei Kehunah, jene acht Kleidungs-Stücke des Kohen Gadol, die das Kapitel 8 Stück für Stück anlegt: Kuttonet, Awnet, Me'il, Efod, Cheschew des Efod, Choschen mit Urim und Tummim, Mitznefet, Tziz haZahav — der goldene Nezer haKodesch über der Stirn. Sephardisch (Aleppo, Marokko, Yemen, Yerushalayim) wird diese Ordnungs-Architektur als <em>Spiegel der inneren Avodah</em> gelehrt: was im Mishkan stoffgewordene Form war, ist heute innere Form in der Tefillah, in der Tora-Mühe, in der Lebensführung des Beters.
+        <br><br>
+        <strong>Das Herz der Parashah ist Vayikra 6:6 — אֵשׁ תָּמִיד תּוּקַד עַל־הַמִּזְבֵּחַ לֹא תִכְבֶּה.</strong> Drei Mal taucht in den Versen 5-6 die Wurzel <em>תּוּקַד</em> auf — »das Feuer wird darauf brennen« — bevor sie in die berühmte Formel des sechsten Verses kondensiert: <em>ein beständiges Feuer</em>, das nicht erlöschen darf. Halachisch verlangte dies vom Kohen, jeden Morgen Holz nachzulegen (6:5: »וּבִעֵר עָלֶיהָ הַכֹּהֵן עֵצִים בַּבֹּקֶר בַּבֹּקֶר«); spirituell aber — und das ist die sephardische Mussar-Pointe — verlangt es vom Beter heute, dass die innere Glut der Avodah nicht erlischt. <strong>Or HaChaim</strong> auf Vayikra 6:2 (zu <em>זֹאת תּוֹרַת הָעֹלָה</em>) spielt mit der doppelten Bedeutung der Wurzel <em>עלה</em>: die <em>Olah</em> ist das, was <em>aufsteigt</em> — und die <em>Tora der Olah</em> ist die Anweisung der inneren Aufstiegs-Bewegung der Nefesh. Die Olah als ganzheitliche Hingabe (»כָּלִיל תׇּקְטָר« 6:15-16) wird damit zum Bild für jene Ebene des Gebetes, in der der Beter sich selbst gibt. <strong>Ramchal</strong> in <em>Mesillat Yescharim</em> (Perek 2: Be'ur Middat HaZehirut) schärft genau dieses Bild: die <em>Zehirut</em> ist nicht eine sporadische Aufmerksamkeit, sondern eine <em>brennende Wachsamkeit</em>, die über den Tag nicht erlöschen darf — der innere Aish Tamid des Mussar-Wegs. Und <strong>Ramchal</strong> in <em>Da'at Tevunot</em> liest den ganzen Mishkan als Schatten-Bild des inneren Menschen: der Mizbeach des inneren Herzens, der täglich neu mit den Hölzern der Tora-Mühe entzündet werden will. <strong>Rashash</strong> (Rabbi Shalom Sharabi, <em>Nahar Schalom</em>, sephardisch-yerushalmische Bet-El-Yeshivah-Tradition) lehrt, dass die Kawanot der Korbanot heute in den Tefillah-Brachot ihren Sitz haben — jede Brachah der Amidah trägt eine Korbanot-Kawanah, und die Schacharit-Mincha-Ordnung des Tages spiegelt die Tamid-Schel-Schachar-Tamid-Schel-Bein-haArbayim-Ordnung des Tempels. Diese Lehre ist in den Eidot HaMizrach täglicher Brauch der Kabbalisten: vor der Amidah eine kurze Kawanah, dass die Tefillah als Korban-Korrelat <em>tukad</em> — als brennendes Feuer aufsteige.
+        <br><br>
+        <strong>Halachisch gründet die Tefillah-als-Korban-Verbindung in</strong> <em>Berachot 26b</em>, wo Rabbi Yehoschua ben Levi die berühmte Lehre formuliert: <em>תְּפִלּוֹת כְּנֶגֶד תְּמִידִין תִּקְּנוּם</em> — die Tefillot wurden dem Tamid entsprechend eingerichtet. <strong>Rambam</strong> kodifiziert diese Lehre in <em>Hilchot Tefillah Perek 1</em>: Schacharit entspricht dem Tamid des Morgens, Mincha dem Tamid des Nachmittags, und Maariw der nächtlichen Verbrennung der Eivarim und Pdarim, die laut Vayikra 6:2 »עַל מוֹקְדָה עַל־הַמִּזְבֵּחַ כׇּל־הַלַּיְלָה עַד־הַבֹּקֶר« stattfindet. Sephardisch (Aleppo · Marokko · Yemen · Yerushalmische Kabbalah-Yeshivot) wird daher vor jeder Amidah eine kurze stille Kawanah-Pause eingelegt: »<em>הִנְנִי מוּכָן וּמְזֻמָּן לְקַיֵּם תְּפִלַּת ... כְּנֶגֶד קׇרְבַּן הַתָּמִיד</em>« — eine kurze Erinnerung, dass das Stehen vor Adonai jetzt das Treten zum Mizbeach ist. Im Maqam Rast — dem Maqam dieser Parashah, dem Maqam der klar-königlichen Ordnung — wurde diese Tefillah in der älteren Aleppinischen Tradition häufig getragen. Die Schluss-Verse 7:37–38 (»זֹאת הַתּוֹרָה לָעֹלָה לַמִּנְחָה...«) gelten in vielen Eidot HaMizrach als <em>Tora-Lern-Anker</em>: einige Kabbalisten und Talmide-Chachamim lesen sie täglich nach dem Schacharit zusammen mit den Korbanot-Pesukim aus dem sephardischen Siddur (Bereschit-Tamid, Vayikra-Tamid, Bamidbar-Tamid, Schir Schel Yom).
+        <br><br>
+        <strong>Die zweite große sephardische Tikkun-Linie der Parashah verläuft über das Korban Toda</strong> (7:11–15): jenes Schelamim-Opfer, das man brachte, »wenn man von Adonai gerettet worden war«. Halachisch entspricht diesem Korban heute die <em>Birkat HaGomel</em> — die Brachah, die man nach überstandener Lebensgefahr in der Schul vor zehn Männern spricht. Die talmudische Quelle ist <em>Berachot 54b</em>, wo Rav Yehuda im Namen Ravs vier Kategorien der Verpflichteten aufzählt: 1. wer eine Wüstenreise vollendet hat, 2. wer eine Seereise vollendet hat, 3. wer aus dem Gefängnis befreit wurde, 4. wer von einer Krankheit genesen ist. <strong>Rambam</strong> kodifiziert dies in <em>Hilchot Berachot Perek 10</em>; <strong>Schulchan Aruch Orach Chaim 219</strong> bestimmt die Praxis; <strong>Kaf HaChaim 219</strong> (Rabbi Yaakov Chaim Sofer) legt die sephardische Variante ausführlich fest, einschließlich der Antwort der Gemeinde: <em>מִי שֶׁגְּמָלְךָ כׇּל טוֹב הוּא יִגְמׇלְךָ כׇּל טוֹב סֶלָה</em>. Die innere Logik ist die des Toda-Korbans: <em>Erleben einer Rettung → öffentliches Bekenntnis vor der Gemeinde → ein Mahl der Dankbarkeit</em>. Sephardisch (Aleppo, Marokko) ist der Brauch, am Schabbat oder an einem Tag-mit-Tora-Lesung an die Tora-Lesung anschließend die Brachah zu sprechen, oft mit einem anschließenden Se'udat HaToda — einem kleinen Familien-Mahl mit Brot, das halachisch das alte Toda-Brot von Vayikra 7:12 trägt. Die <strong>Maschiach-ben-David-Erfüllung</strong> dieser Praxis steht ausdrücklich in der sephardischen Tradition: wenn der wieder-aufgebaute Beit HaMikdasch steht, wird das Korban Toda wieder dargebracht; bis dahin ist die Birkat HaGomel sein lebendiger Spiegel.
+        <br><br>
+        <strong>Die dritte Tikkun-Linie verläuft über den Vers Vayikra 6:10 — לֹא תֵאָפֶה חָמֵץ</strong> (»es soll nicht gesäuert gebacken werden« — von der Mincha gesprochen). Da Parashat Tzav in den meisten Jahren <em>vor Pessach</em> gelesen wird, ist diese Halacha-Wurzel nicht nur priesterlich, sondern auch der Anker der gesamten Pessach-Vorbereitung. <strong>Ben Ish Chai</strong> (Shanah Rishona, Parashat Tzav) widmet diese Wochen-Drascha den <em>Hilchot Bedikat Chametz</em> — die nächtliche Suche mit Kerze und Feder am Vorabend des 14. Nisan. Sephardischer Standard-Brauch (Aleppo, Marokko, Yemen, Yerushalayim, Bagdad), kodifiziert in <strong>Schulchan Aruch Orach Chaim 431-434</strong>: am Erev des 14. Nisan, nach Einbruch der Nacht, bedikat-chametz mit zehn versteckten Brot-Stückchen, mit Brachah <em>עַל בִּעוּר חָמֵץ</em>; am Morgen des 14., spätestens vor der Schluss-Stunde, biur (Verbrennen). Aleppinische Praxis: das <em>kol chamira</em>-Bittul wird zweimal gesprochen — einmal nach der Bedikat-Chametz-Brachah, einmal nach dem morgendlichen Biur — sephardisch in der aramäisch-hebräisch gemischten Form (<em>חֲמִירָא וַחֲמִיעָא דְּאִכָּא בִרְשׁוּתִי</em>). Die innere Verbindung: was im Tempel die Mincha vor dem Aish Tamid war (<em>nicht gesäuert</em>, weil sie ungetrübte, schnelle, wache Hingabe verlangt), ist heute der innere Hauptakt der Pessach-Vorbereitung: die Reinigung des inneren Chametz — der Hochmut, die Trägheit, die hefe-artig aufgeblähten Selbstbilder. <strong>Or HaChaim</strong> nimmt diese Linie an mehreren Stellen auf, und <strong>Ramchal</strong> in <em>Mesillat Yescharim</em> Perek 11 (Be'ur Middat HaNekiut) gibt die Mussar-Verbindung: die Reinheit ist die Befreiung von dem inneren Chametz der ungeprüften Motive.
+        <br><br>
+        <strong>Die vierte Tikkun-Linie verläuft über Vayikra 8:33–35 — die sieben Tage der Miluim.</strong> »שִׁבְעַת יָמִים יְמַלֵּא אֶת־יֶדְכֶם«, und »וּפֶתַח אֹהֶל מוֹעֵד תֵּשְׁבוּ יוֹמָם וָלַיְלָה שִׁבְעַת יָמִים וּשְׁמַרְתֶּם אֶת־מִשְׁמֶרֶת אֲדֹנָי וְלֹא תָמוּתוּ«. Aharon und seine Söhne mussten sieben Tage am Mishkan-Eingang verbleiben, ohne herauszutreten — Tag und Nacht — eine Mishmeret-Wache vor der Inauguration des achten Tages (der Schmini-Anfang). Die kabbalistische Tiefen-Lesung (<strong>Rashash</strong> in <em>Nahar Schalom</em> über die Kawanot der Sieben-Tage-Vorbereitungen, sephardisch-yerushalmische Tradition): die sieben Tage entsprechen den sieben unteren Sefirot — Chesed, Gevurah, Tiferet, Netzach, Hod, Yesod, Malchut — die Miluim ist der innere Aufbau dieser sieben Maße der Avodah-Persönlichkeit. Was Aharon und seine Söhne damals äußerlich als Mishmeret-Wache durchschritten, durchschreitet heute der ernste Beter innerlich — vor jeder größeren Verpflichtung (Hochzeit, Brit Milah, Pidyon HaBen, Yamim Noraim, Pessach-Seder) gibt es sephardisch eine Tradition der <em>schiv'at yemei hachanah</em>, der sieben Tage der inneren Vorbereitung: konzentriertere Tora-Lernung, gewissenhaftere Mitzwot, gemessenere Worte. Schon <strong>Rambam</strong> erwähnt in <em>Hilchot Avodat Yom HaKippurim</em> (Perek 1) die sieben Tage der Vorbereitung des Kohen Gadol vor Yom Kippur — Wurzel im Vers Vayikra 8:33–35 für die ganze halachische Tradition der Vor-Kawanah. Die Pointe: jede heilige Avodah will <em>Vor-Aufbau</em>; und das Wort <em>וּשְׁמַרְתֶּם</em> (8:35) — »ihr sollt wahren« — ist die Wurzel des halachischen Kernbegriffs <em>Mischmeret</em>: Vorsorge, Wahren, Vor-Aufbau. <strong>Maschiach ben David</strong> ist in dieser Lesung die Person, in der die schiv'at yemei haMiluim auf das ganze Volk übertragen sind — der König-Maschiach, der Israel als <em>Mamlechet Kohanim ve'goj kadosch</em> (Schemot 19:6) in seine vollendete Avodah-Form führt, im wieder-aufgebauten Beit HaMikdasch.
+        <br><br>
+        <strong>Praktische Handlung:</strong> (1) <em>Schacharit und Mincha mit Korban-Tamid-Kawanah</em>: Sephardisch (Aleppo, Marokko, Yemen, Yerushalayim) — vor jeder Amidah halte einen kurzen Moment still und richte die innere Kawanah: »Diese Tefillah jetzt, im Stand vor dem inneren Mizbeach, entspricht dem Tamid Schel Schachar« (am Morgen) bzw. »dem Tamid Schel Bein HaArbayim« (am Nachmittag). Die Quelle ist <em>Berachot 26b</em> und <em>Rambam Hilchot Tefillah Perek 1</em>; die sephardische Standard-Praxis verbindet sie mit den Korbanot-Pesukim, die vor Pesukei deZimra im Siddur stehen. (2) <em>Aish-Tamid-Kawanah am Morgen — eine Mitzwah pro Tag, ohne Unterbrechung</em>: Sephardischer Mussar-Brauch (Ben Ish Chai-Stil, Eidot HaMizrach): wähle eine Mitzwah, die du jeden einzelnen Tag in der gleichen Form ausübst — sei es Tehillim-Kapitel, Mishnah-Mishnah, Halacha-Lernen, Tzedakah, Krias-Schma-Genauigkeit. Diese Tagesmitzwah ist dein innerer Aish Tamid: »לֹא תִכְבֶּה« — sie darf nicht erlöschen. Wenn die Bedingungen schwierig werden, halte sie auch in minimaler Form aufrecht (auch nur ein Pasuk, eine Mishnah). Der Pasuk Vayikra 6:6 ist die Quelle. (3) <em>Birkat HaGomel nach überstandener Gefahr</em>: Wenn du eine der vier traditionellen Gefährdungs-Situationen (Krankheit · Reise mit Lebensgefahr · Gefangenschaft · See-/Wüsten-Reise) überstanden hast, gehe sephardisch (Schulchan Aruch OC 219, Kaf HaChaim) bei der nächsten Tora-Lesung in der Schul nach vorn, lass dich aufrufen, sprich nach der Aliyah die Brachah <em>בָּרוּךְ אַתָּה אֲדֹנָי אֱלֹהֵינוּ מֶלֶךְ הָעוֹלָם הַגּוֹמֵל לְחַיָּבִים טוֹבוֹת שֶׁגְּמָלַנִי כׇּל טוֹב</em> — die Gemeinde antwortet <em>אָמֵן · מִי שֶׁגְּמָלְךָ כׇּל טוֹב הוּא יִגְמׇלְךָ כׇּל טוֹב סֶלָה</em>. Die Wurzel ist Vayikra 7:12 (das Korban Toda). (4) <em>Bedikat Chametz mit Tzav 6:10-Kawanah</em>: Am Erev 14. Nisan, nach Einbruch der Nacht — sephardisch nach Schulchan Aruch OC 431-434, Ben Ish Chai Shanah Rishona Tzav. Brachah <em>עַל בִּעוּר חָמֵץ</em>, dann mit Kerze und Feder zehn versteckte Brot-Stückchen sammeln, kol chamira-Bittul aramäisch-sephardisch sprechen. Innere Kawanah: »Was im Mishkan die Mincha als ungesäuert verlangte, verlangt heute mein Pessach: ich entferne das innere Chametz — die hochmütigen Aufblähungen, die ungeprüften Motive — gemeinsam mit dem äußeren.« (5) <em>Toda-Mahl in der Familie</em>: Sephardischer Familien-Brauch (Aleppo, Marokko, in Israel und in der Diaspora): nach einer überstandenen Gefahr, einer Genesung, einer sicheren Heimkehr — neben der Birkat HaGomel — bereite ein <em>Se'udat HaToda</em>: ein Mahl mit Brot, mit Familie, mit kurzem Devar Tora zu Vayikra 7:12, mit Tehillim 100 (»מִזְמוֹר לְתוֹדָה«). Es ersetzt das alte Toda-Korban-Mahl in seiner heutigen Form. (6) <em>Sieben Tage der Vorbereitung vor jeder bedeutenden Mitzwah</em>: Sephardischer Brauch (Yerushalmi-Kabbalah-Tradition, Aleppo): wenn du vor einer bedeutenden Lebens-Mitzwah stehst (Brit Milah deines Sohnes, Pidyon HaBen, Hochzeit, Bar Mitzwah deines Sohnes, Yamim Noraim, Pessach-Seder), beginne sieben Tage zuvor eine konzentrierte innere Vorbereitung: tägliches Lernen eines relevanten Halacha-Stücks, sorgfältigeres Krias Schma, gemessenere Worte. Die Wurzel ist Vayikra 8:33-35 (die sieben Tage der Miluim) und die Halacha der sieben Tage des Kohen Gadol vor Yom Kippur (Rambam Hilchot Avodat Yom HaKippurim Perek 1). (7) <em>Bigdei Kehunah-Kawanah beim Anlegen der Tallit und Tefillin</em>: Sephardischer Brauch (Eidot HaMizrach, in der Aleppo-Yerushalmi-Tradition): beim morgendlichen Anlegen der Tallit und der Tefillin halte einen Moment still und richte die Kawanah: »Was im Mishkan die acht Bigdei Kehunah des Kohen Gadol waren — Kuttonet, Awnet, Me'il, Efod, Choschen, Mitznefet, Tziz, Cheschew — sind heute, in spirituell-Korrelat-Form, die Tefillin und der Tallit des Beters; die Wahrheit der Avodah, in stoffliche Würde gefasst.« Die Kawanah ist nicht halachisch verpflichtet, aber sephardisch (Rashash, Sha'ar HaKawanot) tief verwurzelt. (8) <em>Schalom-Schelamim — Schalom-Bayit als sephardische Tagespraxis</em>: Vayikra 7:11 — »וְזֹאת תּוֹרַת זֶבַח הַשְּׁלָמִים« — die Schelamim sind das Schalom-Korban: ein Anteil für den Mizbeach, ein Anteil für den Kohen, ein Anteil für den Darbringer und sein Haus, alle drei zusammen <em>Schalom</em>. Sephardischer Schabbat-Tisch-Brauch: nach dem Hauptgang, kurzer Stille, einander dem nächsten ein gutes Wort sagen — eine Form des heutigen Schelamim-Anteils des Hauses. Ben Ish Chai betont mehrfach die Schalom-Bayit-Praxis als sephardische Avodah. (9) <em>Maschiach ben David in Tzav — die Wieder-Aufnahme der Avodah</em>: Sephardisch (Rambam Hilchot Mlachim, Yabia Omer/Chazon Ovadia bei R. Ovadia Yosef Z'L) ist die Yemot-HaMaschiach-Erwartung explizit auf die Wieder-Aufnahme der Korbanot-Avodah gerichtet — Vayikra 7:37 (»זֹאת הַתּוֹרָה לָעֹלָה...«) als jene Tora, die Maschiach ben David im wieder-aufgebauten Beit HaMikdasch wieder zur lebendigen Praxis macht. Wer am Schluss der Amidah <em>וְתֶחֱזֶינָה עֵינֵינוּ בְּשׁוּבְךָ לְצִיּוֹן</em> spricht, kann eine Kawanah einlegen: »Möge der innere Aish Tamid meiner Tefillah heute zur Vorbereitung des äußeren Aish Tamid des Maschiach-Beit-HaMikdasch werden.« Damit wird Tzav zur Brücke zwischen der inneren Tefillah-Avodah und der erwarteten Wieder-Aufnahme der vollen Korbanot-Praxis im wieder-aufgebauten Mikdasch.
+      </div>
+      <div class="tikkun-tags">
+        <span class="tikkun-tag">אֵשׁ תָּמִיד</span>
+        <span class="tikkun-tag">תְּפִלָּה כְּקׇרְבָּן</span>
+        <span class="tikkun-tag">בִּרְכַּת הַגּוֹמֵל</span>
+        <span class="tikkun-tag">בְּדִיקַת חָמֵץ</span>
+        <span class="tikkun-tag">שִׁבְעַת יְמֵי מִלּוּאִים פְּנִימִיִּים</span>
+      </div>
+    </div>
+    <div class="climax-box">
+      <div class="climax-label">שִׂיא · ff · Klimax-Vers der Parashah · der Aish Tamid</div>
+      <div class="instrument-note">[no percussion] [no drums] [no choir] [acoustic guitar — full Rast chord forte to fortissimo, the eternal flame verse, sustained on tamid, the not-extinguished promise, no percussion, no drums] Gitarre: Voller Rast-Akkord, forte zu fortissimo — der Aish-Tamid-Vers, gehalten auf <em>תָּמִיד</em>, das Versprechen des Nicht-Erlöschens.</div>
+      <div class="climax-verse-he">אֵשׁ תָּמִיד תּוּקַד עַל־הַמִּזְבֵּחַ · לֹא תִכְבֶּה</div>
+      <div class="climax-verse-de">„Ein beständiges Feuer soll auf dem Altar brennen — es soll nicht erlöschen."</div>
+      <div class="climax-src">וַיִּקְרָא ו׳:ו׳</div>
+    </div>
+
+    <div class="coda-box">
+      <div class="coda-label">קוֹדָה · pp · Schiv'at-Yamim-Wache im Hauch</div>
+      <div class="instrument-note">[no percussion] [no drums] [no choir] [acoustic guitar — Rast dissolving into a single sustained note, the seven-day vigil whispered, the Mishmeret kept barely audible, no percussion] Gitarre: Rast löst sich in einen einzigen getragenen Ton — die sieben-tägige Wache geflüstert, die Mishmeret gehalten kaum hörbar.</div>
+      <div class="coda-whisper">
+        <strong>וּשְׁמַרְתֶּם</strong> אֶת־מִשְׁמֶרֶת אֲדֹנָי — <strong>וְלֹא</strong> תָמוּתוּ — כִּי־כֵן <strong>צֻוֵּיתִי</strong></div></div>
+
+  </section>
+
+  <div class="footer">
+    <p class="footer-he">פָּרָשַׁת צַו · חָכְמָה · מַקָּאם רָאסְט · אֵשׁ תָּמִיד תּוּקַד עַל־הַמִּזְבֵּחַ · לֹא תִכְבֶּה · נוּסַּח צָדוֹק (רשש)</p>
+    <p class="footer-chain">
+      וַיִּקְרָא ו׳:א׳–ח׳:ל״ו · נוּסַּח צָדוֹק (רשש) · עֵדוֹת הַמִּזְרָח · פָּרָשָׁה ב׳ דְּסֵפֶר וַיִּקְרָא
+    </p>
+    <p class="footer-de">
+      Quellen: <strong>Tanach</strong> (Vayikra 6:1–8:36 — Tora-Text 1:1, mit Tetragrammaton-Konvertierung
+      durchgängig als אֲדֹנָי) · <strong>Rambam · Mishneh Torah</strong> (Hilchot Ma'aseh HaKorbanot ·
+      Hilchot Temidin uMussafin · Hilchot Klei HaMikdash veHaOvdim Bo · Hilchot Pesulei HaMukdaschin ·
+      Hilchot Tefillah Perek 1, zur Lehre <em>tefillot k'neged temidim tiknum</em> · Hilchot Berachot
+      Perek 10, zur Birkat HaGomel · Hilchot Avodat Yom HaKippurim Perek 1, zur Halacha der sieben
+      Tage der Vor-Kawanah des Kohen Gadol, mit Vayikra 8:33 als Wurzel) ·
+      <strong>Or HaChaim</strong> auf Vayikra 6:2 (zu <em>זֹאת תּוֹרַת הָעֹלָה</em> — die Olah als
+      Aufstiegs-Bewegung der Nefesh, das Doppel-Sinn der Wurzel <em>עלה</em>) ·
+      <strong>Rashash · Nahar Schalom</strong> (Rabbi Schalom Scharabi · sephardisch-yerushalmische
+      Bet-El-Yeshivah-Tradition · die Kawanot der Avodah als innerer Sitz der Tefillah-Brachot) ·
+      <strong>Ramchal · Mesillat Yescharim</strong> (Perek 2, Be'ur Middat HaZehirut — die brennende
+      Wachsamkeit als innerer Aish Tamid des Mussar-Wegs; Perek 11, Be'ur Middat HaNekiut — die
+      Reinheit als Befreiung vom inneren Chametz) · <strong>Ramchal · Da'at Tevunot</strong>
+      (der Mishkan als Schatten-Bild des inneren Menschen, die innere Mizbeach-Architektur) ·
+      <strong>Ben Ish Chai · Schanah Rischonah, Parashat Tzav</strong> (Hilchot Bedikat Chametz —
+      Vayikra 6:10 <em>lo te'afeh chametz</em> als halachische Wurzel der Pessach-Vorbereitung;
+      sephardischer Standard für Aleppo, Marokko, Yemen, Yerushalayim, Bagdad) ·
+      <strong>Schulchan Aruch · Orach Chaim 219</strong> (Birkat HaGomel) ·
+      <strong>Kaf HaChaim · Orach Chaim 219</strong> (Rabbi Yaakov Chaim Sofer · sephardische Variante
+      für alle Eidot HaMizrach) · <strong>Schulchan Aruch · Orach Chaim 431–434</strong> (Bedikat
+      Chametz · Bittul · Biur — sephardischer Standard) · <strong>Talmud Bavli · Berachot 26b</strong>
+      (Rabbi Yehoschua ben Levi: <em>tefillot k'neged temidim tiknum</em>) ·
+      <strong>Talmud Bavli · Berachot 54b</strong> (vier Kategorien der Birkat-HaGomel-Verpflichteten) ·
+      <strong>Talmud Bavli · Yoma 33a</strong> (<em>ein ma'avirin al hamitzvot</em> — die Ordnung der
+      Avodah, einschlägig für die Tzav-Korbanot-Reihenfolge) ·
+      <strong>Talmud Bavli · Menachot 110a</strong> (zur Mincha als Korban des Bescheidenen, sephardisch
+      besonders für die Lesung von Vayikra 7:11–15 herangezogen) ·
+      <strong>Yabia Omer · Chazon Ovadia</strong> (Rabbi Ovadia Yosef Z'L — sephardische moderne
+      Halacha · Ma'aseh-HaKorbanot-Wissenschaft, Birkat HaGomel, Hilchot Pessach) ·
+      <strong>Sephardischer Siddur</strong> (Korbanot-Pesukim vor Pesukei deZimra · Aleppo-Marokko-
+      Yemen-Yerushalmi-Variation als tägliche Tora-Lern-Anker) ·
+      <strong>Minhag Aram Tzova / Marokko / Yemen / Yerushalayim</strong> für Maqam Rast
+      in der Tora-Lesung der ordnenden Parashot.
+      <br><br>
+      <strong>Tradition:</strong> Sephardisch · Nussach Zadoq (Rashash) · Maqam-Tradition aus Aleppo,
+      Yerushalayim, Marokko, Yemen · Tetragrammaton durchgängig als אֲדֹנָי · Maschiach ben David ·
+      Doppelt geprüfte Quellen · Tora-Text 1:1 unverändert · Erstellt Mai 2026 · Sefer HaParashot
+      bemo Maqam · 2. Lied Sefer Vayikra (Tzav) · Chochma · Maqam Rast.
+    </p>
+    <div class="footer-amen">אָמֵן · יִבָּנֶה הַמִּקְדָּשׁ בִּמְהֵרָה בְיָמֵינוּ · יָבוֹא מָשִׁיחַ בֶּן דָּוִד · אָמֵן</div>
+  </div>
+
+</div>
+
+
+</body></html>

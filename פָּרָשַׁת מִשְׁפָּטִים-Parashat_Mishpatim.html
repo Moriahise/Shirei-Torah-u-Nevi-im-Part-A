@@ -1,0 +1,609 @@
+<!DOCTYPE html>
+<html lang="he-IL"><head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>פָּרָשַׁת מִשְׁפָּטִים · שְׁמוֹת כ״א:א׳–כ״ד:י״ח · חׇכְמָה · מַקָּאם רַאסְט · Sephardische Tora-Vertonung</title>
+  <link href="https://fonts.googleapis.com/css2?family=Frank+Ruhl+Libre:wght@300;400;700;900&amp;family=EB+Garamond:ital,wght@0,400;0,600;1,400;1,600&amp;family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&amp;display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg:#060808; --deep:#0A0E0E; --layer:#101414; --card:#0C1010;
+      --parchment:#f2e8d0; --parch-dim:#c8b898;
+      --ivory:#f0e8d8; --ivory-dim:#a89878;
+      --silver:#c8d4e0; --silver-dim:#7a8290;
+      --text:#a0a89c;
+      /* SEFER SCHEMOT — Tief-Rot der Befreiung */
+      --sefer:#B04030; --sefer-lt:#D86858; --sefer-dim:#7B2820;
+      --sefer-bg:rgba(176,64,48,.08); --sefer-bdr:rgba(176,64,48,.36); --sefer-glow:rgba(216,104,88,.20);
+      /* MISHPATIM · CHOCHMA · RAST — Klar-Königliches Gold-Rast */
+      --mish:#C8A860; --mish-lt:#E8C880; --mish-dim:#8B7030;
+      --mish-bg:rgba(200,168,96,.08); --mish-bdr:rgba(200,168,96,.36); --mish-glow:rgba(232,200,128,.22);
+      /* MAQAM-FARBEN */
+      --maqam-saba:#B0904A; --maqam-hijaz:#C85050; --maqam-bayat:#A07850;
+      --maqam-rast:#C8A860; --maqam-ajam:#7A9050; --maqam-nahawand:#6080A0;
+    }
+    *,*::before,*::after { margin:0; padding:0; box-sizing:border-box; }
+    html { scroll-behavior:smooth; }
+    body { background:var(--bg); color:var(--silver); font-family:'EB Garamond',serif; overflow-x:hidden; line-height:1.85; padding:40px 20px 80px; }
+    body::before { content:''; position:fixed; inset:0; pointer-events:none; z-index:0;
+      background: radial-gradient(ellipse at 18% 12%, rgba(176,64,48,.12) 0%, transparent 48%),
+                  radial-gradient(ellipse at 82% 28%, rgba(200,168,96,.12) 0%, transparent 45%),
+                  radial-gradient(ellipse at 12% 68%, rgba(176,64,48,.08) 0%, transparent 45%),
+                  radial-gradient(ellipse at 88% 82%, rgba(232,200,128,.10) 0%, transparent 42%),
+                  radial-gradient(ellipse at 50% 50%, rgba(20,16,8,.82) 0%, transparent 70%); }
+    body::after { content:''; position:fixed; inset:0; pointer-events:none; z-index:0;
+      background-image:
+        radial-gradient(1px 1px at 8% 10%, rgba(232,200,128,.36) 0%, transparent 100%),
+        radial-gradient(1px 1px at 48% 5%, rgba(216,104,88,.30) 0%, transparent 100%),
+        radial-gradient(1px 1px at 82% 16%, rgba(224,200,120,.32) 0%, transparent 100%),
+        radial-gradient(1px 1px at 25% 42%, rgba(216,176,80,.28) 0%, transparent 100%),
+        radial-gradient(1px 1px at 68% 58%, rgba(216,104,88,.28) 0%, transparent 100%),
+        radial-gradient(1.5px 1.5px at 12% 75%, rgba(208,180,80,.34) 0%, transparent 100%),
+        radial-gradient(1px 1px at 90% 78%, rgba(216,104,88,.30) 0%, transparent 100%),
+        radial-gradient(1px 1px at 35% 88%, rgba(224,200,120,.26) 0%, transparent 100%); }
+    .wrap { max-width:1080px; margin:0 auto; position:relative; z-index:1; }
+
+    /* PAGE HEADER */
+    .page-header { text-align:center; margin-bottom:80px; padding-bottom:40px; border-bottom:1px solid var(--sefer-bdr); position:relative; }
+    .page-header::after { content:'✦ ✡ ✦'; position:absolute; bottom:-14px; left:50%; transform:translateX(-50%); background:var(--bg); padding:0 20px; color:var(--sefer); font-size:.62em; letter-spacing:.55em; }
+    .eyebrow { font-family:'Cormorant Garamond',serif; font-style:italic; font-size:.78em; color:var(--mish-lt); letter-spacing:.28em; text-transform:uppercase; margin-bottom:18px; opacity:.85; }
+    .sefer-letter { font-family:'Frank Ruhl Libre',serif; font-size:1.40em; color:var(--sefer); font-weight:900; display:inline-block; margin-bottom:6px; text-shadow:0 0 30px var(--sefer-glow); letter-spacing:.04em; }
+    .page-title-he { font-family:'Frank Ruhl Libre',serif; font-size:3.2em; font-weight:900; color:var(--ivory); direction:rtl; letter-spacing:.05em; text-shadow:0 0 80px var(--mish-glow), 0 0 140px var(--sefer-glow); margin-bottom:8px; line-height:1.15; }
+    .page-subtitle-he { font-family:'Frank Ruhl Libre',serif; font-size:1.16em; color:var(--mish-lt); direction:rtl; margin-bottom:10px; letter-spacing:.06em; }
+    .page-title-de { font-family:'Cormorant Garamond',serif; font-style:italic; font-size:1.14em; color:var(--silver-dim); margin-bottom:22px; }
+    .page-desc { font-size:1.0em; color:var(--text); max-width:780px; margin:0 auto; line-height:1.95; }
+    .page-desc strong { color:var(--ivory-dim); }
+    .page-desc em { color:var(--mish-lt); font-style:italic; }
+
+    /* SONG SECTION */
+    .song-section { margin-bottom:90px; padding-bottom:70px; border-bottom:1px dashed var(--sefer-bdr); }
+    .song-header { display:flex; flex-wrap:wrap; align-items:flex-start; gap:20px; margin-bottom:40px; padding:24px 26px; background:var(--layer); border:1px solid var(--mish-bdr); border-radius:10px; }
+    .song-num { font-family:'Frank Ruhl Libre',serif; font-size:2.6em; font-weight:900; direction:rtl; padding-right:14px; color:var(--mish-lt); }
+    .song-meta { flex:1; display:flex; flex-direction:column; gap:8px; }
+    .korban-badge { font-family:'Cormorant Garamond',serif; font-style:italic; font-size:.82em; letter-spacing:.08em; color:var(--mish-lt); }
+    .maqam-badge { font-family:'Cormorant Garamond',serif; font-style:italic; font-size:.78em; letter-spacing:.08em; display:inline-block; padding:3px 10px; border-radius:4px; color:#181410; font-weight:600; background:var(--maqam-rast); }
+    .song-title-he { font-family:'Frank Ruhl Libre',serif; font-size:1.7em; font-weight:700; color:var(--ivory); direction:rtl; letter-spacing:.04em; }
+    .song-title-de { font-family:'Cormorant Garamond',serif; font-style:italic; font-size:1.02em; color:var(--silver); }
+    .source-badge { font-family:'Cormorant Garamond',serif; font-style:italic; font-size:.74em; color:#A07060; line-height:1.6; }
+
+    /* ALIYAH BLOCK */
+    .aliyah-block { margin-bottom:42px; }
+    .aliyah-label { font-family:'Frank Ruhl Libre',serif; font-size:.94em; font-weight:700; direction:rtl; margin-bottom:9px; color:var(--mish); letter-spacing:.06em; padding-bottom:6px; border-bottom:1px solid var(--mish-bdr); }
+    .aliyah-label-de { font-family:'Cormorant Garamond',serif; font-style:italic; font-size:.78em; color:var(--silver-dim); display:inline-block; margin-right:14px; opacity:.85; }
+    .instrument-note { font-family:'Cormorant Garamond',serif; font-style:italic; font-size:.84em; color:var(--text); margin-bottom:14px; padding:10px 14px; background:rgba(200,168,96,.05); border-left:2px solid var(--mish-dim); }
+    .lyrics-block { display:flex; gap:44px; flex-wrap:wrap; }
+    .lyrics-he, .lyrics-de { flex:1; min-width:280px; display:flex; flex-direction:column; gap:6px; }
+    .lyrics-he span.line { font-family:'Frank Ruhl Libre',serif; font-size:1.06em; color:var(--ivory); direction:rtl; line-height:1.95; }
+    .lyrics-de span.line { font-family:'Cormorant Garamond',serif; font-size:1.0em; color:var(--silver); line-height:1.88; }
+
+    /* TIKKUN BOX */
+    .tikkun-box { background:rgba(200,168,96,.07); border:1px solid rgba(200,168,96,.32); padding:30px; margin-top:40px; border-radius:6px; }
+    .tikkun-header { display:flex; flex-direction:column; gap:6px; margin-bottom:20px; }
+    .tikkun-title-he { font-family:'Frank Ruhl Libre',serif; font-size:1.25em; color:var(--ivory); direction:rtl; font-weight:700; letter-spacing:.04em; }
+    .tikkun-title-de { font-family:'Cormorant Garamond',serif; font-size:1.0em; font-style:italic; color:var(--silver); }
+    .tikkun-src { font-family:'Cormorant Garamond',serif; font-size:.74em; color:#A07060; line-height:1.7; }
+    .tikkun-body { font-family:'Cormorant Garamond',serif; font-size:.96em; color:var(--text); line-height:1.92; }
+    .tikkun-body strong { color:var(--ivory); }
+    .tikkun-body em { color:var(--mish-lt); font-style:italic; }
+    .tikkun-tags { margin-top:18px; display:flex; gap:9px; flex-wrap:wrap; }
+    .tikkun-tag { background:rgba(200,168,96,.16); color:var(--mish-lt); padding:4px 10px; border-radius:4px; font-size:.74em; font-family:'Frank Ruhl Libre',serif; direction:rtl; }
+
+    /* SCHI / KLIMAX-MOMENT */
+    .climax-box { background:linear-gradient(135deg,rgba(200,168,96,.18),rgba(176,64,48,.10),rgba(6,8,8,.88)); border:2px solid var(--mish-bdr); padding:32px; margin-top:40px; margin-bottom:30px; border-radius:8px; }
+    .climax-label { font-family:'Cormorant Garamond',serif; font-style:italic; font-size:.82em; color:var(--mish-lt); letter-spacing:.18em; text-transform:uppercase; margin-bottom:14px; text-align:center; }
+    .climax-verse-he { font-family:'Frank Ruhl Libre',serif; font-size:1.55em; font-weight:700; color:var(--ivory); direction:rtl; text-align:center; line-height:1.85; letter-spacing:.04em; text-shadow:0 0 30px var(--mish-glow); }
+    .climax-verse-de { font-family:'Cormorant Garamond',serif; font-style:italic; font-size:1.05em; color:var(--silver); text-align:center; margin-top:14px; line-height:1.7; }
+    .climax-src { font-family:'Cormorant Garamond',serif; font-style:italic; font-size:.80em; color:var(--mish-lt); text-align:center; margin-top:12px; opacity:.8; }
+
+    /* KODA */
+    .coda-box { background:rgba(6,8,8,.78); border:1px solid var(--mish-bdr); padding:36px; text-align:center; margin-top:30px; margin-bottom:30px; border-radius:6px; }
+    .coda-label { font-family:'Cormorant Garamond',serif; font-style:italic; font-size:.80em; color:var(--mish-lt); letter-spacing:.18em; text-transform:uppercase; margin-bottom:18px; }
+    .coda-whisper { font-family:'Frank Ruhl Libre',serif; font-size:1.20em; direction:rtl; line-height:2.3; opacity:.85; color:var(--mish-lt); }
+    .coda-whisper strong { font-weight:900; opacity:1; color:var(--ivory); }
+
+    /* SCENARIOS */
+    .scenarios-section { margin-top:54px; margin-bottom:40px; }
+    .scenarios-title { font-family:'Frank Ruhl Libre',serif; font-size:1.35em; font-weight:700; text-align:center; margin-bottom:34px; direction:rtl; color:var(--mish-lt); letter-spacing:.06em; }
+    .scenarios-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(290px,1fr)); gap:26px; }
+    .scenario-card { background:linear-gradient(135deg,rgba(32,24,8,.78),rgba(6,8,8,.92)); border:1px solid var(--mish-bdr); padding:24px; transition:transform .2s, box-shadow .2s; border-radius:6px; }
+    .scenario-card:hover { transform:translateY(-4px); box-shadow:0 10px 36px var(--mish-glow); }
+    .sc-num { font-family:'Cormorant Garamond',serif; font-style:italic; font-size:.74em; letter-spacing:.14em; text-transform:uppercase; margin-bottom:7px; color:var(--mish); }
+    .sc-title-he { font-family:'Frank Ruhl Libre',serif; font-size:1.10em; font-weight:700; color:var(--ivory); direction:rtl; margin-bottom:4px; letter-spacing:.04em; }
+    .sc-sub { font-family:'Cormorant Garamond',serif; font-style:italic; font-size:.84em; color:#A07060; margin-bottom:14px; }
+    .sc-body { font-size:.92em; color:var(--text); line-height:1.80; margin-bottom:14px; }
+    .sc-body strong { color:var(--mish-lt); }
+    .key-moment { font-size:.86em; color:var(--mish-lt); font-style:italic; margin-bottom:9px; padding-left:13px; border-left:2px solid var(--mish-lt); }
+    .reaction { font-size:.86em; color:var(--text); font-style:italic; padding-left:13px; border-left:2px solid var(--mish-dim); line-height:1.78; }
+
+    /* FOOTER */
+    .footer { margin-top:80px; padding-top:50px; border-top:1px solid var(--sefer-bdr); text-align:center; }
+    .footer-he { font-family:'Frank Ruhl Libre',serif; font-size:1.40em; font-weight:700; color:var(--mish-lt); direction:rtl; margin-bottom:18px; text-shadow:0 0 30px var(--mish-glow); letter-spacing:.06em; }
+    .footer-chain { font-family:'Frank Ruhl Libre',serif; font-size:1.0em; color:var(--silver); direction:rtl; margin-bottom:22px; letter-spacing:.09em; }
+    .footer-de { font-family:'Cormorant Garamond',serif; font-style:italic; font-size:.92em; color:var(--text); line-height:2.0; max-width:780px; margin:0 auto 24px; }
+    .footer-de strong { color:var(--ivory-dim); font-style:normal; }
+    .footer-amen { font-family:'Frank Ruhl Libre',serif; font-size:1.30em; color:var(--mish-lt); direction:rtl; margin-top:24px; letter-spacing:.14em; text-shadow:0 0 30px var(--mish-glow); }
+
+    @media (max-width:720px) {
+      .page-title-he { font-size:2.3em; }
+      .song-num { font-size:2.2em; }
+      .lyrics-block { flex-direction:column; gap:24px; }
+      .scenarios-grid { grid-template-columns:1fr; }
+      .climax-verse-he { font-size:1.20em; }
+      .footer-he { font-size:1.10em; }
+    }
+  </style>
+</head>
+<body>
+<div class="wrap">
+
+  <header class="page-header">
+    <div class="eyebrow">Sephardische Tora-Vertonung · Sefer HaParashot bemo Maqam</div>
+    <div class="sefer-letter">ב</div>
+    <div class="page-title-he">פָּרָשַׁת מִשְׁפָּטִים</div>
+    <div class="page-subtitle-he">סֵפֶר שְׁמוֹת · כ״א:א׳–כ״ד:י״ח · חׇכְמָה · מַקָּאם רַאסְט · נַעֲשֶׂה וְנִשְׁמָע</div>
+    <div class="page-title-de">Mishpatim — Die klare ordnungs-strukturierende Weisheit der Brit-Mitzwot · Sechste Parashah des Sefer Schemot · Chochma im Maqam Rast</div>
+    <div class="page-desc">
+      Mischpatim entfaltet das Sefer Schemot zu seiner ethisch-rechtlichen Mitte: unmittelbar nach
+      dem <em>Anochi</em> der Aseret HaDibrot, ohne Bruch, folgen die <em>Mischpatim</em> — die
+      Zivilrechts-Ordnung des Bundes-Volks. <strong>Or HaChaim</strong> auf Schemot 21:1 liest das
+      einleitende <em>„וְאֵלֶּה הַמִּשְׁפָּטִים"</em> programmatisch: <em>diese</em> Gesetze sind
+      <em>auch</em> vom Sinai, wie das <em>Anochi</em> — der Eved-Ivri-Paragraph trägt dieselbe
+      Sinai-Autorität wie das erste Gebot. Die Parashah beginnt mit der Befreiung des hebräischen
+      Sklaven im siebten Jahr (21:1–11), entfaltet das Schadens-Recht für Mensch und Tier
+      (21:12–22:5 im hebräischen Zähl-System), die Verwahrer-Halacha (22:6–14), die Verführungs-
+      und Hexerei-Verbote (22:15–17), die Sozial-Mitzwot für Witwe, Waise und Fremdling
+      (22:20–26), die Ehrlichkeit vor Gericht (23:1–8), Schmittah und Schabbat (23:10–12), und
+      die drei Wallfahrts-Feste (23:14–17). Kapitel 24 versiegelt das Werk mit der großen
+      Bundes-Schließung: Mosche schreibt die Tora, ganz Israel ruft <em>„נַעֲשֶׂה וְנִשְׁמָע"</em>
+      (24:7), das Blut der Brit-Korbanot wird auf Volk und Altar gesprengt, die Ältesten schauen
+      die Saphir-Pflasterung unter den Füßen Adonais (24:10), Mosche steigt 40 Tage und 40 Nächte
+      in die Wolke. Sefirot-Anker: <strong>Chochma</strong> — die Sefirah der klaren
+      Unterscheidung, der ordnenden Weisheit, der gerechten Maße. Maqam: <strong>Rast</strong> —
+      mittelgebahnt, ausgewogen, königlich-aufgerichtet, ohne dramatische Hijaz-Übermäßigkeit,
+      sondern in der ruhigen Wahrheit des Mishpat. Tora-Text 1:1 nach sephardischer Tradition,
+      Tetragrammaton durchgängig als אֲדֹנָי, Maschiach ben David.
+    </div>
+  </header>
+
+  <!-- ══ SONG SECTION — PARASHAT MISHPATIM ══ -->
+  <section class="song-section" id="mishpatim">
+
+    <div class="song-header">
+      <div class="song-num">ו</div>
+      <div class="song-meta">
+        <div class="korban-badge">Chochma — חׇכְמָה · Klare Ordnung der Brit-Mitzwot</div>
+        <div class="song-title-he">פָּרָשַׁת מִשְׁפָּטִים</div>
+        <div class="song-title-de">Mishpatim — „Und dies sind die Rechtssätze, die du ihnen vorlegen sollst" · Schemot 21:1–24:18</div>
+        <div class="maqam-badge">מַקָּאם רַאסְט · Rast · ~64 BPM rubato</div>
+        <div class="source-badge">שְׁמוֹת כ״א:א׳–כ״ד:י״ח · רמב״ם סֵפֶר מִשְׁפָּטִים (הלכות שְׂכִירוּת · שְׁאֵלָה וּפִקָּדוֹן · גְּנֵיבָה · גְּזֵלָה וַאֲבֵדָה · מַלְוֶה וְלוֶֹה · נִזְקֵי מָמוֹן · חוֹבֵל וּמַזִּיק) · רמב״ם הלכות סַנְהֶדְרִין · רמב״ם הלכות עֲבָדִים · רמב״ם הלכות רוֹצֵחַ וּשְׁמִירַת נֶפֶשׁ · רמב״ם הלכות שְׁמִטָּה וְיוֹבֵל · רמב״ם הלכות חֲגִיגָה · תלמוד בבלי שַׁבָּת פ״ח. (כָּפָה עֲלֵיהֶם הַר כְּגִיגִית · נַעֲשֶׂה וְנִשְׁמָע · כֶּתֶר) · אור החיים על שְׁמוֹת כ״א:א׳ · ספר העיקרים מאמר שלישי (הַמִּצְוֹת כִּיסוֹדוֹת) · רש״ש נְהַר שָׁלוֹם דְּרוּשׁ הַמִּשְׁפָּטִים · רמח״ל מְסִלַּת יְשָׁרִים פֶּרֶק י״א (בְּאוּר הַנְּקִיּוּת בִּפְרָטֵי הַמִּצְוֹת — דִּינֵי מָמוֹנוֹת) · רמח״ל דֶּרֶךְ אֲדֹנָי חֵלֶק א׳ פֶּרֶק ד׳ · שד״ל פֵּרוּשׁ עַל הַתּוֹרָה (שְׁמוֹת כ״א–כ״ג · ההלכה כְּהֲגַנַּת כְּבוֹד הָאָדָם) · בן איש חי שנה ראשונה מִשְׁפָּטִים · כַּף הַחַיִּים אוֹרַח חַיִּים · יָבִיעַ אוֹמֶר וַחֲזוֹן עוֹבַדְיָה (דִּינֵי מָמוֹנוֹת · גֵּרוּת · רִבִּית).</div>
+      </div>
+    </div>
+
+
+    <!-- ── ALIYAH 1 · ראשון · Schemot 21:1-19 — Eved Ivri, Amah, Kapitalstrafen ── -->
+    <div class="aliyah-block">
+      <div class="aliyah-label">עֲלִיָּה רִאשׁוֹנָה — וְאֵלֶּה הַמִּשְׁפָּטִים · עֶבֶד עִבְרִי · אָמָה הָעִבְרִיָּה<span class="aliyah-label-de">Erste Aliyah · Schemot 21:1–19 · Der hebräische Sklave und seine Befreiung im siebten Jahr · Die Tochter zur Magd · Mord und Totschlag · Eltern-Verbot · Körperverletzung</span></div>
+      <div class="instrument-note">[no percussion] [no drums] [no choir] [solo acoustic guitar — Rast opening with clear royal-balanced fingerpicking, the word „mishpatim" as a measured step, the Eved-Ivri-Befreiung in a calm seventh-year glow, rubato around 64 BPM, no percussion, no drums, no beat] Gitarre: Rast öffnet klar und königlich-balanciert — das Wort „Mischpatim" als gemessener Schritt, die Eved-Ivri-Befreiung im ruhigen Glanz des siebten Jahres.</div>
+      <div class="lyrics-block">
+        <div class="lyrics-he" dir="rtl">
+          <span class="line">וְאֵלֶּה הַמִּשְׁפָּטִים אֲשֶׁר תָּשִׂים לִפְנֵיהֶם׃</span>
+          <span class="line">כִּי תִקְנֶה עֶבֶד עִבְרִי שֵׁשׁ שָׁנִים יַעֲבֹד וּבַשְּׁבִעִת יֵצֵא לַחׇפְשִׁי חִנָּם׃</span>
+          <span class="line">אִם־בְּגַפּוֹ יָבֹא בְּגַפּוֹ יֵצֵא אִם־בַּעַל אִשָּׁה הוּא וְיָצְאָה אִשְׁתּוֹ עִמּוֹ׃</span>
+          <span class="line">אִם־אֲדֹנָיו יִתֶּן־לוֹ אִשָּׁה וְיָלְדָה־לוֹ בָנִים אוֹ בָנוֹת הָאִשָּׁה וִילָדֶיהָ תִּהְיֶה לַאדֹנֶיהָ וְהוּא יֵצֵא בְגַפּוֹ׃</span>
+          <span class="line">וְאִם־אָמֹר יֹאמַר הָעֶבֶד אָהַבְתִּי אֶת־אֲדֹנִי אֶת־אִשְׁתִּי וְאֶת־בָּנָי לֹא אֵצֵא חׇפְשִׁי׃</span>
+          <span class="line">וְהִגִּישׁוֹ אֲדֹנָיו אֶל־הָאֱלֹהִים וְהִגִּישׁוֹ אֶל־הַדֶּלֶת אוֹ אֶל־הַמְּזוּזָה וְרָצַע אֲדֹנָיו אֶת־אׇזְנוֹ בַּמַּרְצֵעַ וַעֲבָדוֹ לְעֹלָם׃</span>
+          <span class="line">וְכִי־יִמְכֹּר אִישׁ אֶת־בִּתּוֹ לְאָמָה לֹא תֵצֵא כְּצֵאת הָעֲבָדִים׃</span>
+          <span class="line">אִם־רָעָה בְּעֵינֵי אֲדֹנֶיהָ אֲשֶׁר־לוֹ יְעָדָהּ וְהֶפְדָּהּ לְעַם נׇכְרִי לֹא־יִמְשֹׁל לְמׇכְרָהּ בְּבִגְדוֹ־בָהּ׃</span>
+          <span class="line">וְאִם־לִבְנוֹ יִיעָדֶנָּה כְּמִשְׁפַּט הַבָּנוֹת יַעֲשֶׂה־לָּהּ׃</span>
+          <span class="line">אִם־אַחֶרֶת יִקַּח־לוֹ שְׁאֵרָהּ כְּסוּתָהּ וְעֹנָתָהּ לֹא יִגְרָע׃</span>
+          <span class="line">וְאִם־שְׁלׇשׁ־אֵלֶּה לֹא יַעֲשֶׂה לָהּ וְיָצְאָה חִנָּם אֵין כָּסֶף׃</span>
+          <span class="line">מַכֵּה אִישׁ וָמֵת מוֹת יוּמָת׃</span>
+          <span class="line">וַאֲשֶׁר לֹא צָדָה וְהָאֱלֹהִים אִנָּה לְיָדוֹ וְשַׂמְתִּי לְךָ מָקוֹם אֲשֶׁר יָנוּס שָׁמָּה׃</span>
+          <span class="line">וְכִי־יָזִד אִישׁ עַל־רֵעֵהוּ לְהׇרְגוֹ בְעׇרְמָה מֵעִם מִזְבְּחִי תִּקָּחֶנּוּ לָמוּת׃</span>
+          <span class="line">וּמַכֵּה אָבִיו וְאִמּוֹ מוֹת יוּמָת׃</span>
+          <span class="line">וְגֹנֵב אִישׁ וּמְכָרוֹ וְנִמְצָא בְיָדוֹ מוֹת יוּמָת׃</span>
+          <span class="line">וּמְקַלֵּל אָבִיו וְאִמּוֹ מוֹת יוּמָת׃</span>
+          <span class="line">וְכִי־יְרִיבֻן אֲנָשִׁים וְהִכָּה־אִישׁ אֶת־רֵעֵהוּ בְּאֶבֶן אוֹ בְאֶגְרֹף וְלֹא יָמוּת וְנָפַל לְמִשְׁכָּב׃</span>
+          <span class="line">אִם־יָקוּם וְהִתְהַלֵּךְ בַּחוּץ עַל־מִשְׁעַנְתּוֹ וְנִקָּה הַמַּכֶּה רַק שִׁבְתּוֹ יִתֵּן וְרַפֹּא יְרַפֵּא׃</span>
+        </div>
+        <div class="lyrics-de">
+          <span class="line">(21:1) Und dies sind die Rechtssätze, die du ihnen vorlegen sollst.</span>
+          <span class="line">(2) Wenn du einen hebräischen Sklaven erwirbst, soll er sechs Jahre dienen, und im siebten soll er frei ausgehen, unentgeltlich.</span>
+          <span class="line">(3) Wenn er allein hereinkommt, soll er allein hinausgehen; wenn er Eheherr einer Frau ist, soll seine Frau mit ihm hinausgehen.</span>
+          <span class="line">(4) Wenn sein Herr ihm eine Frau gegeben hat und sie ihm Söhne oder Töchter gebiert, so gehören die Frau und ihre Kinder ihrem Herrn, und er soll allein hinausgehen.</span>
+          <span class="line">(5) Wenn aber der Sklave ausdrücklich sagt: „Ich liebe meinen Herrn, meine Frau und meine Kinder, ich will nicht frei ausgehen" —</span>
+          <span class="line">(6) so führe ihn sein Herr vor das Gericht (die „Elohim"), führe ihn an die Tür oder an den Pfosten, und sein Herr durchbohre ihm das Ohr mit dem Pfriem; und er soll ihm dienen auf Dauer.</span>
+          <span class="line">(7) Und wenn ein Mann seine Tochter als Magd verkauft, so soll sie nicht ausgehen, wie die Sklaven ausgehen.</span>
+          <span class="line">(8) Wenn sie ihrem Herrn missfällt, der sie sich bestimmt hat, so lasse er sie auslösen; an ein fremdes Volk hat er nicht Vollmacht sie zu verkaufen, da er sie treulos behandelt hat.</span>
+          <span class="line">(9) Und wenn er sie seinem Sohn bestimmt, so soll er nach dem Recht der Töchter mit ihr verfahren.</span>
+          <span class="line">(10) Wenn er sich eine andere nimmt, soll er ihre Speise, ihre Bekleidung und ihren ehelichen Anspruch nicht mindern.</span>
+          <span class="line">(11) Und wenn er ihr diese drei nicht gewährt, so soll sie umsonst hinausgehen, ohne Geld.</span>
+          <span class="line">(12) Wer einen Menschen schlägt, dass er stirbt, soll des Todes sterben.</span>
+          <span class="line">(13) Wer aber nicht nachgestellt hat, sondern dem es Gott in die Hand hat geraten lassen — dem will ich einen Ort bestimmen, dahin er fliehen mag.</span>
+          <span class="line">(14) Wenn aber jemand vermessen gegen seinen Nächsten handelt, ihn mit Arglist zu töten — von meinem Altar sollst du ihn fortholen, dass er sterbe.</span>
+          <span class="line">(15) Und wer seinen Vater oder seine Mutter schlägt, soll des Todes sterben.</span>
+          <span class="line">(16) Und wer einen Menschen stiehlt und ihn verkauft — oder wer mit ihm in seiner Hand ergriffen wird — soll des Todes sterben.</span>
+          <span class="line">(17) Und wer seinen Vater oder seine Mutter verflucht, soll des Todes sterben.</span>
+          <span class="line">(18) Und wenn Männer streiten und einer den andern mit einem Stein oder mit der Faust schlägt, und er stirbt nicht, sondern fällt aufs Lager —</span>
+          <span class="line">(19) wenn er aufsteht und draußen umhergeht an seinem Stab, so soll der Schläger frei sein; nur seine Versäumnis soll er ersetzen, und den Heilungs-Lohn zahlen.</span>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- ── ALIYAH 2 · שני · Schemot 21:20-22:3 ── -->
+    <div class="aliyah-block">
+      <div class="aliyah-label">עֲלִיָּה שְׁנִיָּה — נֶפֶשׁ תַּחַת נָפֶשׁ · עַיִן תַּחַת עַיִן · שׁוֹר וּבוֹר<span class="aliyah-label-de">Zweite Aliyah · Schemot 21:20–22:3 · Sklavenverletzung · Schoss-Streit der Schwangeren · die fünf Schaden-Maße · Augen, Zähne, Ochsen, Brunnen, Diebstahl</span></div>
+      <div class="instrument-note">[no percussion] [no drums] [no choir] [acoustic guitar — Rast deepening in measured fingerpicking, the catalog of damages as a sober procession, the „eye-for-eye" verses as a balanced scale, dry strings, no percussion] Gitarre: Rast vertieft im gemessenen Fingerpicking — der Schaden-Katalog als nüchterne Prozession, die „Auge-für-Auge"-Verse als balancierte Waage.</div>
+      <div class="lyrics-block">
+        <div class="lyrics-he" dir="rtl">
+          <span class="line">וְכִי־יַכֶּה אִישׁ אֶת־עַבְדּוֹ אוֹ אֶת־אֲמָתוֹ בַּשֵּׁבֶט וּמֵת תַּחַת יָדוֹ נָקֹם יִנָּקֵם׃</span>
+          <span class="line">אַךְ אִם־יוֹם אוֹ יוֹמַיִם יַעֲמֹד לֹא יֻקַּם כִּי כַסְפּוֹ הוּא׃</span>
+          <span class="line">וְכִי־יִנָּצוּ אֲנָשִׁים וְנָגְפוּ אִשָּׁה הָרָה וְיָצְאוּ יְלָדֶיהָ וְלֹא יִהְיֶה אָסוֹן עָנוֹשׁ יֵעָנֵשׁ כַּאֲשֶׁר יָשִׁית עָלָיו בַּעַל הָאִשָּׁה וְנָתַן בִּפְלִלִים׃</span>
+          <span class="line">וְאִם־אָסוֹן יִהְיֶה וְנָתַתָּה נֶפֶשׁ תַּחַת נָפֶשׁ׃</span>
+          <span class="line">עַיִן תַּחַת עַיִן שֵׁן תַּחַת שֵׁן יָד תַּחַת יָד רֶגֶל תַּחַת רָגֶל׃</span>
+          <span class="line">כְּוִיָּה תַּחַת כְּוִיָּה פֶּצַע תַּחַת פָּצַע חַבּוּרָה תַּחַת חַבּוּרָה׃</span>
+          <span class="line">וְכִי־יַכֶּה אִישׁ אֶת־עֵין עַבְדּוֹ אוֹ־אֶת־עֵין אֲמָתוֹ וְשִׁחֲתָהּ לַחׇפְשִׁי יְשַׁלְּחֶנּוּ תַּחַת עֵינוֹ׃</span>
+          <span class="line">וְאִם־שֵׁן עַבְדּוֹ אוֹ־שֵׁן אֲמָתוֹ יַפִּיל לַחׇפְשִׁי יְשַׁלְּחֶנּוּ תַּחַת שִׁנּוֹ׃</span>
+          <span class="line">וְכִי־יִגַּח שׁוֹר אֶת־אִישׁ אוֹ אֶת־אִשָּׁה וָמֵת סָקוֹל יִסָּקֵל הַשּׁוֹר וְלֹא יֵאָכֵל אֶת־בְּשָׂרוֹ וּבַעַל הַשּׁוֹר נָקִי׃</span>
+          <span class="line">וְאִם שׁוֹר נַגָּח הוּא מִתְּמֹל שִׁלְשֹׁם וְהוּעַד בִּבְעָלָיו וְלֹא יִשְׁמְרֶנּוּ וְהֵמִית אִישׁ אוֹ אִשָּׁה הַשּׁוֹר יִסָּקֵל וְגַם־בְּעָלָיו יוּמָת׃</span>
+          <span class="line">אִם־כֹּפֶר יוּשַׁת עָלָיו וְנָתַן פִּדְיֹן נַפְשׁוֹ כְּכֹל אֲשֶׁר־יוּשַׁת עָלָיו׃</span>
+          <span class="line">אוֹ־בֵן יִגָּח אוֹ־בַת יִגָּח כַּמִּשְׁפָּט הַזֶּה יֵעָשֶׂה לּוֹ׃</span>
+          <span class="line">אִם־עֶבֶד יִגַּח הַשּׁוֹר אוֹ אָמָה כֶּסֶף שְׁלֹשִׁים שְׁקָלִים יִתֵּן לַאדֹנָיו וְהַשּׁוֹר יִסָּקֵל׃</span>
+          <span class="line">וְכִי־יִפְתַּח אִישׁ בּוֹר אוֹ כִּי־יִכְרֶה אִישׁ בֹּר וְלֹא יְכַסֶּנּוּ וְנָפַל־שָׁמָּה שּׁוֹר אוֹ חֲמוֹר׃</span>
+          <span class="line">בַּעַל הַבּוֹר יְשַׁלֵּם כֶּסֶף יָשִׁיב לִבְעָלָיו וְהַמֵּת יִהְיֶה־לּוֹ׃</span>
+          <span class="line">וְכִי־יִגֹּף שׁוֹר־אִישׁ אֶת־שׁוֹר רֵעֵהוּ וָמֵת וּמָכְרוּ אֶת־הַשּׁוֹר הַחַי וְחָצוּ אֶת־כַּסְפּוֹ וְגַם אֶת־הַמֵּת יֶחֱצוּן׃</span>
+          <span class="line">אוֹ נוֹדַע כִּי שׁוֹר נַגָּח הוּא מִתְּמוֹל שִׁלְשֹׁם וְלֹא יִשְׁמְרֶנּוּ בְּעָלָיו שַׁלֵּם יְשַׁלֵּם שׁוֹר תַּחַת הַשּׁוֹר וְהַמֵּת יִהְיֶה־לּוֹ׃</span>
+          <span class="line">כִּי יִגְנֹב־אִישׁ שׁוֹר אוֹ־שֶׂה וּטְבָחוֹ אוֹ מְכָרוֹ חֲמִשָּׁה בָקָר יְשַׁלֵּם תַּחַת הַשּׁוֹר וְאַרְבַּע־צֹאן תַּחַת הַשֶּׂה׃</span>
+          <span class="line">אִם־בַּמַּחְתֶּרֶת יִמָּצֵא הַגַּנָּב וְהֻכָּה וָמֵת אֵין לוֹ דָּמִים׃</span>
+          <span class="line">אִם־זָרְחָה הַשֶּׁמֶשׁ עָלָיו דָּמִים לוֹ שַׁלֵּם יְשַׁלֵּם אִם־אֵין לוֹ וְנִמְכַּר בִּגְנֵבָתוֹ׃</span>
+          <span class="line">אִם־הִמָּצֵא תִמָּצֵא בְיָדוֹ הַגְּנֵבָה מִשּׁוֹר עַד־חֲמוֹר עַד־שֶׂה חַיִּים שְׁנַיִם יְשַׁלֵּם׃</span>
+        </div>
+        <div class="lyrics-de">
+          <span class="line">(21:20) Und wenn jemand seinen Sklaven oder seine Magd mit dem Stock schlägt, dass er unter seiner Hand stirbt — Rache soll geübt werden.</span>
+          <span class="line">(21) Doch wenn er einen Tag oder zwei am Leben bleibt, soll keine Rache geübt werden, denn er ist sein Geld.</span>
+          <span class="line">(22) Und wenn Männer raufen und eine schwangere Frau stoßen, dass ihre Kinder abgehen — und es geschieht kein Unglück, so soll er gestraft werden, wie es der Mann der Frau ihm auferlegt; und er gebe es nach der Entscheidung der Richter.</span>
+          <span class="line">(23) Wenn aber ein Unglück geschieht, so sollst du Leben für Leben geben:</span>
+          <span class="line">(24) Auge für Auge, Zahn für Zahn, Hand für Hand, Fuß für Fuß;</span>
+          <span class="line">(25) Brandwunde für Brandwunde, Wunde für Wunde, Beule für Beule.</span>
+          <span class="line">(26) Und wenn jemand seinem Sklaven oder seiner Magd das Auge schlägt und es verdirbt, soll er ihn frei entlassen für sein Auge.</span>
+          <span class="line">(27) Und wenn er den Zahn seines Sklaven oder seiner Magd ausschlägt, soll er ihn frei entlassen für seinen Zahn.</span>
+          <span class="line">(28) Und wenn ein Ochse einen Mann oder eine Frau stößt, dass sie sterben, so soll der Ochse gesteinigt werden, und sein Fleisch soll nicht gegessen werden; der Besitzer des Ochsen aber ist schuldlos.</span>
+          <span class="line">(29) Doch wenn der Ochse stößig war von gestern und vorgestern und es seinem Besitzer bezeugt worden ist, und er ihn nicht verwahrt hat, und er einen Mann oder eine Frau tötet, soll der Ochse gesteinigt werden, und auch sein Besitzer soll sterben.</span>
+          <span class="line">(30) Wenn ihm Lösegeld auferlegt wird, soll er für die Lösung seines Lebens alles geben, was ihm auferlegt wird.</span>
+          <span class="line">(31) Ob er einen Sohn stößt oder eine Tochter stößt — nach diesem Recht soll an ihm gehandelt werden.</span>
+          <span class="line">(32) Wenn der Ochse einen Sklaven oder eine Magd stößt, soll er deren Herrn dreißig Schekel Silber geben, und der Ochse soll gesteinigt werden.</span>
+          <span class="line">(33) Und wenn jemand einen Brunnen öffnet, oder wenn jemand einen Brunnen gräbt und ihn nicht zudeckt, und es fällt ein Ochse oder ein Esel hinein —</span>
+          <span class="line">(34) so soll der Besitzer des Brunnens ersetzen; Geld soll er den Besitzern erstatten, und das tote Tier gehört ihm.</span>
+          <span class="line">(35) Und wenn der Ochse eines Mannes den Ochsen seines Nächsten stößt, dass er stirbt, so sollen sie den lebenden Ochsen verkaufen und sein Geld teilen, und auch das tote Tier sollen sie teilen.</span>
+          <span class="line">(36) Oder ist es bekannt geworden, dass der Ochse stößig war von gestern und vorgestern, und sein Besitzer hat ihn nicht verwahrt, so soll er Ochsen für Ochsen ersetzen, und das tote Tier gehört ihm.</span>
+          <span class="line">(37) Wenn jemand einen Ochsen oder ein Schaf stiehlt und schlachtet oder verkauft, soll er fünf Rinder für den Ochsen und vier Schafe für das Schaf ersetzen.</span>
+          <span class="line">(22:1) Wenn der Dieb beim Einbruch ergriffen wird und geschlagen, dass er stirbt — kein Blut wird über ihn vergossen.</span>
+          <span class="line">(2) Geht die Sonne über ihm auf — Blut über ihn. Er soll voll ersetzen; hat er nichts, so soll er für seinen Diebstahl verkauft werden.</span>
+          <span class="line">(3) Wird das Gestohlene lebendig in seiner Hand gefunden, vom Ochsen bis zum Esel, bis zum Schaf — doppelt soll er ersetzen.</span>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- ── ALIYAH 3 · שלישי · Schemot 22:4-26 ── -->
+    <div class="aliyah-block">
+      <div class="aliyah-label">עֲלִיָּה שְׁלִישִׁית — שׁוֹמְרִים · גֵּר · אַלְמָנָה · יָתוֹם · עָנִי<span class="aliyah-label-de">Dritte Aliyah · Schemot 22:4–26 · Felder und Brand · die vier Verwahrer · Verführung · Hexerei · Sozial-Mitzwot Anfang · Witwe, Waise, Fremdling, Armer</span></div>
+      <div class="instrument-note">[no percussion] [no drums] [no choir] [acoustic guitar — Rast continuing in steady fingerpicking, then warming at „gerim heyitem be'eretz Mitzrayim", the social-mitzwot rising in gentle warmth, no percussion] Gitarre: Rast setzt im stetigen Fingerpicking fort, erwärmt sich bei „Fremdlinge wart ihr in Mitzrayim", die Sozial-Mitzwot steigen in zarter Wärme.</div>
+      <div class="lyrics-block">
+        <div class="lyrics-he" dir="rtl">
+          <span class="line">כִּי יַבְעֶר־אִישׁ שָׂדֶה אוֹ־כֶרֶם וְשִׁלַּח אֶת־בְּעִירֹה וּבִעֵר בִּשְׂדֵה אַחֵר מֵיטַב שָׂדֵהוּ וּמֵיטַב כַּרְמוֹ יְשַׁלֵּם׃</span>
+          <span class="line">כִּי־תֵצֵא אֵשׁ וּמָצְאָה קֹצִים וְנֶאֱכַל גָּדִישׁ אוֹ הַקָּמָה אוֹ הַשָּׂדֶה שַׁלֵּם יְשַׁלֵּם הַמַּבְעִר אֶת־הַבְּעֵרָה׃</span>
+          <span class="line">כִּי־יִתֵּן אִישׁ אֶל־רֵעֵהוּ כֶּסֶף אוֹ־כֵלִים לִשְׁמֹר וְגֻנַּב מִבֵּית הָאִישׁ אִם־יִמָּצֵא הַגַּנָּב יְשַׁלֵּם שְׁנָיִם׃</span>
+          <span class="line">אִם־לֹא יִמָּצֵא הַגַּנָּב וְנִקְרַב בַּעַל־הַבַּיִת אֶל־הָאֱלֹהִים אִם־לֹא שָׁלַח יָדוֹ בִּמְלֶאכֶת רֵעֵהוּ׃</span>
+          <span class="line">עַל־כׇּל־דְּבַר־פֶּשַׁע עַל־שׁוֹר עַל־חֲמוֹר עַל־שֶׂה עַל־שַׂלְמָה עַל־כׇּל־אֲבֵדָה אֲשֶׁר יֹאמַר כִּי־הוּא זֶה עַד הָאֱלֹהִים יָבֹא דְּבַר־שְׁנֵיהֶם אֲשֶׁר יַרְשִׁיעֻן אֱלֹהִים יְשַׁלֵּם שְׁנַיִם לְרֵעֵהוּ׃</span>
+          <span class="line">כִּי־יִתֵּן אִישׁ אֶל־רֵעֵהוּ חֲמוֹר אוֹ־שׁוֹר אוֹ־שֶׂה וְכׇל־בְּהֵמָה לִשְׁמֹר וּמֵת אוֹ־נִשְׁבַּר אוֹ־נִשְׁבָּה אֵין רֹאֶה׃</span>
+          <span class="line">שְׁבֻעַת אֲדֹנָי תִּהְיֶה בֵּין שְׁנֵיהֶם אִם־לֹא שָׁלַח יָדוֹ בִּמְלֶאכֶת רֵעֵהוּ וְלָקַח בְּעָלָיו וְלֹא יְשַׁלֵּם׃</span>
+          <span class="line">וְאִם־גָּנֹב יִגָּנֵב מֵעִמּוֹ יְשַׁלֵּם לִבְעָלָיו׃</span>
+          <span class="line">אִם־טָרֹף יִטָּרֵף יְבִאֵהוּ עֵד הַטְּרֵפָה לֹא יְשַׁלֵּם׃</span>
+          <span class="line">וְכִי־יִשְׁאַל אִישׁ מֵעִם רֵעֵהוּ וְנִשְׁבַּר אוֹ־מֵת בְּעָלָיו אֵין־עִמּוֹ שַׁלֵּם יְשַׁלֵּם׃</span>
+          <span class="line">אִם־בְּעָלָיו עִמּוֹ לֹא יְשַׁלֵּם אִם־שָׂכִיר הוּא בָּא בִּשְׂכָרוֹ׃</span>
+          <span class="line">וְכִי־יְפַתֶּה אִישׁ בְּתוּלָה אֲשֶׁר לֹא־אֹרָשָׂה וְשָׁכַב עִמָּהּ מָהֹר יִמְהָרֶנָּה לּוֹ לְאִשָּׁה׃</span>
+          <span class="line">אִם־מָאֵן יְמָאֵן אָבִיהָ לְתִתָּהּ לוֹ כֶּסֶף יִשְׁקֹל כְּמֹהַר הַבְּתוּלֹת׃</span>
+          <span class="line">מְכַשֵּׁפָה לֹא תְחַיֶּה׃</span>
+          <span class="line">כׇּל־שֹׁכֵב עִם־בְּהֵמָה מוֹת יוּמָת׃</span>
+          <span class="line">זֹבֵחַ לָאֱלֹהִים יׇחֳרָם בִּלְתִּי לַאדֹנָי לְבַדּוֹ׃</span>
+          <span class="line">וְגֵר לֹא־תוֹנֶה וְלֹא תִלְחָצֶנּוּ כִּי־גֵרִים הֱיִיתֶם בְּאֶרֶץ מִצְרָיִם׃</span>
+          <span class="line">כׇּל־אַלְמָנָה וְיָתוֹם לֹא תְעַנּוּן׃</span>
+          <span class="line">אִם־עַנֵּה תְעַנֶּה אֹתוֹ כִּי אִם־צָעֹק יִצְעַק אֵלַי שָׁמֹעַ אֶשְׁמַע צַעֲקָתוֹ׃</span>
+          <span class="line">וְחָרָה אַפִּי וְהָרַגְתִּי אֶתְכֶם בֶּחָרֶב וְהָיוּ נְשֵׁיכֶם אַלְמָנוֹת וּבְנֵיכֶם יְתֹמִים׃</span>
+          <span class="line">אִם־כֶּסֶף תַּלְוֶה אֶת־עַמִּי אֶת־הֶעָנִי עִמָּךְ לֹא־תִהְיֶה לוֹ כְּנֹשֶׁה לֹא־תְשִׂימוּן עָלָיו נֶשֶׁךְ׃</span>
+          <span class="line">אִם־חָבֹל תַּחְבֹּל שַׂלְמַת רֵעֶךָ עַד־בֹּא הַשֶּׁמֶשׁ תְּשִׁיבֶנּוּ לוֹ׃</span>
+          <span class="line">כִּי הִוא כְסוּתֹה לְבַדָּהּ הִוא שִׂמְלָתוֹ לְעֹרוֹ בַּמֶּה יִשְׁכָּב וְהָיָה כִּי־יִצְעַק אֵלַי וְשָׁמַעְתִּי כִּי־חַנּוּן אָנִי׃</span>
+        </div>
+        <div class="lyrics-de">
+          <span class="line">(22:4) Wenn jemand ein Feld oder einen Weinberg abweidet und sein Vieh frei lässt, und es weidet auf dem Feld eines anderen — vom Besten seines Feldes und vom Besten seines Weinbergs soll er ersetzen.</span>
+          <span class="line">(5) Wenn ein Feuer ausbricht und Dornen ergreift, und ein Garbenhaufen oder das stehende Korn oder das Feld wird verzehrt — voll soll der Anzünder des Brandes ersetzen.</span>
+          <span class="line">(6) Wenn jemand seinem Nächsten Geld oder Geräte zur Verwahrung gibt, und es wird aus dem Haus des Mannes gestohlen — wird der Dieb gefunden, soll er doppelt ersetzen.</span>
+          <span class="line">(7) Wird der Dieb nicht gefunden, so trete der Hausherr vor das Gericht (die „Elohim") — ob er nicht seine Hand an das Eigentum seines Nächsten gelegt hat.</span>
+          <span class="line">(8) Bei jeder Sache der Veruntreuung — über Ochse, Esel, Schaf, Kleid, jeden Verlust, von dem einer sagt: „Das ist es" — soll die Sache beider vor das Gericht kommen. Wen die Richter schuldig sprechen, soll seinem Nächsten doppelt ersetzen.</span>
+          <span class="line">(9) Wenn jemand seinem Nächsten Esel, Ochsen, Schaf oder irgendein Vieh zur Verwahrung gibt, und es stirbt oder bricht sich Glieder oder wird weggetrieben, und niemand sieht es —</span>
+          <span class="line">(10) so soll ein Schwur Adonais zwischen beiden sein, dass er seine Hand nicht an das Eigentum seines Nächsten gelegt hat; und der Besitzer soll es annehmen, und jener soll nicht ersetzen.</span>
+          <span class="line">(11) Wird es ihm aber gestohlen, soll er es dem Besitzer ersetzen.</span>
+          <span class="line">(12) Wird es zerrissen, so bringe er es als Zeugnis bei; das Zerrissene soll er nicht ersetzen.</span>
+          <span class="line">(13) Und wenn jemand von seinem Nächsten leiht, und es bricht sich Glieder oder stirbt, und sein Besitzer ist nicht dabei, soll er voll ersetzen.</span>
+          <span class="line">(14) Ist sein Besitzer dabei, soll er nicht ersetzen. Ist es ein Mietstück, so geht es in seinem Mietpreis auf.</span>
+          <span class="line">(15) Und wenn jemand eine Jungfrau verführt, die nicht verlobt ist, und liegt bei ihr, soll er sie sich gegen Brautgeld zur Frau nehmen.</span>
+          <span class="line">(16) Weigert sich ihr Vater entschieden, sie ihm zu geben, soll er Geld abwiegen — nach dem Brautgeld der Jungfrauen.</span>
+          <span class="line">(17) Eine Hexe sollst du nicht am Leben lassen.</span>
+          <span class="line">(18) Jeder, der bei einem Tier liegt, soll des Todes sterben.</span>
+          <span class="line">(19) Wer Göttern opfert — außer Adonai allein — soll dem Bann verfallen.</span>
+          <span class="line">(20) Und einen Fremdling sollst du nicht bedrücken und nicht bedrängen, denn Fremdlinge wart ihr im Land Mitzrayim.</span>
+          <span class="line">(21) Keine Witwe und keine Waise sollt ihr quälen.</span>
+          <span class="line">(22) Wenn du sie wirklich quälst — und sie schreit zu mir, ich werde ihren Schrei gewiss hören.</span>
+          <span class="line">(23) Und mein Zorn wird entbrennen, und ich werde euch mit dem Schwert töten, und eure Frauen werden Witwen und eure Söhne Waisen.</span>
+          <span class="line">(24) Wenn du meinem Volk, dem Armen bei dir, Geld leihst, sollst du ihm nicht wie ein Gläubiger sein; ihr sollt ihm keinen Zins auflegen.</span>
+          <span class="line">(25) Wenn du das Kleid deines Nächsten zum Pfand nimmst, sollst du es ihm vor Sonnenuntergang zurückgeben.</span>
+          <span class="line">(26) Denn es ist seine einzige Decke, es ist sein Mantel für seine Haut — worin soll er liegen? Und wenn er zu mir schreit, werde ich ihn hören, denn ich bin gnädig.</span>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- ── ALIYAH 4 · רביעי · Schemot 22:27-23:5 ── -->
+    <div class="aliyah-block">
+      <div class="aliyah-label">עֲלִיָּה רְבִיעִית — אֱלֹהִים לֹא תְקַלֵּל · אַנְשֵׁי קֹדֶשׁ · עֵד חָמָס<span class="aliyah-label-de">Vierte Aliyah · Schemot 22:27–23:5 · Verbot des Gott-Fluchens und Fürsten-Verfluchens · Erstgeburt · Heilige des Bundes · falscher Zeuge · Mehrheits-Verzerrung · Hilfe für Feind und Vieh</span></div>
+      <div class="instrument-note">[no percussion] [no drums] [no choir] [acoustic guitar — Rast in measured solemnity, the holy-people verse rising slightly, then the truth-and-justice catalog as a clear walking line, no percussion] Gitarre: Rast in gemessener Feierlichkeit — der Heilig-Volks-Vers steigt leicht, dann der Wahrheits-und-Gerechtigkeits-Katalog als klare Schritt-Linie.</div>
+      <div class="lyrics-block">
+        <div class="lyrics-he" dir="rtl">
+          <span class="line">אֱלֹהִים לֹא תְקַלֵּל וְנָשִׂיא בְעַמְּךָ לֹא תָאֹר׃</span>
+          <span class="line">מְלֵאָתְךָ וְדִמְעֲךָ לֹא תְאַחֵר בְּכוֹר בָּנֶיךָ תִּתֶּן־לִי׃</span>
+          <span class="line">כֵּן־תַּעֲשֶׂה לְשֹׁרְךָ לְצֹאנֶךָ שִׁבְעַת יָמִים יִהְיֶה עִם־אִמּוֹ בַּיּוֹם הַשְּׁמִינִי תִּתְּנוֹ־לִי׃</span>
+          <span class="line">וְאַנְשֵׁי־קֹדֶשׁ תִּהְיוּן לִי וּבָשָׂר בַּשָּׂדֶה טְרֵפָה לֹא תֹאכֵלוּ לַכֶּלֶב תַּשְׁלִכוּן אֹתוֹ׃</span>
+          <span class="line">לֹא תִשָּׂא שֵׁמַע שָׁוְא אַל־תָּשֶׁת יָדְךָ עִם־רָשָׁע לִהְיֹת עֵד חָמָס׃</span>
+          <span class="line">לֹא־תִהְיֶה אַחֲרֵי־רַבִּים לְרָעֹת וְלֹא־תַעֲנֶה עַל־רִב לִנְטֹת אַחֲרֵי רַבִּים לְהַטֹּת׃</span>
+          <span class="line">וְדָל לֹא תֶהְדַּר בְּרִיבוֹ׃</span>
+          <span class="line">כִּי תִפְגַּע שׁוֹר אֹיִבְךָ אוֹ חֲמֹרוֹ תֹּעֶה הָשֵׁב תְּשִׁיבֶנּוּ לוֹ׃</span>
+          <span class="line">כִּי־תִרְאֶה חֲמוֹר שֹׂנַאֲךָ רֹבֵץ תַּחַת מַשָּׂאוֹ וְחָדַלְתָּ מֵעֲזֹב לוֹ עָזֹב תַּעֲזֹב עִמּוֹ׃</span>
+        </div>
+        <div class="lyrics-de">
+          <span class="line">(22:27) Gott (das Gericht) sollst du nicht fluchen, und einem Fürsten in deinem Volk sollst du nicht fluchen.</span>
+          <span class="line">(28) Deine Fülle und deinen Saft sollst du nicht zurückhalten; den Erstgeborenen deiner Söhne sollst du mir geben.</span>
+          <span class="line">(29) So sollst du auch mit deinem Rind und deinem Schaf tun: sieben Tage soll es bei seiner Mutter sein, am achten Tag sollst du es mir geben.</span>
+          <span class="line">(30) Und Heilige sollt ihr mir sein — und Fleisch, das auf dem Feld zerrissen ist, sollt ihr nicht essen, dem Hund sollt ihr es hinwerfen.</span>
+          <span class="line">(23:1) Du sollst kein falsches Gerücht aufnehmen; lege deine Hand nicht mit dem Frevler, um ein Zeuge der Gewalt zu sein.</span>
+          <span class="line">(2) Folge nicht der Menge zum Bösen; und antworte in einer Streitsache nicht so, dass du dich nach der Mehrheit beugst, das Recht zu beugen.</span>
+          <span class="line">(3) Und dem Geringen sollst du in seinem Streit nicht parteiisch begünstigen.</span>
+          <span class="line">(4) Wenn du dem Ochsen deines Feindes oder seinem Esel begegnest, der sich verlaufen hat — gewiss bring ihn ihm zurück.</span>
+          <span class="line">(5) Wenn du den Esel deines Hassers unter seiner Last liegen siehst und du würdest unterlassen, ihm zu helfen — gewiss hilf mit ihm.</span>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- ── ALIYAH 5 · חמישי · Schemot 23:6-19 ── -->
+    <div class="aliyah-block">
+      <div class="aliyah-label">עֲלִיָּה חֲמִישִׁית — מִדְּבַר־שֶׁקֶר תִּרְחָק · שָׁלֹשׁ רְגָלִים תָּחֹג לִי<span class="aliyah-label-de">Fünfte Aliyah · Schemot 23:6–19 · Rechts-Beugung und Bestechung verboten · der Fremdling · Schmittah und Schabbat · die drei Wallfahrts-Feste · Bikkurim · Kid-im-Milch-der-Mutter-Verbot</span></div>
+      <div class="instrument-note">[no percussion] [no drums] [no choir] [acoustic guitar — Rast in clear royal calendar steps, the schmittah-rhythm and the three-times-a-year ascent like a measured year-cycle, no percussion] Gitarre: Rast in klaren königlich-kalendarischen Schritten — der Schmittah-Rhythmus und der dreifache Wallfahrts-Aufstieg wie ein gemessener Jahres-Zyklus.</div>
+      <div class="lyrics-block">
+        <div class="lyrics-he" dir="rtl">
+          <span class="line">לֹא תַטֶּה מִשְׁפַּט אֶבְיֹנְךָ בְּרִיבוֹ׃</span>
+          <span class="line">מִדְּבַר־שֶׁקֶר תִּרְחָק וְנָקִי וְצַדִּיק אַל־תַּהֲרֹג כִּי לֹא־אַצְדִּיק רָשָׁע׃</span>
+          <span class="line">וְשֹׁחַד לֹא תִקָּח כִּי הַשֹּׁחַד יְעַוֵּר פִּקְחִים וִיסַלֵּף דִּבְרֵי צַדִּיקִים׃</span>
+          <span class="line">וְגֵר לֹא תִלְחָץ וְאַתֶּם יְדַעְתֶּם אֶת־נֶפֶשׁ הַגֵּר כִּי־גֵרִים הֱיִיתֶם בְּאֶרֶץ מִצְרָיִם׃</span>
+          <span class="line">וְשֵׁשׁ שָׁנִים תִּזְרַע אֶת־אַרְצֶךָ וְאָסַפְתָּ אֶת־תְּבוּאָתָהּ׃</span>
+          <span class="line">וְהַשְּׁבִיעִת תִּשְׁמְטֶנָּה וּנְטַשְׁתָּהּ וְאָכְלוּ אֶבְיֹנֵי עַמֶּךָ וְיִתְרָם תֹּאכַל חַיַּת הַשָּׂדֶה כֵּן־תַּעֲשֶׂה לְכַרְמְךָ לְזֵיתֶךָ׃</span>
+          <span class="line">שֵׁשֶׁת יָמִים תַּעֲשֶׂה מַעֲשֶׂיךָ וּבַיּוֹם הַשְּׁבִיעִי תִּשְׁבֹּת לְמַעַן יָנוּחַ שׁוֹרְךָ וַחֲמֹרֶךָ וְיִנָּפֵשׁ בֶּן־אֲמָתְךָ וְהַגֵּר׃</span>
+          <span class="line">וּבְכֹל אֲשֶׁר־אָמַרְתִּי אֲלֵיכֶם תִּשָּׁמֵרוּ וְשֵׁם אֱלֹהִים אֲחֵרִים לֹא תַזְכִּירוּ לֹא יִשָּׁמַע עַל־פִּיךָ׃</span>
+          <span class="line">שָׁלֹשׁ רְגָלִים תָּחֹג לִי בַּשָּׁנָה׃</span>
+          <span class="line">אֶת־חַג הַמַּצּוֹת תִּשְׁמֹר שִׁבְעַת יָמִים תֹּאכַל מַצּוֹת כַּאֲשֶׁר צִוִּיתִךָ לְמוֹעֵד חֹדֶשׁ הָאָבִיב כִּי־בוֹ יָצָאתָ מִמִּצְרָיִם וְלֹא־יֵרָאוּ פָנַי רֵיקָם׃</span>
+          <span class="line">וְחַג הַקָּצִיר בִּכּוּרֵי מַעֲשֶׂיךָ אֲשֶׁר תִּזְרַע בַּשָּׂדֶה וְחַג הָאָסִף בְּצֵאת הַשָּׁנָה בְּאׇסְפְּךָ אֶת־מַעֲשֶׂיךָ מִן־הַשָּׂדֶה׃</span>
+          <span class="line">שָׁלֹשׁ פְּעָמִים בַּשָּׁנָה יֵרָאֶה כׇּל־זְכוּרְךָ אֶל־פְּנֵי הָאָדֹן אֲדֹנָי׃</span>
+          <span class="line">לֹא־תִזְבַּח עַל־חָמֵץ דַּם־זִבְחִי וְלֹא־יָלִין חֵלֶב־חַגִּי עַד־בֹּקֶר׃</span>
+          <span class="line">רֵאשִׁית בִּכּוּרֵי אַדְמָתְךָ תָּבִיא בֵּית אֲדֹנָי אֱלֹהֶיךָ לֹא־תְבַשֵּׁל גְּדִי בַּחֲלֵב אִמּוֹ׃</span>
+        </div>
+        <div class="lyrics-de">
+          <span class="line">(23:6) Du sollst das Recht deines Armen in seinem Streit nicht beugen.</span>
+          <span class="line">(7) Von einer Lügen-Sache halte dich fern; und einen Unschuldigen und Gerechten töte nicht — denn ich spreche den Frevler nicht gerecht.</span>
+          <span class="line">(8) Und Bestechung nimm nicht — denn die Bestechung blendet die Sehenden und verdreht die Worte der Gerechten.</span>
+          <span class="line">(9) Einen Fremdling sollst du nicht bedrücken — ihr selbst kennt die Seele des Fremdlings, denn Fremdlinge wart ihr im Land Mitzrayim.</span>
+          <span class="line">(10) Sechs Jahre besäe dein Land und sammle seinen Ertrag ein.</span>
+          <span class="line">(11) Aber im siebten lass es ruhen und liege es brach — die Armen deines Volkes sollen davon essen, und was übrig bleibt, soll das Wild des Feldes fressen. Ebenso tu mit deinem Weinberg und deinem Ölgarten.</span>
+          <span class="line">(12) Sechs Tage tu deine Werke, und am siebten Tag halte Schabbat — damit dein Ochse und dein Esel ruhen, und der Sohn deiner Magd und der Fremdling aufatmen.</span>
+          <span class="line">(13) Und in allem, was ich euch gesagt habe, hütet euch; und den Namen anderer Götter erwähnt nicht, er werde nicht aus deinem Mund gehört.</span>
+          <span class="line">(14) Dreimal im Jahr sollst du mir ein Fest feiern.</span>
+          <span class="line">(15) Das Fest der ungesäuerten Brote sollst du halten: sieben Tage sollst du Mazzot essen, wie ich dir geboten habe, zur bestimmten Zeit im Mond Awiw, denn in ihm zogst du aus Mitzrayim aus; und mein Angesicht soll nicht leer geschaut werden.</span>
+          <span class="line">(16) Und das Fest der Ernte, der Erstlinge deiner Arbeit, dessen, was du im Feld säst; und das Fest der Sammlung, beim Ausgang des Jahres, wenn du deine Werke aus dem Feld einsammelst.</span>
+          <span class="line">(17) Dreimal im Jahr soll alles, was unter dir männlich ist, erscheinen vor dem Angesicht des Herrn, Adonai.</span>
+          <span class="line">(18) Du sollst nicht auf gesäuertem Brot das Blut meines Opfers schlachten; und das Fett meines Festopfers soll nicht über Nacht bleiben bis zum Morgen.</span>
+          <span class="line">(19) Die Erstlinge der Erstgeburten deines Bodens sollst du in das Haus Adonais, deines Gottes, bringen. Du sollst ein Böcklein nicht in der Milch seiner Mutter kochen.</span>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- ── ALIYAH 6 · שישי · Schemot 23:20-25 ── -->
+    <div class="aliyah-block">
+      <div class="aliyah-label">עֲלִיָּה שִׁשִּׁית — הִנֵּה אָנֹכִי שֹׁלֵחַ מַלְאָךְ לְפָנֶיךָ<span class="aliyah-label-de">Sechste Aliyah · Schemot 23:20–25 · Der vorausgesandte Bote · Hören seiner Stimme · Vertilgung der Völker · Verbot der Anbetung fremder Götter · Brot, Wasser, Heilung</span></div>
+      <div class="instrument-note">[no percussion] [no drums] [no choir] [acoustic guitar — Rast widening with mild brightness, the malach-promise as a hovering high tone, then descending to the bread-water-healing closure, no percussion] Gitarre: Rast weitet sich in milder Helle — die Mal'ach-Verheißung als schwebender Hoch-Ton, dann absteigend in die Brot-Wasser-Heilungs-Schließung.</div>
+      <div class="lyrics-block">
+        <div class="lyrics-he" dir="rtl">
+          <span class="line">הִנֵּה אָנֹכִי שֹׁלֵחַ מַלְאָךְ לְפָנֶיךָ לִשְׁמׇרְךָ בַּדָּרֶךְ וְלַהֲבִיאֲךָ אֶל־הַמָּקוֹם אֲשֶׁר הֲכִנֹתִי׃</span>
+          <span class="line">הִשָּׁמֶר מִפָּנָיו וּשְׁמַע בְּקֹלוֹ אַל־תַּמֵּר בּוֹ כִּי לֹא יִשָּׂא לְפִשְׁעֲכֶם כִּי שְׁמִי בְּקִרְבּוֹ׃</span>
+          <span class="line">כִּי אִם־שָׁמוֹעַ תִּשְׁמַע בְּקֹלוֹ וְעָשִׂיתָ כֹּל אֲשֶׁר אֲדַבֵּר וְאָיַבְתִּי אֶת־אֹיְבֶיךָ וְצַרְתִּי אֶת־צֹרְרֶיךָ׃</span>
+          <span class="line">כִּי־יֵלֵךְ מַלְאָכִי לְפָנֶיךָ וֶהֱבִיאֲךָ אֶל־הָאֱמֹרִי וְהַחִתִּי וְהַפְּרִזִּי וְהַכְּנַעֲנִי הַחִוִּי וְהַיְבוּסִי וְהִכְחַדְתִּיו׃</span>
+          <span class="line">לֹא־תִשְׁתַּחֲוֶה לֵאלֹהֵיהֶם וְלֹא תׇעׇבְדֵם וְלֹא תַעֲשֶׂה כְּמַעֲשֵׂיהֶם כִּי הָרֵס תְּהָרְסֵם וְשַׁבֵּר תְּשַׁבֵּר מַצֵּבֹתֵיהֶם׃</span>
+          <span class="line">וַעֲבַדְתֶּם אֵת אֲדֹנָי אֱלֹהֵיכֶם וּבֵרַךְ אֶת־לַחְמְךָ וְאֶת־מֵימֶיךָ וַהֲסִרֹתִי מַחֲלָה מִקִּרְבֶּךָ׃</span>
+        </div>
+        <div class="lyrics-de">
+          <span class="line">(23:20) Siehe, ich sende einen Boten vor dir her, dich auf dem Wege zu bewahren und dich an den Ort zu bringen, den ich bereitet habe.</span>
+          <span class="line">(21) Hüte dich vor ihm und höre auf seine Stimme, sei nicht widerspenstig gegen ihn — denn er wird euer Vergehen nicht tragen, denn mein Name ist in ihm.</span>
+          <span class="line">(22) Doch wenn du genau auf seine Stimme hörst und alles tust, was ich rede, will ich deine Feinde befeinden und deine Bedränger bedrängen.</span>
+          <span class="line">(23) Denn mein Bote wird vor dir hergehen und dich bringen zum Emoriter, Chittiter, Perissi, Kena'aniter, Chiwwiter und Yevussi — und ich werde sie vertilgen.</span>
+          <span class="line">(24) Du sollst dich vor ihren Göttern nicht niederwerfen und ihnen nicht dienen und nicht handeln nach ihren Werken — sondern niederreißen sollst du sie und ihre Mazzevot zerbrechen.</span>
+          <span class="line">(25) Und ihr sollt Adonai, eurem Gott, dienen; und er wird dein Brot und dein Wasser segnen, und ich werde Krankheit aus deiner Mitte entfernen.</span>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- ── ALIYAH 7 · שביעי · Schemot 23:26-24:18 ── -->
+    <div class="aliyah-block">
+      <div class="aliyah-label">עֲלִיָּה שְׁבִיעִית — נַעֲשֶׂה וְנִשְׁמָע · בְּרִית הַסַּפִּיר · אַרְבָּעִים יוֹם וְאַרְבָּעִים לָיְלָה<span class="aliyah-label-de">Siebte Aliyah · Schemot 23:26–24:18 · Verheißung der Landgewinnung und Grenz-Setzung · Mosches Aufstieg mit Ältesten · Brit-Korbanot · „wir werden tun und hören" · Saphir-Schau · 40 Tage und Nächte im Wolken-Sinai</span></div>
+      <div class="instrument-note">[no percussion] [no drums] [no choir] [acoustic guitar — Rast rising in solemn ascent, the bond-of-blood at 24:8 with mid-forte clarity, then the saphir-pavement vision in a hush, and the long forty-days koda in tapering breath, no percussion] Gitarre: Rast steigt im feierlichen Aufstieg — der Blut-Bund bei 24:8 in mittelstarker Klarheit, dann die Saphir-Pflaster-Vision in Stille, und die lange Vierzig-Tage-Koda im sich auflösenden Atem.</div>
+      <div class="lyrics-block">
+        <div class="lyrics-he" dir="rtl">
+          <span class="line">לֹא תִהְיֶה מְשַׁכֵּלָה וַעֲקָרָה בְּאַרְצֶךָ אֶת־מִסְפַּר יָמֶיךָ אֲמַלֵּא׃</span>
+          <span class="line">אֶת־אֵימָתִי אֲשַׁלַּח לְפָנֶיךָ וְהַמֹּתִי אֶת־כׇּל־הָעָם אֲשֶׁר תָּבֹא בָּהֶם וְנָתַתִּי אֶת־כׇּל־אֹיְבֶיךָ אֵלֶיךָ עֹרֶף׃</span>
+          <span class="line">וְשָׁלַחְתִּי אֶת־הַצִּרְעָה לְפָנֶיךָ וְגֵרְשָׁה אֶת־הַחִוִּי אֶת־הַכְּנַעֲנִי וְאֶת־הַחִתִּי מִלְּפָנֶיךָ׃</span>
+          <span class="line">לֹא אֲגָרְשֶׁנּוּ מִפָּנֶיךָ בְּשָׁנָה אֶחָת פֶּן־תִּהְיֶה הָאָרֶץ שְׁמָמָה וְרַבָּה עָלֶיךָ חַיַּת הַשָּׂדֶה׃</span>
+          <span class="line">מְעַט מְעַט אֲגָרְשֶׁנּוּ מִפָּנֶיךָ עַד אֲשֶׁר תִּפְרֶה וְנָחַלְתָּ אֶת־הָאָרֶץ׃</span>
+          <span class="line">וְשַׁתִּי אֶת־גְּבֻלְךָ מִיַּם־סוּף וְעַד־יָם פְּלִשְׁתִּים וּמִמִּדְבָּר עַד־הַנָּהָר כִּי אֶתֵּן בְּיֶדְכֶם אֵת יֹשְׁבֵי הָאָרֶץ וְגֵרַשְׁתָּמוֹ מִפָּנֶיךָ׃</span>
+          <span class="line">לֹא־תִכְרֹת לָהֶם וְלֵאלֹהֵיהֶם בְּרִית׃</span>
+          <span class="line">לֹא יֵשְׁבוּ בְּאַרְצְךָ פֶּן־יַחֲטִיאוּ אֹתְךָ לִי כִּי תַעֲבֹד אֶת־אֱלֹהֵיהֶם כִּי־יִהְיֶה לְךָ לְמוֹקֵשׁ׃</span>
+          <span class="line">וְאֶל־מֹשֶׁה אָמַר עֲלֵה אֶל־אֲדֹנָי אַתָּה וְאַהֲרֹן נָדָב וַאֲבִיהוּא וְשִׁבְעִים מִזִּקְנֵי יִשְׂרָאֵל וְהִשְׁתַּחֲוִיתֶם מֵרָחֹק׃</span>
+          <span class="line">וְנִגַּשׁ מֹשֶׁה לְבַדּוֹ אֶל־אֲדֹנָי וְהֵם לֹא יִגָּשׁוּ וְהָעָם לֹא יַעֲלוּ עִמּוֹ׃</span>
+          <span class="line">וַיָּבֹא מֹשֶׁה וַיְסַפֵּר לָעָם אֵת כׇּל־דִּבְרֵי אֲדֹנָי וְאֵת כׇּל־הַמִּשְׁפָּטִים וַיַּעַן כׇּל־הָעָם קוֹל אֶחָד וַיֹּאמְרוּ כׇּל־הַדְּבָרִים אֲשֶׁר־דִּבֶּר אֲדֹנָי נַעֲשֶׂה׃</span>
+          <span class="line">וַיִּכְתֹּב מֹשֶׁה אֵת כׇּל־דִּבְרֵי אֲדֹנָי וַיַּשְׁכֵּם בַּבֹּקֶר וַיִּבֶן מִזְבֵּחַ תַּחַת הָהָר וּשְׁתֵּים עֶשְׂרֵה מַצֵּבָה לִשְׁנֵים עָשָׂר שִׁבְטֵי יִשְׂרָאֵל׃</span>
+          <span class="line">וַיִּשְׁלַח אֶת־נַעֲרֵי בְּנֵי יִשְׂרָאֵל וַיַּעֲלוּ עֹלֹת וַיִּזְבְּחוּ זְבָחִים שְׁלָמִים לַאדֹנָי פָּרִים׃</span>
+          <span class="line">וַיִּקַּח מֹשֶׁה חֲצִי הַדָּם וַיָּשֶׂם בָּאַגָּנֹת וַחֲצִי הַדָּם זָרַק עַל־הַמִּזְבֵּחַ׃</span>
+          <span class="line">וַיִּקַּח סֵפֶר הַבְּרִית וַיִּקְרָא בְּאׇזְנֵי הָעָם וַיֹּאמְרוּ כֹּל אֲשֶׁר־דִּבֶּר אֲדֹנָי נַעֲשֶׂה וְנִשְׁמָע׃</span>
+          <span class="line">וַיִּקַּח מֹשֶׁה אֶת־הַדָּם וַיִּזְרֹק עַל־הָעָם וַיֹּאמֶר הִנֵּה דַם־הַבְּרִית אֲשֶׁר כָּרַת אֲדֹנָי עִמָּכֶם עַל כׇּל־הַדְּבָרִים הָאֵלֶּה׃</span>
+          <span class="line">וַיַּעַל מֹשֶׁה וְאַהֲרֹן נָדָב וַאֲבִיהוּא וְשִׁבְעִים מִזִּקְנֵי יִשְׂרָאֵל׃</span>
+          <span class="line">וַיִּרְאוּ אֵת אֱלֹהֵי יִשְׂרָאֵל וְתַחַת רַגְלָיו כְּמַעֲשֵׂה לִבְנַת הַסַּפִּיר וּכְעֶצֶם הַשָּׁמַיִם לָטֹהַר׃</span>
+          <span class="line">וְאֶל־אֲצִילֵי בְּנֵי יִשְׂרָאֵל לֹא שָׁלַח יָדוֹ וַיֶּחֱזוּ אֶת־הָאֱלֹהִים וַיֹּאכְלוּ וַיִּשְׁתּוּ׃</span>
+          <span class="line">וַיֹּאמֶר אֲדֹנָי אֶל־מֹשֶׁה עֲלֵה אֵלַי הָהָרָה וֶהְיֵה־שָׁם וְאֶתְּנָה לְךָ אֶת־לֻחֹת הָאֶבֶן וְהַתּוֹרָה וְהַמִּצְוָה אֲשֶׁר כָּתַבְתִּי לְהוֹרֹתָם׃</span>
+          <span class="line">וַיָּקׇם מֹשֶׁה וִיהוֹשֻׁעַ מְשָׁרְתוֹ וַיַּעַל מֹשֶׁה אֶל־הַר הָאֱלֹהִים׃</span>
+          <span class="line">וְאֶל־הַזְּקֵנִים אָמַר שְׁבוּ־לָנוּ בָזֶה עַד אֲשֶׁר־נָשׁוּב אֲלֵיכֶם וְהִנֵּה אַהֲרֹן וְחוּר עִמָּכֶם מִי־בַעַל דְּבָרִים יִגַּשׁ אֲלֵהֶם׃</span>
+          <span class="line">וַיַּעַל מֹשֶׁה אֶל־הָהָר וַיְכַס הֶעָנָן אֶת־הָהָר׃</span>
+          <span class="line">וַיִּשְׁכֹּן כְּבוֹד־אֲדֹנָי עַל־הַר סִינַי וַיְכַסֵּהוּ הֶעָנָן שֵׁשֶׁת יָמִים וַיִּקְרָא אֶל־מֹשֶׁה בַּיּוֹם הַשְּׁבִיעִי מִתּוֹךְ הֶעָנָן׃</span>
+          <span class="line">וּמַרְאֵה כְּבוֹד אֲדֹנָי כְּאֵשׁ אֹכֶלֶת בְּרֹאשׁ הָהָר לְעֵינֵי בְּנֵי יִשְׂרָאֵל׃</span>
+          <span class="line">וַיָּבֹא מֹשֶׁה בְּתוֹךְ הֶעָנָן וַיַּעַל אֶל־הָהָר וַיְהִי מֹשֶׁה בָּהָר אַרְבָּעִים יוֹם וְאַרְבָּעִים לָיְלָה׃</span>
+        </div>
+        <div class="lyrics-de">
+          <span class="line">(23:26) Es soll keine Fehlgebärende oder Unfruchtbare in deinem Land geben; die Zahl deiner Tage werde ich erfüllen.</span>
+          <span class="line">(27) Meinen Schrecken werde ich vor dir hersenden und alles Volk in Verwirrung bringen, zu dem du kommst; ich werde dir alle deine Feinde den Nacken kehren lassen.</span>
+          <span class="line">(28) Und ich werde die Hornisse vor dir hersenden, und sie wird Chiwwi, Kena'ani und Chitti vor dir vertreiben.</span>
+          <span class="line">(29) Ich werde sie nicht in einem Jahr vor dir vertreiben, damit das Land nicht zur Wüste werde und das Wild des Feldes sich nicht gegen dich vermehre.</span>
+          <span class="line">(30) Wenig nach wenig werde ich sie vor dir vertreiben, bis du dich vermehrst und das Land erbst.</span>
+          <span class="line">(31) Und ich setze deine Grenze vom Schilfmeer bis zum Meer der Plischtim, und von der Wüste bis zum Strom — denn ich gebe in eure Hand die Bewohner des Landes, und du wirst sie vor dir vertreiben.</span>
+          <span class="line">(32) Schließe mit ihnen und mit ihren Göttern keinen Bund.</span>
+          <span class="line">(33) Sie sollen nicht in deinem Land wohnen, dass sie dich nicht gegen mich sündigen machen — denn wenn du ihren Göttern dienst, wird es dir zur Schlinge.</span>
+          <span class="line">(24:1) Und zu Mosche sprach er: Steig herauf zu Adonai, du und Aharon, Nadav und Avihu und siebzig von den Ältesten Israels, und werft euch nieder von ferne.</span>
+          <span class="line">(2) Und Mosche allein trete heran zu Adonai; jene aber sollen nicht herantreten, und das Volk soll nicht mit ihm heraufsteigen.</span>
+          <span class="line">(3) Und Mosche kam und erzählte dem Volk alle Worte Adonais und alle Rechtssätze; und alles Volk antwortete mit einer Stimme und sprachen: Alle Worte, die Adonai geredet hat, werden wir tun.</span>
+          <span class="line">(4) Und Mosche schrieb alle Worte Adonais auf, und früh am Morgen baute er einen Altar am Fuß des Berges und zwölf Mazzevot für die zwölf Stämme Israels.</span>
+          <span class="line">(5) Und er sandte die Knaben der Söhne Israels, und sie brachten Olot dar und schlachteten Schelamim-Opfer für Adonai — Stiere.</span>
+          <span class="line">(6) Und Mosche nahm die Hälfte des Blutes und tat es in die Becken; und die Hälfte des Blutes sprengte er an den Altar.</span>
+          <span class="line">(7) Und er nahm das Buch des Bundes und las es vor den Ohren des Volkes; und sie sprachen: Alles, was Adonai geredet hat, werden wir tun und werden hören.</span>
+          <span class="line">(8) Und Mosche nahm das Blut und sprengte es auf das Volk und sprach: Siehe, das Blut des Bundes, den Adonai mit euch geschlossen hat über alle diese Worte.</span>
+          <span class="line">(9) Und Mosche stieg hinauf, und Aharon, Nadav, Avihu und siebzig von den Ältesten Israels.</span>
+          <span class="line">(10) Und sie sahen den Gott Israels; und unter seinen Füßen war es wie ein Werk von Saphir-Pflasterung und wie das Wesen des Himmels in Reinheit.</span>
+          <span class="line">(11) Und an die Edlen der Söhne Israels legte er seine Hand nicht; und sie schauten Gott und aßen und tranken.</span>
+          <span class="line">(12) Und Adonai sprach zu Mosche: Steig zu mir auf den Berg und sei dort, und ich werde dir die Tafeln aus Stein geben und die Tora und das Gebot, die ich geschrieben habe, sie zu lehren.</span>
+          <span class="line">(13) Und Mosche stand auf, und Yehoschua, sein Diener; und Mosche stieg auf den Berg Gottes.</span>
+          <span class="line">(14) Und zu den Ältesten sprach er: Bleibt hier, bis wir zu euch zurückkehren; und siehe, Aharon und Chur sind bei euch — wer eine Sache hat, trete zu ihnen.</span>
+          <span class="line">(15) Und Mosche stieg auf den Berg, und die Wolke bedeckte den Berg.</span>
+          <span class="line">(16) Und die Herrlichkeit Adonais ruhte auf dem Berg Sinai; und die Wolke bedeckte ihn sechs Tage. Und am siebten Tag rief er Mosche aus der Mitte der Wolke.</span>
+          <span class="line">(17) Und das Aussehen der Herrlichkeit Adonais war wie ein verzehrendes Feuer auf dem Gipfel des Berges vor den Augen der Söhne Israels.</span>
+          <span class="line">(18) Und Mosche kam in die Mitte der Wolke und stieg auf den Berg; und Mosche war auf dem Berg vierzig Tage und vierzig Nächte.</span>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- ══ TIKKUN-BOX — DAS HERZ DER PARASHAH ══ -->
+    <div class="tikkun-box">
+      <div class="tikkun-header">
+        <div class="tikkun-title-he">מַעֲשֵׂה הַתִּיקּוּן — חׇכְמָה שֶׁל הַמִּשְׁפָּטִים · יוֹשֶׁר הַמָּמוֹן · בְּיוֹמוֹ תִּתֵּן שְׂכָרוֹ · גֵּר יָתוֹם וְאַלְמָנָה · נַעֲשֶׂה וְנִשְׁמָע</div>
+        <div class="tikkun-title-de">Tikkun – Chochma der Mischpatim als sephardische Tagespraxis · Geld-Mussar nach Mesillat Yescharim Perek 11 · der Lohn am selben Tag · die drei Schutz-Bedürftigen: Fremdling, Waise, Witwe · die Brit-Erneuerung des Na'asseh weNischma im täglichen Schma</div>
+        <div class="tikkun-src">שְׁמוֹת כ״א:א׳ („וְאֵלֶּה הַמִּשְׁפָּטִים") · שְׁמוֹת כ״ב:כ׳–כ״ג („וְגֵר לֹא־תוֹנֶה · כׇּל־אַלְמָנָה וְיָתוֹם לֹא תְעַנּוּן") · שְׁמוֹת כ״ב:כ״ד („אִם־כֶּסֶף תַּלְוֶה אֶת־עַמִּי") · שְׁמוֹת כ״ג:ח׳ („וְשֹׁחַד לֹא תִקָּח") · שְׁמוֹת כ״ג:ט׳ („וְגֵר לֹא תִלְחָץ") · שְׁמוֹת כ״ד:ז׳ („נַעֲשֶׂה וְנִשְׁמָע") · רמב״ם סֵפֶר מִשְׁפָּטִים (כָּל הִלְכוֹתָיו) · רמב״ם הלכות סַנְהֶדְרִין כ״ג–כ״ד · רמב״ם הלכות מַלְוֶה וְלוֶֹה ה׳ (אִיסוּר רִבִּית · הֶיתֵּר עִסְקָא) · רמב״ם הלכות שְׂכִירוּת י״א (בְּיוֹמוֹ תִּתֵּן שְׂכָרוֹ) · רמב״ם הלכות חוֹבֵל וּמַזִּיק ה׳ · רמב״ם הלכות גְּנֵיבָה א׳ · רמב״ם הלכות גְּזֵלָה וַאֲבֵדָה י״א · רמב״ם הלכות שְׁמִטָּה וְיוֹבֵל א׳ · רמב״ם הלכות חֲגִיגָה א׳–ב׳ · רמב״ם הלכות דֵּעוֹת ו׳ (אַהֲבַת הַגֵּר) · אור החיים על שְׁמוֹת כ״א:א׳ · ספר העיקרים מאמר שלישי · רש״ש נְהַר שָׁלוֹם דְּרוּשׁ הַמִּשְׁפָּטִים · רמח״ל מְסִלַּת יְשָׁרִים פֶּרֶק י״א (דִּינֵי מָמוֹנוֹת בְּפֵרוּט) · רמח״ל דֶּרֶךְ אֲדֹנָי חֵלֶק א׳ פֶּרֶק ד׳ · שד״ל פֵּרוּשׁ עַל הַתּוֹרָה (שְׁמוֹת כ״א:ב׳ · כ״א:ו׳ · כ״א:כ״ד · כ״ב:כ׳ · כ״ג:י״ט) · בן איש חי שנה ראשונה פרשת מִשְׁפָּטִים · שׁוּלְחָן עָרוּךְ חוֹשֶׁן מִשְׁפָּט · כַּף הַחַיִּים אוֹרַח חַיִּים · יָבִיעַ אוֹמֶר וַחֲזוֹן עוֹבַדְיָה · תַּלְמוּד בַּבְלִי שַׁבָּת פ״ח. · נֻסַּח אֲרָם צוֹבָה · מָרוֹקוֹ · יָמֶן · יְרוּשָׁלַיִם</div>
+      </div>
+      <div class="tikkun-body">
+        <strong>Mischpatim ist die Parashah der gelebten Chochma.</strong> Sie folgt unmittelbar auf die Aseret HaDibrot, ohne Bruch, ohne Atempause — als wäre der Sinai-Donner gerade verklungen, beginnt Adonai zu Mosche das Detail-Werk zu diktieren: hebräischer Sklave, Magd, Mord und Totschlag, Schaden-Maße, Ochsen, Brunnen, Diebstahl, Verwahrung, Verführung, Hexerei, Fremdling, Witwe, Waise, Bestechung, Schmittah, Schabbat, drei Regalim. <strong>Or HaChaim</strong> auf Schemot 21:1 zieht die programmatische Lehre: das einleitende <em>„וְאֵלֶּה"</em> (mit Wav) bedeutet — <em>diese</em> hier sind <em>auch</em> wie das Vorhergehende, vom Sinai. Es gibt keine Trennung zwischen dem <em>Anochi</em> und dem Eved-Ivri-Paragraphen; der Bund ist eins. <strong>Rashash</strong> (Nahar Schalom, Drush HaMischpatim) liest dies kabbalistisch: die Mischpatim sind die Manifestation der <em>Chochma</em> — der zweiten Sefirah, der ersten Aussprache des verborgenen Keter-Anochi — in der irdischen Sozial-Welt. <em>Chochma</em> ist die Sefirah der klaren Unterscheidung; wer Mischpat tut, der unterscheidet Wahrheit von Lüge, fremdes Geld von eigenem, Recht des Verkäufers von Recht des Käufers, Lohn des Arbeiters von Gabe des Wohltäters. Wer im Geld-Recht falsch handelt, verdunkelt die Chochma.
+        <br><br>
+        <strong>Ramchal</strong> hat in <em>Mesillat Yescharim</em> Perek 11 — <em>„Be'ur HaNekiyut bi'frate HaMitzvot"</em> — fast den ganzen langen Kapitel den <em>Diney Mamonot</em> gewidmet. Er schreibt dort, mit großer Strenge, dass in keinem Lebensbereich der Mensch so leicht in Avlah (Unrecht) fällt wie im Geld-Recht; denn der Trieb des Mammons ist tief, und er verkleidet das Unrecht in Routine, in Brauch, in „so machen es alle". Mesillat Yescharim Perek 11 wird in der sephardischen Mussar-Tradition als monatliches Selbstprüfungs-Werk gelesen — Bagdad, Aleppo, Marokko, Yerushalayim. Der Sefardi, der die Mischpatim ernst nimmt, fragt sich vor jeder Geld-Transaktion: <em>ist dies gerecht? Wie würde Rambam dies richten? Wie würde Rav Ovadia Yosef antworten?</em> <strong>Ben Ish Chai</strong> (Schanah Rischona, Parashat Mischpatim) etabliert die sephardische Tagespraxis: jede Bezahlung am gleichen Tag (<em>be-yomo titen secharo</em> — Vayikra 19:13, durch die Mischpatim-Implikation von 22:24), jede Schuld korrekt verbucht, jedes Versprechen gehalten, jede Vereinbarung schriftlich, jede Höhe des Lohns vorher festgelegt.
+        <br><br>
+        <strong>Schadal</strong> (Pirusch zur Tora, mehrere Glossen zu Schemot 21–23) zieht die ethisch-philologische Pointe: die Mischpatim sind das früheste umfassende ethisch-rechtliche Korpus der antiken Welt, das die Würde aller Geschöpfe schützt — Sklave, Frau, Witwe, Waise, Fremdling, sogar das Tier (der Ochse am Schabbat in 23:12; das Verbot des Kid-in-Milch in 23:19 als Schutz vor Grausamkeit). Schadal liest 21:6 (<em>„וְהִגִּישׁוֹ אֲדֹנָיו אֶל־הָאֱלֹהִים"</em>) wie die rabbinische Tradition — als Vorführung vor das <em>Beit Din</em>, nicht vor heidnische Hausgötter. Er liest 21:24 (<em>„עַיִן תַּחַת עַיִן"</em>) wie der Talmud (Bava Kamma 83b–84a) — als Geld-Entschädigung, nicht als wörtliche Verstümmelung; und er begründet dies philologisch und ethisch: ein wörtliches Ausreißen würde die Schaden-Symmetrie nicht herstellen (der eine ist schwach, der andere stark; bei dem einen geht die Wunde rasch zu, bei dem anderen nicht), und die Tora-Logik fordert Maß und Ausgleich, nicht Vergeltung. Diese sephardisch-rabbinische Lesart ist die einzige, die im halachischen Pesak verankert ist.
+        <br><br>
+        <strong>Die soziale Mitte der Parashah</strong> ist 22:20–23: <em>„וְגֵר לֹא־תוֹנֶה וְלֹא תִלְחָצֶנּוּ כִּי־גֵרִים הֱיִיתֶם בְּאֶרֶץ מִצְרָיִם · כׇּל־אַלְמָנָה וְיָתוֹם לֹא תְעַנּוּן"</em>. Drei Schutzbedürftige stehen hier nebeneinander: Fremdling, Witwe, Waise — die <em>Ger, Almanah, Yatom</em>-Trias, die in der Tora vielfach wiederholt wird (Bava Metzia 59b lehrt 36 Mal). <strong>Rambam</strong> (Hilchot De'ot 6:4 und Hilchot Mechirah 14:15) ist explizit: einen Konvertiten zu bedrücken — sei es durch unfaire Verträge, sei es durch eine herablassende Bemerkung, sei es durch Erinnerung an seine vergangene Nicht-Jüdischkeit — ist eine doppelte Übertretung. Das tägliche sephardische Mussar-Leben (Aleppo, Marokko, Yerushalayim) folgt diesem strikt: der Ger Zedek wird wie der Eingeborene behandelt, ohne weitere Kennzeichnung, ohne Anekdote über seine Herkunft, ohne Vergangenheits-Rückführung. <strong>Yabia Omer</strong> und <strong>Chazon Ovadia</strong> (Rabbi Ovadia Yosef Z'L) führen diese Tradition in zahlreichen Responsa weiter — die sephardische moderne Halacha kennt keinen harten Differenzialismus gegen Konvertiten.
+        <br><br>
+        <strong>Die Bundes-Schließung in Schemot 24</strong> ist der Klimax-Moment der ganzen Parashah und einer der höchsten Momente der ganzen Tora. <strong>Talmud Bavli Schabbat 88a</strong> lehrt: als Israel <em>„נַעֲשֶׂה וְנִשְׁמָע"</em> rief — <em>zuerst tun, dann hören</em> — kamen Dienst-Engel und legten jedem Israeliten zwei Kronen aufs Haupt, eine für <em>Na'asseh</em> und eine für <em>Nischma</em>. Diese Reihenfolge — Tun vor Verstehen — ist die <em>Wurzel der gelebten Chochma</em>: die Mitzvot werden zuerst getan, in der Vertrauens-Hingabe an den Bund; das Verstehen reift im Tun selbst. <strong>Ramchal</strong> (<em>Derech Adonai</em> I:4 und <em>Mesillat Yescharim</em> Perek 1) erläutert: der Mensch ist im Zeitalter der praktischen Bewährung geschaffen, nicht im Zeitalter der reinen Erkenntnis — die Welt ist <em>Olam HaAssiyah</em>, der Ort des Tuns. <em>Na'asseh</em> ist daher der primäre Akt; <em>Nischma</em> folgt als Verständnis, das aus dem Tun selbst aufsteigt. Sephardisch wird diese Reihenfolge in der täglichen Praxis verankert: man tut zuerst die Mitzvah, dann lernt man die Halacha; man steht zuerst zur Tefillah, dann denkt man die Kawanot; man gibt zuerst Tzedakah, dann erwägt man die Verteilung. Or HaChaim, Rashash, Ben Ish Chai — alle sehen in <em>Na'asseh weNischma</em> die Vollendung der Chochma-Sefirah: die klare, ungetrennte Hingabe, die das Tun vor das Verstehen setzt und so die Brit-Tiefe erreicht.
+        <br><br>
+        <strong>Praktische Handlung:</strong> (1) <em>Geld-Mussar — Mesillat Yescharim Perek 11 monatlich</em>: Sephardischer Aleppo-Bagdad-Yerushalayim-Brauch: einmal pro Monat (z.B. am Schabbat vor Rosch Chodesch) Mesillat Yescharim Perek 11 vollständig lernen, mit Selbstprüfung nach den dort aufgezählten Geld-Risiken. Konkrete Selbstfrage-Liste: habe ich in diesem Monat einen Vertrag genau eingehalten? Habe ich einen Lohn am gleichen Tag bezahlt? Habe ich einen Preis-Aufschlag versteckt? Habe ich ein Versprechen unerfüllt gelassen? (2) <em>Be-yomo titen secharo — Lohn am selben Tag</em>: Schemot 22:24 und Vayikra 19:13 verbinden sich zur sephardisch streng eingehaltenen Halacha (Rambam Hilchot Sechirut 11; Schulchan Aruch Choschen Mischpat 339; Chazon Ovadia): wer einen Tagelöhner, eine Putzfrau, einen Handwerker, einen Babysitter, einen Freelancer beschäftigt, zahlt am gleichen Tag — am Tag der Arbeit, vor Sonnenuntergang (bei Tag-Arbeit) oder vor Sonnenaufgang (bei Nacht-Arbeit). Wer dies nicht halten kann (z.B. weil der Empfänger es per Banküberweisung wünscht), spricht es vorher klar aus und verbucht in Verzug einen täglichen Mahn-Erinnerer. (3) <em>Innerliche Pause vor jeder Geld-Transaktion</em>: Aleppo-Marokko-Yerushalayim-Brauch: vor jedem Kauf, Verkauf, Vertrag, Anstellungs-Gespräch, Bezahlung eine kurze innere Pause: <em>„Wäre dies gerecht, wenn ich die andere Seite wäre? Wie würde Rambam dies richten? Wie würde Rav Ovadia antworten?"</em> Ramchal Mesillat Yescharim Perek 11 nennt dies das innerliche Wägen der Geld-Sachen, ehe man handelt. (4) <em>Ger Zedek — der Konvertit als voller Bruder</em>: Sephardisch (Rambam Hilchot De'ot 6:4; Rambam Igeret zu R' Ovadia HaGer; Yabia Omer Yoreh Deah Bände 5–7; Chazon Ovadia Giyur): wenn ein Konvertit in der Gemeinde, am Schabbat-Tisch, im Geschäft begegnet — wird er ohne Kennzeichnung und ohne Vergangenheits-Rückführung empfangen. Die praktische Übung: im Gespräch nicht <em>„der Ger"</em>, sondern den Namen — wie bei jedem anderen. Wenn ein anderer in Beisein des Gers über Konvertiten spricht, höflich aber bestimmt umlenken. (5) <em>Almanah und Yatom — die wöchentliche Sorge</em>: Sephardischer Brauch (Aleppo-Marokko): in jeder Gemeinde gibt es Witwen und Waisen-Familien, deren spezifischer Unterstützungs-Bedarf der Gemeinde-Vorstand kennt. Praktische Wahl: einmal pro Woche eine konkrete Hilfe leisten — sei es ein Lebensmittel-Korb, sei es eine Stunde Hilfe mit Hausaufgaben für ein Waisen-Kind, sei es ein Schabbat-Einladungs-Ruf an eine verwitwete Großmutter. Schemot 22:22–23 ist der schwere Vers: wer Witwe und Waise quält, dem antwortet Adonai mit dem Schwert. Umgekehrt: wer sie würdigt, schließt sich in den Schutzkreis Adonais ein. (6) <em>Ribit-Vorsicht und Heter Iska</em>: Schemot 22:24 (<em>„לֹא־תְשִׂימוּן עָלָיו נֶשֶׁךְ"</em>) ist sephardisch streng eingehalten (Rambam Hilchot Malveh ve'Loveh 5; Yoreh Deah 159–177; Chazon Ovadia Yoreh Deah Ribit-Bände). In modernen geschäftlichen Konstellationen, wo Zins-Verträge unvermeidlich sind, sephardischer Standard: Heter Iska schriftlich verfassen, durch einen sephardischen Rabbiner gegenzeichnen lassen, im Vertrags-Ordner ablegen. (7) <em>Schmittah und Schabbat — die wöchentliche und sieben-jährige Erinnerung</em>: Schemot 23:10–12 verbindet Schmittah-Jahr mit Schabbat-Tag in <em>einem</em> Atemzug. Sephardisch wird im Land Yisrael der Schmittah-Jahr nach Chazon Ovadia (Hilchot Schvi'it) gehalten — Ozar Beit Din oder Heter Mechirah nach Posek-Anleitung. In der Diaspora: Schmittah-Bewusstsein im wöchentlichen Schabbat — der siebte Tag ist die wöchentliche Mini-Schmittah, das Land-Loslassen im Klein-Format. (8) <em>Schalosch Regalim — dreimal im Jahr nach Yerushalayim (innerlich oder leiblich)</em>: Schemot 23:14–17 fordert dreimaliges Erscheinen im Jahr vor Adonai. Sephardisch (Rambam Hilchot Chagigah; Chazon Ovadia Mo'adim): wer in Eretz Yisrael lebt, geht zur Kotel oder zumindest ins Beit Knesset Mussaf an den drei Festen. Wer in der Diaspora lebt, ersetzt das leibliche Erscheinen durch innerliches: am Pessach-Schavuot-Sukkot-Schacharit eine längere Tefillah, eine besondere Spende für die Yerushalayim-Familien, und eine Yerushalayim-Kawanah im Birkat HaMazon (dritte Brachah <em>Bonneh Yerushalayim</em>). (9) <em>Na'asseh weNischma als Reihen-Folge — heute eine Mitzvah üben, deren Grund ich noch nicht verstehe</em>: Schemot 24:7 (<em>„כֹּל אֲשֶׁר־דִּבֶּר אֲדֹנָי נַעֲשֶׂה וְנִשְׁמָע"</em>) als sephardische tägliche Übung (Rashash Drush, Ben Ish Chai Schanah Rischona Mischpatim, Mesillat Yescharim Perek 1): wähle eine Mitzvah, deren Grund du nicht verstehst (z.B. Schaatnez, Para Aduma, Kid-in-Milch, Tefillin-Schwarz, Tzitzit-Länge) und übe sie eine Woche lang mit besonderer Aufmerksamkeit, ohne nach dem Grund zu fragen. In der zweiten Woche lerne den Hintergrund (Rambam Hilchot, dann Sefer HaIkkarim Maamar Dritter). Dies ist die <em>Na'asseh-weNischma</em>-Reihenfolge im Klein-Format. (10) <em>Bestechungs-Verbot — auch in kleinen Formen</em>: Schemot 23:8 (<em>„וְשֹׁחַד לֹא תִקָּח כִּי הַשֹּׁחַד יְעַוֵּר פִּקְחִים"</em>) ist nach Rambam (Hilchot Sanhedrin 23) nicht nur auf Richter-Position beschränkt, sondern auf jede Entscheidungs-Funktion. Sephardisch (Ben Ish Chai Schanah Rischona Mischpatim, Chazon Ovadia Choschen Mischpat): wer in einer Personal-Entscheidungs-Funktion ist (Einstellungs-Gespräche, Tender-Entscheidungen, Notenvergabe, Wahl-Empfehlung), lehnt jedes Geschenk im Vorfeld der Entscheidung höflich ab. (11) <em>Maschiach ben David in Mischpatim — die volle Sanhedrin-Wiederherstellung</em>: Die sephardische Tradition (Rambam Hilchot Mlachim, Hilchot Sanhedrin Perek 1; Sefer HaIkkarim) erkennt im Mischpatim-Werk einen Ausblick auf die Maschiach-ben-David-Zeit, wenn das volle Sanhedrin in Yerushalayim wieder funktioniert und die Diney Mamonot des Mischpatim-Werks öffentlich gelehrt und gerichtet werden. Im Birkat HaSchanim der Amidah und besonders in der zwölften Brachah <em>„Haschivah Schofteinu k'varischona"</em> (sephardisch Nussach Yerushalayim) kann eine Kawanah eingelegt werden: <em>„möge die Sanhedrin wiederhergestellt werden, möge der Maschiach ben David kommen, möge die Chochma der Mischpatim öffentlich gerichtet werden, möge das Na'asseh-weNischma in vollem Maß wieder gesprochen werden"</em>.
+      </div>
+      <div class="tikkun-tags">
+        <span class="tikkun-tag">חׇכְמָה שֶׁל הַמִּשְׁפָּטִים</span>
+        <span class="tikkun-tag">בְּיוֹמוֹ תִּתֵּן שְׂכָרוֹ</span>
+        <span class="tikkun-tag">גֵּר יָתוֹם וְאַלְמָנָה</span>
+        <span class="tikkun-tag">נַעֲשֶׂה וְנִשְׁמָע</span>
+        <span class="tikkun-tag">דִּינֵי מָמוֹנוֹת</span>
+      </div>
+    </div>
+
+    <!-- ══ SCHI · KLIMAX-MOMENT — SCHEMOT 24:7 ══ -->
+    <div class="climax-box">
+      <div class="climax-label">שִׂיא · ff · Klimax-Vers der Parashah · die Krone der Bundes-Hingabe</div>
+      <div class="instrument-note">[no percussion] [no drums] [no choir] [acoustic guitar — full Rast chord forte to fortissimo, the na'asseh-venishma proclamation, the regal balanced acclamation resounding like a covenantal coronation, no percussion, no drums] Gitarre: Voller Rast-Akkord, forte zu fortissimo — die Na'asseh-weNischma-Verkündung, die königlich-balancierte Akklamation wie eine Bundes-Krönung.</div>
+      <div class="climax-verse-he">וַיִּקַּח סֵפֶר הַבְּרִית · וַיִּקְרָא בְּאׇזְנֵי הָעָם · וַיֹּאמְרוּ · כֹּל אֲשֶׁר־דִּבֶּר אֲדֹנָי · נַעֲשֶׂה וְנִשְׁמָע</div>
+      <div class="climax-verse-de">„Und er nahm das Buch des Bundes und las es vor den Ohren des Volkes — und sie sprachen: Alles, was Adonai geredet hat, werden wir tun und werden hören."</div>
+      <div class="climax-src">שְׁמוֹת כ״ד:ז׳ — Wurzel-Vers des Brit-Bundes nach Talmud Bavli Schabbat 88a (die zwei Kronen für Na'asseh und Nischma)</div>
+    </div>
+
+    <!-- ══ KODA · ARBA'IM YOM WHISPER — SCHEMOT 24:18 ══ -->
+    <div class="coda-box">
+      <div class="coda-label">קוֹדָה · pp · Mosches Wolken-Gedächtnis im Hauch</div>
+      <div class="instrument-note">[no percussion] [no drums] [no choir] [acoustic guitar — Rast dissolving into a single sustained note, the forty-days koda whispered, the cloud-bound prophet barely audible, no percussion] Gitarre: Rast löst sich in einen einzigen getragenen Ton — die Vierzig-Tage-Koda geflüstert, der wolken-gebundene Prophet kaum hörbar.</div>
+      <div class="coda-whisper">
+        וַיָּבֹא <strong>מֹשֶׁה</strong> בְּתוֹךְ הֶעָנָן — וַיַּעַל אֶל־הָהָר — וַיְהִי מֹשֶׁה בָּהָר <strong>אַרְבָּעִים יוֹם וְאַרְבָּעִים לָיְלָה</strong></div></div>
+
+  </section>
+
+  <!-- ══ FOOTER ══ -->
+  <div class="footer">
+    <p class="footer-he">פָּרָשַׁת מִשְׁפָּטִים · חׇכְמָה · מַקָּאם רַאסְט · נַעֲשֶׂה וְנִשְׁמָע · בְּרִית הַסַּפִּיר</p>
+    <p class="footer-chain">
+      שְׁמוֹת כ״א:א׳–כ״ד:י״ח · נוּסַּח צָדוֹק (רשש) · עֵדוֹת הַמִּזְרָח · דִּינֵי מָמוֹנוֹת · אַרְבָּעִים יוֹם וְאַרְבָּעִים לָיְלָה
+    </p>
+    <p class="footer-de">
+      Quellen: <strong>Tanach</strong> (Schemot 21:1–24:18 — Tora-Text 1:1, mit Tetragrammaton-Konvertierung
+      durchgängig als אֲדֹנָי) · <strong>Rambam · Mishneh Torah</strong> (das ganze Sefer Mishpatim:
+      Hilchot Sechirut · Hilchot She'elah uFikadon · Hilchot Geneivah · Hilchot Gezeilah waAvedah ·
+      Hilchot Malveh ve'Loveh · Hilchot Nizkei Mamon · Hilchot Chovel uMazzik · Hilchot To'en
+      veNitan · außerdem Hilchot Sanhedrin Perakim 1–24 zur Beit-Din-Architektur und zur
+      Bestechung; Hilchot Avadim zur Eved-Ivri-Halacha; Hilchot Rotzeach uShmirat Nefesh zu
+      Mord, Totschlag und Asyl; Hilchot Shemittah ve'Yovel; Hilchot Chagigah Perakim 1–2 zu den
+      Schalosch Regalim; Hilchot De'ot Perek 6:4 zur Ger-Liebe; Hilchot Mlachim zur
+      Maschiach-ben-David-Tradition) · <strong>Or HaChaim</strong> (auf Schemot 21:1 — <em>„we'ele
+      hamishpatim"</em> als Sinai-Fortsetzung; und durchgängige Glossen zu den Sozial-Mitzwot) ·
+      <strong>Sefer HaIkkarim</strong> (Yosef Albo, Maamar Schlischi — die Mitzvot als
+      Glaubens-Grundpfeiler) · <strong>Rashash · Nahar Schalom</strong> (Drush HaMischpatim — die
+      Mischpatim als Chochma-Manifestation) · <strong>Ramchal · Mesillat Yescharim</strong>
+      (Perek 11 — Be'ur HaNekiyut bi'frate HaMitzvot · der lange Abschnitt zu den Diney Mamonot;
+      Perek 1 — der Mensch im Olam HaAssiyah als Tat-Wesen vor dem Verstehen) · <strong>Ramchal ·
+      Derech Adonai</strong> (Chelek I, Perek 4 — die Welt als Bewährungs-Ort) · <strong>Schadal ·
+      Pirusch al haTora</strong> (Schemot 21:2 zur Eved-Ivri-Halacha und ihrer Sozial-Logik;
+      21:6 zum „el ha'Elohim" als Beit-Din; 21:24 zur rabbinischen Auge-für-Auge-Lesart als
+      einzig philologisch haltbar; 22:20 zur Ger-Schutz-Begründung aus eigener Mitzrayim-
+      Erfahrung; 23:19 zum Kid-im-Milch-Verbot als Schutz vor Grausamkeit) · <strong>Ben Ish
+      Chai</strong> Schanah Rischona Parashat Mischpatim (Hineni Mu'chan u'Mezumman vor jeder
+      Mitzvah · Lohn-am-selben-Tag-Praxis · Mussar des Geld-Verhaltens · Aleppo-Bagdad-
+      Yerushalayim-Brauch) · <strong>Schulchan Aruch</strong> (Choschen Mischpat — das gesamte
+      Werk; besonders Siman 73 zu Pfand; 97 zum Mantel-Pfand bei Sonnenuntergang; 159–177 zur
+      Ribit; 339 zu be-yomo titen secharo; 420ff. zu Schaden-Maßen) · <strong>Kaf HaChaim</strong>
+      (Rabbi Yaakov Chaim Sofer · sephardische Praxis aller Eidot HaMizrach) · <strong>Yabia
+      Omer · Chazon Ovadia</strong> (Rabbi Ovadia Yosef Z'L — sephardische moderne Halacha:
+      Diney Mamonot · Hilchot Schvi'it · Hilchot Mo'adim · Giyur · Ribit · Be-yomo Titen
+      Secharo) · <strong>Talmud Bavli · Schabbat 88a</strong> (die zwei Kronen für Na'asseh
+      weNischma; Kafa aleihem har ki'gigit; die Geulah-Architektur des Sinai-Bundes) · <strong>Talmud
+      Bavli · Bava Kamma 83b–84a</strong> (zur Auge-für-Auge-Lesart als Geld-Entschädigung) ·
+      <strong>Talmud Bavli · Bava Metzia 59b</strong> (36-mal die Ger-Warnung) ·
+      <strong>Sephardische Bakkaschot</strong> Eidot HaMizrach in Maqam-Rast-Tradition Aleppo-
+      Yerushalayim · <strong>Krias Schma She'al haMittah</strong> (Aleppo-Tradition).
+      <br><br>
+      <strong>Tradition:</strong> Sephardisch · Nussach Zadoq (Rashash) · Maqam-Tradition aus Aleppo,
+      Yerushalayim, Marokko, Yemen · Tetragrammaton durchgängig als אֲדֹנָי · Maschiach ben David ·
+      Doppelt geprüfte Quellen · Tora-Text 1:1 unverändert · Erstellt Mai 2026 · Sefer HaParashot
+      bemo Maqam · 6. Lied Sefer Schemot · Chochma · Maqam Rast · נַעֲשֶׂה וְנִשְׁמָע.
+    </p>
+    <div class="footer-amen">אָמֵן · יִבָּנֶה הַמִּקְדָּשׁ בִּמְהֵרָה בְיָמֵינוּ · יָבוֹא מָשִׁיחַ בֶּן דָּוִד · אָמֵן</div>
+  </div>
+
+</div>
+
+
+</body></html>

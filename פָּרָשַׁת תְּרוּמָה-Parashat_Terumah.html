@@ -1,0 +1,734 @@
+<!DOCTYPE html>
+<html lang="he-IL"><head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>פָּרָשַׁת תְּרוּמָה · שְׁמוֹת כ״ה:א׳–כ״ז:י״ט · בִּינָה · מַקָּאם בַּיַאת · Sephardische Tora-Vertonung</title>
+  <link href="https://fonts.googleapis.com/css2?family=Frank+Ruhl+Libre:wght@300;400;700;900&amp;family=EB+Garamond:ital,wght@0,400;0,600;1,400;1,600&amp;family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&amp;display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg:#060808; --deep:#0A0E0E; --layer:#101414; --card:#0C1010;
+      --parchment:#f2e8d0; --parch-dim:#c8b898;
+      --ivory:#f0e8d8; --ivory-dim:#a89878;
+      --silver:#c8d4e0; --silver-dim:#7a8290;
+      --text:#a0a89c;
+      /* SEFER SCHEMOT — Tief-Rot (Befreiung, Mishkan-Bau) */
+      --sefer:#B04030; --sefer-lt:#D86850; --sefer-dim:#7A2820;
+      --sefer-bg:rgba(176,64,48,.08); --sefer-bdr:rgba(176,64,48,.36); --sefer-glow:rgba(216,104,80,.20);
+      /* TERUMAH · BINAH · BAYAT — Maternal Terracotta-Heichal */
+      --trm:#A06848; --trm-lt:#C89070; --trm-dim:#6A3818;
+      --trm-bg:rgba(160,104,72,.08); --trm-bdr:rgba(160,104,72,.36); --trm-glow:rgba(200,144,112,.22);
+      /* MAQAM-FARBEN */
+      --maqam-saba:#B0904A; --maqam-hijaz:#C85050; --maqam-bayat:#A07850;
+      --maqam-rast:#C8A860; --maqam-ajam:#7A9050; --maqam-nahawand:#6080A0;
+    }
+    *,*::before,*::after { margin:0; padding:0; box-sizing:border-box; }
+    html { scroll-behavior:smooth; }
+    body { background:var(--bg); color:var(--silver); font-family:'EB Garamond',serif; overflow-x:hidden; line-height:1.85; padding:40px 20px 80px; }
+    body::before { content:''; position:fixed; inset:0; pointer-events:none; z-index:0;
+      background: radial-gradient(ellipse at 18% 12%, rgba(176,64,48,.10) 0%, transparent 48%),
+                  radial-gradient(ellipse at 82% 28%, rgba(160,104,72,.14) 0%, transparent 45%),
+                  radial-gradient(ellipse at 12% 68%, rgba(176,64,48,.08) 0%, transparent 45%),
+                  radial-gradient(ellipse at 88% 82%, rgba(200,144,112,.12) 0%, transparent 42%),
+                  radial-gradient(ellipse at 50% 50%, rgba(20,16,8,.82) 0%, transparent 70%); }
+    body::after { content:''; position:fixed; inset:0; pointer-events:none; z-index:0;
+      background-image:
+        radial-gradient(1px 1px at 8% 10%, rgba(216,104,80,.34) 0%, transparent 100%),
+        radial-gradient(1px 1px at 48% 5%, rgba(200,144,112,.32) 0%, transparent 100%),
+        radial-gradient(1px 1px at 82% 16%, rgba(216,104,80,.30) 0%, transparent 100%),
+        radial-gradient(1px 1px at 25% 42%, rgba(200,144,112,.28) 0%, transparent 100%),
+        radial-gradient(1px 1px at 68% 58%, rgba(216,104,80,.28) 0%, transparent 100%),
+        radial-gradient(1.5px 1.5px at 12% 75%, rgba(200,144,112,.34) 0%, transparent 100%),
+        radial-gradient(1px 1px at 90% 78%, rgba(216,104,80,.30) 0%, transparent 100%),
+        radial-gradient(1px 1px at 35% 88%, rgba(200,144,112,.26) 0%, transparent 100%); }
+    .wrap { max-width:1080px; margin:0 auto; position:relative; z-index:1; }
+
+    /* PAGE HEADER */
+    .page-header { text-align:center; margin-bottom:80px; padding-bottom:40px; border-bottom:1px solid var(--sefer-bdr); position:relative; }
+    .page-header::after { content:'✦ ✡ ✦'; position:absolute; bottom:-14px; left:50%; transform:translateX(-50%); background:var(--bg); padding:0 20px; color:var(--sefer); font-size:.62em; letter-spacing:.55em; }
+    .eyebrow { font-family:'Cormorant Garamond',serif; font-style:italic; font-size:.78em; color:var(--sefer-lt); letter-spacing:.28em; text-transform:uppercase; margin-bottom:18px; opacity:.85; }
+    .sefer-letter { font-family:'Frank Ruhl Libre',serif; font-size:1.40em; color:var(--sefer); font-weight:900; display:inline-block; margin-bottom:6px; text-shadow:0 0 30px var(--sefer-glow); letter-spacing:.04em; }
+    .page-title-he { font-family:'Frank Ruhl Libre',serif; font-size:3.2em; font-weight:900; color:var(--ivory); direction:rtl; letter-spacing:.05em; text-shadow:0 0 80px var(--sefer-glow), 0 0 140px var(--trm-glow); margin-bottom:8px; line-height:1.15; }
+    .page-subtitle-he { font-family:'Frank Ruhl Libre',serif; font-size:1.16em; color:var(--sefer-lt); direction:rtl; margin-bottom:10px; letter-spacing:.06em; }
+    .page-title-de { font-family:'Cormorant Garamond',serif; font-style:italic; font-size:1.14em; color:var(--silver-dim); margin-bottom:22px; }
+    .page-desc { font-size:1.0em; color:var(--text); max-width:780px; margin:0 auto; line-height:1.95; }
+    .page-desc strong { color:var(--ivory-dim); }
+    .page-desc em { color:var(--trm-lt); font-style:italic; }
+
+    /* SONG SECTION */
+    .song-section { margin-bottom:90px; padding-bottom:70px; border-bottom:1px dashed var(--sefer-bdr); }
+    .song-header { display:flex; flex-wrap:wrap; align-items:flex-start; gap:20px; margin-bottom:40px; padding:24px 26px; background:var(--layer); border:1px solid var(--trm-bdr); border-radius:10px; }
+    .song-num { font-family:'Frank Ruhl Libre',serif; font-size:2.6em; font-weight:900; direction:rtl; padding-right:14px; color:var(--trm-lt); }
+    .song-meta { flex:1; display:flex; flex-direction:column; gap:8px; }
+    .korban-badge { font-family:'Cormorant Garamond',serif; font-style:italic; font-size:.82em; letter-spacing:.08em; color:var(--trm-lt); }
+    .maqam-badge { font-family:'Cormorant Garamond',serif; font-style:italic; font-size:.78em; letter-spacing:.08em; display:inline-block; padding:3px 10px; border-radius:4px; color:#f0e8d8; font-weight:600; background:var(--maqam-bayat); }
+    .song-title-he { font-family:'Frank Ruhl Libre',serif; font-size:1.7em; font-weight:700; color:var(--ivory); direction:rtl; letter-spacing:.04em; }
+    .song-title-de { font-family:'Cormorant Garamond',serif; font-style:italic; font-size:1.02em; color:var(--silver); }
+    .source-badge { font-family:'Cormorant Garamond',serif; font-style:italic; font-size:.74em; color:#A07060; line-height:1.6; }
+
+    /* ALIYAH BLOCK */
+    .aliyah-block { margin-bottom:42px; }
+    .aliyah-label { font-family:'Frank Ruhl Libre',serif; font-size:.94em; font-weight:700; direction:rtl; margin-bottom:9px; color:var(--trm); letter-spacing:.06em; padding-bottom:6px; border-bottom:1px solid var(--trm-bdr); }
+    .aliyah-label-de { font-family:'Cormorant Garamond',serif; font-style:italic; font-size:.78em; color:var(--silver-dim); display:inline-block; margin-right:14px; opacity:.85; }
+    .instrument-note { font-family:'Cormorant Garamond',serif; font-style:italic; font-size:.84em; color:var(--text); margin-bottom:14px; padding:10px 14px; background:rgba(160,104,72,.05); border-left:2px solid var(--trm-dim); }
+    .lyrics-block { display:flex; gap:44px; flex-wrap:wrap; }
+    .lyrics-he, .lyrics-de { flex:1; min-width:280px; display:flex; flex-direction:column; gap:6px; }
+    .lyrics-he span.line { font-family:'Frank Ruhl Libre',serif; font-size:1.06em; color:var(--ivory); direction:rtl; line-height:1.95; }
+    .lyrics-de span.line { font-family:'Cormorant Garamond',serif; font-size:1.0em; color:var(--silver); line-height:1.88; }
+
+    /* TIKKUN BOX */
+    .tikkun-box { background:rgba(160,104,72,.07); border:1px solid rgba(160,104,72,.32); padding:30px; margin-top:40px; border-radius:6px; }
+    .tikkun-header { display:flex; flex-direction:column; gap:6px; margin-bottom:20px; }
+    .tikkun-title-he { font-family:'Frank Ruhl Libre',serif; font-size:1.25em; color:var(--ivory); direction:rtl; font-weight:700; letter-spacing:.04em; }
+    .tikkun-title-de { font-family:'Cormorant Garamond',serif; font-size:1.0em; font-style:italic; color:var(--silver); }
+    .tikkun-src { font-family:'Cormorant Garamond',serif; font-size:.74em; color:#A07060; line-height:1.7; }
+    .tikkun-body { font-family:'Cormorant Garamond',serif; font-size:.96em; color:var(--text); line-height:1.92; }
+    .tikkun-body strong { color:var(--ivory); }
+    .tikkun-body em { color:var(--trm-lt); font-style:italic; }
+    .tikkun-tags { margin-top:18px; display:flex; gap:9px; flex-wrap:wrap; }
+    .tikkun-tag { background:rgba(160,104,72,.16); color:var(--trm-lt); padding:4px 10px; border-radius:4px; font-size:.74em; font-family:'Frank Ruhl Libre',serif; direction:rtl; }
+
+    /* SCHI / KLIMAX-MOMENT */
+    .climax-box { background:linear-gradient(135deg,rgba(160,104,72,.18),rgba(176,64,48,.10),rgba(6,8,8,.88)); border:2px solid var(--trm-bdr); padding:32px; margin-top:40px; margin-bottom:30px; border-radius:8px; }
+    .climax-label { font-family:'Cormorant Garamond',serif; font-style:italic; font-size:.82em; color:var(--trm-lt); letter-spacing:.18em; text-transform:uppercase; margin-bottom:14px; text-align:center; }
+    .climax-verse-he { font-family:'Frank Ruhl Libre',serif; font-size:1.55em; font-weight:700; color:var(--ivory); direction:rtl; text-align:center; line-height:1.85; letter-spacing:.04em; text-shadow:0 0 30px var(--trm-glow); }
+    .climax-verse-de { font-family:'Cormorant Garamond',serif; font-style:italic; font-size:1.05em; color:var(--silver); text-align:center; margin-top:14px; line-height:1.7; }
+    .climax-src { font-family:'Cormorant Garamond',serif; font-style:italic; font-size:.80em; color:var(--trm-lt); text-align:center; margin-top:12px; opacity:.8; }
+
+    /* KODA */
+    .coda-box { background:rgba(6,8,8,.78); border:1px solid var(--trm-bdr); padding:36px; text-align:center; margin-top:30px; margin-bottom:30px; border-radius:6px; }
+    .coda-label { font-family:'Cormorant Garamond',serif; font-style:italic; font-size:.80em; color:var(--trm-lt); letter-spacing:.18em; text-transform:uppercase; margin-bottom:18px; }
+    .coda-whisper { font-family:'Frank Ruhl Libre',serif; font-size:1.20em; direction:rtl; line-height:2.3; opacity:.85; color:var(--trm-lt); }
+    .coda-whisper strong { font-weight:900; opacity:1; color:var(--ivory); }
+
+    /* SCENARIOS */
+    .scenarios-section { margin-top:54px; margin-bottom:40px; }
+    .scenarios-title { font-family:'Frank Ruhl Libre',serif; font-size:1.35em; font-weight:700; text-align:center; margin-bottom:34px; direction:rtl; color:var(--sefer-lt); letter-spacing:.06em; }
+    .scenarios-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(290px,1fr)); gap:26px; }
+    .scenario-card { background:linear-gradient(135deg,rgba(32,12,8,.78),rgba(6,8,8,.92)); border:1px solid var(--trm-bdr); padding:24px; transition:transform .2s, box-shadow .2s; border-radius:6px; }
+    .scenario-card:hover { transform:translateY(-4px); box-shadow:0 10px 36px var(--trm-glow); }
+    .sc-num { font-family:'Cormorant Garamond',serif; font-style:italic; font-size:.74em; letter-spacing:.14em; text-transform:uppercase; margin-bottom:7px; color:var(--trm); }
+    .sc-title-he { font-family:'Frank Ruhl Libre',serif; font-size:1.10em; font-weight:700; color:var(--ivory); direction:rtl; margin-bottom:4px; letter-spacing:.04em; }
+    .sc-sub { font-family:'Cormorant Garamond',serif; font-style:italic; font-size:.84em; color:#A07060; margin-bottom:14px; }
+    .sc-body { font-size:.92em; color:var(--text); line-height:1.80; margin-bottom:14px; }
+    .sc-body strong { color:var(--trm-lt); }
+    .key-moment { font-size:.86em; color:var(--trm-lt); font-style:italic; margin-bottom:9px; padding-left:13px; border-left:2px solid var(--trm-lt); }
+    .reaction { font-size:.86em; color:var(--text); font-style:italic; padding-left:13px; border-left:2px solid var(--sefer-dim); line-height:1.78; }
+
+    /* FOOTER */
+    .footer { margin-top:80px; padding-top:50px; border-top:1px solid var(--sefer-bdr); text-align:center; }
+    .footer-he { font-family:'Frank Ruhl Libre',serif; font-size:1.40em; font-weight:700; color:var(--sefer-lt); direction:rtl; margin-bottom:18px; text-shadow:0 0 30px var(--sefer-glow); letter-spacing:.06em; }
+    .footer-chain { font-family:'Frank Ruhl Libre',serif; font-size:1.0em; color:var(--silver); direction:rtl; margin-bottom:22px; letter-spacing:.09em; }
+    .footer-de { font-family:'Cormorant Garamond',serif; font-style:italic; font-size:.92em; color:var(--text); line-height:2.0; max-width:780px; margin:0 auto 24px; }
+    .footer-de strong { color:var(--ivory-dim); font-style:normal; }
+    .footer-amen { font-family:'Frank Ruhl Libre',serif; font-size:1.30em; color:var(--sefer-lt); direction:rtl; margin-top:24px; letter-spacing:.14em; text-shadow:0 0 30px var(--sefer-glow); }
+
+    @media (max-width:720px) {
+      .page-title-he { font-size:2.3em; }
+      .song-num { font-size:2.2em; }
+      .lyrics-block { flex-direction:column; gap:24px; }
+      .scenarios-grid { grid-template-columns:1fr; }
+      .climax-verse-he { font-size:1.20em; }
+      .footer-he { font-size:1.10em; }
+    }
+  </style>
+</head>
+<body>
+<div class="wrap">
+
+  <header class="page-header">
+    <div class="eyebrow">Sephardische Tora-Vertonung · Sefer HaParashot bemo Maqam</div>
+    <div class="sefer-letter">ב</div>
+    <div class="page-title-he">פָּרָשַׁת תְּרוּמָה</div>
+    <div class="page-subtitle-he">סֵפֶר שְׁמוֹת · כ״ה:א׳–כ״ז:י״ט · בִּינָה · מַקָּאם בַּיַאת · וְעָשׂוּ לִי מִקְדָּשׁ</div>
+    <div class="page-title-de">Terumah — Der Mischkan-Bau aus freiwilliger Hebe · Siebte Parashah des Sefer Schemot · Binah im Maqam Bayat</div>
+    <div class="page-desc">
+      Terumah öffnet die große Mischkan-Sequenz des Sefer Schemot. Nach Sinai (Yitro) und nach
+      dem Bundesschluss (Mishpatim) kommt Adonai's Aufforderung an Israel: <em>„וְיִקְחוּ־לִי
+      תְּרוּמָה … וְעָשׂוּ לִי מִקְדָּשׁ וְשָׁכַנְתִּי בְּתוֹכָם"</em> — und sie sollen für Mich
+      eine Hebe nehmen … und sie sollen Mir ein Heiligtum machen, und Ich werde inmitten ihrer
+      wohnen (Schemot 25:2,8). Es folgt die detailgenaue Bau-Anweisung: der <em>Aron</em> aus
+      Akazienholz und reinem Gold mit den zwei Cherubim auf der <em>Kapporet</em>, der
+      <em>Schulchan</em> für das Lechem HaPanim, die <em>Menorah</em> aus einem Stück getriebenen
+      Goldes, die zehn Yeri'ot des Mischkan, die Krashim aus Akazienholz mit silbernen Sockeln,
+      die <em>Parochet</em>, der <em>Masach</em>, der kupferne Mizbeach für die Olot, der
+      Chatzer mit seinen Säulen. Sefirot-Anker: <strong>Binah</strong> — die mütterliche Tiefe,
+      die das Heiligtum empfängt und trägt; in Pardes-Rimonim-Sprache des Ramak die <em>Imma
+      Ila'a</em>, das obere Heichal, aus dem alle Strukturen herabsteigen. Maqam:
+      <strong>Bayat</strong> — der mütterlich-kontemplative Modus, generationen-tief,
+      empfangend, Heichal-bauend, in der Aleppo-Yerushalayim-Tradition der Bakkaschot-Lieder
+      und der Erwachenden-Frühe. Sephardischer Minhag (Aleppo, Marokko, Yemen, Yerushalayim):
+      jedes jüdische Haus ist <em>Mikdasch Me'at</em> — der Tisch ist Schulchan, die
+      Schabbat-Lichter sind Menorah, das Tora-Lernen ist Esch Tamid. Tora-Text 1:1,
+      Tetragrammaton durchgängig als אֲדֹנָי, Maschiach ben David.
+    </div>
+  </header>
+
+  <!-- ══ SONG SECTION — PARASHAT TERUMAH ══ -->
+  <section class="song-section" id="terumah">
+
+    <div class="song-header">
+      <div class="song-num">ז</div>
+      <div class="song-meta">
+        <div class="korban-badge">Binah — בִּינָה · Die mütterliche Tiefe, die das Heiligtum empfängt</div>
+        <div class="song-title-he">פָּרָשַׁת תְּרוּמָה</div>
+        <div class="song-title-de">Terumah — „Und sie sollen Mir ein Heiligtum machen" · Schemot 25:1–27:19</div>
+        <div class="maqam-badge">מַקָּאם בַּיַאת · Bayat · ~58 BPM rubato</div>
+        <div class="source-badge">שְׁמוֹת כ״ה:א׳–כ״ז:י״ט · רמב״ם הִלְכוֹת בֵּית הַבְּחִירָה א׳-ג׳ · רשש נהר שלום (דרושי הַמִּשְׁכָּן) · רמח״ל מִשְׁכְּנֵי עֶלְיוֹן · רמח״ל מְסִלַּת יְשָׁרִים פֶּרֶק א׳ · רמ״ק פַּרְדֵּס רִמּוֹנִים שַׁעַר הַבִּינָה · אור החיים על שְׁמוֹת כ״ה:ב׳ · שד״ל בְּפֵרוּשׁ עַל שְׁמוֹת כ״ה:ב׳ · בן איש חי (מִקְדָּשׁ מְעַט) · שׁוּלְחָן עָרוּךְ אוֹרַח חַיִּים קנ״ד · כַּף הַחַיִּים קנ״ד</div>
+      </div>
+    </div>
+
+
+    <!-- ── ALIYAH 1 · ראשון · Schemot 25:1-16 — Terumah-Aufruf, Aron-Bau ── -->
+    <div class="aliyah-block">
+      <div class="aliyah-label">עֲלִיָּה רִאשׁוֹנָה — וְיִקְחוּ־לִי תְּרוּמָה · וְעָשׂוּ לִי מִקְדָּשׁ<span class="aliyah-label-de">Erste Aliyah · Schemot 25:1–16 · Der Terumah-Aufruf, das Material des Mischkan, der Aron aus Akazienholz und Gold</span></div>
+      <div class="instrument-note">[no percussion] [no drums] [no choir] [solo acoustic guitar — Bayat opening with maternal contemplative fingerpicking, the calling-forth from generous hearts, the materials gathering, sustained low tones on kamatz, rubato around 58 BPM, no percussion, no drums, no beat] Gitarre: Bayat öffnet im mütterlich-kontemplativen Fingerpicking — das Hervorrufen aus großzügigen Herzen, das Sammeln der Materialien, getragene Tiefen auf den Kamatz.</div>
+      <div class="lyrics-block">
+        <div class="lyrics-he" dir="rtl">
+          <span class="line">וַיְדַבֵּר אֲדֹנָי אֶל־מֹשֶׁה לֵּאמֹר׃</span>
+          <span class="line">דַּבֵּר אֶל־בְּנֵי יִשְׂרָאֵל וְיִקְחוּ־לִי תְּרוּמָה מֵאֵת כׇּל־אִישׁ אֲשֶׁר יִדְּבֶנּוּ לִבּוֹ תִּקְחוּ אֶת־תְּרוּמָתִי׃</span>
+          <span class="line">וְזֹאת הַתְּרוּמָה אֲשֶׁר תִּקְחוּ מֵאִתָּם זָהָב וָכֶסֶף וּנְחֹשֶׁת׃</span>
+          <span class="line">וּתְכֵלֶת וְאַרְגָּמָן וְתוֹלַעַת שָׁנִי וְשֵׁשׁ וְעִזִּים׃</span>
+          <span class="line">וְעֹרֹת אֵילִם מְאׇדָּמִים וְעֹרֹת תְּחָשִׁים וַעֲצֵי שִׁטִּים׃</span>
+          <span class="line">שֶׁמֶן לַמָּאֹר בְּשָׂמִים לְשֶׁמֶן הַמִּשְׁחָה וְלִקְטֹרֶת הַסַּמִּים׃</span>
+          <span class="line">אַבְנֵי־שֹׁהַם וְאַבְנֵי מִלֻּאִים לָאֵפֹד וְלַחֹשֶׁן׃</span>
+          <span class="line">וְעָשׂוּ לִי מִקְדָּשׁ וְשָׁכַנְתִּי בְּתוֹכָם׃</span>
+          <span class="line">כְּכֹל אֲשֶׁר אֲנִי מַרְאֶה אוֹתְךָ אֵת תַּבְנִית הַמִּשְׁכָּן וְאֵת תַּבְנִית כׇּל־כֵּלָיו וְכֵן תַּעֲשׂוּ׃</span>
+          <span class="line">וְעָשׂוּ אֲרוֹן עֲצֵי שִׁטִּים אַמָּתַיִם וָחֵצִי אׇרְכּוֹ וְאַמָּה וָחֵצִי רׇחְבּוֹ וְאַמָּה וָחֵצִי קֹמָתוֹ׃</span>
+          <span class="line">וְצִפִּיתָ אֹתוֹ זָהָב טָהוֹר מִבַּיִת וּמִחוּץ תְּצַפֶּנּוּ וְעָשִׂיתָ עָלָיו זֵר זָהָב סָבִיב׃</span>
+          <span class="line">וְיָצַקְתָּ לּוֹ אַרְבַּע טַבְּעֹת זָהָב וְנָתַתָּה עַל אַרְבַּע פַּעֲמֹתָיו וּשְׁתֵּי טַבָּעֹת עַל־צַלְעוֹ הָאֶחָת וּשְׁתֵּי טַבָּעֹת עַל־צַלְעוֹ הַשֵּׁנִית׃</span>
+          <span class="line">וְעָשִׂיתָ בַדֵּי עֲצֵי שִׁטִּים וְצִפִּיתָ אֹתָם זָהָב׃</span>
+          <span class="line">וְהֵבֵאתָ אֶת־הַבַּדִּים בַּטַּבָּעֹת עַל צַלְעֹת הָאָרֹן לָשֵׂאת אֶת־הָאָרֹן בָּהֶם׃</span>
+          <span class="line">בְּטַבְּעֹת הָאָרֹן יִהְיוּ הַבַּדִּים לֹא יָסֻרוּ מִמֶּנּוּ׃</span>
+          <span class="line">וְנָתַתָּ אֶל־הָאָרֹן אֵת הָעֵדֻת אֲשֶׁר אֶתֵּן אֵלֶיךָ׃</span>
+        </div>
+        <div class="lyrics-de">
+          <span class="line">(25:1) Und Adonai redete zu Mosche und sprach:</span>
+          <span class="line">(2) Rede zu den Söhnen Israels, dass sie für Mich eine Hebe nehmen — von jedem Mann, dessen Herz ihn dazu treibt, sollt ihr Meine Hebe nehmen.</span>
+          <span class="line">(3) Und dies ist die Hebe, die ihr von ihnen nehmen sollt: Gold und Silber und Kupfer;</span>
+          <span class="line">(4) und Blauwolle und Purpur und Karmesin und feines Leinen und Ziegenhaar;</span>
+          <span class="line">(5) und rot gefärbte Widderfelle und Tachasch-Felle und Akazienhölzer;</span>
+          <span class="line">(6) Öl für den Leuchter, Gewürze zum Salböl und zum Räucherwerk der Wohlgerüche;</span>
+          <span class="line">(7) Schoham-Steine und Steine zur Einfassung für das Efod und für den Choschen.</span>
+          <span class="line">(8) Und sie sollen Mir ein Heiligtum machen, und Ich werde inmitten ihrer wohnen.</span>
+          <span class="line">(9) Ganz wie alles, was Ich dir zeige — die Bau-Form des Mischkan und die Form aller seiner Geräte — so sollt ihr es machen.</span>
+          <span class="line">(10) Und sie sollen eine Lade aus Akazienholz machen — zweieinhalb Ellen ihre Länge, anderthalb Ellen ihre Breite, anderthalb Ellen ihre Höhe.</span>
+          <span class="line">(11) Und du sollst sie mit reinem Gold überziehen — von innen und von außen sollst du sie überziehen — und du sollst einen goldenen Kranz ringsum auf ihr machen.</span>
+          <span class="line">(12) Und du sollst ihr vier goldene Ringe gießen und an ihre vier Füße geben — zwei Ringe an ihrer einen Seite und zwei Ringe an ihrer anderen Seite.</span>
+          <span class="line">(13) Und du sollst Stangen aus Akazienholz machen und sie mit Gold überziehen.</span>
+          <span class="line">(14) Und du sollst die Stangen in die Ringe an den Seiten der Lade einbringen, um die Lade mit ihnen zu tragen.</span>
+          <span class="line">(15) In den Ringen der Lade sollen die Stangen sein — sie sollen nicht von ihr weichen.</span>
+          <span class="line">(16) Und du sollst in die Lade das Zeugnis legen, das Ich dir geben werde.</span>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- ── ALIYAH 2 · שני · Schemot 25:17-30 — Kapporet, Schulchan ── -->
+    <div class="aliyah-block">
+      <div class="aliyah-label">עֲלִיָּה שְׁנִיָּה — הַכַּפֹּרֶת וְהַכְּרֻבִים · הַשֻּׁלְחָן וְלֶחֶם הַפָּנִים<span class="aliyah-label-de">Zweite Aliyah · Schemot 25:17–30 · Die Kapporet mit den zwei Cherubim, der Schulchan für das Lechem HaPanim</span></div>
+      <div class="instrument-note">[no percussion] [no drums] [no choir] [acoustic guitar — Bayat warming into the Kapporet-meeting, the two cherubim facing each other, the table of bread always before His face, sustained tones, contemplative pace, no percussion] Gitarre: Bayat erwärmt sich zur Kapporet-Begegnung — die zwei Cherubim einander zugewandt, der Tisch mit dem Brot stets vor Seinem Angesicht, getragene Tiefen, kontemplatives Tempo.</div>
+      <div class="lyrics-block">
+        <div class="lyrics-he" dir="rtl">
+          <span class="line">וְעָשִׂיתָ כַפֹּרֶת זָהָב טָהוֹר אַמָּתַיִם וָחֵצִי אׇרְכָּהּ וְאַמָּה וָחֵצִי רׇחְבָּהּ׃</span>
+          <span class="line">וְעָשִׂיתָ שְׁנַיִם כְּרֻבִים זָהָב מִקְשָׁה תַּעֲשֶׂה אֹתָם מִשְּׁנֵי קְצוֹת הַכַּפֹּרֶת׃</span>
+          <span class="line">וַעֲשֵׂה כְּרוּב אֶחָד מִקָּצָה מִזֶּה וּכְרוּב־אֶחָד מִקָּצָה מִזֶּה מִן־הַכַּפֹּרֶת תַּעֲשׂוּ אֶת־הַכְּרֻבִים עַל־שְׁנֵי קְצוֹתָיו׃</span>
+          <span class="line">וְהָיוּ הַכְּרֻבִים פֹּרְשֵׂי כְנָפַיִם לְמַעְלָה סֹכְכִים בְּכַנְפֵיהֶם עַל־הַכַּפֹּרֶת וּפְנֵיהֶם אִישׁ אֶל־אָחִיו אֶל־הַכַּפֹּרֶת יִהְיוּ פְּנֵי הַכְּרֻבִים׃</span>
+          <span class="line">וְנָתַתָּ אֶת־הַכַּפֹּרֶת עַל־הָאָרֹן מִלְמָעְלָה וְאֶל־הָאָרֹן תִּתֵּן אֶת־הָעֵדֻת אֲשֶׁר אֶתֵּן אֵלֶיךָ׃</span>
+          <span class="line">וְנוֹעַדְתִּי לְךָ שָׁם וְדִבַּרְתִּי אִתְּךָ מֵעַל הַכַּפֹּרֶת מִבֵּין שְׁנֵי הַכְּרֻבִים אֲשֶׁר עַל־אֲרוֹן הָעֵדֻת אֵת כׇּל־אֲשֶׁר אֲצַוֶּה אוֹתְךָ אֶל־בְּנֵי יִשְׂרָאֵל׃</span>
+          <span class="line">וְעָשִׂיתָ שֻׁלְחָן עֲצֵי שִׁטִּים אַמָּתַיִם אׇרְכּוֹ וְאַמָּה רׇחְבּוֹ וְאַמָּה וָחֵצִי קֹמָתוֹ׃</span>
+          <span class="line">וְצִפִּיתָ אֹתוֹ זָהָב טָהוֹר וְעָשִׂיתָ לּוֹ זֵר זָהָב סָבִיב׃</span>
+          <span class="line">וְעָשִׂיתָ לּוֹ מִסְגֶּרֶת טֹפַח סָבִיב וְעָשִׂיתָ זֵר־זָהָב לְמִסְגַּרְתּוֹ סָבִיב׃</span>
+          <span class="line">וְעָשִׂיתָ לּוֹ אַרְבַּע טַבְּעֹת זָהָב וְנָתַתָּ אֶת־הַטַּבָּעֹת עַל אַרְבַּע הַפֵּאֹת אֲשֶׁר לְאַרְבַּע רַגְלָיו׃</span>
+          <span class="line">לְעֻמַּת הַמִּסְגֶּרֶת תִּהְיֶיןָ הַטַּבָּעֹת לְבָתִּים לְבַדִּים לָשֵׂאת אֶת־הַשֻּׁלְחָן׃</span>
+          <span class="line">וְעָשִׂיתָ אֶת־הַבַּדִּים עֲצֵי שִׁטִּים וְצִפִּיתָ אֹתָם זָהָב וְנִשָּׂא־בָם אֶת־הַשֻּׁלְחָן׃</span>
+          <span class="line">וְעָשִׂיתָ קְּעָרֹתָיו וְכַפֹּתָיו וּקְשׂוֹתָיו וּמְנַקִּיֹּתָיו אֲשֶׁר יֻסַּךְ בָּהֵן זָהָב טָהוֹר תַּעֲשֶׂה אֹתָם׃</span>
+          <span class="line">וְנָתַתָּ עַל־הַשֻּׁלְחָן לֶחֶם פָּנִים לְפָנַי תָּמִיד׃</span>
+        </div>
+        <div class="lyrics-de">
+          <span class="line">(17) Und du sollst eine Kapporet aus reinem Gold machen — zweieinhalb Ellen ihre Länge, anderthalb Ellen ihre Breite.</span>
+          <span class="line">(18) Und du sollst zwei Cherubim aus Gold machen — in getriebener Arbeit sollst du sie machen, an beiden Enden der Kapporet.</span>
+          <span class="line">(19) Und mache einen Cherub an dem einen Ende und einen Cherub an dem anderen Ende — aus der Kapporet selbst sollt ihr die Cherubim machen, an ihren beiden Enden.</span>
+          <span class="line">(20) Und die Cherubim sollen die Flügel nach oben breiten und die Kapporet mit ihren Flügeln überdecken — und ihre Angesichter einander zugewandt, der Kapporet zugewandt — so sollen die Angesichter der Cherubim sein.</span>
+          <span class="line">(21) Und du sollst die Kapporet oben auf die Lade legen, und in die Lade sollst du das Zeugnis legen, das Ich dir geben werde.</span>
+          <span class="line">(22) Und Ich werde dir dort begegnen und mit dir reden — von der Kapporet aus, von zwischen den zwei Cherubim, die auf der Lade des Zeugnisses sind — alles, was Ich dir an die Söhne Israels gebieten werde.</span>
+          <span class="line">(23) Und du sollst einen Tisch aus Akazienholz machen — zwei Ellen seine Länge, eine Elle seine Breite, anderthalb Ellen seine Höhe.</span>
+          <span class="line">(24) Und du sollst ihn mit reinem Gold überziehen und einen goldenen Kranz ringsum auf ihm machen.</span>
+          <span class="line">(25) Und du sollst eine Leiste, eine Handbreit breit, ringsum machen und einen goldenen Kranz ringsum auf seiner Leiste machen.</span>
+          <span class="line">(26) Und du sollst vier goldene Ringe für ihn machen und die Ringe an die vier Ecken setzen, die an seinen vier Füßen sind.</span>
+          <span class="line">(27) Gegenüber der Leiste sollen die Ringe als Behältnisse für die Stangen sein, um den Tisch zu tragen.</span>
+          <span class="line">(28) Und du sollst die Stangen aus Akazienholz machen und sie mit Gold überziehen, und der Tisch werde mit ihnen getragen.</span>
+          <span class="line">(29) Und du sollst seine Schüsseln und seine Kelche, seine Kannen und seine Schalen, mit denen er bedeckt wird, machen — aus reinem Gold sollst du sie machen.</span>
+          <span class="line">(30) Und du sollst auf den Tisch das Brot der Gegenwart legen, vor Mir, beständig.</span>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- ── ALIYAH 3 · שלישי · Schemot 25:31-26:14 — Menorah, Yeri'ot ── -->
+    <div class="aliyah-block">
+      <div class="aliyah-label">עֲלִיָּה שְׁלִישִׁית — הַמְּנוֹרָה הַטְּהוֹרָה · יְרִיעוֹת הַמִּשְׁכָּן<span class="aliyah-label-de">Dritte Aliyah · Schemot 25:31–26:14 · Die Menorah aus einem Stück getriebenen Goldes, die zehn Yeri'ot des Mischkan</span></div>
+      <div class="instrument-note">[no percussion] [no drums] [no choir] [acoustic guitar — Bayat rising into the menorah-light, the single-piece beaten gold, the seven lamps, then the curtains woven of blue, purple, scarlet, fine linen with cherubim, contemplative maternal pace, no percussion] Gitarre: Bayat steigt in das Menorah-Licht — das aus einem Stück getriebene Gold, die sieben Lampen, dann die Yeri'ot aus Tchelet, Argaman, Tolaat Schani, Schesch mit Cherubim, mütterlich-kontemplatives Tempo.</div>
+      <div class="lyrics-block">
+        <div class="lyrics-he" dir="rtl">
+          <span class="line">וְעָשִׂיתָ מְנֹרַת זָהָב טָהוֹר מִקְשָׁה תֵּעָשֶׂה הַמְּנוֹרָה יְרֵכָהּ וְקָנָהּ גְּבִיעֶיהָ כַּפְתֹּרֶיהָ וּפְרָחֶיהָ מִמֶּנָּה יִהְיוּ׃</span>
+          <span class="line">וְשִׁשָּׁה קָנִים יֹצְאִים מִצִּדֶּיהָ שְׁלֹשָׁה קְנֵי מְנֹרָה מִצִּדָּהּ הָאֶחָד וּשְׁלֹשָׁה קְנֵי מְנֹרָה מִצִּדָּהּ הַשֵּׁנִי׃</span>
+          <span class="line">שְׁלֹשָׁה גְבִעִים מְשֻׁקָּדִים בַּקָּנֶה הָאֶחָד כַּפְתֹּר וָפֶרַח וּשְׁלֹשָׁה גְבִעִים מְשֻׁקָּדִים בַּקָּנֶה הָאֶחָד כַּפְתֹּר וָפָרַח כֵּן לְשֵׁשֶׁת הַקָּנִים הַיֹּצְאִים מִן־הַמְּנֹרָה׃</span>
+          <span class="line">וּבַמְּנֹרָה אַרְבָּעָה גְבִעִים מְשֻׁקָּדִים כַּפְתֹּרֶיהָ וּפְרָחֶיהָ׃</span>
+          <span class="line">וְכַפְתֹּר תַּחַת שְׁנֵי הַקָּנִים מִמֶּנָּה וְכַפְתֹּר תַּחַת שְׁנֵי הַקָּנִים מִמֶּנָּה וְכַפְתֹּר תַּחַת־שְׁנֵי הַקָּנִים מִמֶּנָּה לְשֵׁשֶׁת הַקָּנִים הַיֹּצְאִים מִן־הַמְּנֹרָה׃</span>
+          <span class="line">כַּפְתֹּרֵיהֶם וּקְנֹתָם מִמֶּנָּה יִהְיוּ כֻּלָּהּ מִקְשָׁה אַחַת זָהָב טָהוֹר׃</span>
+          <span class="line">וְעָשִׂיתָ אֶת־נֵרֹתֶיהָ שִׁבְעָה וְהֶעֱלָה אֶת־נֵרֹתֶיהָ וְהֵאִיר עַל־עֵבֶר פָּנֶיהָ׃</span>
+          <span class="line">וּמַלְקָחֶיהָ וּמַחְתֹּתֶיהָ זָהָב טָהוֹר׃</span>
+          <span class="line">כִּכָּר זָהָב טָהוֹר יַעֲשֶׂה אֹתָהּ אֵת כׇּל־הַכֵּלִים הָאֵלֶּה׃</span>
+          <span class="line">וּרְאֵה וַעֲשֵׂה בְּתַבְנִיתָם אֲשֶׁר־אַתָּה מׇרְאֶה בָּהָר׃</span>
+          <span class="line">וְאֶת־הַמִּשְׁכָּן תַּעֲשֶׂה עֶשֶׂר יְרִיעֹת שֵׁשׁ מׇשְׁזָר וּתְכֵלֶת וְאַרְגָּמָן וְתֹלַעַת שָׁנִי כְּרֻבִים מַעֲשֵׂה חֹשֵׁב תַּעֲשֶׂה אֹתָם׃</span>
+          <span class="line">אֹרֶךְ הַיְרִיעָה הָאַחַת שְׁמֹנֶה וְעֶשְׂרִים בָּאַמָּה וְרֹחַב אַרְבַּע בָּאַמָּה הַיְרִיעָה הָאֶחָת מִדָּה אַחַת לְכׇל־הַיְרִיעֹת׃</span>
+          <span class="line">חֲמֵשׁ הַיְרִיעֹת תִּהְיֶיןָ חֹבְרֹת אִשָּׁה אֶל־אֲחֹתָהּ וְחָמֵשׁ יְרִיעֹת חֹבְרֹת אִשָּׁה אֶל־אֲחֹתָהּ׃</span>
+          <span class="line">וְעָשִׂיתָ לֻלְאֹת תְּכֵלֶת עַל שְׂפַת הַיְרִיעָה הָאֶחָת מִקָּצָה בַּחֹבָרֶת וְכֵן תַּעֲשֶׂה בִּשְׂפַת הַיְרִיעָה הַקִּיצוֹנָה בַּמַּחְבֶּרֶת הַשֵּׁנִית׃</span>
+          <span class="line">חֲמִשִּׁים לֻלָאֹת תַּעֲשֶׂה בַּיְרִיעָה הָאֶחָת וַחֲמִשִּׁים לֻלָאֹת תַּעֲשֶׂה בִּקְצֵה הַיְרִיעָה אֲשֶׁר בַּמַּחְבֶּרֶת הַשֵּׁנִית מַקְבִּילֹת הַלֻּלָאֹת אִשָּׁה אֶל־אֲחֹתָהּ׃</span>
+          <span class="line">וְעָשִׂיתָ חֲמִשִּׁים קַרְסֵי זָהָב וְחִבַּרְתָּ אֶת־הַיְרִיעֹת אִשָּׁה אֶל־אֲחֹתָהּ בַּקְּרָסִים וְהָיָה הַמִּשְׁכָּן אֶחָד׃</span>
+          <span class="line">וְעָשִׂיתָ יְרִיעֹת עִזִּים לְאֹהֶל עַל־הַמִּשְׁכָּן עַשְׁתֵּי־עֶשְׂרֵה יְרִיעֹת תַּעֲשֶׂה אֹתָם׃</span>
+          <span class="line">אֹרֶךְ הַיְרִיעָה הָאַחַת שְׁלֹשִׁים בָּאַמָּה וְרֹחַב אַרְבַּע בָּאַמָּה הַיְרִיעָה הָאֶחָת מִדָּה אַחַת לְעַשְׁתֵּי עֶשְׂרֵה יְרִיעֹת׃</span>
+          <span class="line">וְחִבַּרְתָּ אֶת־חֲמֵשׁ הַיְרִיעֹת לְבָד וְאֶת־שֵׁשׁ הַיְרִיעֹת לְבָד וְכָפַלְתָּ אֶת־הַיְרִיעָה הַשִּׁשִּׁית אֶל־מוּל פְּנֵי הָאֹהֶל׃</span>
+          <span class="line">וְעָשִׂיתָ חֲמִשִּׁים לֻלָאֹת עַל שְׂפַת הַיְרִיעָה הָאֶחָת הַקִּיצֹנָה בַּחֹבָרֶת וַחֲמִשִּׁים לֻלָאֹת עַל שְׂפַת הַיְרִיעָה הַחֹבֶרֶת הַשֵּׁנִית׃</span>
+          <span class="line">וְעָשִׂיתָ קַרְסֵי נְחֹשֶׁת חֲמִשִּׁים וְהֵבֵאתָ אֶת־הַקְּרָסִים בַּלֻּלָאֹת וְחִבַּרְתָּ אֶת־הָאֹהֶל וְהָיָה אֶחָד׃</span>
+          <span class="line">וְסֶרַח הָעֹדֵף בִּירִיעֹת הָאֹהֶל חֲצִי הַיְרִיעָה הָעֹדֶפֶת תִּסְרַח עַל אֲחֹרֵי הַמִּשְׁכָּן׃</span>
+          <span class="line">וְהָאַמָּה מִזֶּה וְהָאַמָּה מִזֶּה בָּעֹדֵף בְּאֹרֶךְ יְרִיעֹת הָאֹהֶל יִהְיֶה סָרוּחַ עַל־צִדֵּי הַמִּשְׁכָּן מִזֶּה וּמִזֶּה לְכַסֹּתוֹ׃</span>
+          <span class="line">וְעָשִׂיתָ מִכְסֶה לָאֹהֶל עֹרֹת אֵילִם מְאׇדָּמִים וּמִכְסֵה עֹרֹת תְּחָשִׁים מִלְמָעְלָה׃</span>
+        </div>
+        <div class="lyrics-de">
+          <span class="line">(31) Und du sollst eine Menorah aus reinem Gold machen — in getriebener Arbeit soll die Menorah gemacht werden: ihr Fuß und ihr Schaft, ihre Kelche, ihre Knäufe und ihre Blüten — aus ihr selbst sollen sie sein.</span>
+          <span class="line">(32) Und sechs Arme gehen aus ihren Seiten hervor — drei Arme der Menorah aus ihrer einen Seite, drei Arme der Menorah aus ihrer anderen Seite.</span>
+          <span class="line">(33) Drei mandelblüten-förmige Kelche an dem einen Arm, Knauf und Blüte — und drei mandelblüten-förmige Kelche an dem anderen Arm, Knauf und Blüte — so an den sechs Armen, die aus der Menorah herausgehen.</span>
+          <span class="line">(34) Und an der Menorah selbst vier mandelblüten-förmige Kelche, ihre Knäufe und ihre Blüten.</span>
+          <span class="line">(35) Und ein Knauf unter zwei Armen aus ihr, und ein Knauf unter zwei Armen aus ihr, und ein Knauf unter zwei Armen aus ihr — bei den sechs Armen, die aus der Menorah herausgehen.</span>
+          <span class="line">(36) Ihre Knäufe und ihre Arme sollen aus ihr sein — sie alle aus einem Stück getriebenen reinen Goldes.</span>
+          <span class="line">(37) Und du sollst ihre sieben Lampen machen — und man soll ihre Lampen aufsetzen, dass sie über ihre Vorderseite leuchten.</span>
+          <span class="line">(38) Und ihre Dochtscheren und ihre Aschpfannen sollen aus reinem Gold sein.</span>
+          <span class="line">(39) Aus einem Talent reinen Goldes soll man sie machen, mit allen diesen Geräten.</span>
+          <span class="line">(40) Und siehe und mache — nach ihrer Bau-Form, die dir auf dem Berge gezeigt wird.</span>
+          <span class="line">(26:1) Und den Mischkan sollst du aus zehn Yeri'ot machen — aus gezwirntem Byssus und Tchelet und Argaman und Karmesin — Cherubim in kunstvoller Weber-Arbeit sollst du an ihnen machen.</span>
+          <span class="line">(2) Die Länge der einen Yeri'a achtundzwanzig Ellen, die Breite vier Ellen die eine Yeri'a — ein Maß für alle Yeri'ot.</span>
+          <span class="line">(3) Fünf Yeri'ot sollen miteinander verbunden sein, eine an die andere; und fünf Yeri'ot eine an die andere verbunden.</span>
+          <span class="line">(4) Und du sollst Schleifen aus Tchelet an dem Saum der äußersten Yeri'a der einen Verbindung machen — und ebenso sollst du am Saum der äußersten Yeri'a der zweiten Verbindung machen.</span>
+          <span class="line">(5) Fünfzig Schleifen sollst du an der einen Yeri'a machen, und fünfzig Schleifen sollst du am Ende der Yeri'a, die in der zweiten Verbindung ist, machen — die Schleifen einander gegenüber.</span>
+          <span class="line">(6) Und du sollst fünfzig goldene Haken machen und die Yeri'ot mit den Haken miteinander verbinden — und der Mischkan werde eins.</span>
+          <span class="line">(7) Und du sollst Yeri'ot aus Ziegenhaar als Zelt über dem Mischkan machen — elf Yeri'ot sollst du machen.</span>
+          <span class="line">(8) Die Länge der einen Yeri'a dreißig Ellen, die Breite vier Ellen die eine Yeri'a — ein Maß für die elf Yeri'ot.</span>
+          <span class="line">(9) Und du sollst die fünf Yeri'ot für sich und die sechs Yeri'ot für sich verbinden — und die sechste Yeri'a sollst du doppelt legen, der Vorderseite des Zeltes gegenüber.</span>
+          <span class="line">(10) Und du sollst fünfzig Schleifen am Saum der einen äußersten Yeri'a in der Verbindung machen, und fünfzig Schleifen am Saum der Yeri'a der zweiten Verbindung.</span>
+          <span class="line">(11) Und du sollst fünfzig Haken aus Kupfer machen und die Haken in die Schleifen einbringen — und das Zelt verbinden, dass es eins werde.</span>
+          <span class="line">(12) Und der überschüssige Teil bei den Yeri'ot des Zeltes — die Hälfte der überschüssigen Yeri'a — soll auf der Rückseite des Mischkan herabhängen.</span>
+          <span class="line">(13) Und die Elle hier und die Elle dort am Überschuss in der Länge der Yeri'ot des Zeltes soll an den Seiten des Mischkan herabhängen, hier und dort, um ihn zu bedecken.</span>
+          <span class="line">(14) Und du sollst eine Decke für das Zelt machen — aus rot gefärbten Widderfellen — und eine Decke aus Tachasch-Fellen darüber.</span>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- ── ALIYAH 4 · רביעי · Schemot 26:15-30 — Krashim (Bretter) ── -->
+    <div class="aliyah-block">
+      <div class="aliyah-label">עֲלִיָּה רְבִיעִית — הַקְּרָשִׁים עֹמְדִים · אַדְנֵי־כֶסֶף<span class="aliyah-label-de">Vierte Aliyah · Schemot 26:15–30 · Die stehenden Bretter aus Akazienholz, die silbernen Sockel, die Riegel — der Mischkan als aufgerichtetes Haus</span></div>
+      <div class="instrument-note">[no percussion] [no drums] [no choir] [acoustic guitar — Bayat broadening for the standing-up of the wooden frame, the silver sockets, the bars passing through, structural and grounded yet maternal-warm, no percussion] Gitarre: Bayat verbreitert sich für das Aufrichten des Holz-Gerüstes — die silbernen Sockel, die Riegel ziehen sich durch — strukturell und geerdet, doch mütterlich-warm.</div>
+      <div class="lyrics-block">
+        <div class="lyrics-he" dir="rtl">
+          <span class="line">וְעָשִׂיתָ אֶת־הַקְּרָשִׁים לַמִּשְׁכָּן עֲצֵי שִׁטִּים עֹמְדִים׃</span>
+          <span class="line">עֶשֶׂר אַמּוֹת אֹרֶךְ הַקָּרֶשׁ וְאַמָּה וַחֲצִי הָאַמָּה רֹחַב הַקֶּרֶשׁ הָאֶחָד׃</span>
+          <span class="line">שְׁתֵּי יָדוֹת לַקֶּרֶשׁ הָאֶחָד מְשֻׁלָּבֹת אִשָּׁה אֶל־אֲחֹתָהּ כֵּן תַּעֲשֶׂה לְכֹל קַרְשֵׁי הַמִּשְׁכָּן׃</span>
+          <span class="line">וְעָשִׂיתָ אֶת־הַקְּרָשִׁים לַמִּשְׁכָּן עֶשְׂרִים קֶרֶשׁ לִפְאַת נֶגְבָּה תֵימָנָה׃</span>
+          <span class="line">וְאַרְבָּעִים אַדְנֵי־כֶסֶף תַּעֲשֶׂה תַּחַת עֶשְׂרִים הַקָּרֶשׁ שְׁנֵי אֲדָנִים תַּחַת־הַקֶּרֶשׁ הָאֶחָד לִשְׁתֵּי יְדֹתָיו וּשְׁנֵי אֲדָנִים תַּחַת־הַקֶּרֶשׁ הָאֶחָד לִשְׁתֵּי יְדֹתָיו׃</span>
+          <span class="line">וּלְצֶלַע הַמִּשְׁכָּן הַשֵּׁנִית לִפְאַת צָפוֹן עֶשְׂרִים קָרֶשׁ׃</span>
+          <span class="line">וְאַרְבָּעִים אַדְנֵיהֶם כָּסֶף שְׁנֵי אֲדָנִים תַּחַת הַקֶּרֶשׁ הָאֶחָד וּשְׁנֵי אֲדָנִים תַּחַת הַקֶּרֶשׁ הָאֶחָד׃</span>
+          <span class="line">וּלְיַרְכְּתֵי הַמִּשְׁכָּן יָמָּה תַּעֲשֶׂה שִׁשָּׁה קְרָשִׁים׃</span>
+          <span class="line">וּשְׁנֵי קְרָשִׁים תַּעֲשֶׂה לִמְקֻצְעֹת הַמִּשְׁכָּן בַּיַּרְכָתָיִם׃</span>
+          <span class="line">וְיִהְיוּ תֹאֲמִם מִלְּמַטָּה וְיַחְדָּו יִהְיוּ תַמִּים עַל־רֹאשׁוֹ אֶל־הַטַּבַּעַת הָאֶחָת כֵּן יִהְיֶה לִשְׁנֵיהֶם לִשְׁנֵי הַמִּקְצֹעֹת יִהְיוּ׃</span>
+          <span class="line">וְהָיוּ שְׁמֹנָה קְרָשִׁים וְאַדְנֵיהֶם כֶּסֶף שִׁשָּׁה עָשָׂר אֲדָנִים שְׁנֵי אֲדָנִים תַּחַת הַקֶּרֶשׁ הָאֶחָד וּשְׁנֵי אֲדָנִים תַּחַת הַקֶּרֶשׁ הָאֶחָד׃</span>
+          <span class="line">וְעָשִׂיתָ בְרִיחִם עֲצֵי שִׁטִּים חֲמִשָּׁה לְקַרְשֵׁי צֶלַע־הַמִּשְׁכָּן הָאֶחָד׃</span>
+          <span class="line">וַחֲמִשָּׁה בְרִיחִם לְקַרְשֵׁי צֶלַע־הַמִּשְׁכָּן הַשֵּׁנִית וַחֲמִשָּׁה בְרִיחִם לְקַרְשֵׁי צֶלַע הַמִּשְׁכָּן לַיַּרְכָתַיִם יָמָּה׃</span>
+          <span class="line">וְהַבְּרִיחַ הַתִּיכֹן בְּתוֹךְ הַקְּרָשִׁים מַבְרִחַ מִן־הַקָּצֶה אֶל־הַקָּצֶה׃</span>
+          <span class="line">וְאֶת־הַקְּרָשִׁים תְּצַפֶּה זָהָב וְאֶת־טַבְּעֹתֵיהֶם תַּעֲשֶׂה זָהָב בָּתִּים לַבְּרִיחִם וְצִפִּיתָ אֶת־הַבְּרִיחִם זָהָב׃</span>
+          <span class="line">וַהֲקֵמֹתָ אֶת־הַמִּשְׁכָּן כְּמִשְׁפָּטוֹ אֲשֶׁר הׇרְאֵיתָ בָּהָר׃</span>
+        </div>
+        <div class="lyrics-de">
+          <span class="line">(15) Und du sollst die Bretter für den Mischkan aus Akazienholz machen — stehend.</span>
+          <span class="line">(16) Zehn Ellen die Länge des Brettes, eine und eine halbe Elle die Breite des einen Brettes.</span>
+          <span class="line">(17) Zwei Zapfen am einen Brett, ineinander gefügt, eine an die andere — so sollst du es bei allen Brettern des Mischkan machen.</span>
+          <span class="line">(18) Und du sollst die Bretter für den Mischkan machen — zwanzig Bretter für die Südseite, gegen Mittag.</span>
+          <span class="line">(19) Und vierzig silberne Sockel sollst du unter die zwanzig Bretter machen — zwei Sockel unter das eine Brett für seine zwei Zapfen, und zwei Sockel unter das andere Brett für seine zwei Zapfen.</span>
+          <span class="line">(20) Und für die zweite Seite des Mischkan, gegen Norden, zwanzig Bretter;</span>
+          <span class="line">(21) und ihre vierzig Sockel aus Silber — zwei Sockel unter dem einen Brett und zwei Sockel unter dem anderen Brett.</span>
+          <span class="line">(22) Und für die Hinterseite des Mischkan, gegen Meer (Westen), sollst du sechs Bretter machen.</span>
+          <span class="line">(23) Und zwei Bretter sollst du für die Ecken des Mischkan an der Hinterseite machen.</span>
+          <span class="line">(24) Und sie sollen doppelt sein von unten und ganz zusammen sein bis zu ihrem Haupte, zu dem einen Ring — so soll es für sie beide sein, für die zwei Ecken sollen sie sein.</span>
+          <span class="line">(25) Und es sollen acht Bretter sein und ihre Sockel aus Silber — sechzehn Sockel: zwei Sockel unter dem einen Brett und zwei Sockel unter dem anderen Brett.</span>
+          <span class="line">(26) Und du sollst Riegel aus Akazienholz machen — fünf für die Bretter der einen Seite des Mischkan;</span>
+          <span class="line">(27) und fünf Riegel für die Bretter der zweiten Seite des Mischkan, und fünf Riegel für die Bretter der Seite des Mischkan an der Hinterseite, gegen Meer.</span>
+          <span class="line">(28) Und der mittlere Riegel, in der Mitte der Bretter, soll von einem Ende zum anderen durchgehen.</span>
+          <span class="line">(29) Und die Bretter sollst du mit Gold überziehen, und ihre Ringe sollst du aus Gold machen — als Behältnisse für die Riegel — und die Riegel sollst du mit Gold überziehen.</span>
+          <span class="line">(30) Und du sollst den Mischkan aufrichten nach seiner Vorschrift, die dir auf dem Berge gezeigt worden ist.</span>
+        </div>
+      </div>
+    </div>
+
+
+
+    <!-- ── ALIYAH 5 · חמישי · Schemot 26:31-37 — Parochet, Masach ── -->
+    <div class="aliyah-block">
+      <div class="aliyah-label">עֲלִיָּה חֲמִישִׁית — הַפָּרֹכֶת · בֵּין הַקֹּדֶשׁ וּבֵין קֹדֶשׁ הַקֳּדָשִׁים<span class="aliyah-label-de">Fünfte Aliyah · Schemot 26:31–37 · Die Parochet als Trennung zwischen Kodesch und Kodesch HaKodaschim, der Masach am Eingang</span></div>
+      <div class="instrument-note">[no percussion] [no drums] [no choir] [acoustic guitar — Bayat hushing for the parochet, the holy partition between two sanctities, then the woven masach at the entrance, intimate maternal whisper, no percussion] Gitarre: Bayat senkt sich für die Parochet — die heilige Trennung zwischen zwei Heiligkeiten — dann der gewebte Masach am Eingang, intim-mütterlich geflüstert.</div>
+      <div class="lyrics-block">
+        <div class="lyrics-he" dir="rtl">
+          <span class="line">וְעָשִׂיתָ פָרֹכֶת תְּכֵלֶת וְאַרְגָּמָן וְתוֹלַעַת שָׁנִי וְשֵׁשׁ מׇשְׁזָר מַעֲשֵׂה חֹשֵׁב יַעֲשֶׂה אֹתָהּ כְּרֻבִים׃</span>
+          <span class="line">וְנָתַתָּה אֹתָהּ עַל־אַרְבָּעָה עַמּוּדֵי שִׁטִּים מְצֻפִּים זָהָב וָוֵיהֶם זָהָב עַל־אַרְבָּעָה אַדְנֵי־כָסֶף׃</span>
+          <span class="line">וְנָתַתָּה אֶת־הַפָּרֹכֶת תַּחַת הַקְּרָסִים וְהֵבֵאתָ שָׁמָּה מִבֵּית לַפָּרֹכֶת אֵת אֲרוֹן הָעֵדוּת וְהִבְדִּילָה הַפָּרֹכֶת לָכֶם בֵּין הַקֹּדֶשׁ וּבֵין קֹדֶשׁ הַקֳּדָשִׁים׃</span>
+          <span class="line">וְנָתַתָּ אֶת־הַכַּפֹּרֶת עַל אֲרוֹן הָעֵדֻת בְּקֹדֶשׁ הַקֳּדָשִׁים׃</span>
+          <span class="line">וְשַׂמְתָּ אֶת־הַשֻּׁלְחָן מִחוּץ לַפָּרֹכֶת וְאֶת־הַמְּנֹרָה נֹכַח הַשֻּׁלְחָן עַל צֶלַע הַמִּשְׁכָּן תֵּימָנָה וְהַשֻּׁלְחָן תִּתֵּן עַל־צֶלַע צָפוֹן׃</span>
+          <span class="line">וְעָשִׂיתָ מָסָךְ לְפֶתַח הָאֹהֶל תְּכֵלֶת וְאַרְגָּמָן וְתוֹלַעַת שָׁנִי וְשֵׁשׁ מׇשְׁזָר מַעֲשֵׂה רֹקֵם׃</span>
+          <span class="line">וְעָשִׂיתָ לַמָּסָךְ חֲמִשָּׁה עַמּוּדֵי שִׁטִּים וְצִפִּיתָ אֹתָם זָהָב וָוֵיהֶם זָהָב וְיָצַקְתָּ לָהֶם חֲמִשָּׁה אַדְנֵי נְחֹשֶׁת׃</span>
+        </div>
+        <div class="lyrics-de">
+          <span class="line">(31) Und du sollst eine Parochet machen — aus Tchelet und Argaman und Karmesin und gezwirntem Byssus — in kunstvoller Weber-Arbeit soll sie gemacht werden, mit Cherubim.</span>
+          <span class="line">(32) Und du sollst sie auf vier Säulen aus Akazienholz, mit Gold überzogen, geben — ihre Haken aus Gold — auf vier silbernen Sockeln.</span>
+          <span class="line">(33) Und du sollst die Parochet unter die Haken geben, und du sollst dorthin, innerhalb der Parochet, die Lade des Zeugnisses bringen — und die Parochet soll euch die Scheidung sein zwischen dem Heiligen und dem Heiligsten.</span>
+          <span class="line">(34) Und du sollst die Kapporet auf die Lade des Zeugnisses geben, im Heiligsten.</span>
+          <span class="line">(35) Und du sollst den Tisch außerhalb der Parochet aufstellen, und die Menorah gegenüber dem Tisch — auf der Südseite des Mischkan — und den Tisch sollst du auf die Nordseite geben.</span>
+          <span class="line">(36) Und du sollst einen Masach (Vorhang) für den Eingang des Zeltes machen — aus Tchelet und Argaman und Karmesin und gezwirntem Byssus — in Buntwirker-Arbeit.</span>
+          <span class="line">(37) Und du sollst für den Masach fünf Säulen aus Akazienholz machen und sie mit Gold überziehen — ihre Haken aus Gold — und du sollst für sie fünf kupferne Sockel gießen.</span>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- ── ALIYAH 6 · ששי · Schemot 27:1-8 — Mizbeach HaNechoschet ── -->
+    <div class="aliyah-block">
+      <div class="aliyah-label">עֲלִיָּה שִׁשִּׁית — מִזְבַּח הַנְּחֹשֶׁת · רָבוּעַ וְקַרְנֹתָיו מִמֶּנּוּ<span class="aliyah-label-de">Sechste Aliyah · Schemot 27:1–8 · Der kupferne Altar im Vorhof — quadratisch, mit Hörnern aus einem Stück, mit Stangen und Geräten</span></div>
+      <div class="instrument-note">[no percussion] [no drums] [no choir] [acoustic guitar — Bayat opening into the courtyard, the copper altar squared and grounded, the four horns reaching outward, sustained low tones with maternal grounding, no percussion] Gitarre: Bayat öffnet zum Vorhof — der kupferne Altar quadratisch und geerdet, die vier Hörner nach außen, getragene Tiefen mit mütterlichem Grund.</div>
+      <div class="lyrics-block">
+        <div class="lyrics-he" dir="rtl">
+          <span class="line">וְעָשִׂיתָ אֶת־הַמִּזְבֵּחַ עֲצֵי שִׁטִּים חָמֵשׁ אַמּוֹת אֹרֶךְ וְחָמֵשׁ אַמּוֹת רֹחַב רָבוּעַ יִהְיֶה הַמִּזְבֵּחַ וְשָׁלֹשׁ אַמּוֹת קֹמָתוֹ׃</span>
+          <span class="line">וְעָשִׂיתָ קַרְנֹתָיו עַל אַרְבַּע פִּנֹּתָיו מִמֶּנּוּ תִּהְיֶיןָ קַרְנֹתָיו וְצִפִּיתָ אֹתוֹ נְחֹשֶׁת׃</span>
+          <span class="line">וְעָשִׂיתָ סִּירֹתָיו לְדַשְּׁנוֹ וְיָעָיו וּמִזְרְקֹתָיו וּמִזְלְגֹתָיו וּמַחְתֹּתָיו לְכׇל־כֵּלָיו תַּעֲשֶׂה נְחֹשֶׁת׃</span>
+          <span class="line">וְעָשִׂיתָ לּוֹ מִכְבָּר מַעֲשֵׂה רֶשֶׁת נְחֹשֶׁת וְעָשִׂיתָ עַל־הָרֶשֶׁת אַרְבַּע טַבְּעֹת נְחֹשֶׁת עַל אַרְבַּע קְצוֹתָיו׃</span>
+          <span class="line">וְנָתַתָּה אֹתָהּ תַּחַת כַּרְכֹּב הַמִּזְבֵּחַ מִלְּמָטָּה וְהָיְתָה הָרֶשֶׁת עַד חֲצִי הַמִּזְבֵּחַ׃</span>
+          <span class="line">וְעָשִׂיתָ בַדִּים לַמִּזְבֵּחַ בַּדֵּי עֲצֵי שִׁטִּים וְצִפִּיתָ אֹתָם נְחֹשֶׁת׃</span>
+          <span class="line">וְהוּבָא אֶת־בַּדָּיו בַּטַּבָּעֹת וְהָיוּ הַבַּדִּים עַל־שְׁתֵּי צַלְעֹת הַמִּזְבֵּחַ בִּשְׂאֵת אֹתוֹ׃</span>
+          <span class="line">נְבוּב לֻחֹת תַּעֲשֶׂה אֹתוֹ כַּאֲשֶׁר הֶרְאָה אֹתְךָ בָּהָר כֵּן יַעֲשׂוּ׃</span>
+        </div>
+        <div class="lyrics-de">
+          <span class="line">(27:1) Und du sollst den Altar aus Akazienholz machen — fünf Ellen lang und fünf Ellen breit — quadratisch soll der Altar sein, und drei Ellen seine Höhe.</span>
+          <span class="line">(2) Und du sollst seine Hörner an seinen vier Ecken machen — aus ihm selbst sollen seine Hörner sein — und du sollst ihn mit Kupfer überziehen.</span>
+          <span class="line">(3) Und du sollst seine Töpfe zu seiner Aschen-Entleerung machen, und seine Schaufeln und seine Sprengschalen und seine Gabeln und seine Aschpfannen — alle seine Geräte sollst du aus Kupfer machen.</span>
+          <span class="line">(4) Und du sollst für ihn ein Gitterwerk in Netz-Arbeit aus Kupfer machen, und du sollst am Netz vier kupferne Ringe an seinen vier Ecken machen.</span>
+          <span class="line">(5) Und du sollst es unter den Rand des Altars unten setzen, und das Netz soll bis zur Mitte des Altars reichen.</span>
+          <span class="line">(6) Und du sollst Stangen für den Altar machen — Stangen aus Akazienholz — und du sollst sie mit Kupfer überziehen.</span>
+          <span class="line">(7) Und seine Stangen sollen in die Ringe eingebracht werden, und die Stangen sollen an den zwei Seiten des Altars sein, wenn man ihn trägt.</span>
+          <span class="line">(8) Hohl, aus Brettern, sollst du ihn machen — wie er dir auf dem Berge gezeigt worden ist, so sollen sie ihn machen.</span>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- ── ALIYAH 7 · שביעי · Schemot 27:9-19 — Chatzer (Vorhof) ── -->
+    <div class="aliyah-block">
+      <div class="aliyah-label">עֲלִיָּה שְׁבִיעִית — חֲצַר הַמִּשְׁכָּן · קְלָעִים · עַמּוּדִים · אֲדָנִים<span class="aliyah-label-de">Siebte Aliyah · Schemot 27:9–19 · Der Vorhof des Mischkan mit seinen Behängen, Säulen und Sockeln — die maßgenaue Heiligungs-Geographie</span></div>
+      <div class="instrument-note">[no percussion] [no drums] [no choir] [acoustic guitar — Bayat circling the chatzer, the courtyard hangings around, the silver bands and copper sockets, gentle resolution returning to opening tones, no percussion] Gitarre: Bayat umkreist den Chatzer — die Behänge ringsum, die silbernen Bänder, die kupfernen Sockel — sanfte Auflösung in die Eröffnungs-Tiefen zurück.</div>
+      <div class="lyrics-block">
+        <div class="lyrics-he" dir="rtl">
+          <span class="line">וְעָשִׂיתָ אֵת חֲצַר הַמִּשְׁכָּן לִפְאַת נֶגֶב־תֵּימָנָה קְלָעִים לֶחָצֵר שֵׁשׁ מׇשְׁזָר מֵאָה בָאַמָּה אֹרֶךְ לַפֵּאָה הָאֶחָת׃</span>
+          <span class="line">וְעַמֻּדָיו עֶשְׂרִים וְאַדְנֵיהֶם עֶשְׂרִים נְחֹשֶׁת וָוֵי הָעַמֻּדִים וַחֲשֻׁקֵיהֶם כָּסֶף׃</span>
+          <span class="line">וְכֵן לִפְאַת צָפוֹן בָּאֹרֶךְ קְלָעִים מֵאָה אֹרֶךְ וְעַמֻּדָו עֶשְׂרִים וְאַדְנֵיהֶם עֶשְׂרִים נְחֹשֶׁת וָוֵי הָעַמֻּדִים וַחֲשֻׁקֵיהֶם כָּסֶף׃</span>
+          <span class="line">וְרֹחַב הֶחָצֵר לִפְאַת־יָם קְלָעִים חֲמִשִּׁים אַמָּה עַמֻּדֵיהֶם עֲשָׂרָה וְאַדְנֵיהֶם עֲשָׂרָה׃</span>
+          <span class="line">וְרֹחַב הֶחָצֵר לִפְאַת קֵדְמָה מִזְרָחָה חֲמִשִּׁים אַמָּה׃</span>
+          <span class="line">וַחֲמֵשׁ עֶשְׂרֵה אַמָּה קְלָעִים לַכָּתֵף עַמֻּדֵיהֶם שְׁלֹשָׁה וְאַדְנֵיהֶם שְׁלֹשָׁה׃</span>
+          <span class="line">וְלַכָּתֵף הַשֵּׁנִית חֲמֵשׁ עֶשְׂרֵה קְלָעִים עַמֻּדֵיהֶם שְׁלֹשָׁה וְאַדְנֵיהֶם שְׁלֹשָׁה׃</span>
+          <span class="line">וּלְשַׁעַר הֶחָצֵר מָסָךְ עֶשְׂרִים אַמָּה תְּכֵלֶת וְאַרְגָּמָן וְתוֹלַעַת שָׁנִי וְשֵׁשׁ מׇשְׁזָר מַעֲשֵׂה רֹקֵם עַמֻּדֵיהֶם אַרְבָּעָה וְאַדְנֵיהֶם אַרְבָּעָה׃</span>
+          <span class="line">כׇּל־עַמּוּדֵי הֶחָצֵר סָבִיב מְחֻשָּׁקִים כֶּסֶף וָוֵיהֶם כָּסֶף וְאַדְנֵיהֶם נְחֹשֶׁת׃</span>
+          <span class="line">אֹרֶךְ הֶחָצֵר מֵאָה בָאַמָּה וְרֹחַב חֲמִשִּׁים בַּחֲמִשִּׁים וְקֹמָה חָמֵשׁ אַמּוֹת שֵׁשׁ מׇשְׁזָר וְאַדְנֵיהֶם נְחֹשֶׁת׃</span>
+          <span class="line">לְכֹל כְּלֵי הַמִּשְׁכָּן בְּכֹל עֲבֹדָתוֹ וְכׇל־יְתֵדֹתָיו וְכׇל־יִתְדֹת הֶחָצֵר נְחֹשֶׁת׃</span>
+        </div>
+        <div class="lyrics-de">
+          <span class="line">(9) Und du sollst den Vorhof des Mischkan machen — für die Südseite, gegen Mittag: Behänge für den Vorhof aus gezwirntem Byssus, hundert Ellen Länge für die eine Seite.</span>
+          <span class="line">(10) Und seine Säulen zwanzig und ihre Sockel zwanzig aus Kupfer — die Haken der Säulen und ihre Bänder aus Silber.</span>
+          <span class="line">(11) Und ebenso für die Nordseite in der Länge: Behänge hundert Ellen Länge, und seine Säulen zwanzig und ihre Sockel zwanzig aus Kupfer — die Haken der Säulen und ihre Bänder aus Silber.</span>
+          <span class="line">(12) Und die Breite des Vorhofs für die Meer-Seite (Westen): Behänge fünfzig Ellen, ihre Säulen zehn und ihre Sockel zehn.</span>
+          <span class="line">(13) Und die Breite des Vorhofs für die Vorderseite, gegen Osten: fünfzig Ellen.</span>
+          <span class="line">(14) Und fünfzehn Ellen Behänge für die eine Seite — ihre Säulen drei und ihre Sockel drei.</span>
+          <span class="line">(15) Und für die andere Seite fünfzehn Behänge — ihre Säulen drei und ihre Sockel drei.</span>
+          <span class="line">(16) Und für das Tor des Vorhofs einen Masach von zwanzig Ellen — aus Tchelet und Argaman und Karmesin und gezwirntem Byssus in Buntwirker-Arbeit — ihre Säulen vier und ihre Sockel vier.</span>
+          <span class="line">(17) Alle Säulen des Vorhofs ringsum sollen mit Silber gebändert sein — ihre Haken aus Silber und ihre Sockel aus Kupfer.</span>
+          <span class="line">(18) Die Länge des Vorhofs hundert Ellen, und die Breite fünfzig zu fünfzig, und die Höhe fünf Ellen — aus gezwirntem Byssus — und ihre Sockel aus Kupfer.</span>
+          <span class="line">(19) Für alle Geräte des Mischkan in seinem ganzen Dienst, und alle seine Pflöcke und alle Pflöcke des Vorhofs — aus Kupfer.</span>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- ══ TIKKUN-BOX ══ -->
+    <div class="tikkun-box">
+      <div class="tikkun-header">
+        <div class="tikkun-title-he">מַעֲשֵׂה הַתִּיקּוּן — מִקְדָּשׁ מְעַט · בֵּית יְהוּדִי כְּהֵיכָל</div>
+        <div class="tikkun-title-de">Tikkun — Das jüdische Haus als Mikdasch Me'at · Mischkan-Spiegel im Alltag</div>
+        <div class="tikkun-src">
+          שְׁמוֹת כ״ה:ב׳, ח׳ · רמב״ם הִלְכוֹת בֵּית הַבְּחִירָה פֶּרֶק א׳-ג׳ · רשש נהר שלום (דרושי הַמִּשְׁכָּן) ·
+          רמח״ל מִשְׁכְּנֵי עֶלְיוֹן · רמח״ל מְסִלַּת יְשָׁרִים פֶּרֶק א׳ · רמ״ק פַּרְדֵּס רִמּוֹנִים שַׁעַר הַבִּינָה ·
+          אור החיים על שְׁמוֹת כ״ה:ב׳ · שד״ל בְּפֵרוּשׁ עַל שְׁמוֹת כ״ה:ב׳ ·
+          בן איש חי (פרשת תרומה — מִקְדָּשׁ מְעַט) · שׁוּלְחָן עָרוּךְ אוֹרַח חַיִּים קנ״ד · כַּף הַחַיִּים קנ״ד ·
+          בְּרָכוֹת מ״ב: · מְגִלָּה כ״ט.
+          <br><br>
+          Schemot 25:2,8 · Rambam Hilchot Beit HaBechirah Perek 1–3 · Rashash Nahar Shalom
+          (Drushei haMischkan) · Ramchal Mishkney Elyon · Ramchal Mesillat Yescharim Perek 1 ·
+          Ramak Pardes Rimonim Schaar HaBinah · Or HaChaim auf Schemot 25:2 · Shadal Pirusch zu
+          Schemot 25:2 · Ben Ish Chai (Terumah — Mikdasch Me'at) · Schulchan Aruch Orach Chaim 154 ·
+          Kaf HaChaim 154 · Berachot 42b · Megillah 29a (Mikdasch Me'at).
+        </div>
+      </div>
+      <div class="tikkun-body">
+        <strong>Sephardische Praxis:</strong> Terumah trägt zwei Grund-Pasukim, die den ganzen
+        sephardischen Alltag prägen: <em>„וְיִקְחוּ־לִי תְּרוּמָה … מֵאֵת כׇּל־אִישׁ אֲשֶׁר יִדְּבֶנּוּ
+        לִבּוֹ"</em> (25:2) und <em>„וְעָשׂוּ לִי מִקְדָּשׁ וְשָׁכַנְתִּי בְּתוֹכָם"</em> (25:8). Beide
+        gehören zusammen: die Hebe ist nicht Steuer, sondern Hingabe — und die Frucht der Hingabe ist
+        das Wohnen Adonais inmitten Israels. Rambam (Hilchot Beit HaBechirah 1:1) leitet aus
+        Schemot 25:8 die Mizwah-Pflicht ab, ein Haus für Adonai zu bauen — der Mischkan in der Wüste,
+        das Mischkan in Schilo, das Erste und das Zweite Beit HaMikdasch, und das künftige Beit
+        HaMikdasch in den Tagen des Maschiach ben David: ein und dieselbe Mizwah, in fünf
+        Stationen ihrer Geschichte. Rambam (Hilchot Beit HaBechirah 2 zum Aron und 3 zum Mizbeach)
+        kodifiziert die exakten Maße und das Material — denn die <em>tavnit</em>, das gezeigte
+        Bau-Bild auf dem Berge (25:9, 25:40, 26:30), bindet alle Generationen.
+        <br><br>
+        Die sephardische Kabbalah liest 25:8 mit besonderem Nachdruck auf <em>betocham</em> —
+        nicht <em>betocho</em> („inmitten seiner", d.h. des Mischkan), sondern <em>betocham</em>
+        („inmitten ihrer", d.h. der Söhne Israels). <strong>Rashash</strong> in Nahar Schalom
+        (Drushei haMischkan, im Kontext der Sha'ar HaKawanot-Tradition) entfaltet die Architektur
+        der Heichalim: der irdische Mischkan ist der Spiegel des Mischkan in den oberen Welten;
+        jedes Glied der irdischen Bauanweisung — Aron, Kapporet, Keruvim, Schulchan, Menorah,
+        Parochet, Mizbeach — entspricht einer Stufe in den Sefirot. Der Aron mit der Edut
+        verkörpert die Tora-Wurzel; die Kapporet ist der Punkt, an dem das obere Heichal sich auf
+        das untere herabneigt; die zwei Keruvim sind die geöffneten Wege zu Tiferet und Malchut,
+        einander zugewandt. Die Sefirah <em>Binah</em> — die in Pardes-Rimonim-Sprache des Ramak
+        die <em>Imma Ila'a</em>, die obere Mutter, ist (Schaar HaBinah) — ist die mütterliche
+        Tiefe, aus der die ganze Bau-Form als <em>tavnit</em> niedersteigt. In Binah ist der
+        Mischkan schon empfangen, ehe er aus dem Material aufsteigt. Darum heißt es <em>maaseh
+        choschev</em> (kunstvolle Weber-Arbeit) bei der Parochet und den Yeri'ot — <em>choschev</em>
+        ist das schon-vorgedachte, das in Binah Geborgene, das nur noch hervortreten muss.
+        <br><br>
+        <strong>Ramchal in Mishkney Elyon</strong> — das ganze Werk ist eine kabbalistische
+        Deutung des künftigen Beit HaMikdasch nach der Vision Yechezkels — lehrt, dass der
+        Mischkan und seine späteren Erscheinungen nicht „symbolische" Räume sind, sondern reale
+        Kanäle der Schefa, durch die der göttliche Wohn-Akt in die geschaffene Welt eintritt.
+        Mishkney Elyon ist sephardisch besonders in Yerushalayim und Aleppo gepflegt; die
+        Tradition liest es jährlich in den Wochen vor Tischah b'Av, um den Schmerz des Verlusts
+        in die Sehnsucht nach dem künftigen Mikdasch zu verwandeln. <strong>Ramchal in Mesillat
+        Yescharim Perek 1</strong> (zu den Worten der Baraita de Rabbi Pinchas ben Yair) gibt den
+        philosophischen Grund: der Mensch ist erschaffen, „sich an Adonai zu erfreuen und am
+        Glanz Seiner Schechina zu weiden" — der Mischkan ist die räumliche Antwort auf diese
+        Bestimmung. Wer den Bau-Plan begreift, begreift seine eigene Bestimmung.
+        <br><br>
+        <strong>Or HaChaim auf Schemot 25:2</strong> liest <em>„veyikchu li terumah"</em> mit
+        dem Akzent auf <em>li</em> — „für Mich": nicht Adonai braucht das Material, sondern
+        die freiwillige Hingabe ist die eigentliche Hebe; das Gold ist nur Hülle für die Geste
+        des Herzens. <em>„כׇּל־אִישׁ אֲשֶׁר יִדְּבֶנּוּ לִבּוֹ"</em> — jeder, dessen Herz ihn dazu
+        treibt — ist die kabbalistisch-pschat-Synthese, die Or HaChaim ständig vollzieht: das
+        wörtliche „freiwillig" und das tiefere „aus der eigenen Wurzel heraus" sind dasselbe.
+        <strong>Shadal in seinem Pirusch zu Schemot 25:2</strong> bringt eine sephardisch-
+        italienische pschat-Pointe von erheblicher Bedeutung für die Praxis: <em>„veyikchu li"</em>
+        sei eine Mizwah an die <em>gesamte Nation</em>, dass sie Verantwortliche bestelle, die die
+        Hebe aus der Hand der Geber annehmen. Shadal beobachtet, dass das Volk dann tatsächlich
+        keine eigenen Verantwortlichen einsetzte, sondern alles direkt zu Mosche brachte
+        (Schemot 36:6) — ein Hinweis, wie weit damals die Hingabe das Verfahren überschritt. Die
+        Konsequenz für die spätere sephardische Gemeinde-Halacha ist klar: Tzedakah-Sammlung
+        und Heiligtums-Verwaltung sind <em>kommunale Mizwot</em>, die ordentliche Verantwortliche
+        (Gabba'im) verlangen — die individuelle Hingabe geschieht innerhalb einer organisierten
+        Gemeinde-Struktur. Diese Lehre Shadals trägt die ganze sephardisch-Eidot-HaMizrach-Praxis
+        der Gabba'im-Bestellung in Aleppo, Marokko, Yemen und Yerushalayim.
+        <br><br>
+        Die <strong>Ben-Ish-Chai-Linie</strong> (in der ganzen Schanah-Rischona/Schnijah-Architektur
+        seiner Parashah-Bände, namentlich an der Parashat Terumah und vielfach in seinen
+        Tisch-Halachot) gibt dem das praktische Gesicht: jedes jüdische Haus ist <em>Mikdasch
+        Me'at</em> — ein kleines Heiligtum (so schon Berachot 42b und Megillah 29a, wo der Synagogen-
+        und Lehrhaus-Raum nach Yechezkel 11:16 als Mikdasch Me'at bezeichnet wird; die sephardisch-
+        Eidot-HaMizrach-Tradition Aleppo, Marokko, Yemen, Yerushalayim hat dieses Bild auch auf
+        das jüdische Wohnhaus ausgedehnt). Der Schulchan des Hauses ist Spiegel des Mischkan-
+        Schulchan; die Schabbat-Lichter sind Spiegel der Menorah; das Tora-Lernen am Tisch ist
+        Spiegel des Esch Tamid; das Schma She'al haMittah ist der Schluss-Hütungs-Dienst des
+        kleinen Heiligtums. Wer dieses Bild ernst nimmt, wohnt anders im eigenen Haus — die
+        Aufräumarbeit am Erev Schabbat wird zur Mischkan-Vorbereitung, das Auflegen des Lechem
+        Mischneh wird zur Lechem-HaPanim-Erinnerung, das Einschalten der Schabbat-Lichter wird
+        zur tamid-Stiftung der Schechina im häuslichen Heichal.
+        <br><br>
+        <strong>Halachisch</strong> trägt der <strong>Schulchan Aruch (Orach Chaim 154)</strong>
+        — mit den Glossen des <strong>Kaf HaChaim (Rabbi Yaakov Chaim Sofer · 154)</strong> für
+        alle Eidot HaMizrach — die Würde des Synagogen-Raums als Mikdasch Me'at: keine leichten
+        Gespräche, keine Speisen ohne Not, keine Verwendung für rein-weltliche Zwecke, Reinheit
+        und Ehrfurcht beim Eintreten und Verlassen. Diese Halacha-Reihe gilt sephardisch
+        analog für das Lernhaus und in abgeschwächter Form für die Tora-Ecke (<em>pinat haTora</em>)
+        des Privathauses. Wer den Mischkan-Spiegel des Hauses ernst nimmt, hält die Tora-Bücher
+        an einem ehrwürdigen Ort, deckt den Tisch zwischen den Mahlzeiten, lässt die Schabbat-
+        Lichter ohne Hast brennen und behandelt die kleine, alltägliche Geographie des Hauses
+        als heiligungs-fähigen Raum. So überträgt sich die Bauanweisung Schemots 25–27 in das
+        sephardische Wohnen — Schritt für Schritt, ohne Pathos, in der mütterlichen Tiefe der
+        Binah, die das alltägliche zu einem Spiegel des Ewigen macht.
+        <br><br>
+        <strong>Praktische Handlung:</strong>
+        (1) <em>Erev-Schabbat-Aufräumen als Mischkan-Vorbereitung</em>:
+        Sephardischer Aleppo-Marokko-Yemen-Yerushalmi-Brauch — am Freitag-Nachmittag das Haus
+        ordnen, Tisch decken, Brot bereiten, Lichter vorbereiten, mit der Kawanah: <em>„dieses
+        Haus ist mein Mikdasch Me'at — ich bereite es für die Schechina vor."</em> Die
+        Aufräumarbeit ist nicht Hausarbeit, sondern Vor-Bau des wöchentlichen Mischkan.
+        Schulchan Aruch OC 250 (Sephardisch-Standard nach Chazon Ovadia Schabbat) hält den
+        Brauch fest, am Erev Schabbat selbst tätig zu sein, auch wenn man dafür Hilfe hätte.
+        (2) <em>Schabbat-Tisch als Schulchan-Spiegel</em>:
+        Zwei vollständige Brote als Lechem Mischneh (sephardisch in Aleppo häufig
+        nebeneinander, in Marokko häufig aufeinander gelegt — beides ist gültig nach
+        Chazon Ovadia Schabbat). Die Kawanah folgt 25:30 — <em>lechem panim lefanai tamid</em>:
+        der Schabbat-Tisch wird zum Spiegel des Mischkan-Schulchan; die Schalen sind die
+        <em>k'sotav</em>, die Decke das <em>masach</em>. Beim HaMotzi innerlich: <em>„dieses Brot
+        steht heute vor dem Angesicht Adonais, wie die Lechem-HaPanim-Reihe vor Seinem
+        Angesicht stand."</em>
+        (3) <em>Schabbat-Lichter als Menorah-Spiegel</em>:
+        Sephardischer Brauch (Aleppo, Marokko, Yemen): die Schabbat-Lichter werden 18-20
+        Minuten vor Sonnenuntergang angezündet (Schulchan Aruch OC 263 mit Kaf HaChaim und
+        Chazon Ovadia). Sephardisch-Eidot-HaMizrach üblich sind sieben Lichter in
+        Erinnerung an die sieben Lampen der Menorah (25:37) oder zumindest zwei (für die zwei
+        Tafeln). Kawanah beim Entzünden: <em>„möge dieses Licht der Schechina-Wohnung ein
+        Spiegel der Menorah sein, die in der Mitte des Mischkan brannte."</em>
+        (4) <em>Tzedakah-Geben mit Terumah-Kawanah</em>:
+        Sephardischer Brauch (Ben Ish Chai · Aleppo-Yerushalayim-Tradition): vor jeder
+        Tzedakah-Gabe eine kurze innere Geste — <em>„diese Hebe gebe ich freiwillig, aus
+        dem Antrieb meines Herzens, zum Bau des künftigen Mikdasch in den Tagen des
+        Maschiach ben David."</em> Das ist die direkte Übersetzung von 25:2 in die alltägliche
+        Praxis. Sephardisch-Standard ist die Verwendung einer Tzedakah-Büchse, in die täglich
+        eine kleine Summe gegeben wird (besonders vor Schacharit und vor Minchah); die
+        Ansammlung wird zu festen Zeiten an die Armen oder an Yeshivot in Eretz Yisrael
+        weitergeleitet (Chazon Ovadia Yore Dea, sephardische Tzedakah-Bände).
+        (5) <em>Wöchentliche Mishkney-Elyon-Lese-Praxis</em>:
+        Ramchal in Mishkney Elyon einmal jährlich vollständig durchlesen — sephardischer
+        Yerushalmi-Aleppo-Brauch ist die Wochen vor Tischah b'Av, eventuell zur Drei-
+        Wochen-Periode (Bein HaMetzarim). Die Lehre erweckt die Sehnsucht nach dem Bau
+        des Mikdasch in den Tagen des Maschiach ben David und gibt der Trauer um den
+        verlorenen Mikdasch ihre konstruktive Richtung.
+        (6) <em>Shadal-Pirusch am Erev Schabbat Terumah</em>:
+        Sephardisch-italienisch (Padua-Aleppo-Linie): am Freitag-Vormittag oder
+        Donnerstag-Abend die Shadal-Glossen zu Schemot 25:2 und folgenden Versen lesen —
+        Shadals pschat-präzise Lehre über die Gabba'im-Bestellung verankert die wöchentliche
+        Tora-Lesung in der konkreten Gemeinde-Halacha. Ein einzelner Pirusch-Abschnitt am
+        Erev Schabbat genügt — die Übung dient der Klarheit, nicht der Vollständigkeit.
+        (7) <em>Mesillat-Yescharim-Perek-1-Wiederlesen</em>:
+        Sephardisch-Standard (besonders im Elul, aber auch wöchentlich am Schabbat-Mittag
+        nach dem Hauptgang): Mesillat Yescharim Perek 1 wieder lesen — die Bestimmung des
+        Menschen, sich an Adonai zu erfreuen — und sie auf den Bau-Plan des Mischkan
+        beziehen. Wer den Schabbat-Tisch als Mikdasch Me'at erkennt, erfährt in
+        eingegrenzten Momenten genau die Bestimmung, die Mesillat Yescharim als Lebens-
+        ziel beschreibt.
+        (8) <em>Synagogen-Würde nach Schulchan Aruch OC 154</em>:
+        Sephardisch (Schulchan Aruch OC 154 · Kaf HaChaim 154 · Chazon Ovadia
+        Orach Chaim): in der Synagoge keine leichten Gespräche, keine unnötige
+        Bewegung, keine Speisen ohne Not, beim Eintreten still zwei oder drei
+        Schritte tun, beim Verlassen rückwärts vom Aron HaKodesch weggehen. Diese
+        Halacha ist die direkte Übersetzung von 25:8 in die wöchentliche Praxis —
+        die Synagoge ist <em>jenes</em> Mikdasch Me'at, das die ganze Eidot-HaMizrach-
+        Tradition als Vor-Schein des Beit HaMikdasch erkennt.
+        (9) <em>„Pinat haTora" im Privathaus einrichten</em>:
+        Sephardischer Brauch — im Wohnhaus eine eigene Ecke für Tora-Bücher (Tanach,
+        Schulchan Aruch, Mesillat Yescharim, Chumasch-Pirusch, Ben Ish Chai),
+        ehrwürdig aufgestellt, mit klarem Sefer-Sefer-Stand. Beim Studium an dieser
+        Ecke eine innere Geste: <em>„dies ist der Aron meines kleinen Mikdasch — die
+        Tora ist die Edut, die in meiner Mitte liegt."</em> Die Übung verbindet
+        25:16 (<em>v'natata el ha'aron et ha'edut</em>) mit der häuslichen Tora-Praxis.
+        (10) <em>Mischkan-Bau als Maschiach-ben-David-Sehnsucht</em>:
+        Rambam (Hilchot Beit HaBechirah 1:1) zählt den Bau des künftigen Beit HaMikdasch
+        zu den großen Mizwot der Zukunft — er gehört in die Tage des Maschiach ben
+        David, wenn die königliche Linie wiederhergestellt ist (Hilchot Mlachim 11–12).
+        Sephardisch-Standard ist in der dritten Amidah-Brachah (V'lirushalayim ircha
+        b'rachamim taschuv) und in der vierzehnten (Et tzemach David avdecha) die
+        Kawanah einzulegen: <em>„möge das Versprechen Terumahs sich vollenden, möge
+        ich Anteil haben am Aufbau des künftigen Mikdasch."</em> Diese tägliche Kawanah
+        ist die direkte Anwendung von 25:8 (<em>v'schachanti betocham</em>) auf das
+        kommende Wohnen Adonais inmitten Israels in den Tagen des Maschiach ben David.
+      </div>
+      <div class="tikkun-tags">
+        <span class="tikkun-tag">מִקְדָּשׁ מְעַט</span>
+        <span class="tikkun-tag">תְּרוּמָה</span>
+        <span class="tikkun-tag">וְשָׁכַנְתִּי בְּתוֹכָם</span>
+        <span class="tikkun-tag">שֻׁלְחָן</span>
+        <span class="tikkun-tag">מְנוֹרָה</span>
+      </div>
+    </div>
+
+
+    <!-- ══ SCHI · KLIMAX-MOMENT — SCHEMOT 25:8 ══ -->
+    <div class="climax-box">
+      <div class="climax-label">שִׂיא · f · Klimax-Vers der Parashah · die Wurzel der Schechina-Wohnung</div>
+      <div class="instrument-note">[no percussion] [no drums] [no choir] [acoustic guitar — full Bayat chord mezzo-forte to forte, the dwelling-in-the-midst verse, sustained maternal warmth opening into generation-deep promise, no percussion, no drums] Gitarre: Voller Bayat-Akkord, mezzo-forte zu forte — der Vers vom Wohnen-in-der-Mitte, getragene mütterliche Wärme, die in das generationen-tiefe Versprechen öffnet.</div>
+      <div class="climax-verse-he">וְעָשׂוּ לִי מִקְדָּשׁ · וְשָׁכַנְתִּי בְּתוֹכָם</div>
+      <div class="climax-verse-de">„Und sie sollen Mir ein Heiligtum machen — und Ich werde inmitten ihrer wohnen."</div>
+      <div class="climax-src">שְׁמוֹת כ״ה:ח׳ — Wurzel-Vers der Mischkan-Mizwah nach Rambam Hilchot Beit HaBechirah 1:1, gedeutet auf die Sefirah Binah als <em>Imma Ila'a</em> in Ramaks Pardes Rimonim</div>
+    </div>
+
+
+    <!-- ══ KODA · NO'ADTI-WHISPER — SCHEMOT 25:22 ══ -->
+    <div class="coda-box">
+      <div class="coda-label">קוֹדָה · pp · Das Begegnen über der Kapporet, im Hauch</div>
+      <div class="instrument-note">[no percussion] [no drums] [no choir] [acoustic guitar — Bayat dissolving into a single sustained note, the no'adti-whisper between the cherubim, the maternal voice almost inaudible, no percussion] Gitarre: Bayat löst sich in einen einzigen getragenen Ton — das No'adti-Flüstern zwischen den Cherubim, die mütterliche Stimme fast unhörbar.</div>
+      <div class="coda-whisper">
+        וְנוֹעַדְתִּי לְךָ <strong>שָׁם</strong> — וְדִבַּרְתִּי אִתְּךָ <strong>מֵעַל הַכַּפֹּרֶת</strong> — מִבֵּין <strong>שְׁנֵי הַכְּרֻבִים</strong></div></div>
+
+  </section>
+
+  <!-- ══ FOOTER ══ -->
+  <div class="footer">
+    <p class="footer-he">פָּרָשַׁת תְּרוּמָה · בִּינָה · מַקָּאם בַּיַאת · מִקְדָּשׁ מְעַט · וְעָשׂוּ לִי מִקְדָּשׁ · וְשָׁכַנְתִּי בְּתוֹכָם</p>
+    <p class="footer-chain">
+      שְׁמוֹת כ״ה:א׳–כ״ז:י״ט · נוּסַּח צָדוֹק (רשש) · עֵדוֹת הַמִּזְרָח · אַלֶפּוֹ · מָרוֹקוֹ · יְרוּשָׁלַיִם · תֵּימָן
+    </p>
+    <p class="footer-de">
+      Quellen: <strong>Tanach</strong> (Schemot 25:1–27:19 — Tora-Text 1:1, mit Tetragrammaton-
+      Konvertierung durchgängig als אֲדֹנָי) · <strong>Rambam · Mishneh Torah</strong>
+      (Hilchot Beit HaBechirah Perek 1 — die Mizwah, ein Haus für Adonai zu bauen, abgeleitet
+      aus Schemot 25:8; Perek 2 — die exakten Maße und Material-Vorgaben für den Aron;
+      Perek 3 — die Bau-Anweisungen für den Mizbeach und seine Geräte; Hilchot Mlachim
+      Perek 11 zur Maschiach-ben-David-Tradition und Perek 11:1, 11:4 zum Bau des künftigen
+      Beit HaMikdasch durch den Maschiach ben David) · <strong>Or HaChaim</strong> (auf
+      Schemot 25:2 — <em>li</em>, „für Mich"; auf das <em>kol ish asher yidvenu libo</em> als
+      Wurzel-Aussage über die freiwillige Hebe als Wesens-Geste der Mizwah) ·
+      <strong>Rashash · Nahar Schalom</strong> (Drushei haMischkan im Kontext der Sha'ar
+      HaKawanot-Tradition des Ari z'l — der irdische Mischkan als Spiegel der oberen Heichalim,
+      Binah als Imma Ila'a, aus der die tavnit niedersteigt) · <strong>Ramchal · Mishkney
+      Elyon</strong> (kabbalistische Auslegung des künftigen Beit HaMikdasch nach Yechezkel,
+      sephardisch in Aleppo und Yerushalayim besonders in den Wochen vor Tischah b'Av
+      studiert) · <strong>Ramchal · Mesillat Yescharim</strong> (Perek 1 — die Bestimmung
+      des Menschen, sich an Adonai zu erfreuen und am Glanz Seiner Schechina zu weiden; die
+      Bau-Bewegung des Mischkan als räumliche Antwort auf diese Bestimmung) ·
+      <strong>Ramak · Pardes Rimonim</strong> (Schaar HaBinah — Binah als Imma Ila'a, als
+      mütterliche Tiefe, in der alle Strukturen vorbereitet werden; Verbindung der Sefirah
+      Binah mit der Heichal-Architektur) · <strong>Shadal · Pirusch al haTora</strong>
+      (Schemot 25:2 — <em>veyikchu li</em> als Mizwah an die gesamte Nation, dass sie
+      Gabba'im einsetze, die Hebe entgegennehmen; mit der scharfsinnigen Beobachtung, dass das
+      Volk in der praktischen Übung dieses Verfahren überschritten und alles direkt zu Mosche
+      gebracht hat — Schemot 36:6) · <strong>Ben Ish Chai</strong> Schanah Rischona und
+      Schanah Schniah (Parashat Terumah — die Aleppo-Yerushalmi-Tradition des Mikdasch-Me'at:
+      Tisch als Schulchan, Schabbat-Lichter als Menorah, Tora-Lernen als Esch Tamid) ·
+      <strong>Schulchan Aruch</strong> (Orach Chaim 154 — die Würde der Synagoge als
+      Mikdasch Me'at, Verhaltens-Halacha; 250 — Erev-Schabbat-Vorbereitung; 263 —
+      Schabbat-Lichter) · <strong>Kaf HaChaim</strong> (Rabbi Yaakov Chaim Sofer · 154 —
+      sephardische Praxis aller Eidot HaMizrach zum Synagogen-Verhalten als Mikdasch-Me'at-
+      Würde; Aleppo, Marokko, Yemen, Yerushalayim) · <strong>Yabia Omer · Chazon Ovadia</strong>
+      (Rabbi Ovadia Yosef Z'L — sephardische moderne Halacha · Schabbat-Bände zu Lecht-Bentschen,
+      Lechem Mischneh und Schabbat-Tisch · Orach-Chaim-Bände zur Synagogen-Würde) ·
+      <strong>Talmud Bavli · Berachot 42b und Megillah 29a</strong> (zu Yechezkel 11:16 —
+      Mikdasch Me'at als Synagogen-Bezeichnung in der babylonischen Galut, Wurzel der
+      sephardisch-Eidot-HaMizrach-Tradition) · <strong>Sephardische Bakkaschot</strong>
+      Eidot HaMizrach (Aleppo-Yerushalayim-Bakkaschot-Lieder am Schabbat-Morgen vor Schacharit,
+      besonders in Bayat-Maqam in den Mischkan-Themen der Schemot-Wochen).
+      <br><br>
+      <strong>Tradition:</strong> Sephardisch · Nussach Zadoq (Rashash) · Maqam-Tradition
+      aus Aleppo, Yerushalayim, Marokko, Yemen · Tetragrammaton durchgängig als אֲדֹנָי ·
+      Maschiach ben David · Doppelt geprüfte Quellen · Tora-Text 1:1 unverändert · Erstellt
+      Mai 2026 · Sefer HaParashot bemo Maqam · 7. Lied Sefer Schemot · Binah · Maqam Bayat ·
+      וְשָׁכַנְתִּי בְּתוֹכָם.
+    </p>
+    <div class="footer-amen">אָמֵן · יִבָּנֶה הַמִּקְדָּשׁ בִּמְהֵרָה בְיָמֵינוּ · יָבוֹא מָשִׁיחַ בֶּן דָּוִד · אָמֵן</div>
+  </div>
+
+</div>
+
+
+</body></html>

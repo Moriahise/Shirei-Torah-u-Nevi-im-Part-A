@@ -1,0 +1,590 @@
+<!DOCTYPE html>
+<html lang="he-IL"><head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>פָּרָשַׁת בֹּא · שְׁמוֹת י׳:א׳–י״ג:ט״ז · מַלְכוּת · מַקָּאם חִיגָ׳אז · Sephardische Tora-Vertonung</title>
+  <link href="https://fonts.googleapis.com/css2?family=Frank+Ruhl+Libre:wght@300;400;700;900&amp;family=EB+Garamond:ital,wght@0,400;0,600;1,400;1,600&amp;family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&amp;display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg:#060808; --deep:#0A0E0E; --layer:#101414; --card:#0C1010;
+      --parchment:#f2e8d0; --parch-dim:#c8b898;
+      --ivory:#f0e8d8; --ivory-dim:#a89878;
+      --silver:#c8d4e0; --silver-dim:#7a8290;
+      --text:#a0a89c;
+      /* SEFER SCHEMOT — Tief-Rot (Befreiung · Blut der Pessach · Plagen · Schilfmeer · Esch HaSinai) */
+      --sefer:#B04030; --sefer-lt:#E07060; --sefer-dim:#7A2818;
+      --sefer-bg:rgba(176,64,48,.08); --sefer-bdr:rgba(176,64,48,.36); --sefer-glow:rgba(224,112,96,.20);
+      /* BO · MALCHUT · HIJAZ — Königliche Pessach-Nacht (Pessach-Hijaz-Königsrot) */
+      --bo:#C04838; --bo-lt:#EC7864; --bo-dim:#7C2418;
+      --bo-bg:rgba(192,72,56,.08); --bo-bdr:rgba(192,72,56,.36); --bo-glow:rgba(236,120,100,.22);
+      /* MAQAM-FARBEN */
+      --maqam-saba:#B0904A; --maqam-hijaz:#C85050; --maqam-bayat:#A07850;
+      --maqam-rast:#C8A860; --maqam-ajam:#7A9050; --maqam-nahawand:#6080A0;
+    }
+    *,*::before,*::after { margin:0; padding:0; box-sizing:border-box; }
+    html { scroll-behavior:smooth; }
+    body { background:var(--bg); color:var(--silver); font-family:'EB Garamond',serif; overflow-x:hidden; line-height:1.85; padding:40px 20px 80px; }
+    body::before { content:''; position:fixed; inset:0; pointer-events:none; z-index:0;
+      background: radial-gradient(ellipse at 18% 12%, rgba(176,64,48,.12) 0%, transparent 48%),
+                  radial-gradient(ellipse at 82% 28%, rgba(192,72,56,.12) 0%, transparent 45%),
+                  radial-gradient(ellipse at 12% 68%, rgba(176,64,48,.08) 0%, transparent 45%),
+                  radial-gradient(ellipse at 88% 82%, rgba(236,120,100,.10) 0%, transparent 42%),
+                  radial-gradient(ellipse at 50% 50%, rgba(16,10,8,.82) 0%, transparent 70%); }
+    body::after { content:''; position:fixed; inset:0; pointer-events:none; z-index:0;
+      background-image:
+        radial-gradient(1px 1px at 8% 10%, rgba(224,112,96,.36) 0%, transparent 100%),
+        radial-gradient(1px 1px at 48% 5%, rgba(236,120,100,.30) 0%, transparent 100%),
+        radial-gradient(1px 1px at 82% 16%, rgba(208,120,120,.32) 0%, transparent 100%),
+        radial-gradient(1px 1px at 25% 42%, rgba(192,104,76,.28) 0%, transparent 100%),
+        radial-gradient(1px 1px at 68% 58%, rgba(224,112,96,.28) 0%, transparent 100%),
+        radial-gradient(1.5px 1.5px at 12% 75%, rgba(200,80,58,.34) 0%, transparent 100%),
+        radial-gradient(1px 1px at 90% 78%, rgba(236,120,100,.30) 0%, transparent 100%),
+        radial-gradient(1px 1px at 35% 88%, rgba(208,120,120,.26) 0%, transparent 100%); }
+    .wrap { max-width:1080px; margin:0 auto; position:relative; z-index:1; }
+
+    /* PAGE HEADER */
+    .page-header { text-align:center; margin-bottom:80px; padding-bottom:40px; border-bottom:1px solid var(--sefer-bdr); position:relative; }
+    .page-header::after { content:'✦ ✡ ✦'; position:absolute; bottom:-14px; left:50%; transform:translateX(-50%); background:var(--bg); padding:0 20px; color:var(--sefer); font-size:.62em; letter-spacing:.55em; }
+    .eyebrow { font-family:'Cormorant Garamond',serif; font-style:italic; font-size:.78em; color:var(--sefer-lt); letter-spacing:.28em; text-transform:uppercase; margin-bottom:18px; opacity:.85; }
+    .sefer-letter { font-family:'Frank Ruhl Libre',serif; font-size:1.40em; color:var(--sefer); font-weight:900; display:inline-block; margin-bottom:6px; text-shadow:0 0 30px var(--sefer-glow); letter-spacing:.04em; }
+    .page-title-he { font-family:'Frank Ruhl Libre',serif; font-size:3.2em; font-weight:900; color:var(--ivory); direction:rtl; letter-spacing:.05em; text-shadow:0 0 80px var(--sefer-glow), 0 0 140px var(--bo-glow); margin-bottom:8px; line-height:1.15; }
+    .page-subtitle-he { font-family:'Frank Ruhl Libre',serif; font-size:1.16em; color:var(--sefer-lt); direction:rtl; margin-bottom:10px; letter-spacing:.06em; }
+    .page-title-de { font-family:'Cormorant Garamond',serif; font-style:italic; font-size:1.14em; color:var(--silver-dim); margin-bottom:22px; }
+    .page-desc { font-size:1.0em; color:var(--text); max-width:780px; margin:0 auto; line-height:1.95; }
+    .page-desc strong { color:var(--ivory-dim); }
+    .page-desc em { color:var(--bo-lt); font-style:italic; }
+
+    /* SONG SECTION */
+    .song-section { margin-bottom:90px; padding-bottom:70px; border-bottom:1px dashed var(--sefer-bdr); }
+    .song-header { display:flex; flex-wrap:wrap; align-items:flex-start; gap:20px; margin-bottom:40px; padding:24px 26px; background:var(--layer); border:1px solid var(--bo-bdr); border-radius:10px; }
+    .song-num { font-family:'Frank Ruhl Libre',serif; font-size:2.6em; font-weight:900; direction:rtl; padding-right:14px; color:var(--bo-lt); }
+    .song-meta { flex:1; display:flex; flex-direction:column; gap:8px; }
+    .korban-badge { font-family:'Cormorant Garamond',serif; font-style:italic; font-size:.82em; letter-spacing:.08em; color:var(--bo-lt); }
+    .maqam-badge { font-family:'Cormorant Garamond',serif; font-style:italic; font-size:.78em; letter-spacing:.08em; display:inline-block; padding:3px 10px; border-radius:4px; color:#f0e8d8; font-weight:600; background:var(--maqam-hijaz); }
+    .song-title-he { font-family:'Frank Ruhl Libre',serif; font-size:1.7em; font-weight:700; color:var(--ivory); direction:rtl; letter-spacing:.04em; }
+    .song-title-de { font-family:'Cormorant Garamond',serif; font-style:italic; font-size:1.02em; color:var(--silver); }
+    .source-badge { font-family:'Cormorant Garamond',serif; font-style:italic; font-size:.74em; color:#A07060; line-height:1.6; }
+
+    /* ALIYAH BLOCK */
+    .aliyah-block { margin-bottom:42px; }
+    .aliyah-label { font-family:'Frank Ruhl Libre',serif; font-size:.94em; font-weight:700; direction:rtl; margin-bottom:9px; color:var(--bo); letter-spacing:.06em; padding-bottom:6px; border-bottom:1px solid var(--bo-bdr); }
+    .aliyah-label-de { font-family:'Cormorant Garamond',serif; font-style:italic; font-size:.78em; color:var(--silver-dim); display:inline-block; margin-right:14px; opacity:.85; }
+    .instrument-note { font-family:'Cormorant Garamond',serif; font-style:italic; font-size:.84em; color:var(--text); margin-bottom:14px; padding:10px 14px; background:rgba(192,72,56,.05); border-left:2px solid var(--bo-dim); }
+    .lyrics-block { display:flex; gap:44px; flex-wrap:wrap; }
+    .lyrics-he, .lyrics-de { flex:1; min-width:280px; display:flex; flex-direction:column; gap:6px; }
+    .lyrics-he span.line { font-family:'Frank Ruhl Libre',serif; font-size:1.06em; color:var(--ivory); direction:rtl; line-height:1.95; }
+    .lyrics-de span.line { font-family:'Cormorant Garamond',serif; font-size:1.0em; color:var(--silver); line-height:1.88; }
+
+    /* TIKKUN BOX */
+    .tikkun-box { background:rgba(192,72,56,.07); border:1px solid rgba(192,72,56,.32); padding:30px; margin-top:40px; border-radius:6px; }
+    .tikkun-header { display:flex; flex-direction:column; gap:6px; margin-bottom:20px; }
+    .tikkun-title-he { font-family:'Frank Ruhl Libre',serif; font-size:1.25em; color:var(--ivory); direction:rtl; font-weight:700; letter-spacing:.04em; }
+    .tikkun-title-de { font-family:'Cormorant Garamond',serif; font-size:1.0em; font-style:italic; color:var(--silver); }
+    .tikkun-src { font-family:'Cormorant Garamond',serif; font-size:.74em; color:#A07060; line-height:1.7; }
+    .tikkun-body { font-family:'Cormorant Garamond',serif; font-size:.96em; color:var(--text); line-height:1.92; }
+    .tikkun-body strong { color:var(--ivory); }
+    .tikkun-body em { color:var(--bo-lt); font-style:italic; }
+    .tikkun-tags { margin-top:18px; display:flex; gap:9px; flex-wrap:wrap; }
+    .tikkun-tag { background:rgba(192,72,56,.16); color:var(--bo-lt); padding:4px 10px; border-radius:4px; font-size:.74em; font-family:'Frank Ruhl Libre',serif; direction:rtl; }
+
+    /* SCHI / KLIMAX-MOMENT */
+    .climax-box { background:linear-gradient(135deg,rgba(192,72,56,.18),rgba(176,64,48,.10),rgba(6,8,8,.88)); border:2px solid var(--bo-bdr); padding:32px; margin-top:40px; margin-bottom:30px; border-radius:8px; }
+    .climax-label { font-family:'Cormorant Garamond',serif; font-style:italic; font-size:.82em; color:var(--bo-lt); letter-spacing:.18em; text-transform:uppercase; margin-bottom:14px; text-align:center; }
+    .climax-verse-he { font-family:'Frank Ruhl Libre',serif; font-size:1.55em; font-weight:700; color:var(--ivory); direction:rtl; text-align:center; line-height:1.85; letter-spacing:.04em; text-shadow:0 0 30px var(--bo-glow); }
+    .climax-verse-de { font-family:'Cormorant Garamond',serif; font-style:italic; font-size:1.05em; color:var(--silver); text-align:center; margin-top:14px; line-height:1.7; }
+    .climax-src { font-family:'Cormorant Garamond',serif; font-style:italic; font-size:.80em; color:var(--bo-lt); text-align:center; margin-top:12px; opacity:.8; }
+
+    /* KODA */
+    .coda-box { background:rgba(6,8,8,.78); border:1px solid var(--bo-bdr); padding:36px; text-align:center; margin-top:30px; margin-bottom:30px; border-radius:6px; }
+    .coda-label { font-family:'Cormorant Garamond',serif; font-style:italic; font-size:.80em; color:var(--bo-lt); letter-spacing:.18em; text-transform:uppercase; margin-bottom:18px; }
+    .coda-whisper { font-family:'Frank Ruhl Libre',serif; font-size:1.20em; direction:rtl; line-height:2.3; opacity:.85; color:var(--bo-lt); }
+    .coda-whisper strong { font-weight:900; opacity:1; color:var(--ivory); }
+
+    /* SCENARIOS */
+    .scenarios-section { margin-top:54px; margin-bottom:40px; }
+    .scenarios-title { font-family:'Frank Ruhl Libre',serif; font-size:1.35em; font-weight:700; text-align:center; margin-bottom:34px; direction:rtl; color:var(--sefer-lt); letter-spacing:.06em; }
+    .scenarios-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(290px,1fr)); gap:26px; }
+    .scenario-card { background:linear-gradient(135deg,rgba(32,12,8,.78),rgba(6,8,8,.92)); border:1px solid var(--bo-bdr); padding:24px; transition:transform .2s, box-shadow .2s; border-radius:6px; }
+    .scenario-card:hover { transform:translateY(-4px); box-shadow:0 10px 36px var(--bo-glow); }
+    .sc-num { font-family:'Cormorant Garamond',serif; font-style:italic; font-size:.74em; letter-spacing:.14em; text-transform:uppercase; margin-bottom:7px; color:var(--bo); }
+    .sc-title-he { font-family:'Frank Ruhl Libre',serif; font-size:1.10em; font-weight:700; color:var(--ivory); direction:rtl; margin-bottom:4px; letter-spacing:.04em; }
+    .sc-sub { font-family:'Cormorant Garamond',serif; font-style:italic; font-size:.84em; color:#A07060; margin-bottom:14px; }
+    .sc-body { font-size:.92em; color:var(--text); line-height:1.80; margin-bottom:14px; }
+    .sc-body strong { color:var(--bo-lt); }
+    .key-moment { font-size:.86em; color:var(--bo-lt); font-style:italic; margin-bottom:9px; padding-left:13px; border-left:2px solid var(--bo-lt); }
+    .reaction { font-size:.86em; color:var(--text); font-style:italic; padding-left:13px; border-left:2px solid var(--sefer-dim); line-height:1.78; }
+
+    /* FOOTER */
+    .footer { margin-top:80px; padding-top:50px; border-top:1px solid var(--sefer-bdr); text-align:center; }
+    .footer-he { font-family:'Frank Ruhl Libre',serif; font-size:1.40em; font-weight:700; color:var(--sefer-lt); direction:rtl; margin-bottom:18px; text-shadow:0 0 30px var(--sefer-glow); letter-spacing:.06em; }
+    .footer-chain { font-family:'Frank Ruhl Libre',serif; font-size:1.0em; color:var(--silver); direction:rtl; margin-bottom:22px; letter-spacing:.09em; }
+    .footer-de { font-family:'Cormorant Garamond',serif; font-style:italic; font-size:.92em; color:var(--text); line-height:2.0; max-width:780px; margin:0 auto 24px; }
+    .footer-de strong { color:var(--ivory-dim); font-style:normal; }
+    .footer-amen { font-family:'Frank Ruhl Libre',serif; font-size:1.30em; color:var(--sefer-lt); direction:rtl; margin-top:24px; letter-spacing:.14em; text-shadow:0 0 30px var(--sefer-glow); }
+
+    @media (max-width:720px) {
+      .page-title-he { font-size:2.3em; }
+      .song-num { font-size:2.2em; }
+      .lyrics-block { flex-direction:column; gap:24px; }
+      .scenarios-grid { grid-template-columns:1fr; }
+      .climax-verse-he { font-size:1.20em; }
+      .footer-he { font-size:1.10em; }
+    }
+  </style>
+</head>
+<body>
+<div class="wrap">
+
+  <header class="page-header">
+    <div class="eyebrow">Sephardische Tora-Vertonung · Sefer HaParashot bemo Maqam</div>
+    <div class="sefer-letter">ב</div>
+    <div class="page-title-he">פָּרָשַׁת בֹּא</div>
+    <div class="page-subtitle-he">סֵפֶר שְׁמוֹת · י׳:א׳–י״ג:ט״ז · מַלְכוּת · מַקָּאם חִיגָ׳אז · לֵיל הַשִּׁמֻּרִים</div>
+    <div class="page-title-de">Bo — „Geh zu Pharao" · Die drei letzten Plagen, die Pessach-Nacht und die ersten Mitzwot Israels als Volk · Dritte Parashah des Sefer Schemot · Malchut im Maqam Hijaz</div>
+    <div class="page-desc">
+      Bo trägt die königliche Spitze des Befreiungs-Bogens: zunächst die drei letzten Plagen
+      — <em>Arbeh</em> (Heuschrecken), <em>Choschech</em> (Finsternis), <em>Makkat Bechorot</em>
+      (Tod der Erstgeborenen). Dann die Pessach-Vorbereitung in Mitzrayim: der <em>Sheh</em>
+      (Lamm) vom Zehnten an, am Vierzehnten geschlachtet, das Blut an <em>Maschkof</em> und
+      <em>Mesusot</em>, das Fleisch gebraten mit Mazza und Bitterkraut, gegessen in der Eile
+      des Auszugs. Es folgen die ersten <em>Mitzwot</em> Israels als Volk: <em>„הַחֹדֶשׁ
+      הַזֶּה לָכֶם רֹאשׁ חֳדָשִׁים"</em> (12:2) — die Heiligung der Zeit, die <em>erste</em>
+      Mitzwah, die <strong>Shadal</strong> in seinem <em>Pirusch zu Schemot 12:2</em> als
+      Erinnerungs-Mal an die Erlösung deutet; das Pessach-Korban als ewige Ordnung; das Verbot
+      des Chametz für sieben Tage; <em>Kiddusch HaBechor</em> (Sanktifizierung der Erstgeborenen);
+      und schließlich <em>Tefillin</em> — die Bindung der Tora ans Erinnern, <em>„וְהָיָה
+      לְךָ לְאוֹת עַל־יָדְךָ וּלְזִכָּרוֹן בֵּין עֵינֶיךָ"</em> (13:9). Sefirot-Anker:
+      <strong>Malchut</strong> — die königliche Befreiung, die Geburt Israels als Volk, das
+      Anerkennen Adonais als König durch das Volk selbst. Maqam: <strong>Hijaz</strong> —
+      königlich-sehnend, festlich-pessach-königlich, mit dramatischer Mitternachts-Sektion
+      bei <em>Makkat Bechorot</em>. Tora-Text 1:1 nach sephardischer Tradition, Tetragrammaton
+      durchgängig als אֲדֹנָי, Maschiach ben David.
+    </div>
+  </header>
+
+  <!-- ══ SONG SECTION — PARASHAT BO ══ -->
+  <section class="song-section" id="bo">
+
+    <div class="song-header">
+      <div class="song-num">ג</div>
+      <div class="song-meta">
+        <div class="korban-badge">Malchut — מַלְכוּת · Die königliche Befreiung und die ersten Mitzwot des Volkes</div>
+        <div class="song-title-he">פָּרָשַׁת בֹּא</div>
+        <div class="song-title-de">Bo — „Geh zu Pharao" · Die letzten drei Plagen, die Pessach-Nacht und die Geburt des Volkes Israel · Schemot 10:1–13:16</div>
+        <div class="maqam-badge">מַקָּאם חִיגָ׳אז · Hijaz · ~60 BPM rubato</div>
+        <div class="source-badge">שְׁמוֹת י׳:א׳–י״ג:ט״ז · רמב״ם הלכות קָרְבַּן פֶּסַח · רמב״ם הלכות חָמֵץ וּמַצָּה · רמב״ם הלכות תְּפִלִּין וּמְזוּזָה וְסֵפֶר תּוֹרָה · רמב״ם הלכות בִּכּוּרִים וּשְׁאָר מַתְּנוֹת כְּהֻנָּה י״א (פִּדְיוֹן הַבֵּן) · רמב״ם הלכות קִדּוּשׁ הַחֹדֶשׁ · רמב״ם סֵפֶר הַמִּצְוֹת מִצְוָה קנ״ז (קִדּוּשׁ הַחֹדֶשׁ) · תַּלְמוּד בָּבְלִי פְּסָחִים · רֹאשׁ הַשָּׁנָה כ״ה.‎ · מְכִילְתָּא דְּרַבִּי יִשְׁמָעֵאל פָּרָשַׁת בֹּא · רש״ש נְהַר שָׁלוֹם דְּרוּשׁ פֶּסַח מִצְרַיִם · רמח״ל דֶּרֶךְ הַשֵּׁם חֵלֶק ד׳ פֶּרֶק ז׳ (מִצְוֹת הַפֶּסַח) · רמח״ל מְסִלַּת יְשָׁרִים פֶּרֶק י״ט (קְדֻשָּׁה) · אור החיים על שְׁמוֹת י״ב:ב׳ · ספר העיקרים מאמר רִאשׁוֹן (יְסוֹדוֹת הָאֱמוּנָה) · בן איש חי שנה ראשונה פרשת בֹּא · שד״ל פֵּרוּשׁ עַל שְׁמוֹת י״ב:ב׳ · י״ב:ו׳ · י״ב:כ״א · י״ג:ט׳ · י״ג:ט״ז · יָבִיעַ אוֹמֶר חֵלֶק ג׳ אוֹרַח חַיִּים מ״ז · חֲזוֹן עוֹבַדְיָה פֶּסַח · כַּף הַחַיִּים אוֹרַח חַיִּים תכ״ט-תצ״ד · שׁוּלְחָן עָרוּךְ אוֹרַח חַיִּים תכ״ט-תצ״ד.</div>
+      </div>
+    </div>
+
+
+    <!-- ── ALIYAH 1 · ראשון · Schemot 10:1-11 — Mosche zu Pharao, Drohung Arbeh ── -->
+    <div class="aliyah-block">
+      <div class="aliyah-label">עֲלִיָּה רִאשׁוֹנָה — בֹּא אֶל־פַּרְעֹה<span class="aliyah-label-de">Erste Aliyah · Schemot 10:1–11 · Der Auftrag „Geh zu Pharao" · Drohung der Heuschrecken · Pharaos Hofbeamte stimmen erstmals zu · Pharao verhandelt um die Kinder · Mosche wird hinausgeworfen</span></div>
+      <div class="instrument-note">[no percussion] [no drums] [no choir] [solo acoustic guitar — Hijaz opening, low royal Pessach-tones at "Bo el Par'oh", the augmented-second drop on "hichbadti et libo", measured ceremonial entry, rubato around 60 BPM, no percussion, no drums, no beat] Gitarre: Hijaz öffnet im tiefen königlichen Pessach-Ton — der Befehl „Bo el Par'oh" als ruhiger Königs-Schritt, der Hijaz-Halbton-Eineinhalbton-Sturz beim „hichbadti et libo".</div>
+      <div class="lyrics-block">
+        <div class="lyrics-he" dir="rtl">
+          <span class="line">וַיֹּאמֶר אֲדֹנָי אֶל־מֹשֶׁה בֹּא אֶל־פַּרְעֹה כִּי־אֲנִי הִכְבַּדְתִּי אֶת־לִבּוֹ וְאֶת־לֵב עֲבָדָיו לְמַעַן שִׁתִי אֹתֹתַי אֵלֶּה בְּקִרְבּוֹ׃</span>
+          <span class="line">וּלְמַעַן תְּסַפֵּר בְּאׇזְנֵי בִנְךָ וּבֶן־בִּנְךָ אֵת אֲשֶׁר הִתְעַלַּלְתִּי בְּמִצְרַיִם וְאֶת־אֹתֹתַי אֲשֶׁר־שַׂמְתִּי בָם וִידַעְתֶּם כִּי־אֲנִי אֲדֹנָי׃</span>
+          <span class="line">וַיָּבֹא מֹשֶׁה וְאַהֲרֹן אֶל־פַּרְעֹה וַיֹּאמְרוּ אֵלָיו כֹּה־אָמַר אֲדֹנָי אֱלֹהֵי הָעִבְרִים עַד־מָתַי מֵאַנְתָּ לֵעָנֹת מִפָּנָי שַׁלַּח עַמִּי וְיַעַבְדֻנִי׃</span>
+          <span class="line">כִּי אִם־מָאֵן אַתָּה לְשַׁלֵּחַ אֶת־עַמִּי הִנְנִי מֵבִיא מָחָר אַרְבֶּה בִּגְבֻלֶךָ׃</span>
+          <span class="line">וְכִסָּה אֶת־עֵין הָאָרֶץ וְלֹא יוּכַל לִרְאֹת אֶת־הָאָרֶץ וְאָכַל אֶת־יֶתֶר הַפְּלֵטָה הַנִּשְׁאֶרֶת לָכֶם מִן־הַבָּרָד וְאָכַל אֶת־כׇּל־הָעֵץ הַצֹּמֵחַ לָכֶם מִן־הַשָּׂדֶה׃</span>
+          <span class="line">וּמָלְאוּ בָתֶּיךָ וּבָתֵּי כׇל־עֲבָדֶיךָ וּבָתֵּי כׇל־מִצְרַיִם אֲשֶׁר לֹא־רָאוּ אֲבֹתֶיךָ וַאֲבוֹת אֲבֹתֶיךָ מִיּוֹם הֱיוֹתָם עַל־הָאֲדָמָה עַד הַיּוֹם הַזֶּה וַיִּפֶן וַיֵּצֵא מֵעִם פַּרְעֹה׃</span>
+          <span class="line">וַיֹּאמְרוּ עַבְדֵי פַרְעֹה אֵלָיו עַד־מָתַי יִהְיֶה זֶה לָנוּ לְמוֹקֵשׁ שַׁלַּח אֶת־הָאֲנָשִׁים וְיַעַבְדוּ אֶת־אֲדֹנָי אֱלֹהֵיהֶם הֲטֶרֶם תֵּדַע כִּי אָבְדָה מִצְרָיִם׃</span>
+          <span class="line">וַיּוּשַׁב אֶת־מֹשֶׁה וְאֶת־אַהֲרֹן אֶל־פַּרְעֹה וַיֹּאמֶר אֲלֵהֶם לְכוּ עִבְדוּ אֶת־אֲדֹנָי אֱלֹהֵיכֶם מִי וָמִי הַהֹלְכִים׃</span>
+          <span class="line">וַיֹּאמֶר מֹשֶׁה בִּנְעָרֵינוּ וּבִזְקֵנֵינוּ נֵלֵךְ בְּבָנֵינוּ וּבִבְנוֹתֵנוּ בְּצֹאנֵנוּ וּבִבְקָרֵנוּ נֵלֵךְ כִּי חַג־אֲדֹנָי לָנוּ׃</span>
+          <span class="line">וַיֹּאמֶר אֲלֵהֶם יְהִי כֵן אֲדֹנָי עִמָּכֶם כַּאֲשֶׁר אֲשַׁלַּח אֶתְכֶם וְאֶת־טַפְּכֶם רְאוּ כִּי רָעָה נֶגֶד פְּנֵיכֶם׃</span>
+          <span class="line">לֹא כֵן לְכוּ־נָא הַגְּבָרִים וְעִבְדוּ אֶת־אֲדֹנָי כִּי אֹתָהּ אַתֶּם מְבַקְשִׁים וַיְגָרֶשׁ אֹתָם מֵאֵת פְּנֵי פַרְעֹה׃</span>
+        </div>
+        <div class="lyrics-de">
+          <span class="line">(10:1) Und Adonai sprach zu Mosche: Geh zu Pharao, denn ich habe sein Herz und das Herz seiner Diener schwer gemacht, damit ich diese meine Zeichen in seiner Mitte setze.</span>
+          <span class="line">(2) Und damit du in den Ohren deines Sohnes und deines Sohnessohnes erzählst, was ich in Mitzrayim getan habe, und meine Zeichen, die ich unter ihnen setzte — und ihr werdet erkennen, dass ich Adonai bin.</span>
+          <span class="line">(3) Und Mosche und Aharon kamen zu Pharao und sprachen zu ihm: So spricht Adonai, der Gott der Hebräer: Bis wann weigerst du dich, dich vor mir zu beugen? Entlasse mein Volk, damit sie mir dienen.</span>
+          <span class="line">(4) Denn wenn du dich weigerst, mein Volk zu entlassen — siehe, ich bringe morgen Heuschrecken in dein Gebiet.</span>
+          <span class="line">(5) Und sie werden das Auge der Erde bedecken, so dass man die Erde nicht sehen kann, und sie werden den Rest des Übriggebliebenen verzehren, der euch vom Hagel geblieben ist, und sie werden alle Bäume verzehren, die euch auf dem Feld wachsen.</span>
+          <span class="line">(6) Und sie werden deine Häuser füllen und die Häuser aller deiner Diener und die Häuser ganz Mitzrayims — was deine Väter und deiner Väter Väter nicht gesehen haben, von dem Tag an, da sie auf dem Erdboden waren, bis zu diesem Tag. Und er wandte sich und ging weg von Pharao.</span>
+          <span class="line">(7) Und die Diener Pharaos sprachen zu ihm: Bis wann soll uns dieser zur Falle sein? Entlasse die Männer, damit sie Adonai, ihrem Gott, dienen. Erkennst du noch nicht, dass Mitzrayim verloren ist?</span>
+          <span class="line">(8) Da brachte man Mosche und Aharon wieder zu Pharao zurück, und er sprach zu ihnen: Geht, dient Adonai, eurem Gott — wer und wer sind die Ziehenden?</span>
+          <span class="line">(9) Und Mosche sprach: Mit unseren Knaben und mit unseren Alten gehen wir, mit unseren Söhnen und mit unseren Töchtern, mit unseren Schafen und mit unseren Rindern gehen wir — denn ein Fest Adonais ist es für uns.</span>
+          <span class="line">(10) Und er sprach zu ihnen: So möge Adonai mit euch sein, wenn ich euch und eure Kinder entlasse! Seht, denn Böses steht euch im Angesicht.</span>
+          <span class="line">(11) Nicht so — geht doch, die Männer, und dient Adonai, denn das ist es, was ihr begehrt. Und man trieb sie hinaus vom Angesicht Pharaos.</span>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- ── ALIYAH 2 · שני · Schemot 10:12-23 — Arbeh und Choschech ── -->
+    <div class="aliyah-block">
+      <div class="aliyah-label">עֲלִיָּה שְׁנִיָּה — מַכַּת אַרְבֶּה וּמַכַּת חֹשֶׁךְ<span class="aliyah-label-de">Zweite Aliyah · Schemot 10:12–23 · Die Plage der Heuschrecken · Pharaos kurzes Eingestehen „chatati l'Adonai" · Der Ost-Wind kehrt sich um, das Meer verschluckt die Heuschrecken · Die Finsternis-Plage, drei Tage lang · Den Söhnen Israels war Licht in ihren Wohnstätten</span></div>
+      <div class="instrument-note">[no percussion] [no drums] [no choir] [solo acoustic guitar — Hijaz with sudden ruach-kadim modulation, the dramatic ocean-sweeping of locusts, then deep choschech-darkness sotto voce on a single sustained low note, the radiance "ulchol b'nei Yisrael haya or" emerging in a tender Hijaz lift, rubato around 60 BPM, no percussion] Gitarre: Hijaz mit plötzlicher Ost-Wind-Modulation — das Meer verschluckt die Heuschrecken; dann tiefes Choschech-Dunkel auf einem gehaltenen tiefen Ton; das Aufleuchten „ulchol b'nei Yisrael haya or" als zarte Hijaz-Hebung.</div>
+      <div class="lyrics-block">
+        <div class="lyrics-he" dir="rtl">
+          <span class="line">וַיֹּאמֶר אֲדֹנָי אֶל־מֹשֶׁה נְטֵה יָדְךָ עַל־אֶרֶץ מִצְרַיִם בָּאַרְבֶּה וְיַעַל עַל־אֶרֶץ מִצְרָיִם וְיֹאכַל אֶת־כׇּל־עֵשֶׂב הָאָרֶץ אֵת כׇּל־אֲשֶׁר הִשְׁאִיר הַבָּרָד׃</span>
+          <span class="line">וַיֵּט מֹשֶׁה אֶת־מַטֵּהוּ עַל־אֶרֶץ מִצְרַיִם וַאֲדֹנָי נִהַג רוּחַ־קָדִים בָּאָרֶץ כׇּל־הַיּוֹם הַהוּא וְכׇל־הַלָּיְלָה הַבֹּקֶר הָיָה וְרוּחַ הַקָּדִים נָשָׂא אֶת־הָאַרְבֶּה׃</span>
+          <span class="line">וַיַּעַל הָאַרְבֶּה עַל כׇּל־אֶרֶץ מִצְרַיִם וַיָּנַח בְּכֹל גְּבוּל מִצְרָיִם כָּבֵד מְאֹד לְפָנָיו לֹא־הָיָה כֵן אַרְבֶּה כָּמֹהוּ וְאַחֲרָיו לֹא יִהְיֶה־כֵּן׃</span>
+          <span class="line">וַיְכַס אֶת־עֵין כׇּל־הָאָרֶץ וַתֶּחְשַׁךְ הָאָרֶץ וַיֹּאכַל אֶת־כׇּל־עֵשֶׂב הָאָרֶץ וְאֵת כׇּל־פְּרִי הָעֵץ אֲשֶׁר הוֹתִיר הַבָּרָד וְלֹא־נוֹתַר כׇּל־יֶרֶק בָּעֵץ וּבְעֵשֶׂב הַשָּׂדֶה בְּכׇל־אֶרֶץ מִצְרָיִם׃</span>
+          <span class="line">וַיְמַהֵר פַּרְעֹה לִקְרֹא לְמֹשֶׁה וּלְאַהֲרֹן וַיֹּאמֶר חָטָאתִי לַאֲדֹנָי אֱלֹהֵיכֶם וְלָכֶם׃</span>
+          <span class="line">וְעַתָּה שָׂא נָא חַטָּאתִי אַךְ הַפַּעַם וְהַעְתִּירוּ לַאֲדֹנָי אֱלֹהֵיכֶם וְיָסֵר מֵעָלַי רַק אֶת־הַמָּוֶת הַזֶּה׃</span>
+          <span class="line">וַיֵּצֵא מֵעִם פַּרְעֹה וַיֶּעְתַּר אֶל־אֲדֹנָי׃</span>
+          <span class="line">וַיַּהֲפֹךְ אֲדֹנָי רוּחַ־יָם חָזָק מְאֹד וַיִּשָּׂא אֶת־הָאַרְבֶּה וַיִּתְקָעֵהוּ יָמָּה סּוּף לֹא נִשְׁאַר אַרְבֶּה אֶחָד בְּכֹל גְּבוּל מִצְרָיִם׃</span>
+          <span class="line">וַיְחַזֵּק אֲדֹנָי אֶת־לֵב פַּרְעֹה וְלֹא שִׁלַּח אֶת־בְּנֵי יִשְׂרָאֵל׃</span>
+          <span class="line">וַיֹּאמֶר אֲדֹנָי אֶל־מֹשֶׁה נְטֵה יָדְךָ עַל־הַשָּׁמַיִם וִיהִי חֹשֶׁךְ עַל־אֶרֶץ מִצְרָיִם וְיָמֵשׁ חֹשֶׁךְ׃</span>
+          <span class="line">וַיֵּט מֹשֶׁה אֶת־יָדוֹ עַל־הַשָּׁמָיִם וַיְהִי חֹשֶׁךְ־אֲפֵלָה בְּכׇל־אֶרֶץ מִצְרַיִם שְׁלֹשֶׁת יָמִים׃</span>
+          <span class="line">לֹא־רָאוּ אִישׁ אֶת־אָחִיו וְלֹא־קָמוּ אִישׁ מִתַּחְתָּיו שְׁלֹשֶׁת יָמִים וּלְכׇל־בְּנֵי יִשְׂרָאֵל הָיָה אוֹר בְּמוֹשְׁבֹתָם׃</span>
+        </div>
+        <div class="lyrics-de">
+          <span class="line">(10:12) Und Adonai sprach zu Mosche: Strecke deine Hand aus über das Land Mitzrayim für die Heuschrecken, damit sie über das Land Mitzrayim aufsteigen und alles Kraut des Landes verzehren — alles, was der Hagel übrig gelassen hat.</span>
+          <span class="line">(13) Und Mosche streckte seinen Stab aus über das Land Mitzrayim, und Adonai trieb einen Ost-Wind über das Land jenen ganzen Tag und die ganze Nacht. Es ward Morgen, und der Ost-Wind trug die Heuschrecken herbei.</span>
+          <span class="line">(14) Und die Heuschrecken zogen herauf über das ganze Land Mitzrayim und ließen sich in allem Gebiet Mitzrayims nieder, sehr drückend — vor ihnen war keine Heuschrecken-Plage so wie sie gewesen, und nach ihnen wird keine so sein.</span>
+          <span class="line">(15) Und sie bedeckten das Auge des ganzen Landes, und das Land verfinsterte sich, und sie fraßen alles Kraut des Landes und alle Frucht des Baumes, die der Hagel übrig gelassen hatte. Es blieb kein Grün zurück, weder an Baum noch am Kraut des Feldes, in ganz Mitzrayim.</span>
+          <span class="line">(16) Und Pharao eilte, Mosche und Aharon zu rufen, und sprach: Ich habe gesündigt gegen Adonai, euren Gott, und gegen euch.</span>
+          <span class="line">(17) Und nun, vergib doch meine Sünde nur dieses eine Mal, und fleht zu Adonai, eurem Gott, dass er nur diesen Tod von mir abwende.</span>
+          <span class="line">(18) Und er ging weg von Pharao und flehte zu Adonai.</span>
+          <span class="line">(19) Und Adonai wandte einen sehr starken West-Wind, und der trug die Heuschrecken davon und warf sie ins Schilfmeer — nicht eine Heuschrecke blieb im ganzen Gebiet Mitzrayims zurück.</span>
+          <span class="line">(20) Und Adonai bestärkte das Herz Pharaos, und er entließ die Söhne Israels nicht.</span>
+          <span class="line">(21) Und Adonai sprach zu Mosche: Strecke deine Hand aus zum Himmel, dass eine Finsternis über das Land Mitzrayim komme — eine greifbare Finsternis.</span>
+          <span class="line">(22) Und Mosche streckte seine Hand zum Himmel aus, und es wurde dichte Finsternis im ganzen Land Mitzrayim, drei Tage lang.</span>
+          <span class="line">(23) Sie sahen nicht einer den andern, und keiner stand auf von seinem Platz, drei Tage lang. Aber allen Söhnen Israels war Licht in ihren Wohnstätten.</span>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- ── ALIYAH 3 · שלישי · Schemot 10:24-11:3 — Pharaos letztes Wort, Vorbereitung der Erstgeborenen-Plage ── -->
+    <div class="aliyah-block">
+      <div class="aliyah-label">עֲלִיָּה שְׁלִישִׁית — דְּבַר פַּרְעֹה הָאַחֲרוֹן וְהַהֲכָנָה לְמַכַּת בְּכוֹרוֹת<span class="aliyah-label-de">Dritte Aliyah · Schemot 10:24–29 + 11:1–3 · Pharaos letztes Verhandlungs-Wort · Mosches Schwur: nie mehr dein Angesicht zu sehen · Adonais Ankündigung der letzten Plage · Israels Volk soll Gold- und Silbergefäße erbitten · Mosche groß im Land Mitzrayim</span></div>
+      <div class="instrument-note">[no percussion] [no drums] [no choir] [solo acoustic guitar — Hijaz with sharper royal-yearning lift at "ki bi'yom re'otcha fanai tamut", then a hushed Adonai-instruction lachash for the gold-and-silver-vessels passage, rubato around 60 BPM, no percussion] Gitarre: Hijaz mit königlich-sehnender Hebung beim „ki bi'yom re'otcha fanai tamut" — Pharaos Todes-Schwur. Dann gedämpfter Lachash beim Adonai-Befehl an Mosche, die Gold- und Silber-Gefäße zu erbitten.</div>
+      <div class="lyrics-block">
+        <div class="lyrics-he" dir="rtl">
+          <span class="line">וַיִּקְרָא פַרְעֹה אֶל־מֹשֶׁה וַיֹּאמֶר לְכוּ עִבְדוּ אֶת־אֲדֹנָי רַק צֹאנְכֶם וּבְקַרְכֶם יֻצָּג גַּם־טַפְּכֶם יֵלֵךְ עִמָּכֶם׃</span>
+          <span class="line">וַיֹּאמֶר מֹשֶׁה גַּם־אַתָּה תִּתֵּן בְּיָדֵנוּ זְבָחִים וְעֹלֹת וְעָשִׂינוּ לַאֲדֹנָי אֱלֹהֵינוּ׃</span>
+          <span class="line">וְגַם־מִקְנֵנוּ יֵלֵךְ עִמָּנוּ לֹא תִשָּׁאֵר פַּרְסָה כִּי מִמֶּנּוּ נִקַּח לַעֲבֹד אֶת־אֲדֹנָי אֱלֹהֵינוּ וַאֲנַחְנוּ לֹא־נֵדַע מַה־נַּעֲבֹד אֶת־אֲדֹנָי עַד־בֹּאֵנוּ שָׁמָּה׃</span>
+          <span class="line">וַיְחַזֵּק אֲדֹנָי אֶת־לֵב פַּרְעֹה וְלֹא אָבָה לְשַׁלְּחָם׃</span>
+          <span class="line">וַיֹּאמֶר־לוֹ פַרְעֹה לֵךְ מֵעָלָי הִשָּׁמֶר לְךָ אַל־תֹּסֶף רְאוֹת פָּנַי כִּי בְּיוֹם רְאֹתְךָ פָנַי תָּמוּת׃</span>
+          <span class="line">וַיֹּאמֶר מֹשֶׁה כֵּן דִּבַּרְתָּ לֹא־אֹסִף עוֹד רְאוֹת פָּנֶיךָ׃</span>
+          <span class="line">וַיֹּאמֶר אֲדֹנָי אֶל־מֹשֶׁה עוֹד נֶגַע אֶחָד אָבִיא עַל־פַּרְעֹה וְעַל־מִצְרַיִם אַחֲרֵי־כֵן יְשַׁלַּח אֶתְכֶם מִזֶּה כְּשַׁלְּחוֹ כָּלָה גָּרֵשׁ יְגָרֵשׁ אֶתְכֶם מִזֶּה׃</span>
+          <span class="line">דַּבֶּר־נָא בְּאׇזְנֵי הָעָם וְיִשְׁאֲלוּ אִישׁ מֵאֵת רֵעֵהוּ וְאִשָּׁה מֵאֵת רְעוּתָהּ כְּלֵי־כֶסֶף וּכְלֵי זָהָב׃</span>
+          <span class="line">וַיִּתֵּן אֲדֹנָי אֶת־חֵן הָעָם בְּעֵינֵי מִצְרָיִם גַּם הָאִישׁ מֹשֶׁה גָּדוֹל מְאֹד בְּאֶרֶץ מִצְרַיִם בְּעֵינֵי עַבְדֵי־פַרְעֹה וּבְעֵינֵי הָעָם׃</span>
+        </div>
+        <div class="lyrics-de">
+          <span class="line">(10:24) Und Pharao rief Mosche und sprach: Geht, dient Adonai — nur eure Schafe und eure Rinder sollen zurückbleiben; auch eure Kinder mögen mit euch gehen.</span>
+          <span class="line">(25) Und Mosche sprach: Auch du musst Schlachtopfer und Brandopfer in unsere Hand geben, damit wir sie Adonai, unserem Gott, darbringen.</span>
+          <span class="line">(26) Und auch unser Vieh muss mit uns gehen, kein Huf darf zurückbleiben, denn von ihm werden wir nehmen, um Adonai, unserem Gott, zu dienen. Wir wissen nicht, womit wir Adonai dienen werden, bis wir dorthin kommen.</span>
+          <span class="line">(27) Und Adonai bestärkte das Herz Pharaos, und er war nicht willig, sie zu entlassen.</span>
+          <span class="line">(28) Und Pharao sprach zu ihm: Geh weg von mir! Hüte dich, mein Angesicht noch einmal zu sehen — denn am Tag, da du mein Angesicht siehst, wirst du sterben.</span>
+          <span class="line">(29) Und Mosche sprach: Du hast recht gesprochen — ich werde dein Angesicht nicht mehr sehen.</span>
+          <span class="line">(11:1) Und Adonai sprach zu Mosche: Noch eine Plage werde ich über Pharao und über Mitzrayim bringen — danach wird er euch von hier entlassen. Wenn er euch endgültig entlässt, wird er euch von hier sogar hinaustreiben.</span>
+          <span class="line">(2) Sprich doch in die Ohren des Volkes, dass jeder Mann von seinem Nachbarn und jede Frau von ihrer Nachbarin Geräte aus Silber und Geräte aus Gold erbitte.</span>
+          <span class="line">(3) Und Adonai gab dem Volk Gunst in den Augen Mitzrayims; auch der Mann Mosche war sehr groß im Land Mitzrayim in den Augen der Diener Pharaos und in den Augen des Volkes.</span>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- ── ALIYAH 4 · רביעי · Schemot 11:4-12:20 — Ankündigung der Bechorot-Plage, Pessach-Korban, Chag HaMazot ── -->
+    <div class="aliyah-block">
+      <div class="aliyah-label">עֲלִיָּה רְבִיעִית — חֲצוֹת הַלַּיְלָה · קָרְבַּן הַפֶּסַח · חַג הַמַּצּוֹת<span class="aliyah-label-de">Vierte Aliyah · Schemot 11:4–12:20 · Die Mitternachts-Ankündigung über die Erstgeborenen · Die Mond-Heiligung als erste Mitzwah · Das Pessach-Lamm: Auswahl am Zehnten, Schlachtung am Vierzehnten · Blut an Türpfosten und Sturz · Mazza und Maror · Sieben Tage des Mazza-Festes</span></div>
+      <div class="instrument-note">[no percussion] [no drums] [no choir] [solo acoustic guitar — Hijaz drama at "kachatzot halayla" (midnight motif, sustained low forte tones), then a dramatic forte rise at "HaChodesch HaZeh" (the first mitzwah), then steady ceremonial Hijaz fingerpicking for the Pessach-laws section, rubato around 60 BPM, no percussion] Gitarre: Hijaz mit dramatischem Mitternachts-Motiv beim „kachatzot halayla" — gehaltene tiefe forte-Töne. Dann der spektakuläre forte-Aufstieg beim „HaChodesch HaZeh lachem rosch chodaschim" — die erste Mitzwah als Krönungs-Augenblick. Anschließend stetiges zeremonielles Hijaz-Fingerpicking für die Pessach-Halachah-Strecke.</div>
+      <div class="lyrics-block">
+        <div class="lyrics-he" dir="rtl">
+          <span class="line">וַיֹּאמֶר מֹשֶׁה כֹּה אָמַר אֲדֹנָי כַּחֲצֹת הַלַּיְלָה אֲנִי יוֹצֵא בְּתוֹךְ מִצְרָיִם׃</span>
+          <span class="line">וּמֵת כׇּל־בְּכוֹר בְּאֶרֶץ מִצְרַיִם מִבְּכוֹר פַּרְעֹה הַיֹּשֵׁב עַל־כִּסְאוֹ עַד בְּכוֹר הַשִּׁפְחָה אֲשֶׁר אַחַר הָרֵחָיִם וְכֹל בְּכוֹר בְּהֵמָה׃</span>
+          <span class="line">וְהָיְתָה צְעָקָה גְדֹלָה בְּכׇל־אֶרֶץ מִצְרָיִם אֲשֶׁר כָּמֹהוּ לֹא נִהְיָתָה וְכָמֹהוּ לֹא תֹסִף׃</span>
+          <span class="line">וּלְכֹל בְּנֵי יִשְׂרָאֵל לֹא יֶחֱרַץ־כֶּלֶב לְשֹׁנוֹ לְמֵאִישׁ וְעַד־בְּהֵמָה לְמַעַן תֵּדְעוּן אֲשֶׁר יַפְלֶה אֲדֹנָי בֵּין מִצְרַיִם וּבֵין יִשְׂרָאֵל׃</span>
+          <span class="line">וְיָרְדוּ כׇל־עֲבָדֶיךָ אֵלֶּה אֵלַי וְהִשְׁתַּחֲווּ־לִי לֵאמֹר צֵא אַתָּה וְכׇל־הָעָם אֲשֶׁר־בְּרַגְלֶיךָ וְאַחֲרֵי־כֵן אֵצֵא וַיֵּצֵא מֵעִם־פַּרְעֹה בׇּחֳרִי־אָף׃</span>
+          <span class="line">וַיֹּאמֶר אֲדֹנָי אֶל־מֹשֶׁה לֹא־יִשְׁמַע אֲלֵיכֶם פַּרְעֹה לְמַעַן רְבוֹת מוֹפְתַי בְּאֶרֶץ מִצְרָיִם׃</span>
+          <span class="line">וּמֹשֶׁה וְאַהֲרֹן עָשׂוּ אֶת־כׇּל־הַמֹּפְתִים הָאֵלֶּה לִפְנֵי פַרְעֹה וַיְחַזֵּק אֲדֹנָי אֶת־לֵב פַּרְעֹה וְלֹא־שִׁלַּח אֶת־בְּנֵי־יִשְׂרָאֵל מֵאַרְצוֹ׃</span>
+          <span class="line">וַיֹּאמֶר אֲדֹנָי אֶל־מֹשֶׁה וְאֶל־אַהֲרֹן בְּאֶרֶץ מִצְרַיִם לֵאמֹר׃</span>
+          <span class="line">הַחֹדֶשׁ הַזֶּה לָכֶם רֹאשׁ חֳדָשִׁים רִאשׁוֹן הוּא לָכֶם לְחׇדְשֵׁי הַשָּׁנָה׃</span>
+          <span class="line">דַּבְּרוּ אֶל־כׇּל־עֲדַת יִשְׂרָאֵל לֵאמֹר בֶּעָשֹׂר לַחֹדֶשׁ הַזֶּה וְיִקְחוּ לָהֶם אִישׁ שֶׂה לְבֵית־אָבֹת שֶׂה לַבָּיִת׃</span>
+          <span class="line">וְאִם־יִמְעַט הַבַּיִת מִהְיוֹת מִשֶּׂה וְלָקַח הוּא וּשְׁכֵנוֹ הַקָּרֹב אֶל־בֵּיתוֹ בְּמִכְסַת נְפָשֹׁת אִישׁ לְפִי אׇכְלוֹ תָּכֹסּוּ עַל־הַשֶּׂה׃</span>
+          <span class="line">שֶׂה תָמִים זָכָר בֶּן־שָׁנָה יִהְיֶה לָכֶם מִן־הַכְּבָשִׂים וּמִן־הָעִזִּים תִּקָּחוּ׃</span>
+          <span class="line">וְהָיָה לָכֶם לְמִשְׁמֶרֶת עַד אַרְבָּעָה עָשָׂר יוֹם לַחֹדֶשׁ הַזֶּה וְשָׁחֲטוּ אֹתוֹ כֹּל קְהַל עֲדַת־יִשְׂרָאֵל בֵּין הָעַרְבָּיִם׃</span>
+          <span class="line">וְלָקְחוּ מִן־הַדָּם וְנָתְנוּ עַל־שְׁתֵּי הַמְּזוּזֹת וְעַל־הַמַּשְׁקוֹף עַל הַבָּתִּים אֲשֶׁר־יֹאכְלוּ אֹתוֹ בָּהֶם׃</span>
+          <span class="line">וְאָכְלוּ אֶת־הַבָּשָׂר בַּלַּיְלָה הַזֶּה צְלִי־אֵשׁ וּמַצּוֹת עַל־מְרֹרִים יֹאכְלֻהוּ׃</span>
+          <span class="line">אַל־תֹּאכְלוּ מִמֶּנּוּ נָא וּבָשֵׁל מְבֻשָּׁל בַּמָּיִם כִּי אִם־צְלִי־אֵשׁ רֹאשׁוֹ עַל־כְּרָעָיו וְעַל־קִרְבּוֹ׃</span>
+          <span class="line">וְלֹא־תוֹתִירוּ מִמֶּנּוּ עַד־בֹּקֶר וְהַנֹּתָר מִמֶּנּוּ עַד־בֹּקֶר בָּאֵשׁ תִּשְׂרֹפוּ׃</span>
+          <span class="line">וְכָכָה תֹּאכְלוּ אֹתוֹ מׇתְנֵיכֶם חֲגֻרִים נַעֲלֵיכֶם בְּרַגְלֵיכֶם וּמַקֶּלְכֶם בְּיֶדְכֶם וַאֲכַלְתֶּם אֹתוֹ בְּחִפָּזוֹן פֶּסַח הוּא לַאֲדֹנָי׃</span>
+          <span class="line">וְעָבַרְתִּי בְאֶרֶץ־מִצְרַיִם בַּלַּיְלָה הַזֶּה וְהִכֵּיתִי כׇל־בְּכוֹר בְּאֶרֶץ מִצְרַיִם מֵאָדָם וְעַד־בְּהֵמָה וּבְכׇל־אֱלֹהֵי מִצְרַיִם אֶעֱשֶׂה שְׁפָטִים אֲנִי אֲדֹנָי׃</span>
+          <span class="line">וְהָיָה הַדָּם לָכֶם לְאֹת עַל הַבָּתִּים אֲשֶׁר אַתֶּם שָׁם וְרָאִיתִי אֶת־הַדָּם וּפָסַחְתִּי עֲלֵכֶם וְלֹא־יִהְיֶה בָכֶם נֶגֶף לְמַשְׁחִית בְּהַכֹּתִי בְּאֶרֶץ מִצְרָיִם׃</span>
+          <span class="line">וְהָיָה הַיּוֹם הַזֶּה לָכֶם לְזִכָּרוֹן וְחַגֹּתֶם אֹתוֹ חַג לַאֲדֹנָי לְדֹרֹתֵיכֶם חֻקַּת עוֹלָם תְּחׇגֻּהוּ׃</span>
+          <span class="line">שִׁבְעַת יָמִים מַצּוֹת תֹּאכֵלוּ אַךְ בַּיּוֹם הָרִאשׁוֹן תַּשְׁבִּיתוּ שְּׂאֹר מִבָּתֵּיכֶם כִּי כׇּל־אֹכֵל חָמֵץ וְנִכְרְתָה הַנֶּפֶשׁ הַהִוא מִיִּשְׂרָאֵל מִיּוֹם הָרִאשֹׁן עַד־יוֹם הַשְּׁבִעִי׃</span>
+          <span class="line">וּבַיּוֹם הָרִאשׁוֹן מִקְרָא־קֹדֶשׁ וּבַיּוֹם הַשְּׁבִיעִי מִקְרָא־קֹדֶשׁ יִהְיֶה לָכֶם כׇּל־מְלָאכָה לֹא־יֵעָשֶׂה בָהֶם אַךְ אֲשֶׁר יֵאָכֵל לְכׇל־נֶפֶשׁ הוּא לְבַדּוֹ יֵעָשֶׂה לָכֶם׃</span>
+          <span class="line">וּשְׁמַרְתֶּם אֶת־הַמַּצּוֹת כִּי בְּעֶצֶם הַיּוֹם הַזֶּה הוֹצֵאתִי אֶת־צִבְאוֹתֵיכֶם מֵאֶרֶץ מִצְרָיִם וּשְׁמַרְתֶּם אֶת־הַיּוֹם הַזֶּה לְדֹרֹתֵיכֶם חֻקַּת עוֹלָם׃</span>
+          <span class="line">בָּרִאשֹׁן בְּאַרְבָּעָה עָשָׂר יוֹם לַחֹדֶשׁ בָּעֶרֶב תֹּאכְלוּ מַצֹּת עַד יוֹם הָאֶחָד וְעֶשְׂרִים לַחֹדֶשׁ בָּעָרֶב׃</span>
+          <span class="line">שִׁבְעַת יָמִים שְׂאֹר לֹא יִמָּצֵא בְּבָתֵּיכֶם כִּי כׇּל־אֹכֵל מַחְמֶצֶת וְנִכְרְתָה הַנֶּפֶשׁ הַהִוא מֵעֲדַת יִשְׂרָאֵל בַּגֵּר וּבְאֶזְרַח הָאָרֶץ׃</span>
+          <span class="line">כׇּל־מַחְמֶצֶת לֹא תֹאכֵלוּ בְּכֹל מוֹשְׁבֹתֵיכֶם תֹּאכְלוּ מַצּוֹת׃</span>
+        </div>
+        <div class="lyrics-de">
+          <span class="line">(11:4) Und Mosche sprach: So spricht Adonai: Um Mitternacht werde ich mitten durch Mitzrayim hinausgehen.</span>
+          <span class="line">(5) Und es wird sterben jeder Erstgeborene im Land Mitzrayim — vom Erstgeborenen Pharaos, der auf seinem Thron sitzt, bis zum Erstgeborenen der Magd, die hinter dem Mühlstein ist, und jeder Erstgeborene des Viehs.</span>
+          <span class="line">(6) Und es wird ein großes Geschrei im ganzen Land Mitzrayim sein, wie es keines gegeben hat und wie es keines wieder geben wird.</span>
+          <span class="line">(7) Aber gegen alle Söhne Israels wird kein Hund seine Zunge schärfen, weder gegen Mensch noch gegen Vieh — damit ihr erkennt, dass Adonai zwischen Mitzrayim und Israel unterscheidet.</span>
+          <span class="line">(8) Und alle diese deine Diener werden zu mir herabkommen und sich vor mir niederwerfen und sagen: Geh hinaus, du und das ganze Volk, das in deinen Fußstapfen ist! Und danach werde ich hinausgehen. Und er ging in Zornglut weg von Pharao.</span>
+          <span class="line">(9) Und Adonai sprach zu Mosche: Pharao wird nicht auf euch hören, damit meine Wunder im Land Mitzrayim sich mehren.</span>
+          <span class="line">(10) Und Mosche und Aharon vollbrachten alle diese Wunder vor Pharao, aber Adonai bestärkte das Herz Pharaos, und er entließ die Söhne Israels nicht aus seinem Land.</span>
+          <span class="line">(12:1) Und Adonai sprach zu Mosche und zu Aharon im Land Mitzrayim und sagte:</span>
+          <span class="line">(2) Dieser Monat sei euch der Haupt-Monat — der erste sei er euch unter den Monaten des Jahres.</span>
+          <span class="line">(3) Sprecht zur ganzen Gemeinde Israels und sagt: Am Zehnten dieses Monats nehme sich jeder Mann ein Lamm nach Vater-Haus, ein Lamm für ein Haus.</span>
+          <span class="line">(4) Und wenn das Haus zu klein ist für ein Lamm, so nehme er es zusammen mit seinem Nachbarn, der seinem Haus am nächsten ist, nach der Zahl der Seelen — nach dem, was jeder essen kann, sollt ihr das Lamm abrechnen.</span>
+          <span class="line">(5) Ein makelloses männliches Lamm, ein Jahr alt, soll euch sein — von den Schafen oder von den Ziegen sollt ihr es nehmen.</span>
+          <span class="line">(6) Und es sei euch zur Aufbewahrung bis zum vierzehnten Tag dieses Monats — und die ganze Versammlung der Gemeinde Israels schlachte es zwischen den Abenden.</span>
+          <span class="line">(7) Und sie nehmen vom Blut und geben es auf die beiden Türpfosten und auf den Sturz an den Häusern, in denen sie es essen.</span>
+          <span class="line">(8) Und sie sollen das Fleisch in dieser Nacht essen — am Feuer gebraten, mit Mazzot, auf Bitterkräutern sollen sie es essen.</span>
+          <span class="line">(9) Esst nichts davon roh oder im Wasser gekocht, sondern nur am Feuer gebraten — seinen Kopf samt seinen Schenkeln und seinem Inneren.</span>
+          <span class="line">(10) Und ihr sollt nichts davon übrig lassen bis zum Morgen — und was davon bis zum Morgen übrig bleibt, sollt ihr im Feuer verbrennen.</span>
+          <span class="line">(11) Und so sollt ihr es essen: eure Lenden gegürtet, eure Schuhe an euren Füßen und euren Stab in eurer Hand. In Eile sollt ihr es essen — Pessach ist es für Adonai.</span>
+          <span class="line">(12) Und ich werde durch das Land Mitzrayim ziehen in dieser Nacht und werde alle Erstgeborenen im Land Mitzrayim schlagen, vom Menschen bis zum Vieh, und an allen Göttern Mitzrayims werde ich Gerichte vollziehen — ich bin Adonai.</span>
+          <span class="line">(13) Und das Blut soll euch zum Zeichen sein an den Häusern, in denen ihr seid — und ich werde das Blut sehen und werde an euch vorüberschreiten (pasachti), und es wird unter euch keine vernichtende Plage sein, wenn ich das Land Mitzrayim schlage.</span>
+          <span class="line">(14) Und dieser Tag sei euch zum Gedächtnis — ihr sollt ihn feiern als Fest für Adonai, durch eure Geschlechter; als ewige Ordnung sollt ihr ihn feiern.</span>
+          <span class="line">(15) Sieben Tage sollt ihr Mazzot essen — schon am ersten Tag sollt ihr Sauerteig aus euren Häusern entfernen, denn jeder, der vom ersten bis zum siebenten Tag Chametz isst, jene Seele wird ausgerottet aus Israel.</span>
+          <span class="line">(16) Und am ersten Tag sei euch eine heilige Versammlung, und am siebenten Tag eine heilige Versammlung — keinerlei Werk-Arbeit darf an ihnen getan werden, nur was jeder Seele zu essen ist, das allein darf für euch zubereitet werden.</span>
+          <span class="line">(17) Und hütet die Mazzot, denn an eben diesem Tag habe ich eure Scharen aus dem Land Mitzrayim hinausgeführt — und ihr sollt diesen Tag durch eure Geschlechter halten als ewige Ordnung.</span>
+          <span class="line">(18) Im ersten Monat, am vierzehnten Tag des Monats, am Abend, sollt ihr Mazzot essen, bis zum einundzwanzigsten Tag des Monats, am Abend.</span>
+          <span class="line">(19) Sieben Tage soll kein Sauerteig in euren Häusern gefunden werden — denn jeder, der Gesäuertes isst, jene Seele wird aus der Gemeinde Israels ausgerottet, sei es Fremdling oder Eingeborener des Landes.</span>
+          <span class="line">(20) Keinerlei Gesäuertes sollt ihr essen — in all euren Wohnstätten sollt ihr Mazzot essen.</span>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- ── ALIYAH 5 · חמישי · Schemot 12:21-28 — Mosche zu den Ältesten, Pessach Mitzrayim, das Volk anbetet ── -->
+    <div class="aliyah-block">
+      <div class="aliyah-label">עֲלִיָּה חֲמִישִׁית — מֹשֶׁה אֶל הַזְּקֵנִים · פֶּסַח מִצְרַיִם · וַיִּקֹּד הָעָם וַיִּשְׁתַּחֲווּ<span class="aliyah-label-de">Fünfte Aliyah · Schemot 12:21–28 · Mosche ruft die Ältesten Israels · Anweisung zum Pessach Mitzrayim mit Ysop-Büschel und Blut an den Pfosten · Die katechetische Übergabe an die Söhne · Das Volk verneigt sich und betet an</span></div>
+      <div class="instrument-note">[no percussion] [no drums] [no choir] [solo acoustic guitar — Hijaz with warm reverent ezov-aguda passage at "u'lkachtem agudat ezov", then a tender lift at "vayikod ha'am vayischtachavu" (the people bow and worship), rubato around 60 BPM, no percussion] Gitarre: Warmes ehrfurchtsvolles Hijaz beim „u'lkachtem agudat ezov" — der Ysop-Büschel als Brücke. Zarte Hebung beim „vayikod ha'am vayischtachavu" — das Volk verneigt sich, der erste gemeinschaftliche Akt der Anbetung Adonais als Volk.</div>
+      <div class="lyrics-block">
+        <div class="lyrics-he" dir="rtl">
+          <span class="line">וַיִּקְרָא מֹשֶׁה לְכׇל־זִקְנֵי יִשְׂרָאֵל וַיֹּאמֶר אֲלֵהֶם מִשְׁכוּ וּקְחוּ לָכֶם צֹאן לְמִשְׁפְּחֹתֵיכֶם וְשַׁחֲטוּ הַפָּסַח׃</span>
+          <span class="line">וּלְקַחְתֶּם אֲגֻדַּת אֵזוֹב וּטְבַלְתֶּם בַּדָּם אֲשֶׁר־בַּסַּף וְהִגַּעְתֶּם אֶל־הַמַּשְׁקוֹף וְאֶל־שְׁתֵּי הַמְּזוּזֹת מִן־הַדָּם אֲשֶׁר בַּסָּף וְאַתֶּם לֹא תֵצְאוּ אִישׁ מִפֶּתַח־בֵּיתוֹ עַד־בֹּקֶר׃</span>
+          <span class="line">וְעָבַר אֲדֹנָי לִנְגֹּף אֶת־מִצְרַיִם וְרָאָה אֶת־הַדָּם עַל־הַמַּשְׁקוֹף וְעַל שְׁתֵּי הַמְּזוּזֹת וּפָסַח אֲדֹנָי עַל־הַפֶּתַח וְלֹא יִתֵּן הַמַּשְׁחִית לָבֹא אֶל־בָּתֵּיכֶם לִנְגֹּף׃</span>
+          <span class="line">וּשְׁמַרְתֶּם אֶת־הַדָּבָר הַזֶּה לְחׇק־לְךָ וּלְבָנֶיךָ עַד־עוֹלָם׃</span>
+          <span class="line">וְהָיָה כִּי־תָבֹאוּ אֶל־הָאָרֶץ אֲשֶׁר יִתֵּן אֲדֹנָי לָכֶם כַּאֲשֶׁר דִּבֵּר וּשְׁמַרְתֶּם אֶת־הָעֲבֹדָה הַזֹּאת׃</span>
+          <span class="line">וְהָיָה כִּי־יֹאמְרוּ אֲלֵיכֶם בְּנֵיכֶם מָה הָעֲבֹדָה הַזֹּאת לָכֶם׃</span>
+          <span class="line">וַאֲמַרְתֶּם זֶבַח־פֶּסַח הוּא לַאֲדֹנָי אֲשֶׁר פָּסַח עַל־בָּתֵּי בְנֵי־יִשְׂרָאֵל בְּמִצְרַיִם בְּנׇגְפּוֹ אֶת־מִצְרַיִם וְאֶת־בָּתֵּינוּ הִצִּיל וַיִּקֹּד הָעָם וַיִּשְׁתַּחֲווּ׃</span>
+          <span class="line">וַיֵּלְכוּ וַיַּעֲשׂוּ בְּנֵי יִשְׂרָאֵל כַּאֲשֶׁר צִוָּה אֲדֹנָי אֶת־מֹשֶׁה וְאַהֲרֹן כֵּן עָשׂוּ׃</span>
+        </div>
+        <div class="lyrics-de">
+          <span class="line">(12:21) Und Mosche rief alle Ältesten Israels und sprach zu ihnen: Macht euch heran und nehmt euch Kleinvieh für eure Sippen und schlachtet das Pessach.</span>
+          <span class="line">(22) Und nehmt einen Büschel Ysop und taucht ihn in das Blut, das in der Schale ist, und streicht den Sturz und die beiden Türpfosten mit dem Blut, das in der Schale ist — und keiner von euch gehe aus der Tür seines Hauses bis zum Morgen.</span>
+          <span class="line">(23) Und Adonai wird hindurchziehen, um Mitzrayim zu schlagen, und wird das Blut am Sturz und an den beiden Türpfosten sehen, und Adonai wird über der Tür vorüberschreiten und wird dem Vernichter nicht zulassen, in eure Häuser zu kommen, um zu schlagen.</span>
+          <span class="line">(24) Und ihr sollt diese Sache hüten als Ordnung für dich und deine Söhne in Ewigkeit.</span>
+          <span class="line">(25) Und es wird sein, wenn ihr in das Land kommt, das Adonai euch geben wird, wie er gesprochen hat — so sollt ihr diesen Dienst halten.</span>
+          <span class="line">(26) Und es wird sein, wenn eure Söhne zu euch sagen: Was bedeutet euch dieser Dienst?</span>
+          <span class="line">(27) So sollt ihr sprechen: Ein Pessach-Schlachtopfer ist es für Adonai, der über den Häusern der Söhne Israels in Mitzrayim vorüberschritt, als er die Mitzrim schlug und unsere Häuser rettete. Und das Volk verneigte sich und warf sich nieder.</span>
+          <span class="line">(28) Und die Söhne Israels gingen und taten — wie Adonai dem Mosche und Aharon geboten hatte, so taten sie.</span>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- ── ALIYAH 6 · שישי · Schemot 12:29-51 — Makkat Bechorot, der Auszug, Chukat HaPesach ── -->
+    <div class="aliyah-block">
+      <div class="aliyah-label">עֲלִיָּה שִׁשִּׁית — מַכַּת בְּכוֹרוֹת · יְצִיאַת מִצְרַיִם · חֻקַּת הַפֶּסַח<span class="aliyah-label-de">Sechste Aliyah · Schemot 12:29–51 · Die Mitternachts-Plage der Erstgeborenen · Pharao ruft Mosche und Aharon in der Nacht · Der überstürzte Auszug, das ungesäuerte Brot · Vierhundertdreißig Jahre · Die Nacht der Wachen (Leil Schimurim) · Chukat HaPesach für Eingeborenen, Fremdling und Gerim</span></div>
+      <div class="instrument-note">[no percussion] [no drums] [no choir] [solo acoustic guitar — Hijaz climactic fff at "vayhi bachatzi halayla" (Makkat Bechorot peak, augmented second as a wail), then sudden hush at "vatehi tze'akah gedolah" (great cry of Mitzrayim, sotto voce lachash), then a triumphant chiastic Hijaz rise at "leil schimurim hu l'Adonai" (the guarded night), rubato around 60 BPM, no percussion] Gitarre: Hijaz-Klimax im fff beim „vayhi bachatzi halayla" — die übermäßige Sekunde wie ein Klagelaut; plötzlicher Hush beim „vatehi tze'akah gedolah" (Lachash-Untertöne); dann triumphaler Hijaz-Aufstieg beim „leil schimurim hu l'Adonai" — die Nacht der Wachen.</div>
+      <div class="lyrics-block">
+        <div class="lyrics-he" dir="rtl">
+          <span class="line">וַיְהִי בַּחֲצִי הַלַּיְלָה וַאֲדֹנָי הִכָּה כׇל־בְּכוֹר בְּאֶרֶץ מִצְרַיִם מִבְּכֹר פַּרְעֹה הַיֹּשֵׁב עַל־כִּסְאוֹ עַד בְּכוֹר הַשְּׁבִי אֲשֶׁר בְּבֵית הַבּוֹר וְכֹל בְּכוֹר בְּהֵמָה׃</span>
+          <span class="line">וַיָּקׇם פַּרְעֹה לַיְלָה הוּא וְכׇל־עֲבָדָיו וְכׇל־מִצְרַיִם וַתְּהִי צְעָקָה גְדֹלָה בְּמִצְרָיִם כִּי־אֵין בַּיִת אֲשֶׁר אֵין־שָׁם מֵת׃</span>
+          <span class="line">וַיִּקְרָא לְמֹשֶׁה וּלְאַהֲרֹן לַיְלָה וַיֹּאמֶר קוּמוּ צְּאוּ מִתּוֹךְ עַמִּי גַּם־אַתֶּם גַּם־בְּנֵי יִשְׂרָאֵל וּלְכוּ עִבְדוּ אֶת־אֲדֹנָי כְּדַבֶּרְכֶם׃</span>
+          <span class="line">גַּם־צֹאנְכֶם גַּם־בְּקַרְכֶם קְחוּ כַּאֲשֶׁר דִּבַּרְתֶּם וָלֵכוּ וּבֵרַכְתֶּם גַּם־אֹתִי׃</span>
+          <span class="line">וַתֶּחֱזַק מִצְרַיִם עַל־הָעָם לְמַהֵר לְשַׁלְּחָם מִן־הָאָרֶץ כִּי אָמְרוּ כֻּלָּנוּ מֵתִים׃</span>
+          <span class="line">וַיִּשָּׂא הָעָם אֶת־בְּצֵקוֹ טֶרֶם יֶחְמָץ מִשְׁאֲרֹתָם צְרֻרֹת בְּשִׂמְלֹתָם עַל־שִׁכְמָם׃</span>
+          <span class="line">וּבְנֵי־יִשְׂרָאֵל עָשׂוּ כִּדְבַר מֹשֶׁה וַיִּשְׁאֲלוּ מִמִּצְרַיִם כְּלֵי־כֶסֶף וּכְלֵי זָהָב וּשְׂמָלֹת׃</span>
+          <span class="line">וַאֲדֹנָי נָתַן אֶת־חֵן הָעָם בְּעֵינֵי מִצְרַיִם וַיַּשְׁאִלוּם וַיְנַצְּלוּ אֶת־מִצְרָיִם׃</span>
+          <span class="line">וַיִּסְעוּ בְנֵי־יִשְׂרָאֵל מֵרַעְמְסֵס סֻכֹּתָה כְּשֵׁשׁ־מֵאוֹת אֶלֶף רַגְלִי הַגְּבָרִים לְבַד מִטָּף׃</span>
+          <span class="line">וְגַם־עֵרֶב רַב עָלָה אִתָּם וְצֹאן וּבָקָר מִקְנֶה כָּבֵד מְאֹד׃</span>
+          <span class="line">וַיֹּאפוּ אֶת־הַבָּצֵק אֲשֶׁר הוֹצִיאוּ מִמִּצְרַיִם עֻגֹת מַצּוֹת כִּי לֹא חָמֵץ כִּי־גֹרְשׁוּ מִמִּצְרַיִם וְלֹא יָכְלוּ לְהִתְמַהְמֵהַּ וְגַם־צֵדָה לֹא־עָשׂוּ לָהֶם׃</span>
+          <span class="line">וּמוֹשַׁב בְּנֵי יִשְׂרָאֵל אֲשֶׁר יָשְׁבוּ בְּמִצְרָיִם שְׁלֹשִׁים שָׁנָה וְאַרְבַּע מֵאוֹת שָׁנָה׃</span>
+          <span class="line">וַיְהִי מִקֵּץ שְׁלֹשִׁים שָׁנָה וְאַרְבַּע מֵאוֹת שָׁנָה וַיְהִי בְּעֶצֶם הַיּוֹם הַזֶּה יָצְאוּ כׇּל־צִבְאוֹת אֲדֹנָי מֵאֶרֶץ מִצְרָיִם׃</span>
+          <span class="line">לֵיל שִׁמֻּרִים הוּא לַאֲדֹנָי לְהוֹצִיאָם מֵאֶרֶץ מִצְרָיִם הוּא־הַלַּיְלָה הַזֶּה לַאֲדֹנָי שִׁמֻּרִים לְכׇל־בְּנֵי יִשְׂרָאֵל לְדֹרֹתָם׃</span>
+          <span class="line">וַיֹּאמֶר אֲדֹנָי אֶל־מֹשֶׁה וְאַהֲרֹן זֹאת חֻקַּת הַפָּסַח כׇּל־בֶּן־נֵכָר לֹא־יֹאכַל בּוֹ׃</span>
+          <span class="line">וְכׇל־עֶבֶד אִישׁ מִקְנַת־כָּסֶף וּמַלְתָּה אֹתוֹ אָז יֹאכַל בּוֹ׃</span>
+          <span class="line">תּוֹשָׁב וְשָׂכִיר לֹא־יֹאכַל בּוֹ׃</span>
+          <span class="line">בְּבַיִת אֶחָד יֵאָכֵל לֹא־תוֹצִיא מִן־הַבַּיִת מִן־הַבָּשָׂר חוּצָה וְעֶצֶם לֹא תִשְׁבְּרוּ־בוֹ׃</span>
+          <span class="line">כׇּל־עֲדַת יִשְׂרָאֵל יַעֲשׂוּ אֹתוֹ׃</span>
+          <span class="line">וְכִי־יָגוּר אִתְּךָ גֵּר וְעָשָׂה פֶסַח לַאֲדֹנָי הִמּוֹל לוֹ כׇל־זָכָר וְאָז יִקְרַב לַעֲשֹׂתוֹ וְהָיָה כְּאֶזְרַח הָאָרֶץ וְכׇל־עָרֵל לֹא־יֹאכַל בּוֹ׃</span>
+          <span class="line">תּוֹרָה אַחַת יִהְיֶה לָאֶזְרָח וְלַגֵּר הַגָּר בְּתוֹכְכֶם׃</span>
+          <span class="line">וַיַּעֲשׂוּ כׇּל־בְּנֵי יִשְׂרָאֵל כַּאֲשֶׁר צִוָּה אֲדֹנָי אֶת־מֹשֶׁה וְאֶת־אַהֲרֹן כֵּן עָשׂוּ׃</span>
+          <span class="line">וַיְהִי בְּעֶצֶם הַיּוֹם הַזֶּה הוֹצִיא אֲדֹנָי אֶת־בְּנֵי יִשְׂרָאֵל מֵאֶרֶץ מִצְרַיִם עַל־צִבְאֹתָם׃</span>
+        </div>
+        <div class="lyrics-de">
+          <span class="line">(12:29) Und es geschah um Mitternacht, da schlug Adonai jeden Erstgeborenen im Land Mitzrayim, vom Erstgeborenen Pharaos, der auf seinem Thron saß, bis zum Erstgeborenen des Gefangenen, der im Kerker-Haus war, und jeden Erstgeborenen des Viehs.</span>
+          <span class="line">(30) Und Pharao stand in dieser Nacht auf, er und alle seine Diener und ganz Mitzrayim, und es ward ein großes Geschrei in Mitzrayim — denn es war kein Haus, in dem nicht ein Toter war.</span>
+          <span class="line">(31) Und er rief Mosche und Aharon in der Nacht und sprach: Steht auf, geht hinaus aus der Mitte meines Volkes, sowohl ihr als auch die Söhne Israels — und geht, dient Adonai, wie ihr gesagt habt.</span>
+          <span class="line">(32) Auch eure Schafe und auch eure Rinder nehmt, wie ihr gesagt habt — und geht; und segnet auch mich.</span>
+          <span class="line">(33) Und Mitzrayim drängte das Volk, sie eilig aus dem Land zu entlassen — denn sie sagten: Wir sind alle tot.</span>
+          <span class="line">(34) Und das Volk trug seinen Teig, bevor er gesäuert war — ihre Backtröge in ihre Mäntel gebunden auf ihren Schultern.</span>
+          <span class="line">(35) Und die Söhne Israels taten nach dem Wort Mosches, und sie erbaten von Mitzrayim Geräte aus Silber und Geräte aus Gold und Mäntel.</span>
+          <span class="line">(36) Und Adonai gab dem Volk Gunst in den Augen Mitzrayims, und sie liehen ihnen — und sie machten Mitzrayim leer.</span>
+          <span class="line">(37) Und die Söhne Israels brachen auf von Ra'amses nach Sukkot, etwa sechshundert tausend zu Fuß, die Männer, ohne die Kinder.</span>
+          <span class="line">(38) Und auch viel gemischtes Volk zog mit ihnen hinauf, dazu Schafe und Rinder, sehr viel Vieh.</span>
+          <span class="line">(39) Und sie buken den Teig, den sie aus Mitzrayim mitgebracht hatten, zu ungesäuerten Kuchen — denn er war nicht gesäuert, weil sie aus Mitzrayim vertrieben worden waren und sich nicht aufhalten konnten; auch hatten sie sich keine Wegzehrung bereitet.</span>
+          <span class="line">(40) Und die Aufenthalts-Zeit der Söhne Israels, die sie in Mitzrayim wohnten, war dreißig Jahre und vierhundert Jahre.</span>
+          <span class="line">(41) Und es geschah am Ende der dreißig Jahre und der vierhundert Jahre, an eben diesem Tag, da zogen alle Scharen Adonais aus dem Land Mitzrayim aus.</span>
+          <span class="line">(42) Eine Nacht der Wachen ist sie für Adonai, um sie aus dem Land Mitzrayim hinauszuführen — diese Nacht ist Adonai gehalten als Wachen-Nacht für alle Söhne Israels durch ihre Geschlechter.</span>
+          <span class="line">(43) Und Adonai sprach zu Mosche und Aharon: Dies ist die Ordnung des Pessach — kein Sohn der Fremde darf davon essen.</span>
+          <span class="line">(44) Und jeder Sklave, ein Mann, eine Kaufes-Wert — wenn du ihn beschnitten hast, dann darf er davon essen.</span>
+          <span class="line">(45) Ein Beisasse und ein Mietling dürfen nicht davon essen.</span>
+          <span class="line">(46) In einem Haus soll es gegessen werden — du darfst kein Fleisch aus dem Haus hinausbringen, und kein Knochen darfst du an ihm brechen.</span>
+          <span class="line">(47) Die ganze Gemeinde Israels soll es vollziehen.</span>
+          <span class="line">(48) Und wenn ein Fremdling sich bei dir aufhält und Pessach für Adonai bereitet, so beschneide alles Männliche bei ihm — und dann darf er sich nähern, um es zu vollziehen, und er wird sein wie der Eingeborene des Landes. Aber kein Unbeschnittener darf davon essen.</span>
+          <span class="line">(49) Eine Torah sei für den Eingeborenen und für den Fremdling, der unter euch weilt.</span>
+          <span class="line">(50) Und alle Söhne Israels taten — wie Adonai dem Mosche und Aharon geboten hatte, so taten sie.</span>
+          <span class="line">(51) Und es geschah an eben diesem Tag: Adonai führte die Söhne Israels aus dem Land Mitzrayim hinaus, nach ihren Scharen.</span>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- ── ALIYAH 7 · שביעי · Schemot 13:1-16 — Kiddusch Bechor, Chag HaMazot, Tefillin, Pidyon HaBen ── -->
+    <div class="aliyah-block">
+      <div class="aliyah-label">עֲלִיָּה שְׁבִיעִית — קַדֶּשׁ־לִי כׇל־בְּכוֹר · תְּפִלִּין · פִּדְיוֹן הַבֵּן<span class="aliyah-label-de">Siebte Aliyah · Schemot 13:1–16 · Heilige mir jeden Erstgeborenen · Das Mazza-Fest in der Erinnerung · Die Tefillin-Mitzwah „und es sei dir zum Zeichen auf deiner Hand und zum Erinnerungs-Mal zwischen deinen Augen" · Pidyon HaBen — die Auslösung des Erstgeborenen · Der katechetische Dialog mit den Söhnen</span></div>
+      <div class="instrument-note">[no percussion] [no drums] [no choir] [solo acoustic guitar — Hijaz with serene parental warmth at "kadesch li chol bechor", then a meditative deep Hijaz on "vehaya lecha le'ot al yadcha" (Tefillin verse, augmented second sustained like a binding-knot), gentle Pessach-Hijaz cadence on "ki b'chozek yad hotzi'anu Adonai mi'Mitzrayim", rubato around 60 BPM, no percussion] Gitarre: Ruhige väterliche Wärme im Hijaz beim „kadesch li chol bechor" — die Heiligung des Erstgeborenen. Meditatives tiefes Hijaz beim Tefillin-Vers „vehaya lecha le'ot al yadcha" — die übermäßige Sekunde gehalten wie ein Bindungs-Knoten. Sanfter Pessach-Hijaz-Schluss beim „ki b'chozek yad hotzi'anu Adonai mi'Mitzrayim".</div>
+      <div class="lyrics-block">
+        <div class="lyrics-he" dir="rtl">
+          <span class="line">וַיְדַבֵּר אֲדֹנָי אֶל־מֹשֶׁה לֵּאמֹר׃</span>
+          <span class="line">קַדֶּשׁ־לִי כׇל־בְּכוֹר פֶּטֶר כׇּל־רֶחֶם בִּבְנֵי יִשְׂרָאֵל בָּאָדָם וּבַבְּהֵמָה לִי הוּא׃</span>
+          <span class="line">וַיֹּאמֶר מֹשֶׁה אֶל־הָעָם זָכוֹר אֶת־הַיּוֹם הַזֶּה אֲשֶׁר יְצָאתֶם מִמִּצְרַיִם מִבֵּית עֲבָדִים כִּי בְּחֹזֶק יָד הוֹצִיא אֲדֹנָי אֶתְכֶם מִזֶּה וְלֹא יֵאָכֵל חָמֵץ׃</span>
+          <span class="line">הַיּוֹם אַתֶּם יֹצְאִים בְּחֹדֶשׁ הָאָבִיב׃</span>
+          <span class="line">וְהָיָה כִי־יְבִיאֲךָ אֲדֹנָי אֶל־אֶרֶץ הַכְּנַעֲנִי וְהַחִתִּי וְהָאֱמֹרִי וְהַחִוִּי וְהַיְבוּסִי אֲשֶׁר נִשְׁבַּע לַאֲבֹתֶיךָ לָתֶת לָךְ אֶרֶץ זָבַת חָלָב וּדְבָשׁ וְעָבַדְתָּ אֶת־הָעֲבֹדָה הַזֹּאת בַּחֹדֶשׁ הַזֶּה׃</span>
+          <span class="line">שִׁבְעַת יָמִים תֹּאכַל מַצֹּת וּבַיּוֹם הַשְּׁבִיעִי חַג לַאֲדֹנָי׃</span>
+          <span class="line">מַצּוֹת יֵאָכֵל אֵת שִׁבְעַת הַיָּמִים וְלֹא־יֵרָאֶה לְךָ חָמֵץ וְלֹא־יֵרָאֶה לְךָ שְׂאֹר בְּכׇל־גְּבֻלֶךָ׃</span>
+          <span class="line">וְהִגַּדְתָּ לְבִנְךָ בַּיּוֹם הַהוּא לֵאמֹר בַּעֲבוּר זֶה עָשָׂה אֲדֹנָי לִי בְּצֵאתִי מִמִּצְרָיִם׃</span>
+          <span class="line">וְהָיָה לְךָ לְאוֹת עַל־יָדְךָ וּלְזִכָּרוֹן בֵּין עֵינֶיךָ לְמַעַן תִּהְיֶה תּוֹרַת אֲדֹנָי בְּפִיךָ כִּי בְּיָד חֲזָקָה הוֹצִאֲךָ אֲדֹנָי מִמִּצְרָיִם׃</span>
+          <span class="line">וְשָׁמַרְתָּ אֶת־הַחֻקָּה הַזֹּאת לְמוֹעֲדָהּ מִיָּמִים יָמִימָה׃</span>
+          <span class="line">וְהָיָה כִּי־יְבִאֲךָ אֲדֹנָי אֶל־אֶרֶץ הַכְּנַעֲנִי כַּאֲשֶׁר נִשְׁבַּע לְךָ וְלַאֲבֹתֶיךָ וּנְתָנָהּ לָךְ׃</span>
+          <span class="line">וְהַעֲבַרְתָּ כׇל־פֶּטֶר־רֶחֶם לַאֲדֹנָי וְכׇל־פֶּטֶר שֶׁגֶר בְּהֵמָה אֲשֶׁר יִהְיֶה לְךָ הַזְּכָרִים לַאֲדֹנָי׃</span>
+          <span class="line">וְכׇל־פֶּטֶר חֲמֹר תִּפְדֶּה בְשֶׂה וְאִם־לֹא תִפְדֶּה וַעֲרַפְתּוֹ וְכֹל בְּכוֹר אָדָם בְּבָנֶיךָ תִּפְדֶּה׃</span>
+          <span class="line">וְהָיָה כִּי־יִשְׁאָלְךָ בִנְךָ מָחָר לֵאמֹר מַה־זֹּאת וְאָמַרְתָּ אֵלָיו בְּחֹזֶק יָד הוֹצִיאָנוּ אֲדֹנָי מִמִּצְרַיִם מִבֵּית עֲבָדִים׃</span>
+          <span class="line">וַיְהִי כִּי־הִקְשָׁה פַרְעֹה לְשַׁלְּחֵנוּ וַיַּהֲרֹג אֲדֹנָי כׇּל־בְּכוֹר בְּאֶרֶץ מִצְרַיִם מִבְּכֹר אָדָם וְעַד־בְּכוֹר בְּהֵמָה עַל־כֵּן אֲנִי זֹבֵחַ לַאֲדֹנָי כׇּל־פֶּטֶר רֶחֶם הַזְּכָרִים וְכׇל־בְּכוֹר בָּנַי אֶפְדֶּה׃</span>
+          <span class="line">וְהָיָה לְאוֹת עַל־יָדְכָה וּלְטוֹטָפֹת בֵּין עֵינֶיךָ כִּי בְּחֹזֶק יָד הוֹצִיאָנוּ אֲדֹנָי מִמִּצְרָיִם׃ {ס}</span>
+        </div>
+        <div class="lyrics-de">
+          <span class="line">(13:1) Und Adonai redete zu Mosche und sprach:</span>
+          <span class="line">(2) Heilige mir jeden Erstgeborenen — was jeden Mutterschoß bricht unter den Söhnen Israels, beim Menschen und beim Vieh; mir gehört es.</span>
+          <span class="line">(3) Und Mosche sprach zum Volk: Gedenke dieses Tages, an dem ihr aus Mitzrayim ausgezogen seid, aus dem Sklavenhaus — denn mit starker Hand hat Adonai euch von dort herausgeführt. Und es soll nichts Gesäuertes gegessen werden.</span>
+          <span class="line">(4) Heute zieht ihr aus, im Monat Aviv.</span>
+          <span class="line">(5) Und es wird sein, wenn Adonai dich in das Land der Kanaaniter und Chittiter und Emoriter und Chiviter und Yevusiter bringt, das er deinen Vätern zugeschworen hat, dir zu geben — ein Land, das von Milch und Honig fließt — so sollst du diesen Dienst in diesem Monat halten.</span>
+          <span class="line">(6) Sieben Tage sollst du Mazzot essen, und am siebenten Tag ein Fest für Adonai.</span>
+          <span class="line">(7) Mazzot sollen die sieben Tage lang gegessen werden — kein Gesäuertes darf bei dir gesehen werden und kein Sauerteig darf bei dir in deinem ganzen Gebiet gesehen werden.</span>
+          <span class="line">(8) Und du sollst es deinem Sohn an jenem Tag erzählen und sagen: Wegen dessen, was Adonai für mich getan hat, als ich aus Mitzrayim auszog.</span>
+          <span class="line">(9) Und es sei dir zum Zeichen auf deiner Hand und zum Erinnerungs-Mal zwischen deinen Augen, damit die Torah Adonais in deinem Munde sei — denn mit starker Hand hat Adonai dich aus Mitzrayim herausgeführt.</span>
+          <span class="line">(10) Und du sollst diese Ordnung halten zu ihrer Zeit, von Jahr zu Jahr.</span>
+          <span class="line">(11) Und es wird sein, wenn Adonai dich in das Land des Kanaaniters bringt, wie er dir und deinen Vätern geschworen hat, und es dir gibt —</span>
+          <span class="line">(12) so sollst du alles, was den Mutterschoß bricht, Adonai übergeben, und alles Erstgeworfene des Viehs, das du haben wirst — die männlichen Tiere gehören Adonai.</span>
+          <span class="line">(13) Aber jeden Erstgeborenen vom Esel sollst du mit einem Lamm auslösen, und wenn du ihn nicht auslöst, sollst du ihm das Genick brechen. Und jeden Erstgeborenen des Menschen unter deinen Söhnen sollst du auslösen.</span>
+          <span class="line">(14) Und es wird sein, wenn dein Sohn dich morgen fragt und sagt: Was ist das? — so sollst du ihm sagen: Mit starker Hand hat Adonai uns aus Mitzrayim herausgeführt, aus dem Sklavenhaus.</span>
+          <span class="line">(15) Und es geschah, als Pharao sich verhärtete, uns zu entlassen, da tötete Adonai jeden Erstgeborenen im Land Mitzrayim, vom Erstgeborenen des Menschen bis zum Erstgeborenen des Viehs. Darum opfere ich Adonai alles, was den Mutterschoß bricht, die männlichen — und jeden Erstgeborenen meiner Söhne löse ich aus.</span>
+          <span class="line">(16) Und es sei zum Zeichen auf deiner Hand und zu Stirnbändern zwischen deinen Augen — denn mit starker Hand hat Adonai uns aus Mitzrayim herausgeführt. {S}</span>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- ══ TIKKUN-BOX — DAS HERZ DER PARASHAH ══ -->
+    <div class="tikkun-box">
+      <div class="tikkun-header">
+        <div class="tikkun-title-he">מַעֲשֵׂה הַתִּיקּוּן — קִדּוּשׁ הַחֹדֶשׁ · לֵיל הַסֵּדֶר הַסְּפָרַדִּי · אַרְבָּעָה כּוֹסוֹת בְּכַוָּנוֹת הָרשש · תְּפִילִּין בְּכַוָּנָה יוֹמִית · פִּדְיוֹן הַבֵּן · זְכִירַת יְצִיאַת מִצְרַיִם פַּעֲמַיִם בְּיוֹם</div>
+        <div class="tikkun-title-de">Tikkun – Die Heiligung der Zeit als erste Mitzwah, der sephardische Pessach-Seder mit den vier Bechern und der Rashash-Kawanot, das tägliche Tefillin-Anlegen mit Pessach-Erinnerung, Pidyon HaBen nach sephardischer Praxis, und die zweifache tägliche Erinnerung an den Auszug aus Mitzrayim</div>
+        <div class="tikkun-src">שְׁמוֹת י״ב:ב׳ („הַחֹדֶשׁ הַזֶּה לָכֶם רֹאשׁ חֳדָשִׁים") · שְׁמוֹת י״ב:י״ד („וְהָיָה הַיּוֹם הַזֶּה לָכֶם לְזִכָּרוֹן") · שְׁמוֹת י״ב:מ״ב („לֵיל שִׁמֻּרִים הוּא לַאֲדֹנָי") · שְׁמוֹת י״ג:ב׳ („קַדֶּשׁ־לִי כׇל־בְּכוֹר") · שְׁמוֹת י״ג:ח׳ („וְהִגַּדְתָּ לְבִנְךָ") · שְׁמוֹת י״ג:ט׳ („וְהָיָה לְךָ לְאוֹת עַל־יָדְךָ") · רמב״ם הלכות קִדּוּשׁ הַחֹדֶשׁ א׳:א׳ · רמב״ם הלכות קָרְבַּן פֶּסַח · רמב״ם הלכות חָמֵץ וּמַצָּה (סֵדֶר־לֵיל פֶּסַח · אַרְבָּעָה כּוֹסוֹת · אֲכִילַת מַצָּה וּמָרוֹר) · רמב״ם הלכות תְּפִלִּין וּמְזוּזָה וְסֵפֶר תּוֹרָה · רמב״ם הלכות בִּכּוּרִים וּשְׁאָר מַתְּנוֹת כְּהֻנָּה י״א (פִּדְיוֹן הַבֵּן) · רמב״ם סֵפֶר הַמִּצְוֹת מִצְוָה קנ״ז · תַּלְמוּד בָּבְלִי פְּסָחִים · רֹאשׁ הַשָּׁנָה כ״ה.‎ · מְכִילְתָּא דְּרַבִּי יִשְׁמָעֵאל בֹּא · רש״ש נְהַר שָׁלוֹם דְּרוּשׁ פֶּסַח מִצְרַיִם · רמח״ל דֶּרֶךְ הַשֵּׁם חֵלֶק ד׳ פֶּרֶק ז׳ (מִצְוֹת הַפֶּסַח) · רמח״ל מְסִלַּת יְשָׁרִים פֶּרֶק י״ט (קְדֻשָּׁה) · אור החיים על שְׁמוֹת י״ב:ב׳ · ספר העיקרים מאמר רִאשׁוֹן · בן איש חי שנה ראשונה פרשת בֹּא · שד״ל בְּפֵרוּשׁוֹ עַל שְׁמוֹת י״ב:ב׳ (הַחֹדֶשׁ הָרִאשׁוֹן כְּזֵכֶר לַגְּאֻלָּה) · י״ב:ו׳ (בֵּין הָעַרְבַּיִם) · י״ב:כ״א (מִשְׁכוּ — לְכוּ) · י״ג:ט׳ (תְּפִלִּין בִּפְשָׁט נֶגֶד הַקָּרָאִים) · י״ג:ט״ז (טוֹטָפֹת) · יָבִיעַ אוֹמֶר חֵלֶק ג׳ אוֹרַח חַיִּים מ״ז (תְּפִלִּין סְפָרַדִּי) · חֲזוֹן עוֹבַדְיָה פֶּסַח · כַּף הַחַיִּים אוֹרַח חַיִּים תכ״ט-תצ״ד · שׁוּלְחָן עָרוּךְ אוֹרַח חַיִּים תכ״ט-תצ״ד · נֻסַּח אֲרָם צוֹבָה · מָרוֹקוֹ · יָמֶן · יְרוּשָׁלַיִם · נוּסַּח צָדוֹק (רשש)</div>
+      </div>
+      <div class="tikkun-body">
+        <strong>מַלְכוּת שֶׁל לֵיל הַשִּׁמֻּרִים — Königlicher Rang der Pessach-Nacht.</strong> Bo ist die Geburts-Parashah Israels als Volk. Bis hierher waren die Söhne Yaakovs eine Familie unter Familien; nach Bo sind sie ein <em>Volk</em>, eine <em>Edah</em>, eine königliche Bundes-Gemeinschaft, die Adonai als König anerkennt. <strong>Rashash</strong> in <em>Nahar Schalom</em> (Drush Pesach Mitzrayim) lehrt: die Pessach-Nacht ist die ur-Manifestation der Sefirah Malchut — und Malchut wird etabliert, indem das Volk selbst, durch das Schlachten des Pessach-Korbans und das Streichen des Blutes an den Pfosten, Adonai als seinen einzigen König anerkennt. Die zwei Pfosten und der Sturz formen ein hebräisches <em>Heh</em> (ה) — der Buchstabe der Schechinah — am Eingang jedes israelitischen Hauses; das Haus wird Mikdasch-im-Kleinen, der Tisch des Pessach wird Mizbeach-im-Kleinen, die Familie wird Kohanim-im-Kleinen. <strong>Ramchal</strong> in <em>Derech HaSchem</em> Teil 4, Perek 7 (<em>Mitzwot HaPesach</em>) erklärt philosophisch: die Pessach-Nacht öffnet alljährlich das ursprüngliche Geulah-Zeitfenster wieder — wer am Seder-Tisch sitzt und die Hagadah erzählt, steht <em>tatsächlich</em> wieder in der Mitternachts-Stunde des Auszugs; die Zeit ist keine homogene Strecke, sondern sie hat heilige Augenblicke, die wiederkehren. Der Hagadah-Pasuk <em>„be-chol dor wa-dor chayav adam lirot et atzmo ke'ilu hu yatza me-Mitzrayim"</em> (Pesachim 116b · Rambam Hilchot Chametz uMatzah 7:6) ist kein pädagogischer Trick, sondern eine metaphysische Beobachtung: die Pessach-Nacht hebt die gewöhnliche Zeit auf.
+        <br><br>
+        <strong>Das Herz der Parashah ist Schemot 12:2:</strong> <em>„הַחֹדֶשׁ הַזֶּה לָכֶם רֹאשׁ חֳדָשִׁים רִאשׁוֹן הוּא לָכֶם לְחׇדְשֵׁי הַשָּׁנָה"</em>. Dies ist die <em>erste Mitzwah</em>, die Israel als Volk empfängt — vor Pessach, vor Tefillin, vor Pidyon HaBen, vor allem anderen kommt die Heiligung der Zeit. <strong>Or HaChaim</strong> auf 12:2 verbindet das <em>HaChodesch HaZeh</em> mit der ursprünglichen Schöpfungs-Erneuerung: <em>Bereschit bara</em> war Adonais erste Zeit-Setzung; <em>HaChodesch HaZeh</em> ist die erste Zeit-Setzung Adonais zusammen mit Israel — Israel wird Partner Adonais in der Zeit-Heiligung, und in dieser Partnerschaft entsteht das Volk. <strong>Shadal</strong> in seinem <em>Pirusch zu Schemot 12:2</em> präzisiert philologisch-traditionell: der Befehl <em>„rosch chodaschim... rischon hu lachem"</em> bedeutet nicht, dass Tischri als Jahresanfang abgeschafft wird (denn <em>„be-tzet ha-schanah"</em> in Schemot 23:16 und das Yovel ab dem zehnten des siebenten Monats zeigen, dass Tischri weiter das Schöpfungs-Jahres-Anfang bleibt); vielmehr bekommt Nissan eine zweite, parallele Zeit-Ordnung — den <em>Geulah-Kalender</em>. Das ganze jüdische Jahr trägt also eine Doppel-Struktur: Tischri für Schöpfung und Yamim Noraim, Nissan für Geulah und Pessach. <strong>Rambam</strong> kodifiziert diese Mitzwah in <em>Hilchot Kiddusch HaChodesch</em> 1:1 und im <em>Sefer HaMitzwot Mitzwah 153</em> (Beit Din-Autorität bei der Mond-Festsetzung) — die Beit-Din-Bestätigung des Neumonds in Yerushalayim trägt die Mitzwah aus 12:2; nach dem Ende des Sanhedrin übernimmt der vorausberechnete Kalender Hillels II. die normative Autorität (Hilchot Kiddusch HaChodesch 5:1–3). <strong>Sefer HaIkkarim</strong> (Yosef Albo, Maamar Rischon) zählt die Mond-Heiligung unter die Glaubens-Wurzeln: ohne kollektive Festsetzung der heiligen Zeit gibt es keine kollektive Tora-Praxis.
+        <br><br>
+        <strong>Die Pessach-Korban-Architektur</strong> (12:3–13, 12:21–28, 12:43–49) baut die Bundes-Form. Das Lamm wird am Zehnten genommen — vier Tage Aufbewahrung als ostentative Zurschaustellung; das Blut wird an Sturz und Pfosten gestrichen — sichtbar von außen, ein öffentliches Bekenntnis vor den Mitzrim. <strong>Rashash</strong> verbindet die <em>vier Becher</em> des Seder mit den vier Aspekten der Erlösung in Schemot 6:6–7 (<em>vehotzeti · vehitzalti · vega'alti · velakachti</em>) und mit den vier Sefirot der Geulah (Chesed · Gevurah · Tiferet · Malchut) — die ganze Seder-Architektur ist eine schrittweise Kawanot-Reise durch die Sefirot, mit der Malchut-Vollendung beim vierten Becher. <strong>Or HaChaim</strong> auf 12:11 lehrt, dass die <em>„chipazon"</em> (Eile) des Auszugs nicht Schwäche war, sondern die Form der Erlösung selbst — Mitzrayim musste verlassen werden, bevor die Verbindung mit der ägyptischen Tum'ah Israel ganz unrettbar machte; das <em>be-chipazon</em> ist die kosmische Notwendigkeit der schnellen Trennung. <strong>Shadal</strong> auf 12:6 (<em>bein ha-arbayim</em>) gibt eine elegante philologisch-halachische Lösung: <em>bein ha-arbayim</em> bedeutet im Pshat „zwischen den Abenden" (Dämmerung), und Pessach Mitzrayim wurde von jedem Haushalt einzeln in der Dämmerung geschlachtet; das spätere Pessach Dorot dagegen — weil alle Lämmer im Beit HaMikdasch geschlachtet und ihr Blut auf den Mizbeach gespritzt werden mussten — begann ab der Nachmittagsstunde (rabbinische Halachah-Lesung). Beides ist wahr, weil Pessach Mitzrayim und Pessach Dorot zwei verschiedene Mitzwot mit verschiedener Logistik sind. Diese Shadal-Beobachtung erklärt, warum die rabbinische Tradition <em>nach Mittag</em> als Anfangs-Zeit nimmt, ohne dem Pshat von 12:6 zu widersprechen. <strong>Shadal</strong> auf 12:21 (<em>mischchu u-kchu lachem</em>) bemerkt überdies, dass <em>mischchu</em> hier nicht „zieht (das Vieh)" bedeutet, sondern schlicht „geht" — Mosches Befehl an die Ältesten ist drängend, nicht technisch.
+        <br><br>
+        <strong>Die Tefillin-Mitzwah</strong> (13:9 und 13:16) ist eine der vier Tora-Stellen, die die Tefillin begründen (zusammen mit Devarim 6:8 und 11:18). <strong>Shadal</strong> auf 13:9 ist hier besonders zentral: er verteidigt die rabbinische, wörtlich-physische Pschat-Lesung der Tefillin gegen die karäische Auffassung, das sei eine bloße Metapher. Shadals philologisches Argument: hätte die Tora ein Bild gemeint, würde sie <em>„ke-ot al yadcha u-ke-zikkaron bein einecha"</em> sagen (mit dem Vergleichs-Kaf), nicht <em>„le-ot... u-le-zikkaron"</em> (mit dem Zweck-Lamed); ferner zeigt die Parallel-Aussage in 13:16 mit dem ungewöhnlichen <em>„yadcha"</em> (mit Heh-Suffix statt einfachem Kaf), und mit dem Wort <em>totafot</em>, dass der biblische Text einen physischen Gegenstand auf einer physischen Hand meint — keine Allegorie. Shadal fügt hinzu (auf 13:16), dass <em>totafot</em> philologisch ein „umlaufendes Schmuckband" am Kopf bezeichne (von der Wurzel טוף — umrunden), was die physische Realität des Stirnbandes weiter untermauert. <strong>Rambam</strong> in <em>Hilchot Tefillin</em> 1:1–6 verzeichnet auf dieser Pschat-Basis die ganze Tefillin-Halachah: vier Bayit für die schel Rosch (Schemot 13:1–10, 13:11–16, Devarim 6:4–9, 11:13–21), ein einziges Bayit für die schel Yad mit allen vier Stücken in einem Behälter, die Tefillin werden täglich angelegt außer am Schabbat und Yom Tov. <strong>Yabia Omer</strong> Bd. 3 Orach Chaim §47 (Rav Ovadia Yosef) regelt die sephardische Tefillin-Halacha: <em>Tefillin-Knoten</em> nach der Ari-z"l-Tradition (Daled-Knoten an schel Rosch, Yud-Knoten an schel Yad — zusammen mit dem Schin am schel-Rosch-Bayit ergeben sich die drei Buchstaben des Gottesnamens <em>Schadai</em>), vier Bayit nach den Rashash-Kawanot, sephardische Anlegeordnung nach Schulchan Aruch OC 25 (zuerst schel Yad mit Brachah <em>„le-haniach tefillin"</em>, dann schel Rosch — laut sephardischem Standard ohne zweite Brachah).
+        <br><br>
+        <strong>Pidyon HaBen</strong> (13:13b und 13:15b) und die Sanktifizierung der Erstgeborenen (13:2 und 13:11–12) verankern die Pessach-Erlösung am Körper jedes Erstgeborenen Israels. <strong>Rambam</strong> in <em>Hilchot Bikkurim u-Sche'ar Matnot Kehunah</em> Perek 11 regelt Pidyon HaBen detailliert: jeder erstgeborene Sohn (eines israelitischen Vaters und einer nicht-Kohenitischen, nicht-Levitischen Mutter, der den Mutterschoß durchbricht — also nicht durch Kaiserschnitt geboren) wird am 31. Lebenstag durch Übergabe von fünf Schekel-Silber an einen Kohen ausgelöst. Sephardisch (Ben Ish Chai Schanah Rischona Bo · Chazon Ovadia) wird der Pidyon mit einem festlichen Mahl gefeiert; der Kohen rezitiert die festliche Formel, der Vater spricht zwei Brachot (<em>al pidyon ha-ben</em> und <em>Schehecheyanu</em>). Die Kawanah folgt Schemot 13:15: <em>„darum opfere ich Adonai jedes, was den Mutterschoß bricht, die männlichen — und jeden Erstgeborenen meiner Söhne löse ich aus"</em> — der Erstgeborene wäre nach Adonais ursprünglicher Bestimmung ein Kohen; die Pidyon-Handlung anerkennt diese ursprüngliche Heiligkeit und löst sie zugleich aus, weil nach Israels Geschichte die Kehunah an die Söhne Aharons übergegangen ist. <strong>Ben Ish Chai</strong> (Schanah Rischona, Parashat Bo) gibt detaillierte sephardische Pidyon-Praxis aus Aleppo, Marokko und Yerushalayim: das festliche Mahl am 31. Tag wird mit Brot eröffnet, das der Vater mit der gleichen feierlichen Brachah-Architektur wie am Brit-Milah-Festmahl beginnt.
+        <br><br>
+        <strong>Praktische Handlung:</strong> (1) <em>Birkat HaChodesch als monatliche Bo-Erinnerung</em>: Sephardischer Aleppo-Marokko-Yerushalayim-Brauch (Ben Ish Chai Schanah Rischona Bo · Kaf HaChaim OC 417): am Schabbat vor jedem Rosch Chodesch (außer Tischri) wird die Birkat HaChodesch gesprochen — die Mond-Segnung. Bei dieser Brachah eine spezifische Kawanah einlegen: <em>„dieser Mond ist die erste Mitzwah Israels nach Schemot 12:2 — möge unsere Mond-Wahrnehmung wieder zur partnerschaftlichen Zeit-Heiligung mit Adonai werden, möge das Beit Din wieder den Mond heiligen, möge der Maschiach ben David kommen."</em> Die Birkat HaChodesch ist die monatlich aktualisierte Bo-Mitzwah. (2) <em>Sephardischer Seder mit den vier Bechern und den Rashash-Kawanot</em>: Jährlich am 14. Nissan Abend in Eretz Yisrael (15. außerhalb des Landes — sephardische Diaspora-Praxis nach Chazon Ovadia Pessach). Sephardischer Aleppo-Marokko-Yerushalayim-Brauch (Rambam Hilchot Chametz uMatzah Perakim 7–8 · Schulchan Aruch OC 472–484 · Chazon Ovadia Pessach): die vier Becher entsprechen den vier Erlösungs-Aspekten aus Schemot 6:6–7 — <em>vehotzeti · vehitzalti · vega'alti · velakachti</em> (Yerushalmi Pesachim 10:1). Vor dem ersten Becher die <em>L'schem yichud</em>-Einleitung der Rashash-Tradition (Nahar Schalom Drush Pesach Mitzrayim): <em>„L'schem yichud Kudscha Berich Hu u-Schechinte... hareni mukhan u-mzuman le-kayem mitzwat kos rischon..."</em>. Bei der Hagadah-Sektion <em>be-chol dor wa-dor</em>: nicht nur lesen, sondern Augen schließen und sich tatsächlich in der Pessach-Mitzrayim-Nacht imaginieren. Maror und Charoset nach sephardischem Standard (Marokko: Datteln und Walnüsse; Aleppo: Äpfel und Wein; Yemen: Datteln und Sesam). (3) <em>Tägliches Tefillin-Anlegen mit Bo-Kawanah</em>: Sephardisch (Yabia Omer Bd. 3 OC 47 · Ben Ish Chai Schanah Rischona zu Tefillin-Anlegen · Aleppo-Yerushalayim-Brauch) — die Tefillin werden täglich vor oder während Schacharit angelegt, schel Yad zuerst mit Brachah <em>„le-haniach tefillin"</em>, dann schel Rosch (sephardisch ohne zweite Brachah laut Yabia Omer). Kawanah nach Schemot 13:9 und 13:16: <em>„diese Tefillin sind das tägliche Pessach-Erinnerungs-Mal an meinem Arm und meiner Stirn — durch sie wird die Tora Adonais in meinem Mund sein, durch sie wird die starke Hand des Auszugs auch in mir wirksam, möge der Maschiach ben David kommen und die Erlösung sich vollenden."</em> Shadal-Lehre auf 13:9 dabei innerlich erinnern: <em>die Tefillin sind buchstäblich, nicht metaphorisch — physisch auf der Hand, physisch zwischen den Augen</em>. (4) <em>Pidyon HaBen für jeden Bechor</em>: Sephardisch (Ben Ish Chai Schanah Rischona Bo · Chazon Ovadia Yore De'ah · Aleppo-Marokko-Yerushalayim) — am 31. Lebenstag des Erstgeborenen (nicht durch Kaiserschnitt geboren) festliches Mahl mit einem Kohen; Übergabe von fünf Schekel-Silber (ca. 100 Gramm Silber, oder Geldwert nach aktuellem Silber-Preis); Vater spricht <em>al pidyon ha-ben</em> und <em>Schehecheyanu</em>; Kohen die Erlösungs-Formel; danach Festmahl mit Brot. Wer keinen Erstgeborenen erlöst, kann durch Studium der Hilchot Pidyon HaBen am Schabbat-Mittag von Bo die Mitzwah innerlich ehren. (5) <em>Zecher Yetziat Mitzrayim zweimal täglich</em>: Sephardisch (Schulchan Aruch OC 67 · Kaf HaChaim · Chazon Ovadia · Ben Ish Chai Schanah Rischona Bo) — die Tora-Mitzwah des Zecher Yetziat Mitzrayim (Devarim 16:3) wird in der dritten Sektion des Schma erfüllt (Bamidbar 15:37–41, mit <em>„asher hotzeti etchem me-eretz Mitzrayim"</em>). Bei Schacharit und bei Maariv eine spezifische Kawanah: nicht nur die Worte sprechen, sondern für drei Atemzüge das Bild der Pessach-Nacht innerlich vergegenwärtigen — die Blut-markierten Türen, die schlafenden Familien, der vorüberschreitende Adonai. Sephardisch (Aleppo-Yerushalayim-Brauch) wird dies durch eine kurze Pause vor und nach dem dritten Schma-Pasuk markiert. (6) <em>Hagadah-Vorbereitung drei Wochen vor Pessach</em>: Sephardisch (Ben Ish Chai Schanah Rischona Bo · Chazon Ovadia Pessach · Aleppo-Marokko-Brauch) — ab Rosch Chodesch Nissan, drei Wochen vor dem Seder, jeden Abend zehn Minuten Hagadah lesen, mit Erklärungen aus Ben Ish Chai oder Chazon Ovadia. Ziel: am Seder-Tisch keine Wort-Suche, sondern volle innere Bereitschaft. Sephardisch (Yerushalayim-Brauch) wird besonders der Maggid-Abschnitt vorbereitet, mit den vier Söhnen, den zehn Plagen und dem <em>be-chol dor wa-dor</em>-Kernpunkt. (7) <em>Chametz-Beur und Bedikat Chametz nach sephardischem Standard</em>: Sephardisch (Rambam Hilchot Chametz uMatzah Perakim 2–3 · Chazon Ovadia · Kaf HaChaim OC 431ff.) — in der Nacht zum 14. Nissan Bedikat Chametz mit Kerze; am Vormittag des 14. Beur Chametz (Verbrennen) und Bittul Chametz (mündliche Nichtigerklärung). Die mündliche Bittul-Formel sephardisch: <em>„kol chamira u-chamia de-ika bi-reschuti de-la chazitej u-de-la bi'artej, libatel ve-lehevej hefker ke-afra de-ar'a"</em>. Kawanah: nicht nur Sauerteig entfernen, sondern den inneren <em>se'or sche-ba-issa</em> (Berachot 17a — der „Sauerteig im Teig", die innere Yetzer-Festigung) mit jedem äußeren Krümel anerkennen und loslassen. (8) <em>Aleppo-Pizmonim für Pessach</em>: Sephardisch (Pizmonim-Sammlungen Aleppo-Damaskus, Hazzan Moshe Ashear-Tradition · Hazzan Yitzchak Cabasso) — die großen Pessach-Bakkaschot der Eidot HaMizrach sind häufig in Maqam Hijaz gehalten; am Schabbat HaGadol (Schabbat vor Pessach) wird das berühmte <em>„Mi Chamocha"</em> sephardisch oft in Hijaz gesungen, und die Bakkaschah <em>„Yom yom odeh"</em> öffnet den Pessach-Kreis. Wer keinen sephardischen Hazzan in Reichweite hat, kann eine der bekannten Aleppo-Pizmonim-Aufnahmen anhören und mit innerer Aufmerksamkeit folgen. (9) <em>Lehrstunde am Schabbat-Mittag von Parashat Bo</em>: Sephardisch (Aleppo-Marokko-Brauch nach Ben Ish Chai · Or HaChaim Schabbat-Mittag-Lesung) — am Schabbat-Mittag von Parashat Bo nach dem Hauptgang ein 15-minütiges Lernen: zuerst Or HaChaim auf Schemot 12:2 (die Mond-Heiligung als Schöpfungs-Erneuerung), dann Shadal auf 13:9 (die Tefillin im Pschat gegen die Karäer), schließlich Rambam Hilchot Kiddusch HaChodesch 1:1. Die Übung verankert die Wochen-Lesung im persönlichen Bewusstsein und in der Familie. (10) <em>Maschiach ben David in Bo — die endgültige Geulah</em>: Die sephardische Tradition (Rambam Hilchot Mlachim 11–12 · Sefer HaIkkarim Maamar Rischon · Or HaChaim auf Schemot 12:42) erkennt im <em>Leil Schimurim</em> (12:42) eine doppelte Verheißung — die Pessach-Nacht ist <em>„hu ha-laylah ha-zeh la-Adonai schimurim le-chol b'nei Yisrael le-dorotam"</em>: <em>geschützt</em> für alle Generationen Israels, bis zur endgültigen Geulah durch Maschiach ben David. In jeder Pessach-Hagadah wird am Ende beim <em>„Schfoch chamatcha"</em> die Tür geöffnet — sephardisch (Aleppo-Yerushalayim) mit der Kawanah: <em>„Eliyahu HaNavi möge eintreten und die Ankunft des Maschiach ben David verkünden — möge in diesem Jahr die Pessach-Erlösung sich endgültig vollenden, möge das Beit HaMikdasch wieder aufgebaut werden, möge der Pessach-Korban wieder dargebracht werden, möge die königliche Ordnung der Mo'adim in voller Fülle wieder aufgerichtet werden."</em>
+      </div>
+      <div class="tikkun-tags">
+        <span class="tikkun-tag">פֶּסַח</span>
+        <span class="tikkun-tag">קִדּוּשׁ הַחֹדֶשׁ</span>
+        <span class="tikkun-tag">תְּפִלִּין</span>
+        <span class="tikkun-tag">פִּדְיוֹן הַבֵּן</span>
+        <span class="tikkun-tag">לֵיל שִׁמֻּרִים</span>
+        <span class="tikkun-tag">מַלְכוּת</span>
+      </div>
+    </div>
+
+
+    <!-- ══ SCHI · KLIMAX-MOMENT — SCHEMOT 12:2 ══ -->
+    <div class="climax-box">
+      <div class="climax-label">שִׂיא · ff · Klimax-Vers der Parashah · Die erste Mitzwah Israels als Volk</div>
+      <div class="instrument-note">[no percussion] [no drums] [no choir] [acoustic guitar — full Hijaz chord forte to fortissimo, the first-mitzwah verse, the augmented second resounding like a royal coronation horn, no percussion, no drums] Gitarre: Voller Hijaz-Akkord, forte zu fortissimo — der HaChodesch-HaZeh-Vers, die übermäßige Sekunde wie ein königliches Krönungs-Horn.</div>
+      <div class="climax-verse-he">הַחֹדֶשׁ הַזֶּה לָכֶם רֹאשׁ חֳדָשִׁים · רִאשׁוֹן הוּא לָכֶם · לְחׇדְשֵׁי הַשָּׁנָה</div>
+      <div class="climax-verse-de">„Dieser Monat sei euch der Haupt-Monat — der erste sei er euch unter den Monaten des Jahres."</div>
+      <div class="climax-src">שְׁמוֹת י״ב:ב׳ — die <em>erste</em> Mitzwah Israels als Volk; nach Rambam (Sefer HaMitzwot Mitzwah 153 · Hilchot Kiddusch HaChodesch 1:1) und Or HaChaim die Wurzel-Mitzwah der gemeinschaftlichen Zeit-Heiligung; nach Shadal Pirusch zu 12:2 ein paralleler Geulah-Kalender neben dem Schöpfungs-Kalender Tischris</div>
+    </div>
+
+    <!-- ══ KODA · VEHIGADTA-WHISPER — SCHEMOT 13:8 ══ -->
+    <div class="coda-box">
+      <div class="coda-label">קוֹדָה · pp · Die katechetische Übergabe im Hauch</div>
+      <div class="instrument-note">[no percussion] [no drums] [no choir] [acoustic guitar — Hijaz dissolving into a single sustained note, the father-to-son transmission whispered, the be-tzeti memory barely audible, no percussion] Gitarre: Hijaz löst sich in einen einzigen getragenen Ton — die Vater-zu-Sohn-Übergabe geflüstert, das „be-tzeti mi-Mitzrayim" kaum hörbar.</div>
+      <div class="coda-whisper">
+        וְהִגַּדְתָּ <strong>לְבִנְךָ</strong> בַּיּוֹם הַהוּא לֵאמֹר — <strong>בַּעֲבוּר זֶה</strong> עָשָׂה <strong>אֲדֹנָי</strong> לִי — בְּצֵאתִי מִמִּצְרָיִם</div></div>
+
+  </section>
+
+
+  <!-- ══ FOOTER ══ -->
+  <div class="footer">
+    <p class="footer-he">פָּרָשַׁת בֹּא · מַלְכוּת · מַקָּאם חִיגָ׳אז · קִדּוּשׁ הַחֹדֶשׁ · קָרְבַּן פֶּסַח · תְּפִלִּין · פִּדְיוֹן הַבֵּן · לֵיל שִׁמֻּרִים</p>
+    <p class="footer-chain">
+      שְׁמוֹת י׳:א׳–י״ג:ט״ז · נוּסַּח צָדוֹק (רשש) · עֵדוֹת הַמִּזְרָח · אֲרָם צוֹבָה · מָרוֹקוֹ · יָמֶן · יְרוּשָׁלַיִם
+    </p>
+    <p class="footer-de">
+      Quellen: <strong>Tanach</strong> (Schemot 10:1–13:16 — Tora-Text 1:1, mit Tetragrammaton-Konvertierung
+      durchgängig als אֲדֹנָי) · <strong>Rambam · Mishneh Torah</strong> (Hilchot Korban Pesach
+      Perakim 1–10 · Hilchot Chametz uMatzah Perakim 1–8 — Pessach-Korban, Chametz-Verbot, Seder-Architektur
+      mit vier Bechern und Mazza-Pflicht · Hilchot Tefillin uMezuzah veSefer Tora Perakim 1–4 — Tefillin-
+      Halachah auf Pschat-Basis von Schemot 13:9 und 13:16 · Hilchot Bikkurim u-Sche'ar Matnot Kehunah
+      Perek 11 — Pidyon HaBen · Hilchot Kiddusch HaChodesch Perakim 1, 5 — die Mond-Heiligung als Mitzwah
+      und ihre Halachah nach dem Sanhedrin-Ende · Sefer HaMitzwot Mitzwah 153 — die Beit-Din-Autorität
+      bei der Mond-Festsetzung · Hilchot Mlachim 11–12 — Maschiach ben David) · <strong>Or HaChaim</strong>
+      (auf Schemot 12:2 — Mond-Heiligung als Schöpfungs-Erneuerung und Israel als Adonais Zeit-Partner; auf
+      12:11 — chipazon als Form der Erlösung; auf 12:42 — Leil Schimurim als doppelte Verheißung der
+      Maschiach-ben-David-Geulah) · <strong>Sefer HaIkkarim</strong> (Yosef Albo, Maamar Rischon — die
+      Mond-Heiligung und die Mo'adim als Glaubens-Wurzeln) · <strong>Rashash · Nahar Schalom</strong>
+      (Drush Pesach Mitzrayim — Malchut als ur-Manifestation der Pessach-Nacht; die vier Becher als
+      Sefirot-Reise der Geulah; die Mesusot-Maschkof-Heh-Architektur des Eingangs) · <strong>Ramchal ·
+      Derech HaSchem</strong> (Teil 4, Perek 7 — Mitzwot HaPesach: die Mo'adim als wiedergeöffnete
+      Schöpfungs-Zeitfenster, die Pessach-Nacht als aktualisierte Geulah) · <strong>Ramchal · Mesillat
+      Yescharim</strong> (Perek 19 zur Kedushah — die innere Begleitung der Mitzwot durch Kawanah) ·
+      <strong>Shadal · Pirusch al haTora</strong> (Schemot 12:2 — der Geulah-Kalender als Parallel-Struktur
+      zum Schöpfungs-Kalender Tischri; 12:6 — bein ha-arbayim als philologisch-halachische Doppel-Lesung
+      von Pessach Mitzrayim und Pessach Dorot; 12:21 — mischchu als „geht" im Pshat; 13:9 — die Tefillin
+      im wörtlichen Pschat gegen die karäische Metapher-Lesung, mit dem zentralen Argument der Lamed-
+      statt-Kaf-Präposition; 13:16 — totafot als physisches Stirn-Schmuckband aus der Wurzel טוף) ·
+      <strong>Ramak · Pardes Rimonim</strong> (zu Malchut als der manifestierten Sefirah; zur Pessach-
+      Architektur als Sichtbar-Werden der höheren Sefirot) · <strong>Ben Ish Chai</strong> Schanah
+      Rischona Parashat Bo (sephardische Pessach-Praxis · Aleppo-Marokko-Yerushalayim-Bagdad-Tradition ·
+      Seder-Halachot · Tefillin-Halachot · Pidyon HaBen) · <strong>Schulchan Aruch</strong> (Orach Chaim
+      25 — Tefillin · 67 — Zecher Yetziat Mitzrayim · 417 — Birkat HaChodesch · 429–494 — Pessach mit allen
+      Untergruppen) · <strong>Kaf HaChaim</strong> (Rabbi Yaakov Chaim Sofer · sephardische Praxis aller
+      Eidot HaMizrach zu Pessach und Tefillin) · <strong>Yabia Omer · Chazon Ovadia</strong> (Rabbi Ovadia
+      Yosef Z'L — sephardische moderne Halacha · Bd. 3 OC 47 zur sephardischen Tefillin-Halacha · Chazon
+      Ovadia Pessach in mehreren Bänden zu Bedikat Chametz, Seder-Halachot, Korban-Pessach-Heutige-Praxis,
+      Sefirat HaOmer) · <strong>Talmud Bavli · Pesachim</strong> (Pesachim 116b — be-chol dor wa-dor;
+      Pesachim 99b — die vier Becher; Rosch HaSchana 25a — Beit-Din-Autorität bei der Mond-Festsetzung) ·
+      <strong>Mekhilta de-Rabbi Yischmael · Parashat Bo</strong> (klassische tannaitische Midraschim zur
+      Pessach-Halacha) · <strong>Sephardische Pessach-Bakkaschot und Pizmonim</strong> Eidot HaMizrach
+      (Mi Chamocha-Pizmonim · Yom yom odeh · Echad Mi Yodea sephardisch · alle in Maqam-Hijaz-Tradition
+      Aleppo-Yerushalayim) · <strong>Krias Schma She'al haMittah</strong> (Aleppo-Tradition · Zecher
+      Yetziat Mitzrayim am Schluss).
+      <br><br>
+      <strong>Tradition:</strong> Sephardisch · Nussach Zadoq (Rashash) · Maqam-Tradition aus Aleppo,
+      Yerushalayim, Marokko, Yemen · Tetragrammaton durchgängig als אֲדֹנָי · Maschiach ben David ·
+      Doppelt geprüfte Quellen · Tora-Text 1:1 unverändert · Erstellt Mai 2026 · Sefer HaParashot
+      bemo Maqam · 3. Lied Sefer Schemot · Malchut · Maqam Hijaz · לֵיל שִׁמֻּרִים.
+    </p>
+    <div class="footer-amen">אָמֵן · יִבָּנֶה הַמִּקְדָּשׁ בִּמְהֵרָה בְיָמֵינוּ · יָבוֹא מָשִׁיחַ בֶּן דָּוִד · אָמֵן</div>
+  </div>
+
+</div>
+
+
+</body></html>

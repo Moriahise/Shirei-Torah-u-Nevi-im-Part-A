@@ -1,0 +1,615 @@
+<!DOCTYPE html>
+<html lang="he-IL"><head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>פָּרָשַׁת תַזְרִיעַ · וַיִּקְרָא י״ב:א׳–י״ג:נ״ט · בִּינָה · מַקָּאם בַּיָאת · Sephardische Tora-Vertonung</title>
+  <link href="https://fonts.googleapis.com/css2?family=Frank+Ruhl+Libre:wght@300;400;700;900&amp;family=EB+Garamond:ital,wght@0,400;0,600;1,400;1,600&amp;family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&amp;display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg:#060808; --deep:#0A0E0E; --layer:#101414; --card:#0C1010;
+      --parchment:#f2e8d0; --parch-dim:#c8b898;
+      --ivory:#f0e8d8; --ivory-dim:#a89878;
+      --silver:#c8d4e0; --silver-dim:#7a8290;
+      --text:#a0a89c;
+      /* SEFER VAYIKRA — Königlich-Gold */
+      --sefer:#C8A030; --sefer-lt:#F0CC60; --sefer-dim:#8B7020;
+      --sefer-bg:rgba(200,160,48,.08); --sefer-bdr:rgba(200,160,48,.36); --sefer-glow:rgba(240,204,96,.20);
+      /* TAZRIA · BINAH · BAYAT — Bronze-Mütterlich */
+      --tzr:#A07850; --tzr-lt:#C09870; --tzr-dim:#705028;
+      --tzr-bg:rgba(160,120,80,.08); --tzr-bdr:rgba(160,120,80,.36); --tzr-glow:rgba(192,152,112,.22);
+      /* MAQAM-FARBEN */
+      --maqam-saba:#B0904A; --maqam-hijaz:#C85050; --maqam-bayat:#A07850;
+      --maqam-rast:#C8A860; --maqam-ajam:#7A9050; --maqam-nahawand:#6080A0;
+    }
+    *,*::before,*::after { margin:0; padding:0; box-sizing:border-box; }
+    html { scroll-behavior:smooth; }
+    body { background:var(--bg); color:var(--silver); font-family:'EB Garamond',serif; overflow-x:hidden; line-height:1.85; padding:40px 20px 80px; }
+    body::before { content:''; position:fixed; inset:0; pointer-events:none; z-index:0;
+      background: radial-gradient(ellipse at 18% 12%, rgba(200,160,48,.10) 0%, transparent 48%),
+                  radial-gradient(ellipse at 82% 28%, rgba(160,120,80,.12) 0%, transparent 45%),
+                  radial-gradient(ellipse at 12% 68%, rgba(168,128,24,.08) 0%, transparent 45%),
+                  radial-gradient(ellipse at 88% 82%, rgba(192,152,112,.10) 0%, transparent 42%),
+                  radial-gradient(ellipse at 50% 50%, rgba(20,16,8,.82) 0%, transparent 70%); }
+    body::after { content:''; position:fixed; inset:0; pointer-events:none; z-index:0;
+      background-image:
+        radial-gradient(1px 1px at 8% 10%, rgba(240,204,96,.34) 0%, transparent 100%),
+        radial-gradient(1px 1px at 48% 5%, rgba(192,152,112,.30) 0%, transparent 100%),
+        radial-gradient(1px 1px at 82% 16%, rgba(224,188,80,.30) 0%, transparent 100%),
+        radial-gradient(1px 1px at 25% 42%, rgba(216,176,72,.28) 0%, transparent 100%),
+        radial-gradient(1px 1px at 68% 58%, rgba(192,152,112,.28) 0%, transparent 100%),
+        radial-gradient(1.5px 1.5px at 12% 75%, rgba(208,172,64,.32) 0%, transparent 100%),
+        radial-gradient(1px 1px at 90% 78%, rgba(192,152,112,.30) 0%, transparent 100%),
+        radial-gradient(1px 1px at 35% 88%, rgba(224,188,80,.26) 0%, transparent 100%); }
+    .wrap { max-width:1080px; margin:0 auto; position:relative; z-index:1; }
+
+    /* PAGE HEADER */
+    .page-header { text-align:center; margin-bottom:80px; padding-bottom:40px; border-bottom:1px solid var(--sefer-bdr); position:relative; }
+    .page-header::after { content:'✦ ✡ ✦'; position:absolute; bottom:-14px; left:50%; transform:translateX(-50%); background:var(--bg); padding:0 20px; color:var(--sefer); font-size:.62em; letter-spacing:.55em; }
+    .eyebrow { font-family:'Cormorant Garamond',serif; font-style:italic; font-size:.78em; color:var(--sefer-lt); letter-spacing:.28em; text-transform:uppercase; margin-bottom:18px; opacity:.85; }
+    .sefer-letter { font-family:'Frank Ruhl Libre',serif; font-size:1.40em; color:var(--sefer); font-weight:900; display:inline-block; margin-bottom:6px; text-shadow:0 0 30px var(--sefer-glow); letter-spacing:.04em; }
+    .page-title-he { font-family:'Frank Ruhl Libre',serif; font-size:3.2em; font-weight:900; color:var(--ivory); direction:rtl; letter-spacing:.05em; text-shadow:0 0 80px var(--sefer-glow), 0 0 140px var(--tzr-glow); margin-bottom:8px; line-height:1.15; }
+    .page-subtitle-he { font-family:'Frank Ruhl Libre',serif; font-size:1.16em; color:var(--sefer-lt); direction:rtl; margin-bottom:10px; letter-spacing:.06em; }
+    .page-title-de { font-family:'Cormorant Garamond',serif; font-style:italic; font-size:1.14em; color:var(--silver-dim); margin-bottom:22px; }
+    .page-desc { font-size:1.0em; color:var(--text); max-width:780px; margin:0 auto; line-height:1.95; }
+    .page-desc strong { color:var(--ivory-dim); }
+    .page-desc em { color:var(--tzr-lt); font-style:italic; }
+
+    /* SONG SECTION */
+    .song-section { margin-bottom:90px; padding-bottom:70px; border-bottom:1px dashed var(--sefer-bdr); }
+    .song-header { display:flex; flex-wrap:wrap; align-items:flex-start; gap:20px; margin-bottom:40px; padding:24px 26px; background:var(--layer); border:1px solid var(--tzr-bdr); border-radius:10px; }
+    .song-num { font-family:'Frank Ruhl Libre',serif; font-size:2.6em; font-weight:900; direction:rtl; padding-right:14px; color:var(--tzr-lt); }
+    .song-meta { flex:1; display:flex; flex-direction:column; gap:8px; }
+    .korban-badge { font-family:'Cormorant Garamond',serif; font-style:italic; font-size:.82em; letter-spacing:.08em; color:var(--tzr-lt); }
+    .maqam-badge { font-family:'Cormorant Garamond',serif; font-style:italic; font-size:.78em; letter-spacing:.08em; display:inline-block; padding:3px 10px; border-radius:4px; color:#f0e8d8; font-weight:600; background:var(--maqam-bayat); }
+    .song-title-he { font-family:'Frank Ruhl Libre',serif; font-size:1.7em; font-weight:700; color:var(--ivory); direction:rtl; letter-spacing:.04em; }
+    .song-title-de { font-family:'Cormorant Garamond',serif; font-style:italic; font-size:1.02em; color:var(--silver); }
+    .source-badge { font-family:'Cormorant Garamond',serif; font-style:italic; font-size:.74em; color:#A07060; line-height:1.6; }
+
+    /* ALIYAH BLOCK */
+    .aliyah-block { margin-bottom:42px; }
+    .aliyah-label { font-family:'Frank Ruhl Libre',serif; font-size:.94em; font-weight:700; direction:rtl; margin-bottom:9px; color:var(--tzr); letter-spacing:.06em; padding-bottom:6px; border-bottom:1px solid var(--tzr-bdr); }
+    .aliyah-label-de { font-family:'Cormorant Garamond',serif; font-style:italic; font-size:.78em; color:var(--silver-dim); display:inline-block; margin-right:14px; opacity:.85; }
+    .instrument-note { font-family:'Cormorant Garamond',serif; font-style:italic; font-size:.84em; color:var(--text); margin-bottom:14px; padding:10px 14px; background:rgba(160,120,80,.05); border-left:2px solid var(--tzr-dim); }
+    .lyrics-block { display:flex; gap:44px; flex-wrap:wrap; }
+    .lyrics-he, .lyrics-de { flex:1; min-width:280px; display:flex; flex-direction:column; gap:6px; }
+    .lyrics-he span.line { font-family:'Frank Ruhl Libre',serif; font-size:1.06em; color:var(--ivory); direction:rtl; line-height:1.95; }
+    .lyrics-de span.line { font-family:'Cormorant Garamond',serif; font-size:1.0em; color:var(--silver); line-height:1.88; }
+
+    /* TIKKUN BOX */
+    .tikkun-box { background:rgba(160,120,80,.07); border:1px solid rgba(160,120,80,.32); padding:30px; margin-top:40px; border-radius:6px; }
+    .tikkun-header { display:flex; flex-direction:column; gap:6px; margin-bottom:20px; }
+    .tikkun-title-he { font-family:'Frank Ruhl Libre',serif; font-size:1.25em; color:var(--ivory); direction:rtl; font-weight:700; letter-spacing:.04em; }
+    .tikkun-title-de { font-family:'Cormorant Garamond',serif; font-size:1.0em; font-style:italic; color:var(--silver); }
+    .tikkun-src { font-family:'Cormorant Garamond',serif; font-size:.74em; color:#A07060; line-height:1.7; }
+    .tikkun-body { font-family:'Cormorant Garamond',serif; font-size:.96em; color:var(--text); line-height:1.92; }
+    .tikkun-body strong { color:var(--ivory); }
+    .tikkun-body em { color:var(--tzr-lt); font-style:italic; }
+    .tikkun-tags { margin-top:18px; display:flex; gap:9px; flex-wrap:wrap; }
+    .tikkun-tag { background:rgba(160,120,80,.16); color:var(--tzr-lt); padding:4px 10px; border-radius:4px; font-size:.74em; font-family:'Frank Ruhl Libre',serif; direction:rtl; }
+
+    /* SCHI / KLIMAX-MOMENT */
+    .climax-box { background:linear-gradient(135deg,rgba(160,120,80,.18),rgba(200,160,48,.10),rgba(6,8,8,.88)); border:2px solid var(--tzr-bdr); padding:32px; margin-top:40px; margin-bottom:30px; border-radius:8px; }
+    .climax-label { font-family:'Cormorant Garamond',serif; font-style:italic; font-size:.82em; color:var(--tzr-lt); letter-spacing:.18em; text-transform:uppercase; margin-bottom:14px; text-align:center; }
+    .climax-verse-he { font-family:'Frank Ruhl Libre',serif; font-size:1.55em; font-weight:700; color:var(--ivory); direction:rtl; text-align:center; line-height:1.85; letter-spacing:.04em; text-shadow:0 0 30px var(--tzr-glow); }
+    .climax-verse-de { font-family:'Cormorant Garamond',serif; font-style:italic; font-size:1.05em; color:var(--silver); text-align:center; margin-top:14px; line-height:1.7; }
+    .climax-src { font-family:'Cormorant Garamond',serif; font-style:italic; font-size:.80em; color:var(--tzr-lt); text-align:center; margin-top:12px; opacity:.8; }
+
+    /* KODA */
+    .coda-box { background:rgba(6,8,8,.78); border:1px solid var(--tzr-bdr); padding:36px; text-align:center; margin-top:30px; margin-bottom:30px; border-radius:6px; }
+    .coda-label { font-family:'Cormorant Garamond',serif; font-style:italic; font-size:.80em; color:var(--tzr-lt); letter-spacing:.18em; text-transform:uppercase; margin-bottom:18px; }
+    .coda-whisper { font-family:'Frank Ruhl Libre',serif; font-size:1.20em; direction:rtl; line-height:2.3; opacity:.85; color:var(--tzr-lt); }
+    .coda-whisper strong { font-weight:900; opacity:1; color:var(--ivory); }
+
+    /* SCENARIOS */
+    .scenarios-section { margin-top:54px; margin-bottom:40px; }
+    .scenarios-title { font-family:'Frank Ruhl Libre',serif; font-size:1.35em; font-weight:700; text-align:center; margin-bottom:34px; direction:rtl; color:var(--sefer-lt); letter-spacing:.06em; }
+    .scenarios-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(290px,1fr)); gap:26px; }
+    .scenario-card { background:linear-gradient(135deg,rgba(28,20,12,.78),rgba(6,8,8,.92)); border:1px solid var(--tzr-bdr); padding:24px; transition:transform .2s, box-shadow .2s; border-radius:6px; }
+    .scenario-card:hover { transform:translateY(-4px); box-shadow:0 10px 36px var(--tzr-glow); }
+    .sc-num { font-family:'Cormorant Garamond',serif; font-style:italic; font-size:.74em; letter-spacing:.14em; text-transform:uppercase; margin-bottom:7px; color:var(--tzr); }
+    .sc-title-he { font-family:'Frank Ruhl Libre',serif; font-size:1.10em; font-weight:700; color:var(--ivory); direction:rtl; margin-bottom:4px; letter-spacing:.04em; }
+    .sc-sub { font-family:'Cormorant Garamond',serif; font-style:italic; font-size:.84em; color:#A07060; margin-bottom:14px; }
+    .sc-body { font-size:.92em; color:var(--text); line-height:1.80; margin-bottom:14px; }
+    .sc-body strong { color:var(--tzr-lt); }
+    .key-moment { font-size:.86em; color:var(--tzr-lt); font-style:italic; margin-bottom:9px; padding-left:13px; border-left:2px solid var(--tzr-lt); }
+    .reaction { font-size:.86em; color:var(--text); font-style:italic; padding-left:13px; border-left:2px solid var(--sefer-dim); line-height:1.78; }
+
+    /* FOOTER */
+    .footer { margin-top:80px; padding-top:50px; border-top:1px solid var(--sefer-bdr); text-align:center; }
+    .footer-he { font-family:'Frank Ruhl Libre',serif; font-size:1.40em; font-weight:700; color:var(--sefer-lt); direction:rtl; margin-bottom:18px; text-shadow:0 0 30px var(--sefer-glow); letter-spacing:.06em; }
+    .footer-chain { font-family:'Frank Ruhl Libre',serif; font-size:1.0em; color:var(--silver); direction:rtl; margin-bottom:22px; letter-spacing:.09em; }
+    .footer-de { font-family:'Cormorant Garamond',serif; font-style:italic; font-size:.92em; color:var(--text); line-height:2.0; max-width:780px; margin:0 auto 24px; }
+    .footer-de strong { color:var(--ivory-dim); font-style:normal; }
+    .footer-amen { font-family:'Frank Ruhl Libre',serif; font-size:1.30em; color:var(--sefer-lt); direction:rtl; margin-top:24px; letter-spacing:.14em; text-shadow:0 0 30px var(--sefer-glow); }
+
+    @media (max-width:720px) {
+      .page-title-he { font-size:2.3em; }
+      .song-num { font-size:2.2em; }
+      .lyrics-block { flex-direction:column; gap:24px; }
+      .scenarios-grid { grid-template-columns:1fr; }
+      .climax-verse-he { font-size:1.20em; }
+      .footer-he { font-size:1.10em; }
+    }
+  </style>
+</head>
+<body>
+<div class="wrap">
+
+  <header class="page-header">
+    <div class="eyebrow">Sephardische Tora-Vertonung · Sefer HaParashot bemo Maqam</div>
+    <div class="sefer-letter">ג</div>
+    <div class="page-title-he">פָּרָשַׁת תַזְרִיעַ</div>
+    <div class="page-subtitle-he">סֵפֶר וַיִּקְרָא · י״ב:א׳–י״ג:נ״ט · בִּינָה · מַקָּאם בַּיָאת · תִּקּוּן הַדִּבּוּר</div>
+    <div class="page-title-de">Tazria — Geburt, Reinigung und das Erscheinen der Tzaraat als Zeichen des Wortes · Vierte Parashah des Sefer Vayikra · Binah im Maqam Bayat</div>
+    <div class="page-desc">
+      Die <strong>vierte Parashah des Sefer Vayikra</strong> öffnet zwei Tore: das Tor der <em>Geburt</em> —
+      die <strong>Yoledet</strong>, die nach Tagen der <em>Niddah</em> und der <em>Damei Tohorah</em> mit
+      einem <em>Korban Olah</em> und <em>Korban Chatat</em> in den Bereich des Heiligtums zurückkehrt — und das
+      Tor der <em>Tzaraat</em>, des Hautmals an Mensch, Kleid und Leder, das vom <strong>Kohen</strong> geprüft,
+      eingesperrt, gereinigt oder als unrein erklärt wird. Beide Tore sind <strong>Binah-Tore</strong>: sie
+      verlangen <em>Verstehen</em> — das mütterliche Verstehen der eigenen Schwelle und das prüfende Verstehen
+      des Kohen, der nicht heilt, sondern <em>sieht</em> und <em>spricht</em>. Talmud Bavli (Erchin 16a) und
+      Rambam (Hilchot Tum'at Tzaraat 16:10) lehren, dass die Tzaraat nicht eine Krankheit der Natur, sondern
+      ein <em>Zeichen</em> ist — vor allem ein Zeichen des unreinen Wortes, der <em>Lashon HaRa</em>. Schadal
+      in seinem <em>Pirusch zu Vayikra 13</em> präzisiert pschat: die Haut-Veränderung war den Alten ein
+      Zeichen des <em>Tadels</em> Gottes, und die Tora hat diese Anschauung pädagogisch genutzt, um das
+      Volk zur Wachsamkeit über sein Reden zu erziehen. Das ganze Lied steht in <strong>Maqam Bayat</strong> —
+      mütterlich-tief, generationen-reich, kontemplativ-prüfend — der Klang der Sefirah Binah, in der das
+      Wort empfangen, getragen und freigegeben wird.
+    </div>
+  </header>
+
+  <!-- ══════════════════════════════════════════════════════ -->
+  <!-- ④ פָּרָשַׁת תַזְרִיעַ — וַיִּקְרָא י״ב:א׳–י״ג:נ״ט         -->
+  <!-- BINAH · MAQAM BAYAT · ~58 BPM rubato                  -->
+  <!-- ══════════════════════════════════════════════════════ -->
+
+  <section class="song-section">
+    <div class="song-header">
+      <div class="song-num">ד</div>
+      <div class="song-meta">
+        <div class="korban-badge">בִּינָה — Mütterliche Tiefe · Tikkun-HaDibur · Geburt und Quarantäne</div>
+        <div class="song-title-he">פָּרָשַׁת תַזְרִיעַ</div>
+        <div class="song-title-de">„Wenn eine Frau empfängt …" — Reinheit der Yoledet, Tora der Nega'im, das Sehen des Kohen</div>
+        <div class="maqam-badge">Maqam Bayat · ~58 BPM rubato</div>
+        <div class="source-badge">
+          וַיִּקְרָא י״ב:א׳–י״ג:נ״ט · רַמְבַּ״ם הִלְכוֹת טֻמְאַת צָרַעַת ט״ז:י׳ · עֲרָכִין ט״ז.: · רַמְחַ״ל מְסִלַּת יְשָׁרִים פֶּרֶק י״א ·
+          שַׁדַ״ל בְּפֵרוּשׁ עַל וַיִּקְרָא י״ג · בֶּן אִישׁ חַי שָׁנָה רִאשׁוֹנָה תַזְרִיעַ
+        </div>
+      </div>
+    </div>
+
+    <!-- ── ALIYAH 1 · רִאשׁוֹן · Vayikra 12:1-13:5 ── -->
+    <div class="aliyah-block">
+      <div class="aliyah-label">עֲלִיָּה רִאשׁוֹנָה — תּוֹרַת הַיּוֹלֶדֶת · בְּרִית מִילָה · רֵאשִׁית תּוֹרַת הַנְּגָעִים<span class="aliyah-label-de">Erste Aliyah · Vayikra 12:1–13:5 · Die Tora der Gebärenden, die Beschneidung am achten Tag, der Beginn der Tora der Nega'im — der Kohen kommt zum Sehen</span></div>
+      <div class="instrument-note">[no percussion] [no drums] [no choir] [acoustic guitar — Bayat opening with maternal warmth, the threshold of birth, the eighth-day milah, the first calls of the Tzaraat-laws, intimate fingerpicking, no percussion] Gitarre: Bayat öffnet mit mütterlicher Wärme — die Schwelle der Geburt, die Beschneidung am achten Tag, das erste Sehen des Kohen über die Plage der Haut.</div>
+      <div class="lyrics-block">
+        <div class="lyrics-he" dir="rtl">
+          <span class="line">וַיְדַבֵּר אֲדֹנָי אֶל־מֹשֶׁה לֵּאמֹר׃</span>
+          <span class="line">דַּבֵּר אֶל־בְּנֵי יִשְׂרָאֵל לֵאמֹר אִשָּׁה כִּי תַזְרִיעַ וְיָלְדָה זָכָר וְטָמְאָה שִׁבְעַת יָמִים כִּימֵי נִדַּת דְּוֺתָהּ תִּטְמָא׃</span>
+          <span class="line">וּבַיּוֹם הַשְּׁמִינִי יִמּוֹל בְּשַׂר עׇרְלָתוֹ׃</span>
+          <span class="line">וּשְׁלֹשִׁים יוֹם וּשְׁלֹשֶׁת יָמִים תֵּשֵׁב בִּדְמֵי טׇהֳרָה בְּכׇל־קֹדֶשׁ לֹא־תִגָּע וְאֶל־הַמִּקְדָּשׁ לֹא תָבֹא עַד־מְלֹאת יְמֵי טׇהֳרָהּ׃</span>
+          <span class="line">וְאִם־נְקֵבָה תֵלֵד וְטָמְאָה שְׁבֻעַיִם כְּנִדָּתָהּ וְשִׁשִּׁים יוֹם וְשֵׁשֶׁת יָמִים תֵּשֵׁב עַל־דְּמֵי טׇהֳרָה׃</span>
+          <span class="line">וּבִמְלֹאת יְמֵי טׇהֳרָהּ לְבֵן אוֹ לְבַת תָּבִיא כֶּבֶשׂ בֶּן־שְׁנָתוֹ לְעֹלָה וּבֶן־יוֹנָה אוֹ־תֹר לְחַטָּאת אֶל־פֶּתַח אֹהֶל־מוֹעֵד אֶל־הַכֹּהֵן׃</span>
+          <span class="line">וְהִקְרִיבוֹ לִפְנֵי אֲדֹנָי וְכִפֶּר עָלֶיהָ וְטָהֲרָה מִמְּקֹר דָּמֶיהָ זֹאת תּוֹרַת הַיֹּלֶדֶת לַזָּכָר אוֹ לַנְּקֵבָה׃</span>
+          <span class="line">וְאִם־לֹא תִמְצָא יָדָהּ דֵּי שֶׂה וְלָקְחָה שְׁתֵּי־תֹרִים אוֹ שְׁנֵי בְּנֵי יוֹנָה אֶחָד לְעֹלָה וְאֶחָד לְחַטָּאת וְכִפֶּר עָלֶיהָ הַכֹּהֵן וְטָהֵרָה׃</span>
+          <span class="line">וַיְדַבֵּר אֲדֹנָי אֶל־מֹשֶׁה וְאֶל־אַהֲרֹן לֵאמֹר׃</span>
+          <span class="line">אָדָם כִּי־יִהְיֶה בְעוֹר־בְּשָׂרוֹ שְׂאֵת אוֹ־סַפַּחַת אוֹ בַהֶרֶת וְהָיָה בְעוֹר־בְּשָׂרוֹ לְנֶגַע צָרָעַת וְהוּבָא אֶל־אַהֲרֹן הַכֹּהֵן אוֹ אֶל־אַחַד מִבָּנָיו הַכֹּהֲנִים׃</span>
+          <span class="line">וְרָאָה הַכֹּהֵן אֶת־הַנֶּגַע בְּעוֹר־הַבָּשָׂר וְשֵׂעָר בַּנֶּגַע הָפַךְ לָבָן וּמַרְאֵה הַנֶּגַע עָמֹק מֵעוֹר בְּשָׂרוֹ נֶגַע צָרַעַת הוּא וְרָאָהוּ הַכֹּהֵן וְטִמֵּא אֹתוֹ׃</span>
+          <span class="line">וְאִם־בַּהֶרֶת לְבָנָה הִוא בְּעוֹר בְּשָׂרוֹ וְעָמֹק אֵין־מַרְאֶהָ מִן־הָעוֹר וּשְׂעָרָה לֹא־הָפַךְ לָבָן וְהִסְגִּיר הַכֹּהֵן אֶת־הַנֶּגַע שִׁבְעַת יָמִים׃</span>
+          <span class="line">וְרָאָהוּ הַכֹּהֵן בַּיּוֹם הַשְּׁבִיעִי וְהִנֵּה הַנֶּגַע עָמַד בְּעֵינָיו לֹא־פָשָׂה הַנֶּגַע בָּעוֹר וְהִסְגִּירוֹ הַכֹּהֵן שִׁבְעַת יָמִים שֵׁנִית׃</span>
+        </div>
+        <div class="lyrics-de">
+          <span class="line">(12:1) Und Adonai redete zu Mosche, sprechend:</span>
+          <span class="line">(12:2) Rede zu den Kindern Israels, sprechend: Eine Frau, wenn sie empfängt und einen Knaben gebiert — so wird sie sieben Tage unrein sein, wie in den Tagen ihrer Niddah ist sie unrein.</span>
+          <span class="line">(12:3) Und am achten Tag soll das Fleisch seiner Vorhaut beschnitten werden.</span>
+          <span class="line">(12:4) Und dreiunddreißig Tage soll sie sitzen in den Tagen der Reinigungs-Blutung — alles Heilige soll sie nicht berühren, und zum Heiligtum soll sie nicht eintreten, bis die Tage ihrer Reinigung erfüllt sind.</span>
+          <span class="line">(12:5) Und wenn sie ein Mädchen gebiert — so wird sie zwei Wochen unrein sein wie in ihrer Niddah, und sechsundsechzig Tage soll sie sitzen auf den Tagen der Reinigungs-Blutung.</span>
+          <span class="line">(12:6) Und wenn die Tage ihrer Reinigung erfüllt sind, für einen Sohn oder für eine Tochter, so bringe sie ein einjähriges Lamm zum Olah-Opfer und eine junge Taube oder eine Turteltaube zum Chatat-Opfer, an den Eingang des Begegnungs-Zeltes, zum Kohen.</span>
+          <span class="line">(12:7) Und er soll es vor Adonai darbringen und für sie sühnen — und sie wird gereinigt sein von der Quelle ihrer Blutung. Dies ist die Tora der Gebärenden, für den Knaben oder für das Mädchen.</span>
+          <span class="line">(12:8) Und wenn ihre Hand das Vermögen für ein Lamm nicht findet, so nehme sie zwei Turteltauben oder zwei junge Tauben — eine zum Olah-Opfer und eine zum Chatat-Opfer; und der Kohen soll für sie sühnen, und sie wird rein sein.</span>
+          <span class="line">(13:1) Und Adonai redete zu Mosche und zu Aharon, sprechend:</span>
+          <span class="line">(13:2) Ein Mensch, wenn auf der Haut seines Fleisches eine Erhöhung oder ein Ausschlag oder ein heller Fleck wird — und es wird auf der Haut seines Fleisches zu einer Tzaraat-Plage —, so soll er zu Aharon dem Kohen oder zu einem seiner Söhne, den Kohanim, gebracht werden.</span>
+          <span class="line">(13:3) Und der Kohen soll die Plage auf der Haut des Fleisches besehen — und das Haar in der Plage hat sich weiß verfärbt, und das Aussehen der Plage ist tiefer als die Haut seines Fleisches: eine Tzaraat-Plage ist es; und der Kohen soll ihn besehen und ihn als unrein erklären.</span>
+          <span class="line">(13:4) Und wenn es ein weißer heller Fleck auf der Haut seines Fleisches ist und tiefer ist sein Aussehen nicht als die Haut, und sein Haar hat sich nicht weiß verfärbt — so soll der Kohen die Plage sieben Tage einsperren.</span>
+          <span class="line">(13:5) Und der Kohen soll ihn am siebten Tag besehen — und siehe, die Plage hat in seinen Augen Bestand, sie hat sich nicht in der Haut ausgebreitet — so soll der Kohen ihn ein zweites Mal sieben Tage einsperren.</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- ── ALIYAH 2 · שֵׁנִי · Vayikra 13:6-17 ── -->
+    <div class="aliyah-block">
+      <div class="aliyah-label">עֲלִיָּה שְׁנִיָּה — שִׁבְעַת יָמִים שֵׁנִית · צָרַעַת נוֹשֶׁנֶת · בָּשָׂר חַי<span class="aliyah-label-de">Zweite Aliyah · Vayikra 13:6–17 · Die zweite Sieben-Tage-Quarantäne, das Verblassen, die alte Tzaraat, das lebendige Fleisch — und die Wende zum Reinen</span></div>
+      <div class="instrument-note">[no percussion] [no drums] [no choir] [acoustic guitar — Bayat in steady contemplation, the long observation, the patience of the Kohen, generation-deep yearning fingerpicking, no percussion] Gitarre: Bayat in stetiger Kontemplation — das lange Sehen, die Geduld des Kohen, der weder verurteilt noch entschuldigt, sondern nur sieht, was wird.</div>
+      <div class="lyrics-block">
+        <div class="lyrics-he" dir="rtl">
+          <span class="line">וְרָאָה הַכֹּהֵן אֹתוֹ בַּיּוֹם הַשְּׁבִיעִי שֵׁנִית וְהִנֵּה כֵּהָה הַנֶּגַע וְלֹא־פָשָׂה הַנֶּגַע בָּעוֹר וְטִהֲרוֹ הַכֹּהֵן מִסְפַּחַת הִוא וְכִבֶּס בְּגָדָיו וְטָהֵר׃</span>
+          <span class="line">וְאִם־פָּשֹׂה תִפְשֶׂה הַמִּסְפַּחַת בָּעוֹר אַחֲרֵי הֵרָאֹתוֹ אֶל־הַכֹּהֵן לְטׇהֳרָתוֹ וְנִרְאָה שֵׁנִית אֶל־הַכֹּהֵן׃</span>
+          <span class="line">וְרָאָה הַכֹּהֵן וְהִנֵּה פָּשְׂתָה הַמִּסְפַּחַת בָּעוֹר וְטִמְּאוֹ הַכֹּהֵן צָרַעַת הִוא׃</span>
+          <span class="line">נֶגַע צָרַעַת כִּי תִהְיֶה בְּאָדָם וְהוּבָא אֶל־הַכֹּהֵן׃</span>
+          <span class="line">וְרָאָה הַכֹּהֵן וְהִנֵּה שְׂאֵת־לְבָנָה בָּעוֹר וְהִיא הָפְכָה שֵׂעָר לָבָן וּמִחְיַת בָּשָׂר חַי בַּשְׂאֵת׃</span>
+          <span class="line">צָרַעַת נוֹשֶׁנֶת הִוא בְּעוֹר בְּשָׂרוֹ וְטִמְּאוֹ הַכֹּהֵן לֹא יַסְגִּרֶנּוּ כִּי טָמֵא הוּא׃</span>
+          <span class="line">וְאִם־פָּרוֹחַ תִּפְרַח הַצָּרַעַת בָּעוֹר וְכִסְּתָה הַצָּרַעַת אֵת כׇּל־עוֹר הַנֶּגַע מֵרֹאשׁוֹ וְעַד־רַגְלָיו לְכׇל־מַרְאֵה עֵינֵי הַכֹּהֵן׃</span>
+          <span class="line">וְרָאָה הַכֹּהֵן וְהִנֵּה כִסְּתָה הַצָּרַעַת אֶת־כׇּל־בְּשָׂרוֹ וְטִהַר אֶת־הַנָּגַע כֻּלּוֹ הָפַךְ לָבָן טָהוֹר הוּא׃</span>
+          <span class="line">וּבְיוֹם הֵרָאוֹת בּוֹ בָּשָׂר חַי יִטְמָא׃</span>
+          <span class="line">וְרָאָה הַכֹּהֵן אֶת־הַבָּשָׂר הַחַי וְטִמְּאוֹ הַבָּשָׂר הַחַי טָמֵא הוּא צָרַעַת הוּא׃</span>
+          <span class="line">אוֹ כִי יָשׁוּב הַבָּשָׂר הַחַי וְנֶהְפַּךְ לְלָבָן וּבָא אֶל־הַכֹּהֵן׃</span>
+          <span class="line">וְרָאָהוּ הַכֹּהֵן וְהִנֵּה נֶהְפַּךְ הַנֶּגַע לְלָבָן וְטִהַר הַכֹּהֵן אֶת־הַנֶּגַע טָהוֹר הוּא׃</span>
+        </div>
+        <div class="lyrics-de">
+          <span class="line">(13:6) Und der Kohen soll ihn am siebten Tag ein zweites Mal besehen — und siehe, die Plage ist verblasst, und sie hat sich nicht in der Haut ausgebreitet: so soll der Kohen ihn rein erklären, ein Ausschlag ist es; und er soll seine Kleider waschen und rein sein.</span>
+          <span class="line">(13:7) Und wenn der Ausschlag sich tatsächlich in der Haut ausbreitet, nachdem er sich dem Kohen zur Reinigung gezeigt hat — so soll er sich ein zweites Mal dem Kohen zeigen.</span>
+          <span class="line">(13:8) Und der Kohen soll besehen — und siehe, der Ausschlag hat sich in der Haut ausgebreitet: so soll der Kohen ihn als unrein erklären, Tzaraat ist es.</span>
+          <span class="line">(13:9) Eine Tzaraat-Plage, wenn sie an einem Menschen wird — so soll er zum Kohen gebracht werden.</span>
+          <span class="line">(13:10) Und der Kohen soll besehen — und siehe, eine weiße Erhöhung in der Haut, und sie hat das Haar weiß verfärbt, und lebendiges Fleisch im Geschwür der Erhöhung —</span>
+          <span class="line">(13:11) eine alte Tzaraat ist es in der Haut seines Fleisches; und der Kohen soll ihn als unrein erklären — er soll ihn nicht einsperren, denn unrein ist er.</span>
+          <span class="line">(13:12) Und wenn die Tzaraat in der Haut ausbricht und die Tzaraat die ganze Haut der Plage bedeckt, von seinem Kopf bis zu seinen Füßen, vor jedem Sehen der Augen des Kohen —</span>
+          <span class="line">(13:13) und der Kohen soll besehen — und siehe, die Tzaraat hat sein ganzes Fleisch bedeckt: so soll er die Plage rein erklären; ganz hat sie sich weiß verfärbt: rein ist er.</span>
+          <span class="line">(13:14) Und am Tag, da lebendiges Fleisch an ihm erscheint — soll er unrein sein.</span>
+          <span class="line">(13:15) Und der Kohen soll das lebendige Fleisch besehen und ihn als unrein erklären; das lebendige Fleisch ist unrein, Tzaraat ist es.</span>
+          <span class="line">(13:16) Oder wenn das lebendige Fleisch zurückkehrt und sich in Weiß wendet — so soll er zum Kohen kommen.</span>
+          <span class="line">(13:17) Und der Kohen soll ihn besehen — und siehe, die Plage hat sich in Weiß gewendet: so soll der Kohen die Plage rein erklären, rein ist er.</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- ── ALIYAH 3 · שְׁלִישִׁי · Vayikra 13:18-23 ── -->
+    <div class="aliyah-block">
+      <div class="aliyah-label">עֲלִיָּה שְׁלִישִׁית — צָרַעַת הַשְּׁחִין · מַרְאֶה שָׁפָל מִן־הָעוֹר<span class="aliyah-label-de">Dritte Aliyah · Vayikra 13:18–23 · Die Tzaraat im Geschwür — wenn auf einer alten Heilung sich eine neue Plage erhebt</span></div>
+      <div class="instrument-note">[no percussion] [no drums] [no choir] [acoustic guitar — Bayat with subdued darkness, the wound that healed and now bears a sign, careful introspective fingerpicking, no percussion] Gitarre: Bayat mit gedämpfter Dunkelheit — die Wunde, die geheilt war und nun ein Zeichen trägt; leise, prüfend, kontemplativ.</div>
+      <div class="lyrics-block">
+        <div class="lyrics-he" dir="rtl">
+          <span class="line">וּבָשָׂר כִּי־יִהְיֶה בוֹ־בְעֹרוֹ שְׁחִין וְנִרְפָּא׃</span>
+          <span class="line">וְהָיָה בִּמְקוֹם הַשְּׁחִין שְׂאֵת לְבָנָה אוֹ בַהֶרֶת לְבָנָה אֲדַמְדָּמֶת וְנִרְאָה אֶל־הַכֹּהֵן׃</span>
+          <span class="line">וְרָאָה הַכֹּהֵן וְהִנֵּה מַרְאֶהָ שָׁפָל מִן־הָעוֹר וּשְׂעָרָהּ הָפַךְ לָבָן וְטִמְּאוֹ הַכֹּהֵן נֶגַע־צָרַעַת הִוא בַּשְּׁחִין פָּרָחָה׃</span>
+          <span class="line">וְאִם יִרְאֶנָּה הַכֹּהֵן וְהִנֵּה אֵין־בָּהּ שֵׂעָר לָבָן וּשְׁפָלָה אֵינֶנָּה מִן־הָעוֹר וְהִיא כֵהָה וְהִסְגִּירוֹ הַכֹּהֵן שִׁבְעַת יָמִים׃</span>
+          <span class="line">וְאִם־פָּשֹׂה תִפְשֶׂה בָּעוֹר וְטִמֵּא הַכֹּהֵן אֹתוֹ נֶגַע הִוא׃</span>
+          <span class="line">וְאִם־תַּחְתֶּיהָ תַּעֲמֹד הַבַּהֶרֶת לֹא פָשָׂתָה צָרֶבֶת הַשְּׁחִין הִוא וְטִהֲרוֹ הַכֹּהֵן׃</span>
+        </div>
+        <div class="lyrics-de">
+          <span class="line">(13:18) Und Fleisch, wenn an ihm in seiner Haut ein Geschwür wird, und es heilt —</span>
+          <span class="line">(13:19) und an der Stelle des Geschwürs wird eine weiße Erhöhung oder ein heller weiß-rötlicher Fleck — und er zeigt sich dem Kohen.</span>
+          <span class="line">(13:20) Und der Kohen soll besehen — und siehe, sein Aussehen ist niedriger als die Haut, und ihr Haar hat sich weiß verfärbt: so soll der Kohen ihn als unrein erklären; eine Tzaraat-Plage ist es, im Geschwür ausgebrochen.</span>
+          <span class="line">(13:21) Und wenn der Kohen sie besieht — und siehe, kein weißes Haar ist darin, und sie ist nicht niedriger als die Haut, und sie ist verblasst: so soll der Kohen ihn sieben Tage einsperren.</span>
+          <span class="line">(13:22) Und wenn sie sich in der Haut ausbreitet, so soll der Kohen ihn als unrein erklären, eine Plage ist es.</span>
+          <span class="line">(13:23) Und wenn der helle Fleck an seiner Stelle bleibt, sich nicht ausbreitet — der Brand des Geschwürs ist es; und der Kohen soll ihn rein erklären.</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- ── ALIYAH 4 · רְבִיעִי · Vayikra 13:24-28 ── -->
+    <div class="aliyah-block">
+      <div class="aliyah-label">עֲלִיָּה רְבִיעִית — צָרַעַת מִכְוַת־אֵשׁ<span class="aliyah-label-de">Vierte Aliyah · Vayikra 13:24–28 · Die Tzaraat im Brand vom Feuer — wenn auf einer Verbrennung sich ein heller Fleck zeigt</span></div>
+      <div class="instrument-note">[no percussion] [no drums] [no choir] [acoustic guitar — Bayat with restrained warmth, the burn-scar bearing a sign, restrained fingerpicking on lower strings, no percussion] Gitarre: Bayat mit zurückgehaltener Wärme — die Brandnarbe, die ein Zeichen trägt; tiefe Saiten, kontemplativ-zurückhaltend.</div>
+      <div class="lyrics-block">
+        <div class="lyrics-he" dir="rtl">
+          <span class="line">אוֹ בָשָׂר כִּי־יִהְיֶה בְעֹרוֹ מִכְוַת־אֵשׁ וְהָיְתָה מִחְיַת הַמִּכְוָה בַּהֶרֶת לְבָנָה אֲדַמְדֶּמֶת אוֹ לְבָנָה׃</span>
+          <span class="line">וְרָאָה אֹתָהּ הַכֹּהֵן וְהִנֵּה נֶהְפַּךְ שֵׂעָר לָבָן בַּבַּהֶרֶת וּמַרְאֶהָ עָמֹק מִן־הָעוֹר צָרַעַת הִוא בַּמִּכְוָה פָּרָחָה וְטִמֵּא אֹתוֹ הַכֹּהֵן נֶגַע צָרַעַת הִוא׃</span>
+          <span class="line">וְאִם יִרְאֶנָּה הַכֹּהֵן וְהִנֵּה אֵין־בַּבַּהֶרֶת שֵׂעָר לָבָן וּשְׁפָלָה אֵינֶנָּה מִן־הָעוֹר וְהִוא כֵהָה וְהִסְגִּירוֹ הַכֹּהֵן שִׁבְעַת יָמִים׃</span>
+          <span class="line">וְרָאָהוּ הַכֹּהֵן בַּיּוֹם הַשְּׁבִיעִי אִם־פָּשֹׂה תִפְשֶׂה בָּעוֹר וְטִמֵּא הַכֹּהֵן אֹתוֹ נֶגַע צָרַעַת הִוא׃</span>
+          <span class="line">וְאִם־תַּחְתֶּיהָ תַעֲמֹד הַבַּהֶרֶת לֹא־פָשְׂתָה בָעוֹר וְהִוא כֵהָה שְׂאֵת הַמִּכְוָה הִוא וְטִהֲרוֹ הַכֹּהֵן כִּי־צָרֶבֶת הַמִּכְוָה הִוא׃</span>
+        </div>
+        <div class="lyrics-de">
+          <span class="line">(13:24) Oder Fleisch, wenn an ihm in seiner Haut ein Brand vom Feuer wird — und das lebendige Fleisch des Brandes wird ein heller weiß-rötlicher oder weißer Fleck —</span>
+          <span class="line">(13:25) und der Kohen soll ihn besehen — und siehe, das Haar hat sich im hellen Fleck weiß verfärbt, und sein Aussehen ist tiefer als die Haut: Tzaraat ist es, im Brand ausgebrochen, und der Kohen soll ihn als unrein erklären, eine Tzaraat-Plage ist es.</span>
+          <span class="line">(13:26) Und wenn der Kohen sie besieht — und siehe, im hellen Fleck ist kein weißes Haar, und sie ist nicht niedriger als die Haut, und sie ist verblasst: so soll der Kohen ihn sieben Tage einsperren.</span>
+          <span class="line">(13:27) Und der Kohen soll ihn am siebten Tag besehen — wenn sie sich in der Haut ausbreitet, so soll der Kohen ihn als unrein erklären, eine Tzaraat-Plage ist es.</span>
+          <span class="line">(13:28) Und wenn der helle Fleck an seiner Stelle bleibt, sich nicht in der Haut ausgebreitet hat, und sie verblasst ist — eine Erhöhung des Brandes ist es, und der Kohen soll ihn rein erklären, denn der Brand des Brandes ist es.</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- ── ALIYAH 5 · חֲמִישִׁי · Vayikra 13:29-39 ── -->
+    <div class="aliyah-block">
+      <div class="aliyah-label">עֲלִיָּה חֲמִישִׁית — נֶתֶק הָרֹאשׁ אוֹ הַזָּקָן · בֹּהַק<span class="aliyah-label-de">Fünfte Aliyah · Vayikra 13:29–39 · Der Netek am Kopf und am Bart, das gelbe feine Haar — und der Bohak, der bloße Hellfleck-Ausschlag, der rein ist</span></div>
+      <div class="instrument-note">[no percussion] [no drums] [no choir] [acoustic guitar — Bayat with intricate fingerpicking, the careful examination of head-and-beard, the relief of the bohak which is pure, no percussion] Gitarre: Bayat mit fein-flechtenden Fingerpicking — die sorgfältige Prüfung von Kopf und Bart, und die Erleichterung des Bohak, der nur ein heller Ausschlag ist und keine Tzaraat.</div>
+      <div class="lyrics-block">
+        <div class="lyrics-he" dir="rtl">
+          <span class="line">וְאִישׁ אוֹ אִשָּׁה כִּי־יִהְיֶה בוֹ נָגַע בְּרֹאשׁ אוֹ בְזָקָן׃</span>
+          <span class="line">וְרָאָה הַכֹּהֵן אֶת־הַנֶּגַע וְהִנֵּה מַרְאֵהוּ עָמֹק מִן־הָעוֹר וּבוֹ שֵׂעָר צָהֹב דָּק וְטִמֵּא אֹתוֹ הַכֹּהֵן נֶתֶק הוּא צָרַעַת הָרֹאשׁ אוֹ הַזָּקָן הוּא׃</span>
+          <span class="line">וְכִי־יִרְאֶה הַכֹּהֵן אֶת־נֶגַע הַנֶּתֶק וְהִנֵּה אֵין־מַרְאֵהוּ עָמֹק מִן־הָעוֹר וְשֵׂעָר שָׁחֹר אֵין בּוֹ וְהִסְגִּיר הַכֹּהֵן אֶת־נֶגַע הַנֶּתֶק שִׁבְעַת יָמִים׃</span>
+          <span class="line">וְרָאָה הַכֹּהֵן אֶת־הַנֶּגַע בַּיּוֹם הַשְּׁבִיעִי וְהִנֵּה לֹא־פָשָׂה הַנֶּתֶק וְלֹא־הָיָה בוֹ שֵׂעָר צָהֹב וּמַרְאֵה הַנֶּתֶק אֵין עָמֹק מִן־הָעוֹר׃</span>
+          <span class="line">וְהִתְגַּלָּח וְאֶת־הַנֶּתֶק לֹא יְגַלֵּחַ וְהִסְגִּיר הַכֹּהֵן אֶת־הַנֶּתֶק שִׁבְעַת יָמִים שֵׁנִית׃</span>
+          <span class="line">וְרָאָה הַכֹּהֵן אֶת־הַנֶּתֶק בַּיּוֹם הַשְּׁבִיעִי וְהִנֵּה לֹא־פָשָׂה הַנֶּתֶק בָּעוֹר וּמַרְאֵהוּ אֵינֶנּוּ עָמֹק מִן־הָעוֹר וְטִהַר אֹתוֹ הַכֹּהֵן וְכִבֶּס בְּגָדָיו וְטָהֵר׃</span>
+          <span class="line">וְאִם־פָּשֹׂה יִפְשֶׂה הַנֶּתֶק בָּעוֹר אַחֲרֵי טׇהֳרָתוֹ׃</span>
+          <span class="line">וְרָאָהוּ הַכֹּהֵן וְהִנֵּה פָּשָׂה הַנֶּתֶק בָּעוֹר לֹא־יְבַקֵּר הַכֹּהֵן לַשֵּׂעָר הַצָּהֹב טָמֵא הוּא׃</span>
+          <span class="line">וְאִם־בְּעֵינָיו עָמַד הַנֶּתֶק וְשֵׂעָר שָׁחֹר צָמַח־בּוֹ נִרְפָּא הַנֶּתֶק טָהוֹר הוּא וְטִהֲרוֹ הַכֹּהֵן׃</span>
+          <span class="line">וְאִישׁ אוֹ־אִשָּׁה כִּי־יִהְיֶה בְעוֹר־בְּשָׂרָם בֶּהָרֹת בֶּהָרֹת לְבָנֹת׃</span>
+          <span class="line">וְרָאָה הַכֹּהֵן וְהִנֵּה בְעוֹר־בְּשָׂרָם בֶּהָרֹת כֵּהוֹת לְבָנֹת בֹּהַק הוּא פָּרַח בָּעוֹר טָהוֹר הוּא׃</span>
+        </div>
+        <div class="lyrics-de">
+          <span class="line">(13:29) Und ein Mann oder eine Frau, wenn an ihm eine Plage wird, am Kopf oder am Bart —</span>
+          <span class="line">(13:30) und der Kohen soll die Plage besehen — und siehe, ihr Aussehen ist tiefer als die Haut, und an ihr ist gelbes feines Haar: so soll der Kohen ihn als unrein erklären; ein Netek ist es, eine Tzaraat des Kopfes oder des Bartes.</span>
+          <span class="line">(13:31) Und wenn der Kohen die Netek-Plage besieht — und siehe, ihr Aussehen ist nicht tiefer als die Haut, und schwarzes Haar ist nicht in ihr: so soll der Kohen die Netek-Plage sieben Tage einsperren.</span>
+          <span class="line">(13:32) Und der Kohen soll die Plage am siebten Tag besehen — und siehe, der Netek hat sich nicht ausgebreitet, und an ihm war kein gelbes Haar, und das Aussehen des Netek ist nicht tiefer als die Haut.</span>
+          <span class="line">(13:33) Und er soll sich rasieren — den Netek aber soll er nicht rasieren —, und der Kohen soll den Netek ein zweites Mal sieben Tage einsperren.</span>
+          <span class="line">(13:34) Und der Kohen soll den Netek am siebten Tag besehen — und siehe, der Netek hat sich nicht in der Haut ausgebreitet, und sein Aussehen ist nicht tiefer als die Haut: so soll der Kohen ihn rein erklären; und er soll seine Kleider waschen und rein sein.</span>
+          <span class="line">(13:35) Und wenn der Netek sich tatsächlich in der Haut ausbreitet nach seiner Reinigung —</span>
+          <span class="line">(13:36) und der Kohen soll ihn besehen — und siehe, der Netek hat sich in der Haut ausgebreitet: der Kohen braucht das gelbe Haar nicht zu suchen, unrein ist er.</span>
+          <span class="line">(13:37) Und wenn in seinen Augen der Netek bestand und schwarzes Haar an ihm gewachsen ist — der Netek ist geheilt, rein ist er, und der Kohen soll ihn rein erklären.</span>
+          <span class="line">(13:38) Und ein Mann oder eine Frau, wenn auf der Haut ihres Fleisches helle Flecken sind, weiße helle Flecken —</span>
+          <span class="line">(13:39) und der Kohen soll besehen — und siehe, auf der Haut ihres Fleisches sind verblasste weiße helle Flecken: ein Bohak ist es, in der Haut ausgebrochen — rein ist er.</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- ── ALIYAH 6 · שִׁשִּׁי · Vayikra 13:40-54 ── -->
+    <div class="aliyah-block">
+      <div class="aliyah-label">עֲלִיָּה שִׁשִּׁית — קֵרֵחַ וְגִבֵּחַ · „טָמֵא טָמֵא יִקְרָא" · רֵאשִׁית צָרַעַת הַבֶּגֶד<span class="aliyah-label-de">Sechste Aliyah · Vayikra 13:40–54 · Der Kahle und der Vorne-Kahle, das schwerste Gesetz des Metzora — der einsame Ruf „Unrein! Unrein!" — und der Beginn der Kleider-Tzaraat</span></div>
+      <div class="instrument-note">[no percussion] [no drums] [no choir] [acoustic guitar — Bayat deepening into the climactic Metzora-call, building from contemplative to mournful weight, the lonely-camp-outside-tones, no percussion] Gitarre: Bayat vertieft sich zum Metzora-Ruf — von kontemplativer Stille zur klagenden Schwere, der einsame Klang außerhalb des Lagers.</div>
+      <div class="lyrics-block">
+        <div class="lyrics-he" dir="rtl">
+          <span class="line">וְאִישׁ כִּי יִמָּרֵט רֹאשׁוֹ קֵרֵחַ הוּא טָהוֹר הוּא׃</span>
+          <span class="line">וְאִם מִפְּאַת פָּנָיו יִמָּרֵט רֹאשׁוֹ גִּבֵּחַ הוּא טָהוֹר הוּא׃</span>
+          <span class="line">וְכִי־יִהְיֶה בַקָּרַחַת אוֹ בַגַּבַּחַת נֶגַע לָבָן אֲדַמְדָּם צָרַעַת פֹּרַחַת הִוא בְּקָרַחְתּוֹ אוֹ בְגַבַּחְתּוֹ׃</span>
+          <span class="line">וְרָאָה אֹתוֹ הַכֹּהֵן וְהִנֵּה שְׂאֵת־הַנֶּגַע לְבָנָה אֲדַמְדֶּמֶת בְּקָרַחְתּוֹ אוֹ בְגַבַּחְתּוֹ כְּמַרְאֵה צָרַעַת עוֹר בָּשָׂר׃</span>
+          <span class="line">אִישׁ־צָרוּעַ הוּא טָמֵא הוּא טַמֵּא יְטַמְּאֶנּוּ הַכֹּהֵן בְּרֹאשׁוֹ נִגְעוֹ׃</span>
+          <span class="line">וְהַצָּרוּעַ אֲשֶׁר־בּוֹ הַנֶּגַע בְּגָדָיו יִהְיוּ פְרֻמִים וְרֹאשׁוֹ יִהְיֶה פָרוּעַ וְעַל־שָׂפָם יַעְטֶה וְטָמֵא טָמֵא יִקְרָא׃</span>
+          <span class="line">כׇּל־יְמֵי אֲשֶׁר הַנֶּגַע בּוֹ יִטְמָא טָמֵא הוּא בָּדָד יֵשֵׁב מִחוּץ לַמַּחֲנֶה מוֹשָׁבוֹ׃</span>
+          <span class="line">וְהַבֶּגֶד כִּי־יִהְיֶה בוֹ נֶגַע צָרָעַת בְּבֶגֶד צֶמֶר אוֹ בְּבֶגֶד פִּשְׁתִּים׃</span>
+          <span class="line">אוֹ בִשְׁתִי אוֹ בְעֵרֶב לַפִּשְׁתִּים וְלַצָּמֶר אוֹ בְעוֹר אוֹ בְּכׇל־מְלֶאכֶת עוֹר׃</span>
+          <span class="line">וְהָיָה הַנֶּגַע יְרַקְרַק אוֹ אֲדַמְדָּם בַּבֶּגֶד אוֹ בָעוֹר אוֹ־בַשְּׁתִי אוֹ־בָעֵרֶב אוֹ בְכׇל־כְּלִי־עוֹר נֶגַע צָרַעַת הוּא וְהׇרְאָה אֶת־הַכֹּהֵן׃</span>
+          <span class="line">וְרָאָה הַכֹּהֵן אֶת־הַנָּגַע וְהִסְגִּיר אֶת־הַנֶּגַע שִׁבְעַת יָמִים׃</span>
+          <span class="line">וְרָאָה אֶת־הַנֶּגַע בַּיּוֹם הַשְּׁבִיעִי כִּי־פָשָׂה הַנֶּגַע בַּבֶּגֶד אוֹ־בַשְּׁתִי אוֹ־בָעֵרֶב אוֹ בָעוֹר לְכֹל אֲשֶׁר־יֵעָשֶׂה הָעוֹר לִמְלָאכָה צָרַעַת מַמְאֶרֶת הַנֶּגַע טָמֵא הוּא׃</span>
+          <span class="line">וְשָׂרַף אֶת־הַבֶּגֶד אוֹ אֶת־הַשְּׁתִי אוֹ אֶת־הָעֵרֶב בַּצֶּמֶר אוֹ בַפִּשְׁתִּים אוֹ אֶת־כׇּל־כְּלִי הָעוֹר אֲשֶׁר־יִהְיֶה בוֹ הַנָּגַע כִּי־צָרַעַת מַמְאֶרֶת הִוא בָּאֵשׁ תִּשָּׂרֵף׃</span>
+          <span class="line">וְאִם יִרְאֶה הַכֹּהֵן וְהִנֵּה לֹא־פָשָׂה הַנֶּגַע בַּבֶּגֶד אוֹ בַשְּׁתִי אוֹ בָעֵרֶב אוֹ בְּכׇל־כְּלִי־עוֹר׃</span>
+          <span class="line">וְצִוָּה הַכֹּהֵן וְכִבְּסוּ אֵת אֲשֶׁר־בּוֹ הַנָּגַע וְהִסְגִּירוֹ שִׁבְעַת־יָמִים שֵׁנִית׃</span>
+        </div>
+        <div class="lyrics-de">
+          <span class="line">(13:40) Und ein Mann, wenn sein Kopf kahl wird — kahl ist er, rein ist er.</span>
+          <span class="line">(13:41) Und wenn von der Front seines Gesichts her sein Kopf kahl wird — von vorne kahl ist er, rein ist er.</span>
+          <span class="line">(13:42) Und wenn an der Hinten-Kahlheit oder an der Vorder-Kahlheit eine weiß-rötliche Plage wird — eine ausbrechende Tzaraat ist es, an seiner Hinten-Kahlheit oder an seiner Vorder-Kahlheit.</span>
+          <span class="line">(13:43) Und der Kohen soll ihn besehen — und siehe, die Erhöhung der Plage ist weiß-rötlich, an seiner Hinten-Kahlheit oder an seiner Vorder-Kahlheit, wie das Aussehen einer Tzaraat der Haut des Fleisches —</span>
+          <span class="line">(13:44) ein mit Tzaraat geschlagener Mann ist er, unrein ist er; gänzlich unrein soll der Kohen ihn erklären, an seinem Kopf ist seine Plage.</span>
+          <span class="line">(13:45) Und der mit Tzaraat Geschlagene, an dem die Plage ist — seine Kleider sollen aufgerissen sein, und sein Kopf soll entblößt sein, und über den Bart soll er sich verhüllen, und „Unrein! Unrein!" soll er rufen.</span>
+          <span class="line">(13:46) Alle Tage, in denen die Plage an ihm ist, soll er unrein sein; unrein ist er — allein soll er sitzen, außerhalb des Lagers ist seine Wohnstätte.</span>
+          <span class="line">(13:47) Und das Kleid, wenn an ihm eine Tzaraat-Plage wird, an einem Wollkleid oder an einem Leinenkleid —</span>
+          <span class="line">(13:48) oder an einem Kettfaden oder an einem Schussfaden, an Leinen oder an Wolle, oder an Leder oder an irgendwelcher Lederarbeit —</span>
+          <span class="line">(13:49) und die Plage wird grünlich oder rötlich am Kleid oder am Leder oder am Kettfaden oder am Schussfaden oder an irgendwelchem Leder-Gerät — eine Tzaraat-Plage ist es, und sie soll dem Kohen gezeigt werden.</span>
+          <span class="line">(13:50) Und der Kohen soll die Plage besehen und die Plage sieben Tage einsperren.</span>
+          <span class="line">(13:51) Und er soll die Plage am siebten Tag besehen — denn die Plage hat sich am Kleid oder am Kettfaden oder am Schussfaden oder am Leder ausgebreitet, an allem, was aus dem Leder zur Arbeit gemacht wird: eine bösartige Tzaraat ist die Plage, unrein ist es.</span>
+          <span class="line">(13:52) Und er soll das Kleid oder den Kettfaden oder den Schussfaden, von Wolle oder von Leinen, oder jedes Lederwerkzeug, an dem die Plage ist, verbrennen — denn eine bösartige Tzaraat ist es; im Feuer soll es verbrannt werden.</span>
+          <span class="line">(13:53) Und wenn der Kohen sieht — und siehe, die Plage hat sich nicht am Kleid oder am Kettfaden oder am Schussfaden oder an irgendwelchem Leder-Gerät ausgebreitet —</span>
+          <span class="line">(13:54) so soll der Kohen befehlen, dass das, an dem die Plage ist, gewaschen werde, und ein zweites Mal sieben Tage eingesperrt werde.</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- ── ALIYAH 7 · שְׁבִיעִי · Vayikra 13:55-59 ── -->
+    <div class="aliyah-block">
+      <div class="aliyah-label">עֲלִיָּה שְׁבִיעִית — סִיּוּם צָרַעַת הַבֶּגֶד · „זֹאת תּוֹרַת נֶגַע־צָרַעַת"<span class="aliyah-label-de">Siebte Aliyah · Vayikra 13:55–59 · Der Schluss der Kleider-Tzaraat — und der bündelnde Schluss-Vers: „Dies ist die Tora der Tzaraat-Plage"</span></div>
+      <div class="instrument-note">[no percussion] [no drums] [no choir] [acoustic guitar — Bayat returning to its maternal opening, the closure of the parashah, fingerpicking softening to a sustained final note, no percussion] Gitarre: Bayat kehrt zurück zur mütterlichen Öffnung — der Schluss der Parashah, das Fingerpicking weicht in einen getragenen Schluss-Ton.</div>
+      <div class="lyrics-block">
+        <div class="lyrics-he" dir="rtl">
+          <span class="line">וְרָאָה הַכֹּהֵן אַחֲרֵי הֻכַּבֵּס אֶת־הַנֶּגַע וְהִנֵּה לֹא־הָפַךְ הַנֶּגַע אֶת־עֵינוֹ וְהַנֶּגַע לֹא־פָשָׂה טָמֵא הוּא בָּאֵשׁ תִּשְׂרְפֶנּוּ פְּחֶתֶת הִוא בְּקָרַחְתּוֹ אוֹ בְגַבַּחְתּוֹ׃</span>
+          <span class="line">וְאִם רָאָה הַכֹּהֵן וְהִנֵּה כֵּהָה הַנֶּגַע אַחֲרֵי הֻכַּבֵּס אֹתוֹ וְקָרַע אֹתוֹ מִן־הַבֶּגֶד אוֹ מִן־הָעוֹר אוֹ מִן־הַשְּׁתִי אוֹ מִן־הָעֵרֶב׃</span>
+          <span class="line">וְאִם־תֵּרָאֶה עוֹד בַּבֶּגֶד אוֹ־בַשְּׁתִי אוֹ־בָעֵרֶב אוֹ בְכׇל־כְּלִי־עוֹר פֹּרַחַת הִוא בָּאֵשׁ תִּשְׂרְפֶנּוּ אֵת אֲשֶׁר־בּוֹ הַנָּגַע׃</span>
+          <span class="line">וְהַבֶּגֶד אוֹ־הַשְּׁתִי אוֹ־הָעֵרֶב אוֹ־כׇל־כְּלִי הָעוֹר אֲשֶׁר תְּכַבֵּס וְסָר מֵהֶם הַנָּגַע וְכֻבַּס שֵׁנִית וְטָהֵר׃</span>
+          <span class="line">זֹאת תּוֹרַת נֶגַע־צָרַעַת בֶּגֶד הַצֶּמֶר אוֹ הַפִּשְׁתִּים אוֹ הַשְּׁתִי אוֹ הָעֵרֶב אוֹ כׇּל־כְּלִי־עוֹר לְטַהֲרוֹ אוֹ לְטַמְּאוֹ׃</span>
+        </div>
+        <div class="lyrics-de">
+          <span class="line">(13:55) Und der Kohen soll, nachdem die Plage gewaschen wurde, besehen — und siehe, die Plage hat ihr Aussehen nicht verändert, und die Plage hat sich nicht ausgebreitet: unrein ist es; im Feuer sollst du es verbrennen — eine Aushöhlung ist es an seiner Vorder- oder Hinterseite.</span>
+          <span class="line">(13:56) Und wenn der Kohen sieht — und siehe, die Plage ist verblasst, nachdem sie gewaschen wurde —, so soll er sie aus dem Kleid oder aus dem Leder oder aus dem Kettfaden oder aus dem Schussfaden reißen.</span>
+          <span class="line">(13:57) Und wenn sie noch im Kleid oder im Kettfaden oder im Schussfaden oder an irgendwelchem Leder-Gerät erscheint — eine ausbrechende ist es; im Feuer sollst du das, an dem die Plage ist, verbrennen.</span>
+          <span class="line">(13:58) Und das Kleid oder der Kettfaden oder der Schussfaden oder jedes Lederwerkzeug, das du wäschst — und die Plage geht von ihm ab —, soll ein zweites Mal gewaschen werden, und es ist rein.</span>
+          <span class="line">(13:59) Dies ist die Tora der Tzaraat-Plage am Wollkleid oder am Leinenkleid oder am Kettfaden oder am Schussfaden oder an jedem Leder-Gerät — um es rein oder um es unrein zu erklären.</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- ══ TIKKUN-BOX · TIKKUN-HADIBUR · DAS HERZ DER PARASHAH ══ -->
+    <div class="tikkun-box">
+      <div class="tikkun-header">
+        <div class="tikkun-title-he">מַעֲשֵׂה הַתִּיקּוּן — תִּקּוּן הַדִּבּוּר וְהַמִּדּוֹת הַסְּפָרַדִּי</div>
+        <div class="tikkun-title-de">Tikkun – Sephardische Praxis der Wort-Reinigung und der mütterlichen Schwellen-Heiligung</div>
+        <span class="tikkun-src">
+          וַיִּקְרָא י״ב:א׳–י״ג:נ״ט · רַמְבַּ״ם הִלְכוֹת טֻמְאַת צָרַעַת ט״ז:י׳ · עֲרָכִין ט״ז.: (שֶׁבַע אֲבוֹת הַנְּגָעִים) ·
+          רַמְבַּ״ם הִלְכוֹת מִילָה (לְעִנְיַן י״ב:ג׳) · רַמְחַ״ל מְסִלַּת יְשָׁרִים פֶּרֶק י״א (פְּרָטֵי מִדַּת הַנְּקִיּוּת — לְשׁוֹן הָרַע, רְכִילוּת,
+          הוֹנָאַת דְּבָרִים) · רַמְחַ״ל מְסִלַּת יְשָׁרִים פֶּרֶק י׳ (מִדַּת הַנְּקִיּוּת בִּכְלָל) · רשש (מָסֹרֶת הַקַּבָּלָה הַיְּרוּשַׁלְמִית
+          לְעִנְיַן בִּינָה כִּשְׁרֶשׁ הַדִּבּוּר) · אוֹר הַחַיִּים עַל וַיִּקְרָא י״ג · שַׁדַ״ל בְּפֵרוּשׁ עַל וַיִּקְרָא י״ב:ז׳ וְעַל וַיִּקְרָא י״ג ·
+          בֶּן אִישׁ חַי שָׁנָה רִאשׁוֹנָה פָּרָשַׁת תַזְרִיעַ (פְּתִיחָה וְהִלְכוֹת נְטִילַת יָדַיִם — חִבּוּר חִיצוֹנִי לִפְנִימִי) ·
+          כַּף הַחַיִּים עַל אוֹרַח חַיִּים קנ״ח (נְטִילַת יָדַיִם)
+          <br><br>
+          Vayikra 12:1–13:59 · Rambam Hilchot Tum'at Tzaraat 16:10 · Erchin 16a (sieben Wurzeln der Nega'im) ·
+          Rambam Hilchot Milah (zu 12:3) · Ramchal Mesillat Yescharim Perek 11 (Pratei Midat HaNakiyut — Lashon HaRa,
+          Rechilut, Honaat Devarim) · Ramchal Mesillat Yescharim Perek 10 (Midat HaNakiyut allgemein) · Rashash
+          (Yerushalmische Kabbala-Tradition zur Verbindung Binah-Wurzel-des-Wortes) · Or HaChaim auf Vayikra 13 ·
+          Shadal Pirusch zu Vayikra 12:7 und zu Vayikra 13 · Ben Ish Chai Shanah Rishona Parashat Tazria
+          (Petichah und Hilchot Netilat Yadayim — die äußere Reinigung als Bild der inneren) ·
+          Kaf HaChaim auf Orach Chaim 158 (Netilat Yadayim).
+        </span>
+      </div>
+      <div class="tikkun-body">
+        <strong>Sephardische Praxis:</strong> Tazria öffnet zwei Schwellen, die in der sephardischen Tradition immer
+        zusammen gelesen werden: die Schwelle der <em>Yoledet</em> und die Schwelle des <em>Metzora</em>.
+        Beide sind <em>Binah</em>-Schwellen — die Sefirah des Verstehens, des mütterlichen Tragens, des Ortes,
+        an dem das Wort empfangen, geformt und freigegeben wird. <strong>Die Yoledet</strong> bringt nach der
+        Geburt — sieben Tage Niddah und dreiunddreißig Tage Damei Tohorah für einen Knaben (zwei Wochen und
+        sechsundsechzig Tage für ein Mädchen) — ein Korban Olah und ein Korban Chatat. Schadal in seinem
+        <em>Pirusch zu Vayikra 12:7</em> bemerkt pschat-präzise: das Korban der Yoledet ist nicht eine Bitte,
+        keine Geburt mehr zu erleben, sondern eine Bitte um Schutz <em>in der Stunde der Geburt</em> — denn
+        das Blut der Gebärenden ist ein Zeichen der Lebensgefahr, und jede Yoledet steht in einer Schwelle
+        zwischen Leben und Tod. Das Korban ist ein <em>Dank-und-Bitte-Akt</em> der Heimkehr aus der Lebensgefahr
+        ins Heiligtum. <strong>Die Tzaraat</strong>, wie Rambam in <em>Hilchot Tum'at Tzaraat 16:10</em>
+        ausdrücklich festhält, ist <em>nicht</em> eine natürliche Krankheit — sie ist ein <em>Zeichen und
+        Wunder</em>, das in Israel auftrat, um vor allem vor Lashon HaRa zu warnen. Der Talmud Bavli
+        (<em>Erchin 16a</em>) zählt die sieben Wurzeln, aus denen Nega'im hervorgehen können — Lashon HaRa
+        steht an der Spitze, gefolgt von Blutvergießen, falschem Eid, sexueller Übertretung, Hochmut, Diebstahl
+        und Engherzigkeit. Schadal in seinem <em>Pirusch zu Vayikra 13</em> betont eine ergänzende
+        pschat-Pointe: in der Anschauung der Alten war jede Haut-Veränderung ein Zeichen göttlichen Tadels,
+        und die Tora hat diese Anschauung pädagogisch verwendet — sie schickt den Tzaraat-Träger in
+        Quarantäne, damit der Schaden seiner Worte für ihn selbst und für die Gemeinschaft <em>sichtbar</em>
+        wird. Die Tzaraat ist also nicht magische Strafe, sondern öffentliche Erziehung des Mundes durch
+        die Haut. <em>Ramchal in <strong>Mesillat Yescharim Perek 11</strong></em> verankert diese Tora in
+        der Mussar-Architektur seines Sefer: Perek 11 — die Detailfassung der Mittel-Stufe der
+        <em>Nakiyut</em> (Reinheit) — behandelt nach Diebstahl und sexueller Übertretung ausführlich die
+        Sünden des Mundes: <em>Honaat Devarim</em> (verbale Kränkung — größer noch als Honaat Mamon, sagen
+        die Weisen), <em>Halbanat Panim</em> (öffentliche Beschämung — der den Nächsten in der Öffentlichkeit
+        bleicht hat keinen Anteil an der kommenden Welt, Pirkei Avot 3), <em>Rechilut</em> und
+        <em>Lashon HaRa</em> in all ihren Verzweigungen. Ramchal lehrt: kein Mensch ist frei von
+        Übertretungen des Mundes — die sephardische Reinigung ist nicht die einmalige große Bekehrung,
+        sondern die <em>tägliche Wachsamkeit</em>, das tägliche Sich-Anschauen, das tägliche
+        Korrektur-Gespräch mit dem eigenen Gewissen. <em>Or HaChaim</em> verbindet die Tzaraat-Quarantäne
+        mit der Geburts-Quarantäne der Yoledet: beide schicken den Menschen für eine begrenzte Zeit in eine
+        Schwelle der Heiligung — die Yoledet zwischen Niddah-Bett und Heiligtum, der Metzora außerhalb des
+        Lagers — und beide kehren <em>gereinigt</em> zurück. Das ist die <em>Binah</em>-Logik: alles
+        Wesentliche im Leben Israels braucht eine <em>Quarantäne</em>, eine geschützte Spanne der
+        Verlangsamung, in der das Erlebte verstanden, das Gesagte überprüft, das Werdende getragen wird.
+        Die <em>sephardisch-Yerushalmische Kabbala-Tradition</em> nach Rashash sieht in der Sefirah Binah die
+        Wurzel des Wortes selbst — Binah ist <em>imma ila'ah</em>, die obere Mutter, aus der die Worte
+        geboren werden. Wer das Wort verletzt, verletzt die Mutter aller Worte; und die Tzaraat zeigt diese
+        Wunde an der Haut. <strong>Ben Ish Chai</strong> in <em>Shanah Rishona, Parashat Tazria</em> wählt
+        — und das ist eine erstaunliche pädagogische Wahl — als Halacha-Schwerpunkt für die Tazria-Woche
+        die <em>Hilchot Netilat Yadayim</em>, die Gesetze des Hände-Waschens vor dem Brot. Der Ben Ish Chai
+        eröffnet in seiner Petichah mit Pirkei Avot 1:18: <em>„Auf drei Dingen steht die Welt: auf der
+        Wahrheit, auf dem Recht und auf dem Schalom"</em> — und entwickelt: Schalom kommt durch die
+        rabbinischen Sayagim, durch die feinen Dichtungen, die das Volk vor den Anklägern schützen. Die
+        Netilat Yadayim ist sephardisch nach Rashash mit drei Aufgüssen pro Hand zu vollziehen, mit drei
+        Reibungen pro Hand, mit Kawanot der zehn Sefirot in den zehn Fingern, mit der Erhebung der Hände bis
+        zur Höhe des Kopfes. Das ist Tazria-Halacha: die <em>äußere</em> Reinigung der Hände als Bild und
+        Vor-Übung der <em>inneren</em> Reinigung der Worte, die durch die Hände gesendet (geschrieben,
+        getippt, getan) und durch den Mund gesprochen werden. <em>Kaf HaChaim auf Orach Chaim 158</em>
+        (Rabbi Yaakov Chaim Sofer) bestätigt für alle Eidot HaMizrach — Aleppo, Marokko, Yemen, Yerushalayim,
+        Bagdad — diese sephardische Hand-Wasch-Disziplin als tägliche Tikkun-Praxis. Wer in Tazria nur
+        die Tzaraat-Halachot liest und die Hilchot Netilat Yadayim übersieht, hat die Parashah halbiert.
+        <br><br>
+        <strong>Praktische Handlung:</strong>
+        (1) <em>Erev-Schabbat-Bilanz nach Ramchal — drei + drei</em>: Sephardischer Marokko-Yerushalayim-Brauch
+        in der Linie von Mesillat Yescharim Perek 11. Vor Mincha am Erev Schabbat (oder beim Beginn der
+        Schabbat-Vorbereitung am Donnerstagabend) nimm einen ruhigen Moment und identifiziere konkret:
+        (a) <em>drei Aussagen, die du in dieser Woche nicht hättest sagen sollen</em> — Lashon HaRa,
+        Rechilut, Honaat Devarim, Halbanat Panim — und benenne den Menschen oder die Situation;
+        (b) <em>drei Aussagen, die du in dieser Woche hättest sagen sollen und nicht gesagt hast</em> —
+        ein Lob, ein Trost, eine Verteidigung gegen das schlechte Reden anderer, ein Wort der Schalom-Stiftung.
+        Schreibe sie nicht auf (das könnte später die Geheimhaltung gefährden) — sage sie innerlich vor
+        Adonai aus, und füge die Bitte hinzu: <em>„Möge meine Zunge in der kommenden Woche das Bild meiner
+        Schwester, meines Bruders nicht beschädigen."</em> Diese Praxis konkretisiert Mesillat Yescharim
+        Perek 11 in eine wöchentliche Disziplin.
+        (2) <em>Tikkun-HaDibur-Kawanah am Birkat HaMazon, vierte Brachah „HaTov VeHaMetiv"</em>: Sephardischer
+        Brauch (Eidot HaMizrach). Wenn du beim Birkat HaMazon zur vierten, rabbinischen Brachah
+        <em>„Baruch atah Adonai... haTov vehaMetiv"</em> kommst, halte einen Atemzug ein und setze
+        innerlich die Kawanah: <em>„Adonai, der Gut ist und Gutes wirkt — möge mein Reden heute
+        Gutes wirken; möge mein Mund ein Werkzeug deines HaTov VeHaMetiv werden."</em> Damit wird die
+        rabbinische Brachah zu einem täglichen Tikkun-HaDibur-Anker.
+        (3) <em>Ben-Ish-Chai-Tazria — Hilchot Netilat Yadayim mit Tikkun-HaDibur-Kawanah</em>: In der
+        sephardisch-Bagdadi-Yerushalmi-Tradition ist die Netilat Yadayim vor dem Brot nicht ein hygienischer
+        Akt, sondern ein Sefirot-Tikkun. Sephardisch nach Rashash: drei Aufgüsse rechts–links, drei Reibungen
+        rechts–links, Erhebung der Hände auf Kopfhöhe vor der Brachah „al netilat yadayim". Füge in der
+        Tazria-Woche (und ideal das ganze Jahr hindurch) bei der Erhebung der Hände eine zusätzliche Kawanah
+        ein: <em>„Wie meine Hände äußerlich gereinigt werden, so möge meine Zunge — das Werkzeug, das die
+        Hände zur Tat lenkt — von Lashon HaRa und Rechilut gereinigt werden."</em> Das ist ein direkter
+        Ben-Ish-Chai-Tazria-Tikkun.
+        (4) <em>Schadal-Pirusch zu Vayikra 12 + 13 am Erev Schabbat Tazria</em>: Italienisch-sephardischer
+        Brauch. Lese am Donnerstagabend oder am Freitagmorgen Schadals Pirusch zu Vayikra 12:1-13:59 mit
+        besonderer Aufmerksamkeit auf seine beiden zentralen Pointen — (a) das Yoledet-Korban als Bitte um
+        Schutz in der realen Lebensgefahr der Geburt (gegen jede Idealisierung der Geburt als „rein
+        spirituell"); (b) die Tzaraat als pädagogisch genutztes Zeichen göttlichen Tadels, nicht als
+        magische Krankheit. Diese pschat-Klarheit verhindert sephardisch zwei Fehler: das Über-Spiritualisieren
+        der Frauen-Halacha und das Mystifizieren der Tzaraat.
+        (5) <em>Tikkun für die Yoledet — sephardischer Schalom-Zachar / Schalom-Bat-Brauch</em>:
+        Sephardisch (Aleppo, Marokko, Yerushalayim) wird in der ersten Schabbat-Nacht nach der Geburt eines
+        Sohnes ein Schalom-Zachar-Treffen gehalten — mit süßen Speisen, Tehillim und Tora-Wort, oft mit
+        Vayikra 12:3 (<em>„uvayom hashemini yimol"</em>) als Eröffnungsvers für den nahenden achten Tag.
+        Bei einer Tochter gibt es in vielen sephardischen Gemeinden den parallelen <em>Schalom Bat</em> oder
+        <em>Zeved HaBat</em>-Brauch. Wer als Familie mit einer Geburt steht, halte in der ersten
+        Schabbat-Nacht ein kurzes Lehr-Wort über Tazria — die Yoledet als Schwellen-Heilige, das Kind als
+        Empfänger der Binah-Mutter.
+        (6) <em>Mesillat Yescharim Perek 11 — monatliches Lese-Pensum</em>: Sephardischer Standard
+        (besonders zwischen Rosch Chodesch Elul und Yom Kippur, aber empfohlen ganzjährig): einmal im Monat
+        das ganze Perek 11 von Mesillat Yescharim lesen — mit besonderer Aufmerksamkeit auf den Abschnitt
+        über Lashon HaRa und Honaat Devarim. Markiere konkret zwei oder drei Stellen, an denen du in deinem
+        Leben am meisten Mühe hast, und bete am Schluss: <em>„Möge meine Mühe um Reinheit wachsen, möge
+        meine Wachsamkeit über mein Reden tief werden, möge meine Mutter, die Binah, mich tragen."</em>
+        Das ist die monatliche Vertiefung des wöchentlichen Erev-Schabbat-Tikkuns.
+        (7) <em>Halbanat-Panim-Schutz — drei Atemzüge vor jeder öffentlichen Kritik</em>: Sephardisch
+        (Chazon Ovadia / Yabia Omer mehrere Bände dazu): das Verbot, einen anderen Menschen in der
+        Öffentlichkeit zu beschämen, ist halachisch so streng, dass die Weisen es mit dem Vergießen von Blut
+        vergleichen (Bava Metzia 58b). Konkrete Praxis: bevor du in einem öffentlichen Gespräch (Familie,
+        Schul, Beruf, online) etwas Kritisches über einen Anwesenden oder Abwesenden sagen willst,
+        halte drei Atemzüge ein und frage dich: (a) Ist es <em>wahr</em>? (b) Ist es <em>nötig</em>?
+        (c) Kann es <em>privat</em> gesagt werden statt öffentlich? Wenn auch nur eine Antwort negativ ist
+        — schweige oder verschiebe das Wort in einen privaten Rahmen.
+        (8) <em>Brit-Milah-Tikkun an Vayikra 12:3</em>: Sephardisch (Eidot HaMizrach) — der achte Tag der
+        Beschneidung ist ein <em>Binah</em>-Tag, denn er steht für „eins über sieben" — über die natürliche
+        Sieben-Tage-Woche der Schöpfung hinaus, in den Bereich der mütterlichen Tora. Wer als Vater oder
+        Mutter, als Sandak oder als Teilnehmer einer Brit Milah anwesend ist, lege in dem Augenblick, in
+        dem das Kind in den Bund eintritt, eine Kawanah ein: <em>„Möge mein Mund — der ich zu diesem Bund
+        spreche — ebenso heilig sein wie das Bundes-Zeichen, das jetzt im Fleisch dieses Kindes geschieht.
+        Mein Reden sei beschnitten von Lashon HaRa, mein Schweigen sei eine Mutter-Tora für die nächste
+        Generation."</em>
+      </div>
+      <div class="tikkun-tags">
+        <span class="tikkun-tag">תַזְרִיעַ</span>
+        <span class="tikkun-tag">צָרַעַת</span>
+        <span class="tikkun-tag">לָשׁוֹן הָרַע</span>
+        <span class="tikkun-tag">בִּינָה</span>
+        <span class="tikkun-tag">תִּקּוּן הַדִּבּוּר</span>
+      </div>
+    </div>
+
+    <!-- ══ SCHI · KLIMAX-MOMENT — VAYIKRA 13:45-46 ══ -->
+    <div class="climax-box">
+      <div class="climax-label">שִׂיא · ff · Klimax-Vers der Parashah · der einsame Ruf</div>
+      <div class="instrument-note">[no percussion] [no drums] [no choir] [acoustic guitar — Bayat rising to forte then breaking into the lonely voice of the Metzora, the camp-outside cry, no percussion] Gitarre: Bayat steigt zum Forte und bricht in die einsame Stimme des Metzora — der Ruf außerhalb des Lagers.</div>
+      <div class="climax-verse-he">וְהַצָּרוּעַ אֲשֶׁר־בּוֹ הַנֶּגַע · בְּגָדָיו יִהְיוּ פְרֻמִים · וְרֹאשׁוֹ יִהְיֶה פָרוּעַ · וְעַל־שָׂפָם יַעְטֶה · וְטָמֵא טָמֵא יִקְרָא ׃ בָּדָד יֵשֵׁב מִחוּץ לַמַּחֲנֶה מוֹשָׁבוֹ</div>
+      <div class="climax-verse-de">„Und der mit Tzaraat Geschlagene, an dem die Plage ist — seine Kleider sollen aufgerissen sein, und sein Kopf soll entblößt sein, und über den Bart soll er sich verhüllen, und ‚Unrein! Unrein!' soll er rufen — allein soll er sitzen, außerhalb des Lagers ist seine Wohnstätte."</div>
+      <div class="climax-src">וַיִּקְרָא י״ג:מ״ה–מ״ו · רַמְבַּ״ם הִלְכוֹת טֻמְאַת צָרַעַת ט״ז:י׳ · עֲרָכִין ט״ז.</div>
+    </div>
+
+    <!-- ══ KODA · WHISPER · VAYIKRA 13:6c ══ -->
+    <div class="coda-box">
+      <div class="coda-label">קוֹדָה · pp · die mütterliche Wieder-Reinigung im Hauch</div>
+      <div class="instrument-note">[no percussion] [no drums] [no choir] [acoustic guitar — Bayat dissolving into a single sustained low note, the maternal whisper of return, almost inaudible, no percussion] Gitarre: Bayat löst sich in einen einzigen getragenen Tiefton — der mütterliche Hauch der Heimkehr, kaum hörbar.</div>
+      <div class="coda-whisper">
+        <strong>וְכִבֶּס</strong> בְּגָדָיו — <strong>וְטָהֵר</strong></div></div>
+
+  </section>
+
+  <!-- ══ FOOTER ══ -->
+  <div class="footer">
+    <p class="footer-he">פָּרָשַׁת תַזְרִיעַ · בִּינָה · מַקָּאם בַּיָאת · תִּקּוּן הַדִּבּוּר · וְכִבֶּס בְּגָדָיו וְטָהֵר</p>
+    <p class="footer-chain">
+      וַיִּקְרָא י״ב:א׳–י״ג:נ״ט · נוּסַּח צָדוֹק (רשש) · עֵדוֹת הַמִּזְרָח · הַפָּרָשָׁה הָרְבִיעִית בְּסֵפֶר וַיִּקְרָא
+    </p>
+    <p class="footer-de">
+      Quellen: <strong>Tanach</strong> (Vayikra 12:1–13:59 — Tora-Text 1:1, mit Tetragrammaton-Konvertierung
+      durchgängig als אֲדֹנָי) · <strong>Rambam · Mishneh Torah</strong> (Hilchot Tum'at Tzaraat 16:10 — die
+      Tzaraat als Zeichen und Wunder, vor allem zur Warnung vor Lashon HaRa; sowie Hilchot Milah zu 12:3) ·
+      <strong>Talmud Bavli · Erchin 16a</strong> (die sieben Wurzeln, aus denen Tzaraat hervorgeht — Lashon
+      HaRa, Bluts-Vergießen, falscher Eid, sexuelle Übertretung, Hochmut, Diebstahl, Engherzigkeit) ·
+      <strong>Talmud Bavli · Bava Metzia 58b</strong> (Halbanat Panim als Bluts-Vergießens-äquivalent;
+      Honaat Devarim größer als Honaat Mamon) · <strong>Ramchal · Mesillat Yescharim Perek 11</strong>
+      („Bi-Pratei Midat HaNakiyut" — die Detail-Tora der Reinheit, mit ausführlicher Behandlung von
+      Diebstahl, sexueller Übertretung, Lashon HaRa, Rechilut, Honaat Devarim, Halbanat Panim, Chillul HaSchem
+      — als Mussar-Anker für die wöchentliche Tikkun-HaDibur-Praxis) · <strong>Ramchal · Mesillat Yescharim
+      Perek 10</strong> (Midat HaNakiyut allgemein als Stufe nach Zehirut und Zerizut) · <strong>Rashash —
+      Yerushalmische Kabbala-Tradition</strong> (die Sefirah Binah als <em>Imma Ila'ah</em>, die obere
+      Mutter, in der das Wort empfangen und freigegeben wird; die Tzaraat als Wunde an dieser
+      mütterlichen Wort-Wurzel) · <strong>Or HaChaim auf Vayikra 12-13</strong> (die Verbindung der Yoledet-
+      Quarantäne und der Metzora-Quarantäne als parallele Schwellen-Heiligungen) · <strong>Schadal · Pirusch
+      al haTora</strong> (Rabbi Schmuel David Luzzatto, Padua — zwei zentrale Glossen: zu Vayikra 12:7
+      die Yoledet-Korban als Bitte um Schutz in der realen Lebensgefahr der Geburt, und zu Vayikra 13 die
+      Tzaraat als pädagogisch genutztes Zeichen göttlichen Tadels, gegen jede Über-Spiritualisierung) ·
+      <strong>Ben Ish Chai · Shanah Rishona Parashat Tazria</strong> (Petichah über Pirkei Avot 1:18:
+      die Welt steht auf Wahrheit, Recht und Schalom; und Hilchot Netilat Yadayim mit Rashash-Standard:
+      drei Aufgüsse, drei Reibungen, Erhebung der Hände auf Kopfhöhe — die äußere Reinigung als
+      Tikkun-HaDibur-Vor-Übung) · <strong>Kaf HaChaim auf Orach Chaim 158</strong> (Rabbi Yaakov Chaim Sofer —
+      sephardische Halacha der Netilat Yadayim für alle Eidot HaMizrach: Aleppo, Marokko, Yemen,
+      Yerushalayim, Bagdad) · <strong>Yabia Omer / Chazon Ovadia</strong> (Rabbi Ovadia Yosef Z'L —
+      sephardische moderne Halacha zu Halbanat Panim, Honaat Devarim und Tikkun-HaDibur-Praxis) ·
+      <strong>Sephardischer Schalom-Zachar / Schalom-Bat-Brauch</strong> (Aleppo, Marokko, Yerushalayim) ·
+      <strong>Pirkei Avot 1:18</strong> („Auf drei Dingen steht die Welt: Wahrheit, Recht und Schalom") als
+      Petichah-Anker des Ben Ish Chai für Tazria.
+      <br><br>
+      <strong>Tradition:</strong> Sephardisch · Nussach Zadoq (Rashash) · Maqam-Tradition aus Aleppo,
+      Yerushalayim, Marokko, Yemen, Bagdad · Tetragrammaton durchgängig als אֲדֹנָי · Maschiach ben David ·
+      Doppelt geprüfte Quellen · Tora-Text 1:1 unverändert · Erstellt Mai 2026 · Sefer HaParashot bemo
+      Maqam · 4. Lied Sefer Vayikra · Binah · Maqam Bayat · ~58 BPM rubato · תִּקּוּן הַדִּבּוּר.
+    </p>
+    <div class="footer-amen">אָמֵן · יִבָּנֶה הַמִּקְדָּשׁ בִּמְהֵרָה בְיָמֵינוּ · יָבוֹא מָשִׁיחַ בֶּן דָּוִד · אָמֵן</div>
+  </div>
+
+</div>
+
+
+</body></html>

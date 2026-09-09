@@ -1,0 +1,717 @@
+<!DOCTYPE html>
+<html lang="he-IL"><head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>פָּרָשַׁת מְצֹרָע · וַיִּקְרָא י״ד:א׳–ט״ו:ל״ג · הוֹד · מַקָּאם בַּיָאת · Sephardische Tora-Vertonung</title>
+  <link href="https://fonts.googleapis.com/css2?family=Frank+Ruhl+Libre:wght@300;400;700;900&amp;family=EB+Garamond:ital,wght@0,400;0,600;1,400;1,600&amp;family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&amp;display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg:#060808; --deep:#0A0E0E; --layer:#101414; --card:#0C1010;
+      --parchment:#f2e8d0; --parch-dim:#c8b898;
+      --ivory:#f0e8d8; --ivory-dim:#a89878;
+      --silver:#c8d4e0; --silver-dim:#7a8290;
+      --text:#a0a89c;
+      /* SEFER VAYIKRA — Königlich-Gold */
+      --sefer:#C8A030; --sefer-lt:#F0CC60; --sefer-dim:#8B7020;
+      --sefer-bg:rgba(200,160,48,.08); --sefer-bdr:rgba(200,160,48,.36); --sefer-glow:rgba(240,204,96,.20);
+      /* METZORA · HOD · BAYAT — Demuts-Bronze (warm, restitutiv, etwas wärmer als Tazria) */
+      --mtz:#A88068; --mtz-lt:#C8A088; --mtz-dim:#785840;
+      --mtz-bg:rgba(168,128,104,.08); --mtz-bdr:rgba(168,128,104,.36); --mtz-glow:rgba(200,160,136,.22);
+      /* MAQAM-FARBEN */
+      --maqam-saba:#B0904A; --maqam-hijaz:#C85050; --maqam-bayat:#A07850;
+      --maqam-rast:#C8A860; --maqam-ajam:#7A9050; --maqam-nahawand:#6080A0;
+    }
+    *,*::before,*::after { margin:0; padding:0; box-sizing:border-box; }
+    html { scroll-behavior:smooth; }
+    body { background:var(--bg); color:var(--silver); font-family:'EB Garamond',serif; overflow-x:hidden; line-height:1.85; padding:40px 20px 80px; }
+    body::before { content:''; position:fixed; inset:0; pointer-events:none; z-index:0;
+      background: radial-gradient(ellipse at 18% 12%, rgba(200,160,48,.10) 0%, transparent 48%),
+                  radial-gradient(ellipse at 82% 28%, rgba(168,128,104,.12) 0%, transparent 45%),
+                  radial-gradient(ellipse at 12% 68%, rgba(168,128,24,.08) 0%, transparent 45%),
+                  radial-gradient(ellipse at 88% 82%, rgba(200,160,136,.10) 0%, transparent 42%),
+                  radial-gradient(ellipse at 50% 50%, rgba(20,16,8,.82) 0%, transparent 70%); }
+    body::after { content:''; position:fixed; inset:0; pointer-events:none; z-index:0;
+      background-image:
+        radial-gradient(1px 1px at 8% 10%, rgba(240,204,96,.34) 0%, transparent 100%),
+        radial-gradient(1px 1px at 48% 5%, rgba(200,160,136,.30) 0%, transparent 100%),
+        radial-gradient(1px 1px at 82% 16%, rgba(224,188,80,.30) 0%, transparent 100%),
+        radial-gradient(1px 1px at 25% 42%, rgba(216,176,72,.28) 0%, transparent 100%),
+        radial-gradient(1px 1px at 68% 58%, rgba(200,160,136,.28) 0%, transparent 100%),
+        radial-gradient(1.5px 1.5px at 12% 75%, rgba(208,172,64,.32) 0%, transparent 100%),
+        radial-gradient(1px 1px at 90% 78%, rgba(200,160,136,.30) 0%, transparent 100%),
+        radial-gradient(1px 1px at 35% 88%, rgba(224,188,80,.26) 0%, transparent 100%); }
+    .wrap { max-width:1080px; margin:0 auto; position:relative; z-index:1; }
+
+    /* PAGE HEADER */
+    .page-header { text-align:center; margin-bottom:80px; padding-bottom:40px; border-bottom:1px solid var(--sefer-bdr); position:relative; }
+    .page-header::after { content:'✦ ✡ ✦'; position:absolute; bottom:-14px; left:50%; transform:translateX(-50%); background:var(--bg); padding:0 20px; color:var(--sefer); font-size:.62em; letter-spacing:.55em; }
+    .eyebrow { font-family:'Cormorant Garamond',serif; font-style:italic; font-size:.78em; color:var(--sefer-lt); letter-spacing:.28em; text-transform:uppercase; margin-bottom:18px; opacity:.85; }
+    .sefer-letter { font-family:'Frank Ruhl Libre',serif; font-size:1.40em; color:var(--sefer); font-weight:900; display:inline-block; margin-bottom:6px; text-shadow:0 0 30px var(--sefer-glow); letter-spacing:.04em; }
+    .page-title-he { font-family:'Frank Ruhl Libre',serif; font-size:3.2em; font-weight:900; color:var(--ivory); direction:rtl; letter-spacing:.05em; text-shadow:0 0 80px var(--sefer-glow), 0 0 140px var(--mtz-glow); margin-bottom:8px; line-height:1.15; }
+    .page-subtitle-he { font-family:'Frank Ruhl Libre',serif; font-size:1.16em; color:var(--sefer-lt); direction:rtl; margin-bottom:10px; letter-spacing:.06em; }
+    .page-title-de { font-family:'Cormorant Garamond',serif; font-style:italic; font-size:1.14em; color:var(--silver-dim); margin-bottom:22px; }
+    .page-desc { font-size:1.0em; color:var(--text); max-width:780px; margin:0 auto; line-height:1.95; }
+    .page-desc strong { color:var(--ivory-dim); }
+    .page-desc em { color:var(--mtz-lt); font-style:italic; }
+
+    /* SONG SECTION */
+    .song-section { margin-bottom:90px; padding-bottom:70px; border-bottom:1px dashed var(--sefer-bdr); }
+    .song-header { display:flex; flex-wrap:wrap; align-items:flex-start; gap:20px; margin-bottom:40px; padding:24px 26px; background:var(--layer); border:1px solid var(--mtz-bdr); border-radius:10px; }
+    .song-num { font-family:'Frank Ruhl Libre',serif; font-size:2.6em; font-weight:900; direction:rtl; padding-right:14px; color:var(--mtz-lt); }
+    .song-meta { flex:1; display:flex; flex-direction:column; gap:8px; }
+    .korban-badge { font-family:'Cormorant Garamond',serif; font-style:italic; font-size:.82em; letter-spacing:.08em; color:var(--mtz-lt); }
+    .maqam-badge { font-family:'Cormorant Garamond',serif; font-style:italic; font-size:.78em; letter-spacing:.08em; display:inline-block; padding:3px 10px; border-radius:4px; color:#f0e8d8; font-weight:600; background:var(--maqam-bayat); }
+    .song-title-he { font-family:'Frank Ruhl Libre',serif; font-size:1.7em; font-weight:700; color:var(--ivory); direction:rtl; letter-spacing:.04em; }
+    .song-title-de { font-family:'Cormorant Garamond',serif; font-style:italic; font-size:1.02em; color:var(--silver); }
+    .source-badge { font-family:'Cormorant Garamond',serif; font-style:italic; font-size:.74em; color:#A07060; line-height:1.6; }
+
+    /* ALIYAH BLOCK */
+    .aliyah-block { margin-bottom:42px; }
+    .aliyah-label { font-family:'Frank Ruhl Libre',serif; font-size:.94em; font-weight:700; direction:rtl; margin-bottom:9px; color:var(--mtz); letter-spacing:.06em; padding-bottom:6px; border-bottom:1px solid var(--mtz-bdr); }
+    .aliyah-label-de { font-family:'Cormorant Garamond',serif; font-style:italic; font-size:.78em; color:var(--silver-dim); display:inline-block; margin-right:14px; opacity:.85; }
+    .instrument-note { font-family:'Cormorant Garamond',serif; font-style:italic; font-size:.84em; color:var(--text); margin-bottom:14px; padding:10px 14px; background:rgba(168,128,104,.05); border-left:2px solid var(--mtz-dim); }
+    .lyrics-block { display:flex; gap:44px; flex-wrap:wrap; }
+    .lyrics-he, .lyrics-de { flex:1; min-width:280px; display:flex; flex-direction:column; gap:6px; }
+    .lyrics-he span.line { font-family:'Frank Ruhl Libre',serif; font-size:1.06em; color:var(--ivory); direction:rtl; line-height:1.95; }
+    .lyrics-de span.line { font-family:'Cormorant Garamond',serif; font-size:1.0em; color:var(--silver); line-height:1.88; }
+
+    /* TIKKUN BOX */
+    .tikkun-box { background:rgba(168,128,104,.07); border:1px solid rgba(168,128,104,.32); padding:30px; margin-top:40px; border-radius:6px; }
+    .tikkun-header { display:flex; flex-direction:column; gap:6px; margin-bottom:20px; }
+    .tikkun-title-he { font-family:'Frank Ruhl Libre',serif; font-size:1.25em; color:var(--ivory); direction:rtl; font-weight:700; letter-spacing:.04em; }
+    .tikkun-title-de { font-family:'Cormorant Garamond',serif; font-size:1.0em; font-style:italic; color:var(--silver); }
+    .tikkun-src { font-family:'Cormorant Garamond',serif; font-size:.74em; color:#A07060; line-height:1.7; }
+    .tikkun-body { font-family:'Cormorant Garamond',serif; font-size:.96em; color:var(--text); line-height:1.92; }
+    .tikkun-body strong { color:var(--ivory); }
+    .tikkun-body em { color:var(--mtz-lt); font-style:italic; }
+    .tikkun-tags { margin-top:18px; display:flex; gap:9px; flex-wrap:wrap; }
+    .tikkun-tag { background:rgba(168,128,104,.16); color:var(--mtz-lt); padding:4px 10px; border-radius:4px; font-size:.74em; font-family:'Frank Ruhl Libre',serif; direction:rtl; }
+
+    /* SCHI / KLIMAX-MOMENT */
+    .climax-box { background:linear-gradient(135deg,rgba(168,128,104,.18),rgba(200,160,48,.10),rgba(6,8,8,.88)); border:2px solid var(--mtz-bdr); padding:32px; margin-top:40px; margin-bottom:30px; border-radius:8px; }
+    .climax-label { font-family:'Cormorant Garamond',serif; font-style:italic; font-size:.82em; color:var(--mtz-lt); letter-spacing:.18em; text-transform:uppercase; margin-bottom:14px; text-align:center; }
+    .climax-verse-he { font-family:'Frank Ruhl Libre',serif; font-size:1.55em; font-weight:700; color:var(--ivory); direction:rtl; text-align:center; line-height:1.85; letter-spacing:.04em; text-shadow:0 0 30px var(--mtz-glow); }
+    .climax-verse-de { font-family:'Cormorant Garamond',serif; font-style:italic; font-size:1.05em; color:var(--silver); text-align:center; margin-top:14px; line-height:1.7; }
+    .climax-src { font-family:'Cormorant Garamond',serif; font-style:italic; font-size:.80em; color:var(--mtz-lt); text-align:center; margin-top:12px; opacity:.8; }
+
+    /* KODA */
+    .coda-box { background:rgba(6,8,8,.78); border:1px solid var(--mtz-bdr); padding:36px; text-align:center; margin-top:30px; margin-bottom:30px; border-radius:6px; }
+    .coda-label { font-family:'Cormorant Garamond',serif; font-style:italic; font-size:.80em; color:var(--mtz-lt); letter-spacing:.18em; text-transform:uppercase; margin-bottom:18px; }
+    .coda-whisper { font-family:'Frank Ruhl Libre',serif; font-size:1.20em; direction:rtl; line-height:2.3; opacity:.85; color:var(--mtz-lt); }
+    .coda-whisper strong { font-weight:900; opacity:1; color:var(--ivory); }
+
+    /* SCENARIOS */
+    .scenarios-section { margin-top:54px; margin-bottom:40px; }
+    .scenarios-title { font-family:'Frank Ruhl Libre',serif; font-size:1.35em; font-weight:700; text-align:center; margin-bottom:34px; direction:rtl; color:var(--sefer-lt); letter-spacing:.06em; }
+    .scenarios-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(290px,1fr)); gap:26px; }
+    .scenario-card { background:linear-gradient(135deg,rgba(28,20,12,.78),rgba(6,8,8,.92)); border:1px solid var(--mtz-bdr); padding:24px; transition:transform .2s, box-shadow .2s; border-radius:6px; }
+    .scenario-card:hover { transform:translateY(-4px); box-shadow:0 10px 36px var(--mtz-glow); }
+    .sc-num { font-family:'Cormorant Garamond',serif; font-style:italic; font-size:.74em; letter-spacing:.14em; text-transform:uppercase; margin-bottom:7px; color:var(--mtz); }
+    .sc-title-he { font-family:'Frank Ruhl Libre',serif; font-size:1.10em; font-weight:700; color:var(--ivory); direction:rtl; margin-bottom:4px; letter-spacing:.04em; }
+    .sc-sub { font-family:'Cormorant Garamond',serif; font-style:italic; font-size:.84em; color:#A07060; margin-bottom:14px; }
+    .sc-body { font-size:.92em; color:var(--text); line-height:1.80; margin-bottom:14px; }
+    .sc-body strong { color:var(--mtz-lt); }
+    .key-moment { font-size:.86em; color:var(--mtz-lt); font-style:italic; margin-bottom:9px; padding-left:13px; border-left:2px solid var(--mtz-lt); }
+    .reaction { font-size:.86em; color:var(--text); font-style:italic; padding-left:13px; border-left:2px solid var(--sefer-dim); line-height:1.78; }
+
+    /* FOOTER */
+    .footer { margin-top:80px; padding-top:50px; border-top:1px solid var(--sefer-bdr); text-align:center; }
+    .footer-he { font-family:'Frank Ruhl Libre',serif; font-size:1.40em; font-weight:700; color:var(--sefer-lt); direction:rtl; margin-bottom:18px; text-shadow:0 0 30px var(--sefer-glow); letter-spacing:.06em; }
+    .footer-chain { font-family:'Frank Ruhl Libre',serif; font-size:1.0em; color:var(--silver); direction:rtl; margin-bottom:22px; letter-spacing:.09em; }
+    .footer-de { font-family:'Cormorant Garamond',serif; font-style:italic; font-size:.92em; color:var(--text); line-height:2.0; max-width:780px; margin:0 auto 24px; }
+    .footer-de strong { color:var(--ivory-dim); font-style:normal; }
+    .footer-amen { font-family:'Frank Ruhl Libre',serif; font-size:1.30em; color:var(--sefer-lt); direction:rtl; margin-top:24px; letter-spacing:.14em; text-shadow:0 0 30px var(--sefer-glow); }
+
+    @media (max-width:720px) {
+      .page-title-he { font-size:2.3em; }
+      .song-num { font-size:2.2em; }
+      .lyrics-block { flex-direction:column; gap:24px; }
+      .scenarios-grid { grid-template-columns:1fr; }
+      .climax-verse-he { font-size:1.20em; }
+      .footer-he { font-size:1.10em; }
+    }
+  </style>
+</head>
+<body>
+<div class="wrap">
+
+  <header class="page-header">
+    <div class="eyebrow">Sephardische Tora-Vertonung · Sefer HaParashot bemo Maqam</div>
+    <div class="sefer-letter">ג</div>
+    <div class="page-title-he">פָּרָשַׁת מְצֹרָע</div>
+    <div class="page-subtitle-he">סֵפֶר וַיִּקְרָא · י״ד:א׳–ט״ו:ל״ג · הוֹד · מַקָּאם בַּיָאת · תִּקּוּן הַוִּדּוּי וְהָעֲנָוָה</div>
+    <div class="page-title-de">Metzora — Die Tora der Heimkehr des Aussätzigen, die zwei Vögel, das Zedernholz, der Hyssop, das Blut am rechten Ohr-Daumen-Zeh, die Tzaraat des Hauses und die Tora des Zav · Fünfte Parashah des Sefer Vayikra · Hod im Maqam Bayat</div>
+    <div class="page-desc">
+      Die <strong>fünfte Parashah des Sefer Vayikra</strong> öffnet die <em>Tora des Heimkehrenden</em> — die Reinigung des
+      einst-Aussätzigen, der sieben Tage außerhalb des Lagers saß und nun zurückkommt. Vayikra 14 beschreibt einen
+      priesterlichen Ritus von beinahe ungewöhnlicher Zärtlichkeit: <strong>zwei lebende reine Vögel</strong>, ein
+      Stück <em>Zedernholz</em>, <em>scharlachfarbene Wolle</em>, ein <em>Hyssop-Zweig</em>, ein <em>tönernes Gefäß
+      mit lebendigem Wasser</em> — der eine Vogel wird über dem Gefäß geschlachtet, der zweite, das Holz, die Wolle
+      und der Hyssop werden in das Blut-und-Wasser getaucht, der Heimkehrende wird siebenmal besprengt, der lebende
+      Vogel wird <em>frei in die Weite des Feldes gelassen</em>. Acht Tage später tritt der Mann mit zwei Lämmern und
+      einem Mutterschaf, einem Mehl-Mincha und einem Log Öl vor den Kohen, der ihm Blut des Asham-Opfers auf den
+      <em>rechten Ohrläppchen</em>, den <em>rechten Daumen</em> und den <em>rechten großen Zeh</em> streicht, danach
+      Öl auf dieselben Stellen — und so wird der Mann zurückgeführt in Hören, Tun und Gehen. <strong>Schadal</strong>
+      in seinem <em>Pirusch zu Vayikra 14</em> liest die zwei Vögel und das Holz-Hyssop-Wolle-Bündel als Zeichen
+      der vollendeten Sühne — die geschlachtete Vogel als „נִקּוּי גָּדוֹל" (große Reinigung) durch Blut, die lebendige
+      als Vertreterin des Heimkehrenden, die in die Freiheit zieht und dem Lager und dem Land sagt: <em>der Mann ist
+      kein Verbannter mehr</em>. Die zweite Hälfte der Parashah (Kapitel 15) bringt die <em>Tora des Zav</em>, des
+      Mannes mit krankhaftem Ausfluss, und der Frau mit dem Niddah- und Zavah-Bluten — alles geordnet im Schluss-Vers
+      15:31, der das ganze Reinheits-System trägt: <em>„וְלֹא יָמֻתוּ בְּטֻמְאָתָם בְּטַמְּאָם אֶת־מִשְׁכָּנִי אֲשֶׁר
+      בְּתוֹכָם"</em>. Die Sefirah ist <strong>Hod</strong> — die priesterliche Demut, die Architektur der
+      <em>Hodaah</em> (Bekenntnis und Dank), in der der Mensch seinen Bruch anerkennt, ohne sich darin zu verlieren.
+      Der ganze Bogen steht in <strong>Maqam Bayat</strong> — mütterlich-tief, kontemplativ, demütig-heimkehrend —
+      der Klang der priesterlich-langsamen Restauration, die Sefirah Hod im akustischen Träger der
+      Vidui-Frömmigkeit aller sephardischen Selichot.
+    </div>
+  </header>
+
+  <!-- ══════════════════════════════════════════════════════ -->
+  <!-- ⑤ פָּרָשַׁת מְצֹרָע — וַיִּקְרָא י״ד:א׳–ט״ו:ל״ג         -->
+  <!-- HOD · MAQAM BAYAT · ~60 BPM rubato                    -->
+  <!-- ══════════════════════════════════════════════════════ -->
+
+  <section class="song-section">
+    <div class="song-header">
+      <div class="song-num">ה</div>
+      <div class="song-meta">
+        <div class="korban-badge">הוֹד — Demütige Heimkehr · Tikkun-HaWiddui · Die priesterliche Choreografie der Restauration</div>
+        <div class="song-title-he">פָּרָשַׁת מְצֹרָע</div>
+        <div class="song-title-de">„Dies ist die Tora des Aussätzigen am Tag seiner Reinigung …" — Heimkehr-Ritus, Asham-Blut auf Ohr-Daumen-Zeh, Tzaraat des Hauses, Tora des Zav</div>
+        <div class="maqam-badge">Maqam Bayat · ~60 BPM rubato</div>
+        <div class="source-badge">
+          וַיִּקְרָא י״ד:א׳–ט״ו:ל״ג · רַמְבַּ״ם הִלְכוֹת טֻמְאַת צָרַעַת י״א · רַמְבַּ״ם הִלְכוֹת מְחֻסְּרֵי כַפָּרָה ·
+          מְגִלָּה כ״ח: · רשש (נְהַר שָׁלוֹם — מָסֹרֶת הוֹד וְהוֹדָאָה) · רַמְחַ״ל מְסִלַּת יְשָׁרִים פֶּרֶק ד׳ · פֶּרֶק כ״ב ·
+          אוֹר הַחַיִּים עַל וַיִּקְרָא י״ד:ב׳ · בֶּן אִישׁ חַי שָׁנָה רִאשׁוֹנָה תַזְרִיעַ-מְצֹרָע (טָהֳרוֹת — הִלְכוֹת הַכֵּלִים) ·
+          בֶּן אִישׁ חַי שָׁנָה שְׁנִיָּה מְצֹרָע (הִלְכוֹת דָּם) · שַׁדַ״ל בְּפֵרוּשׁ עַל וַיִּקְרָא י״ג:מ״ו וְעַל י״ד
+        </div>
+      </div>
+    </div>
+
+    <!-- ── ALIYAH 1 · רִאשׁוֹן · Vayikra 14:1-12 ── -->
+    <div class="aliyah-block">
+      <div class="aliyah-label">עֲלִיָּה רִאשׁוֹנָה — תּוֹרַת הַמְּצֹרָע · שְׁתֵּי הַצִּפֳּרִים · עֵץ אֶרֶז · שְׁנִי תוֹלַעַת · אֵזֹב<span class="aliyah-label-de">Erste Aliyah · Vayikra 14:1–12 · Die Tora des Heimkehrenden: zwei Vögel, Zedernholz, scharlachfarbene Wolle, Hyssop, die siebenfache Besprengung, das Freilassen des lebenden Vogels, das Rasieren-Waschen-Warten, am achten Tag die Korbanot</span></div>
+      <div class="instrument-note">[no percussion] [no drums] [no choir] [acoustic guitar — Bayat opening with priestly gentleness, the camp-outside walk of the Kohen, the two birds chosen, slow fingerpicking, no percussion] Gitarre: Bayat öffnet mit priesterlicher Sanftheit — der Gang des Kohen außerhalb des Lagers, das Sehen der Heilung, die Wahl der zwei Vögel.</div>
+      <div class="lyrics-block">
+        <div class="lyrics-he" dir="rtl">
+          <span class="line">וַיְדַבֵּר אֲדֹנָי אֶל־מֹשֶׁה לֵּאמֹר׃</span>
+          <span class="line">זֹאת תִּהְיֶה תּוֹרַת הַמְּצֹרָע בְּיוֹם טׇהֳרָתוֹ וְהוּבָא אֶל־הַכֹּהֵן׃</span>
+          <span class="line">וְיָצָא הַכֹּהֵן אֶל־מִחוּץ לַמַּחֲנֶה וְרָאָה הַכֹּהֵן וְהִנֵּה נִרְפָּא נֶגַע־הַצָּרַעַת מִן־הַצָּרוּעַ׃</span>
+          <span class="line">וְצִוָּה הַכֹּהֵן וְלָקַח לַמִּטַּהֵר שְׁתֵּי־צִפֳּרִים חַיּוֹת טְהֹרוֹת וְעֵץ אֶרֶז וּשְׁנִי תוֹלַעַת וְאֵזֹב׃</span>
+          <span class="line">וְצִוָּה הַכֹּהֵן וְשָׁחַט אֶת־הַצִּפּוֹר הָאֶחָת אֶל־כְּלִי־חֶרֶשׂ עַל־מַיִם חַיִּים׃</span>
+          <span class="line">אֶת־הַצִּפֹּר הַחַיָּה יִקַּח אֹתָהּ וְאֶת־עֵץ הָאֶרֶז וְאֶת־שְׁנִי הַתּוֹלַעַת וְאֶת־הָאֵזֹב וְטָבַל אוֹתָם וְאֵת הַצִּפֹּר הַחַיָּה בְּדַם הַצִּפֹּר הַשְּׁחֻטָה עַל הַמַּיִם הַחַיִּים׃</span>
+          <span class="line">וְהִזָּה עַל הַמִּטַּהֵר מִן־הַצָּרַעַת שֶׁבַע פְּעָמִים וְטִהֲרוֹ וְשִׁלַּח אֶת־הַצִּפֹּר הַחַיָּה עַל־פְּנֵי הַשָּׂדֶה׃</span>
+          <span class="line">וְכִבֶּס הַמִּטַּהֵר אֶת־בְּגָדָיו וְגִלַּח אֶת־כׇּל־שְׂעָרוֹ וְרָחַץ בַּמַּיִם וְטָהֵר וְאַחַר יָבוֹא אֶל־הַמַּחֲנֶה וְיָשַׁב מִחוּץ לְאׇהֳלוֹ שִׁבְעַת יָמִים׃</span>
+          <span class="line">וְהָיָה בַיּוֹם הַשְּׁבִיעִי יְגַלַּח אֶת־כׇּל־שְׂעָרוֹ אֶת־רֹאשׁוֹ וְאֶת־זְקָנוֹ וְאֵת גַּבֹּת עֵינָיו וְאֶת־כׇּל־שְׂעָרוֹ יְגַלֵּחַ וְכִבֶּס אֶת־בְּגָדָיו וְרָחַץ אֶת־בְּשָׂרוֹ בַּמַּיִם וְטָהֵר׃</span>
+          <span class="line">וּבַיּוֹם הַשְּׁמִינִי יִקַּח שְׁנֵי־כְבָשִׂים תְּמִימִם וְכַבְשָׂה אַחַת בַּת־שְׁנָתָהּ תְּמִימָה וּשְׁלֹשָׁה עֶשְׂרֹנִים סֹלֶת מִנְחָה בְּלוּלָה בַשֶּׁמֶן וְלֹג אֶחָד שָׁמֶן׃</span>
+          <span class="line">וְהֶעֱמִיד הַכֹּהֵן הַמְטַהֵר אֵת הָאִישׁ הַמִּטַּהֵר וְאֹתָם לִפְנֵי אֲדֹנָי פֶּתַח אֹהֶל מוֹעֵד׃</span>
+          <span class="line">וְלָקַח הַכֹּהֵן אֶת־הַכֶּבֶשׂ הָאֶחָד וְהִקְרִיב אֹתוֹ לְאָשָׁם וְאֶת־לֹג הַשָּׁמֶן וְהֵנִיף אֹתָם תְּנוּפָה לִפְנֵי אֲדֹנָי׃</span>
+        </div>
+        <div class="lyrics-de">
+          <span class="line">(14:1) Und Adonai redete zu Mosche, sprechend:</span>
+          <span class="line">(14:2) Dies wird die Tora des Aussätzigen sein am Tag seiner Reinigung: Er wird zum Kohen gebracht.</span>
+          <span class="line">(14:3) Und der Kohen geht hinaus außerhalb des Lagers — und der Kohen schaut: und siehe, die Tzaraat-Plage ist vom Aussätzigen geheilt.</span>
+          <span class="line">(14:4) Und der Kohen befiehlt — und man nimmt für den, der gereinigt werden soll, zwei lebende reine Vögel, ein Zedernholz, scharlachfarbene Wolle und einen Hyssop-Zweig.</span>
+          <span class="line">(14:5) Und der Kohen befiehlt, und man schlachtet den einen Vogel über einem tönernen Gefäß, über lebendigem Wasser.</span>
+          <span class="line">(14:6) Den lebenden Vogel — den nimmt er, und das Zedernholz, die scharlachfarbene Wolle und den Hyssop, und taucht sie und den lebenden Vogel in das Blut des geschlachteten Vogels über dem lebendigen Wasser.</span>
+          <span class="line">(14:7) Und er besprengt den, der gereinigt werden soll, siebenmal von der Tzaraat — und reinigt ihn; und den lebenden Vogel entlässt er über das offene Feld.</span>
+          <span class="line">(14:8) Und der zu Reinigende wäscht seine Kleider, schert sein ganzes Haar, badet im Wasser und ist rein; und danach kommt er ins Lager und sitzt sieben Tage außerhalb seines Zeltes.</span>
+          <span class="line">(14:9) Und am siebten Tag schert er sein ganzes Haar — sein Haupt, seinen Bart, die Brauen seiner Augen, all sein Haar schert er; und er wäscht seine Kleider und badet sein Fleisch im Wasser und ist rein.</span>
+          <span class="line">(14:10) Und am achten Tag nimmt er zwei makellose Lämmer und ein einjähriges makelloses Mutterschaf, dazu drei Zehntel Feinmehl als Mincha, mit Öl vermengt, und ein einziges Log Öl.</span>
+          <span class="line">(14:11) Und der Kohen, der reinigt, stellt den Mann, der gereinigt werden soll, und sie vor Adonai, an den Eingang des Begegnungs-Zeltes.</span>
+          <span class="line">(14:12) Und der Kohen nimmt das eine Lamm und bringt es als Asham dar, und das Log Öl — und schwingt sie zur Schwingung vor Adonai.</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- ── ALIYAH 2 · שֵׁנִי · Vayikra 14:13-20 ── -->
+    <div class="aliyah-block">
+      <div class="aliyah-label">עֲלִיָּה שְׁנִיָּה — דַּם הָאָשָׁם עַל אֹזֶן יָד וְרֶגֶל · הַשֶּׁמֶן עַל הָרֹאשׁ · וְכִפֶּר<span class="aliyah-label-de">Zweite Aliyah · Vayikra 14:13–20 · Das Blut des Asham auf rechtem Ohr-Daumen-Zeh, das Öl auf dieselben Stellen und auf den Kopf, das Sühnen vor Adonai</span></div>
+      <div class="instrument-note">[no percussion] [no drums] [no choir] [acoustic guitar — Bayat with delicate fingerpicking on the right ear thumb toe, careful priestly choreography, the oil seven sprinklings, no percussion] Gitarre: Bayat in feinem Fingerpicking — das Anlegen des Blutes und des Öls am rechten Ohrläppchen, Daumen und Zeh, die siebenfache Öl-Sprengung.</div>
+      <div class="lyrics-block">
+        <div class="lyrics-he" dir="rtl">
+          <span class="line">וְשָׁחַט אֶת־הַכֶּבֶשׂ בִּמְקוֹם אֲשֶׁר יִשְׁחַט אֶת־הַחַטָּאת וְאֶת־הָעֹלָה בִּמְקוֹם הַקֹּדֶשׁ כִּי כַּחַטָּאת הָאָשָׁם הוּא לַכֹּהֵן קֹדֶשׁ קׇדָשִׁים הוּא׃</span>
+          <span class="line">וְלָקַח הַכֹּהֵן מִדַּם הָאָשָׁם וְנָתַן הַכֹּהֵן עַל־תְּנוּךְ אֹזֶן הַמִּטַּהֵר הַיְמָנִית וְעַל־בֹּהֶן יָדוֹ הַיְמָנִית וְעַל־בֹּהֶן רַגְלוֹ הַיְמָנִית׃</span>
+          <span class="line">וְלָקַח הַכֹּהֵן מִלֹּג הַשָּׁמֶן וְיָצַק עַל־כַּף הַכֹּהֵן הַשְּׂמָאלִית׃</span>
+          <span class="line">וְטָבַל הַכֹּהֵן אֶת־אֶצְבָּעוֹ הַיְמָנִית מִן־הַשֶּׁמֶן אֲשֶׁר עַל־כַּפּוֹ הַשְּׂמָאלִית וְהִזָּה מִן־הַשֶּׁמֶן בְּאֶצְבָּעוֹ שֶׁבַע פְּעָמִים לִפְנֵי אֲדֹנָי׃</span>
+          <span class="line">וּמִיֶּתֶר הַשֶּׁמֶן אֲשֶׁר עַל־כַּפּוֹ יִתֵּן הַכֹּהֵן עַל־תְּנוּךְ אֹזֶן הַמִּטַּהֵר הַיְמָנִית וְעַל־בֹּהֶן יָדוֹ הַיְמָנִית וְעַל־בֹּהֶן רַגְלוֹ הַיְמָנִית עַל דַּם הָאָשָׁם׃</span>
+          <span class="line">וְהַנּוֹתָר בַּשֶּׁמֶן אֲשֶׁר עַל־כַּף הַכֹּהֵן יִתֵּן עַל־רֹאשׁ הַמִּטַּהֵר וְכִפֶּר עָלָיו הַכֹּהֵן לִפְנֵי אֲדֹנָי׃</span>
+          <span class="line">וְעָשָׂה הַכֹּהֵן אֶת־הַחַטָּאת וְכִפֶּר עַל־הַמִּטַּהֵר מִטֻּמְאָתוֹ וְאַחַר יִשְׁחַט אֶת־הָעֹלָה׃</span>
+          <span class="line">וְהֶעֱלָה הַכֹּהֵן אֶת־הָעֹלָה וְאֶת־הַמִּנְחָה הַמִּזְבֵּחָה וְכִפֶּר עָלָיו הַכֹּהֵן וְטָהֵר׃</span>
+        </div>
+        <div class="lyrics-de">
+          <span class="line">(14:13) Und er schlachtet das Lamm an der Stätte, wo man das Chatat und das Olah schlachtet, an der Stätte des Heiligtums — denn wie das Chatat ist das Asham, es ist für den Kohen, Allerheiligstes ist es.</span>
+          <span class="line">(14:14) Und der Kohen nimmt vom Blut des Asham und gibt der Kohen es auf das rechte Ohrläppchen des zu Reinigenden, auf den Daumen seiner rechten Hand und auf den großen Zeh seines rechten Fußes.</span>
+          <span class="line">(14:15) Und der Kohen nimmt vom Log Öl und gießt es auf die linke Hand-Innenfläche des Kohen.</span>
+          <span class="line">(14:16) Und der Kohen taucht seinen rechten Finger in das Öl, das auf seiner linken Handfläche ist, und sprengt vom Öl mit seinem Finger siebenmal vor Adonai.</span>
+          <span class="line">(14:17) Und vom übrigen Öl, das auf seiner Handfläche ist, gibt der Kohen auf das rechte Ohrläppchen des zu Reinigenden, auf den Daumen seiner rechten Hand und auf den großen Zeh seines rechten Fußes — auf das Blut des Asham.</span>
+          <span class="line">(14:18) Und das Rest-Öl, das auf der Handfläche des Kohen ist, gibt er auf das Haupt des zu Reinigenden — und der Kohen sühnt für ihn vor Adonai.</span>
+          <span class="line">(14:19) Und der Kohen vollzieht das Chatat und sühnt für den zu Reinigenden von seiner Unreinheit; und danach schlachtet er das Olah.</span>
+          <span class="line">(14:20) Und der Kohen führt das Olah und die Mincha auf den Altar hinauf — und der Kohen sühnt für ihn, und er ist rein.</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- ── ALIYAH 3 · שְׁלִישִׁי · Vayikra 14:21-32 ── -->
+    <div class="aliyah-block">
+      <div class="aliyah-label">עֲלִיָּה שְׁלִישִׁית — וְאִם־דַּל הוּא · קָרְבַּן עָנִי · שְׁתֵּי תֹרִים אוֹ שְׁנֵי בְּנֵי יוֹנָה<span class="aliyah-label-de">Dritte Aliyah · Vayikra 14:21–32 · Wenn er arm ist und seine Hand nicht reicht: ein einziges Lamm zum Asham, ein Zehntel Mehl, ein Log Öl und zwei Turteltauben oder zwei junge Tauben statt der drei Tiere</span></div>
+      <div class="instrument-note">[no percussion] [no drums] [no choir] [acoustic guitar — Bayat softer and lower for the poor man's korban, the tenderness of the Tora to the dal, no percussion] Gitarre: Bayat weicher und tiefer für das Korban des Armen — die zarte Aufmerksamkeit der Tora für den, dessen Hand nicht reicht.</div>
+      <div class="lyrics-block">
+        <div class="lyrics-he" dir="rtl">
+          <span class="line">וְאִם־דַּל הוּא וְאֵין יָדוֹ מַשֶּׂגֶת וְלָקַח כֶּבֶשׂ אֶחָד אָשָׁם לִתְנוּפָה לְכַפֵּר עָלָיו וְעִשָּׂרוֹן סֹלֶת אֶחָד בָּלוּל בַּשֶּׁמֶן לְמִנְחָה וְלֹג שָׁמֶן׃</span>
+          <span class="line">וּשְׁתֵּי תֹרִים אוֹ שְׁנֵי בְּנֵי יוֹנָה אֲשֶׁר תַּשִּׂיג יָדוֹ וְהָיָה אֶחָד חַטָּאת וְהָאֶחָד עֹלָה׃</span>
+          <span class="line">וְהֵבִיא אֹתָם בַּיּוֹם הַשְּׁמִינִי לְטׇהֳרָתוֹ אֶל־הַכֹּהֵן אֶל־פֶּתַח אֹהֶל־מוֹעֵד לִפְנֵי אֲדֹנָי׃</span>
+          <span class="line">וְלָקַח הַכֹּהֵן אֶת־כֶּבֶשׂ הָאָשָׁם וְאֶת־לֹג הַשָּׁמֶן וְהֵנִיף אֹתָם הַכֹּהֵן תְּנוּפָה לִפְנֵי אֲדֹנָי׃</span>
+          <span class="line">וְשָׁחַט אֶת־כֶּבֶשׂ הָאָשָׁם וְלָקַח הַכֹּהֵן מִדַּם הָאָשָׁם וְנָתַן עַל־תְּנוּךְ אֹזֶן־הַמִּטַּהֵר הַיְמָנִית וְעַל־בֹּהֶן יָדוֹ הַיְמָנִית וְעַל־בֹּהֶן רַגְלוֹ הַיְמָנִית׃</span>
+          <span class="line">וּמִן־הַשֶּׁמֶן יִצֹק הַכֹּהֵן עַל־כַּף הַכֹּהֵן הַשְּׂמָאלִית׃</span>
+          <span class="line">וְהִזָּה הַכֹּהֵן בְּאֶצְבָּעוֹ הַיְמָנִית מִן־הַשֶּׁמֶן אֲשֶׁר עַל־כַּפּוֹ הַשְּׂמָאלִית שֶׁבַע פְּעָמִים לִפְנֵי אֲדֹנָי׃</span>
+          <span class="line">וְנָתַן הַכֹּהֵן מִן־הַשֶּׁמֶן אֲשֶׁר עַל־כַּפּוֹ עַל־תְּנוּךְ אֹזֶן הַמִּטַּהֵר הַיְמָנִית וְעַל־בֹּהֶן יָדוֹ הַיְמָנִית וְעַל־בֹּהֶן רַגְלוֹ הַיְמָנִית עַל־מְקוֹם דַּם הָאָשָׁם׃</span>
+          <span class="line">וְהַנּוֹתָר מִן־הַשֶּׁמֶן אֲשֶׁר עַל־כַּף הַכֹּהֵן יִתֵּן עַל־רֹאשׁ הַמִּטַּהֵר לְכַפֵּר עָלָיו לִפְנֵי אֲדֹנָי׃</span>
+          <span class="line">וְעָשָׂה אֶת־הָאֶחָד מִן־הַתֹּרִים אוֹ מִן־בְּנֵי הַיּוֹנָה מֵאֲשֶׁר תַּשִּׂיג יָדוֹ׃</span>
+          <span class="line">אֵת אֲשֶׁר־תַּשִּׂיג יָדוֹ אֶת־הָאֶחָד חַטָּאת וְאֶת־הָאֶחָד עֹלָה עַל־הַמִּנְחָה וְכִפֶּר הַכֹּהֵן עַל הַמִּטַּהֵר לִפְנֵי אֲדֹנָי׃</span>
+          <span class="line">זֹאת תּוֹרַת אֲשֶׁר־בּוֹ נֶגַע צָרָעַת אֲשֶׁר לֹא־תַשִּׂיג יָדוֹ בְּטׇהֳרָתוֹ׃</span>
+        </div>
+        <div class="lyrics-de">
+          <span class="line">(14:21) Und wenn er arm ist und seine Hand nicht reicht — so nimmt er ein einziges Lamm zum Asham zur Schwingung, um für ihn zu sühnen, und ein Zehntel Feinmehl, mit Öl vermengt, zur Mincha, und ein Log Öl.</span>
+          <span class="line">(14:22) Und zwei Turteltauben oder zwei junge Tauben, wie seine Hand erreicht — und die eine sei das Chatat und die andere das Olah.</span>
+          <span class="line">(14:23) Und er bringe sie am achten Tag seiner Reinigung zum Kohen, an den Eingang des Begegnungs-Zeltes vor Adonai.</span>
+          <span class="line">(14:24) Und der Kohen nimmt das Lamm des Asham und das Log Öl — und der Kohen schwingt sie zur Schwingung vor Adonai.</span>
+          <span class="line">(14:25) Und er schlachtet das Lamm des Asham, und der Kohen nimmt vom Blut des Asham und gibt es auf das rechte Ohrläppchen des zu Reinigenden, auf den Daumen seiner rechten Hand und auf den großen Zeh seines rechten Fußes.</span>
+          <span class="line">(14:26) Und vom Öl gießt der Kohen auf die linke Handfläche des Kohen.</span>
+          <span class="line">(14:27) Und der Kohen sprengt mit seinem rechten Finger vom Öl, das auf seiner linken Handfläche ist, siebenmal vor Adonai.</span>
+          <span class="line">(14:28) Und der Kohen gibt vom Öl, das auf seiner Handfläche ist, auf das rechte Ohrläppchen des zu Reinigenden, auf den Daumen seiner rechten Hand und auf den großen Zeh seines rechten Fußes — auf den Ort des Asham-Blutes.</span>
+          <span class="line">(14:29) Und das Rest-Öl, das auf der Handfläche des Kohen ist, gibt er auf das Haupt des zu Reinigenden, um für ihn zu sühnen vor Adonai.</span>
+          <span class="line">(14:30) Und er vollzieht das eine von den Turteltauben oder von den jungen Tauben, von dem, was seine Hand erreicht.</span>
+          <span class="line">(14:31) Was seine Hand erreicht — das eine als Chatat und das andere als Olah über der Mincha; und der Kohen sühnt für den zu Reinigenden vor Adonai.</span>
+          <span class="line">(14:32) Dies ist die Tora dessen, an dem die Tzaraat-Plage ist, dessen Hand nicht reicht für seine Reinigung.</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- ── ALIYAH 4 · רְבִיעִי · Vayikra 14:33-53 ── -->
+    <div class="aliyah-block">
+      <div class="aliyah-label">עֲלִיָּה רְבִיעִית — נֶגַע צָרַעַת בַּבַּיִת · חִלּוּץ אֲבָנִים · הַקְצָעַת הַבַּיִת · נְתִיצָה · חִטּוּא הַבַּיִת<span class="aliyah-label-de">Vierte Aliyah · Vayikra 14:33–53 · Eintritt ins Land — die Tzaraat des Hauses: Steine entfernen, Schaben, neue Steine, Niederreißen wenn unheilbar, und das Reinigen des geheilten Hauses mit den zwei Vögeln</span></div>
+      <div class="instrument-note">[no percussion] [no drums] [no choir] [acoustic guitar — Bayat with patient slower fingerpicking, the careful priestly examination of the house, building from stone-by-stone to the possible tearing-down, no percussion] Gitarre: Bayat in geduldigem, langsamerem Fingerpicking — das Sehen des Kohen am Haus, Stein für Stein, bis zum möglichen Niederreißen.</div>
+      <div class="lyrics-block">
+        <div class="lyrics-he" dir="rtl">
+          <span class="line">וַיְדַבֵּר אֲדֹנָי אֶל־מֹשֶׁה וְאֶל־אַהֲרֹן לֵאמֹר׃</span>
+          <span class="line">כִּי תָבֹאוּ אֶל־אֶרֶץ כְּנַעַן אֲשֶׁר אֲנִי נֹתֵן לָכֶם לַאֲחֻזָּה וְנָתַתִּי נֶגַע צָרַעַת בְּבֵית אֶרֶץ אֲחֻזַּתְכֶם׃</span>
+          <span class="line">וּבָא אֲשֶׁר־לוֹ הַבַּיִת וְהִגִּיד לַכֹּהֵן לֵאמֹר כְּנֶגַע נִרְאָה לִי בַּבָּיִת׃</span>
+          <span class="line">וְצִוָּה הַכֹּהֵן וּפִנּוּ אֶת־הַבַּיִת בְּטֶרֶם יָבֹא הַכֹּהֵן לִרְאוֹת אֶת־הַנֶּגַע וְלֹא יִטְמָא כׇּל־אֲשֶׁר בַּבָּיִת וְאַחַר כֵּן יָבֹא הַכֹּהֵן לִרְאוֹת אֶת־הַבָּיִת׃</span>
+          <span class="line">וְרָאָה אֶת־הַנֶּגַע וְהִנֵּה הַנֶּגַע בְּקִירֹת הַבַּיִת שְׁקַעֲרוּרֹת יְרַקְרַקֹּת אוֹ אֲדַמְדַּמֹּת וּמַרְאֵיהֶן שָׁפָל מִן־הַקִּיר׃</span>
+          <span class="line">וְיָצָא הַכֹּהֵן מִן־הַבַּיִת אֶל־פֶּתַח הַבָּיִת וְהִסְגִּיר אֶת־הַבַּיִת שִׁבְעַת יָמִים׃</span>
+          <span class="line">וְשָׁב הַכֹּהֵן בַּיּוֹם הַשְּׁבִיעִי וְרָאָה וְהִנֵּה פָּשָׂה הַנֶּגַע בְּקִירֹת הַבָּיִת׃</span>
+          <span class="line">וְצִוָּה הַכֹּהֵן וְחִלְּצוּ אֶת־הָאֲבָנִים אֲשֶׁר בָּהֵן הַנָּגַע וְהִשְׁלִיכוּ אֶתְהֶן אֶל־מִחוּץ לָעִיר אֶל־מָקוֹם טָמֵא׃</span>
+          <span class="line">וְאֶת־הַבַּיִת יַקְצִעַ מִבַּיִת סָבִיב וְשָׁפְכוּ אֶת־הֶעָפָר אֲשֶׁר הִקְצוּ אֶל־מִחוּץ לָעִיר אֶל־מָקוֹם טָמֵא׃</span>
+          <span class="line">וְלָקְחוּ אֲבָנִים אֲחֵרוֹת וְהֵבִיאוּ אֶל־תַּחַת הָאֲבָנִים וְעָפָר אַחֵר יִקַּח וְטָח אֶת־הַבָּיִת׃</span>
+          <span class="line">וְאִם־יָשׁוּב הַנֶּגַע וּפָרַח בַּבַּיִת אַחַר חִלֵּץ אֶת־הָאֲבָנִים וְאַחֲרֵי הִקְצוֹת אֶת־הַבַּיִת וְאַחֲרֵי הִטּוֹחַ׃</span>
+          <span class="line">וּבָא הַכֹּהֵן וְרָאָה וְהִנֵּה פָּשָׂה הַנֶּגַע בַּבָּיִת צָרַעַת מַמְאֶרֶת הִוא בַּבַּיִת טָמֵא הוּא׃</span>
+          <span class="line">וְנָתַץ אֶת־הַבַּיִת אֶת־אֲבָנָיו וְאֶת־עֵצָיו וְאֵת כׇּל־עֲפַר הַבָּיִת וְהוֹצִיא אֶל־מִחוּץ לָעִיר אֶל־מָקוֹם טָמֵא׃</span>
+          <span class="line">וְהַבָּא אֶל־הַבַּיִת כׇּל־יְמֵי הִסְגִּיר אֹתוֹ יִטְמָא עַד־הָעָרֶב׃</span>
+          <span class="line">וְהַשֹּׁכֵב בַּבַּיִת יְכַבֵּס אֶת־בְּגָדָיו וְהָאֹכֵל בַּבַּיִת יְכַבֵּס אֶת־בְּגָדָיו׃</span>
+          <span class="line">וְאִם־בֹּא יָבֹא הַכֹּהֵן וְרָאָה וְהִנֵּה לֹא־פָשָׂה הַנֶּגַע בַּבַּיִת אַחֲרֵי הִטֹּחַ אֶת־הַבָּיִת וְטִהַר הַכֹּהֵן אֶת־הַבַּיִת כִּי נִרְפָּא הַנָּגַע׃</span>
+          <span class="line">וְלָקַח לְחַטֵּא אֶת־הַבַּיִת שְׁתֵּי צִפֳּרִים וְעֵץ אֶרֶז וּשְׁנִי תוֹלַעַת וְאֵזֹב׃</span>
+          <span class="line">וְשָׁחַט אֶת־הַצִּפֹּר הָאֶחָת אֶל־כְּלִי־חֶרֶשׂ עַל־מַיִם חַיִּים׃</span>
+          <span class="line">וְלָקַח אֶת־עֵץ־הָאֶרֶז וְאֶת־הָאֵזֹב וְאֵת שְׁנִי הַתּוֹלַעַת וְאֵת הַצִּפֹּר הַחַיָּה וְטָבַל אֹתָם בְּדַם הַצִּפֹּר הַשְּׁחוּטָה וּבַמַּיִם הַחַיִּים וְהִזָּה אֶל־הַבַּיִת שֶׁבַע פְּעָמִים׃</span>
+          <span class="line">וְחִטֵּא אֶת־הַבַּיִת בְּדַם הַצִּפּוֹר וּבַמַּיִם הַחַיִּים וּבַצִּפֹּר הַחַיָּה וּבְעֵץ הָאֶרֶז וּבָאֵזֹב וּבִשְׁנִי הַתּוֹלָעַת׃</span>
+          <span class="line">וְשִׁלַּח אֶת־הַצִּפֹּר הַחַיָּה אֶל־מִחוּץ לָעִיר אֶל־פְּנֵי הַשָּׂדֶה וְכִפֶּר עַל־הַבַּיִת וְטָהֵר׃</span>
+        </div>
+        <div class="lyrics-de">
+          <span class="line">(14:33) Und Adonai redete zu Mosche und zu Aharon, sprechend:</span>
+          <span class="line">(14:34) Wenn ihr in das Land Kanaan kommt, das ich euch zum Eigentum gebe, und ich gebe eine Tzaraat-Plage in ein Haus des Landes eures Eigentums —</span>
+          <span class="line">(14:35) so komme der, dem das Haus gehört, und melde es dem Kohen, sprechend: Wie eine Plage erscheint mir am Haus.</span>
+          <span class="line">(14:36) Und der Kohen befiehlt — und man räumt das Haus aus, bevor der Kohen kommt, die Plage zu sehen, damit nicht alles im Haus unrein werde; und danach kommt der Kohen, das Haus zu sehen.</span>
+          <span class="line">(14:37) Und er sieht die Plage — und siehe, die Plage an den Wänden des Hauses sind grünliche oder rötliche Vertiefungen, und ihr Aussehen ist tiefer als die Wand.</span>
+          <span class="line">(14:38) Und der Kohen geht hinaus aus dem Haus an den Eingang des Hauses und sperrt das Haus sieben Tage zu.</span>
+          <span class="line">(14:39) Und der Kohen kehrt am siebten Tag zurück und sieht — und siehe, die Plage hat sich an den Wänden des Hauses ausgebreitet.</span>
+          <span class="line">(14:40) Und der Kohen befiehlt — und man bricht die Steine, an denen die Plage ist, heraus und wirft sie außerhalb der Stadt an einen unreinen Ort.</span>
+          <span class="line">(14:41) Und das Haus schabe man rundum von innen, und man schütte den Staub, den man abgeschabt hat, außerhalb der Stadt an einen unreinen Ort.</span>
+          <span class="line">(14:42) Und man nehme andere Steine und bringe sie unter die Steine, und anderen Staub nehme er und übertünche das Haus.</span>
+          <span class="line">(14:43) Und wenn die Plage zurückkehrt und im Haus aufbricht nach dem Herausbrechen der Steine und dem Abschaben des Hauses und dem Übertünchen —</span>
+          <span class="line">(14:44) so komme der Kohen und sehe; und siehe, die Plage hat sich im Haus ausgebreitet: eine fressende Tzaraat ist es am Haus — unrein ist es.</span>
+          <span class="line">(14:45) Und man reiße das Haus nieder — seine Steine, seine Hölzer und allen Staub des Hauses — und führe es hinaus außerhalb der Stadt an einen unreinen Ort.</span>
+          <span class="line">(14:46) Und wer in das Haus eintritt während aller Tage, da man es verschlossen hat, ist unrein bis zum Abend.</span>
+          <span class="line">(14:47) Und wer im Haus liegt, soll seine Kleider waschen; und wer im Haus isst, soll seine Kleider waschen.</span>
+          <span class="line">(14:48) Und wenn der Kohen wirklich kommt und sieht — und siehe, die Plage hat sich nicht ausgebreitet im Haus nach dem Übertünchen des Hauses: so erkläre der Kohen das Haus für rein, denn die Plage ist geheilt.</span>
+          <span class="line">(14:49) Und er nehme, um das Haus zu entsühnen, zwei Vögel, Zedernholz, scharlachfarbene Wolle und einen Hyssop-Zweig.</span>
+          <span class="line">(14:50) Und er schlachte den einen Vogel über einem tönernen Gefäß über lebendigem Wasser.</span>
+          <span class="line">(14:51) Und er nehme das Zedernholz, den Hyssop, die scharlachfarbene Wolle und den lebenden Vogel und tauche sie in das Blut des geschlachteten Vogels und in das lebendige Wasser, und besprenge das Haus siebenmal.</span>
+          <span class="line">(14:52) Und er entsühne das Haus mit dem Blut des Vogels und mit dem lebendigen Wasser und mit dem lebenden Vogel und mit dem Zedernholz und mit dem Hyssop und mit der scharlachfarbenen Wolle.</span>
+          <span class="line">(14:53) Und den lebenden Vogel entlasse er außerhalb der Stadt über das offene Feld — und so sühne er für das Haus, und es ist rein.</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- ── ALIYAH 5 · חֲמִישִׁי · Vayikra 14:54-15:15 ── -->
+    <div class="aliyah-block">
+      <div class="aliyah-label">עֲלִיָּה חֲמִישִׁית — סִכּוּם תּוֹרַת הַצָּרַעַת · רֵאשִׁית תּוֹרַת הַזָּב · קָרְבָּן בַּיּוֹם הַשְּׁמִינִי<span class="aliyah-label-de">Fünfte Aliyah · Vayikra 14:54–15:15 · Schluss-Summary aller Tzaraat-Halacha — und der Beginn der Tora des Zav: Reinheits-Gesetze, Wasser-Wäsche, das achte-Tag-Korban zwei Turteltauben oder zwei junge Tauben</span></div>
+      <div class="instrument-note">[no percussion] [no drums] [no choir] [acoustic guitar — Bayat returning to summary tones, then opening the new section of zav-Tora with gentle priestly modulation, no percussion] Gitarre: Bayat kehrt zur Summary-Tonart zurück, öffnet dann mit zarter priesterlicher Modulation die neue Sektion der Zav-Tora.</div>
+      <div class="lyrics-block">
+        <div class="lyrics-he" dir="rtl">
+          <span class="line">זֹאת הַתּוֹרָה לְכׇל־נֶגַע הַצָּרַעַת וְלַנָּתֶק׃</span>
+          <span class="line">וּלְצָרַעַת הַבֶּגֶד וְלַבָּיִת׃</span>
+          <span class="line">וְלַשְׂאֵת וְלַסַּפַּחַת וְלַבֶּהָרֶת׃</span>
+          <span class="line">לְהוֹרֹת בְּיוֹם הַטָּמֵא וּבְיוֹם הַטָּהֹר זֹאת תּוֹרַת הַצָּרָעַת׃</span>
+          <span class="line">וַיְדַבֵּר אֲדֹנָי אֶל־מֹשֶׁה וְאֶל־אַהֲרֹן לֵאמֹר׃</span>
+          <span class="line">דַּבְּרוּ אֶל־בְּנֵי יִשְׂרָאֵל וַאֲמַרְתֶּם אֲלֵהֶם אִישׁ אִישׁ כִּי יִהְיֶה זָב מִבְּשָׂרוֹ זוֹבוֹ טָמֵא הוּא׃</span>
+          <span class="line">וְזֹאת תִּהְיֶה טֻמְאָתוֹ בְּזוֹבוֹ רָר בְּשָׂרוֹ אֶת־זוֹבוֹ אוֹ־הֶחְתִּים בְּשָׂרוֹ מִזּוֹבוֹ טֻמְאָתוֹ הִוא׃</span>
+          <span class="line">כׇּל־הַמִּשְׁכָּב אֲשֶׁר יִשְׁכַּב עָלָיו הַזָּב יִטְמָא וְכׇל־הַכְּלִי אֲשֶׁר־יֵשֵׁב עָלָיו יִטְמָא׃</span>
+          <span class="line">וְאִישׁ אֲשֶׁר יִגַּע בְּמִשְׁכָּבוֹ יְכַבֵּס בְּגָדָיו וְרָחַץ בַּמַּיִם וְטָמֵא עַד־הָעָרֶב׃</span>
+          <span class="line">וְהַיֹּשֵׁב עַל־הַכְּלִי אֲשֶׁר־יֵשֵׁב עָלָיו הַזָּב יְכַבֵּס בְּגָדָיו וְרָחַץ בַּמַּיִם וְטָמֵא עַד־הָעָרֶב׃</span>
+          <span class="line">וְהַנֹּגֵעַ בִּבְשַׂר הַזָּב יְכַבֵּס בְּגָדָיו וְרָחַץ בַּמַּיִם וְטָמֵא עַד־הָעָרֶב׃</span>
+          <span class="line">וְכִי־יָרֹק הַזָּב בַּטָּהוֹר וְכִבֶּס בְּגָדָיו וְרָחַץ בַּמַּיִם וְטָמֵא עַד־הָעָרֶב׃</span>
+          <span class="line">וְכׇל־הַמֶּרְכָּב אֲשֶׁר יִרְכַּב עָלָיו הַזָּב יִטְמָא׃</span>
+          <span class="line">וְכׇל־הַנֹּגֵעַ בְּכֹל אֲשֶׁר יִהְיֶה תַחְתָּיו יִטְמָא עַד־הָעָרֶב וְהַנּוֹשֵׂא אוֹתָם יְכַבֵּס בְּגָדָיו וְרָחַץ בַּמַּיִם וְטָמֵא עַד־הָעָרֶב׃</span>
+          <span class="line">וְכֹל אֲשֶׁר יִגַּע־בּוֹ הַזָּב וְיָדָיו לֹא־שָׁטַף בַּמָּיִם וְכִבֶּס בְּגָדָיו וְרָחַץ בַּמַּיִם וְטָמֵא עַד־הָעָרֶב׃</span>
+          <span class="line">וּכְלִי־חֶרֶשׂ אֲשֶׁר־יִגַּע־בּוֹ הַזָּב יִשָּׁבֵר וְכׇל־כְּלִי־עֵץ יִשָּׁטֵף בַּמָּיִם׃</span>
+          <span class="line">וְכִי־יִטְהַר הַזָּב מִזּוֹבוֹ וְסָפַר לוֹ שִׁבְעַת יָמִים לְטׇהֳרָתוֹ וְכִבֶּס בְּגָדָיו וְרָחַץ בְּשָׂרוֹ בְּמַיִם חַיִּים וְטָהֵר׃</span>
+          <span class="line">וּבַיּוֹם הַשְּׁמִינִי יִקַּח־לוֹ שְׁתֵּי תֹרִים אוֹ שְׁנֵי בְּנֵי יוֹנָה וּבָא לִפְנֵי אֲדֹנָי אֶל־פֶּתַח אֹהֶל מוֹעֵד וּנְתָנָם אֶל־הַכֹּהֵן׃</span>
+          <span class="line">וְעָשָׂה אֹתָם הַכֹּהֵן אֶחָד חַטָּאת וְהָאֶחָד עֹלָה וְכִפֶּר עָלָיו הַכֹּהֵן לִפְנֵי אֲדֹנָי מִזּוֹבוֹ׃</span>
+        </div>
+        <div class="lyrics-de">
+          <span class="line">(14:54) Dies ist die Tora für jede Tzaraat-Plage und für den Netek,</span>
+          <span class="line">(14:55) und für die Tzaraat des Kleides und des Hauses,</span>
+          <span class="line">(14:56) und für den Se'et und den Sapachat und den Baheret —</span>
+          <span class="line">(14:57) um zu lehren am Tag des Unreinen und am Tag des Reinen: dies ist die Tora der Tzaraat.</span>
+          <span class="line">(15:1) Und Adonai redete zu Mosche und zu Aharon, sprechend:</span>
+          <span class="line">(15:2) Redet zu den Söhnen Israels und sprecht zu ihnen: Ein Mann, ein Mann, der einen Ausfluss aus seinem Fleisch hat — sein Ausfluss ist unrein.</span>
+          <span class="line">(15:3) Und dies wird seine Unreinheit in seinem Ausfluss sein: ob sein Fleisch beim Ausfluss tropft oder ob sein Fleisch durch den Ausfluss verschlossen ist — seine Unreinheit ist es.</span>
+          <span class="line">(15:4) Jedes Lager, auf dem der Zav liegt, ist unrein, und jedes Gerät, auf dem er sitzt, ist unrein.</span>
+          <span class="line">(15:5) Und ein Mann, der sein Lager berührt, soll seine Kleider waschen und sich im Wasser baden, und er ist unrein bis zum Abend.</span>
+          <span class="line">(15:6) Und der auf dem Gerät sitzt, auf dem der Zav sitzt, soll seine Kleider waschen und sich im Wasser baden, und er ist unrein bis zum Abend.</span>
+          <span class="line">(15:7) Und wer das Fleisch des Zav berührt, soll seine Kleider waschen und sich im Wasser baden, und er ist unrein bis zum Abend.</span>
+          <span class="line">(15:8) Und wenn der Zav auf einen Reinen spuckt, so wasche dieser seine Kleider und bade sich im Wasser, und er ist unrein bis zum Abend.</span>
+          <span class="line">(15:9) Und jedes Reittier, auf dem der Zav reitet, ist unrein.</span>
+          <span class="line">(15:10) Und jeder, der irgendetwas berührt, das unter ihm war, ist unrein bis zum Abend; und wer sie trägt, soll seine Kleider waschen und sich im Wasser baden, und er ist unrein bis zum Abend.</span>
+          <span class="line">(15:11) Und jeden, den der Zav berührt, ohne dass er seine Hände im Wasser gespült hat — der soll seine Kleider waschen und sich im Wasser baden, und er ist unrein bis zum Abend.</span>
+          <span class="line">(15:12) Und ein tönernes Gerät, das der Zav berührt, soll zerbrochen werden; und jedes Holzgerät soll im Wasser gespült werden.</span>
+          <span class="line">(15:13) Und wenn der Zav von seinem Ausfluss rein wird, so zähle er für sich sieben Tage seiner Reinigung, und er wasche seine Kleider und bade sein Fleisch in lebendigem Wasser — und er ist rein.</span>
+          <span class="line">(15:14) Und am achten Tag nehme er zwei Turteltauben oder zwei junge Tauben und komme vor Adonai an den Eingang des Begegnungs-Zeltes und gebe sie dem Kohen.</span>
+          <span class="line">(15:15) Und der Kohen vollziehe sie — die eine als Chatat und die andere als Olah — und der Kohen sühne für ihn vor Adonai von seinem Ausfluss.</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- ── ALIYAH 6 · שִׁשִּׁי · Vayikra 15:16-28 ── -->
+    <div class="aliyah-block">
+      <div class="aliyah-label">עֲלִיָּה שִׁשִּׁית — שִׁכְבַת זֶרַע · אִשָּׁה בְּנִדָּתָהּ · זָבָה<span class="aliyah-label-de">Sechste Aliyah · Vayikra 15:16–28 · Schichvat Zera, die Tora der Niddah (sieben Tage), die Zavah (Bluten außerhalb der Niddah-Zeit), die geduldigen Tora-Strukturen der körperlichen Schwellen</span></div>
+      <div class="instrument-note">[no percussion] [no drums] [no choir] [acoustic guitar — Bayat in slow contemplative fingerpicking, the patient Tora of the body's thresholds, ritual cleansings, no percussion] Gitarre: Bayat in langsam-kontemplativem Fingerpicking — die geduldige Tora der körperlichen Schwellen und ihrer rituellen Reinigungen.</div>
+      <div class="lyrics-block">
+        <div class="lyrics-he" dir="rtl">
+          <span class="line">וְאִישׁ כִּי־תֵצֵא מִמֶּנּוּ שִׁכְבַת־זָרַע וְרָחַץ בַּמַּיִם אֶת־כׇּל־בְּשָׂרוֹ וְטָמֵא עַד־הָעָרֶב׃</span>
+          <span class="line">וְכׇל־בֶּגֶד וְכׇל־עוֹר אֲשֶׁר־יִהְיֶה עָלָיו שִׁכְבַת־זָרַע וְכֻבַּס בַּמַּיִם וְטָמֵא עַד־הָעָרֶב׃</span>
+          <span class="line">וְאִשָּׁה אֲשֶׁר יִשְׁכַּב אִישׁ אֹתָהּ שִׁכְבַת־זָרַע וְרָחֲצוּ בַמַּיִם וְטָמְאוּ עַד־הָעָרֶב׃</span>
+          <span class="line">וְאִשָּׁה כִּי־תִהְיֶה זָבָה דָּם יִהְיֶה זֹבָהּ בִּבְשָׂרָהּ שִׁבְעַת יָמִים תִּהְיֶה בְנִדָּתָהּ וְכׇל־הַנֹּגֵעַ בָּהּ יִטְמָא עַד־הָעָרֶב׃</span>
+          <span class="line">וְכֹל אֲשֶׁר תִּשְׁכַּב עָלָיו בְּנִדָּתָהּ יִטְמָא וְכֹל אֲשֶׁר־תֵּשֵׁב עָלָיו יִטְמָא׃</span>
+          <span class="line">וְכׇל־הַנֹּגֵעַ בְּמִשְׁכָּבָהּ יְכַבֵּס בְּגָדָיו וְרָחַץ בַּמַּיִם וְטָמֵא עַד־הָעָרֶב׃</span>
+          <span class="line">וְכׇל־הַנֹּגֵעַ בְּכׇל־כְּלִי אֲשֶׁר־תֵּשֵׁב עָלָיו יְכַבֵּס בְּגָדָיו וְרָחַץ בַּמַּיִם וְטָמֵא עַד־הָעָרֶב׃</span>
+          <span class="line">וְאִם עַל־הַמִּשְׁכָּב הוּא אוֹ עַל־הַכְּלִי אֲשֶׁר־הִוא יֹשֶׁבֶת־עָלָיו בְּנׇגְעוֹ־בוֹ יִטְמָא עַד־הָעָרֶב׃</span>
+          <span class="line">וְאִם שָׁכֹב יִשְׁכַּב אִישׁ אֹתָהּ וּתְהִי נִדָּתָהּ עָלָיו וְטָמֵא שִׁבְעַת יָמִים וְכׇל־הַמִּשְׁכָּב אֲשֶׁר־יִשְׁכַּב עָלָיו יִטְמָא׃</span>
+          <span class="line">וְאִשָּׁה כִּי־יָזוּב זוֹב דָּמָהּ יָמִים רַבִּים בְּלֹא עֶת־נִדָּתָהּ אוֹ כִי־תָזוּב עַל־נִדָּתָהּ כׇּל־יְמֵי זוֹב טֻמְאָתָהּ כִּימֵי נִדָּתָהּ תִּהְיֶה טְמֵאָה הִוא׃</span>
+          <span class="line">כׇּל־הַמִּשְׁכָּב אֲשֶׁר־תִּשְׁכַּב עָלָיו כׇּל־יְמֵי זוֹבָהּ כְּמִשְׁכַּב נִדָּתָהּ יִהְיֶה־לָּהּ וְכׇל־הַכְּלִי אֲשֶׁר תֵּשֵׁב עָלָיו טָמֵא יִהְיֶה כְּטֻמְאַת נִדָּתָהּ׃</span>
+          <span class="line">וְכׇל־הַנּוֹגֵעַ בָּם יִטְמָא וְכִבֶּס בְּגָדָיו וְרָחַץ בַּמַּיִם וְטָמֵא עַד־הָעָרֶב׃</span>
+          <span class="line">וְאִם־טָהֲרָה מִזּוֹבָהּ וְסָפְרָה לָּהּ שִׁבְעַת יָמִים וְאַחַר תִּטְהָר׃</span>
+        </div>
+        <div class="lyrics-de">
+          <span class="line">(15:16) Und ein Mann, wenn aus ihm ein Samenerguss tritt — der bade sein ganzes Fleisch im Wasser, und er ist unrein bis zum Abend.</span>
+          <span class="line">(15:17) Und jedes Kleid und jedes Leder, auf dem ein Samenerguss ist, soll im Wasser gewaschen werden, und es ist unrein bis zum Abend.</span>
+          <span class="line">(15:18) Und eine Frau, mit der ein Mann mit Samenerguss liegt — beide baden sich im Wasser, und sie sind unrein bis zum Abend.</span>
+          <span class="line">(15:19) Und eine Frau, wenn sie ihren Blutfluss hat — Blut soll ihr Fluss sein in ihrem Fleisch — sieben Tage sei sie in ihrer Niddah; und jeder, der sie berührt, ist unrein bis zum Abend.</span>
+          <span class="line">(15:20) Und alles, worauf sie in ihrer Niddah liegt, ist unrein, und alles, worauf sie sitzt, ist unrein.</span>
+          <span class="line">(15:21) Und jeder, der ihr Lager berührt, soll seine Kleider waschen und sich im Wasser baden, und er ist unrein bis zum Abend.</span>
+          <span class="line">(15:22) Und jeder, der jegliches Gerät berührt, auf dem sie sitzt, soll seine Kleider waschen und sich im Wasser baden, und er ist unrein bis zum Abend.</span>
+          <span class="line">(15:23) Und wenn es auf dem Lager ist oder auf dem Gerät, auf dem sie sitzt, beim Berühren — so ist er unrein bis zum Abend.</span>
+          <span class="line">(15:24) Und wenn ein Mann wirklich mit ihr liegt und ihre Niddah über ihn kommt — so ist er unrein sieben Tage, und jedes Lager, auf dem er liegt, ist unrein.</span>
+          <span class="line">(15:25) Und eine Frau, wenn der Bluterguss viele Tage außerhalb der Zeit ihrer Niddah fließt, oder wenn er über ihre Niddah hinaus fließt — alle Tage des Flusses ihrer Unreinheit ist sie wie in den Tagen ihrer Niddah: unrein ist sie.</span>
+          <span class="line">(15:26) Jedes Lager, auf dem sie liegt während aller Tage ihres Flusses, sei ihr wie das Lager ihrer Niddah; und jedes Gerät, auf dem sie sitzt, sei unrein wie die Unreinheit ihrer Niddah.</span>
+          <span class="line">(15:27) Und jeder, der sie berührt, ist unrein und soll seine Kleider waschen und sich im Wasser baden, und er ist unrein bis zum Abend.</span>
+          <span class="line">(15:28) Und wenn sie von ihrem Fluss rein ist, so zähle sie für sich sieben Tage, und danach wird sie rein.</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- ── ALIYAH 7 · שְׁבִיעִי · Vayikra 15:29-33 ── -->
+    <div class="aliyah-block">
+      <div class="aliyah-label">עֲלִיָּה שְׁבִיעִית — קָרְבַּן הַזָּבָה · הַזְהָרָה „וְלֹא יָמֻתוּ בְּטֻמְאָתָם" · סִיּוּם הַפָּרָשָׁה<span class="aliyah-label-de">Siebte Aliyah · Vayikra 15:29–33 · Das Zavah-Korban, die zentrale Mahnung „und sie sollen nicht sterben in ihrer Unreinheit", der Schluss der Parashah</span></div>
+      <div class="instrument-note">[no percussion] [no drums] [no choir] [acoustic guitar — Bayat returning to forte at the central warning verse, the Mischkan-protection, then descending into the closing summary, no percussion] Gitarre: Bayat steigt zum Forte beim zentralen Mahn-Vers (Mischkan-Schutz), dann Decrescendo in den Schluss-Summary.</div>
+      <div class="lyrics-block">
+        <div class="lyrics-he" dir="rtl">
+          <span class="line">וּבַיּוֹם הַשְּׁמִינִי תִּקַּח־לָהּ שְׁתֵּי תֹרִים אוֹ שְׁנֵי בְּנֵי יוֹנָה וְהֵבִיאָה אוֹתָם אֶל־הַכֹּהֵן אֶל־פֶּתַח אֹהֶל מוֹעֵד׃</span>
+          <span class="line">וְעָשָׂה הַכֹּהֵן אֶת־הָאֶחָד חַטָּאת וְאֶת־הָאֶחָד עֹלָה וְכִפֶּר עָלֶיהָ הַכֹּהֵן לִפְנֵי אֲדֹנָי מִזּוֹב טֻמְאָתָהּ׃</span>
+          <span class="line">וְהִזַּרְתֶּם אֶת־בְּנֵי־יִשְׂרָאֵל מִטֻּמְאָתָם וְלֹא יָמֻתוּ בְּטֻמְאָתָם בְּטַמְּאָם אֶת־מִשְׁכָּנִי אֲשֶׁר בְּתוֹכָם׃</span>
+          <span class="line">זֹאת תּוֹרַת הַזָּב וַאֲשֶׁר תֵּצֵא מִמֶּנּוּ שִׁכְבַת־זֶרַע לְטׇמְאָה־בָהּ׃</span>
+          <span class="line">וְהַדָּוָה בְּנִדָּתָהּ וְהַזָּב אֶת־זוֹבוֹ לַזָּכָר וְלַנְּקֵבָה וּלְאִישׁ אֲשֶׁר יִשְׁכַּב עִם־טְמֵאָה׃</span>
+        </div>
+        <div class="lyrics-de">
+          <span class="line">(15:29) Und am achten Tag nehme sie sich zwei Turteltauben oder zwei junge Tauben und bringe sie zum Kohen an den Eingang des Begegnungs-Zeltes.</span>
+          <span class="line">(15:30) Und der Kohen vollziehe sie — die eine als Chatat und die andere als Olah — und der Kohen sühne für sie vor Adonai vom Fluss ihrer Unreinheit.</span>
+          <span class="line">(15:31) Und ihr sollt die Söhne Israels vor ihrer Unreinheit warnen, damit sie nicht sterben in ihrer Unreinheit, indem sie meinen Mischkan verunreinigen, der in ihrer Mitte ist.</span>
+          <span class="line">(15:32) Dies ist die Tora des Zav, und dessen, aus dem ein Samenerguss tritt, um damit unrein zu werden,</span>
+          <span class="line">(15:33) und der Leidenden in ihrer Niddah, und des Zav-Mannes, und für den Mann und die Frau, und für den Mann, der mit einer Unreinen liegt.</span>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- ══ TIKKUN-BOX · TIKKUN-HAWIDDUI VE-HA'ANAVAH · DAS HERZ DER PARASHAH ══ -->
+    <div class="tikkun-box">
+      <div class="tikkun-header">
+        <div class="tikkun-title-he">מַעֲשֵׂה הַתִּיקּוּן — תִּקּוּן הַוִּדּוּי וְהָעֲנָוָה הַסְּפָרַדִּי</div>
+        <div class="tikkun-title-de">Tikkun – Sephardische Praxis des stillen Vidui und der Anavah-Heimkehr, der priesterlichen Wieder-Aufnahme in Hören, Tun und Gehen</div>
+        <span class="tikkun-src">
+          וַיִּקְרָא י״ד:א׳–ט״ו:ל״ג · רַמְבַּ״ם הִלְכוֹת טֻמְאַת צָרַעַת י״א (טׇהֳרַת הַמְצֹרָע — שְׁתֵּי הַצִּפֳּרִים, גִּלּוּחַ, סְפִירַת
+          שִׁבְעָה יָמִים, תְּנוּכָה וּבְהוֹנוֹת) · רַמְבַּ״ם הִלְכוֹת מְחֻסְּרֵי כַפָּרָה (קָרְבַּן הַיּוֹם הַשְּׁמִינִי) ·
+          מְגִלָּה כ״ח: (וִיתּוּר בְּסִיּוּם הַיּוֹם — מָסֹרֶת סְפָרַדִּית לְוִדּוּי הַשְּׁכִיבָה) · רשש (מָסֹרֶת הַקַּבָּלָה
+          הַיְּרוּשַׁלְמִית — הוֹד כְּשֹׁרֶשׁ הַהוֹדָאָה, „הוֹד" וְ„הוֹדָאָה" מִשֹּׁרֶשׁ אֶחָד) · רַמְחַ״ל מְסִלַּת יְשָׁרִים פֶּרֶק ד׳
+          (בֵּאוּר דַּרְכֵי קְנִיַּת הַזְּהִירוּת) · רַמְחַ״ל מְסִלַּת יְשָׁרִים פֶּרֶק כ״ב (בֵּאוּר מִדַּת הָעֲנָוָה — תְּנַאי
+          לְכָל שִׁיבָה) · אוֹר הַחַיִּים עַל וַיִּקְרָא י״ד:ב׳ (שְׁתֵּי הַצִּפֳּרִים כִּשְׁנֵי פַּרְצוּפֵי הַתִּקּוּן — הַנִּשְׁחֶטֶת
+          וְהַחַיָּה) · שַׁדַ״ל בְּפֵרוּשׁ עַל וַיִּקְרָא י״ג:מ״ו וְעַל י״ד (שְׁתֵּי הַצִּפֳּרִים, הָאֵזֹב, עֵץ הָאֶרֶז וּשְׁנִי
+          הַתּוֹלַעַת כְּסִימָנֵי כַפָּרַת הָעָוֹן — וְשִׁלּוּחַ הַצִּפֹּר הַחַיָּה לְסַמֵּן שֶׁאֵין הַמְּצֹרָע עוֹד מֻסְגָּר חוּץ
+          לַמַּחֲנֶה) · בֶּן אִישׁ חַי שָׁנָה רִאשׁוֹנָה תַזְרִיעַ-מְצֹרָע (טָהֳרוֹת — הִלְכוֹת הַכֵּלִים) · בֶּן אִישׁ חַי שָׁנָה
+          שְׁנִיָּה מְצֹרָע (הִלְכוֹת דָּם) · כַּף הַחַיִּים אוֹרַח חַיִּים קנ״ח
+          <br><br>
+          Vayikra 14:1–15:33 · Rambam Hilchot Tum'at Tzaraat 11 (Reinigung des Metzora: zwei Vögel, Scheren, Sieben-Tage-Zählung, Tnuch und Bohen) ·
+          Rambam Hilchot Mechusrei Kapparah (Achte-Tag-Korban) · Megillah 28a (sephardische Vergebungs-Praxis vor dem Schlaf) ·
+          Rashash · Yerushalmische Kabbala-Tradition (Hod als Wurzel der Hodaah — Bekenntnis und Dank von derselben Wurzel) ·
+          Ramchal Mesillat Yescharim Perek 4 (Be'ur Drachei Kniyat HaZehirut — der vorbereitende Schritt jeder Reinigung) ·
+          Ramchal Mesillat Yescharim Perek 22 (Be'ur Midat HaAnavah — Demut als Bedingung jeder Heimkehr) ·
+          Or HaChaim auf Vayikra 14:2 (die zwei Vögel als die zwei Gesichter des Tikkun: das Geschlachtete und das Lebendige) ·
+          Shadal Pirusch zu Vayikra 13:46 und zu Vayikra 14 (die zwei Vögel, der Hyssop, das Zedernholz, die scharlachfarbene Wolle
+          als Sühne-Symbole — und das Freilassen des lebenden Vogels als Zeichen, dass der Metzora kein Verbannter mehr ist) ·
+          Ben Ish Chai Shanah Rishona Tazria-Metzora (Tahorot — Hilchot HaKelim, Netilat Yadayim als äußere Reinigungs-Schule) ·
+          Ben Ish Chai Shanah Schnijah Metzora (Hilchot Dam — sephardische Speise-Halacha der zweiten Jahreshälfte) ·
+          Kaf HaChaim auf Orach Chaim 158.
+        </span>
+      </div>
+      <div class="tikkun-body">
+        <strong>Sephardische Praxis:</strong> Metzora ist die Tora der <em>Wieder-Aufnahme</em>. Wo Tazria das Tor der
+        Quarantäne öffnet — die schwere Seite des sephardischen Tikkun-HaDibur, der Quarantäne des falsch-gesprochenen
+        Wortes — da öffnet Metzora das Tor der <em>Rückkehr</em>: <em>„זֹאת תִּהְיֶה תּוֹרַת הַמְּצֹרָע בְּיוֹם
+        טׇהֳרָתוֹ וְהוּבָא אֶל־הַכֹּהֵן"</em> (Vayikra 14:2). Die ganze priesterliche Choreografie, die folgt — die zwei
+        Vögel, der Hyssop, das Zedernholz, die scharlachfarbene Wolle, das tönerne Gefäß mit lebendigem Wasser, das
+        Schlachten des einen Vogels über dem Gefäß, das Tauchen des zweiten Vogels mitsamt Holz und Wolle und Hyssop in
+        das Blut-und-Wasser, die siebenfache Besprengung, das Freilassen des lebenden Vogels über das offene Feld,
+        das Rasieren, das Waschen, die sieben Tage außerhalb des Zeltes, dann das vollständige Rasieren am siebten Tag,
+        dann die Korbanot am achten Tag und das Anlegen des Blutes und des Öls am rechten Ohrläppchen, am rechten Daumen
+        und am rechten großen Zeh — diese ganze Architektur ist im sephardischen Verstehen <em>nicht</em> das Heilen des
+        Aussatzes (das ist schon vor dem Ritus geschehen: <em>„וְהִנֵּה נִרְפָּא נֶגַע־הַצָּרַעַת"</em>, 14:3), sondern
+        die <em>kunstvoll-geduldige Wieder-Aufnahme des Geheilten in die Gemeinde</em>. <strong>Schadal</strong> in
+        seinem <em>Pirusch zu Vayikra 13:46 und 14</em> lehrt das mit der Pschat-Klarheit der italienisch-sephardischen
+        Schule: die zwei Vögel und das Bündel (Holz · Wolle · Hyssop) sind <em>Zeichen und Symbol</em> der Sühne des
+        Schuldhaften — das Blut des geschlachteten Vogels signalisiert <em>„נִקּוּי גָּדוֹל"</em> (große Reinigung von
+        großer Schuld), das lebendige Wasser bedeutet <em>„נִקּוּי קַל"</em> (leichte Reinigung von leichter Schuld);
+        beide werden im Ritus zusammengeführt, weil der Mensch beide trägt. <em>„ואחר כן משלחין את הצפור החיה על פני
+        השדה, וזה יסמן שהמצורע איננו עוד מוסגר חוץ למחנה, אבל הוא יוצא מהסגרו ונכנס בכל מקום שירצה"</em> — und danach
+        entsendet man den lebenden Vogel über das offene Feld; dies bedeutet, dass der Metzora kein Verbannter außerhalb
+        des Lagers mehr ist, sondern aus seinem Verschluss heraustritt und in jeden Ort eintritt, in den er einkehren
+        will (Schadal zu Vayikra 14). Diese Pschat-Pointe verhindert sephardisch zwei Fehler: einerseits die magische
+        Lesung des Vogels-Bündels als Zauber-Akt, andererseits die Allegorisierung, die den konkreten Sinn der Heimkehr
+        verfliegen lässt. <strong>Or HaChaim</strong> in seiner Glosse zu Vayikra 14:2 ergänzt die kabbalistische
+        Dimension: die zwei Vögel sind die <em>zwei Gesichter</em> des Tikkun — der geschlachtete als das alte Wort,
+        das endgültig verstummt, der lebendige als das neue Schweigen-und-Reden, das in die Freiheit fliegt. Was
+        geschlachtet wird, wird nicht erniedrigt; was freigelassen wird, wird nicht abgewertet. <strong>Rambam</strong>
+        in <em>Hilchot Tum'at Tzaraat 11</em> codifiziert den Ritus halachisch in vollem Detail: die Vögel müssen rein
+        und lebend sein, das Holz muss Zedernholz sein, die Wolle muss in scharlachrot gefärbt sein, der Hyssop muss
+        echter Esov sein, das Wasser muss lebendiges Wasser sein (also fließendes Quellwasser, nicht stehendes), die
+        siebenfache Besprengung muss präzise sein. In <em>Hilchot Mechusrei Kapparah</em> regelt Rambam die Korbanot des
+        achten Tages — die der Metzora, der Zav, die Zavah und die Yoledet als <em>Mechusrei Kapparah</em>, „solche,
+        denen die Sühne noch fehlt" (die nach der Reinigung noch im Übergang zur vollen Heiligkeit stehen), an den
+        Eingang des Begegnungs-Zelts bringen, bevor sie ganz Teil der Gemeinde sind.
+        <br><br>
+        <strong>Die kabbalistisch-mussarische Tiefen-Lesung</strong> dieser Parashah ergibt sich aus dem Sefirah-Anker
+        <em>Hod</em>. Sephardisch nach <strong>Rashash</strong> (Yerushalmische Kabbala-Tradition des
+        <em>Nahar Schalom</em>) ist Hod die Sefirah des <em>Hodaah</em> — und das hebräische Wort <em>הוֹדָאָה</em>
+        trägt eine semantische Doppelung, die für unsere Parashah entscheidend ist: <em>הוֹדָאָה</em> heißt sowohl
+        „Bekenntnis (der Schuld)" als auch „Dank (für die Wohltat)". Beides aus derselben Wurzel ה–ו–ד. Der Metzora
+        wird nicht durch ein Schauspiel der Demütigung wieder aufgenommen, sondern durch eine stille <em>Hodaah</em>:
+        er bekennt, indem er gebracht wird (Vayikra 14:2 — passiv-Form <em>וְהוּבָא</em>, „und er wird gebracht"; er
+        kommt nicht von selbst, weil er als Metzora die Initiative nicht haben kann); und er dankt, indem er sich vor
+        dem Kohen still hinstellt und Blut und Öl auf Ohr, Daumen und Zeh empfängt. Diese drei Stellen sind sephardisch-
+        kabbalistisch hochgeladen: das rechte Ohr — das Hören, das Tora aufnimmt; der rechte Daumen — das Tun, das die
+        Mitzwot ausführt; der rechte große Zeh — das Gehen, das auf dem Weg der Heiligung schreitet. Was im Lashon
+        HaRa beschädigt war (das Ohr, das schlecht hörte; die Hand, die schlecht schrieb oder weiterleitete; der Fuß,
+        der zum schlechten Reden lief), wird in seiner rechten Hälfte — der starken, der bestätigenden — wieder
+        eingeweiht. Das ist <em>Hod</em>: die akustisch-leise, fast unsichtbare Sefirah, die das, was kaputt schien,
+        durch Anerkennung und Choreografie zurückbringt. <strong>Ramchal</strong> in <em>Mesillat Yescharim Perek 22</em>
+        („בֵּאוּר מִדַּת הָעֲנָוָה" — die Erläuterung der Eigenschaft der Demut) lehrt: <em>Anavah</em> ist nicht
+        Selbsterniedrigung und nicht Selbst-Aufgabe, sondern <em>die zutreffende Selbsteinschätzung im Angesicht der
+        Wahrheit</em> — der Demütige weiß, was er getan hat, weil er es nicht beschönigt, und er weiß, was er empfangen
+        hat, weil er es nicht für eigene Leistung hält. Diese Anavah ist die innere Bewegung des Metzora-Ritus. In
+        <em>Perek 4</em> („בֵּאוּר דַּרְכֵי קְנִיַּת הַזְּהִירוּת" — die Wege, die Zehirut/Wachsamkeit zu erwerben)
+        gibt Ramchal die Vorbereitung: regelmäßige Selbstprüfung (יוֹם יוֹם · vor dem Schlaf · vor Schabbat · vor
+        Rosch Chodesch · vor den Yamim Noraim), strukturiertes Erinnern des Tages, das benennen-was-falsch-und-was-gut-
+        war ohne Selbst-Drama. Der sephardisch-mussarische Weg ist eine <em>Leiter</em> (Baraita von R. Pinchas ben
+        Yair, von Mesillat Yescharim als Achse genommen), und die Sefirah Hod liegt nahe dem Anavah-Schritt der Leiter
+        — denn ohne Anavah keine Hodaah, und ohne Hodaah keine Restitution. <strong>Ben Ish Chai</strong> teilt seine
+        Behandlung von Metzora zwischen den zwei Jahreszyklen: in <em>Shanah Rischona</em> (erste Jahreshälfte, mit
+        Schwerpunkt auf praktischer Halacha des täglichen Lebens) wird Tazria-Metzora als <em>Hilchot HaKelim</em>
+        (Reinheits-Gesetze der Gefäße — Tauchen, Tovelen neuer Gefäße aus dem Eigentum eines Nichtjuden, Netilat
+        Yadayim mit Rashash-Standard); in <em>Shanah Schnijah</em> (zweite Jahreshälfte, mit Schwerpunkt auf
+        sephardischer Speise-Halacha) wird Metzora als <em>Hilchot Dam</em> behandelt — die sephardisch-Bagdadi-
+        Yerushalmi-Disziplin des Ausblutens und Salzens des Fleisches. Beide Wahl-Schwerpunkte sind sephardisch
+        pädagogisch konsequent: in der ersten Jahreshälfte (vor Pessach) lehrt Ben Ish Chai die
+        <em>Verfeinerung des Reinheits-Tisches</em> als äußeres Bild der inneren Reinigung; in der zweiten
+        Jahreshälfte (zwischen Pessach und den Yamim Noraim) lehrt er die <em>Hilchot Dam</em> — die sorgfältige
+        Behandlung des Blutes — als sephardisches Bild der ernsthaften Selbstprüfung in der körperlichen Welt.
+        <strong>Kaf HaChaim auf Orach Chaim 158</strong> bestätigt für alle Eidot HaMizrach — Aleppo, Marokko, Yemen,
+        Bagdad, Yerushalayim — die sephardische Netilat-Yadayim-Disziplin als tägliche Tikkun-Praxis: drei Aufgüsse
+        pro Hand, drei Reibungen pro Hand, Erhebung der Hände auf Kopfhöhe — und das ist die tägliche, sanfte
+        Wiederholung der Hand-am-Asham-Blut-Anlegung, der priesterlichen Wieder-Einweihung der Glieder, die
+        an Metzora 14:14 und 14:25 hängt.
+        <br><br>
+        <strong>Die Stille des Vidui.</strong> Sephardisch nach <strong>Rashash</strong> und in der Linie des
+        <em>Ben Ish Chai</em> ist der Vidui des Metzora-Anavah <em>nicht</em> öffentliche Selbst-Anklage und
+        <em>nicht</em> spektakuläre Tränen-Inszenierung. Talmud Bavli (<em>Megillah 28a</em>) berichtet von der
+        sephardischen Linie folgenden klassischen Praxis: vor dem Schlaf vergibt der Mensch jenen, die ihm Unrecht
+        getan haben, und bekennt vor Adonai, was er selbst falsch getan hat — alles in der Stille des Bettes, ohne
+        Zeugen, ohne Drama. Diese Praxis steht in der Linie der zentralen rabbinischen Frömmigkeit (Mar Zutra
+        formuliert dies in der Gemara als seine eigene Schlafens-Tradition) und ist in den sephardischen
+        Schma-She'al-haMittah-Versionen aller Eidot HaMizrach (Aleppo, Marokko, Yemen, Bagdad, Yerushalayim) zentral
+        gestaltet — gleich nach dem letzten Pasuk des Schma steht die Vidui-Brachah <em>„הֲרֵינִי מוֹחֵל לְכָל מִי
+        שֶׁהִכְעִיס וְהִקְנִיט אוֹתִי"</em> (siehe sephardische Siddur-Tradition · Eidot HaMizrach), und unmittelbar
+        danach folgt die Bitte um eigene Vergebung. Diese Praxis ist die nächtliche, leise Form des Metzora-Ritus
+        — der Mensch wird gebracht (zum Schlaf, zum Schweigen, zur Stille), und der innere Kohen, das Gewissen vor
+        Adonai, vollzieht die Choreografie der Wieder-Aufnahme.
+        <br><br>
+        <strong>Praktische Handlung:</strong>
+        (1) <em>Vidui beim Schma She'al haMittah — sephardischer Yemenite-Yerushalmi-Standard</em>: Vor dem Schlaf,
+        nach dem letzten Pasuk des Schma <em>„Adonai Eloheichem Emet"</em>, spreche die sephardische Vergebungs-Formel
+        <em>„הֲרֵינִי מוֹחֵל לְכָל מִי שֶׁהִכְעִיס וְהִקְנִיט אוֹתִי"</em> (Hineni mochel le-chol mi shehich'is
+        ve-hiknit oti — Hiermit vergebe ich allen, die mir Ärger und Kränkung zugefügt haben). Diese sephardische
+        Praxis stützt sich auf Megillah 28a und ist in den Siddurim aller Eidot HaMizrach standardisiert (Tefilat
+        HaChodesh, Beit Menucha, Yechaweh Daat). Nach dieser Vergebung füge eine kurze, stille eigene Vidui-Bewegung
+        hinzu: drei Sätze leise vor Adonai — was ich heute falsch gesagt habe, was ich heute falsch getan habe, was
+        ich morgen anders machen werde. Keine Tränen-Inszenierung, keine ausgedehnte Reflexion — sephardisch sanft,
+        wie Bayat fließt: gleichmäßig, leise, getragen.
+        (2) <em>Mikwe-Eintauchen mit Metzora-Kawanah</em>: Sephardisch (besonders Yerushalayim-Aleppo) tauchen viele
+        Männer am Erev Schabbat, am Erev Yom Tov und in der Linie strenger sephardischer Mussar-Praxis auch wöchentlich.
+        Beim Eintauchen lege die Kawanah ein: <em>„ich gehe als Metzora hinein und komme rein hinaus"</em> — die zwei
+        Vögel, das geschlachtete und das lebendige, beide bin ich, beide werden in das lebendige Wasser getaucht und
+        ich trete als Erneuerter hervor. Diese Kawanah ist nicht erfundene Symbolik, sondern direkter Anschluss an
+        Vayikra 14:8 (<em>„וְרָחַץ בַּמַּיִם וְטָהֵר"</em> — er badet im Wasser und ist rein). Wo Frauen die Mikwe
+        nach der Niddah benutzen (Vayikra 15:28-29), gilt eine andere, sephardisch-stille Kawanah, die die jeweilige
+        Frau mit ihrem Rav oder Rabbanit gestaltet — Metzora-Kawanah ist nicht universal anzuwenden.
+        (3) <em>Mesillat Yescharim Perek 22 (Anavah) zweimal jährlich lesen</em>: Sephardische Standard-Praxis vor
+        Pessach und vor Yom Kippur (gestützt auf die Pet'icha-Architektur von Mesillat Yescharim selbst). Markiere
+        konkret drei Stellen in Perek 22, an denen Ramchal die <em>falsche Anavah</em> (Selbst-Erniedrigung, falsches
+        Klein-Machen, Pseudo-Demut zur Vermeidung von Verantwortung) von der <em>echten Anavah</em> (zutreffende
+        Selbsteinschätzung, das Bekennen ohne Drama, das Annehmen ohne Selbst-Auflösung) unterscheidet. Diese
+        Unterscheidung ist sephardisch zentral — Hod ist nicht Selbst-Unterdrückung, sondern die kunstvoll-aufrechte
+        Demut des Heimkehrenden, der seine Glieder wieder einweihen lässt.
+        (4) <em>Tikkun-HaWiddui am Birkat HaMazon — vierte Brachah „HaTov VeHaMetiv"</em>: Sephardischer Brauch
+        aller Eidot HaMizrach. An der vierten, rabbinischen Brachah <em>„Baruch atah Adonai... haTov vehaMetiv"</em>
+        halte einen Atemzug ein und setze innerlich die Kawanah: <em>„Adonai, der Gut ist und Gutes wirkt — möge ich
+        heute, wo ich Brot vor dir gegessen habe, mein Ohr-Daumen-Zeh dir neu weihen: das Hören zur Tora, das Tun
+        zur Mitzwah, das Gehen zum Weg der Heiligung."</em> Die rabbinische Brachah wird so zum täglichen Tikkun-
+        Anker der Metzora-Wieder-Einweihung.
+        (5) <em>Ben-Ish-Chai-Metzora — Hilchot HaKelim als äußerer Tikkun</em>: In der sephardisch-Bagdadi-Yerushalmi-
+        Tradition gehört zum Tazria-Metzora-Schabbat die Beachtung der Reinheits-Halacha des Hauses — Tovel-Pflicht
+        für neu erworbene Gefäße aus dem Eigentum eines Nichtjuden (Tvilat Kelim, Numeri 31:23 als Tora-Quelle).
+        Sephardisch (Ben Ish Chai Shanah Rischona Tazria-Metzora, Halacha-Sektion) wird empfohlen: jedes neu
+        erworbene Metall- oder Glasgefäß im Mikwe-Brunnen tovelen, mit Brachah, mit der Kawanah <em>„dieses Gefäß
+        tritt aus seinem profanen Stand in den Bund Israels — wie ich selbst jeden Tag aus dem Profanen ins
+        Heilige eintrete"</em>. Das ist sephardischer Haushalts-Tikkun, der Metzora-Praxis im Eintritt-ins-Land
+        spiegelt (Vayikra 14:34 — Beginn der Hausa-Tzaraat-Halacha).
+        (6) <em>Ben-Ish-Chai-Metzora-Shanah-Schnijah — Hilchot Dam als ernsthafte Speise-Disziplin</em>: Sephardisch
+        in der zweiten Jahreshälfte: das Ausbluten und Salzen des Fleisches vor dem Kochen (<em>Hach'sharat
+        HaBassar</em>) mit voller Disziplin praktizieren. Das mag heute durch koscheres Fleisch aus der Schechita
+        scheinbar erledigt sein — sephardisch (Yabia Omer Yoreh De'ah I:1ff) bleibt die <em>persönliche
+        Verantwortung</em>: einmal jährlich das Salzungs-und-Ausblutungs-Verfahren selbst überprüfen oder lernen.
+        Dies ist sephardischer Hausa-Tikkun in der Linie Ben Ish Chai Shanah Schnijah Metzora.
+        (7) <em>Schadal-Pirusch zu Vayikra 14 am Erev Schabbat Metzora</em>: Italienisch-sephardischer Brauch.
+        Lese am Donnerstagabend oder am Freitagmorgen Schadals Pirusch zu Vayikra 13:46 und Vayikra 14 mit
+        besonderer Aufmerksamkeit auf seine zwei Pointen: (a) die zwei Vögel und das Holz-Wolle-Hyssop-Bündel als
+        konkrete Sühne-Symbole (nicht magische Substanzen, sondern bedeutungstragende Zeichen — der geschlachtete
+        Vogel als „große Reinigung durch Blut", die lebendige als „leichte Reinigung durch Wasser", das Bündel als
+        Erinnerung an große und kleine Schuld); (b) das Freilassen des lebenden Vogels über das offene Feld als
+        Akt der <em>Wieder-Aufnahme</em>, nicht der Entlastung — der Mensch ist kein Verbannter mehr. Diese
+        Pschat-Klarheit verhindert eine bloß spirituelle Lesung, die das konkrete Tun aus den Augen verliert.
+        (8) <em>Ohr-Daumen-Zeh-Bewusstheits-Übung — wöchentlicher sephardischer Mussar-Anker</em>: Einmal in der
+        Woche (Erev Schabbat oder Schabbat-Vormittag in der Synagoge nach der Tora-Lesung) lege still die rechte
+        Hand auf das rechte Ohr, dann auf den rechten Daumen der linken Hand, dann auf den rechten großen Zeh
+        (das geht in jeder Sitz-Haltung mit den Fingern der eigenen rechten Hand) und denke: <em>„Adonai, was ich
+        in dieser Woche schlecht gehört habe — vergib; was ich schlecht getan habe — vergib; wohin ich falsch
+        gegangen bin — vergib. Und heile mein Hören, mein Tun und mein Gehen für die kommende Woche."</em> Diese
+        Übung ist direkter Anschluss an Vayikra 14:14 und 14:25 — Ohr, Daumen, Zeh, dieselben drei rechten Stellen
+        der priesterlichen Wieder-Einweihung — und ist ein sephardischer Mussar-Wochen-Anker, der die schwer-
+        praktizierbare Tora der Metzora-Korbanot in eine täglich-anwendbare Geste übersetzt.
+      </div>
+      <div class="tikkun-tags">
+        <span class="tikkun-tag">מְצֹרָע</span>
+        <span class="tikkun-tag">תּוֹרַת הַטׇהֳרָה</span>
+        <span class="tikkun-tag">וִדּוּי</span>
+        <span class="tikkun-tag">עֲנָוָה</span>
+        <span class="tikkun-tag">הוֹד</span>
+      </div>
+    </div>
+
+    <!-- ══ SCHI · KLIMAX-MOMENT — VAYIKRA 14:7 ══ -->
+    <div class="climax-box">
+      <div class="climax-label">שִׂיא · ff · Klimax-Vers der Parashah · das Freilassen des lebenden Vogels</div>
+      <div class="instrument-note">[no percussion] [no drums] [no choir] [acoustic guitar — Bayat rising to forte at the seven sprinklings, then opening into the released-bird arc, the great moment of Tahara and freedom, no percussion] Gitarre: Bayat steigt zum Forte bei den sieben Sprengungen, öffnet sich dann in den Frei-Vogel-Bogen — der große Augenblick der Reinheit und der wiedergewonnenen Freiheit.</div>
+      <div class="climax-verse-he">וְהִזָּה עַל הַמִּטַּהֵר מִן־הַצָּרַעַת שֶׁבַע פְּעָמִים וְטִהֲרוֹ · וְשִׁלַּח אֶת־הַצִּפֹּר הַחַיָּה עַל־פְּנֵי הַשָּׂדֶה</div>
+      <div class="climax-verse-de">„Und er besprengt den, der gereinigt werden soll, siebenmal von der Tzaraat, und reinigt ihn — und den lebenden Vogel entlässt er über das offene Feld."</div>
+      <div class="climax-src">וַיִּקְרָא י״ד:ז׳ · רַמְבַּ״ם הִלְכוֹת טֻמְאַת צָרַעַת י״א · שַׁדַ״ל בְּפֵרוּשׁ עַל וַיִּקְרָא י״ד</div>
+    </div>
+
+    <!-- ══ KODA · WHISPER · VAYIKRA 14:20 ══ -->
+    <div class="coda-box">
+      <div class="coda-label">קוֹדָה · pp · die priesterliche Sühne im Hauch · der Heimkehrende ist rein</div>
+      <div class="instrument-note">[no percussion] [no drums] [no choir] [acoustic guitar — Bayat dissolving into a single sustained low note, the priestly atonement-and-pure whispered, almost inaudible, no percussion] Gitarre: Bayat löst sich in einen einzigen getragenen Tiefton — die priesterliche Sühne und der Reinheits-Hauch, kaum hörbar.</div>
+      <div class="coda-whisper">
+        <strong>וְכִפֶּר</strong> עָלָיו הַכֹּהֵן — <strong>וְטָהֵר</strong></div></div>
+
+  </section>
+
+  <!-- ══ FOOTER ══ -->
+  <div class="footer">
+    <p class="footer-he">פָּרָשַׁת מְצֹרָע · הוֹד · מַקָּאם בַּיָאת · תִּקּוּן הַוִּדּוּי וְהָעֲנָוָה · וְכִפֶּר עָלָיו הַכֹּהֵן וְטָהֵר</p>
+    <p class="footer-chain">
+      וַיִּקְרָא י״ד:א׳–ט״ו:ל״ג · נוּסַּח צָדוֹק (רשש) · עֵדוֹת הַמִּזְרָח · הַפָּרָשָׁה הַחֲמִישִׁית בְּסֵפֶר וַיִּקְרָא
+    </p>
+    <p class="footer-de">
+      Quellen: <strong>Tanach</strong> (Vayikra 14:1–15:33 — Tora-Text 1:1, mit Tetragrammaton-Konvertierung
+      durchgängig als אֲדֹנָי) · <strong>Rambam · Mishneh Torah</strong> (Hilchot Tum'at Tzaraat 11 — die
+      vollständige Halacha der Metzora-Reinigung: zwei Vögel, Zedernholz, scharlachfarbene Wolle, Hyssop,
+      lebendiges Wasser, siebenfache Besprengung, Freilassen des Vogels, Rasieren-Waschen-Sieben-Tage-außerhalb,
+      vollständiges Scheren am siebten Tag; Hilchot Mechusrei Kapparah — die Korbanot des achten Tages für
+      Metzora, Zav, Zavah und Yoledet) · <strong>Talmud Bavli · Megillah 28a</strong> (sephardische Praxis der
+      Vergebung vor dem Schlaf — Mar Zutra-Tradition; Grundlage der Schma-She'al-haMittah-Vidui in allen Eidot
+      HaMizrach) · <strong>Ramchal · Mesillat Yescharim Perek 4</strong> („Be'ur Drachei Kniyat HaZehirut" — die
+      Wege, die Wachsamkeit zu erwerben, als Vorbereitung jeder Reinigung) · <strong>Ramchal · Mesillat Yescharim
+      Perek 22</strong> („Be'ur Midat HaAnavah" — die echte Demut als zutreffende Selbsteinschätzung gegenüber
+      der Wahrheit, gegen die falsche Pseudo-Demut der Selbst-Erniedrigung; sephardisch-mussarisch zentrale
+      Quelle für die Tikkun-HaWiddui-Praxis) · <strong>Rashash · Yerushalmische Kabbala-Tradition</strong>
+      (die Sefirah Hod als Wurzel der <em>Hodaah</em> — die semantische Doppelung von „Bekenntnis" und „Dank" aus
+      derselben Wurzel ה–ו–ד; das Anlegen von Blut und Öl an Ohr-Daumen-Zeh als priesterliche Wieder-Einweihung der
+      Glieder; allgemeine Lehre der Rashash-Schule ohne spezifischen Pirken-Verweis im Nahar-Shalom-Text, daher als
+      Tradition zitiert) · <strong>Or HaChaim auf Vayikra 14:2</strong> (die zwei Vögel als die zwei Gesichter des
+      Tikkun: der geschlachtete und der lebendige; beide gehören zum Heimkehrenden) · <strong>Schadal · Pirusch al
+      haTora</strong> (Rabbi Schmuel David Luzzatto, Padua — die ausführliche Glosse zu Vayikra 13:46 über alle
+      Tum'a-Tahara-Strukturen und die spezifische Glosse zu Vayikra 14 über die zwei Vögel, das Holz-Wolle-
+      Hyssop-Bündel und das Freilassen des lebenden Vogels als Akt der öffentlich-zeichenhaften Wieder-Aufnahme:
+      <em>„ואחר כן משלחין את הצפור החיה על פני השדה, וזה יסמן שהמצורע איננו עוד מוסגר חוץ למחנה"</em>) ·
+      <strong>Ben Ish Chai · Shanah Rishona Parashat Tazria-Metzora</strong> (Tahorot — Hilchot HaKelim:
+      Tovel-Pflicht für Geräte aus dem Eigentum eines Nichtjuden; Netilat Yadayim mit Rashash-Standard als
+      sephardischer Haushalts-Tikkun) · <strong>Ben Ish Chai · Shanah Schnijah Parashat Metzora</strong> (Hilchot
+      Dam — die sephardische Speise-Disziplin des Ausblutens und Salzens des Fleisches als ernsthafte Selbst-
+      prüfung in der körperlichen Welt) · <strong>Kaf HaChaim auf Orach Chaim 158</strong> (Rabbi Yaakov Chaim
+      Sofer — die sephardische Netilat-Yadayim-Disziplin als tägliche Tikkun-Praxis für alle Eidot HaMizrach:
+      Aleppo, Marokko, Yemen, Bagdad, Yerushalayim) · <strong>Yabia Omer / Chazon Ovadia</strong> (Rabbi Ovadia
+      Yosef Z'L — sephardische moderne Halachah zu Hach'sharat HaBassar und Tvilat Kelim) ·
+      <strong>Sephardischer Schma-She'al-haMittah-Vidui</strong> (Eidot HaMizrach, Standard-Siddurim: Tefilat
+      HaChodesh, Beit Menucha, Yechaweh Daat — die Vergebungs-Formel <em>„Hineni mochel le-chol mi shehich'is
+      ve-hiknit oti"</em>).
+      <br><br>
+      <strong>Tradition:</strong> Sephardisch · Nussach Zadoq (Rashash) · Maqam-Tradition aus Aleppo,
+      Yerushalayim, Marokko, Yemen, Bagdad · Tetragrammaton durchgängig als אֲדֹנָי · Maschiach ben David ·
+      Doppelt geprüfte Quellen · Tora-Text 1:1 unverändert · Erstellt Mai 2026 · Sefer HaParashot bemo
+      Maqam · 5. Lied Sefer Vayikra · Hod · Maqam Bayat · ~60 BPM rubato · תִּקּוּן הַוִּדּוּי וְהָעֲנָוָה.
+    </p>
+    <div class="footer-amen">אָמֵן · יִבָּנֶה הַמִּקְדָּשׁ בִּמְהֵרָה בְיָמֵינוּ · יָבוֹא מָשִׁיחַ בֶּן דָּוִד · אָמֵן</div>
+  </div>
+
+</div>
+
+
+</body></html>

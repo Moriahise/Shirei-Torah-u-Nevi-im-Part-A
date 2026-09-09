@@ -1,0 +1,584 @@
+<!DOCTYPE html>
+<html lang="he-IL"><head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>פָּרָשַׁת בְּשַׁלַּח · שְׁמוֹת י״ג:י״ז–י״ז:ט״ז · תִּפְאֶרֶת · מַקָּאם רַאסְט · Sephardische Tora-Vertonung</title>
+  <link href="https://fonts.googleapis.com/css2?family=Frank+Ruhl+Libre:wght@300;400;700;900&amp;family=EB+Garamond:ital,wght@0,400;0,600;1,400;1,600&amp;family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&amp;display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg:#060808; --deep:#0A0E0E; --layer:#101414; --card:#0C1010;
+      --parchment:#f2e8d0; --parch-dim:#c8b898;
+      --ivory:#f0e8d8; --ivory-dim:#a89878;
+      --silver:#c8d4e0; --silver-dim:#7a8290;
+      --text:#a0a89c;
+      /* SEFER SCHEMOT — Tief-Rot · Befreiung */
+      --sefer:#B04030; --sefer-lt:#E07060; --sefer-dim:#7A2818;
+      --sefer-bg:rgba(176,64,48,.08); --sefer-bdr:rgba(176,64,48,.36); --sefer-glow:rgba(224,112,96,.20);
+      /* BESCHALACH · TIFERET · RAST — Königlich-ausgewogenes Morgengold der Schirah */
+      --bsl:#C89048; --bsl-lt:#E8BC70; --bsl-dim:#8B6420;
+      --bsl-bg:rgba(200,144,72,.08); --bsl-bdr:rgba(200,144,72,.34); --bsl-glow:rgba(232,188,112,.22);
+      /* MAQAM-FARBEN */
+      --maqam-saba:#B0904A; --maqam-hijaz:#C85050; --maqam-bayat:#A07850;
+      --maqam-rast:#C8A860; --maqam-ajam:#7A9050; --maqam-nahawand:#6080A0;
+    }
+    *,*::before,*::after { margin:0; padding:0; box-sizing:border-box; }
+    html { scroll-behavior:smooth; }
+    body { background:var(--bg); color:var(--silver); font-family:'EB Garamond',serif; overflow-x:hidden; line-height:1.85; padding:40px 20px 80px; }
+    body::before { content:''; position:fixed; inset:0; pointer-events:none; z-index:0;
+      background: radial-gradient(ellipse at 18% 12%, rgba(176,64,48,.12) 0%, transparent 48%),
+                  radial-gradient(ellipse at 82% 28%, rgba(200,144,72,.12) 0%, transparent 45%),
+                  radial-gradient(ellipse at 12% 68%, rgba(176,64,48,.08) 0%, transparent 45%),
+                  radial-gradient(ellipse at 88% 82%, rgba(232,188,112,.10) 0%, transparent 42%),
+                  radial-gradient(ellipse at 50% 50%, rgba(20,12,8,.82) 0%, transparent 70%); }
+    body::after { content:''; position:fixed; inset:0; pointer-events:none; z-index:0;
+      background-image:
+        radial-gradient(1px 1px at 8% 10%, rgba(232,188,112,.36) 0%, transparent 100%),
+        radial-gradient(1px 1px at 48% 5%, rgba(224,112,96,.30) 0%, transparent 100%),
+        radial-gradient(1px 1px at 82% 16%, rgba(232,188,112,.32) 0%, transparent 100%),
+        radial-gradient(1px 1px at 25% 42%, rgba(216,160,72,.28) 0%, transparent 100%),
+        radial-gradient(1px 1px at 68% 58%, rgba(224,112,96,.28) 0%, transparent 100%),
+        radial-gradient(1.5px 1.5px at 12% 75%, rgba(208,148,64,.34) 0%, transparent 100%),
+        radial-gradient(1px 1px at 90% 78%, rgba(224,112,96,.30) 0%, transparent 100%),
+        radial-gradient(1px 1px at 35% 88%, rgba(232,188,112,.26) 0%, transparent 100%); }
+    .wrap { max-width:1080px; margin:0 auto; position:relative; z-index:1; }
+
+    /* PAGE HEADER */
+    .page-header { text-align:center; margin-bottom:80px; padding-bottom:40px; border-bottom:1px solid var(--sefer-bdr); position:relative; }
+    .page-header::after { content:'✦ ✡ ✦'; position:absolute; bottom:-14px; left:50%; transform:translateX(-50%); background:var(--bg); padding:0 20px; color:var(--sefer); font-size:.62em; letter-spacing:.55em; }
+    .eyebrow { font-family:'Cormorant Garamond',serif; font-style:italic; font-size:.78em; color:var(--sefer-lt); letter-spacing:.28em; text-transform:uppercase; margin-bottom:18px; opacity:.85; }
+    .sefer-letter { font-family:'Frank Ruhl Libre',serif; font-size:1.40em; color:var(--sefer); font-weight:900; display:inline-block; margin-bottom:6px; text-shadow:0 0 30px var(--sefer-glow); letter-spacing:.04em; }
+    .page-title-he { font-family:'Frank Ruhl Libre',serif; font-size:3.2em; font-weight:900; color:var(--ivory); direction:rtl; letter-spacing:.05em; text-shadow:0 0 80px var(--sefer-glow), 0 0 140px var(--bsl-glow); margin-bottom:8px; line-height:1.15; }
+    .page-subtitle-he { font-family:'Frank Ruhl Libre',serif; font-size:1.16em; color:var(--sefer-lt); direction:rtl; margin-bottom:10px; letter-spacing:.06em; }
+    .page-title-de { font-family:'Cormorant Garamond',serif; font-style:italic; font-size:1.14em; color:var(--silver-dim); margin-bottom:22px; }
+    .page-desc { font-size:1.0em; color:var(--text); max-width:780px; margin:0 auto; line-height:1.95; }
+    .page-desc strong { color:var(--ivory-dim); }
+    .page-desc em { color:var(--bsl-lt); font-style:italic; }
+
+    /* SONG SECTION */
+    .song-section { margin-bottom:90px; padding-bottom:70px; border-bottom:1px dashed var(--sefer-bdr); }
+    .song-header { display:flex; flex-wrap:wrap; align-items:flex-start; gap:20px; margin-bottom:40px; padding:24px 26px; background:var(--layer); border:1px solid var(--bsl-bdr); border-radius:10px; }
+    .song-num { font-family:'Frank Ruhl Libre',serif; font-size:2.6em; font-weight:900; direction:rtl; padding-right:14px; color:var(--bsl-lt); }
+    .song-meta { flex:1; display:flex; flex-direction:column; gap:8px; }
+    .korban-badge { font-family:'Cormorant Garamond',serif; font-style:italic; font-size:.82em; letter-spacing:.08em; color:var(--bsl-lt); }
+    .maqam-badge { font-family:'Cormorant Garamond',serif; font-style:italic; font-size:.78em; letter-spacing:.08em; display:inline-block; padding:3px 10px; border-radius:4px; color:#0A0E0E; font-weight:600; background:var(--maqam-rast); }
+    .song-title-he { font-family:'Frank Ruhl Libre',serif; font-size:1.7em; font-weight:700; color:var(--ivory); direction:rtl; letter-spacing:.04em; }
+    .song-title-de { font-family:'Cormorant Garamond',serif; font-style:italic; font-size:1.02em; color:var(--silver); }
+    .source-badge { font-family:'Cormorant Garamond',serif; font-style:italic; font-size:.74em; color:#B08868; line-height:1.6; }
+
+    /* ALIYAH BLOCK */
+    .aliyah-block { margin-bottom:42px; }
+    .aliyah-label { font-family:'Frank Ruhl Libre',serif; font-size:.94em; font-weight:700; direction:rtl; margin-bottom:9px; color:var(--bsl); letter-spacing:.06em; padding-bottom:6px; border-bottom:1px solid var(--bsl-bdr); }
+    .aliyah-label-de { font-family:'Cormorant Garamond',serif; font-style:italic; font-size:.78em; color:var(--silver-dim); display:inline-block; margin-right:14px; opacity:.85; }
+    .instrument-note { font-family:'Cormorant Garamond',serif; font-style:italic; font-size:.84em; color:var(--text); margin-bottom:14px; padding:10px 14px; background:rgba(200,144,72,.05); border-left:2px solid var(--bsl-dim); }
+    .lyrics-block { display:flex; gap:44px; flex-wrap:wrap; }
+    .lyrics-he, .lyrics-de { flex:1; min-width:280px; display:flex; flex-direction:column; gap:6px; }
+    .lyrics-he span.line { font-family:'Frank Ruhl Libre',serif; font-size:1.06em; color:var(--ivory); direction:rtl; line-height:1.95; }
+    .lyrics-de span.line { font-family:'Cormorant Garamond',serif; font-size:1.0em; color:var(--silver); line-height:1.88; }
+
+    /* TIKKUN BOX */
+    .tikkun-box { background:rgba(200,144,72,.07); border:1px solid rgba(200,144,72,.32); padding:30px; margin-top:40px; border-radius:6px; }
+    .tikkun-header { display:flex; flex-direction:column; gap:6px; margin-bottom:20px; }
+    .tikkun-title-he { font-family:'Frank Ruhl Libre',serif; font-size:1.25em; color:var(--ivory); direction:rtl; font-weight:700; letter-spacing:.04em; }
+    .tikkun-title-de { font-family:'Cormorant Garamond',serif; font-size:1.0em; font-style:italic; color:var(--silver); }
+    .tikkun-src { font-family:'Cormorant Garamond',serif; font-size:.74em; color:#B08868; line-height:1.7; }
+    .tikkun-body { font-family:'Cormorant Garamond',serif; font-size:.96em; color:var(--text); line-height:1.92; }
+    .tikkun-body strong { color:var(--ivory); }
+    .tikkun-body em { color:var(--bsl-lt); font-style:italic; }
+    .tikkun-tags { margin-top:18px; display:flex; gap:9px; flex-wrap:wrap; }
+    .tikkun-tag { background:rgba(200,144,72,.16); color:var(--bsl-lt); padding:4px 10px; border-radius:4px; font-size:.74em; font-family:'Frank Ruhl Libre',serif; direction:rtl; }
+
+    /* SCHI / KLIMAX-MOMENT */
+    .climax-box { background:linear-gradient(135deg,rgba(200,144,72,.18),rgba(176,64,48,.10),rgba(6,8,8,.88)); border:2px solid var(--bsl-bdr); padding:32px; margin-top:40px; margin-bottom:30px; border-radius:8px; }
+    .climax-label { font-family:'Cormorant Garamond',serif; font-style:italic; font-size:.82em; color:var(--bsl-lt); letter-spacing:.18em; text-transform:uppercase; margin-bottom:14px; text-align:center; }
+    .climax-verse-he { font-family:'Frank Ruhl Libre',serif; font-size:1.55em; font-weight:700; color:var(--ivory); direction:rtl; text-align:center; line-height:1.85; letter-spacing:.04em; text-shadow:0 0 30px var(--bsl-glow); }
+    .climax-verse-de { font-family:'Cormorant Garamond',serif; font-style:italic; font-size:1.05em; color:var(--silver); text-align:center; margin-top:14px; line-height:1.7; }
+    .climax-src { font-family:'Cormorant Garamond',serif; font-style:italic; font-size:.80em; color:var(--bsl-lt); text-align:center; margin-top:12px; opacity:.8; }
+
+    /* KODA */
+    .coda-box { background:rgba(6,8,8,.78); border:1px solid var(--bsl-bdr); padding:36px; text-align:center; margin-top:30px; margin-bottom:30px; border-radius:6px; }
+    .coda-label { font-family:'Cormorant Garamond',serif; font-style:italic; font-size:.80em; color:var(--bsl-lt); letter-spacing:.18em; text-transform:uppercase; margin-bottom:18px; }
+    .coda-whisper { font-family:'Frank Ruhl Libre',serif; font-size:1.20em; direction:rtl; line-height:2.3; opacity:.85; color:var(--bsl-lt); }
+    .coda-whisper strong { font-weight:900; opacity:1; color:var(--ivory); }
+
+    /* SCENARIOS */
+    .scenarios-section { margin-top:54px; margin-bottom:40px; }
+    .scenarios-title { font-family:'Frank Ruhl Libre',serif; font-size:1.35em; font-weight:700; text-align:center; margin-bottom:34px; direction:rtl; color:var(--sefer-lt); letter-spacing:.06em; }
+    .scenarios-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(290px,1fr)); gap:26px; }
+    .scenario-card { background:linear-gradient(135deg,rgba(40,16,8,.78),rgba(6,8,8,.92)); border:1px solid var(--bsl-bdr); padding:24px; transition:transform .2s, box-shadow .2s; border-radius:6px; }
+    .scenario-card:hover { transform:translateY(-4px); box-shadow:0 10px 36px var(--bsl-glow); }
+    .sc-num { font-family:'Cormorant Garamond',serif; font-style:italic; font-size:.74em; letter-spacing:.14em; text-transform:uppercase; margin-bottom:7px; color:var(--bsl); }
+    .sc-title-he { font-family:'Frank Ruhl Libre',serif; font-size:1.10em; font-weight:700; color:var(--ivory); direction:rtl; margin-bottom:4px; letter-spacing:.04em; }
+    .sc-sub { font-family:'Cormorant Garamond',serif; font-style:italic; font-size:.84em; color:#B08868; margin-bottom:14px; }
+    .sc-body { font-size:.92em; color:var(--text); line-height:1.80; margin-bottom:14px; }
+    .sc-body strong { color:var(--bsl-lt); }
+    .key-moment { font-size:.86em; color:var(--bsl-lt); font-style:italic; margin-bottom:9px; padding-left:13px; border-left:2px solid var(--bsl-lt); }
+    .reaction { font-size:.86em; color:var(--text); font-style:italic; padding-left:13px; border-left:2px solid var(--sefer-dim); line-height:1.78; }
+
+    /* FOOTER */
+    .footer { margin-top:80px; padding-top:50px; border-top:1px solid var(--sefer-bdr); text-align:center; }
+    .footer-he { font-family:'Frank Ruhl Libre',serif; font-size:1.40em; font-weight:700; color:var(--sefer-lt); direction:rtl; margin-bottom:18px; text-shadow:0 0 30px var(--sefer-glow); letter-spacing:.06em; }
+    .footer-chain { font-family:'Frank Ruhl Libre',serif; font-size:1.0em; color:var(--silver); direction:rtl; margin-bottom:22px; letter-spacing:.09em; }
+    .footer-de { font-family:'Cormorant Garamond',serif; font-style:italic; font-size:.92em; color:var(--text); line-height:2.0; max-width:780px; margin:0 auto 24px; }
+    .footer-de strong { color:var(--ivory-dim); font-style:normal; }
+    .footer-amen { font-family:'Frank Ruhl Libre',serif; font-size:1.30em; color:var(--sefer-lt); direction:rtl; margin-top:24px; letter-spacing:.14em; text-shadow:0 0 30px var(--sefer-glow); }
+
+    @media (max-width:720px) {
+      .page-title-he { font-size:2.3em; }
+      .song-num { font-size:2.2em; }
+      .lyrics-block { flex-direction:column; gap:24px; }
+      .scenarios-grid { grid-template-columns:1fr; }
+      .climax-verse-he { font-size:1.20em; }
+      .footer-he { font-size:1.10em; }
+    }
+  </style>
+</head>
+<body>
+<div class="wrap">
+
+  <header class="page-header">
+    <div class="eyebrow">Sephardische Tora-Vertonung · Sefer HaParashot bemo Maqam</div>
+    <div class="sefer-letter">ב</div>
+    <div class="page-title-he">פָּרָשַׁת בְּשַׁלַּח</div>
+    <div class="page-subtitle-he">סֵפֶר שְׁמוֹת · י״ג:י״ז–י״ז:ט״ז · תִּפְאֶרֶת · מַקָּאם רַאסְט · קְרִיעַת יַם־סוּף וְשִׁירַת הַיָּם</div>
+    <div class="page-title-de">Beschalach — Das gespaltene Meer und das Lied des erlösten Volkes · Vierte Parashah des Sefer Schemot · Tiferet im Maqam Rast</div>
+    <div class="page-desc">
+      Beschalach trägt das Sefer Schemot über seine entscheidende Schwelle: aus dem Auszug wird die
+      <em>Erlösung</em>. Pharao lässt das Volk ziehen, doch sein Herz kehrt um; das Volk steht
+      eingeschlossen zwischen Migdol und dem Meer und erfährt am Yam Suf die größte Rettung —
+      <em>„וַיּוֹשַׁע אֲדֹנָי בַּיּוֹם הַהוּא"</em> (Schemot 14:30). Aus dieser Rettung steigt das
+      <em>Schirat HaYam</em> auf (Kap. 15), das Lied, das Mosche und ganz Israel als <em>ein</em> Mund
+      singen und das in der Königs-Akklamation gipfelt: <em>„אֲדֹנָי יִמְלֹךְ לְעֹלָם וָעֶד"</em>
+      (15:18); Mirjam und die Frauen antworten mit Tof und Reigen. Es folgen die Bitter-Wasser von
+      Marah, das tägliche Manna mit seiner Schabbat-Lehre (Kap. 16) und der Kampf gegen Amalek bei
+      Refidim mit Mosches getragenen Händen (Kap. 17). Sefirot-Anker: <strong>Tiferet</strong> — die
+      ausgewogene, königlich-mittlere Sefirah, die Brücke, in der Chesed (Errettung) und Gevurah
+      (Mizrajim-Sturz) zu <em>einem</em> geordneten Sieg zusammenfinden; die Schirah ist akustische
+      Tiferet. Maqam: <strong>Rast</strong> — klar, aufrecht, königlich-mittelgebahnt, mit <em>einem</em>
+      Aufstieg in den Hijaz auf dem Höhepunkt des Liedes (Aleppo-Brauch). Tora-Text 1:1 nach
+      sephardischer Tradition, das Tetragrammaton durchgängig als אֲדֹנָי, Maschiach ben David.
+    </div>
+  </header>
+
+  <!-- ══ SONG SECTION — PARASHAT BESCHALACH ══ -->
+  <section class="song-section" id="beschalach">
+
+    <div class="song-header">
+      <div class="song-num">ד</div>
+      <div class="song-meta">
+        <div class="korban-badge">Tiferet — תִּפְאֶרֶת · Der ausgewogene Sieg, das Lied im Gleichgewicht von Gnade und Macht</div>
+        <div class="song-title-he">פָּרָשַׁת בְּשַׁלַּח</div>
+        <div class="song-title-de">Beschalach — „Und es geschah, als Pharao das Volk ziehen ließ" · Schemot 13:17–17:16</div>
+        <div class="maqam-badge">מַקָּאם רַאסְט · Rast · ~62 BPM rubato · ein Hijaz-Aufstieg im Schi</div>
+        <div class="source-badge">שְׁמוֹת י״ג:י״ז–י״ז:ט״ז · רמב״ם הִלְכוֹת שַׁבָּת פֶּרֶק א׳ · רמב״ם הִלְכוֹת תְּפִלָּה פֶּרֶק ב׳ (שִׁירַת הַיָּם בִּפְסוּקֵי דְזִמְרָא) · תַּלְמוּד בָּבְלִי בְּרָכוֹת ט׳: (סְמִיכוּת גְּאֻלָּה לִתְפִלָּה) · רש״ש נְהַר שָׁלוֹם דְּרוּשׁ קְרִיעַת יַם־סוּף · רמח״ל מְסִלַּת יְשָׁרִים פֶּרֶק י״ט (בְּאוּר מִדַּת הַטָּהֳרָה) · אוֹר הַחַיִּים עַל שְׁמוֹת י״ד:ט״ו · בֶּן אִישׁ חַי שָׁנָה רִאשׁוֹנָה פָּרָשַׁת בְּשַׁלַּח · שד״ל פֵּרוּשׁ עַל שְׁמוֹת י״ג · ט״ו · י״ז · מִשְׁנָה רֹאשׁ הַשָּׁנָה ג׳:ח׳ · כַּף הַחַיִּים אוֹרַח חַיִּים · יָבִיעַ אוֹמֶר · חֲזוֹן עוֹבַדְיָה.</div>
+      </div>
+    </div>
+
+
+    <!-- ── ALIYAH 1 · ראשון · Schemot 13:17-14:8 — Auszug, Wolkensäule, Pharaos Herz kehrt um ── -->
+    <div class="aliyah-block">
+      <div class="aliyah-label">עֲלִיָּה רִאשׁוֹנָה — וַיְהִי בְּשַׁלַּח פַּרְעֹה<span class="aliyah-label-de">Erste Aliyah · Schemot 13:17–14:8 · Der Weg durch die Wüste · Josefs Gebeine · Wolken- und Feuersäule · Pharaos Herz wird fest gemacht</span></div>
+      <div class="instrument-note">[no percussion] [no drums] [no choir] [solo acoustic guitar — Rast opening, clear and balanced, the journey beginning, sustained low tones for the pillar of cloud, rubato around 62 BPM, no percussion, no drums, no beat] Gitarre: Rast öffnet klar und ausgewogen — der Aufbruch beginnt, getragene Tiefen für die Wolkensäule, königlich-mittelgebahnt.</div>
+      <div class="lyrics-block">
+        <div class="lyrics-he" dir="rtl">
+          <span class="line">וַיְהִי בְּשַׁלַּח פַּרְעֹה אֶת־הָעָם וְלֹא־נָחָם אֱלֹהִים דֶּרֶךְ אֶרֶץ פְּלִשְׁתִּים כִּי קָרוֹב הוּא כִּי אָמַר אֱלֹהִים פֶּן־יִנָּחֵם הָעָם בִּרְאֹתָם מִלְחָמָה וְשָׁבוּ מִצְרָיְמָה׃</span>
+          <span class="line">וַיַּסֵּב אֱלֹהִים אֶת־הָעָם דֶּרֶךְ הַמִּדְבָּר יַם־סוּף וַחֲמֻשִׁים עָלוּ בְנֵי־יִשְׂרָאֵל מֵאֶרֶץ מִצְרָיִם׃</span>
+          <span class="line">וַיִּקַּח מֹשֶׁה אֶת־עַצְמוֹת יוֹסֵף עִמּוֹ כִּי הַשְׁבֵּעַ הִשְׁבִּיעַ אֶת־בְּנֵי יִשְׂרָאֵל לֵאמֹר פָּקֹד יִפְקֹד אֱלֹהִים אֶתְכֶם וְהַעֲלִיתֶם אֶת־עַצְמֹתַי מִזֶּה אִתְּכֶם׃</span>
+          <span class="line">וַיִּסְעוּ מִסֻּכֹּת וַיַּחֲנוּ בְאֵתָם בִּקְצֵה הַמִּדְבָּר׃</span>
+          <span class="line">וַאדֹנָי הֹלֵךְ לִפְנֵיהֶם יוֹמָם בְּעַמּוּד עָנָן לַנְחֹתָם הַדֶּרֶךְ וְלַיְלָה בְּעַמּוּד אֵשׁ לְהָאִיר לָהֶם לָלֶכֶת יוֹמָם וָלָיְלָה׃</span>
+          <span class="line">לֹא־יָמִישׁ עַמּוּד הֶעָנָן יוֹמָם וְעַמּוּד הָאֵשׁ לָיְלָה לִפְנֵי הָעָם׃</span>
+          <span class="line">וַיְדַבֵּר אֲדֹנָי אֶל־מֹשֶׁה לֵּאמֹר׃</span>
+          <span class="line">דַּבֵּר אֶל־בְּנֵי יִשְׂרָאֵל וְיָשֻׁבוּ וְיַחֲנוּ לִפְנֵי פִּי הַחִירֹת בֵּין מִגְדֹּל וּבֵין הַיָּם לִפְנֵי בַּעַל צְפֹן נִכְחוֹ תַחֲנוּ עַל־הַיָּם׃</span>
+          <span class="line">וְאָמַר פַּרְעֹה לִבְנֵי יִשְׂרָאֵל נְבֻכִים הֵם בָּאָרֶץ סָגַר עֲלֵיהֶם הַמִּדְבָּר׃</span>
+          <span class="line">וְחִזַּקְתִּי אֶת־לֵב־פַּרְעֹה וְרָדַף אַחֲרֵיהֶם וְאִכָּבְדָה בְּפַרְעֹה וּבְכׇל־חֵילוֹ וְיָדְעוּ מִצְרַיִם כִּי־אֲנִי אֲדֹנָי וַיַּעֲשׂוּ־כֵן׃</span>
+          <span class="line">וַיֻּגַּד לְמֶלֶךְ מִצְרַיִם כִּי בָרַח הָעָם וַיֵּהָפֵךְ לְבַב פַּרְעֹה וַעֲבָדָיו אֶל־הָעָם וַיֹּאמְרוּ מַה־זֹּאת עָשִׂינוּ כִּי־שִׁלַּחְנוּ אֶת־יִשְׂרָאֵל מֵעׇבְדֵנוּ׃</span>
+          <span class="line">וַיֶּאְסֹר אֶת־רִכְבּוֹ וְאֶת־עַמּוֹ לָקַח עִמּוֹ׃</span>
+          <span class="line">וַיִּקַּח שֵׁשׁ־מֵאוֹת רֶכֶב בָּחוּר וְכֹל רֶכֶב מִצְרָיִם וְשָׁלִשִׁם עַל־כֻּלּוֹ׃</span>
+          <span class="line">וַיְחַזֵּק אֲדֹנָי אֶת־לֵב פַּרְעֹה מֶלֶךְ מִצְרַיִם וַיִּרְדֹּף אַחֲרֵי בְּנֵי יִשְׂרָאֵל וּבְנֵי יִשְׂרָאֵל יֹצְאִים בְּיָד רָמָה׃</span>
+        </div>
+        <div class="lyrics-de">
+          <span class="line">(13:17) Und es geschah, als Pharao das Volk ziehen ließ, da führte Gott sie nicht den Weg durch das Land der Pelischtim, obwohl er nahe war; denn Gott sprach: Es könnte das Volk bereuen, wenn es Krieg sieht, und nach Mizrajim zurückkehren.</span>
+          <span class="line">(18) Und Gott ließ das Volk einen Umweg machen, den Weg der Wüste zum Schilfmeer; und gerüstet zogen die Söhne Israels aus dem Land Mizrajim herauf.</span>
+          <span class="line">(19) Und Mosche nahm die Gebeine Josefs mit sich, denn dieser hatte die Söhne Israels feierlich schwören lassen: Gott wird euch gewiss heimsuchen — dann sollt ihr meine Gebeine von hier mit euch hinaufbringen.</span>
+          <span class="line">(20) Und sie zogen von Sukkot und lagerten in Etam, am Rand der Wüste.</span>
+          <span class="line">(21) Und Adonai ging vor ihnen her, bei Tag in einer Wolkensäule, um sie den Weg zu führen, und bei Nacht in einer Feuersäule, um ihnen zu leuchten, sodass sie Tag und Nacht gehen konnten.</span>
+          <span class="line">(22) Nicht wich die Wolkensäule bei Tag noch die Feuersäule bei Nacht von vor dem Volk.</span>
+          <span class="line">(14:1) Und Adonai redete zu Mosche und sprach:</span>
+          <span class="line">(2) Rede zu den Söhnen Israels, dass sie umkehren und sich vor Pi-HaChirot lagern, zwischen Migdol und dem Meer, vor Baal-Zefon; ihm gegenüber sollt ihr euch am Meer lagern.</span>
+          <span class="line">(3) Und Pharao wird von den Söhnen Israels sagen: Verwirrt sind sie im Land, die Wüste hat sie eingeschlossen.</span>
+          <span class="line">(4) Und ich werde Pharaos Herz fest machen, dass er ihnen nachjagt, und ich werde mich verherrlichen an Pharao und an seiner ganzen Heeresmacht; und Mizrajim wird erkennen, dass ich Adonai bin. Und so taten sie.</span>
+          <span class="line">(5) Und es wurde dem König von Mizrajim gemeldet, dass das Volk geflohen sei; da wandte sich das Herz Pharaos und seiner Knechte gegen das Volk, und sie sprachen: Was haben wir da getan, dass wir Israel aus unserem Dienst entlassen haben?</span>
+          <span class="line">(6) Und er spannte seinen Wagen an und nahm sein Volk mit sich.</span>
+          <span class="line">(7) Und er nahm sechshundert auserlesene Wagen und alle Wagen Mizrajims, und Wagenkämpfer über sie alle.</span>
+          <span class="line">(8) Und Adonai machte das Herz Pharaos, des Königs von Mizrajim, fest, und er jagte den Söhnen Israels nach; die Söhne Israels aber zogen aus mit erhobener Hand.</span>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- ── ALIYAH 2 · שני · Schemot 14:9-14 — Das Volk eingeschlossen, der Schrei, „Adonai wird für euch kämpfen" ── -->
+    <div class="aliyah-block">
+      <div class="aliyah-label">עֲלִיָּה שְׁנִיָּה — אַל־תִּירָאוּ הִתְיַצְּבוּ<span class="aliyah-label-de">Zweite Aliyah · Schemot 14:9–14 · Mizrajim holt Israel ein · der Schrei des Volkes · Mosches Ruf zur Standhaftigkeit</span></div>
+      <div class="instrument-note">[no percussion] [no drums] [no choir] [acoustic guitar — Rast tightening, the fear of the trapped people in low trembling fingerpicking, then Moshe's steadying line in calm balanced tones, intimate dry strings, no percussion] Gitarre: Rast zieht sich zusammen — die Furcht des eingeschlossenen Volkes als tiefes zitterndes Fingerpicking, dann Mosches besänftigende Zeile in ruhigen, ausgewogenen Tönen.</div>
+      <div class="lyrics-block">
+        <div class="lyrics-he" dir="rtl">
+          <span class="line">וַיִּרְדְּפוּ מִצְרַיִם אַחֲרֵיהֶם וַיַּשִּׂיגוּ אוֹתָם חֹנִים עַל־הַיָּם כׇּל־סוּס רֶכֶב פַּרְעֹה וּפָרָשָׁיו וְחֵילוֹ עַל־פִּי הַחִירֹת לִפְנֵי בַּעַל צְפֹן׃</span>
+          <span class="line">וּפַרְעֹה הִקְרִיב וַיִּשְׂאוּ בְנֵי־יִשְׂרָאֵל אֶת־עֵינֵיהֶם וְהִנֵּה מִצְרַיִם נֹסֵעַ אַחֲרֵיהֶם וַיִּירְאוּ מְאֹד וַיִּצְעֲקוּ בְנֵי־יִשְׂרָאֵל אֶל־אֲדֹנָי׃</span>
+          <span class="line">וַיֹּאמְרוּ אֶל־מֹשֶׁה הֲמִבְּלִי אֵין־קְבָרִים בְּמִצְרַיִם לְקַחְתָּנוּ לָמוּת בַּמִּדְבָּר מַה־זֹּאת עָשִׂיתָ לָּנוּ לְהוֹצִיאָנוּ מִמִּצְרָיִם׃</span>
+          <span class="line">הֲלֹא־זֶה הַדָּבָר אֲשֶׁר דִּבַּרְנוּ אֵלֶיךָ בְמִצְרַיִם לֵאמֹר חֲדַל מִמֶּנּוּ וְנַעַבְדָה אֶת־מִצְרָיִם כִּי טוֹב לָנוּ עֲבֹד אֶת־מִצְרַיִם מִמֻּתֵנוּ בַּמִּדְבָּר׃</span>
+          <span class="line">וַיֹּאמֶר מֹשֶׁה אֶל־הָעָם אַל־תִּירָאוּ הִתְיַצְּבוּ וּרְאוּ אֶת־יְשׁוּעַת אֲדֹנָי אֲשֶׁר־יַעֲשֶׂה לָכֶם הַיּוֹם כִּי אֲשֶׁר רְאִיתֶם אֶת־מִצְרַיִם הַיּוֹם לֹא תֹסִפוּ לִרְאֹתָם עוֹד עַד־עוֹלָם׃</span>
+          <span class="line">אֲדֹנָי יִלָּחֵם לָכֶם וְאַתֶּם תַּחֲרִשׁוּן׃</span>
+        </div>
+        <div class="lyrics-de">
+          <span class="line">(14:9) Und Mizrajim jagte ihnen nach und holte sie ein, als sie am Meer lagerten — alle Wagenpferde Pharaos, seine Reiter und seine Heeresmacht — bei Pi-HaChirot, vor Baal-Zefon.</span>
+          <span class="line">(10) Und Pharao näherte sich, und die Söhne Israels erhoben ihre Augen, und siehe, Mizrajim zog hinter ihnen her; da fürchteten sie sich sehr, und die Söhne Israels schrien zu Adonai.</span>
+          <span class="line">(11) Und sie sprachen zu Mosche: Gab es etwa keine Gräber in Mizrajim, dass du uns geholt hast, um in der Wüste zu sterben? Was hast du uns da getan, uns aus Mizrajim herauszuführen?</span>
+          <span class="line">(12) Ist dies nicht das Wort, das wir in Mizrajim zu dir geredet haben: Lass ab von uns, dass wir Mizrajim dienen? Denn es wäre besser für uns, Mizrajim zu dienen, als in der Wüste zu sterben.</span>
+          <span class="line">(13) Und Mosche sprach zum Volk: Fürchtet euch nicht! Stellt euch hin und seht die Rettung Adonais, die er euch heute bereiten wird; denn wie ihr Mizrajim heute gesehen habt, werdet ihr es nicht wieder sehen — niemals mehr.</span>
+          <span class="line">(14) Adonai wird für euch kämpfen, und ihr — ihr sollt stille sein.</span>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- ── ALIYAH 3 · שלישי · Schemot 14:15-25 — „Mah titzak elai" · die Spaltung des Meeres ── -->
+    <div class="aliyah-block">
+      <div class="aliyah-label">עֲלִיָּה שְׁלִישִׁית — מַה־תִּצְעַק אֵלָי · וַיִּבָּקְעוּ הַמָּיִם<span class="aliyah-label-de">Dritte Aliyah · Schemot 14:15–25 · „Was schreist du zu mir?" · der Engel und die Wolke wechseln die Seite · das Meer wird gespalten · Israel zieht hindurch</span></div>
+      <div class="instrument-note">[no percussion] [no drums] [no choir] [acoustic guitar — Rast rising with measured momentum, the command to move forward, the long sustained crescendo of the night-long east wind, then a sudden open clear interval as the waters part into walls, ordered and kingly, no percussion] Gitarre: Rast steigt mit gemessenem Schwung — der Befehl, vorwärtszuziehen, das lange getragene Crescendo des nächtelangen Ostwinds, dann ein plötzlich offenes, klares Intervall, als die Wasser sich zu Mauern teilen.</div>
+      <div class="lyrics-block">
+        <div class="lyrics-he" dir="rtl">
+          <span class="line">וַיֹּאמֶר אֲדֹנָי אֶל־מֹשֶׁה מַה־תִּצְעַק אֵלָי דַּבֵּר אֶל־בְּנֵי־יִשְׂרָאֵל וְיִסָּעוּ׃</span>
+          <span class="line">וְאַתָּה הָרֵם אֶת־מַטְּךָ וּנְטֵה אֶת־יָדְךָ עַל־הַיָּם וּבְקָעֵהוּ וְיָבֹאוּ בְנֵי־יִשְׂרָאֵל בְּתוֹךְ הַיָּם בַּיַּבָּשָׁה׃</span>
+          <span class="line">וַאֲנִי הִנְנִי מְחַזֵּק אֶת־לֵב מִצְרַיִם וְיָבֹאוּ אַחֲרֵיהֶם וְאִכָּבְדָה בְּפַרְעֹה וּבְכׇל־חֵילוֹ בְּרִכְבּוֹ וּבְפָרָשָׁיו׃</span>
+          <span class="line">וְיָדְעוּ מִצְרַיִם כִּי־אֲנִי אֲדֹנָי בְּהִכָּבְדִי בְּפַרְעֹה בְּרִכְבּוֹ וּבְפָרָשָׁיו׃</span>
+          <span class="line">וַיִּסַּע מַלְאַךְ הָאֱלֹהִים הַהֹלֵךְ לִפְנֵי מַחֲנֵה יִשְׂרָאֵל וַיֵּלֶךְ מֵאַחֲרֵיהֶם וַיִּסַּע עַמּוּד הֶעָנָן מִפְּנֵיהֶם וַיַּעֲמֹד מֵאַחֲרֵיהֶם׃</span>
+          <span class="line">וַיָּבֹא בֵּין מַחֲנֵה מִצְרַיִם וּבֵין מַחֲנֵה יִשְׂרָאֵל וַיְהִי הֶעָנָן וְהַחֹשֶׁךְ וַיָּאֶר אֶת־הַלָּיְלָה וְלֹא־קָרַב זֶה אֶל־זֶה כׇּל־הַלָּיְלָה׃</span>
+          <span class="line">וַיֵּט מֹשֶׁה אֶת־יָדוֹ עַל־הַיָּם וַיּוֹלֶךְ אֲדֹנָי אֶת־הַיָּם בְּרוּחַ קָדִים עַזָּה כׇּל־הַלַּיְלָה וַיָּשֶׂם אֶת־הַיָּם לֶחָרָבָה וַיִּבָּקְעוּ הַמָּיִם׃</span>
+          <span class="line">וַיָּבֹאוּ בְנֵי־יִשְׂרָאֵל בְּתוֹךְ הַיָּם בַּיַּבָּשָׁה וְהַמַּיִם לָהֶם חוֹמָה מִימִינָם וּמִשְּׂמֹאלָם׃</span>
+          <span class="line">וַיִּרְדְּפוּ מִצְרַיִם וַיָּבֹאוּ אַחֲרֵיהֶם כֹּל סוּס פַּרְעֹה רִכְבּוֹ וּפָרָשָׁיו אֶל־תּוֹךְ הַיָּם׃</span>
+          <span class="line">וַיְהִי בְּאַשְׁמֹרֶת הַבֹּקֶר וַיַּשְׁקֵף אֲדֹנָי אֶל־מַחֲנֵה מִצְרַיִם בְּעַמּוּד אֵשׁ וְעָנָן וַיָּהׇם אֵת מַחֲנֵה מִצְרָיִם׃</span>
+          <span class="line">וַיָּסַר אֵת אֹפַן מַרְכְּבֹתָיו וַיְנַהֲגֵהוּ בִּכְבֵדֻת וַיֹּאמֶר מִצְרַיִם אָנוּסָה מִפְּנֵי יִשְׂרָאֵל כִּי אֲדֹנָי נִלְחָם לָהֶם בְּמִצְרָיִם׃</span>
+        </div>
+        <div class="lyrics-de">
+          <span class="line">(14:15) Und Adonai sprach zu Mosche: Was schreist du zu mir? Rede zu den Söhnen Israels, dass sie aufbrechen.</span>
+          <span class="line">(16) Du aber — erhebe deinen Stab und strecke deine Hand über das Meer und spalte es, dass die Söhne Israels mitten in das Meer auf das Trockene hineinkommen.</span>
+          <span class="line">(17) Und ich — siehe, ich mache das Herz Mizrajims fest, dass sie ihnen nachkommen; und ich werde mich verherrlichen an Pharao und an seiner ganzen Heeresmacht, an seinen Wagen und an seinen Reitern.</span>
+          <span class="line">(18) Und Mizrajim wird erkennen, dass ich Adonai bin, wenn ich mich an Pharao, an seinen Wagen und an seinen Reitern verherrliche.</span>
+          <span class="line">(19) Und der Engel Gottes, der vor dem Lager Israels herging, brach auf und zog hinter sie; und die Wolkensäule brach vor ihnen auf und stellte sich hinter sie.</span>
+          <span class="line">(20) Und sie kam zwischen das Lager Mizrajims und das Lager Israels, und es war die Wolke und die Finsternis, doch sie erleuchtete die Nacht; und keines näherte sich dem anderen die ganze Nacht.</span>
+          <span class="line">(21) Und Mosche streckte seine Hand über das Meer, und Adonai trieb das Meer durch einen starken Ostwind die ganze Nacht zurück und machte das Meer zu trockenem Land — und die Wasser spalteten sich.</span>
+          <span class="line">(22) Und die Söhne Israels kamen mitten in das Meer auf das Trockene, und die Wasser waren ihnen eine Mauer zu ihrer Rechten und zu ihrer Linken.</span>
+          <span class="line">(23) Und Mizrajim jagte nach und kam hinter ihnen her — alle Pferde Pharaos, seine Wagen und seine Reiter — mitten in das Meer.</span>
+          <span class="line">(24) Und es geschah in der Morgenwache, da blickte Adonai auf das Lager Mizrajims herab in der Feuer- und Wolkensäule und brachte das Lager Mizrajims in Verwirrung.</span>
+          <span class="line">(25) Und er ließ das Rad seiner Wagen abspringen und führte ihn mit Schwere; und Mizrajim sprach: Ich will fliehen vor Israel, denn Adonai kämpft für sie gegen Mizrajim.</span>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- ── ALIYAH 4 · רביעי · Schemot 14:26-15:26 — Mizrajim ertrinkt, Schirat HaYam, Marah ── -->
+    <div class="aliyah-block">
+      <div class="aliyah-label">עֲלִיָּה רְבִיעִית — אָז יָשִׁיר מֹשֶׁה · שִׁירַת הַיָּם · מָרָה<span class="aliyah-label-de">Vierte Aliyah · Schemot 14:26–15:26 · Die Wasser kehren zurück, Mizrajim ertrinkt · die Schirat HaYam · Mirjam und die Frauen mit Tof und Reigen · die Bitter-Wasser von Marah</span></div>
+      <div class="instrument-note">[no percussion] [no drums] [no choir] [acoustic guitar — the waters return, then a held silence, then the Schirah opens in pure Rast: clear, royal, ordered, the singing-as-one of a redeemed people, with one ascent into Hijaz at the height of the song (Aleppo custom) and a return to Rast, Mirjam's verse bright, Marah softening at the close, no percussion, no drums, no beat] Gitarre: Die Wasser kehren zurück, dann eine gehaltene Stille — dann öffnet sich die Schirah in reinem Rast: klar, königlich, geordnet, der einstimmige Gesang eines erlösten Volkes, mit einem Aufstieg in den Hijaz auf der Höhe des Liedes (Aleppo-Brauch) und einer Rückkehr nach Rast; Mirjams Vers hell, Marah am Schluss sich mildernd.</div>
+      <div class="lyrics-block">
+        <div class="lyrics-he" dir="rtl">
+          <span class="line">וַיֹּאמֶר אֲדֹנָי אֶל־מֹשֶׁה נְטֵה אֶת־יָדְךָ עַל־הַיָּם וְיָשֻׁבוּ הַמַּיִם עַל־מִצְרַיִם עַל־רִכְבּוֹ וְעַל־פָּרָשָׁיו׃</span>
+          <span class="line">וַיֵּט מֹשֶׁה אֶת־יָדוֹ עַל־הַיָּם וַיָּשׇׁב הַיָּם לִפְנוֹת בֹּקֶר לְאֵיתָנוֹ וּמִצְרַיִם נָסִים לִקְרָאתוֹ וַיְנַעֵר אֲדֹנָי אֶת־מִצְרַיִם בְּתוֹךְ הַיָּם׃</span>
+          <span class="line">וַיָּשֻׁבוּ הַמַּיִם וַיְכַסּוּ אֶת־הָרֶכֶב וְאֶת־הַפָּרָשִׁים לְכֹל חֵיל פַּרְעֹה הַבָּאִים אַחֲרֵיהֶם בַּיָּם לֹא־נִשְׁאַר בָּהֶם עַד־אֶחָד׃</span>
+          <span class="line">וּבְנֵי יִשְׂרָאֵל הָלְכוּ בַיַּבָּשָׁה בְּתוֹךְ הַיָּם וְהַמַּיִם לָהֶם חֹמָה מִימִינָם וּמִשְּׂמֹאלָם׃</span>
+          <span class="line">וַיּוֹשַׁע אֲדֹנָי בַּיּוֹם הַהוּא אֶת־יִשְׂרָאֵל מִיַּד מִצְרָיִם וַיַּרְא יִשְׂרָאֵל אֶת־מִצְרַיִם מֵת עַל־שְׂפַת הַיָּם׃</span>
+          <span class="line">וַיַּרְא יִשְׂרָאֵל אֶת־הַיָּד הַגְּדֹלָה אֲשֶׁר עָשָׂה אֲדֹנָי בְּמִצְרַיִם וַיִּירְאוּ הָעָם אֶת־אֲדֹנָי וַיַּאֲמִינוּ בַּאדֹנָי וּבְמֹשֶׁה עַבְדּוֹ׃</span>
+          <span class="line">אָז יָשִׁיר־מֹשֶׁה וּבְנֵי יִשְׂרָאֵל אֶת־הַשִּׁירָה הַזֹּאת לַאדֹנָי וַיֹּאמְרוּ לֵאמֹר אָשִׁירָה לַאדֹנָי כִּי־גָאֹה גָּאָה סוּס וְרֹכְבוֹ רָמָה בַיָּם׃</span>
+          <span class="line">עׇזִּי וְזִמְרָת יָהּ וַיְהִי־לִי לִישׁוּעָה זֶה אֵלִי וְאַנְוֵהוּ אֱלֹהֵי אָבִי וַאֲרֹמְמֶנְהוּ׃</span>
+          <span class="line">אֲדֹנָי אִישׁ מִלְחָמָה אֲדֹנָי שְׁמוֹ׃</span>
+          <span class="line">מַרְכְּבֹת פַּרְעֹה וְחֵילוֹ יָרָה בַיָּם וּמִבְחַר שָׁלִשָׁיו טֻבְּעוּ בְיַם־סוּף׃</span>
+          <span class="line">תְּהֹמֹת יְכַסְיֻמוּ יָרְדוּ בִמְצוֹלֹת כְּמוֹ־אָבֶן׃</span>
+          <span class="line">יְמִינְךָ אֲדֹנָי נֶאְדָּרִי בַּכֹּחַ יְמִינְךָ אֲדֹנָי תִּרְעַץ אוֹיֵב׃</span>
+          <span class="line">וּבְרֹב גְּאוֹנְךָ תַּהֲרֹס קָמֶיךָ תְּשַׁלַּח חֲרֹנְךָ יֹאכְלֵמוֹ כַּקַּשׁ׃</span>
+          <span class="line">וּבְרוּחַ אַפֶּיךָ נֶעֶרְמוּ מַיִם נִצְּבוּ כְמוֹ־נֵד נֹזְלִים קָפְאוּ תְהֹמֹת בְּלֶב־יָם׃</span>
+          <span class="line">אָמַר אוֹיֵב אֶרְדֹּף אַשִּׂיג אֲחַלֵּק שָׁלָל תִּמְלָאֵמוֹ נַפְשִׁי אָרִיק חַרְבִּי תּוֹרִישֵׁמוֹ יָדִי׃</span>
+          <span class="line">נָשַׁפְתָּ בְרוּחֲךָ כִּסָּמוֹ יָם צָלְלוּ כַּעוֹפֶרֶת בְּמַיִם אַדִּירִים׃</span>
+          <span class="line">מִי־כָמֹכָה בָּאֵלִם אֲדֹנָי מִי כָּמֹכָה נֶאְדָּר בַּקֹּדֶשׁ נוֹרָא תְהִלֹּת עֹשֵׂה פֶלֶא׃</span>
+          <span class="line">נָטִיתָ יְמִינְךָ תִּבְלָעֵמוֹ אָרֶץ׃</span>
+          <span class="line">נָחִיתָ בְחַסְדְּךָ עַם־זוּ גָּאָלְתָּ נֵהַלְתָּ בְעׇזְּךָ אֶל־נְוֵה קׇדְשֶׁךָ׃</span>
+          <span class="line">שָׁמְעוּ עַמִּים יִרְגָּזוּן חִיל אָחַז יֹשְׁבֵי פְּלָשֶׁת׃</span>
+          <span class="line">אָז נִבְהֲלוּ אַלּוּפֵי אֱדוֹם אֵילֵי מוֹאָב יֹאחֲזֵמוֹ רָעַד נָמֹגוּ כֹּל יֹשְׁבֵי כְנָעַן׃</span>
+          <span class="line">תִּפֹּל עֲלֵיהֶם אֵימָתָה וָפַחַד בִּגְדֹל זְרוֹעֲךָ יִדְּמוּ כָּאָבֶן עַד־יַעֲבֹר עַמְּךָ אֲדֹנָי עַד־יַעֲבֹר עַם־זוּ קָנִיתָ׃</span>
+          <span class="line">תְּבִאֵמוֹ וְתִטָּעֵמוֹ בְּהַר נַחֲלָתְךָ מָכוֹן לְשִׁבְתְּךָ פָּעַלְתָּ אֲדֹנָי מִקְּדָשׁ אֲדֹנָי כּוֹנְנוּ יָדֶיךָ׃</span>
+          <span class="line">אֲדֹנָי יִמְלֹךְ לְעֹלָם וָעֶד׃</span>
+          <span class="line">כִּי בָא סוּס פַּרְעֹה בְּרִכְבּוֹ וּבְפָרָשָׁיו בַּיָּם וַיָּשֶׁב אֲדֹנָי עֲלֵהֶם אֶת־מֵי הַיָּם וּבְנֵי יִשְׂרָאֵל הָלְכוּ בַיַּבָּשָׁה בְּתוֹךְ הַיָּם׃</span>
+          <span class="line">וַתִּקַּח מִרְיָם הַנְּבִיאָה אֲחוֹת אַהֲרֹן אֶת־הַתֹּף בְּיָדָהּ וַתֵּצֶאןָ כׇל־הַנָּשִׁים אַחֲרֶיהָ בְּתֻפִּים וּבִמְחֹלֹת׃</span>
+          <span class="line">וַתַּעַן לָהֶם מִרְיָם שִׁירוּ לַאדֹנָי כִּי־גָאֹה גָּאָה סוּס וְרֹכְבוֹ רָמָה בַיָּם׃</span>
+          <span class="line">וַיַּסַּע מֹשֶׁה אֶת־יִשְׂרָאֵל מִיַּם־סוּף וַיֵּצְאוּ אֶל־מִדְבַּר־שׁוּר וַיֵּלְכוּ שְׁלֹשֶׁת־יָמִים בַּמִּדְבָּר וְלֹא־מָצְאוּ מָיִם׃</span>
+          <span class="line">וַיָּבֹאוּ מָרָתָה וְלֹא יָכְלוּ לִשְׁתֹּת מַיִם מִמָּרָה כִּי מָרִים הֵם עַל־כֵּן קָרָא־שְׁמָהּ מָרָה׃</span>
+          <span class="line">וַיִּלֹּנוּ הָעָם עַל־מֹשֶׁה לֵּאמֹר מַה־נִּשְׁתֶּה׃</span>
+          <span class="line">וַיִּצְעַק אֶל־אֲדֹנָי וַיּוֹרֵהוּ אֲדֹנָי עֵץ וַיַּשְׁלֵךְ אֶל־הַמַּיִם וַיִּמְתְּקוּ הַמָּיִם שָׁם שָׂם לוֹ חֹק וּמִשְׁפָּט וְשָׁם נִסָּהוּ׃</span>
+          <span class="line">וַיֹּאמֶר אִם־שָׁמוֹעַ תִּשְׁמַע לְקוֹל אֲדֹנָי אֱלֹהֶיךָ וְהַיָּשָׁר בְּעֵינָיו תַּעֲשֶׂה וְהַאֲזַנְתָּ לְמִצְוֺתָיו וְשָׁמַרְתָּ כׇּל־חֻקָּיו כׇּל־הַמַּחֲלָה אֲשֶׁר־שַׂמְתִּי בְמִצְרַיִם לֹא־אָשִׂים עָלֶיךָ כִּי אֲנִי אֲדֹנָי רֹפְאֶךָ׃</span>
+        </div>
+        <div class="lyrics-de">
+          <span class="line">(14:26) Und Adonai sprach zu Mosche: Strecke deine Hand über das Meer, dass die Wasser über Mizrajim zurückkehren, über seine Wagen und über seine Reiter.</span>
+          <span class="line">(27) Und Mosche streckte seine Hand über das Meer, und das Meer kehrte gegen Morgen zu seiner vollen Kraft zurück, während Mizrajim ihm entgegenfloh; und Adonai schüttelte Mizrajim mitten ins Meer.</span>
+          <span class="line">(28) Und die Wasser kehrten zurück und bedeckten die Wagen und die Reiter — die ganze Heeresmacht Pharaos, die ihnen ins Meer nachgekommen war; nicht einer von ihnen blieb übrig.</span>
+          <span class="line">(29) Und die Söhne Israels gingen auf dem Trockenen mitten durch das Meer, und die Wasser waren ihnen eine Mauer zu ihrer Rechten und zu ihrer Linken.</span>
+          <span class="line">(30) Und Adonai rettete an jenem Tag Israel aus der Hand Mizrajims, und Israel sah Mizrajim tot am Ufer des Meeres.</span>
+          <span class="line">(31) Und Israel sah die große Hand, die Adonai an Mizrajim gewirkt hatte; da fürchtete das Volk Adonai, und sie glaubten an Adonai und an Mosche, seinen Knecht.</span>
+          <span class="line">(15:1) Damals sangen Mosche und die Söhne Israels dieses Lied für Adonai, und sie sprachen also: Ich will Adonai singen, denn hoch erhaben ist er — Ross und Reiter warf er ins Meer.</span>
+          <span class="line">(2) Meine Stärke und mein Gesang ist Jah, und er wurde mir zur Rettung; dieser ist mein Gott, ihm will ich eine Wohnstatt bereiten, der Gott meines Vaters, ihn will ich erheben.</span>
+          <span class="line">(3) Adonai ist ein Mann des Krieges, Adonai ist sein Name.</span>
+          <span class="line">(4) Pharaos Wagen und seine Heeresmacht warf er ins Meer, und seine auserlesensten Wagenkämpfer versanken im Schilfmeer.</span>
+          <span class="line">(5) Die Tiefen bedeckten sie; sie fuhren hinab in die Strudel wie ein Stein.</span>
+          <span class="line">(6) Deine Rechte, Adonai, herrlich an Kraft — deine Rechte, Adonai, zerschmettert den Feind.</span>
+          <span class="line">(7) Und in der Fülle deiner Hoheit zerstörst du, die sich gegen dich erheben; du sendest deinen Zornglut aus, sie verzehrt sie wie Stoppeln.</span>
+          <span class="line">(8) Und durch den Hauch deiner Nase türmten sich die Wasser, es standen wie ein Damm die Fluten, die Tiefen erstarrten im Herzen des Meeres.</span>
+          <span class="line">(9) Der Feind sprach: Ich jage nach, ich hole ein, ich teile Beute, meine Gier wird sich an ihnen sättigen; ich zücke mein Schwert, meine Hand soll sie austilgen.</span>
+          <span class="line">(10) Du hauchtest mit deinem Wind, das Meer bedeckte sie; sie sanken wie Blei in gewaltige Wasser.</span>
+          <span class="line">(11) Wer ist wie du unter den Mächtigen, Adonai? Wer ist wie du, herrlich in Heiligkeit, furchtgebietend an Ruhmestaten, Wunder wirkend?</span>
+          <span class="line">(12) Du strecktest deine Rechte aus, die Erde verschlang sie.</span>
+          <span class="line">(13) Du leitetest in deiner Gnade das Volk, das du erlöst hast; du führtest es in deiner Kraft zu deiner heiligen Wohnstatt.</span>
+          <span class="line">(14) Völker hörten es und erbebten; Schauder erfasste die Bewohner Peleschets.</span>
+          <span class="line">(15) Damals erschraken die Fürsten Edoms, die Mächtigen Moabs — Zittern ergriff sie; es verzagten alle Bewohner Kenaans.</span>
+          <span class="line">(16) Es fiel auf sie Schrecken und Furcht; durch die Größe deines Armes erstarrten sie wie ein Stein — bis dein Volk hindurchzog, Adonai, bis das Volk hindurchzog, das du erworben hast.</span>
+          <span class="line">(17) Du wirst sie bringen und sie einpflanzen auf dem Berg deines Erbteils — die Stätte für deinen Sitz, die du, Adonai, bereitet hast; das Heiligtum, Adonai, das deine Hände gegründet haben.</span>
+          <span class="line">(18) Adonai wird König sein für immer und ewig.</span>
+          <span class="line">(19) Denn das Pferd Pharaos kam mit seinen Wagen und seinen Reitern ins Meer, und Adonai ließ über sie die Wasser des Meeres zurückkehren — und die Söhne Israels gingen auf dem Trockenen mitten durch das Meer.</span>
+          <span class="line">(20) Und Mirjam, die Prophetin, die Schwester Aharons, nahm den Tof in ihre Hand, und alle Frauen zogen hinter ihr aus mit Tof und Reigen.</span>
+          <span class="line">(21) Und Mirjam antwortete ihnen: Singt Adonai, denn hoch erhaben ist er — Ross und Reiter warf er ins Meer.</span>
+          <span class="line">(22) Und Mosche ließ Israel vom Schilfmeer aufbrechen, und sie zogen hinaus in die Wüste Schur und gingen drei Tage in der Wüste und fanden kein Wasser.</span>
+          <span class="line">(23) Und sie kamen nach Marah, und sie konnten das Wasser von Marah nicht trinken, denn es war bitter; darum nannte man seinen Namen Marah.</span>
+          <span class="line">(24) Und das Volk murrte gegen Mosche und sprach: Was sollen wir trinken?</span>
+          <span class="line">(25) Und er schrie zu Adonai, und Adonai wies ihm ein Holz, und er warf es in die Wasser, und die Wasser wurden süß. Dort setzte er ihm Satzung und Recht, und dort prüfte er es.</span>
+          <span class="line">(26) Und er sprach: Wenn du gewiss auf die Stimme Adonais, deines Gottes, hörst und tust, was recht ist in seinen Augen, und seinen Geboten dein Ohr neigst und alle seine Satzungen hältst — so werde ich keine der Krankheiten, die ich über Mizrajim gebracht habe, über dich bringen; denn ich, Adonai, bin dein Arzt.</span>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- ── ALIYAH 5 · חמישי · Schemot 15:27-16:10 — Elim, das Murren um Brot, das Manna verheißen ── -->
+    <div class="aliyah-block">
+      <div class="aliyah-label">עֲלִיָּה חֲמִישִׁית — אֵילִם · הִנְנִי מַמְטִיר לָכֶם לֶחֶם<span class="aliyah-label-de">Fünfte Aliyah · Schemot 15:27–16:10 · Die zwölf Quellen und siebzig Palmen von Elim · das Murren um Brot in der Wüste Sin · die Verheißung des Manna · die Herrlichkeit erscheint in der Wolke</span></div>
+      <div class="instrument-note">[no percussion] [no drums] [no choir] [acoustic guitar — Rast resting briefly at Elim in soft warm intervals, then a low restless murmur as the people complain, then a clear settling tone as the bread from heaven is promised, no percussion] Gitarre: Rast ruht kurz bei Elim in sanft-warmen Intervallen, dann ein tiefes, ruheloses Murmeln, als das Volk murrt, dann ein klar sich setzender Ton, als das Brot vom Himmel verheißen wird.</div>
+      <div class="lyrics-block">
+        <div class="lyrics-he" dir="rtl">
+          <span class="line">וַיָּבֹאוּ אֵילִמָה וְשָׁם שְׁתֵּים עֶשְׂרֵה עֵינֹת מַיִם וְשִׁבְעִים תְּמָרִים וַיַּחֲנוּ־שָׁם עַל־הַמָּיִם׃</span>
+          <span class="line">וַיִּסְעוּ מֵאֵילִם וַיָּבֹאוּ כׇּל־עֲדַת בְּנֵי־יִשְׂרָאֵל אֶל־מִדְבַּר־סִין אֲשֶׁר בֵּין־אֵילִם וּבֵין סִינָי בַּחֲמִשָּׁה עָשָׂר יוֹם לַחֹדֶשׁ הַשֵּׁנִי לְצֵאתָם מֵאֶרֶץ מִצְרָיִם׃</span>
+          <span class="line">(וילינו) [וַיִּלּוֹנוּ] כׇּל־עֲדַת בְּנֵי־יִשְׂרָאֵל עַל־מֹשֶׁה וְעַל־אַהֲרֹן בַּמִּדְבָּר׃</span>
+          <span class="line">וַיֹּאמְרוּ אֲלֵהֶם בְּנֵי יִשְׂרָאֵל מִי־יִתֵּן מוּתֵנוּ בְיַד־אֲדֹנָי בְּאֶרֶץ מִצְרַיִם בְּשִׁבְתֵּנוּ עַל־סִיר הַבָּשָׂר בְּאׇכְלֵנוּ לֶחֶם לָשֹׂבַע כִּי־הוֹצֵאתֶם אֹתָנוּ אֶל־הַמִּדְבָּר הַזֶּה לְהָמִית אֶת־כׇּל־הַקָּהָל הַזֶּה בָּרָעָב׃</span>
+          <span class="line">וַיֹּאמֶר אֲדֹנָי אֶל־מֹשֶׁה הִנְנִי מַמְטִיר לָכֶם לֶחֶם מִן־הַשָּׁמָיִם וְיָצָא הָעָם וְלָקְטוּ דְּבַר־יוֹם בְּיוֹמוֹ לְמַעַן אֲנַסֶּנּוּ הֲיֵלֵךְ בְּתוֹרָתִי אִם־לֹא׃</span>
+          <span class="line">וְהָיָה בַּיּוֹם הַשִּׁשִּׁי וְהֵכִינוּ אֵת אֲשֶׁר־יָבִיאוּ וְהָיָה מִשְׁנֶה עַל אֲשֶׁר־יִלְקְטוּ יוֹם יוֹם׃</span>
+          <span class="line">וַיֹּאמֶר מֹשֶׁה וְאַהֲרֹן אֶל־כׇּל־בְּנֵי יִשְׂרָאֵל עֶרֶב וִידַעְתֶּם כִּי אֲדֹנָי הוֹצִיא אֶתְכֶם מֵאֶרֶץ מִצְרָיִם׃</span>
+          <span class="line">וּבֹקֶר וּרְאִיתֶם אֶת־כְּבוֹד אֲדֹנָי בְּשׇׁמְעוֹ אֶת־תְּלֻנֹּתֵיכֶם עַל־אֲדֹנָי וְנַחְנוּ מָה כִּי (תלונו) [תַלִּינוּ] עָלֵינוּ׃</span>
+          <span class="line">וַיֹּאמֶר מֹשֶׁה בְּתֵת אֲדֹנָי לָכֶם בָּעֶרֶב בָּשָׂר לֶאֱכֹל וְלֶחֶם בַּבֹּקֶר לִשְׂבֹּעַ בִּשְׁמֹעַ אֲדֹנָי אֶת־תְּלֻנֹּתֵיכֶם אֲשֶׁר־אַתֶּם מַלִּינִם עָלָיו וְנַחְנוּ מָה לֹא־עָלֵינוּ תְלֻנֹּתֵיכֶם כִּי עַל־אֲדֹנָי׃</span>
+          <span class="line">וַיֹּאמֶר מֹשֶׁה אֶל־אַהֲרֹן אֱמֹר אֶל־כׇּל־עֲדַת בְּנֵי יִשְׂרָאֵל קִרְבוּ לִפְנֵי אֲדֹנָי כִּי שָׁמַע אֵת תְּלֻנֹּתֵיכֶם׃</span>
+          <span class="line">וַיְהִי כְּדַבֵּר אַהֲרֹן אֶל־כׇּל־עֲדַת בְּנֵי־יִשְׂרָאֵל וַיִּפְנוּ אֶל־הַמִּדְבָּר וְהִנֵּה כְּבוֹד אֲדֹנָי נִרְאָה בֶּעָנָן׃</span>
+        </div>
+        <div class="lyrics-de">
+          <span class="line">(15:27) Und sie kamen nach Elim, und dort waren zwölf Wasserquellen und siebzig Palmen, und sie lagerten dort am Wasser.</span>
+          <span class="line">(16:1) Und sie brachen auf von Elim, und die ganze Gemeinde der Söhne Israels kam in die Wüste Sin, die zwischen Elim und Sinai liegt, am fünfzehnten Tag des zweiten Monats nach ihrem Auszug aus dem Land Mizrajim.</span>
+          <span class="line">(2) Und die ganze Gemeinde der Söhne Israels murrte gegen Mosche und gegen Aharon in der Wüste.</span>
+          <span class="line">(3) Und die Söhne Israels sprachen zu ihnen: Wären wir doch durch die Hand Adonais im Land Mizrajim gestorben, als wir am Fleischtopf saßen, als wir Brot bis zur Sättigung aßen — denn ihr habt uns in diese Wüste hinausgeführt, um diese ganze Versammlung durch Hunger sterben zu lassen.</span>
+          <span class="line">(4) Und Adonai sprach zu Mosche: Siehe, ich lasse euch Brot vom Himmel regnen; und das Volk soll hinausgehen und Tag für Tag das Maß eines Tages sammeln — damit ich es prüfe, ob es in meiner Weisung wandelt oder nicht.</span>
+          <span class="line">(5) Und es soll geschehen am sechsten Tag: Sie sollen zubereiten, was sie hereinbringen — und es wird das Doppelte sein von dem, was sie Tag für Tag sammeln.</span>
+          <span class="line">(6) Und Mosche und Aharon sprachen zu allen Söhnen Israels: Am Abend werdet ihr erkennen, dass Adonai euch aus dem Land Mizrajim herausgeführt hat;</span>
+          <span class="line">(7) und am Morgen werdet ihr die Herrlichkeit Adonais sehen, da er euer Murren gegen Adonai gehört hat — und was sind wir, dass ihr gegen uns murrt?</span>
+          <span class="line">(8) Und Mosche sprach: Daran, dass Adonai euch am Abend Fleisch zu essen gibt und am Morgen Brot zur Sättigung, da Adonai euer Murren gehört hat, mit dem ihr gegen ihn murrt — und was sind wir? Nicht gegen uns geht euer Murren, sondern gegen Adonai.</span>
+          <span class="line">(9) Und Mosche sprach zu Aharon: Sage zur ganzen Gemeinde der Söhne Israels: Tretet hin vor Adonai, denn er hat euer Murren gehört.</span>
+          <span class="line">(10) Und es geschah, während Aharon zur ganzen Gemeinde der Söhne Israels redete, da wandten sie sich der Wüste zu — und siehe, die Herrlichkeit Adonais erschien in der Wolke.</span>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- ── ALIYAH 6 · שישי · Schemot 16:11-36 — Wachteln, Manna, Schabbat, der bewahrte Omer ── -->
+    <div class="aliyah-block">
+      <div class="aliyah-label">עֲלִיָּה שִׁשִּׁית — הַמָּן · לֶחֶם מִשְׁנֶה · שַׁבָּת<span class="aliyah-label-de">Sechste Aliyah · Schemot 16:11–36 · Die Wachteln und der Manna-Fall · der Omer pro Kopf · das doppelte Brot am sechsten Tag · der Schabbat in seiner ersten Anwendung · der bewahrte Omer</span></div>
+      <div class="instrument-note">[no percussion] [no drums] [no choir] [acoustic guitar — Rast steady and clear, the daily gathering as an even ordered fingerpicking pattern, then a broadening warmth as the sixth-day double portion and the Schabbat rest arrive, the preserved omer as a quiet held final tone, no percussion] Gitarre: Rast stetig und klar — das tägliche Sammeln als gleichmäßig geordnetes Fingerpicking, dann eine sich weitende Wärme, als die doppelte Portion des sechsten Tages und die Schabbat-Ruhe kommen; der bewahrte Omer als ruhig gehaltener Schluss-Ton.</div>
+      <div class="lyrics-block">
+        <div class="lyrics-he" dir="rtl">
+          <span class="line">וַיְדַבֵּר אֲדֹנָי אֶל־מֹשֶׁה לֵּאמֹר׃</span>
+          <span class="line">שָׁמַעְתִּי אֶת־תְּלוּנֹּת בְּנֵי יִשְׂרָאֵל דַּבֵּר אֲלֵהֶם לֵאמֹר בֵּין הָעַרְבַּיִם תֹּאכְלוּ בָשָׂר וּבַבֹּקֶר תִּשְׂבְּעוּ־לָחֶם וִידַעְתֶּם כִּי אֲנִי אֲדֹנָי אֱלֹהֵיכֶם׃</span>
+          <span class="line">וַיְהִי בָעֶרֶב וַתַּעַל הַשְּׂלָו וַתְּכַס אֶת־הַמַּחֲנֶה וּבַבֹּקֶר הָיְתָה שִׁכְבַת הַטַּל סָבִיב לַמַּחֲנֶה׃</span>
+          <span class="line">וַתַּעַל שִׁכְבַת הַטָּל וְהִנֵּה עַל־פְּנֵי הַמִּדְבָּר דַּק מְחֻסְפָּס דַּק כַּכְּפֹר עַל־הָאָרֶץ׃</span>
+          <span class="line">וַיִּרְאוּ בְנֵי־יִשְׂרָאֵל וַיֹּאמְרוּ אִישׁ אֶל־אָחִיו מָן הוּא כִּי לֹא יָדְעוּ מַה־הוּא וַיֹּאמֶר מֹשֶׁה אֲלֵהֶם הוּא הַלֶּחֶם אֲשֶׁר נָתַן אֲדֹנָי לָכֶם לְאׇכְלָה׃</span>
+          <span class="line">זֶה הַדָּבָר אֲשֶׁר צִוָּה אֲדֹנָי לִקְטוּ מִמֶּנּוּ אִישׁ לְפִי אׇכְלוֹ עֹמֶר לַגֻּלְגֹּלֶת מִסְפַּר נַפְשֹׁתֵיכֶם אִישׁ לַאֲשֶׁר בְּאׇהֳלוֹ תִּקָּחוּ׃</span>
+          <span class="line">וַיַּעֲשׂוּ־כֵן בְּנֵי יִשְׂרָאֵל וַיִּלְקְטוּ הַמַּרְבֶּה וְהַמַּמְעִיט׃</span>
+          <span class="line">וַיָּמֹדּוּ בָעֹמֶר וְלֹא הֶעְדִּיף הַמַּרְבֶּה וְהַמַּמְעִיט לֹא הֶחְסִיר אִישׁ לְפִי־אׇכְלוֹ לָקָטוּ׃</span>
+          <span class="line">וַיֹּאמֶר מֹשֶׁה אֲלֵהֶם אִישׁ אַל־יוֹתֵר מִמֶּנּוּ עַד־בֹּקֶר׃</span>
+          <span class="line">וְלֹא־שָׁמְעוּ אֶל־מֹשֶׁה וַיּוֹתִרוּ אֲנָשִׁים מִמֶּנּוּ עַד־בֹּקֶר וַיָּרֻם תּוֹלָעִים וַיִּבְאַשׁ וַיִּקְצֹף עֲלֵהֶם מֹשֶׁה׃</span>
+          <span class="line">וַיִּלְקְטוּ אֹתוֹ בַּבֹּקֶר בַּבֹּקֶר אִישׁ כְּפִי אׇכְלוֹ וְחַם הַשֶּׁמֶשׁ וְנָמָס׃</span>
+          <span class="line">וַיְהִי בַּיּוֹם הַשִּׁשִּׁי לָקְטוּ לֶחֶם מִשְׁנֶה שְׁנֵי הָעֹמֶר לָאֶחָד וַיָּבֹאוּ כׇּל־נְשִׂיאֵי הָעֵדָה וַיַּגִּידוּ לְמֹשֶׁה׃</span>
+          <span class="line">וַיֹּאמֶר אֲלֵהֶם הוּא אֲשֶׁר דִּבֶּר אֲדֹנָי שַׁבָּתוֹן שַׁבַּת־קֹדֶשׁ לַאדֹנָי מָחָר אֵת אֲשֶׁר־תֹּאפוּ אֵפוּ וְאֵת אֲשֶׁר־תְּבַשְּׁלוּ בַּשֵּׁלוּ וְאֵת כׇּל־הָעֹדֵף הַנִּיחוּ לָכֶם לְמִשְׁמֶרֶת עַד־הַבֹּקֶר׃</span>
+          <span class="line">וַיַּנִּיחוּ אֹתוֹ עַד־הַבֹּקֶר כַּאֲשֶׁר צִוָּה מֹשֶׁה וְלֹא הִבְאִישׁ וְרִמָּה לֹא־הָיְתָה בּוֹ׃</span>
+          <span class="line">וַיֹּאמֶר מֹשֶׁה אִכְלֻהוּ הַיּוֹם כִּי־שַׁבָּת הַיּוֹם לַאדֹנָי הַיּוֹם לֹא תִמְצָאֻהוּ בַּשָּׂדֶה׃</span>
+          <span class="line">שֵׁשֶׁת יָמִים תִּלְקְטֻהוּ וּבַיּוֹם הַשְּׁבִיעִי שַׁבָּת לֹא יִהְיֶה־בּוֹ׃</span>
+          <span class="line">וַיְהִי בַּיּוֹם הַשְּׁבִיעִי יָצְאוּ מִן־הָעָם לִלְקֹט וְלֹא מָצָאוּ׃</span>
+          <span class="line">וַיֹּאמֶר אֲדֹנָי אֶל־מֹשֶׁה עַד־אָנָה מֵאַנְתֶּם לִשְׁמֹר מִצְוֺתַי וְתוֹרֹתָי׃</span>
+          <span class="line">רְאוּ כִּי־אֲדֹנָי נָתַן לָכֶם הַשַּׁבָּת עַל־כֵּן הוּא נֹתֵן לָכֶם בַּיּוֹם הַשִּׁשִּׁי לֶחֶם יוֹמָיִם שְׁבוּ אִישׁ תַּחְתָּיו אַל־יֵצֵא אִישׁ מִמְּקֹמוֹ בַּיּוֹם הַשְּׁבִיעִי׃</span>
+          <span class="line">וַיִּשְׁבְּתוּ הָעָם בַּיּוֹם הַשְּׁבִעִי׃</span>
+          <span class="line">וַיִּקְרְאוּ בֵית־יִשְׂרָאֵל אֶת־שְׁמוֹ מָן וְהוּא כְּזֶרַע גַּד לָבָן וְטַעְמוֹ כְּצַפִּיחִת בִּדְבָשׁ׃</span>
+          <span class="line">וַיֹּאמֶר מֹשֶׁה זֶה הַדָּבָר אֲשֶׁר צִוָּה אֲדֹנָי מְלֹא הָעֹמֶר מִמֶּנּוּ לְמִשְׁמֶרֶת לְדֹרֹתֵיכֶם לְמַעַן יִרְאוּ אֶת־הַלֶּחֶם אֲשֶׁר הֶאֱכַלְתִּי אֶתְכֶם בַּמִּדְבָּר בְּהוֹצִיאִי אֶתְכֶם מֵאֶרֶץ מִצְרָיִם׃</span>
+          <span class="line">וַיֹּאמֶר מֹשֶׁה אֶל־אַהֲרֹן קַח צִנְצֶנֶת אַחַת וְתֶן־שָׁמָּה מְלֹא־הָעֹמֶר מָן וְהַנַּח אֹתוֹ לִפְנֵי אֲדֹנָי לְמִשְׁמֶרֶת לְדֹרֹתֵיכֶם׃</span>
+          <span class="line">כַּאֲשֶׁר צִוָּה אֲדֹנָי אֶל־מֹשֶׁה וַיַּנִּיחֵהוּ אַהֲרֹן לִפְנֵי הָעֵדֻת לְמִשְׁמָרֶת׃</span>
+          <span class="line">וּבְנֵי יִשְׂרָאֵל אָכְלוּ אֶת־הַמָּן אַרְבָּעִים שָׁנָה עַד־בֹּאָם אֶל־אֶרֶץ נוֹשָׁבֶת אֶת־הַמָּן אָכְלוּ עַד־בֹּאָם אֶל־קְצֵה אֶרֶץ כְּנָעַן׃</span>
+          <span class="line">וְהָעֹמֶר עֲשִׂרִית הָאֵיפָה הוּא׃</span>
+        </div>
+        <div class="lyrics-de">
+          <span class="line">(16:11) Und Adonai redete zu Mosche und sprach:</span>
+          <span class="line">(12) Ich habe das Murren der Söhne Israels gehört. Rede zu ihnen und sage: Zwischen den Abenden werdet ihr Fleisch essen, und am Morgen werdet ihr euch an Brot sättigen — und ihr werdet erkennen, dass ich Adonai, euer Gott, bin.</span>
+          <span class="line">(13) Und es geschah am Abend, da stiegen die Wachteln herauf und bedeckten das Lager, und am Morgen war eine Tauschicht rings um das Lager.</span>
+          <span class="line">(14) Und die Tauschicht stieg auf, und siehe, auf der Fläche der Wüste lag etwas Feines, Körniges, fein wie Reif auf der Erde.</span>
+          <span class="line">(15) Und die Söhne Israels sahen es und sprachen einer zum andern: Man hu? — denn sie wussten nicht, was es war. Und Mosche sprach zu ihnen: Das ist das Brot, das Adonai euch zur Speise gegeben hat.</span>
+          <span class="line">(16) Dies ist das Wort, das Adonai geboten hat: Sammelt davon, ein jeder nach dem Maß seines Essens, einen Omer pro Kopf, nach der Zahl eurer Seelen; ein jeder nehme für die, die in seinem Zelt sind.</span>
+          <span class="line">(17) Und die Söhne Israels taten so, und sie sammelten, der eine viel und der andere wenig.</span>
+          <span class="line">(18) Und sie maßen es mit dem Omer, und der viel gesammelt hatte, hatte keinen Überschuss, und der wenig gesammelt hatte, hatte keinen Mangel; ein jeder hatte nach dem Maß seines Essens gesammelt.</span>
+          <span class="line">(19) Und Mosche sprach zu ihnen: Niemand lasse etwas davon übrig bis zum Morgen.</span>
+          <span class="line">(20) Aber sie hörten nicht auf Mosche, und einige Männer ließen etwas davon übrig bis zum Morgen — da wurde es voller Würmer und wurde stinkend; und Mosche zürnte ihnen.</span>
+          <span class="line">(21) Und sie sammelten es Morgen für Morgen, ein jeder nach dem Maß seines Essens; und wenn die Sonne heiß wurde, zerschmolz es.</span>
+          <span class="line">(22) Und es geschah am sechsten Tag, da sammelten sie das doppelte Brot, zwei Omer für jeden; und alle Fürsten der Gemeinde kamen und meldeten es Mosche.</span>
+          <span class="line">(23) Und er sprach zu ihnen: Das ist es, was Adonai geredet hat: Eine Ruhe, ein heiliger Schabbat für Adonai, ist morgen; was ihr backen wollt, backt, und was ihr kochen wollt, kocht, und alles, was übrig bleibt, legt euch zur Aufbewahrung hin bis zum Morgen.</span>
+          <span class="line">(24) Und sie legten es hin bis zum Morgen, wie Mosche geboten hatte, und es wurde nicht stinkend, und kein Wurm war darin.</span>
+          <span class="line">(25) Und Mosche sprach: Esst es heute, denn heute ist Schabbat für Adonai; heute werdet ihr es nicht auf dem Feld finden.</span>
+          <span class="line">(26) Sechs Tage sollt ihr es sammeln, aber am siebten Tag ist Schabbat — an ihm wird es nicht sein.</span>
+          <span class="line">(27) Und es geschah am siebten Tag, da gingen einige aus dem Volk hinaus, um zu sammeln, und sie fanden nichts.</span>
+          <span class="line">(28) Und Adonai sprach zu Mosche: Bis wann weigert ihr euch, meine Gebote und meine Weisungen zu halten?</span>
+          <span class="line">(29) Seht, weil Adonai euch den Schabbat gegeben hat, darum gibt er euch am sechsten Tag Brot für zwei Tage; bleibt ein jeder an seinem Platz, niemand verlasse seinen Ort am siebten Tag.</span>
+          <span class="line">(30) Und das Volk ruhte am siebten Tag.</span>
+          <span class="line">(31) Und das Haus Israel nannte seinen Namen Man; und es war wie Koriandersamen, weiß, und sein Geschmack war wie Honigkuchen.</span>
+          <span class="line">(32) Und Mosche sprach: Dies ist das Wort, das Adonai geboten hat: Ein Omervoll davon sei zur Aufbewahrung für eure Geschlechter — damit sie das Brot sehen, mit dem ich euch in der Wüste gespeist habe, als ich euch aus dem Land Mizrajim herausführte.</span>
+          <span class="line">(33) Und Mosche sprach zu Aharon: Nimm einen Krug und gib einen Omervoll Man hinein und stelle ihn vor Adonai hin, zur Aufbewahrung für eure Geschlechter.</span>
+          <span class="line">(34) Wie Adonai dem Mosche geboten hatte, so stellte Aharon ihn vor das Zeugnis hin, zur Aufbewahrung.</span>
+          <span class="line">(35) Und die Söhne Israels aßen das Man vierzig Jahre, bis sie in bewohntes Land kamen; das Man aßen sie, bis sie an den Rand des Landes Kenaan kamen.</span>
+          <span class="line">(36) Und der Omer ist ein Zehntel des Efa.</span>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- ── ALIYAH 7 · שביעי · Schemot 17:1-16 — Massa und Meriba, der Krieg gegen Amalek ── -->
+    <div class="aliyah-block">
+      <div class="aliyah-label">עֲלִיָּה שְׁבִיעִית — מַסָּה וּמְרִיבָה · מִלְחֶמֶת עֲמָלֵק<span class="aliyah-label-de">Siebte Aliyah · Schemot 17:1–16 · Der Streit um Wasser bei Refidim · Wasser aus dem Felsen · der Krieg gegen Amalek · Mosches getragene Hände · der Altar Adonai Nissi</span></div>
+      <div class="instrument-note">[no percussion] [no drums] [no choir] [acoustic guitar — Rast clear and firm, the quarrel at Massa as a low tension, then the water from the rock as a bright opening, then the Amalek war section steady and resolute, Moshe's hands held up sustained, closing on the firm vow against Amalek, no percussion] Gitarre: Rast klar und fest — der Streit bei Massa als tiefe Spannung, dann das Wasser aus dem Felsen als helle Öffnung, dann der Amalek-Abschnitt stetig und entschlossen, Mosches Hände getragen gehalten, schließend auf dem festen Schwur gegen Amalek.</div>
+      <div class="lyrics-block">
+        <div class="lyrics-he" dir="rtl">
+          <span class="line">וַיִּסְעוּ כׇּל־עֲדַת בְּנֵי־יִשְׂרָאֵל מִמִּדְבַּר־סִין לְמַסְעֵיהֶם עַל־פִּי אֲדֹנָי וַיַּחֲנוּ בִּרְפִידִים וְאֵין מַיִם לִשְׁתֹּת הָעָם׃</span>
+          <span class="line">וַיָּרֶב הָעָם עִם־מֹשֶׁה וַיֹּאמְרוּ תְּנוּ־לָנוּ מַיִם וְנִשְׁתֶּה וַיֹּאמֶר לָהֶם מֹשֶׁה מַה־תְּרִיבוּן עִמָּדִי מַה־תְּנַסּוּן אֶת־אֲדֹנָי׃</span>
+          <span class="line">וַיִּצְמָא שָׁם הָעָם לַמַּיִם וַיָּלֶן הָעָם עַל־מֹשֶׁה וַיֹּאמֶר לָמָּה זֶּה הֶעֱלִיתָנוּ מִמִּצְרַיִם לְהָמִית אֹתִי וְאֶת־בָּנַי וְאֶת־מִקְנַי בַּצָּמָא׃</span>
+          <span class="line">וַיִּצְעַק מֹשֶׁה אֶל־אֲדֹנָי לֵאמֹר מָה אֶעֱשֶׂה לָעָם הַזֶּה עוֹד מְעַט וּסְקָלֻנִי׃</span>
+          <span class="line">וַיֹּאמֶר אֲדֹנָי אֶל־מֹשֶׁה עֲבֹר לִפְנֵי הָעָם וְקַח אִתְּךָ מִזִּקְנֵי יִשְׂרָאֵל וּמַטְּךָ אֲשֶׁר הִכִּיתָ בּוֹ אֶת־הַיְאֹר קַח בְּיָדְךָ וְהָלָכְתָּ׃</span>
+          <span class="line">הִנְנִי עֹמֵד לְפָנֶיךָ שָּׁם עַל־הַצּוּר בְּחֹרֵב וְהִכִּיתָ בַצּוּר וְיָצְאוּ מִמֶּנּוּ מַיִם וְשָׁתָה הָעָם וַיַּעַשׂ כֵּן מֹשֶׁה לְעֵינֵי זִקְנֵי יִשְׂרָאֵל׃</span>
+          <span class="line">וַיִּקְרָא שֵׁם הַמָּקוֹם מַסָּה וּמְרִיבָה עַל־רִיב בְּנֵי יִשְׂרָאֵל וְעַל נַסֹּתָם אֶת־אֲדֹנָי לֵאמֹר הֲיֵשׁ אֲדֹנָי בְּקִרְבֵּנוּ אִם־אָיִן׃</span>
+          <span class="line">וַיָּבֹא עֲמָלֵק וַיִּלָּחֶם עִם־יִשְׂרָאֵל בִּרְפִידִם׃</span>
+          <span class="line">וַיֹּאמֶר מֹשֶׁה אֶל־יְהוֹשֻׁעַ בְּחַר־לָנוּ אֲנָשִׁים וְצֵא הִלָּחֵם בַּעֲמָלֵק מָחָר אָנֹכִי נִצָּב עַל־רֹאשׁ הַגִּבְעָה וּמַטֵּה הָאֱלֹהִים בְּיָדִי׃</span>
+          <span class="line">וַיַּעַשׂ יְהוֹשֻׁעַ כַּאֲשֶׁר אָמַר־לוֹ מֹשֶׁה לְהִלָּחֵם בַּעֲמָלֵק וּמֹשֶׁה אַהֲרֹן וְחוּר עָלוּ רֹאשׁ הַגִּבְעָה׃</span>
+          <span class="line">וְהָיָה כַּאֲשֶׁר יָרִים מֹשֶׁה יָדוֹ וְגָבַר יִשְׂרָאֵל וְכַאֲשֶׁר יָנִיחַ יָדוֹ וְגָבַר עֲמָלֵק׃</span>
+          <span class="line">וִידֵי מֹשֶׁה כְּבֵדִים וַיִּקְחוּ־אֶבֶן וַיָּשִׂימוּ תַחְתָּיו וַיֵּשֶׁב עָלֶיהָ וְאַהֲרֹן וְחוּר תָּמְכוּ בְיָדָיו מִזֶּה אֶחָד וּמִזֶּה אֶחָד וַיְהִי יָדָיו אֱמוּנָה עַד־בֹּא הַשָּׁמֶשׁ׃</span>
+          <span class="line">וַיַּחֲלֹשׁ יְהוֹשֻׁעַ אֶת־עֲמָלֵק וְאֶת־עַמּוֹ לְפִי־חָרֶב׃</span>
+          <span class="line">וַיֹּאמֶר אֲדֹנָי אֶל־מֹשֶׁה כְּתֹב זֹאת זִכָּרוֹן בַּסֵּפֶר וְשִׂים בְּאׇזְנֵי יְהוֹשֻׁעַ כִּי־מָחֹה אֶמְחֶה אֶת־זֵכֶר עֲמָלֵק מִתַּחַת הַשָּׁמָיִם׃</span>
+          <span class="line">וַיִּבֶן מֹשֶׁה מִזְבֵּחַ וַיִּקְרָא שְׁמוֹ אֲדֹנָי נִסִּי׃</span>
+          <span class="line">וַיֹּאמֶר כִּי־יָד עַל־כֵּס יָהּ מִלְחָמָה לַאדֹנָי בַּעֲמָלֵק מִדֹּר דֹּר׃</span>
+        </div>
+        <div class="lyrics-de">
+          <span class="line">(17:1) Und die ganze Gemeinde der Söhne Israels brach auf aus der Wüste Sin zu ihren Zügen, nach dem Wort Adonais, und sie lagerten in Refidim, und es war kein Wasser für das Volk zu trinken.</span>
+          <span class="line">(2) Und das Volk haderte mit Mosche, und sie sprachen: Gebt uns Wasser, dass wir trinken! Und Mosche sprach zu ihnen: Was hadert ihr mit mir? Was versucht ihr Adonai?</span>
+          <span class="line">(3) Und das Volk dürstete dort nach Wasser, und das Volk murrte gegen Mosche und sprach: Warum hast du uns aus Mizrajim heraufgeführt, um mich und meine Kinder und mein Vieh durch Durst sterben zu lassen?</span>
+          <span class="line">(4) Und Mosche schrie zu Adonai und sprach: Was soll ich mit diesem Volk tun? Noch ein wenig, und sie steinigen mich.</span>
+          <span class="line">(5) Und Adonai sprach zu Mosche: Geh vor dem Volk her und nimm einige von den Ältesten Israels mit dir, und deinen Stab, mit dem du den Strom geschlagen hast, nimm in deine Hand und geh.</span>
+          <span class="line">(6) Siehe, ich werde dort vor dir stehen, auf dem Felsen am Chorev; und du sollst auf den Felsen schlagen, und es wird Wasser aus ihm hervorkommen, und das Volk wird trinken. Und Mosche tat so vor den Augen der Ältesten Israels.</span>
+          <span class="line">(7) Und er nannte den Namen des Ortes Massa und Meriba, wegen des Haderns der Söhne Israels und weil sie Adonai versucht hatten, indem sie sprachen: Ist Adonai in unserer Mitte oder nicht?</span>
+          <span class="line">(8) Und Amalek kam und kämpfte mit Israel in Refidim.</span>
+          <span class="line">(9) Und Mosche sprach zu Jehoschua: Wähle uns Männer aus und zieh hinaus, kämpfe gegen Amalek; morgen werde ich auf dem Gipfel des Hügels stehen, mit dem Stab Gottes in meiner Hand.</span>
+          <span class="line">(10) Und Jehoschua tat, wie Mosche ihm gesagt hatte, um gegen Amalek zu kämpfen; und Mosche, Aharon und Chur stiegen auf den Gipfel des Hügels.</span>
+          <span class="line">(11) Und es geschah: Wenn Mosche seine Hand erhob, war Israel stärker, und wenn er seine Hand sinken ließ, war Amalek stärker.</span>
+          <span class="line">(12) Und die Hände Mosches wurden schwer, und sie nahmen einen Stein und legten ihn unter ihn, und er setzte sich darauf; und Aharon und Chur stützten seine Hände, einer von hier und einer von dort — und so waren seine Hände fest bis zum Untergang der Sonne.</span>
+          <span class="line">(13) Und Jehoschua schwächte Amalek und sein Volk mit der Schärfe des Schwertes.</span>
+          <span class="line">(14) Und Adonai sprach zu Mosche: Schreibe dies zum Gedächtnis in das Buch und lege es in die Ohren Jehoschuas: dass ich das Gedenken Amaleks völlig austilgen werde unter dem Himmel.</span>
+          <span class="line">(15) Und Mosche baute einen Altar und nannte seinen Namen Adonai Nissi.</span>
+          <span class="line">(16) Und er sprach: Denn eine Hand ist am Thron Jah — Krieg ist Adonai gegen Amalek von Geschlecht zu Geschlecht.</span>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- ══ TIKKUN-BOX — DAS HERZ DER PARASHAH ══ -->
+    <div class="tikkun-box">
+      <div class="tikkun-header">
+        <div class="tikkun-title-he">מַעֲשֵׂה הַתִּיקּוּן — שִׁירַת הַיָּם בַּעֲמִידָה בְּכָל יוֹם · סְמִיכוּת גְּאֻלָּה לִתְפִלָּה · לֶחֶם מִשְׁנֶה · טָהֳרַת הַפֶּה לַשִּׁירָה · יְדֵי אֱמוּנָה</div>
+        <div class="tikkun-title-de">Tikkun – Die Schirat HaYam täglich im Stehen, das ungebrochene Anschließen der Geulah an die Tefillah, das doppelte Brot als Manna-Spiegel, die Reinigung des Mundes für den Lobgesang und die „Hände der Emunah" gegen Amalek</div>
+        <div class="tikkun-src">שְׁמוֹת י״ד:י״ג–י״ד · י״ד:ט״ו · ט״ו:א׳–י״ח · ט״ז:ד׳ · ט״ז:כ״ב · י״ז:י״א–י״ב · רמב״ם הִלְכוֹת תְּפִלָּה פֶּרֶק ב׳ (שִׁירַת הַיָּם בִּפְסוּקֵי דְזִמְרָא) · רמב״ם הִלְכוֹת שַׁבָּת פֶּרֶק א׳ · תַּלְמוּד בָּבְלִי בְּרָכוֹת ט׳: (סְמִיכוּת גְּאֻלָּה לִתְפִלָּה) · רש״ש נְהַר שָׁלוֹם דְּרוּשׁ קְרִיעַת יַם־סוּף · רמח״ל מְסִלַּת יְשָׁרִים פֶּרֶק י״ט (בְּאוּר מִדַּת הַטָּהֳרָה) · אוֹר הַחַיִּים עַל שְׁמוֹת י״ד:ט״ו · בֶּן אִישׁ חַי שָׁנָה רִאשׁוֹנָה פָּרָשַׁת בְּשַׁלַּח · שד״ל פֵּרוּשׁ עַל שְׁמוֹת ט״ו · מִשְׁנָה רֹאשׁ הַשָּׁנָה ג׳:ח׳ · כַּף הַחַיִּים אוֹרַח חַיִּים · יָבִיעַ אוֹמֶר · חֲזוֹן עוֹבַדְיָה · נֻסַּח אֲרָם צוֹבָה · יְרוּשָׁלַיִם · מָרוֹקוֹ · יָמֶן</div>
+      </div>
+      <div class="tikkun-body">
+        <strong>Sephardische Praxis:</strong> Beschalach ist die <em>Tiferet</em>-Parashah des Sefer Schemot — der Punkt, an dem die Befreiung aus Mizrajim sich zur <em>Erlösung</em> vollendet und in Lobgesang öffnet. <strong>Rashash</strong> lehrt im <em>Nahar Schalom</em> (Drusch Krijat Yam Suf, sephardisch-yerushalmische Tradition), dass die Spaltung des Meeres die Manifestation der Tiferet ist: die mittlere Sefirah, die Chesed und Gevurah verbindet — die rettende Gnade an Israel und das gerechte Gericht an Mizrajim geschehen in <em>einem</em> Akt, in vollkommenem Gleichgewicht. Darum ist die Schirat HaYam <em>akustische Tiferet</em>: ein Volk, das im Galut nur einzeln stöhnen konnte, singt nun als <em>ein</em> Mund — <em>„אָז יָשִׁיר־מֹשֶׁה וּבְנֵי יִשְׂרָאֵל"</em>. <strong>Ramchal</strong> erläutert in <em>Mesillat Yescharim</em> Perek 19 (Beur Midat HaTaharah) die innere Mechanik: die Schirah ist nicht ein willkürlicher Jubel, sondern die <em>natürliche Folge</em> der inneren Reinheit — wer rein wird, dessen Mund singt von selbst. Das Lied ist die hörbare Form eines Herzens, das von der Last des Galut befreit wurde. <strong>Or HaChaim</strong> (auf Schemot 14:15) liest das <em>„מַה־תִּצְעַק אֵלָי"</em> — „Was schreist du zu mir?" — nicht als Tadel des Gebets, sondern als Ruf zur <em>Bewegung</em>: in der Stunde, in der das Meer noch geschlossen ist, verlangt Adonai von Israel nicht weitere Worte, sondern den Schritt nach vorn, das <em>„וְיִסָּעוּ"</em>. Gebet und Tat gehören zusammen wie die zwei Wände des gespaltenen Meeres.
+        <br><br>
+        <strong>Das Herz der Parashah ist die Schirah selbst</strong> und ihr Gipfel: <em>„אֲדֹנָי יִמְלֹךְ לְעֹלָם וָעֶד"</em> (Schemot 15:18) — die Akklamation des ewigen Königtums, der höchste Punkt des Liedes. <strong>Ben Ish Chai</strong> (Schanah Rischona, Parashat Beschalach) hält den sephardischen Brauch fest, die Schirat HaYam im täglichen Schacharit <em>stehend</em> zu lesen, mit einem Maqam-Wechsel, der dem Königlichen der Schirah entspricht — in der Aleppo-Yerushalayim-Tradition wird sie in Rast angestimmt, mit einem Aufstieg in den Hijaz auf der Höhe des Gesangs und einer Rückkehr nach Rast. <strong>Rambam</strong> verankert in <em>Hilchot Tefillah</em> Perek 2 die Schirat HaYam als festen Teil der täglichen <em>Pesukei deZimra</em>: jeden Morgen wird die Spaltung des Meeres im Mund des Betenden neu gesprochen — nicht als Erinnerung allein, sondern als tägliche Wieder-Vergegenwärtigung der Geulah. Daran schließt der Talmud (<em>Berachot</em> 9b) die Halacha der <em>Smichut Geulah liTefillah</em> an: die Brachah, die mit der Erlösung am Meer endet (<em>Ga'al Jisrael</em>), wird ohne Unterbrechung mit der Amidah verbunden — wer am Morgen das Meer durchschreitet, tritt unmittelbar vor den König. <strong>Schadal</strong> (<em>Pirusch al haTora</em> zu Schemot 15) betont die literarische Genialität der Schirah: ihre wechselnden Bildwelten — Meer, Hand, Atem, Stein, Berg — die alle in <em>eine</em> Bewegung der Doxologie münden; eine philologische Beobachtung, die das musikalische Verständnis stützt, dass die Schirah ein durchkomponiertes Ganzes ist und kein loser Versblock.
+        <br><br>
+        <strong>Die Wüsten-Stationen nach der Schirah</strong> übersetzen die Tiferet des Meeres in den Alltag. Bei <strong>Marah</strong> wird das bittere Wasser süß, „und dort setzte er ihm Satzung und Recht" (15:25) — die Tora beginnt schon vor dem Sinai. Beim <strong>Manna</strong> (16:4) wird das Volk geprüft: <em>„דְּבַר־יוֹם בְּיוֹמוֹ"</em> — wer das Maß eines Tages sammelt und nichts hortet, lernt das tägliche Vertrauen; und am sechsten Tag fällt <em>„לֶחֶם מִשְׁנֶה"</em>, das doppelte Brot (16:22), die erste praktische Anwendung des Schabbat. <strong>Rambam</strong> (<em>Hilchot Schabbat</em> Perek 1) hält fest, dass der Schabbat in der Wüste, vor dem Sinai, schon gelebt wurde — das doppelte Brot des sechsten Tages ist die Wurzel des sephardischen Brauchs, am Schabbat-Tisch zwei vollständige Brote zu nehmen. Beim Krieg gegen <strong>Amalek</strong> (17:11–12) hängt der Sieg an Mosches erhobenen Händen — und die <em>Mischnah</em> (Rosch HaSchana 3:8) lehrt ausdrücklich: nicht Mosches Hände führten den Krieg, sondern „solange Israel nach oben blickte und sein Herz seinem Vater im Himmel unterordnete, war es stärker". Die erhobene Hand ist das Bild des <em>aufgerichteten Herzens</em> — dieselbe aufrechte, königliche Haltung, die Maqam Rast trägt. Sephardisch (Aleppo, Marokko, Yemen, Yerushalayim) wird Beschalach so zur Tora der ausgewogenen Erlösung: nicht ekstatischer Überschwang und nicht dumpfe Resignation, sondern der klare, aufrechte Lobgesang dessen, der gerettet wurde und nun jeden Tag den Schritt nach vorn tut. Maschiach ben David ist in dieser Architektur gegenwärtig: die sephardische Tradition (Rambam <em>Hilchot Mlachim</em>) liest <em>„אֲדֹנָי יִמְלֹךְ לְעֹלָם וָעֶד"</em> als die noch ausstehende, vollendete Königsherrschaft — das tägliche Singen der Schirah ist ein kleiner Vorgriff auf jenen Tag.
+        <br><br>
+        <strong>Praktische Handlung:</strong> (1) <em>Schirat HaYam täglich im Stehen</em>: Sephardischer Yerushalayim-Aleppo-Brauch (Ben Ish Chai Schanah Rischona Beschalach) — die Schirat HaYam (Schemot 15:1–18) im täglichen Schacharit innerhalb der Pesukei deZimra <em>stehend</em> lesen, mit der Kawanah: <em>„auch heute spaltet Adonai mir das Meer meiner Schwierigkeiten"</em>. Wer kann, stimmt sie innerlich in Rast an, mit einer leichten Hebung bei <em>„אֲדֹנָי יִמְלֹךְ לְעֹלָם וָעֶד"</em>. (2) <em>Smichut Geulah liTefillah</em>: Nach dem Talmud (Berachot 9b) und sephardischem Standard zwischen dem Abschluss der Geulah-Brachah (<em>Ga'al Jisrael</em>) und dem Beginn der Amidah <em>nicht unterbrechen</em> — kein Reden, kein Amen-Antworten an dieser Stelle, kein Blick aufs Telefon. Die Kawanah: wer eben das Meer durchschritten hat, tritt ohne Zwischenschritt vor den König. (3) <em>Schabbat Schirah — Brot für die Vögel</em>: Sephardischer Aleppo-Brauch — am Schabbat, an dem Beschalach gelesen wird (<em>Schabbat Schirah</em>), nach dem Schacharit Brot oder Körner für die Vögel hinausstellen, zur Erinnerung an die Schirah Mosches und den Reigen Mirjams; eine kleine Geste der Dankbarkeit der ganzen Schöpfung. (4) <em>Lechem Mischneh als Manna-Spiegel</em>: Sephardischer Standard (verwurzelt in Schemot 16:22, gehalten nach Ben Ish Chai und Kaf HaChaim) — am Schabbat-Tisch zwei vollständige Brote (Lechem Mischneh), nebeneinander oder aufeinander gelegt, mit einem Tuch bedeckt, vor dem HaMotzi. Kawanah: die zwei Brote sind das doppelte Manna des sechsten Tages — der Tisch des Hauses lebt von derselben täglichen Versorgung wie Israel in der Wüste. (5) <em>Mesillat Yescharim Perek 19 vor Schabbat lernen</em>: Wöchentlich, möglichst am Freitagnachmittag, einen Abschnitt aus <em>Mesillat Yescharim</em> Perek 19 (Beur Midat HaTaharah) lernen — die Reinigung des Herzens als Vorbereitung des Mundes auf die Schirah. Ramchal lehrt: der Mund wird rein, indem das Herz rein wird. Die Übung dauert 10–15 Minuten und schließt mit dem Vorsatz, in der kommenden Woche eine konkrete innere Trübung (eine kleine Unaufrichtigkeit, ein verborgener Eigennutz) abzulegen. (6) <em>Mah-Titzak-Elai — ein Schritt statt vieler Worte</em>: Or HaChaim auf Schemot 14:15 als Mussar-Übung für die Stunde der Bedrängnis. Wenn eine Schwierigkeit aufkommt und das Herz nur noch klagen will: ein kurzes, klares Gebet sprechen — und dann <em>einen</em> konkreten Schritt nach vorn tun (<em>„וְיִסָּעוּ"</em>), und sei er klein. Die Kawanah: Adonai spaltet das Meer, aber Israel muss zum Wasser gehen. (7) <em>Jedei Emunah — die Hände der Treue gegen Amalek</em>: Nach Schemot 17:11–12 und der <em>Mischnah</em> Rosch HaSchana 3:8 eine tägliche Übung der „erhobenen Hand": einen festen Moment am Tag (sephardischer Brauch: bei <em>Aleinu</em> am Ende des Schacharit, oder beim Vers <em>„אֲדֹנָי יִמְלֹךְ"</em>) das Herz bewusst nach oben richten und dem Vater im Himmel unterordnen. Wer regelmäßig die Hand der Emunah hebt, hält Amalek — den Zweifel, der von hinten anfällt, wenn man müde ist — niedrig. Wer kann, lernt zusätzlich kurz die Halacha von <em>Sechirat Amalek</em> (das Gedenken, das die Tora in 17:14 gebietet) aus einer sephardischen Quelle.
+      </div>
+      <div class="tikkun-tags">
+        <span class="tikkun-tag">שִׁירַת הַיָּם</span>
+        <span class="tikkun-tag">תִּפְאֶרֶת</span>
+        <span class="tikkun-tag">סְמִיכוּת גְּאֻלָּה לִתְפִלָּה</span>
+        <span class="tikkun-tag">לֶחֶם מִשְׁנֶה</span>
+        <span class="tikkun-tag">יְדֵי אֱמוּנָה</span>
+      </div>
+    </div>
+
+    <!-- ══ SCHI · KLIMAX-MOMENT — SCHEMOT 15:18 ══ -->
+    <div class="climax-box">
+      <div class="climax-label">שִׂיא · f → ff · Klimax-Vers der Schirah · Aufstieg von Rast in Hijaz · die Akklamation des ewigen Königtums</div>
+      <div class="instrument-note">[no percussion] [no drums] [no choir] [acoustic guitar — full chord, rising from Rast into Hijaz forte to fortissimo, the kingship-acclamation at the height of the Schirah, the augmented second of Hijaz resounding like a coronation, then settling back, no percussion, no drums] Gitarre: Voller Akkord, aus Rast in den Hijaz steigend, forte zu fortissimo — die Königs-Akklamation auf der Höhe der Schirah, die übermäßige Hijaz-Sekunde wie eine Krönung, dann zurücksinkend nach Rast.</div>
+      <div class="climax-verse-he">אֲדֹנָי יִמְלֹךְ לְעֹלָם וָעֶד</div>
+      <div class="climax-verse-de">„Adonai wird König sein für immer und ewig."</div>
+      <div class="climax-src">שְׁמוֹת ט״ו:י״ח — Höhepunkt der Schirat HaYam · Aleppo-Brauch des Hijaz-Aufstiegs im Schi · die noch ausstehende, vollendete Königsherrschaft (Maschiach ben David)</div>
+    </div>
+
+    <!-- ══ KODA · TACHARISCHUN-WHISPER — SCHEMOT 14:14 ══ -->
+    <div class="coda-box">
+      <div class="coda-label">קוֹדָה · pp · Die Stille vor der Rettung im Hauch</div>
+      <div class="instrument-note">[no percussion] [no drums] [no choir] [acoustic guitar — Rast dissolving into a single sustained note, the verse of stillness whispered, barely audible, no percussion] Gitarre: Rast löst sich in einen einzigen getragenen Ton — der Vers der Stille geflüstert, kaum hörbar.</div>
+      <div class="coda-whisper">
+        <strong>אֲדֹנָי</strong> יִלָּחֵם לָכֶם — וְאַתֶּם <strong>תַּחֲרִשׁוּן</strong></div></div>
+
+  </section>
+
+  <!-- ══ FOOTER ══ -->
+  <div class="footer">
+    <p class="footer-he">פָּרָשַׁת בְּשַׁלַּח · תִּפְאֶרֶת · מַקָּאם רַאסְט · קְרִיעַת יַם־סוּף · שִׁירַת הַיָּם · אֲדֹנָי יִמְלֹךְ לְעֹלָם וָעֶד</p>
+    <p class="footer-chain">
+      שְׁמוֹת י״ג:י״ז–י״ז:ט״ז · נוּסַּח צָדוֹק (רשש) · עֵדוֹת הַמִּזְרָח · אֲרָם צוֹבָה · יְרוּשָׁלַיִם · מָרוֹקוֹ · יָמֶן
+    </p>
+    <p class="footer-de">
+      Quellen: <strong>Tanach</strong> (Schemot 13:17–17:16 — Tora-Text 1:1, mit Tetragrammaton-Konvertierung
+      durchgängig als אֲדֹנָי) · <strong>Rambam · Mishneh Torah</strong> (Hilchot Tefillah Perek 2 — die
+      Schirat HaYam als fester Teil der täglichen Pesukei deZimra · Hilchot Schabbat Perek 1 — der Schabbat
+      schon in der Wüste, vor dem Sinai; das doppelte Brot des sechsten Tages als Wurzel des Lechem Mischneh ·
+      Hilchot Mlachim — zur Maschiach-ben-David-Tradition und zur noch ausstehenden Königsherrschaft) ·
+      <strong>Talmud Bavli · Berachot 9b</strong> (Smichut Geulah liTefillah — das ungebrochene Anschließen
+      der Geulah-Brachah an die Amidah) · <strong>Mischnah · Rosch HaSchana 3:8</strong> (zu Schemot 17:11–12
+      — nicht Mosches Hände führten den Krieg, sondern das nach oben gerichtete, untergeordnete Herz Israels) ·
+      <strong>Rashash · Nahar Schalom</strong> (Drusch Krijat Yam Suf — die Spaltung des Meeres als
+      Manifestation der Tiferet, die Chesed und Gevurah in einem Akt zusammenträgt; die Schirah als
+      akustische Tiferet, die Vielen als ein Mund) · <strong>Ramchal · Mesillat Yescharim</strong> (Perek 19,
+      Beur Midat HaTaharah — die Schirah als natürliche Folge der inneren Reinheit; der Mund wird rein,
+      indem das Herz rein wird) · <strong>Or HaChaim</strong> (auf Schemot 14:15 — „Mah titzak elai" als
+      Ruf zur Bewegung nach vorn, nicht als Tadel des Gebets; Gebet und Tat als die zwei Wände des
+      gespaltenen Meeres) · <strong>Schadal · Pirusch al haTora</strong> (zu Schemot 15 — die literarische
+      Geschlossenheit der Schirat HaYam, die wechselnden Bildwelten in einer einzigen Doxologie-Bewegung) ·
+      <strong>Ben Ish Chai</strong> Schanah Rischona (Parashat Beschalach — der sephardische Brauch, die
+      Schirat HaYam stehend zu lesen, im Maqam-Aufbau der Aleppo-Yerushalayim-Tradition) ·
+      <strong>Kaf HaChaim</strong> (Rabbi Yaakov Chaim Sofer · sephardische Praxis aller Eidot HaMizrach —
+      Aleppo, Marokko, Yemen, Yerushalayim — zu Schabbat-Vorbereitung, Lechem Mischneh und der Ordnung
+      der Pesukei deZimra) · <strong>Yabia Omer · Chazon Ovadia</strong> (Rabbi Ovadia Yosef Z'L —
+      sephardische moderne Halacha zu Schabbat, Pesukei deZimra und der Ordnung des Schacharit).
+      <br><br>
+      <strong>Tradition:</strong> Sephardisch · Nussach Zadoq (Rashash) · Maqam-Tradition aus Aleppo,
+      Yerushalayim, Marokko, Yemen · Tetragrammaton durchgängig als אֲדֹנָי · Maschiach ben David ·
+      Doppelt geprüfte Quellen · Tora-Text 1:1 unverändert · Erstellt Mai 2026 · Sefer HaParashot
+      bemo Maqam · 4. Lied Sefer Schemot · Tiferet · Maqam Rast · קְרִיעַת יַם־סוּף וְשִׁירַת הַיָּם.
+    </p>
+    <div class="footer-amen">אָמֵן · יִבָּנֶה הַמִּקְדָּשׁ בִּמְהֵרָה בְיָמֵינוּ · יָבוֹא מָשִׁיחַ בֶּן דָּוִד · אָמֵן</div>
+  </div>
+
+</div>
+
+
+</body></html>

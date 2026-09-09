@@ -1,0 +1,551 @@
+<!DOCTYPE html>
+<html lang="he-IL"><head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>פָּרָשַׁת בְּחֻקֹּתַי · וַיִּקְרָא כ״ו:ג׳–כ״ז:ל״ד · גְּבוּרָה · מַקָּאם חִיגָ׳אז · Sephardische Tora-Vertonung</title>
+  <link href="https://fonts.googleapis.com/css2?family=Frank+Ruhl+Libre:wght@300;400;700;900&amp;family=EB+Garamond:ital,wght@0,400;0,600;1,400;1,600&amp;family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&amp;display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg:#060808; --deep:#0A0E0E; --layer:#101414; --card:#0C1010;
+      --parchment:#f2e8d0; --parch-dim:#c8b898;
+      --ivory:#f0e8d8; --ivory-dim:#a89878;
+      --silver:#c8d4e0; --silver-dim:#7a8290;
+      --text:#a0a89c;
+      /* SEFER VAYIKRA — Königlich-Gold */
+      --sefer:#C8A030; --sefer-lt:#F0CC60; --sefer-dim:#8B7020;
+      --sefer-bg:rgba(200,160,48,.08); --sefer-bdr:rgba(200,160,48,.36); --sefer-glow:rgba(240,204,96,.20);
+      /* BECHUKOTAI · GEVURAH · HIJAZ — Tief-Karmin */
+      --bch:#B04838; --bch-lt:#E07868; --bch-dim:#702820;
+      --bch-bg:rgba(176,72,56,.08); --bch-bdr:rgba(176,72,56,.36); --bch-glow:rgba(224,120,104,.22);
+      /* MAQAM-FARBEN */
+      --maqam-saba:#B0904A; --maqam-hijaz:#C85050; --maqam-bayat:#A07850;
+      --maqam-rast:#C8A860; --maqam-ajam:#7A9050; --maqam-nahawand:#6080A0;
+    }
+    *,*::before,*::after { margin:0; padding:0; box-sizing:border-box; }
+    html { scroll-behavior:smooth; }
+    body { background:var(--bg); color:var(--silver); font-family:'EB Garamond',serif; overflow-x:hidden; line-height:1.85; padding:40px 20px 80px; }
+    body::before { content:''; position:fixed; inset:0; pointer-events:none; z-index:0;
+      background: radial-gradient(ellipse at 18% 12%, rgba(200,160,48,.10) 0%, transparent 48%),
+                  radial-gradient(ellipse at 82% 28%, rgba(176,72,56,.12) 0%, transparent 45%),
+                  radial-gradient(ellipse at 12% 68%, rgba(168,128,24,.08) 0%, transparent 45%),
+                  radial-gradient(ellipse at 88% 82%, rgba(224,120,104,.10) 0%, transparent 42%),
+                  radial-gradient(ellipse at 50% 50%, rgba(20,16,8,.82) 0%, transparent 70%); }
+    body::after { content:''; position:fixed; inset:0; pointer-events:none; z-index:0;
+      background-image:
+        radial-gradient(1px 1px at 8% 10%, rgba(240,204,96,.34) 0%, transparent 100%),
+        radial-gradient(1px 1px at 48% 5%, rgba(224,120,104,.30) 0%, transparent 100%),
+        radial-gradient(1px 1px at 82% 16%, rgba(224,188,80,.30) 0%, transparent 100%),
+        radial-gradient(1px 1px at 25% 42%, rgba(216,176,72,.28) 0%, transparent 100%),
+        radial-gradient(1px 1px at 68% 58%, rgba(224,120,104,.28) 0%, transparent 100%),
+        radial-gradient(1.5px 1.5px at 12% 75%, rgba(208,172,64,.32) 0%, transparent 100%),
+        radial-gradient(1px 1px at 90% 78%, rgba(224,120,104,.30) 0%, transparent 100%),
+        radial-gradient(1px 1px at 35% 88%, rgba(224,188,80,.26) 0%, transparent 100%); }
+    .wrap { max-width:1080px; margin:0 auto; position:relative; z-index:1; }
+
+    /* PAGE HEADER */
+    .page-header { text-align:center; margin-bottom:80px; padding-bottom:40px; border-bottom:1px solid var(--sefer-bdr); position:relative; }
+    .page-header::after { content:'✦ ✡ ✦'; position:absolute; bottom:-14px; left:50%; transform:translateX(-50%); background:var(--bg); padding:0 20px; color:var(--sefer); font-size:.62em; letter-spacing:.55em; }
+    .eyebrow { font-family:'Cormorant Garamond',serif; font-style:italic; font-size:.78em; color:var(--sefer-lt); letter-spacing:.28em; text-transform:uppercase; margin-bottom:18px; opacity:.85; }
+    .sefer-letter { font-family:'Frank Ruhl Libre',serif; font-size:1.40em; color:var(--sefer); font-weight:900; display:inline-block; margin-bottom:6px; text-shadow:0 0 30px var(--sefer-glow); letter-spacing:.04em; }
+    .page-title-he { font-family:'Frank Ruhl Libre',serif; font-size:3.2em; font-weight:900; color:var(--ivory); direction:rtl; letter-spacing:.05em; text-shadow:0 0 80px var(--sefer-glow), 0 0 140px var(--bch-glow); margin-bottom:8px; line-height:1.15; }
+    .page-subtitle-he { font-family:'Frank Ruhl Libre',serif; font-size:1.16em; color:var(--sefer-lt); direction:rtl; margin-bottom:10px; letter-spacing:.06em; }
+    .page-title-de { font-family:'Cormorant Garamond',serif; font-style:italic; font-size:1.14em; color:var(--silver-dim); margin-bottom:22px; }
+    .page-desc { font-size:1.0em; color:var(--text); max-width:780px; margin:0 auto; line-height:1.95; }
+    .page-desc strong { color:var(--ivory-dim); }
+    .page-desc em { color:var(--bch-lt); font-style:italic; }
+
+    /* SONG SECTION */
+    .song-section { margin-bottom:90px; padding-bottom:70px; border-bottom:1px dashed var(--sefer-bdr); }
+    .song-header { display:flex; flex-wrap:wrap; align-items:flex-start; gap:20px; margin-bottom:40px; padding:24px 26px; background:var(--layer); border:1px solid var(--bch-bdr); border-radius:10px; }
+    .song-num { font-family:'Frank Ruhl Libre',serif; font-size:2.6em; font-weight:900; direction:rtl; padding-right:14px; color:var(--bch-lt); }
+    .song-meta { flex:1; display:flex; flex-direction:column; gap:8px; }
+    .korban-badge { font-family:'Cormorant Garamond',serif; font-style:italic; font-size:.82em; letter-spacing:.08em; color:var(--bch-lt); }
+    .maqam-badge { font-family:'Cormorant Garamond',serif; font-style:italic; font-size:.78em; letter-spacing:.08em; display:inline-block; padding:3px 10px; border-radius:4px; color:#f0e8d8; font-weight:600; background:var(--maqam-hijaz); }
+    .song-title-he { font-family:'Frank Ruhl Libre',serif; font-size:1.7em; font-weight:700; color:var(--ivory); direction:rtl; letter-spacing:.04em; }
+    .song-title-de { font-family:'Cormorant Garamond',serif; font-style:italic; font-size:1.02em; color:var(--silver); }
+    .source-badge { font-family:'Cormorant Garamond',serif; font-style:italic; font-size:.74em; color:#A07060; line-height:1.6; }
+
+    /* ALIYAH BLOCK */
+    .aliyah-block { margin-bottom:42px; }
+    .aliyah-label { font-family:'Frank Ruhl Libre',serif; font-size:.94em; font-weight:700; direction:rtl; margin-bottom:9px; color:var(--bch); letter-spacing:.06em; padding-bottom:6px; border-bottom:1px solid var(--bch-bdr); }
+    .aliyah-label-de { font-family:'Cormorant Garamond',serif; font-style:italic; font-size:.78em; color:var(--silver-dim); display:inline-block; margin-right:14px; opacity:.85; }
+    .instrument-note { font-family:'Cormorant Garamond',serif; font-style:italic; font-size:.84em; color:var(--text); margin-bottom:14px; padding:10px 14px; background:rgba(176,72,56,.05); border-left:2px solid var(--bch-dim); }
+    .lyrics-block { display:flex; gap:44px; flex-wrap:wrap; }
+    .lyrics-he, .lyrics-de { flex:1; min-width:280px; display:flex; flex-direction:column; gap:6px; }
+    .lyrics-he span.line { font-family:'Frank Ruhl Libre',serif; font-size:1.06em; color:var(--ivory); direction:rtl; line-height:1.95; }
+    .lyrics-de span.line { font-family:'Cormorant Garamond',serif; font-size:1.0em; color:var(--silver); line-height:1.88; }
+    .lachash-marker { font-family:'Cormorant Garamond',serif; font-style:italic; font-size:.78em; color:var(--bch-lt); padding:6px 12px; background:rgba(176,72,56,.10); border:1px dashed var(--bch-bdr); margin:14px 0; text-align:center; letter-spacing:.10em; }
+
+    /* TIKKUN BOX */
+    .tikkun-box { background:rgba(176,72,56,.07); border:1px solid rgba(176,72,56,.32); padding:30px; margin-top:40px; border-radius:6px; }
+    .tikkun-header { display:flex; flex-direction:column; gap:6px; margin-bottom:20px; }
+    .tikkun-title-he { font-family:'Frank Ruhl Libre',serif; font-size:1.25em; color:var(--ivory); direction:rtl; font-weight:700; letter-spacing:.04em; }
+    .tikkun-title-de { font-family:'Cormorant Garamond',serif; font-size:1.0em; font-style:italic; color:var(--silver); }
+    .tikkun-src { font-family:'Cormorant Garamond',serif; font-size:.74em; color:#A07060; line-height:1.7; }
+    .tikkun-body { font-family:'Cormorant Garamond',serif; font-size:.96em; color:var(--text); line-height:1.92; }
+    .tikkun-body strong { color:var(--ivory); }
+    .tikkun-body em { color:var(--bch-lt); font-style:italic; }
+    .tikkun-tags { margin-top:18px; display:flex; gap:9px; flex-wrap:wrap; }
+    .tikkun-tag { background:rgba(176,72,56,.16); color:var(--bch-lt); padding:4px 10px; border-radius:4px; font-size:.74em; font-family:'Frank Ruhl Libre',serif; direction:rtl; }
+
+    /* SCHI / KLIMAX-MOMENT */
+    .climax-box { background:linear-gradient(135deg,rgba(176,72,56,.18),rgba(200,160,48,.10),rgba(6,8,8,.88)); border:2px solid var(--bch-bdr); padding:32px; margin-top:40px; margin-bottom:30px; border-radius:8px; }
+    .climax-label { font-family:'Cormorant Garamond',serif; font-style:italic; font-size:.82em; color:var(--bch-lt); letter-spacing:.18em; text-transform:uppercase; margin-bottom:14px; text-align:center; }
+    .climax-verse-he { font-family:'Frank Ruhl Libre',serif; font-size:1.55em; font-weight:700; color:var(--ivory); direction:rtl; text-align:center; line-height:1.85; letter-spacing:.04em; text-shadow:0 0 30px var(--bch-glow); }
+    .climax-verse-de { font-family:'Cormorant Garamond',serif; font-style:italic; font-size:1.05em; color:var(--silver); text-align:center; margin-top:14px; line-height:1.7; }
+    .climax-src { font-family:'Cormorant Garamond',serif; font-style:italic; font-size:.80em; color:var(--bch-lt); text-align:center; margin-top:12px; opacity:.8; }
+
+    /* KODA */
+    .coda-box { background:rgba(6,8,8,.78); border:1px solid var(--bch-bdr); padding:36px; text-align:center; margin-top:30px; margin-bottom:30px; border-radius:6px; }
+    .coda-label { font-family:'Cormorant Garamond',serif; font-style:italic; font-size:.80em; color:var(--bch-lt); letter-spacing:.18em; text-transform:uppercase; margin-bottom:18px; }
+    .coda-whisper { font-family:'Frank Ruhl Libre',serif; font-size:1.20em; direction:rtl; line-height:2.3; opacity:.85; color:var(--bch-lt); }
+    .coda-whisper strong { font-weight:900; opacity:1; color:var(--ivory); }
+
+    /* CHAZAK CHAZAK BOX */
+    .chazak-box { background:linear-gradient(135deg,rgba(200,160,48,.14),rgba(176,72,56,.10),rgba(6,8,8,.92)); border:2px solid var(--sefer-bdr); padding:28px; margin-top:30px; margin-bottom:30px; border-radius:8px; text-align:center; }
+    .chazak-label { font-family:'Cormorant Garamond',serif; font-style:italic; font-size:.82em; color:var(--sefer-lt); letter-spacing:.20em; text-transform:uppercase; margin-bottom:14px; }
+    .chazak-he { font-family:'Frank Ruhl Libre',serif; font-size:1.7em; font-weight:900; color:var(--ivory); direction:rtl; letter-spacing:.10em; text-shadow:0 0 40px var(--sefer-glow); }
+    .chazak-de { font-family:'Cormorant Garamond',serif; font-style:italic; font-size:.92em; color:var(--silver-dim); margin-top:12px; letter-spacing:.06em; }
+
+    /* SCENARIOS */
+    .scenarios-section { margin-top:54px; margin-bottom:40px; }
+    .scenarios-title { font-family:'Frank Ruhl Libre',serif; font-size:1.35em; font-weight:700; text-align:center; margin-bottom:34px; direction:rtl; color:var(--sefer-lt); letter-spacing:.06em; }
+    .scenarios-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(290px,1fr)); gap:26px; }
+    .scenario-card { background:linear-gradient(135deg,rgba(32,12,8,.78),rgba(6,8,8,.92)); border:1px solid var(--bch-bdr); padding:24px; transition:transform .2s, box-shadow .2s; border-radius:6px; }
+    .scenario-card:hover { transform:translateY(-4px); box-shadow:0 10px 36px var(--bch-glow); }
+    .sc-num { font-family:'Cormorant Garamond',serif; font-style:italic; font-size:.74em; letter-spacing:.14em; text-transform:uppercase; margin-bottom:7px; color:var(--bch); }
+    .sc-title-he { font-family:'Frank Ruhl Libre',serif; font-size:1.10em; font-weight:700; color:var(--ivory); direction:rtl; margin-bottom:4px; letter-spacing:.04em; }
+    .sc-sub { font-family:'Cormorant Garamond',serif; font-style:italic; font-size:.84em; color:#A07060; margin-bottom:14px; }
+    .sc-body { font-size:.92em; color:var(--text); line-height:1.80; margin-bottom:14px; }
+    .sc-body strong { color:var(--bch-lt); }
+    .key-moment { font-size:.86em; color:var(--bch-lt); font-style:italic; margin-bottom:9px; padding-left:13px; border-left:2px solid var(--bch-lt); }
+    .reaction { font-size:.86em; color:var(--text); font-style:italic; padding-left:13px; border-left:2px solid var(--sefer-dim); line-height:1.78; }
+
+    /* FOOTER */
+    .footer { margin-top:80px; padding-top:50px; border-top:1px solid var(--sefer-bdr); text-align:center; }
+    .footer-he { font-family:'Frank Ruhl Libre',serif; font-size:1.40em; font-weight:700; color:var(--sefer-lt); direction:rtl; margin-bottom:18px; text-shadow:0 0 30px var(--sefer-glow); letter-spacing:.06em; }
+    .footer-chain { font-family:'Frank Ruhl Libre',serif; font-size:1.0em; color:var(--silver); direction:rtl; margin-bottom:22px; letter-spacing:.09em; }
+    .footer-de { font-family:'Cormorant Garamond',serif; font-style:italic; font-size:.92em; color:var(--text); line-height:2.0; max-width:780px; margin:0 auto 24px; }
+    .footer-de strong { color:var(--ivory-dim); font-style:normal; }
+    .footer-amen { font-family:'Frank Ruhl Libre',serif; font-size:1.30em; color:var(--sefer-lt); direction:rtl; margin-top:24px; letter-spacing:.14em; text-shadow:0 0 30px var(--sefer-glow); }
+
+    @media (max-width:720px) {
+      .page-title-he { font-size:2.3em; }
+      .song-num { font-size:2.2em; }
+      .lyrics-block { flex-direction:column; gap:24px; }
+      .scenarios-grid { grid-template-columns:1fr; }
+      .climax-verse-he { font-size:1.20em; }
+      .footer-he { font-size:1.10em; }
+      .chazak-he { font-size:1.25em; }
+    }
+  </style>
+</head>
+<body>
+<div class="wrap">
+
+  <header class="page-header">
+    <div class="eyebrow">Sephardische Tora-Vertonung · Sefer HaParashot bemo Maqam</div>
+    <div class="sefer-letter">ג</div>
+    <div class="page-title-he">פָּרָשַׁת בְּחֻקֹּתַי</div>
+    <div class="page-subtitle-he">סֵפֶר וַיִּקְרָא · כ״ו:ג׳–כ״ז:ל״ד · גְּבוּרָה · מַקָּאם חִיגָ׳אז · חֲזַק חֲזַק וְנִתְחַזֵּק</div>
+    <div class="page-title-de">Bechukotai — Bedingung, Tochechah und das Erinnern des Bundes · Schluss-Parashah des Sefer Vayikra · Gevurah im Maqam Hijaz</div>
+    <div class="page-desc">
+      Bechukotai schließt das Sefer Vayikra: dreizehn Verse Segen wenn <em>„im bechukotai telechu"</em>
+      — wenn ihr in meinen Satzungen wandelt — gefolgt von der <em>Tochechah</em>, der schwersten Mahn-
+      Sequenz der Tora, in sieben aufsteigenden Stufen, jede siebenfach gesteigert. Doch in der Tiefe
+      der Drohung kippt der Text in die rettende Erinnerung: <em>„וְזָכַרְתִּי אֶת־בְּרִיתִי יַעֲקוֹב,
+      וְאַף אֶת־בְּרִיתִי יִצְחָק, וְאַף אֶת־בְּרִיתִי אַבְרָהָם אֶזְכֹּר — וְהָאָרֶץ אֶזְכֹּר"</em>
+      (Vayikra 26:42). Selbst <em>„בִּהְיוֹתָם בְּאֶרֶץ אֹיְבֵיהֶם לֹא־מְאַסְתִּים"</em> — auch im Land
+      ihrer Feinde habe ich sie nicht verworfen (26:44). Anschließend Kapitel 27 — die <em>Arachin</em>:
+      Bewertung gelobter Personen, Häuser, Felder; <em>Cherem</em> und <em>Ma'aser</em>. Sefirot-Anker:
+      <strong>Gevurah</strong> — die königliche Strenge, die ihre eigene Grenze in der Erinnerung des
+      Bundes findet. Maqam: <strong>Hijaz</strong> — königlich-sehnend, fortissimo-fähig, fähig zum
+      gefassten Donner und zum getragenen Trost. Sephardischer Minhag aller Eidot HaMizrach (Aleppo,
+      Marokko, Yemen): die Tochechah wird im <em>Lachash</em> — leiser, halbgesungener Stimme — gelesen,
+      ohne Unterbrechung, durch einen einzigen Aufgerufenen. Tora-Text 1:1, Tetragrammaton durchgängig
+      als אֲדֹנָי, Maschiach ben David.
+    </div>
+  </header>
+
+  <!-- ══ SONG SECTION — PARASHAT BECHUKOTAI ══ -->
+  <section class="song-section" id="bechukotai">
+
+    <div class="song-header">
+      <div class="song-num">י</div>
+      <div class="song-meta">
+        <div class="korban-badge">Gevurah — גְּבוּרָה · Königliche Strenge, die im Bund ihre Grenze findet</div>
+        <div class="song-title-he">פָּרָשַׁת בְּחֻקֹּתַי</div>
+        <div class="song-title-de">Bechukotai — „Wenn ihr in meinen Satzungen wandelt" · Vayikra 26:3–27:34</div>
+        <div class="maqam-badge">מַקָּאם חִיגָ׳אז · Hijaz · ~64 BPM rubato</div>
+        <div class="source-badge">וַיִּקְרָא כ״ו:ג׳–כ״ז:ל״ד · רמב״ם הלכות תְּשׁוּבָה · רמב״ם הלכות עֲרָכִין וַחֲרָמִין · רמב״ם הלכות נְדָרִים · אור החיים על וַיִּקְרָא כ״ו · ספר העיקרים מאמר רביעי (שָׂכָר וָעוֹנֶשׁ) · בן איש חי שנה ראשונה ושנה שנייה (פרשיות בהר־בחקתי) · שׁוּלְחָן עָרוּךְ אוֹרַח חַיִּים תכ״ח · כַּף הַחַיִּים תכ״ח · מַסֶּכֶת מְגִלָּה ל״א.</div>
+      </div>
+    </div>
+
+
+    <!-- ── ALIYAH 1 · ראשון · Vayikra 26:3-5 — Bedingung & Erst-Segen ── -->
+    <div class="aliyah-block">
+      <div class="aliyah-label">עֲלִיָּה רִאשׁוֹנָה — אִם־בְּחֻקֹּתַי תֵּלֵכוּ<span class="aliyah-label-de">Erste Aliyah · Vayikra 26:3–5 · Die Bedingung und der erste Segen — Regen, Ernte, Sicherheit</span></div>
+      <div class="instrument-note">[no percussion] [no drums] [no choir] [solo acoustic guitar — Hijaz opening with sustained royal-yearning low tones, the conditional „im — wenn" as a hand on the heart, blessing rising from labor in Torah, rubato around 64 BPM, no percussion, no drums, no beat] Gitarre: Hijaz öffnet mit königlich-sehnenden Tiefen — das bedingende „Im" als Hand auf dem Herzen, der Segen steigt aus der Mühe in der Tora.</div>
+      <div class="lyrics-block">
+        <div class="lyrics-he" dir="rtl">
+          <span class="line">אִם־בְּחֻקֹּתַי תֵּלֵכוּ וְאֶת־מִצְוֺתַי תִּשְׁמְרוּ וַעֲשִׂיתֶם אֹתָם׃</span>
+          <span class="line">וְנָתַתִּי גִשְׁמֵיכֶם בְּעִתָּם וְנָתְנָה הָאָרֶץ יְבוּלָהּ וְעֵץ הַשָּׂדֶה יִתֵּן פִּרְיוֹ׃</span>
+          <span class="line">וְהִשִּׂיג לָכֶם דַּיִשׁ אֶת־בָּצִיר וּבָצִיר יַשִּׂיג אֶת־זָרַע וַאֲכַלְתֶּם לַחְמְכֶם לָשֹׂבַע וִישַׁבְתֶּם לָבֶטַח בְּאַרְצְכֶם׃</span>
+        </div>
+        <div class="lyrics-de">
+          <span class="line">(3) Wenn ihr in meinen Satzungen wandelt und meine Gebote bewahrt und sie ausführt —</span>
+          <span class="line">(4) so werde ich eure Regen zu ihrer Zeit geben, und das Land wird seinen Ertrag geben, und der Baum des Feldes wird seine Frucht geben.</span>
+          <span class="line">(5) Und das Dreschen wird für euch bis zur Weinlese reichen, und die Weinlese wird bis zur Saat reichen — und ihr werdet euer Brot zur Sättigung essen und sicher in eurem Land wohnen.</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- ── ALIYAH 2 · שני · Vayikra 26:6-9 — Schalom, Sieg, Bund ── -->
+    <div class="aliyah-block">
+      <div class="aliyah-label">עֲלִיָּה שְׁנִיָּה — וְנָתַתִּי שָׁלוֹם בָּאָרֶץ<span class="aliyah-label-de">Zweite Aliyah · Vayikra 26:6–9 · Schalom im Land, Sieg über die Feinde, Vermehrung und Bundes-Erfüllung</span></div>
+      <div class="instrument-note">[no percussion] [no drums] [no choir] [acoustic guitar — Hijaz fingerpicking warming, the gift of peace as the crown of all blessings, five chasing a hundred, the covenant established, no percussion] Gitarre: Hijaz erwärmend im Fingerpicking — Schalom als Krone aller Segnungen, fünf jagen hundert, der Bund wird aufgerichtet.</div>
+      <div class="lyrics-block">
+        <div class="lyrics-he" dir="rtl">
+          <span class="line">וְנָתַתִּי שָׁלוֹם בָּאָרֶץ וּשְׁכַבְתֶּם וְאֵין מַחֲרִיד וְהִשְׁבַּתִּי חַיָּה רָעָה מִן־הָאָרֶץ וְחֶרֶב לֹא־תַעֲבֹר בְּאַרְצְכֶם׃</span>
+          <span class="line">וּרְדַפְתֶּם אֶת־אֹיְבֵיכֶם וְנָפְלוּ לִפְנֵיכֶם לֶחָרֶב׃</span>
+          <span class="line">וְרָדְפוּ מִכֶּם חֲמִשָּׁה מֵאָה וּמֵאָה מִכֶּם רְבָבָה יִרְדֹּפוּ וְנָפְלוּ אֹיְבֵיכֶם לִפְנֵיכֶם לֶחָרֶב׃</span>
+          <span class="line">וּפָנִיתִי אֲלֵיכֶם וְהִפְרֵיתִי אֶתְכֶם וְהִרְבֵּיתִי אֶתְכֶם וַהֲקִימֹתִי אֶת־בְּרִיתִי אִתְּכֶם׃</span>
+        </div>
+        <div class="lyrics-de">
+          <span class="line">(6) Und ich werde Frieden in das Land geben, und ihr werdet euch niederlegen, und niemand wird euch erschrecken — und ich werde böses Wild aus dem Land tilgen, und das Schwert wird nicht durch euer Land ziehen.</span>
+          <span class="line">(7) Und ihr werdet eure Feinde verfolgen, und sie werden vor euch zum Schwert fallen.</span>
+          <span class="line">(8) Und fünf von euch werden hundert verfolgen, und hundert von euch werden zehntausend verfolgen — und eure Feinde werden vor euch zum Schwert fallen.</span>
+          <span class="line">(9) Und ich werde mich euch zuwenden und euch fruchtbar machen und euch mehren — und meinen Bund mit euch aufrichten.</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- ── ALIYAH 3 · שלישי · Vayikra 26:10-46 — Schluss-Segen, Tochechah, Bundes-Erinnerung ── -->
+    <div class="aliyah-block">
+      <div class="aliyah-label">עֲלִיָּה שְׁלִישִׁית — וְהִתְהַלַּכְתִּי בְּתוֹכְכֶם · הַתּוֹכֵחָה · וְזָכַרְתִּי אֶת־בְּרִיתִי<span class="aliyah-label-de">Dritte Aliyah · Vayikra 26:10–46 · Der höchste Segen („und ich wandle in eurer Mitte"), die Tochechah in sieben Stufen, der Wendepunkt: das Erinnern des Bundes</span></div>
+      <div class="instrument-note">[no percussion] [no drums] [no choir] [acoustic guitar — Hijaz from contemplative-warm to the lachash-undertone of the tochechah, no percussion] Gitarre: Hijaz wechselt von kontemplativ-warm in den Lachash-Unterton der Tochechah — sephardischer Minhag aller Eidot HaMizrach: die Sequenz der Mahnungen wird leise gesungen, ohne Unterbrechung, durch einen einzigen Aufgerufenen.</div>
+      <div class="lyrics-block">
+        <div class="lyrics-he" dir="rtl">
+          <span class="line">וַאֲכַלְתֶּם יָשָׁן נוֹשָׁן וְיָשָׁן מִפְּנֵי חָדָשׁ תּוֹצִיאוּ׃</span>
+          <span class="line">וְנָתַתִּי מִשְׁכָּנִי בְּתוֹכְכֶם וְלֹא־תִגְעַל נַפְשִׁי אֶתְכֶם׃</span>
+          <span class="line">וְהִתְהַלַּכְתִּי בְּתוֹכְכֶם וְהָיִיתִי לָכֶם לֵאלֹהִים וְאַתֶּם תִּהְיוּ־לִי לְעָם׃</span>
+          <span class="line">אֲנִי אֲדֹנָי אֱלֹהֵיכֶם אֲשֶׁר הוֹצֵאתִי אֶתְכֶם מֵאֶרֶץ מִצְרַיִם מִהְיֹת לָהֶם עֲבָדִים וָאֶשְׁבֹּר מֹטֹת עֻלְּכֶם וָאוֹלֵךְ אֶתְכֶם קוֹמְמִיּוּת׃</span>
+        </div>
+        <div class="lyrics-de">
+          <span class="line">(10) Und ihr werdet altes Lagergut essen, und das Alte werdet ihr vor dem Neuen herausschaffen.</span>
+          <span class="line">(11) Und ich werde meine Wohnung in eure Mitte geben, und meine Seele wird euch nicht verabscheuen.</span>
+          <span class="line">(12) Und ich werde in eurer Mitte wandeln und werde euer Gott sein, und ihr werdet mir zum Volk sein.</span>
+          <span class="line">(13) Ich bin Adonai, euer Gott, der ich euch aus dem Land Ägypten herausgeführt habe, dass ihr ihnen nicht Sklaven seid — und ich zerbrach die Stangen eures Jochs und führte euch aufrecht.</span>
+        </div>
+      </div>
+
+      <div class="lachash-marker">— מִכָּאן וְאֵילָךְ נִקְרֵאת הַתּוֹכֵחָה בְּלַחַשׁ · מִנְהַג עֵדוֹת הַמִּזְרָח —<br>Ab hier wird die Tochechah im Lachash gelesen · Sephardischer Minhag aller Eidot HaMizrach (Schulchan Aruch OC 428 · Kaf HaChaim)</div>
+
+      <div class="instrument-note">[no percussion] [no drums] [no choir] [acoustic guitar — Hijaz dropping to undertone, the seven-stage warning, dry intimate strings, no percussion] Gitarre: Hijaz fällt in den Unterton — die siebenstufige Mahnung, trocken, nahe am Korpus, im Lachash.</div>
+
+      <div class="lyrics-block">
+        <div class="lyrics-he" dir="rtl">
+          <span class="line">וְאִם־לֹא תִשְׁמְעוּ לִי וְלֹא תַעֲשׂוּ אֵת כׇּל־הַמִּצְוֺת הָאֵלֶּה׃</span>
+          <span class="line">וְאִם־בְּחֻקֹּתַי תִּמְאָסוּ וְאִם אֶת־מִשְׁפָּטַי תִּגְעַל נַפְשְׁכֶם לְבִלְתִּי עֲשׂוֹת אֶת־כׇּל־מִצְוֺתַי לְהַפְרְכֶם אֶת־בְּרִיתִי׃</span>
+          <span class="line">אַף־אֲנִי אֶעֱשֶׂה־זֹּאת לָכֶם וְהִפְקַדְתִּי עֲלֵיכֶם בֶּהָלָה אֶת־הַשַּׁחֶפֶת וְאֶת־הַקַּדַּחַת מְכַלּוֹת עֵינַיִם וּמְדִיבֹת נָפֶשׁ וּזְרַעְתֶּם לָרִיק זַרְעֲכֶם וַאֲכָלֻהוּ אֹיְבֵיכֶם׃</span>
+          <span class="line">וְנָתַתִּי פָנַי בָּכֶם וְנִגַּפְתֶּם לִפְנֵי אֹיְבֵיכֶם וְרָדוּ בָכֶם שֹׂנְאֵיכֶם וְנַסְתֶּם וְאֵין־רֹדֵף אֶתְכֶם׃</span>
+          <span class="line">וְאִם־עַד־אֵלֶּה לֹא תִשְׁמְעוּ לִי וְיָסַפְתִּי לְיַסְּרָה אֶתְכֶם שֶׁבַע עַל־חַטֹּאתֵיכֶם׃</span>
+          <span class="line">וְשָׁבַרְתִּי אֶת־גְּאוֹן עֻזְּכֶם וְנָתַתִּי אֶת־שְׁמֵיכֶם כַּבַּרְזֶל וְאֶת־אַרְצְכֶם כַּנְּחֻשָׁה׃</span>
+          <span class="line">וְתַם לָרִיק כֹּחֲכֶם וְלֹא־תִתֵּן אַרְצְכֶם אֶת־יְבוּלָהּ וְעֵץ הָאָרֶץ לֹא יִתֵּן פִּרְיוֹ׃</span>
+          <span class="line">וְאִם־תֵּלְכוּ עִמִּי קֶרִי וְלֹא תֹאבוּ לִשְׁמֹעַ לִי וְיָסַפְתִּי עֲלֵיכֶם מַכָּה שֶׁבַע כְּחַטֹּאתֵיכֶם׃</span>
+          <span class="line">וְהִשְׁלַחְתִּי בָכֶם אֶת־חַיַּת הַשָּׂדֶה וְשִׁכְּלָה אֶתְכֶם וְהִכְרִיתָה אֶת־בְּהֶמְתְּכֶם וְהִמְעִיטָה אֶתְכֶם וְנָשַׁמּוּ דַּרְכֵיכֶם׃</span>
+          <span class="line">וְאִם־בְּאֵלֶּה לֹא תִוָּסְרוּ לִי וַהֲלַכְתֶּם עִמִּי קֶרִי׃</span>
+          <span class="line">וְהָלַכְתִּי אַף־אֲנִי עִמָּכֶם בְּקֶרִי וְהִכֵּיתִי אֶתְכֶם גַּם־אָנִי שֶׁבַע עַל־חַטֹּאתֵיכֶם׃</span>
+          <span class="line">וְהֵבֵאתִי עֲלֵיכֶם חֶרֶב נֹקֶמֶת נְקַם־בְּרִית וְנֶאֱסַפְתֶּם אֶל־עָרֵיכֶם וְשִׁלַּחְתִּי דֶבֶר בְּתוֹכְכֶם וְנִתַּתֶּם בְּיַד־אוֹיֵב׃</span>
+          <span class="line">בְּשִׁבְרִי לָכֶם מַטֵּה־לֶחֶם וְאָפוּ עֶשֶׂר נָשִׁים לַחְמְכֶם בְּתַנּוּר אֶחָד וְהֵשִׁיבוּ לַחְמְכֶם בַּמִּשְׁקָל וַאֲכַלְתֶּם וְלֹא תִשְׂבָּעוּ׃</span>
+          <span class="line">וְאִם־בְּזֹאת לֹא תִשְׁמְעוּ לִי וַהֲלַכְתֶּם עִמִּי בְּקֶרִי׃</span>
+          <span class="line">וְהָלַכְתִּי עִמָּכֶם בַּחֲמַת־קֶרִי וְיִסַּרְתִּי אֶתְכֶם אַף־אָנִי שֶׁבַע עַל־חַטֹּאתֵיכֶם׃</span>
+          <span class="line">וַאֲכַלְתֶּם בְּשַׂר בְּנֵיכֶם וּבְשַׂר בְּנֹתֵיכֶם תֹּאכֵלוּ׃</span>
+          <span class="line">וְהִשְׁמַדְתִּי אֶת־בָּמֹתֵיכֶם וְהִכְרַתִּי אֶת־חַמָּנֵיכֶם וְנָתַתִּי אֶת־פִּגְרֵיכֶם עַל־פִּגְרֵי גִּלּוּלֵיכֶם וְגָעֲלָה נַפְשִׁי אֶתְכֶם׃</span>
+          <span class="line">וְנָתַתִּי אֶת־עָרֵיכֶם חׇרְבָּה וַהֲשִׁמּוֹתִי אֶת־מִקְדְּשֵׁיכֶם וְלֹא אָרִיחַ בְּרֵיחַ נִיחֹחֲכֶם׃</span>
+          <span class="line">וַהֲשִׁמֹּתִי אֲנִי אֶת־הָאָרֶץ וְשָׁמְמוּ עָלֶיהָ אֹיְבֵיכֶם הַיֹּשְׁבִים בָּהּ׃</span>
+          <span class="line">וְאֶתְכֶם אֱזָרֶה בַגּוֹיִם וַהֲרִיקֹתִי אַחֲרֵיכֶם חָרֶב וְהָיְתָה אַרְצְכֶם שְׁמָמָה וְעָרֵיכֶם יִהְיוּ חׇרְבָּה׃</span>
+          <span class="line">אָז תִּרְצֶה הָאָרֶץ אֶת־שַׁבְּתֹתֶיהָ כֹּל יְמֵי הׇשַּׁמָּה וְאַתֶּם בְּאֶרֶץ אֹיְבֵיכֶם אָז תִּשְׁבַּת הָאָרֶץ וְהִרְצָת אֶת־שַׁבְּתֹתֶיהָ׃</span>
+          <span class="line">כׇּל־יְמֵי הׇשַּׁמָּה תִּשְׁבֹּת אֵת אֲשֶׁר לֹא־שָׁבְתָה בְּשַׁבְּתֹתֵיכֶם בְּשִׁבְתְּכֶם עָלֶיהָ׃</span>
+          <span class="line">וְהַנִּשְׁאָרִים בָּכֶם וְהֵבֵאתִי מֹרֶךְ בִּלְבָבָם בְּאַרְצֹת אֹיְבֵיהֶם וְרָדַף אֹתָם קוֹל עָלֶה נִדָּף וְנָסוּ מְנֻסַת־חֶרֶב וְנָפְלוּ וְאֵין רֹדֵף׃</span>
+          <span class="line">וְכָשְׁלוּ אִישׁ־בְּאָחִיו כְּמִפְּנֵי־חֶרֶב וְרֹדֵף אָיִן וְלֹא־תִהְיֶה לָכֶם תְּקוּמָה לִפְנֵי אֹיְבֵיכֶם׃</span>
+          <span class="line">וַאֲבַדְתֶּם בַּגּוֹיִם וְאָכְלָה אֶתְכֶם אֶרֶץ אֹיְבֵיכֶם׃</span>
+          <span class="line">וְהַנִּשְׁאָרִים בָּכֶם יִמַּקּוּ בַּעֲוֺנָם בְּאַרְצֹת אֹיְבֵיכֶם וְאַף בַּעֲוֺנֹת אֲבֹתָם אִתָּם יִמָּקּוּ׃</span>
+          <span class="line">וְהִתְוַדּוּ אֶת־עֲוֺנָם וְאֶת־עֲוֺן אֲבֹתָם בְּמַעֲלָם אֲשֶׁר מָעֲלוּ־בִי וְאַף אֲשֶׁר־הָלְכוּ עִמִּי בְּקֶרִי׃</span>
+          <span class="line">אַף־אֲנִי אֵלֵךְ עִמָּם בְּקֶרִי וְהֵבֵאתִי אֹתָם בְּאֶרֶץ אֹיְבֵיהֶם אוֹ־אָז יִכָּנַע לְבָבָם הֶעָרֵל וְאָז יִרְצוּ אֶת־עֲוֺנָם׃</span>
+        </div>
+        <div class="lyrics-de">
+          <span class="line">(14) Wenn ihr aber nicht auf mich hört und nicht alle diese Gebote tut —</span>
+          <span class="line">(15) und wenn ihr meine Satzungen verachtet und eure Seele meine Rechtssätze verabscheut, sodass ihr nicht alle meine Gebote tut, sondern meinen Bund brecht —</span>
+          <span class="line">(16) so werde auch ich euch dies tun: ich werde Schrecken über euch verhängen — die Schwindsucht und das Fieber, die die Augen verzehren und die Seele dahinraffen — und ihr werdet umsonst eure Saat säen, denn eure Feinde werden sie aufessen.</span>
+          <span class="line">(17) Und ich werde mein Angesicht gegen euch wenden, und ihr werdet vor euren Feinden geschlagen werden, und eure Hasser werden über euch herrschen — und ihr werdet fliehen, ohne dass jemand euch verfolgt.</span>
+          <span class="line">(18) Und wenn ihr trotz alledem nicht auf mich hört, werde ich euch siebenfach für eure Sünden züchtigen.</span>
+          <span class="line">(19) Und ich werde den Stolz eurer Macht zerbrechen und eure Himmel wie Eisen und euer Land wie Erz machen.</span>
+          <span class="line">(20) Und eure Kraft wird umsonst sich verzehren — und euer Land wird seinen Ertrag nicht geben, und der Baum des Landes wird seine Frucht nicht geben.</span>
+          <span class="line">(21) Und wenn ihr trotzig (keri) mit mir wandelt und mir nicht gehorchen wollt, werde ich euch siebenfach Schläge zufügen — entsprechend euren Sünden.</span>
+          <span class="line">(22) Und ich werde das Wild des Feldes gegen euch entsenden, und es wird euch eurer Kinder berauben und euer Vieh ausrotten und euch verringern — und eure Wege werden öde sein.</span>
+          <span class="line">(23) Und wenn ihr euch durch dieses nicht zurechtbringen lasst und mit mir trotzig wandelt —</span>
+          <span class="line">(24) so werde auch ich trotzig mit euch wandeln und euch siebenfach für eure Sünden schlagen.</span>
+          <span class="line">(25) Und ich werde Schwert über euch bringen — Bundes-Rache; und ihr werdet euch in eure Städte sammeln; und ich werde Pest in eure Mitte senden, und ihr werdet in die Hand des Feindes gegeben werden.</span>
+          <span class="line">(26) Wenn ich euch den Brot-Stab zerbreche, werden zehn Frauen euer Brot in einem Ofen backen und euer Brot nach Gewicht zurückgeben — und ihr werdet essen, doch nicht satt werden.</span>
+          <span class="line">(27) Und wenn ihr trotz dem nicht auf mich hört und mit mir trotzig wandelt —</span>
+          <span class="line">(28) so werde ich mit euch in trotziger Glut wandeln und euch auch siebenfach für eure Sünden züchtigen.</span>
+          <span class="line">(29) Und ihr werdet das Fleisch eurer Söhne essen, und das Fleisch eurer Töchter werdet ihr essen.</span>
+          <span class="line">(30) Und ich werde eure Höhen vertilgen und eure Sonnensäulen ausrotten und eure Leichname auf die Leichname eurer Götzen werfen — und meine Seele wird euch verabscheuen.</span>
+          <span class="line">(31) Und ich werde eure Städte zur Trümmer-Wüste machen und eure Heiligtümer veröden — und ich werde nicht mehr riechen an eurem Wohlgeruch.</span>
+          <span class="line">(32) Und ich werde das Land selbst veröden, sodass eure Feinde, die darin wohnen, sich darüber entsetzen werden.</span>
+          <span class="line">(33) Und euch werde ich unter die Völker zerstreuen, und ich werde das Schwert hinter euch herziehen — und euer Land wird Wüste sein und eure Städte Trümmer.</span>
+          <span class="line">(34) Dann wird das Land seine Schabbat-Jahre bezahlen — alle Tage seiner Verödung, während ihr im Land eurer Feinde seid; dann wird das Land ruhen und seine Schabbat-Jahre nachholen.</span>
+          <span class="line">(35) Alle Tage der Verödung wird es ruhen — was es nicht geruht hat in euren Schabbat-Jahren, als ihr darauf wohntet.</span>
+          <span class="line">(36) Und den Übriggebliebenen unter euch werde ich Verzagtheit ins Herz geben in den Ländern ihrer Feinde — und das Geräusch eines verwehten Blattes wird sie verfolgen, und sie werden fliehen wie vor einem Schwert und fallen, ohne dass jemand verfolgt.</span>
+          <span class="line">(37) Und sie werden einer über den anderen straucheln wie vor dem Schwert, ohne dass jemand verfolgt — und ihr werdet keinen Stand vor euren Feinden haben.</span>
+          <span class="line">(38) Und ihr werdet untergehen unter den Völkern, und das Land eurer Feinde wird euch verzehren.</span>
+          <span class="line">(39) Und die Übriggebliebenen unter euch werden in ihrer Schuld dahinschmelzen in den Ländern ihrer Feinde — und auch in den Sünden ihrer Väter werden sie mit ihnen dahinschmelzen.</span>
+          <span class="line">(40) Dann werden sie ihre Schuld bekennen und die Schuld ihrer Väter — wegen ihrer Untreue, mit der sie an mir untreu waren, und auch wegen dessen, dass sie mit mir trotzig gewandelt sind.</span>
+          <span class="line">(41) Auch ich werde mit ihnen trotzig wandeln und sie ins Land ihrer Feinde bringen — oder dann wird ihr unbeschnittenes Herz sich beugen, und dann werden sie ihre Schuld abtragen.</span>
+        </div>
+      </div>
+
+      <div class="lachash-marker">— מִכָּאן עוֹלֶה הַקּוֹל מִלַּחַשׁ אֶל הַנֶּחָמָה · וְזָכַרְתִּי אֶת־בְּרִיתִי —<br>Hier hebt sich die Stimme aus dem Lachash in den Trost — die Erinnerung des Bundes</div>
+
+      <div class="instrument-note">[no percussion] [no drums] [no choir] [acoustic guitar — Hijaz lifting from undertone to mezzo-forte, the covenant remembrance, the patriarchs named in reverse order Yaakov-Yitzchak-Avraham, the land remembered, no percussion] Gitarre: Hijaz hebt sich aus dem Lachash zum Mezzo-Forte — die Bundes-Erinnerung; die Erzväter in umgekehrter Reihenfolge gerufen, das Land erinnert.</div>
+
+      <div class="lyrics-block">
+        <div class="lyrics-he" dir="rtl">
+          <span class="line">וְזָכַרְתִּי אֶת־בְּרִיתִי יַעֲקוֹב וְאַף אֶת־בְּרִיתִי יִצְחָק וְאַף אֶת־בְּרִיתִי אַבְרָהָם אֶזְכֹּר וְהָאָרֶץ אֶזְכֹּר׃</span>
+          <span class="line">וְהָאָרֶץ תֵּעָזֵב מֵהֶם וְתִרֶץ אֶת־שַׁבְּתֹתֶיהָ בׇּהְשַׁמָּה מֵהֶם וְהֵם יִרְצוּ אֶת־עֲוֺנָם יַעַן וּבְיַעַן בְּמִשְׁפָּטַי מָאָסוּ וְאֶת־חֻקֹּתַי גָּעֲלָה נַפְשָׁם׃</span>
+          <span class="line">וְאַף־גַּם־זֹאת בִּהְיוֹתָם בְּאֶרֶץ אֹיְבֵיהֶם לֹא־מְאַסְתִּים וְלֹא־גְעַלְתִּים לְכַלֹּתָם לְהָפֵר בְּרִיתִי אִתָּם כִּי אֲנִי אֲדֹנָי אֱלֹהֵיהֶם׃</span>
+          <span class="line">וְזָכַרְתִּי לָהֶם בְּרִית רִאשֹׁנִים אֲשֶׁר הוֹצֵאתִי־אֹתָם מֵאֶרֶץ מִצְרַיִם לְעֵינֵי הַגּוֹיִם לִהְיוֹת לָהֶם לֵאלֹהִים אֲנִי אֲדֹנָי׃</span>
+          <span class="line">אֵלֶּה הַחֻקִּים וְהַמִּשְׁפָּטִים וְהַתּוֹרֹת אֲשֶׁר נָתַן אֲדֹנָי בֵּינוֹ וּבֵין בְּנֵי יִשְׂרָאֵל בְּהַר סִינַי בְּיַד־מֹשֶׁה׃</span>
+        </div>
+        <div class="lyrics-de">
+          <span class="line">(42) Und ich werde meines Bundes mit Yaakov gedenken — und auch meines Bundes mit Yitzchak, und auch meines Bundes mit Avraham werde ich gedenken — und des Landes werde ich gedenken.</span>
+          <span class="line">(43) Und das Land wird von ihnen verlassen sein und seine Schabbat-Jahre erstatten in seiner Verödung von ihnen, und sie werden ihre Schuld abtragen — weil und nochmals weil sie meine Rechtssätze verachteten und ihre Seele meine Satzungen verabscheute.</span>
+          <span class="line">(44) Und doch — auch dies: Wenn sie im Land ihrer Feinde sind, werde ich sie nicht verwerfen und sie nicht verabscheuen, sie ganz zu vernichten und meinen Bund mit ihnen zu brechen — denn ich bin Adonai, ihr Gott.</span>
+          <span class="line">(45) Und ich werde ihnen den Bund der Ersten gedenken — die ich aus dem Land Ägypten herausgeführt habe vor den Augen der Völker, ihnen zum Gott zu sein. Ich bin Adonai.</span>
+          <span class="line">(46) Dies sind die Satzungen und Rechtssätze und Lehren, die Adonai gegeben hat zwischen sich und den Söhnen Israels am Berg Sinai durch die Hand Mosches.</span>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- ── ALIYAH 4 · רביעי · Vayikra 27:1-15 — Arachin: Bewertung gelobter Personen und Häuser ── -->
+    <div class="aliyah-block">
+      <div class="aliyah-label">עֲלִיָּה רְבִיעִית — אִישׁ כִּי יַפְלִא נֶדֶר · עֲרָכִין<span class="aliyah-label-de">Vierte Aliyah · Vayikra 27:1–15 · Wenn jemand ein Gelübde verspricht — die Arachin: Bewertung gelobter Personen, Tiere und Häuser</span></div>
+      <div class="instrument-note">[no percussion] [no drums] [no choir] [acoustic guitar — Hijaz returning to its normal voice, the structure of vows and valuations, the holiness of the spoken word, no percussion] Gitarre: Hijaz kehrt in die normale Stimme zurück — die Struktur der Gelübde, die Heiligkeit des gesprochenen Wortes, die Bewertung gelobter Menschen und Häuser.</div>
+      <div class="lyrics-block">
+        <div class="lyrics-he" dir="rtl">
+          <span class="line">וַיְדַבֵּר אֲדֹנָי אֶל־מֹשֶׁה לֵּאמֹר׃</span>
+          <span class="line">דַּבֵּר אֶל־בְּנֵי יִשְׂרָאֵל וְאָמַרְתָּ אֲלֵהֶם אִישׁ כִּי יַפְלִא נֶדֶר בְּעֶרְכְּךָ נְפָשֹׁת לַאדֹנָי׃</span>
+          <span class="line">וְהָיָה עֶרְכְּךָ הַזָּכָר מִבֶּן עֶשְׂרִים שָׁנָה וְעַד בֶּן־שִׁשִּׁים שָׁנָה וְהָיָה עֶרְכְּךָ חֲמִשִּׁים שֶׁקֶל כֶּסֶף בְּשֶׁקֶל הַקֹּדֶשׁ׃</span>
+          <span class="line">וְאִם־נְקֵבָה הִוא וְהָיָה עֶרְכְּךָ שְׁלֹשִׁים שָׁקֶל׃</span>
+          <span class="line">וְאִם מִבֶּן־חָמֵשׁ שָׁנִים וְעַד בֶּן־עֶשְׂרִים שָׁנָה וְהָיָה עֶרְכְּךָ הַזָּכָר עֶשְׂרִים שְׁקָלִים וְלַנְּקֵבָה עֲשֶׂרֶת שְׁקָלִים׃</span>
+          <span class="line">וְאִם מִבֶּן־חֹדֶשׁ וְעַד בֶּן־חָמֵשׁ שָׁנִים וְהָיָה עֶרְכְּךָ הַזָּכָר חֲמִשָּׁה שְׁקָלִים כָּסֶף וְלַנְּקֵבָה עֶרְכְּךָ שְׁלֹשֶׁת שְׁקָלִים כָּסֶף׃</span>
+          <span class="line">וְאִם מִבֶּן־שִׁשִּׁים שָׁנָה וָמַעְלָה אִם־זָכָר וְהָיָה עֶרְכְּךָ חֲמִשָּׁה עָשָׂר שָׁקֶל וְלַנְּקֵבָה עֲשָׂרָה שְׁקָלִים׃</span>
+          <span class="line">וְאִם־מָךְ הוּא מֵעֶרְכֶּךָ וְהֶעֱמִידוֹ לִפְנֵי הַכֹּהֵן וְהֶעֱרִיךְ אֹתוֹ הַכֹּהֵן עַל־פִּי אֲשֶׁר תַּשִּׂיג יַד הַנֹּדֵר יַעֲרִיכֶנּוּ הַכֹּהֵן׃</span>
+          <span class="line">וְאִם־בְּהֵמָה אֲשֶׁר יַקְרִיבוּ מִמֶּנָּה קׇרְבָּן לַאדֹנָי כֹּל אֲשֶׁר יִתֵּן מִמֶּנּוּ לַאדֹנָי יִהְיֶה־קֹּדֶשׁ׃</span>
+          <span class="line">לֹא יַחֲלִיפֶנּוּ וְלֹא־יָמִיר אֹתוֹ טוֹב בְּרָע אוֹ־רַע בְּטוֹב וְאִם־הָמֵר יָמִיר בְּהֵמָה בִּבְהֵמָה וְהָיָה־הוּא וּתְמוּרָתוֹ יִהְיֶה־קֹּדֶשׁ׃</span>
+          <span class="line">וְאִם כׇּל־בְּהֵמָה טְמֵאָה אֲשֶׁר לֹא־יַקְרִיבוּ מִמֶּנָּה קׇרְבָּן לַאדֹנָי וְהֶעֱמִיד אֶת־הַבְּהֵמָה לִפְנֵי הַכֹּהֵן׃</span>
+          <span class="line">וְהֶעֱרִיךְ הַכֹּהֵן אֹתָהּ בֵּין טוֹב וּבֵין רָע כְּעֶרְכְּךָ הַכֹּהֵן כֵּן יִהְיֶה׃</span>
+          <span class="line">וְאִם־גָּאֹל יִגְאָלֶנָּה וְיָסַף חֲמִישִׁתוֹ עַל־עֶרְכֶּךָ׃</span>
+          <span class="line">וְאִישׁ כִּי־יַקְדִּשׁ אֶת־בֵּיתוֹ קֹדֶשׁ לַאדֹנָי וְהֶעֱרִיכוֹ הַכֹּהֵן בֵּין טוֹב וּבֵין רָע כַּאֲשֶׁר יַעֲרִיךְ אֹתוֹ הַכֹּהֵן כֵּן יָקוּם׃</span>
+          <span class="line">וְאִם־הַמַּקְדִּישׁ יִגְאַל אֶת־בֵּיתוֹ וְיָסַף חֲמִישִׁית כֶּסֶף־עֶרְכְּךָ עָלָיו וְהָיָה לוֹ׃</span>
+        </div>
+        <div class="lyrics-de">
+          <span class="line">(1) Und Adonai sprach zu Mosche und sagte:</span>
+          <span class="line">(2) Sprich zu den Söhnen Israels und sage zu ihnen: Wenn jemand ein außergewöhnliches Gelübde tut, nach deiner Schätzung Personen für Adonai —</span>
+          <span class="line">(3) so soll deine Schätzung des Männlichen vom zwanzigjährigen bis zum sechzigjährigen Alter fünfzig Schekel Silber sein, nach dem Schekel des Heiligtums.</span>
+          <span class="line">(4) Und wenn es weiblich ist, soll deine Schätzung dreißig Schekel sein.</span>
+          <span class="line">(5) Und wenn vom fünfjährigen bis zum zwanzigjährigen Alter — die Schätzung des Männlichen zwanzig Schekel und die des Weiblichen zehn Schekel.</span>
+          <span class="line">(6) Und wenn vom Monatsalten bis zum fünfjährigen — die Schätzung des Männlichen fünf Silber-Schekel und die des Weiblichen drei Silber-Schekel.</span>
+          <span class="line">(7) Und wenn vom sechzigjährigen Alter und darüber — wenn männlich, fünfzehn Schekel und für das Weibliche zehn Schekel.</span>
+          <span class="line">(8) Und wenn er ärmer ist, als deine Schätzung verlangt, soll man ihn vor den Kohen stellen, und der Kohen soll ihn schätzen — nach der Hand des Gelobenden soll der Kohen ihn schätzen.</span>
+          <span class="line">(9) Und wenn es ein Tier ist, von dem man Adonai ein Opfer darbringt — alles, was man davon Adonai gibt, soll heilig sein.</span>
+          <span class="line">(10) Man soll es nicht auswechseln und nicht eintauschen — Gutes gegen Schlechtes oder Schlechtes gegen Gutes; und wenn man doch tauscht, Tier gegen Tier, soll dieses und sein Tausch heilig sein.</span>
+          <span class="line">(11) Und wenn es irgendein unreines Tier ist, von dem man Adonai kein Opfer darbringt, soll man das Tier vor den Kohen stellen.</span>
+          <span class="line">(12) Und der Kohen soll es schätzen, ob gut oder schlecht — nach der Schätzung des Kohanim soll es bleiben.</span>
+          <span class="line">(13) Und wenn er es auslösen will, soll er ein Fünftel auf deine Schätzung hinzufügen.</span>
+          <span class="line">(14) Und wenn jemand sein Haus heiligt, heilig für Adonai, soll der Kohen es schätzen, ob gut oder schlecht — wie der Kohen es schätzt, so soll es bestehen.</span>
+          <span class="line">(15) Und wenn der Heiligende sein Haus auslösen will, soll er ein Fünftel des Schätzungssilbers darüber hinaufügen — und es gehört ihm.</span>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- ── ALIYAH 5 · חמישי · Vayikra 27:16-21 — Erbfeld-Heiligung und Yovel-Rückgabe ── -->
+    <div class="aliyah-block">
+      <div class="aliyah-label">עֲלִיָּה חֲמִישִׁית — מִשְּׂדֵה אֲחֻזָּתוֹ יַקְדִּישׁ אִישׁ<span class="aliyah-label-de">Fünfte Aliyah · Vayikra 27:16–21 · Heiligung des Erbfeldes — Bewertung nach Saatmaß und Jahren bis zum Yovel</span></div>
+      <div class="instrument-note">[no percussion] [no drums] [no choir] [acoustic guitar — Hijaz steady-warm, the inheritance-field as sacred property, the Yovel as the resetting axis, no percussion] Gitarre: Hijaz stetig-warm — das Erbfeld als heiliges Gut, der Yovel als Reset-Achse.</div>
+      <div class="lyrics-block">
+        <div class="lyrics-he" dir="rtl">
+          <span class="line">וְאִם מִשְּׂדֵה אֲחֻזָּתוֹ יַקְדִּישׁ אִישׁ לַאדֹנָי וְהָיָה עֶרְכְּךָ לְפִי זַרְעוֹ זֶרַע חֹמֶר שְׂעֹרִים בַּחֲמִשִּׁים שֶׁקֶל כָּסֶף׃</span>
+          <span class="line">אִם־מִשְּׁנַת הַיֹּבֵל יַקְדִּישׁ שָׂדֵהוּ כְּעֶרְכְּךָ יָקוּם׃</span>
+          <span class="line">וְאִם־אַחַר הַיֹּבֵל יַקְדִּישׁ שָׂדֵהוּ וְחִשַּׁב־לוֹ הַכֹּהֵן אֶת־הַכֶּסֶף עַל־פִּי הַשָּׁנִים הַנּוֹתָרֹת עַד שְׁנַת הַיֹּבֵל וְנִגְרַע מֵעֶרְכֶּךָ׃</span>
+          <span class="line">וְאִם־גָּאֹל יִגְאַל אֶת־הַשָּׂדֶה הַמַּקְדִּישׁ אֹתוֹ וְיָסַף חֲמִשִׁית כֶּסֶף־עֶרְכְּךָ עָלָיו וְקָם לוֹ׃</span>
+          <span class="line">וְאִם־לֹא יִגְאַל אֶת־הַשָּׂדֶה וְאִם־מָכַר אֶת־הַשָּׂדֶה לְאִישׁ אַחֵר לֹא יִגָּאֵל עוֹד׃</span>
+          <span class="line">וְהָיָה הַשָּׂדֶה בְּצֵאתוֹ בַיֹּבֵל קֹדֶשׁ לַאדֹנָי כִּשְׂדֵה הַחֵרֶם לַכֹּהֵן תִּהְיֶה אֲחֻזָּתוֹ׃</span>
+        </div>
+        <div class="lyrics-de">
+          <span class="line">(16) Und wenn jemand vom Feld seines Erbteils Adonai heiligt, soll deine Schätzung gemäß seiner Saat sein — Saat eines Chomer Gerste auf fünfzig Schekel Silber.</span>
+          <span class="line">(17) Wenn er sein Feld vom Yovel-Jahr an heiligt, soll es nach deiner Schätzung bestehen.</span>
+          <span class="line">(18) Und wenn er sein Feld nach dem Yovel heiligt, soll der Kohen ihm das Geld berechnen nach den Jahren, die bis zum Yovel-Jahr verbleiben — und es soll von deiner Schätzung abgezogen werden.</span>
+          <span class="line">(19) Und wenn der Heiligende das Feld auslösen will, soll er ein Fünftel des Schätzungssilbers darüber hinzufügen — und es gehört ihm.</span>
+          <span class="line">(20) Und wenn er das Feld nicht auslöst, oder wenn er das Feld an einen anderen verkauft hat, kann es nicht mehr ausgelöst werden.</span>
+          <span class="line">(21) Und das Feld soll, wenn es im Yovel ausgeht, heilig für Adonai sein — wie ein Cherem-Feld; dem Kohen soll es zum Erbteil gehören.</span>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- ── ALIYAH 6 · שישי · Vayikra 27:22-28 — Gekauftes Feld, Erstgeborenes, Cherem ── -->
+    <div class="aliyah-block">
+      <div class="aliyah-label">עֲלִיָּה שִׁשִּׁית — שְׂדֵה מִקְנָה · בְּכוֹר · חֵרֶם<span class="aliyah-label-de">Sechste Aliyah · Vayikra 27:22–28 · Das gekaufte Feld · Das Erstgeborene des Viehs · Cherem als kodesch kodaschim</span></div>
+      <div class="instrument-note">[no percussion] [no drums] [no choir] [acoustic guitar — Hijaz with measured authority, the boundaries of dedication, what cannot be redeemed because it is already bound to Adonai, no percussion] Gitarre: Hijaz mit gemessener Autorität — die Grenzen der Heiligung, was nicht ausgelöst werden kann, weil es bereits Adonai gehört.</div>
+      <div class="lyrics-block">
+        <div class="lyrics-he" dir="rtl">
+          <span class="line">וְאִם אֶת־שְׂדֵה מִקְנָתוֹ אֲשֶׁר לֹא מִשְּׂדֵה אֲחֻזָּתוֹ יַקְדִּישׁ לַאדֹנָי׃</span>
+          <span class="line">וְחִשַּׁב־לוֹ הַכֹּהֵן אֵת מִכְסַת הָעֶרְכְּךָ עַד שְׁנַת הַיֹּבֵל וְנָתַן אֶת־הָעֶרְכְּךָ בַּיּוֹם הַהוּא קֹדֶשׁ לַאדֹנָי׃</span>
+          <span class="line">בִּשְׁנַת הַיּוֹבֵל יָשׁוּב הַשָּׂדֶה לַאֲשֶׁר קָנָהוּ מֵאִתּוֹ לַאֲשֶׁר־לוֹ אֲחֻזַּת הָאָרֶץ׃</span>
+          <span class="line">וְכׇל־עֶרְכְּךָ יִהְיֶה בְּשֶׁקֶל הַקֹּדֶשׁ עֶשְׂרִים גֵּרָה יִהְיֶה הַשָּׁקֶל׃</span>
+          <span class="line">אַךְ־בְּכוֹר אֲשֶׁר־יְבֻכַּר לַאדֹנָי בִּבְהֵמָה לֹא־יַקְדִּישׁ אִישׁ אֹתוֹ אִם־שׁוֹר אִם־שֶׂה לַאדֹנָי הוּא׃</span>
+          <span class="line">וְאִם בַּבְּהֵמָה הַטְּמֵאָה וּפָדָה בְעֶרְכֶּךָ וְיָסַף חֲמִשִׁתוֹ עָלָיו וְאִם־לֹא יִגָּאֵל וְנִמְכַּר בְּעֶרְכֶּךָ׃</span>
+          <span class="line">אַךְ־כׇּל־חֵרֶם אֲשֶׁר יַחֲרִם אִישׁ לַאדֹנָי מִכׇּל־אֲשֶׁר־לוֹ מֵאָדָם וּבְהֵמָה וּמִשְּׂדֵה אֲחֻזָּתוֹ לֹא יִמָּכֵר וְלֹא יִגָּאֵל כׇּל־חֵרֶם קֹדֶשׁ־קׇדָשִׁים הוּא לַאדֹנָי׃</span>
+        </div>
+        <div class="lyrics-de">
+          <span class="line">(22) Und wenn er ein gekauftes Feld, das nicht vom Feld seines Erbteils ist, Adonai heiligt —</span>
+          <span class="line">(23) so soll der Kohen ihm den Anteil deiner Schätzung berechnen bis zum Yovel-Jahr; und er soll deine Schätzung an demselben Tag entrichten — heilig für Adonai.</span>
+          <span class="line">(24) Im Yovel-Jahr soll das Feld zu dem zurückkehren, von dem er es gekauft hat — zu dem, dem das Erbteil des Landes gehört.</span>
+          <span class="line">(25) Und alle deine Schätzungen sollen nach dem Schekel des Heiligtums sein — zwanzig Gera soll der Schekel sein.</span>
+          <span class="line">(26) Aber das Erstgeborene, das von Vieh als Erstgeburt Adonai gehört, soll niemand heiligen — sei es Rind oder Schaf, es gehört Adonai.</span>
+          <span class="line">(27) Und wenn es ein unreines Tier ist, soll er es nach deiner Schätzung auslösen und ein Fünftel darüber hinzufügen; und wenn es nicht ausgelöst wird, soll es nach deiner Schätzung verkauft werden.</span>
+          <span class="line">(28) Aber alles Cherem, das jemand Adonai mit Bann verfügt — von allem, was er besitzt, von Mensch und Vieh und vom Feld seines Erbteils — soll nicht verkauft und nicht ausgelöst werden; alles Cherem ist Heiliges der Heiligkeiten für Adonai.</span>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- ── ALIYAH 7 · שביעי · Vayikra 27:29-34 — Cherem-Mensch, Ma'aser, Schluss-Vers Vayikra ── -->
+    <div class="aliyah-block">
+      <div class="aliyah-label">עֲלִיָּה שְׁבִיעִית — מַעֲשַׂר הָאָרֶץ · מַעֲשַׂר בָּקָר וָצֹאן · אֵלֶּה הַמִּצְוֹת<span class="aliyah-label-de">Siebte Aliyah · Vayikra 27:29–34 · Ma'aser des Landes · Ma'aser von Rind und Schaf · Schluss-Vers des Sefer Vayikra</span></div>
+      <div class="instrument-note">[no percussion] [no drums] [no choir] [acoustic guitar — Hijaz culminating with steady-bright tones, the tithe of the land and of the herd, the closing verse of the entire Sefer Vayikra at Mount Sinai through the hand of Mosche, no percussion] Gitarre: Hijaz kulminiert mit stetig-hellen Tiefen — der Zehnte des Landes und der Herde, der Schluss-Vers des ganzen Sefer Vayikra: am Berg Sinai durch die Hand Mosches.</div>
+      <div class="lyrics-block">
+        <div class="lyrics-he" dir="rtl">
+          <span class="line">כׇּל־חֵרֶם אֲשֶׁר יׇחֳרַם מִן־הָאָדָם לֹא יִפָּדֶה מוֹת יוּמָת׃</span>
+          <span class="line">וְכׇל־מַעְשַׂר הָאָרֶץ מִזֶּרַע הָאָרֶץ מִפְּרִי הָעֵץ לַאדֹנָי הוּא קֹדֶשׁ לַאדֹנָי׃</span>
+          <span class="line">וְאִם־גָּאֹל יִגְאַל אִישׁ מִמַּעַשְׂרוֹ חֲמִשִׁיתוֹ יֹסֵף עָלָיו׃</span>
+          <span class="line">וְכׇל־מַעְשַׂר בָּקָר וָצֹאן כֹּל אֲשֶׁר־יַעֲבֹר תַּחַת הַשָּׁבֶט הָעֲשִׂירִי יִהְיֶה־קֹּדֶשׁ לַאדֹנָי׃</span>
+          <span class="line">לֹא יְבַקֵּר בֵּין־טוֹב לָרַע וְלֹא יְמִירֶנּוּ וְאִם־הָמֵר יְמִירֶנּוּ וְהָיָה־הוּא וּתְמוּרָתוֹ יִהְיֶה־קֹּדֶשׁ לֹא יִגָּאֵל׃</span>
+          <span class="line">אֵלֶּה הַמִּצְוֺת אֲשֶׁר צִוָּה אֲדֹנָי אֶת־מֹשֶׁה אֶל־בְּנֵי יִשְׂרָאֵל בְּהַר סִינָי׃</span>
+        </div>
+        <div class="lyrics-de">
+          <span class="line">(29) Jedes Cherem, das von einem Menschen gebannt wird, soll nicht ausgelöst werden — Tod muss er sterben.</span>
+          <span class="line">(30) Und jeder Zehnte des Landes — vom Saat-Ertrag des Landes, von der Frucht des Baumes — gehört Adonai; er ist heilig für Adonai.</span>
+          <span class="line">(31) Und wenn jemand seinen Zehnten auslösen will, soll er ein Fünftel darüber hinzufügen.</span>
+          <span class="line">(32) Und jeder Zehnte vom Rind und vom Kleinvieh — alles, was unter dem Stab durchgeht — der zehnte soll heilig für Adonai sein.</span>
+          <span class="line">(33) Man soll nicht zwischen gut und schlecht prüfen, und man soll es nicht eintauschen; und wenn man doch eintauscht, soll dieses und sein Tausch heilig sein, es soll nicht ausgelöst werden.</span>
+          <span class="line">(34) Dies sind die Gebote, die Adonai dem Mosche befohlen hat für die Söhne Israels am Berg Sinai.</span>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- ══ TIKKUN-BOX — DAS HERZ DER PARASHAH ══ -->
+    <div class="tikkun-box">
+      <div class="tikkun-header">
+        <div class="tikkun-title-he">מַעֲשֵׂה הַתִּיקּוּן — קְרִיאַת הַתּוֹכֵחָה בְּלַחַשׁ · וְזָכַרְתִּי אֶת־בְּרִיתִי · הַזְהָרַת נְדָרִים · חֲזַק חֲזַק וְנִתְחַזֵּק</div>
+        <div class="tikkun-title-de">Tikkun – Die Tochechah im Lachash, das Erinnern des Bundes als Selichot-Anker, die Wachsamkeit der Gelübde und der Schluss-Ruf des Sefer Vayikra als sephardische Tagespraxis</div>
+        <div class="tikkun-src">וַיִּקְרָא כ״ו:ג׳ („אִם־בְּחֻקֹּתַי תֵּלֵכוּ") · וַיִּקְרָא כ״ו:י״ב („וְהִתְהַלַּכְתִּי בְּתוֹכְכֶם") · וַיִּקְרָא כ״ו:מ״ב („וְזָכַרְתִּי אֶת־בְּרִיתִי") · וַיִּקְרָא כ״ז:ב׳ („אִישׁ כִּי יַפְלִא נֶדֶר") · רמב״ם הלכות תְּשׁוּבָה (פרק א׳–ב׳ · הַוִּדּוּי) · רמב״ם הלכות עֲרָכִין וַחֲרָמִין · רמב״ם הלכות נְדָרִים · רש״ש (נְהַר שָׁלוֹם · יְרוּשָׁלַיִם) · רמח״ל מְסִלַּת יְשָׁרִים (פְּתִיחָה · בָּרַיְיתָא דר׳ פִּינְחָס בֶּן יָאִיר) · רמח״ל דַּעַת תְּבוּנוֹת (יִחוּד הַהַנְהָגָה · גָלוּת כְּתִיקּוּן) · אור החיים על וַיִּקְרָא כ״ו · ספר העיקרים מאמר רביעי (שָׂכָר וָעוֹנֶשׁ · אַלְבּוֹ) · שד״ל פֵּרוּשׁ עַל הַתּוֹרָה (בֶּהָלָה · קֶרִי) · בן איש חי שנה ראשונה ושנה שנייה (פרשיות בהר־בחקתי) · שׁוּלְחָן עָרוּךְ אוֹרַח חַיִּים תכ״ח (סדר הקריאה בתורה · תוכחה בלחש) · כַּף הַחַיִּים תכ״ח · מַסֶּכֶת מְגִלָּה ל״א.–ל״א: · נוסח הסליחות עֵדוֹת הַמִּזְרָח (זְכֹר אַבְרָהָם · זְכֹר בְּרִית) · מנהג חתימת חומש (חֲזַק חֲזַק וְנִתְחַזֵּק) · נֻסַּח אֲרָם צוֹבָה · מָרוֹקוֹ · יָמֶן · יְרוּשָׁלַיִם</div>
+      </div>
+      <div class="tikkun-body">
+        <strong>Sephardische Praxis:</strong> Bechukotai schließt das Sefer Vayikra mit der schwersten Sequenz der Tora — der <em>Tochechah</em>, die in sieben aufsteigenden Stufen die Folgen der Bundes-Verletzung beschreibt. Doch die Parashah beginnt nicht mit Drohung, sondern mit einem konditionalen Gefäß: <em>„אִם־בְּחֻקֹּתַי תֵּלֵכוּ — wenn ihr in meinen Satzungen wandelt"</em> (Vayikra 26:3). <strong>Or HaChaim</strong> (auf Vayikra 26:3) liest das Verb <em>תֵּלֵכוּ</em> nicht als statisches Halten, sondern als <em>Gehen, Mühe, fortgesetzten Aufstieg</em> — ein Hinweis auf die Mühe in Tora-Studium und Mitzwot, die im Wort <em>חֻקִּים</em> mitschwingen, wo das Wort an <em>חָקוּק</em> (eingegraben) erinnert: das Eingegrabene wird nicht durch einmaligen Akt erworben, sondern durch dauernde Bewegung. Aus dieser Bewegung entstehen die dreizehn Verse des Segens — Regen zur rechten Zeit, Ertrag, Friede, Sieg, Vermehrung, der Bund aufgerichtet, schließlich der höchste Zustand: <em>„וְהִתְהַלַּכְתִּי בְּתוֹכְכֶם וְהָיִיתִי לָכֶם לֵאלֹהִים וְאַתֶּם תִּהְיוּ־לִי לְעָם"</em> (26:12). Das Gehen Israels in den Satzungen erweckt das Gehen Adonais in Israels Mitte. Beide Bewegungen sind reziprok. Wo der Mensch sich aufrichtet (<em>וָאוֹלֵךְ אֶתְכֶם קוֹמְמִיּוּת</em>, 26:13), entsteht der Boden, auf dem der Schechinah-Wandel überhaupt möglich wird. <strong>Die Tochechah</strong> ist die Schatten-Seite dieses Gefäßes. <strong>Sefer HaIkkarim</strong> (Albo, מאמר רביעי — Lehre von Schar v'Onesh) lehrt, dass Belohnung und Strafe in der Tora keine willkürliche Setzung sind, sondern die innere Konsequenz der Bundes-Beziehung selbst: wer mit dem Bund wandelt, lebt in der Wirklichkeit, die der Bund öffnet; wer ihn bricht, lebt in der Wirklichkeit, die ohne ihn übrig bleibt. Genau dies ist die Pointe von Vayikra 26:23-24: <em>„וְאִם־בְּאֵלֶּה לֹא תִוָּסְרוּ לִי וַהֲלַכְתֶּם עִמִּי קֶרִי · וְהָלַכְתִּי אַף־אֲנִי עִמָּכֶם בְּקֶרִי"</em> — wenn ihr mit mir trotzig (keri) wandelt, wandle auch ich mit euch trotzig. Wenn der Mensch das Verhältnis als Zufall (<em>קֶרִי</em> wird klassisch als „zufällig, ohne Bezug" verstanden — vgl. Onkelos: <em>בְּקַשְׁיוּ</em>, im Trotz; Rambam Hilchot Ta'aniyot 1:3 deutet sogar das nicht-Erkennen einer göttlichen Erinnerung als <em>keri</em>) behandelt, antwortet Adonai in derselben verborgenen Modalität: das Antlitz weicht, das Land schweigt, die Geschichte wird hart. Das ist nicht Willkür — es ist die spiegelnde Gesetzmäßigkeit des Bundes selbst.
+        <br><br>
+        <strong>Doch das Eigentliche der Parashah liegt in dem Moment, wo die Tochechah kippt.</strong> In Vayikra 26:40 beginnt das <em>Vidui</em>: <em>„וְהִתְוַדּוּ אֶת־עֲוֺנָם"</em> — sie werden ihre Schuld bekennen. <strong>Rambam</strong> (Hilchot Teshuvah 1:1) zitiert genau diesen Vers als die Tora-Quelle der Vidui-Pflicht: <em>„כָּל הַמִּצְוֹת שֶׁבַּתּוֹרָה ... כְּשֶׁיַּעֲשֶׂה תְּשׁוּבָה ... חַיָּב לְהִתְוַדּוֹת לִפְנֵי הָאֵל"</em> — die Pflicht des Bekenntnisses gründet im Vers von Bechukotai. Und sobald das Bekenntnis kommt, kommt der Wendepunkt: <em>„וְזָכַרְתִּי אֶת־בְּרִיתִי יַעֲקוֹב, וְאַף אֶת־בְּרִיתִי יִצְחָק, וְאַף אֶת־בְּרִיתִי אַבְרָהָם אֶזְכֹּר — וְהָאָרֶץ אֶזְכֹּר"</em> (26:42). Dass die Erzväter in <em>umgekehrter Reihenfolge</em> aufgerufen werden — Yaakov vor Yitzchak vor Avraham — fällt jedem Hörer auf. Die klassische Auslegung (Rashi nach Sifra; ebenso die sephardischen Auslegungstraditionen aus Aleppo und Marokko, die diesen Vers als Selichot-Anker nutzen): Yaakov, der Letztgeborene und Schwächste, kommt zuerst, weil <em>„כְּדַי הַקָּטָן לְהָגֵן"</em> — der Kleinste reicht aus, um zu schützen; und wenn nicht, dann der nächste; und wenn nicht, dann der erste, Avraham, der Wurzel-Vater. Der Vers ist also gleichzeitig eine <em>Stufenfolge der Verteidigung</em>: zuerst die nahste Generation, dann die mittlere, dann die wurzelnste — und schließlich, wenn keine zureicht, das Land selbst (<em>וְהָאָרֶץ אֶזְכֹּר</em>). Die sephardische Selichot-Tradition aller Eidot HaMizrach (Aleppo, Marokko, Yemen) zitiert genau diese Stufenfolge: <em>„זְכֹר אַבְרָהָם יִצְחָק וְיִשְׂרָאֵל עֲבָדֶיךָ"</em> — und der ganze ergreifende Zug der Selichot Tag um Tag im Elul ist eine Erweiterung dieses Verses. <strong>Vers 26:44</strong> bringt die letzte Sicherung: <em>„וְאַף־גַּם־זֹאת בִּהְיוֹתָם בְּאֶרֶץ אֹיְבֵיהֶם לֹא־מְאַסְתִּים וְלֹא־גְעַלְתִּים לְכַלֹּתָם לְהָפֵר בְּרִיתִי אִתָּם"</em> — auch im Land ihrer Feinde habe ich sie nicht verworfen, sie nicht verabscheut, sie nicht ganz vernichtet, meinen Bund mit ihnen nicht gebrochen. Dies ist die Grenze der Gevurah: der Bund ist <em>unzerreißbar</em>, nicht weil Israel ihn hält (das tut es offensichtlich nicht), sondern weil Adonai ihn hält. Genau hier ist die innere Logik der Parashah: <em>Gevurah ist Strenge, die in der Erinnerung des Bundes ihre eigene Grenze findet.</em>
+        <br><br>
+        <strong>Die kabbalistisch-mussarisch-philologische Tiefen-Lesung der Parashah</strong> ergänzt diese Architektur in vier Stimmen. <strong>Rashash</strong> (Rabbi Shalom Sharabi, <em>Nahar Schalom</em>, sephardisch-yerushalmische Kabbalah-Tradition) liest die umgekehrte Vater-Reihenfolge in 26:42 — Yaakov, Yitzchak, Avraham — als <em>aufsteigenden Sulam</em> der Sefirot: Yaakov entspricht Tiferet (der mittleren Säule), Yitzchak entspricht Gevurah (der linken Säule, die Säule unserer Parashah), Avraham entspricht Chesed (der rechten Säule). Der Vers steigt also <em>aus Gevurah zurück nach Chesed</em> auf — die Strenge ruft den Bund-erinnernden Chesed an. Genau diese Bewegung ist die Tikkun-Bewegung der ganzen Parashah: aus dem Erdulden der gerichtlichen Folge in die Wieder-Aufnahme des bundes-stiftenden Anfangs. <strong>Ramchal</strong> (Rabbi Mosche Chaim Luzzatto, in <em>Mesillat Yescharim</em>, Pet'icha) zitiert die <em>Baraita de Rabbi Pinchas ben Yair</em> (Avoda Zarah 20b) als die innere Stufenleiter aller Parashot: <em>Tora führt zu Zehirut, Zehirut zu Zerizut, Zerizut zu Nekiut, Nekiut zu Perischut...</em> bis hinauf zu Ruach HaKodesch. <em>Im bechukotai telechu</em> (26:3) ist die unterste Sprosse — das Gehen in den Satzungen ist der erste Schritt der Mussar-Leiter; und <em>v'hithalachti betochechem</em> (26:12) ist die oberste — Adonai wandelt in der Mitte des Volkes, das die ganze Leiter durchschritten hat. <strong>Ramchal in <em>Da'at Tevunot</em></strong> (auf die Theodizee-Frage des Galut) gibt das Geheimnis der Tochechah preis: das Galut ist nicht Verwerfung, sondern <em>Tikkun-Mechanismus</em> — die Strenge der Bundes-Folge ist der Weg, auf dem das verborgene Antlitz seine eigene Offenbarung vorbereitet. Vayikra 26:44 (<em>„לֹא־מְאַסְתִּים"</em>) ist die Achse: das Galut wirkt <em>von innen</em> für die endgültige Geulah. <strong>Schadal</strong> (Rabbi Schmuel David Luzzatto, <em>Pirusch al haTora</em>, philologische Schule Italiens) liefert zwei prägnante Pointen, die sephardische Leser besonders schätzen. Erstens, zu <em>בֶּהָלָה</em> (26:16): Schadal verbindet das Wort mit Tehillim 78:33 (<em>„ויכל בהבל ימיהם ושנותם בבהלה"</em>) und Yeshayah 65:23 (<em>„לא יגעו לריק ולא ילדו לבהלה"</em>) — die <em>Behalah</em> ist die Erfahrung, deren Erwartung enttäuscht wird; die hier folgenden Plagen (<em>Schachefet · Kadachat</em>) sind nicht primär Körper-Krankheiten, sondern Krankheiten des Ertrags: Mühe ohne Ernte. Das wirft ein präzises Licht auf den ganzen Tochechah-Bogen — er beschreibt nicht primär körperlichen Schmerz, sondern den verlorenen Ertrag des Bundes-fernen Lebens. Zweitens, zu <em>קֶרִי</em> (26:21 und 26:23–24): Schadal verteidigt Onkelos' Übertragung <em>בְּקַשְׁיוּ</em> (in Härte/Trotz) gegen die Lesarten Naftali Wesselys und Mendelssohns, und zeigt, dass <em>קֶרִי</em> keine bloße Zufalls-Begegnung meint, sondern einen <em>verhärteten</em>, bewusst widerstehenden Wandel. Mit Schadals Gloss wird die Spiegel-Logik des Verses unmissverständlich: wo Israel sich verhärtet, antwortet Adonai mit verhüllter Härte — beides sind Modalitäten des Wandels, beide korrelativ.
+        <br><br>
+        <strong>Aus dieser Architektur fließt der berühmteste sephardische Minhag dieser Parashah: das Lesen der Tochechah im Lachash</strong> (leise, halb-gesungener Stimme). <strong>Schulchan Aruch Orach Chaim 428:6</strong> regelt das Standard-Verhalten: man unterbricht die Tochechah nicht, ruft nur einen Aufgerufenen für die ganze Sequenz, und die Schluss-Brachah wird erst am Ende gesprochen. <strong>Kaf HaChaim 428</strong> (Rabbi Yaakov Chaim Sofer, sephardischer Posek aus Yerushalayim) führt explizit auf, dass der sephardische Minhag in allen Eidot HaMizrach das Lesen <em>בקול נמוך</em> — in niedriger Stimme — vorsieht. Das ist nicht Furcht vor dem Wort, sondern Ehrfurcht: man <em>verschluckt</em> die Tochechah nicht, aber man trompetet sie auch nicht. Aleppinische Hazzanim, marokkanische Ba'alei Tefillah, yemenitische Tora-Leser — alle Eidot HaMizrach halten dies als gemeinsamen Minhag. Es ist sephardische Erfahrung: wer die Tochechah laut singt, macht sie zum Spektakel; wer sie lese im Lachash, behandelt sie als das, was sie ist — eine ernsthafte, mit gefasster Liebe gelesene Mahnung des Vaters an seine Kinder. <strong>Kapitel 27</strong> (Arachin) bringt Bechukotai zur halachischen Schluss-Stein: die Struktur der Gelübde, der Bewertungen, des Ma'aser, des Cherem. <strong>Rambam</strong> (Hilchot Erchin va'Charamin und Hilchot Nedarim, beide in Sefer Hafla'ah) entfaltet das Gesetz: Wer ein Mitglied seiner Familie heiligt, wer sein Haus dem Tempel weiht, wer Felder oder Tiere oder Erträge gelobt — jede Stufe hat ihren halachischen Ort, ihren festen Wert, ihre Auslöse-Bedingung. Die innere Pointe: <em>das gesprochene Wort ist Schöpfungs-Akt</em>. <strong>Ben Ish Chai</strong> (Shanah Rishona, Hilchot Nedarim, in den entsprechenden Parashot) führt aus, was sephardisch täglicher Brauch ist: man legt sich nie ein Gelübde leicht zu; vor jedem Versprechen sagt man <em>„בְּלִי נֶדֶר"</em> (ohne Gelübde-Bindung), denn ein leeres Versprechen ist halachisch ein Bruch. Das verbindet sich liturgisch mit zwei festen sephardischen Punkten im Jahres-Zyklus: <em>Hatarat Nedarim</em> am Morgen vor Rosch HaSchana (in den Eidot-HaMizrach-Selichot integriert), und <em>Kol Nidre</em> am Yom-Kippur-Abend, der die nicht erfüllten Gelübde des kommenden Jahres im Voraus annulliert. Bechukotai's Arachin-Kapitel ist also nicht ein technischer Anhang — es ist die halachische Wurzel der ganzen Vow-Wachsamkeit, die sephardisch <em>jeden Tag</em> ausgeübt wird. <strong>Und schließlich</strong> der Schluss-Ruf des Chumasch: <em>„חֲזַק חֲזַק וְנִתְחַזֵּק"</em> — Stark, stark, und wir wollen stark werden. Sephardischer Minhag in Aleppo, Marokko, Yemen und Yerushalayim: bei der Schluss-Aliyah eines jeden Chumasch ruft die Gemeinde den dreifachen Ruf, ohne den Ba'al Koreh zu unterbrechen. Manche sephardische Gemeinden sagen nur <em>„חֲזָק"</em> (einmal); die meisten sagen den vollen dreifachen Ruf. In jedem Fall ist es der Moment, in dem das Sefer geschlossen wird mit dem Bewusstsein, dass das nächste Sefer (Bamidbar) bereits in der nächsten Woche beginnt — die Tora ist Kreis, kein Ende.
+        <br><br>
+        <strong>Praktische Handlung:</strong> (1) <em>Beim Hören der Tochechah im Schul</em>: Wenn die Tochechah im Lachash gelesen wird, beuge sich der Hörer im Sitz leicht vor, halte das Buch enger an sich, und versuche nicht, jeden Vers laut mitzusprechen — der sephardische Minhag (Kaf HaChaim 428) verlangt eine <em>geteilte Ehrfurchts-Stille</em>. Wer den Vers verstehen will, lese ihn anschließend in seiner eigenen Tora-Lektüre nach. Im Schul selbst: zuhören, nicht laut sprechen, nicht kommentieren. (2) <em>Vidui-Praxis am Yom Kippur — geankert in Vayikra 26:40</em>: Sephardisch (Eidot HaMizrach) wird das Vidui am Yom Kippur in voller Form gesprochen: <em>אַשַׁמְנוּ, בָּגַדְנוּ, גָּזַלְנוּ</em>... Wer im Verlauf des Yom Kippur an seine Praxis erinnert werden will, halte still einen Moment vor jedem Vidui-Block ein und denke: <em>„Rambam Hilchot Teshuvah 1:1 — die Pflicht des Bekenntnisses fließt aus Vayikra 26:40."</em> So wird Bechukotai zum Yom-Kippur-Eingang. (3) <em>Selichot im Elul mit „Zechor Avraham, Yitzchak, v'Yisrael"</em>: In den sephardischen Selichot der Eidot HaMizrach ist die Erinnerung der drei Erzväter nach Vayikra 26:42 das Herz. Wer im Elul (oder vor Yamim Noraim, oder bei Krankheit oder Not) in Selichot einsteigen möchte, wähle den Selichot-Block <em>„זְכֹר רַחֲמֶיךָ, אֲדֹנָי"</em> — sephardisch in jedem Selichot-Buch (Aleppo, Marokko, Yemen) verfügbar — und spreche ihn mit der Kawanah von Bechukotai 26:42: <em>„Möge Adonai meines Bundes mit den Vätern gedenken, und meines Landes."</em> (4) <em>Bedtime „v'natati schalom ba'aretz" als Krias-Schma-Kawanah</em>: Sephardisch (Aleppo) wird vor dem Schlaf neben dem klassischen Krias Schma She'al haMittah ein zusätzlicher Vers gesagt — Vayikra 26:6: <em>„וְנָתַתִּי שָׁלוֹם בָּאָרֶץ וּשְׁכַבְתֶּם וְאֵין מַחֲרִיד"</em> — als Bitte für die Nacht: möge ich liegen ohne Schrecken, möge das Land in Schalom sein, möge das Haus geschützt sein. Die Praxis ist alt; sie verbindet das Bett-Schma-Ritual mit dem Bechukotai-Segen. (5) <em>Vor jedem Versprechen — „bli neder"</em>: Sephardischer Standard-Brauch (Ben Ish Chai, Aleppo-Marokko-Yemen-Tradition): Bevor du irgendjemandem etwas zusagst — <em>„ich komme morgen", „ich gebe dir das Buch", „ich werde da sein"</em> — füge innerlich oder leise <em>„בְּלִי נֶדֶר"</em> hinzu. Das schützt vor dem halachischen Bruch eines unbeabsichtigten Gelübdes. Vayikra 27:2 (<em>„אִישׁ כִּי יַפְלִא נֶדֶר"</em>) ist die Wurzel; Hatarat Nedarim am Erev Rosch HaSchana und Kol Nidre am Yom Kippur sind die jährlichen Reiniger; <em>„bli neder"</em> ist die tägliche Praxis. (6) <em>Ma'aser-Tzedakah — jährliche Tzedakah-Bilanz</em>: Vayikra 27:30 (<em>„וְכׇל־מַעְשַׂר הָאָרֶץ ... קֹדֶשׁ לַאדֹנָי"</em>) ist die Wurzel des sephardisch täglichen Ma'aser-Geld-Brauches. Konkret: Mache einmal im Jahr (typischerweise vor Rosch HaSchana, oder am Anfang des Zivil-Jahres) eine ehrliche Tzedakah-Bilanz — wieviel war meine Einkommens-Summe im verflossenen Jahr, wieviel davon habe ich tatsächlich getzedakaht? Ist mein <em>Ma'aser Kesafim</em> (10% des Netto-Einkommens) erreicht? Sephardisch (Chazon Ovadia / Yabia Omer mehrere Bände dazu) ist die Ma'aser-Praxis nicht obligatorisch, aber stark empfohlen, und gilt als das tägliche Korrelat zur biblischen Ma'aser-Halacha. (7) <em>Beim Schluss der Vayikra-Lesung — „Chazak Chazak v'Nitchazek"</em>: Wenn die siebte Aliyah am Schul-Bima vorgetragen wird und der Schluss-Vers <em>„אֵלֶּה הַמִּצְוֹת אֲשֶׁר צִוָּה אֲדֹנָי אֶת־מֹשֶׁה אֶל־בְּנֵי יִשְׂרָאֵל בְּהַר סִינָי"</em> erklingt — die Gemeinde ruft (sephardisch in den meisten Eidot HaMizrach dreimal): <em>„חֲזַק חֲזַק וְנִתְחַזֵּק"</em>. Der Aufgerufene wiederholt es. Der Ba'al Koreh wiederholt es. Es ist ein Moment der Solidarität — die ganze Gemeinde schließt das Sefer gemeinsam. Wer zu Hause die Tora liest, kann es ebenso laut sprechen. (8) <em>Bechukotai-Lernen am Schabbat-Mittag — Or HaChaim auf 26:3</em>: Sephardischer Brauch (Aleppo, Marokko): am Schabbat-Mittag, nach dem Hauptgang, lerne kurz Or HaChaim auf den Eröffnungsvers von Bechukotai (auch wenn die Parashah selbst in einer anderen Woche fällt — der Vers ist Lebens-Anker). <em>„Im bechukotai telechu"</em> — die Bewegung als Ort der Heiligung. Die Tora-Mühe ist nicht Last, sondern <em>תֵּלֵכוּ</em>: das Gehen selbst ist Bund. (9) <em>Im Angesicht des Krieges oder der Tragödie — „v'zacharti et briti"</em>: In Zeiten kollektiver Not (Krieg, Plage, Verfolgung) — sephardischer Brauch in Eretz Yisrael und in der Diaspora: man spricht laut Vayikra 26:42 mit der Kawanah, dass <em>der Bund ungebrochen ist</em>. Der Vers wirkt nicht magisch, aber er <em>verankert</em> den Sprecher in der größeren Geschichte: ich bin nicht allein, der Bund ist alt, die Erzväter sind im Bund, das Land ist im Bund — und auch in dieser Stunde gilt <em>„לֹא־מְאַסְתִּים"</em> (26:44). (10) <em>Maschiach ben David in Bechukotai — die volle Erfüllung des „v'hithalachti"</em>: Die sephardische Tradition (Rambam Hilchot Mlachim, Sefer HaIkkarim) erkennt die Yemot-HaMaschiach-Erfüllung in Vayikra 26:11-12: <em>„וְנָתַתִּי מִשְׁכָּנִי בְּתוֹכְכֶם ... וְהִתְהַלַּכְתִּי בְּתוֹכְכֶם"</em> — die endgültige Schechinah-Mitwanderung. Wer am Schluss der dritten Brachah der Amidah <em>„הָאֵל הַקָּדוֹשׁ"</em> spricht (oder in den Yamim Noraim <em>„הַמֶּלֶךְ הַקָּדוֹשׁ"</em>), kann eine Kawanah einlegen: <em>„Möge das Versprechen von Vayikra 26:12 sich erfüllen, möge der Maschiach ben David kommen, möge der Schechinah-Wandel sichtbar werden im wieder-aufgebauten Beit HaMikdasch."</em>
+      </div>
+      <div class="tikkun-tags">
+        <span class="tikkun-tag">תּוֹכֵחָה בְּלַחַשׁ</span>
+        <span class="tikkun-tag">וְזָכַרְתִּי אֶת־בְּרִיתִי</span>
+        <span class="tikkun-tag">וְהִתְהַלַּכְתִּי בְּתוֹכְכֶם</span>
+        <span class="tikkun-tag">בְּלִי נֶדֶר</span>
+        <span class="tikkun-tag">חֲזַק חֲזַק וְנִתְחַזֵּק</span>
+      </div>
+    </div>
+
+    <!-- ══ SCHI · KLIMAX-MOMENT — VAYIKRA 26:42 ══ -->
+    <div class="climax-box">
+      <div class="climax-label">שִׂיא · ff · Klimax-Vers der Parashah · der Wendepunkt</div>
+      <div class="instrument-note">[no percussion] [no drums] [no choir] [acoustic guitar — full Hijaz chord forte to fortissimo, the covenant-remembrance verse, the patriarchs in reverse order, the land remembered, no percussion, no drums] Gitarre: Voller Hijaz-Akkord, forte zu fortissimo — der Bundes-Erinnerungs-Vers, die Erzväter in umgekehrter Folge, das Land erinnert.</div>
+      <div class="climax-verse-he">וְזָכַרְתִּי אֶת־בְּרִיתִי יַעֲקוֹב · וְאַף אֶת־בְּרִיתִי יִצְחָק · וְאַף אֶת־בְּרִיתִי אַבְרָהָם אֶזְכֹּר · וְהָאָרֶץ אֶזְכֹּר</div>
+      <div class="climax-verse-de">„Und ich werde meines Bundes mit Yaakov gedenken, und auch meines Bundes mit Yitzchak, und auch meines Bundes mit Avraham werde ich gedenken — und des Landes werde ich gedenken."</div>
+      <div class="climax-src">וַיִּקְרָא כ״ו:מ״ב</div>
+    </div>
+
+    <!-- ══ KODA · V'HITHALACHTI-WHISPER — VAYIKRA 26:12 ══ -->
+    <div class="coda-box">
+      <div class="coda-label">קוֹדָה · pp · Schechinah-Wandel im Hauch</div>
+      <div class="instrument-note">[no percussion] [no drums] [no choir] [acoustic guitar — Hijaz dissolving into a single sustained note, the deepest blessing whispered, the Schechinah-walk barely audible, no percussion] Gitarre: Hijaz löst sich in einen einzigen getragenen Ton — der tiefste Segen geflüstert, der Schechinah-Wandel kaum hörbar.</div>
+      <div class="coda-whisper">
+        <strong>וְהִתְהַלַּכְתִּי</strong> בְּתוֹכְכֶם — <strong>וְהָיִיתִי</strong> לָכֶם לֵאלֹהִים — וְאַתֶּם <strong>תִּהְיוּ־לִי</strong> לְעָם
+      </div>
+    </div>
+
+    <!-- ══ CHAZAK CHAZAK V'NITCHAZEK — SCHLUSS DES SEFER VAYIKRA ══ -->
+    <div class="chazak-box">
+      <div class="chazak-label">חֲתִימַת סֵפֶר וַיִּקְרָא · Schluss des Sefer Vayikra · Sephardischer Minhag aller Eidot HaMizrach</div>
+      <div class="chazak-he">חֲזַק · חֲזַק · וְנִתְחַזֵּק</div>
+      <div class="chazak-de">„Stark · stark · und wir wollen stark werden" — die Gemeinde antwortet dem Aufgerufenen am Schluss der siebten Aliyah</div></div>
+
+  </section>
+
+  <!-- ══ FOOTER ══ -->
+  <div class="footer">
+    <p class="footer-he">פָּרָשַׁת בְּחֻקֹּתַי · גְּבוּרָה · מַקָּאם חִיגָ׳אז · תּוֹכֵחָה בְּלַחַשׁ · וְזָכַרְתִּי אֶת־בְּרִיתִי · חֲזַק חֲזַק וְנִתְחַזֵּק</p>
+    <p class="footer-chain">
+      וַיִּקְרָא כ״ו:ג׳–כ״ז:ל״ד · נוּסַּח צָדוֹק (רשש) · עֵדוֹת הַמִּזְרָח · חֲתִימַת סֵפֶר וַיִּקְרָא
+    </p>
+    <p class="footer-de">
+      Quellen: <strong>Tanach</strong> (Vayikra 26:3–27:34 — Tora-Text 1:1, mit Tetragrammaton-Konvertierung
+      durchgängig als אֲדֹנָי) · <strong>Rambam · Mishneh Torah</strong> (Hilchot Teshuvah ·
+      Hilchot Erchin va'Charamin · Hilchot Nedarim · Hilchot Ta'aniyot 1:3 zur Bedeutung von „keri") ·
+      <strong>Or HaChaim</strong> auf Vayikra 26:3 („telechu" als andauernde Mühe) ·
+      <strong>Sefer HaIkkarim</strong> (Yosef Albo, Maamar Rvi'i — die Lehre von Schar v'Onesh als
+      innerer Bundes-Konsequenz) · <strong>Rashash · Nahar Schalom</strong> (Rabbi Schalom Scharabi,
+      Yerushalmische Kabbalah-Schule — der umgekehrte Sulam Yaakov-Yitzchak-Avraham als Aufstieg
+      Gevurah → Tiferet → Chesed in Vayikra 26:42) · <strong>Ramchal · Mesillat Yescharim</strong>
+      (Petichah · Baraita d'Rabbi Pinchas ben Yair als Mussar-Sulam — <em>im bechukotai telechu</em>
+      als unterste, <em>v'hithalachti betochechem</em> als oberste Sprosse) · <strong>Ramchal ·
+      Da'at Tevunot</strong> (Yichud HaHanhagah und das Galut als Tikkun-Mechanismus für die
+      Verborgenheit → Offenbarung des göttlichen Antlitzes — Vayikra 26:44 als Achs-Vers) ·
+      <strong>Schadal · Pirusch al haTora</strong> (Rabbi Schmuel David Luzzatto — philologische
+      Glossen zu <em>בֶּהָלָה</em> 26:16 als Ertrag-enttäuschende Plage und zu <em>קֶרִי</em>
+      26:21 in Verteidigung Onkelos' <em>בְּקַשְׁיוּ</em>) ·
+      <strong>Talmud Bavli · Megilla 31a–31b</strong> (Halacha der
+      Tora-Lesung der Tochechah) · <strong>Schulchan Aruch · Orach Chaim 428:6</strong> (sephardischer
+      Minhag des Lachash) · <strong>Kaf HaChaim · Orach Chaim 428</strong> (Rabbi Yaakov Chaim Sofer ·
+      sephardische Praxis aller Eidot HaMizrach: Aleppo, Marokko, Yemen, Yerushalayim) ·
+      <strong>Ben Ish Chai</strong> Shanah Rishona und Shanah Shniah (Behar-Bechukotai-Komplex ·
+      Hilchot HaMotzi und Hilchot HaYotzeh min HaTameh als sephardische Praxis-Architektur) ·
+      <strong>Yabia Omer · Chazon Ovadia</strong> (Rabbi Ovadia Yosef Z'L — sephardische moderne
+      Halacha · Ma'aser Kesafim, Hatarat Nedarim, Vidui-Praxis) · <strong>Sephardische Selichot</strong>
+      Eidot HaMizrach („Zechor Avraham, Yitzchak, v'Yisrael" — Vayikra 26:42 als liturgisches Herz) ·
+      <strong>Krias Schma She'al haMittah</strong> (Aleppo-Tradition mit Vayikra 26:6 als zusätzlicher
+      Bett-Vers) · <strong>Minhag Chatimat Chumash</strong> („Chazak Chazak v'Nitchazek" am Schluss
+      eines jeden Sefers, sephardisch in allen Eidot HaMizrach).
+      <br><br>
+      <strong>Tradition:</strong> Sephardisch · Nussach Zadoq (Rashash) · Maqam-Tradition aus Aleppo,
+      Yerushalayim, Marokko, Yemen · Tetragrammaton durchgängig als אֲדֹנָי · Maschiach ben David ·
+      Doppelt geprüfte Quellen · Tora-Text 1:1 unverändert · Erstellt Mai 2026 · Sefer HaParashot
+      bemo Maqam · 10. (Schluss-)Lied Sefer Vayikra · Gevurah · Maqam Hijaz · חֲזַק חֲזַק וְנִתְחַזֵּק.
+    </p>
+    <div class="footer-amen">אָמֵן · יִבָּנֶה הַמִּקְדָּשׁ בִּמְהֵרָה בְיָמֵינוּ · יָבוֹא מָשִׁיחַ בֶּן דָּוִד · אָמֵן</div>
+  </div>
+
+</div>
+
+
+</body></html>
