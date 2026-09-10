@@ -2,7 +2,7 @@
 <html lang="de"><head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Lieder zu Tora &amp; Newi'im · Teil A · שירי תורה ונביאים</title>
+<title>Lieder zu Tora &amp; Newi'im · שירי תורה ונביאים</title>
 <meta name="description" content="Katalog der eigenen Lieder zu den fünf Büchern der Tora und zu Jehoschua, Schoftim und Schmu'el א׳/ב׳: Seite, Klangaufnahme, Video und YouTube-Verweis zu jedem Lied. Mit Suche, Welten, Maqam und eingebauter Abspielleiste.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
@@ -96,23 +96,6 @@ nav.side{position:sticky;top:0;padding:30px 0 20px;max-height:100vh;overflow-y:a
 .catlist button[aria-current="true"] .cat-tr{color:var(--copper-lt)}
 .catlist button.leer .cat-he{color:var(--muted)}
 .catlist button.leer{opacity:.72}
-.catlist a.xpart{
-  width:100%;display:flex;justify-content:space-between;align-items:center;gap:8px;
-  border-left:2px solid transparent;padding:6px 8px 6px 10px;
-  color:var(--text);text-decoration:none;letter-spacing:.02em;opacity:.78;
-}
-.catlist a.xpart:hover{background:var(--layer);opacity:1}
-.catlist a.xpart:hover .cat-he{color:var(--parch)}
-.catlist a.xpart .n{color:var(--copper-lt)}
-.catlist .part-h{
-  display:flex;justify-content:space-between;align-items:baseline;gap:8px;
-  font-family:var(--ui-font);font-size:.58rem;letter-spacing:.22em;text-transform:uppercase;
-  color:var(--dim);padding:12px 8px 4px 10px;margin-top:4px;border-top:1px solid var(--line-soft);
-}
-.catlist li.part-h:first-of-type{border-top:0}
-.catlist .part-h.on{color:var(--ocher)}
-.catlist .part-go{font-size:.58rem;letter-spacing:.12em;color:var(--copper-lt);text-transform:none}
-.catlist .part-go:hover{color:var(--ocher-lt);text-decoration:underline}
 section.group > h2 .lbl{display:inline-flex;align-items:baseline;gap:10px}
 section.group > h2 .cat-he{font-family:var(--he-font);direction:rtl;unicode-bidi:isolate;font-size:1.24rem;line-height:1.2;letter-spacing:0;text-transform:none;color:var(--parch)}
 section.group > h2 .cat-tr{color:var(--copper-lt)}
@@ -454,7 +437,7 @@ footer .he{font-family:var(--he-font);font-size:.95rem;color:var(--copper-lt);le
 
 <header>
   <div class="hw">
-    <p class="eyebrow">Eigene Sammlung · Tora &amp; Newi'im · Teil A von 5</p>
+    <p class="eyebrow">Eigene Sammlung · Tora &amp; Newi'im</p>
     <h1>שִׁירֵי תּוֹרָה וּנְבִיאִים</h1>
     <div class="de">Lieder zu Tora und Propheten</div>
     <p class="lede">Die fünf Bücher der Tora, dazu Jehoschua, Schoftim und die beiden Bücher Schmu'el: Jedes Lied bekommt hier seine Karte — mit vier Trägern: der Seite, der Klangaufnahme, dem Video und dem YouTube-Verweis. Was vorhanden ist, leuchtet; was fehlt, wartet auf einen Klick.</p>
@@ -764,7 +747,7 @@ footer .he{font-family:var(--he-font);font-size:.95rem;color:var(--copper-lt);le
 
 <script id="seed" type="application/json">
 {
-  "stamp": 1789016099991,
+  "stamp": 1788945812579,
   "entries": [
     {
       "id": "n-zvx4rul",
@@ -1439,7 +1422,7 @@ footer .he{font-family:var(--he-font);font-size:.95rem;color:var(--copper-lt);le
   "playlists": [],
   "pub": {
     "on": true,
-    "ts": 1789016099991
+    "ts": 1788945812579
   }
 }
 </script>
@@ -1549,66 +1532,6 @@ footer .he{font-family:var(--he-font);font-size:.95rem;color:var(--copper-lt);le
     var m = String(s || "").match(/[\u0590-\u05FF][\u0590-\u05FF\s'"״׳\-–־]*/g);
     if (!m) return "";
     return m.sort(function (a, b) { return b.length - a.length; })[0].trim();
-  }
-
-  /* ── Die vier Teile der Sammlung ──────────────────────────────────
-     Jeder Teil ist ein eigener Ordner (PC) bzw. ein eigenes GitHub-Verzeichnis.
-     dir  = Ordnername auf dem Rechner,  url = Adresse im Netz. */
-  var PART_ID = "A";
-  var PARTS = [
-    { id: "0", label: "Teil 0", dir: "NIGGUN-Tora-Newi-im-Part-0",
-      url: "https://moriahise.github.io/Shirei-Torah-u-Nevi-im-Part-0/",
-      cats: ["Bereschit"] },
-    { id: "A", label: "Teil A", dir: "NIGGUN-Tora-Newi-im-Part-A",
-      url: "https://moriahise.github.io/Shirei-Torah-u-Nevi-im-Part-A/",
-      cats: ["Schemot", "Wajikra"] },
-    { id: "B", label: "Teil B", dir: "NIGGUN-Tora-Newi-im-Part-B",
-      url: "https://moriahise.github.io/Shirei-Torah-u-Nevi-im-Part-B/",
-      cats: ["Bamidbar", "Devarim"] },
-    { id: "C", label: "Teil C", dir: "NIGGUN-Tora-Newi-im-Part-C",
-      url: "https://moriahise.github.io/Shirei-Torah-u-Nevi-im-Part-C/",
-      cats: ["Jehoschua", "Schoftim"] },
-    { id: "D", label: "Teil D", dir: "NIGGUN-Tora-Newi-im-Part-D",
-      url: "https://moriahise.github.io/Shirei-Torah-u-Nevi-im-Part-D/",
-      cats: ["Schmu'el Aleph", "Schmu'el Bet"] }
-  ];
-  var PART_OF = {};
-  var PARTS_READY = false;
-  /* Die Abteilungen der Teile stehen oben in Umschrift; hier werden sie
-     einmalig auf die hebräischen Namen der Abteilungstabelle gelegt. */
-  function partsInit() {
-    if (PARTS_READY) return;
-    PARTS_READY = true;
-    PARTS.forEach(function (p) {
-      p.cats = p.cats.map(function (t) { var k = catKey(t); return k ? k.he : t; });
-      p.cats.forEach(function (c) { PART_OF[c] = p; });
-    });
-  }
-  function thisPart() {
-    for (var i = 0; i < PARTS.length; i++) if (PARTS[i].id === PART_ID) return PARTS[i];
-    return PARTS[0];
-  }
-  /* Verweis auf einen anderen Teil — im Netz die GitHub-Adresse,
-     auf dem Rechner der Nachbarordner. */
-  function partHref(p, cat) {
-    var frag = cat ? "#" + slugCat(cat) : "";
-    if (p.id === PART_ID) return frag || "#";
-    if (/github\.io$/i.test(location.hostname)) return p.url + frag;
-    return "../" + p.dir + "/index.html" + frag;
-  }
-  /* Kommt der Aufruf von einem anderen Teil (…/index.html#abt-…), wird
-     die gewünschte Abteilung gleich beim Öffnen ausgewählt. */
-  function openFromLink() {
-    partsInit();
-    var raw = "";
-    var qm = /[?&]abt=([^&]+)/.exec(location.search || "");
-    try { raw = qm ? decodeURIComponent(qm[1]) : decodeURIComponent(String(location.hash || "").slice(1)); }
-    catch (e) { raw = qm ? qm[1] : String(location.hash || "").slice(1); }
-    if (!raw) return;
-    if (raw.indexOf("abt-") !== 0) raw = "abt-" + raw;
-    for (var i = 0; i < CATS.length; i++) {
-      if (slugCat(CATS[i].he) === raw) { state.cat = CATS[i].he; state.pl = ""; return; }
-    }
   }
 
   var WORLDS = ["Assija", "Jezira", "Beria", "Azilut"];
@@ -1846,29 +1769,11 @@ footer .he{font-family:var(--he-font);font-size:.95rem;color:var(--copper-lt);le
       : '<li style="font-family:var(--de-font);font-size:.85rem;color:var(--dim);padding:4px 10px">' +
         (IS_PUB ? "Noch keine Playlist veröffentlicht." : "Noch keine Playlist — über ＋ Liste auf einer Karte anlegen.") + "</li>";
 
-    partsInit();
     var cats = categories();
-    var cnt = {};
-    cats.forEach(function (c) { cnt[c.name] = c.n; });
-    var rows = ['<li><button data-cat="*" aria-current="' + (state.cat === "*" && !state.pl) + '"><span>Alle Lieder · ' + esc(thisPart().label) + '</span><span class="n">' + entries.length + "</span></button></li>"];
-    PARTS.forEach(function (p) {
-      var mine = p.id === PART_ID;
-      rows.push('<li class="part-h' + (mine ? " on" : "") + '"><span>' + esc(p.label) + (mine ? " · hier" : "") + "</span>" +
-        (mine ? "" : '<a class="part-go" href="' + esc(partHref(p, "")) + '">öffnen ↗</a>') + "</li>");
-      p.cats.forEach(function (name) {
-        if (mine) {
-          var n = cnt[name] || 0;
-          rows.push('<li><button class="' + (n ? "" : "leer") + '" data-cat="' + esc(name) + '" aria-current="' + (state.cat === name) + '">' + catHTML(name) + '<span class="n">' + n + "</span></button></li>");
-        } else {
-          rows.push('<li><a class="xpart" href="' + esc(partHref(p, name)) + '" title="' + esc(catText(name) + " — in " + p.label) + '">' + catHTML(name) + '<span class="n">↗</span></a></li>');
-        }
-      });
-    });
-    cats.forEach(function (c) {
-      if (PART_OF[c.name] || !c.n) return;
-      rows.push('<li><button data-cat="' + esc(c.name) + '" aria-current="' + (state.cat === c.name) + '">' + catHTML(c.name) + '<span class="n">' + c.n + "</span></button></li>");
-    });
-    catsEl.innerHTML = rows.join("");
+    catsEl.innerHTML = ['<li><button data-cat="*" aria-current="' + (state.cat === "*" && !state.pl) + '"><span>Alle Lieder</span><span class="n">' + entries.length + "</span></button></li>"]
+      .concat(cats.map(function (c) {
+        return '<li><button class="' + (c.n ? "" : "leer") + '" data-cat="' + esc(c.name) + '" aria-current="' + (state.cat === c.name) + '">' + catHTML(c.name) + '<span class="n">' + c.n + "</span></button></li>";
+      })).join("");
 
     var wcount = {};
     entries.forEach(function (e) { wcount[e.world || "-"] = (wcount[e.world || "-"] || 0) + 1; });
@@ -3813,7 +3718,6 @@ footer .he{font-family:var(--he-font);font-size:.95rem;color:var(--copper-lt);le
   var av2 = document.getElementById("appver");
   if (av2) av2.textContent = "Werkzeug-Fassung " + APP_VER;
 
-  openFromLink();
   render();
 })();
 </script>
